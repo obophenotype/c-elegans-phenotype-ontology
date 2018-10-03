@@ -48,8 +48,9 @@ prepare_release: all
 
 # by default we use Elk to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
+# Equivalence checking deactived.. -e none
 $(ONT).owl: $(SRC)
-	$(ROBOT)  reason -i $< -r ELK -e none relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@ &&\
+	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@ &&\
 	echo "$(ONT).owl successfully created."
 
 $(ONT).obo: $(ONT).owl
@@ -111,7 +112,8 @@ release: $(ONT).owl $(ONT).obo
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-VCHECKS = equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
+#  trailing-whitespace nolabels
+VCHECKS = equivalent-classes owldef-self-reference xref-syntax 
 
 # Only needed until robot supports catalogs
 

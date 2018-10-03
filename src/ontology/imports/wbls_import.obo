@@ -2,11 +2,431 @@ format-version: 1.2
 ontology: wbphenotype/imports/wbls_import
 
 [Term]
+id: WBls:0000001
+name: free-living nematode stage
+namespace: worm_development
+def: "The nematode life-cycle stage that occurs entirely outside of a host organism." [WB:jl]
+is_a: WBls:0000101 ! Nematode life stage
+created_by: jl16
+creation_date: 2015-03-19T10:42:18Z
+
+[Term]
+id: WBls:0000002
+name: all stages Ce
+namespace: worm_development
+def: "All C. elegans development stages, including embryo, larva and adult stage." [WB:wjc]
+synonym: "all stages" BROAD []
+is_a: WBls:0000001 ! free-living nematode stage
+
+[Term]
+id: WBls:0000003
+name: embryo Ce
+namespace: worm_development
+def: "The whole period of embryogenesis, from the formation of an egg till its hatch." [WB:wjc]
+synonym: "embryo" BROAD []
+is_a: WBls:0000002 ! all stages Ce
+is_a: WBls:0000102 ! nematode embryo
+
+[Term]
+id: WBls:0000004
+name: proliferating embryo Ce
+namespace: worm_development
+def: "0-350min after first cleavage at 20 Centigrade. Proliferate from 1 cell to 560 cells. From start of first cleavage till cleavage is over." [WB:wjc]
+synonym: "early embryo" EXACT []
+synonym: "proliferating embryo" BROAD []
+relationship: part_of WBls:0000003 ! embryo Ce
+
+[Term]
+id: WBls:0000005
+name: blastula embryo Ce
+namespace: worm_development
+def: "0-100min after first cleavage at 20 Centigrade. Proliferate from 1 cell to 28 cells. From first cleavage till the start of gastrulation." [WB:wjc]
+synonym: "blastula embryo" BROAD []
+relationship: part_of WBls:0000004 ! proliferating embryo Ce
+
+[Term]
+id: WBls:0000006
+name: 1-cell embryo Ce
+namespace: worm_development
+def: "Also called zygote. -50min till 0min of first cleavage at 20 Centigrade. Contains 1 cell." [WB:wjc]
+synonym: "1-cell embryo" BROAD []
+synonym: "fertilized egg" EXACT [WB:dr]
+relationship: part_of WBls:0000005 ! blastula embryo Ce
+relationship: starts_at_end_of WBls:0000669 ! unfertilized egg Ce
+
+[Term]
+id: WBls:0000010
+name: gastrulating embryo Ce
+namespace: worm_development
+def: "100-290min after first cleavage at 20 Centigrade. Proliferate from 28 cells to 421  cells. Referring to the whole period of gastrulation." [WB:wjc]
+synonym: "gastrulating embryo" BROAD []
+relationship: part_of WBls:0000004 ! proliferating embryo Ce
+relationship: starts_at_end_of WBls:0000005 ! blastula embryo Ce
+
+[Term]
+id: WBls:0000013
+name: enclosing embryo Ce
+namespace: worm_development
+def: "290-350min after first cleavage at 20 Centigrade. Proliferate from 421 cells to 560 cells. The stage when embryo just finished gastulation and is enclosing." [WB:wjc]
+synonym: "enclosing embryo" BROAD []
+relationship: part_of WBls:0000014 ! late cleavage stage embryo Ce
+relationship: preceded_by WBls:0000014 ! late cleavage stage embryo Ce
+relationship: starts_at_end_of WBls:0000010 ! gastrulating embryo Ce
+
+[Term]
+id: WBls:0000014
+name: late cleavage stage embryo Ce
+namespace: worm_development
+def: "210-350min after first cleavage at 20 Centigrade. Proliferate from 421 cells to 560 cells. The stage before the fast cleavage of cells finishes." [WB:wjc]
+synonym: "late cleavage stage embryo" BROAD []
+relationship: part_of WBls:0000004 ! proliferating embryo Ce
+relationship: preceded_by WBls:0000010 ! gastrulating embryo Ce
+
+[Term]
+id: WBls:0000015
+name: elongating embryo Ce
+namespace: worm_development
+def: "350-620min after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. The stage that embryo starts elongation till elongation is over." [WB:wjc]
+synonym: "elongating embryo" BROAD []
+synonym: "mid embryo" EXACT []
+relationship: part_of WBls:0000003 ! embryo Ce
+relationship: preceded_by WBls:0000010 ! gastrulating embryo Ce
+relationship: starts_at_end_of WBls:0000004 ! proliferating embryo Ce
+
+[Term]
+id: WBls:0000016
+name: bean embryo Ce
+namespace: worm_development
+def: "350-390min after first cleavage at 20 Centigrade.  Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. Emrbyo elongation started but have not formed comma shape yet. The shape of embryo looks like a lima bean. A stage right before comma embryo. Also called lima embryo or lima bean stage." [WB:wjc]
+synonym: "bean embryo" BROAD []
+relationship: part_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000013 ! enclosing embryo Ce
+relationship: starts_at_end_of WBls:0000014 ! late cleavage stage embryo Ce
+
+[Term]
+id: WBls:0000017
+name: comma embryo Ce
+namespace: worm_development
+def: "390-420min after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. The shape of embryo looks like a comma. A stage between bean embryo and 1.5-fold embryo." [WB:wjc]
+synonym: "comma embryo" BROAD []
+relationship: part_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000016 ! bean embryo Ce
+
+[Term]
+id: WBls:0000018
+name: 1.5-fold embryo Ce
+namespace: worm_development
+def: "420-460min after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. The shape of embryo is elongated and fold back 50%. A stage between comma embryo and 2-fold embryo." [WB:wjc]
+synonym: "1.5-fold embryo" BROAD []
+relationship: part_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000017 ! comma embryo Ce
+
+[Term]
+id: WBls:0000019
+name: 2-fold embryo Ce
+namespace: worm_development
+def: "460-520min after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. The shape of embryo is elongated and double fold. A stage between 1.5-fold embryo and 3-fold embryo." [WB:wjc]
+synonym: "2-fold embryo" BROAD []
+relationship: part_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000018 ! 1.5-fold embryo Ce
+
+[Term]
+id: WBls:0000020
+name: 3-fold embryo Ce
+namespace: worm_development
+def: "520-620min after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. The shape of embryo is elongated and tripple fold. A stage between 2-fold embryo and fully-elongated embryo. Also called pretzel embryo or pretzel stage." [WB:wjc]
+synonym: "3-fold embryo" BROAD []
+relationship: part_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000019 ! 2-fold embryo Ce
+
+[Term]
+id: WBls:0000021
+name: fully-elongated embryo Ce
+namespace: worm_development
+def: "620-800min(hatch) after first cleavage at 20 Centigrade. Cell number remains at ~560 cells, with some new cells generated and some cells go through programmed cell death. A stage after elongation is over. The last stage of embryogenesis. Also called pre-hatched embryo, late embryo or morphogenetic embryo." [WB:wjc]
+synonym: "fully-elongated embryo" BROAD []
+synonym: "late embryo" EXACT []
+synonym: "morphogenetic stage" EXACT []
+synonym: "pre-hatched embryo" EXACT []
+relationship: part_of WBls:0000003 ! embryo Ce
+relationship: starts_at_end_of WBls:0000015 ! elongating embryo Ce
+relationship: starts_at_end_of WBls:0000020 ! 3-fold embryo Ce
+
+[Term]
+id: WBls:0000022
+name: postembryonic Ce
+namespace: worm_development
+def: "The stage after hatch till death." [WB:wjc]
+synonym: "postembryonic" BROAD []
+is_a: WBls:0000002 ! all stages Ce
+is_a: WBls:0000103 ! postembryonic nematode
+relationship: starts_at_end_of WBls:0000003 ! embryo Ce
+
+[Term]
+id: WBls:0000023
+name: larva Ce
+namespace: worm_development
+def: "From the time after hatch till becomes adult." [WB:wjc]
+synonym: "larva" BROAD []
+is_a: WBls:0000105 ! nematode larval stage
+relationship: part_of WBls:0000022 ! postembryonic Ce
+relationship: starts_at_end_of WBls:0000003 ! embryo Ce
+
+[Term]
+id: WBls:0000024
+name: L1 larva Ce
+namespace: worm_development
+def: "The first stage larva. At 25 Centigrade, it ranges 14-25.5 hours after fertilization, 0-11.5 hours after hatch." [WB:wjc]
+synonym: "L1 larva" BROAD []
+is_a: WBls:0000106 ! L1
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: starts_at_end_of WBls:0000003 ! embryo Ce
+
+[Term]
+id: WBls:0000026
+name: L1-L2 molt Ce
+namespace: worm_development
+def: "The stage when an animal shifts from L1 larva to L2 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
+synonym: "L1-L2 molt" BROAD []
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: starts_at_end_of WBls:0000024 ! L1 larva Ce
+
+[Term]
+id: WBls:0000027
+name: L2 larva Ce
+namespace: worm_development
+def: "The second stage larva. At 25 Centigrade, it ranges 25.5-32.5 hours after fertilization, 11.5-18.5 hours after hatch." [WB:wjc]
+synonym: "L2 larva" BROAD []
+is_a: WBls:0000107 ! L2
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: preceded_by WBls:0000024 ! L1 larva Ce
+relationship: starts_at_end_of WBls:0000026 ! L1-L2 molt Ce
+
+[Term]
+id: WBls:0000029
+name: L2-L3 molt Ce
+namespace: worm_development
+def: "The stage when an animal shifts from L2 larva to L3 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
+synonym: "L2-L3 molt" BROAD []
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: starts_at_end_of WBls:0000027 ! L2 larva Ce
+
+[Term]
+id: WBls:0000032
+name: dauer larva Ce
+namespace: worm_development
+def: "A third stage larva specialized for dispersal and long term survival." [ISBN:0-87969-433-5]
+synonym: "dauer larva" BROAD []
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: preceded_by WBls:0000027 ! L2 larva Ce
+
+[Term]
+id: WBls:0000035
+name: L3 larva Ce
+namespace: worm_development
+def: "The third stage larva. At 25 Centigrade, it ranges 32.5-40 hours after fertilization, 18.5-26 hours after hatch." [WB:wjc]
+synonym: "L3 larva" BROAD []
+is_a: WBls:0000108 ! L3
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: preceded_by WBls:0000027 ! L2 larva Ce
+relationship: starts_at_end_of WBls:0000029 ! L2-L3 molt Ce
+
+[Term]
+id: WBls:0000037
+name: L3-L4 molt Ce
+namespace: worm_development
+def: "The stage when an animal shifts from L3 larva to L4 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
+synonym: "L3-L4 molt" BROAD []
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: starts_at_end_of WBls:0000035 ! L3 larva Ce
+
+[Term]
+id: WBls:0000038
+name: L4 larva Ce
+namespace: worm_development
+def: "The fourth stage larva. At 25 Centigrade, it ranges 40-49.5 hours after fertilization, 26-35.5 hours after hatch." [WB:wjc]
+synonym: "L4 larva" BROAD []
+is_a: WBls:0000109 ! L4
+relationship: part_of WBls:0000023 ! larva Ce
+relationship: preceded_by WBls:0000035 ! L3 larva Ce
+relationship: starts_at_end_of WBls:0000032 ! dauer larva Ce
+relationship: starts_at_end_of WBls:0000037 ! L3-L4 molt Ce
+
+[Term]
+id: WBls:0000040
+name: L4-adult molt Ce
+namespace: worm_development
+def: "The stage when an animal shifts from L4 larva to adult. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
+synonym: "L4-adult molt" BROAD []
+relationship: part_of WBls:0000023 ! larva Ce
+
+[Term]
+id: WBls:0000041
+name: adult Ce
+namespace: worm_development
+def: "The stage that begins when a C.elegans individual is fully-developed and has reached maturity." [WB:wjc]
+synonym: "adult" BROAD []
+is_a: WBls:0000104 ! nematode adult
+relationship: part_of WBls:0000022 ! postembryonic Ce
+relationship: preceded_by WBls:0000038 ! L4 larva Ce
+relationship: starts_at_end_of WBls:0000023 ! larva Ce
+relationship: starts_at_end_of WBls:0000040 ! L4-adult molt Ce
+
+[Term]
+id: WBls:0000056
+name: adult male Ce
+namespace: worm_development
+def: "The stage after an male animal is fully-developed and reaches maturity." [WB:wjc]
+synonym: "adult male" BROAD []
+is_a: WBls:0000041 ! adult Ce
+
+[Term]
+id: WBls:0000057
+name: adult hermaphrodite Ce
+namespace: worm_development
+def: "The stage after an hermaphrodite animal is fully-developed and reaches maturity." [WB:wjc]
+synonym: "adult hermaphrodite" BROAD []
+is_a: WBls:0000041 ! adult Ce
+
+[Term]
 id: WBls:0000075
 name: worm life stage
 namespace: worm_development
 created_by: danielaraciti
 creation_date: 2012-05-30T09:04:28Z
+
+[Term]
+id: WBls:0000101
+name: Nematode life stage
+namespace: worm_development
+def: "Any developmental stage in a nematode, including embryo, larva and adult stage." [WB:dr, WB:jl]
+synonym: "all stages nematode" EXACT []
+synonym: "nematode developmental stage" EXACT []
+is_a: WBls:0000075 ! worm life stage
+created_by: danielaraciti
+creation_date: 2013-11-25T06:13:37Z
+
+[Term]
+id: WBls:0000102
+name: nematode embryo
+namespace: worm_development
+def: "The whole period of embryogenesis, from the formation of an egg till its hatch." [WB:dr]
+synonym: "embryo nematode" EXACT []
+synonym: "nematode egg stage" EXACT []
+is_a: WBls:0000101 ! Nematode life stage
+created_by: danielaraciti
+creation_date: 2013-11-25T06:14:14Z
+
+[Term]
+id: WBls:0000103
+name: postembryonic nematode
+namespace: worm_development
+def: "The stage after hatch till death." [WB:dr]
+is_a: WBls:0000101 ! Nematode life stage
+relationship: starts_at_end_of WBls:0000102 ! nematode embryo
+created_by: danielaraciti
+creation_date: 2013-11-25T06:14:39Z
+
+[Term]
+id: WBls:0000104
+name: nematode adult
+namespace: worm_development
+def: "The nematode life-stage that begins when the organism is fully-developed and has reached maturity." [WB:dr]
+synonym: "adult nematode" EXACT []
+synonym: "L5" EXACT []
+is_a: WBls:0000103 ! postembryonic nematode
+relationship: starts_at_end_of WBls:0000105 ! nematode larval stage
+created_by: danielaraciti
+creation_date: 2013-11-25T06:18:53Z
+
+[Term]
+id: WBls:0000105
+name: nematode larval stage
+namespace: worm_development
+def: "The stage that begins after hatching and ends when the nematode becomes adult." [WB:dr]
+synonym: "larva nematode" EXACT []
+synonym: "larval stage" BROAD []
+synonym: "nematode larva" EXACT []
+is_a: WBls:0000103 ! postembryonic nematode
+created_by: danielaraciti
+creation_date: 2013-11-25T06:19:27Z
+
+[Term]
+id: WBls:0000106
+name: L1
+namespace: worm_development
+def: "The first stage larva of nematodes." [WB:dr]
+synonym: "L1 larva nematode" EXACT []
+is_a: WBls:0000105 ! nematode larval stage
+relationship: starts_at_end_of WBls:0000110 ! sheathed microfilaria
+created_by: danielaraciti
+creation_date: 2013-11-25T06:20:28Z
+
+[Term]
+id: WBls:0000107
+name: L2
+namespace: worm_development
+def: "The second stage larva of nematodes." [WB:dr]
+synonym: "L2 larva nematode" EXACT []
+is_a: WBls:0000105 ! nematode larval stage
+relationship: starts_at_end_of WBls:0000106 ! L1
+created_by: danielaraciti
+creation_date: 2013-11-25T06:20:54Z
+
+[Term]
+id: WBls:0000108
+name: L3
+namespace: worm_development
+def: "The third stage larva of nematodes." [WB:dr]
+synonym: "L3 larva nematode" EXACT []
+is_a: WBls:0000105 ! nematode larval stage
+relationship: starts_at_end_of WBls:0000107 ! L2
+created_by: danielaraciti
+creation_date: 2013-11-25T06:21:33Z
+
+[Term]
+id: WBls:0000109
+name: L4
+namespace: worm_development
+def: "The fourth stage larva of nematodes." [WB:dr]
+synonym: "L4 larva nematode" EXACT []
+is_a: WBls:0000105 ! nematode larval stage
+relationship: starts_at_end_of WBls:0000108 ! L3
+created_by: danielaraciti
+creation_date: 2013-11-25T06:22:48Z
+
+[Term]
+id: WBls:0000110
+name: sheathed microfilaria
+namespace: worm_development
+def: "Sheathed microfilaria larvae are surrounded by a membrane thought to be derived from the vitelline membrane." [WB:dr]
+synonym: "sheathed microfilaria nematode" EXACT []
+synonym: "sheathed microfilariae" EXACT []
+is_a: WBls:0000664 ! microfilaria
+created_by: danielaraciti
+creation_date: 2013-11-25T06:23:23Z
+
+[Term]
+id: WBls:0000664
+name: microfilaria
+namespace: worm_development
+def: "An early stage in the life cycle of some parasitic nematodes which develops from the egg and precedes the L1 stage." [WB:dr, WB:jl]
+comment: Anderson, R.C. (2000) Nematode Parasites of Vertebrates: Their Development and Transmission. Second Edition. CABI Publishing: Wallingford, England, pp. 472-475.
+synonym: "MF" EXACT []
+synonym: "microfilaria nematode" EXACT []
+synonym: "microfilariae" EXACT []
+is_a: WBls:0000105 ! nematode larval stage
+created_by: danielaraciti
+creation_date: 2014-11-25T09:23:44Z
+
+[Term]
+id: WBls:0000669
+name: unfertilized egg Ce
+namespace: worm_development
+synonym: "unfertilized egg" BROAD []
+relationship: part_of WBls:0000002 ! all stages Ce
+created_by: danielaraciti
+creation_date: 2014-11-26T11:49:22Z
 
 [Typedef]
 id: part_of
@@ -14,4 +434,18 @@ name: part_of
 namespace: worm_development
 xref: BFO:0000050
 is_transitive: true
+
+[Typedef]
+id: preceded_by
+name: preceded_by
+namespace: worm_development
+xref: BFO:0000062
+is_transitive: true
+
+[Typedef]
+id: starts_at_end_of
+name: starts_at_end_of
+namespace: worm_development
+xref: RO:0002087
+is_a: preceded_by ! preceded_by
 
