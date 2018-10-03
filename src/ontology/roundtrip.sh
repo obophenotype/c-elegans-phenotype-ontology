@@ -1,7 +1,5 @@
 #!/bin/sh
 # Little round trip experiment to make sure that the OWL serialisation of the original phenotype ontology does not loose any information
-# The experiment goes as follows: 
-
 
 rm -rf roundtrip
 mkdir roundtrip
