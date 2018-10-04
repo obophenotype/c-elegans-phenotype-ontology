@@ -18,4 +18,9 @@ $ROBOT merge --collapse-import-closure false --include-annotations true --input 
 # Replace hasComponent (which is used everwhere to hang off the abnormal modifier by 'has modifier')
 sed -i '' 's/RO_0002180/RO_0002573/g' wb_reset/wbphenotype-edit.owl
 mv wb_reset/wbphenotype-edit.ofn wb_reset/wbphenotype-edit.owl
+./run.sh make prepare_release
+# robot remove --input obi.owl --term OBI:0000070 --select descendants
+
+$ROBOT remove --input wb_reset/wbphenotype_eq.owl --term-file $TF --select "parents equivalents" --select anonymous --output wb_reset/wbphenotype_eq_stripped.owl
+$ROBOT merge --input wbphenotype-edit.owl --output ../patterns/wbphenotype_merged.owl
 diff -u wbphenotype-edit.owl wb_reset/wbphenotype-edit.owl > wb_reset/diff.txt
