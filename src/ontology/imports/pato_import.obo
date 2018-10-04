@@ -1998,7 +1998,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's lacking complete 
 subset: value_slim
 synonym: "underdeveloped" RELATED []
 is_a: PATO:0000261 ! maturity
-relationship: is_opposite_of PATO:0001701
+relationship: is_opposite_of PATO:0001701 ! mature
 
 [Term]
 id: PATO:0001509
@@ -2441,6 +2441,15 @@ is_a: PATO:0001029 ! efficiency
 relationship: is_opposite_of PATO:0001677 ! inefficient
 
 [Term]
+id: PATO:0001701
+name: mature
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's exhibiting complete growth, differentiation, or development." [Merriam-Webster:Merriam-Webster]
+subset: value_slim
+is_a: PATO:0000261 ! maturity
+relationship: is_opposite_of PATO:0001501 ! immature
+
+[Term]
 id: PATO:0001706
 name: behavioural inactive
 namespace: quality
@@ -2625,6 +2634,17 @@ subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000057 ! occurrence
 relationship: is_opposite_of PATO:0002026 ! non-progressive
+
+[Term]
+id: PATO:0001821
+name: imperforate
+namespace: quality
+def: "A structural quality inhering in a bearer by virtue of the bearer's having no opening." [thefreedictionary.com:thefreedictionary.com]
+subset: mpath_slim
+subset: value_slim
+synonym: "unperforated" EXACT []
+is_a: PATO:0002014 ! structure, cavities
+relationship: is_opposite_of PATO:0002112 ! perforate
 
 [Term]
 id: PATO:0001834
@@ -3149,7 +3169,7 @@ subset: value_slim
 synonym: "permeable" RELATED []
 synonym: "pierced" RELATED []
 is_a: PATO:0002014 ! structure, cavities
-relationship: is_opposite_of PATO:0001821
+relationship: is_opposite_of PATO:0001821 ! imperforate
 created_by: george
 creation_date: 2009-10-05T03:37:05Z
 

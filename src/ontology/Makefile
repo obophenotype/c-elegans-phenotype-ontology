@@ -57,6 +57,10 @@ $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert --check false -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@ &&\
 	echo "$(ONT).obo successfully created."
 
+$(ONT)-base.owl: $(SRC)
+	#$(ROBOT) merge edit and definitions.owl with no imports.
+	echo "$(ONT)-base.owl successfully created."
+
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
@@ -69,7 +73,6 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 # generate seed with all referenced entities
 
 ed_definitions_merged.owl: $(SRC) ../patterns/definitions.owl
-	$(ROBOT) merge -i $(SRC) -i ../patterns/definitions.owl -o $@
 
 seed.txt: ed_definitions_merged.owl
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
@@ -103,7 +106,7 @@ mirror/%.owl:
 # Release
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
-release: $(ONT).owl $(ONT).obo
+release: $(ONT).owl $(ONT).obo $(ONT)-base.owl
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
 # ----------------------------------------
@@ -160,80 +163,86 @@ build-docker:
 	# Main command to generate the pattern ontology and the definitions
 	# ----------------------------------------
 	# The pattern.owl ontology contains the OWL versions of all the patterns currently in the patterns directory
-	DOSDP_TEMP=$(IMS)/dosdp
-	DOSDP_TEMP_PATTERN=$(DOSDP_TEMP)/patterns
-	DOSDP_TEMP_PATTERN_MANUAL=$(DOSDP_TEMP_PATTERN)/manual
-	DOSDP_TEMP_PATTERN_AUTO=$(DOSDP_TEMP_PATTERN)/auto
-	DOSDP_TEMP_TERMS=$(DOSDP_TEMP)/terms
-	DOSDP_TEMP_ONTOLOGIES=$(DOSDP_TEMP)/ontologies
+DOSDP_TEMP=$(IMS)/dosdp
+DOSDP_TEMP_PATTERN=$(DOSDP_TEMP)/patterns
+DOSDP_TEMP_PATTERN_MANUAL=$(DOSDP_TEMP_PATTERN)/manual
+DOSDP_TEMP_PATTERN_AUTO=$(DOSDP_TEMP_PATTERN)/auto
+DOSDP_TEMP_TERMS=$(DOSDP_TEMP)/terms
+DOSDP_TEMP_ONTOLOGIES=$(DOSDP_TEMP)/ontologies
 
-	.PHONY patterns: ../patterns/pattern.owl ../patterns/definitions.owl
+.PHONY: .FORCE
 
-	pattern_clean:
-		rm -r $(DOSDP_TEMP)
+.PHONY patterns: ../patterns/pattern.owl ../patterns/definitions.owl
 
-	$(DOSDP_TEMP):
-		mkdir -p $@
+pattern_clean:
+	rm -r $(DOSDP_TEMP)
 
-	$(DOSDP_TEMP_PATTERN):
-		mkdir -p $@
+$(DOSDP_TEMP):
+	mkdir -p $@
 
-	$(DOSDP_TEMP_TERMS):
-		mkdir -p $@
+$(DOSDP_TEMP_PATTERN):
+	mkdir -p $@
 
-	$(DOSDP_TEMP_ONTOLOGIES):
-		mkdir -p $@
+$(DOSDP_TEMP_TERMS):
+	mkdir -p $@
 
-	$(DOSDP_TEMP_PATTERN_MANUAL): $(DOSDP_TEMP_PATTERN)
-		mkdir -p $@
+$(DOSDP_TEMP_ONTOLOGIES):
+	mkdir -p $@
 
-	$(DOSDP_TEMP_PATTERN_AUTO): $(DOSDP_TEMP_PATTERN)
-		mkdir -p $@
+$(DOSDP_TEMP_PATTERN_MANUAL): $(DOSDP_TEMP_PATTERN)
+	mkdir -p $@
+
+$(DOSDP_TEMP_PATTERN_AUTO): $(DOSDP_TEMP_PATTERN)
+	mkdir -p $@
 
 	# ----------------------------------------
 	# Build pattern.owl
 	# ----------------------------------------
 	# The pattern.owl ontology contains the OWL versions of all the patterns currently in the patterns directory
 
-	../patterns/pattern.owl: pattern_schema_checks
-		$(DOSDPT) prototype --obo-prefixes --template=../patterns/dosdp-patterns --outfile=$@
+pattern_schema_checks: ../patterns/dosdp-patterns
+	simple_pattern_tester.py ../patterns/dosdp-patterns/ # 2>&1 | tee $@
 
-	pattern_schema_checks:
-		simple_pattern_tester.py ../patterns/dosdp-patterns/ # 2>&1 | tee $@
+../patterns/dosdp-patterns: .FORCE
+	wget -N -P ../patterns/dosdp-patterns -i ../patterns/dosdp-patterns/external.txt
+
+../patterns/pattern.owl: pattern_schema_checks ../patterns/dosdp-patterns
+	$(DOSDPT) prototype --obo-prefixes --template=../patterns/dosdp-patterns --outfile=$@
+
 
 	# ----------------------------------------
 	# Build definitions.owl
 	# ----------------------------------------
 	# The following target will create a merged version of all imports indicated as project import dependencies (including the edit file itself), and then extract a module based
 	# on the entities used in the TSV files
-	individual_patterns_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
-	individual_patterns_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.ofn, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
-	pattern_term_lists_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.txt, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
-	pattern_term_lists_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.txt, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
+individual_patterns_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
+individual_patterns_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.ofn, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
+pattern_term_lists_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.txt, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
+pattern_term_lists_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.txt, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
 
-	../patterns/definitions.owl: $(DOSDP_TEMP_PATTERN_MANUAL) $(individual_patterns_manual) $(individual_patterns_auto)
-		$(ROBOT) merge $(addprefix -i , $(individual_patterns_manual)) $(addprefix -i , $(individual_patterns_auto)) annotate --ontology-iri $(OBO)/$(ONT)/patterns/definitions.owl -o $@
+../patterns/definitions.owl: $(DOSDP_TEMP_PATTERN_MANUAL) $(individual_patterns_manual) $(individual_patterns_auto)
+	$(ROBOT) merge $(addprefix -i , $(individual_patterns_manual)) $(addprefix -i , $(individual_patterns_auto)) annotate --ontology-iri $(OBO)/$(ONT)/patterns/definitions.owl -o $@
 
-	$(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn: ../patterns/data/manual/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_MANUAL)
-		dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
+$(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn: ../patterns/data/manual/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_MANUAL)
+	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
 
-	$(DOSDP_TEMP_PATTERN_AUTO)/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_AUTO)
-		dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
+$(DOSDP_TEMP_PATTERN_AUTO)/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_AUTO)
+	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
 
-	$(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl: $(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl $(DOSDP_TEMP_ONTOLOGIES)
-		$(ROBOT) extract -i $(word 2, $^) -T $< --method BOT -o $@
+$(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl: $(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl $(DOSDP_TEMP_ONTOLOGIES)
+	$(ROBOT) extract -i $(word 2, $^) -T $< --method BOT -o $@
 
-	$(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) $(DOSDP_TEMP_ONTOLOGIES)
-		cat $^ $(word 2, $^) | sort | uniq >$@
+$(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) $(DOSDP_TEMP_ONTOLOGIES)
+	cat $^ $(word 2, $^) | sort | uniq >$@
 
-	$(DOSDP_TEMP_PATTERN_MANUAL)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv $(DOSDP_TEMP_PATTERN_MANUAL)
-		dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
+$(DOSDP_TEMP_PATTERN_MANUAL)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv $(DOSDP_TEMP_PATTERN_MANUAL)
+	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
 
-	$(DOSDP_TEMP_PATTERN_AUTO)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/auto/%.tsv $(DOSDP_TEMP_PATTERN_AUTO)
-		dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
+$(DOSDP_TEMP_PATTERN_AUTO)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/auto/%.tsv $(DOSDP_TEMP_PATTERN_AUTO)
+	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
 
-	imports_all_pattern := $(patsubst %, mirror/%.owl,$(IMPORTS))
+imports_all_pattern := $(patsubst %, mirror/%.owl,$(IMPORTS))
 
-	$(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl: $(imports_all_pattern)
-		echo 'imports: '$(imports_all_pattern) &&\
-		$(ROBOT) merge $(addprefix -i , $^) annotate --ontology-iri $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl -o $@
+$(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl: $(imports_all_pattern)
+	echo 'imports: '$(imports_all_pattern) &&\
+	$(ROBOT) merge $(addprefix -i , $^) annotate --ontology-iri $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl -o $@

@@ -225,9 +225,21 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_class_level -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_class_level"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#is_inferred -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_inferred"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_metadata_tag"/>
     
 
 
@@ -4620,6 +4632,35 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022402">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0022407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022407">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030155"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of cell-cell adhesion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0022408 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022408">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007162"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022407"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of cell-cell adhesion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0022409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022407"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045785"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of cell-cell adhesion</rdfs:label>
     </owl:Class>
     
 

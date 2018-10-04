@@ -1275,6 +1275,20 @@ xref: RHEA:21964
 is_a: GO:0052689 ! carboxylic ester hydrolase activity
 
 [Term]
+id: GO:0004871
+name: obsolete signal transducer activity
+namespace: molecular_function
+alt_id: GO:0005062
+alt_id: GO:0009369
+alt_id: GO:0009370
+def: "OBSOLETE. Conveys a signal across a cell to trigger a change in cell function or state. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:go_curators]
+comment: This term was obsoleted because it was not clearly defined and is not a useful grouping term, see https://github.com/geneontology/go-ontology/issues/14232.
+synonym: "hematopoietin/interferon-class (D200-domain) cytokine receptor signal transducer activity" NARROW []
+synonym: "quorum sensing response regulator activity" NARROW []
+synonym: "quorum sensing signal generator activity" NARROW []
+is_obsolete: true
+
+[Term]
 id: GO:0005102
 name: signaling receptor binding
 namespace: molecular_function
@@ -1439,6 +1453,7 @@ id: GO:0005622
 name: intracellular
 namespace: cellular_component
 def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
@@ -7116,6 +7131,25 @@ def: "Catalysis of the joining of two molecules via a carbon-sulfur bond, with t
 synonym: "ligase activity, forming carbon-sulphur bonds" EXACT []
 xref: EC:6.2
 is_a: GO:0016874 ! ligase activity
+
+[Term]
+id: GO:0016879
+name: ligase activity, forming carbon-nitrogen bonds
+namespace: molecular_function
+def: "Catalysis of the joining of two molecules, or two groups within a single molecule, via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [EC:6.3, GOC:mah]
+comment: Note that enzymes of class EC:6.3.4.- should also be annotated to this term.
+synonym: "other carbon-nitrogen ligase activity" NARROW []
+xref: EC:6.3
+is_a: GO:0016874 ! ligase activity
+
+[Term]
+id: GO:0016881
+name: acid-amino acid ligase activity
+namespace: molecular_function
+def: "Catalysis of the ligation of an acid to an amino acid via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [GOC:jl, GOC:mah]
+synonym: "peptide synthase activity" EXACT []
+xref: EC:6.3.2
+is_a: GO:0016879 ! ligase activity, forming carbon-nitrogen bonds
 
 [Term]
 id: GO:0017144
@@ -31766,4 +31800,10 @@ namespace: external
 xref: RO:0002211
 is_transitive: true
 transitive_over: part_of ! part of
+
+[Typedef]
+id: starts_during
+name: starts_during
+namespace: external
+xref: RO:0002091
 
