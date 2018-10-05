@@ -6,6 +6,1583 @@ id: WBbt:0000100
 name: C. elegans Cell and Anatomy
 namespace: worm_anatomy
 
+[Term]
+id: WBbt:0000101
+name: Lineage
+namespace: worm_anatomy
+def: "pedigree of nuclei, lineal descent from P0, the founder." [WB:RYNL]
+xref: WB:RYNL
+is_a: WBbt:0000100 ! C. elegans Cell and Anatomy
+
+[Term]
+id: WBbt:0003670
+name: gland cell
+namespace: worm_anatomy
+def: "A variety of very different cell types which share cytoplasmic features (such as large membrane-bound granules) that suggest a role in secretion, thus termed gland cells." [WBPaper:00038216]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0003672
+name: epithelial cell
+namespace: worm_anatomy
+def: "cell of epithelium, the layer of cells that cover the external surface of an organism as well as forming an inner lining between the tissues and organs of that organism and the external environment. In C. elegans epithelial cells include epithelium of the alimentary tract, intestinal cells, hypodermis, interfacial cells and somatic gonad cells." [WB:rynl, WBPaper:00038216]
+synonym: "epithelium" RELATED []
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0003673
+name: marginal cell
+namespace: worm_anatomy
+def: "a type of pharyngeal cell that connects basement membrane to the apices of triangle-shaped pharyngeal lumen." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary1.htm#pharyngealmc>
+is_a: WBbt:0005460 ! pharyngeal cell
+is_a: WBbt:0005754 ! interfacial epithelial cell
+
+[Term]
+id: WBbt:0003675
+name: muscle cell
+namespace: worm_anatomy
+def: "contractile cell that makes up muscle tissue." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005737 ! muscular system
+
+[Term]
+id: WBbt:0003679
+name: neuron
+namespace: worm_anatomy
+alt_id: WBbt:0005512
+alt_id: WBbt:0005516
+def: "Major cell type of nervous tissue, specialized for transmission of information in the form of patterns of impulses." [ISBN:0140512888]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/neurons/Individual%20Neurons/Neuronframeset.html>
+synonym: "neurone" RELATED []
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005735 ! nervous system
+
+[Term]
+id: WBbt:0003681
+name: pharynx
+namespace: worm_anatomy
+def: "the feeding organ, a neuro-muscular pump in the head of the animal, used to ingest food, bacteria suspended in liquid, filter them out, grind them up and transport posteriorly into the instestine." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://wormatlas.org/ver1/handbook/alimentary/alimentary1.htm#generalinfopharynx>
+synonym: "esophagus" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0003760 ! organ
+relationship: part_of WBbt:0005743 ! digestive tract
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0003711
+name: metacorpus
+namespace: worm_anatomy
+def: "posterior segment of pharyngeal corpus." [WB:rynl]
+is_a: WBbt:0005789 ! pharyngeal segment
+relationship: part_of WBbt:0003733 ! corpus
+
+[Term]
+id: WBbt:0003732
+name: terminal bulb
+namespace: worm_anatomy
+def: "the last, posterior bulb of the pharynx." [WB:rynl]
+is_a: WBbt:0005789 ! pharyngeal segment
+
+[Term]
+id: WBbt:0003733
+name: corpus
+namespace: worm_anatomy
+def: "the first, anterior bulb of the pharynx." [WB:rynl]
+is_a: WBbt:0005789 ! pharyngeal segment
+
+[Term]
+id: WBbt:0003734
+name: isthmus
+namespace: worm_anatomy
+def: "a section of pharynx of which muscles contract with a peristaltic motion." [WB:rynl]
+is_a: WBbt:0005789 ! pharyngeal segment
+
+[Term]
+id: WBbt:0003760
+name: organ
+namespace: worm_anatomy
+def: "a collection of cells or cell groups that collectively perform a function" [WB:rynl]
+is_a: WBbt:0005766 ! Anatomy
+
+[Term]
+id: WBbt:0003810
+name: C
+namespace: worm_anatomy
+def: "Embryonic founder cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: P0.ppa" RELATED []
+is_a: WBbt:0008447 ! somatic blastomere
+
+[Term]
+id: WBbt:0003825
+name: B cell
+namespace: worm_anatomy
+def: "Rectal cell, postembryonic blast cell in male" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABprppppapa" RELATED []
+is_a: WBbt:0006783 ! blast cell
+is_a: WBbt:0008182 ! rectal epithelial cell
+
+[Term]
+id: WBbt:0004015
+name: AB
+namespace: worm_anatomy
+def: "Embryonic founder cell" [ISBN:0-87969-307-X]
+synonym: "AB blastomere" RELATED []
+synonym: "lineage name: P0.a" RELATED []
+is_a: WBbt:0008447 ! somatic blastomere
+
+[Term]
+id: WBbt:0004017
+name: Cell
+namespace: worm_anatomy
+alt_id: WBbt:0003730
+def: "a cellular object that consists of subcellular components, expresses genes or functions." [WB:rynl]
+synonym: "Cell type" RELATED []
+is_a: WBbt:0000100 ! C. elegans Cell and Anatomy
+
+[Term]
+id: WBbt:0004112
+name: PHso1L
+namespace: worm_anatomy
+alt_id: WBbt:0007001
+def: "Post-embryonic cell of pedigree TL.paa, phasmid sockets." [ISBN:0-87969-307-X, WB:rynl]
+synonym: "lineage name: TL.paa" RELATED []
+synonym: "TL.paa" EXACT []
+is_a: WBbt:0007030 ! post-embryonic cell
+is_a: WBbt:0008410 ! phasmid socket cell
+relationship: part_of WBbt:0005098 ! lumbar ganglion left
+relationship: part_of WBbt:0005431 ! phasmid left sensillum
+
+[Term]
+id: WBbt:0004216
+name: Z1.apppaaaa
+namespace: worm_anatomy
+alt_id: WBbt:0005627
+def: "Anterior spermathecae" [ISBN:0-87969-307-X]
+synonym: "gon_herm_spth_A" RELATED []
+synonym: "lineage name: Z1.apppaaaa" RELATED []
+xref: WB:rynl
+is_a: WBbt:0007816 ! spermathecal cell
+relationship: part_of WBbt:0005368 ! anterior spermatheca
+
+[Term]
+id: WBbt:0004421
+name: Psub4
+namespace: worm_anatomy
+def: "Embryonic founder cell of germ line" [ISBN:0-87969-307-X, WB:rynl]
+synonym: "lineage name: P0.pppp" RELATED []
+synonym: "P4" RELATED []
+synonym: "P4'" RELATED []
+is_a: WBbt:0008448 ! germline blastomere
+
+[Term]
+id: WBbt:0004422
+name: P0
+namespace: worm_anatomy
+def: "Single cell zygote" [ISBN:0-87969-307-X]
+synonym: "lineage name: Z" RELATED []
+is_a: WBbt:0008448 ! germline blastomere
+
+[Term]
+id: WBbt:0004432
+name: vulval cell
+namespace: worm_anatomy
+def: "Hermaphrodite vulva" [ISBN:0-87969-307-X]
+synonym: "lineage name: P7.pppp" RELATED []
+is_a: WBbt:0008289 ! vulval syncytia precursor
+
+[Term]
+id: WBbt:0004458
+name: MS
+namespace: worm_anatomy
+def: "Embryonic founder cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: P0.paa" RELATED []
+is_a: WBbt:0007028 ! embryonic cell
+
+[Term]
+id: WBbt:0004489
+name: M cell
+namespace: worm_anatomy
+alt_id: WBbt:0007204
+def: "Postembryonic mesoblast of pedigree MSapaapp." [ISBN:0-87969-307-X, WB:rynl]
+synonym: "lineage name: MSapaapp" RELATED []
+synonym: "MSapaapp" EXACT []
+is_a: WBbt:0006783 ! blast cell
+
+[Term]
+id: WBbt:0004499
+name: K cell
+namespace: worm_anatomy
+def: "Rectal cell, postembryonic blast cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABplpapppaa" RELATED []
+is_a: WBbt:0006783 ! blast cell
+is_a: WBbt:0008182 ! rectal epithelial cell
+
+[Term]
+id: WBbt:0004522
+name: anchor cell
+namespace: worm_anatomy
+def: "anchor cell, induces vulva, part of hermaphrodite gonad." [ISBN:0-87969-307-X]
+synonym: "AC" RELATED []
+synonym: "gon_herm_anch" RELATED []
+synonym: "lineage name: Z1.ppp/Z4.aaa" RELATED []
+is_a: WBbt:0007815 ! hermaphrodite somatic gonadal cell
+
+[Term]
+id: WBbt:0004534
+name: excretory socket cell
+namespace: worm_anatomy
+def: "Excretory socket cell, links duct to hypodermis" [ISBN:0-87969-307-X]
+synonym: "exc socket" RELATED []
+synonym: "excretory pore cell" RELATED []
+synonym: "lineage name: G2.p" RELATED []
+is_a: WBbt:0005754 ! interfacial epithelial cell
+relationship: part_of WBbt:0005736 ! excretory system
+
+[Term]
+id: WBbt:0004540
+name: excretory duct cell
+namespace: worm_anatomy
+def: "cell that forms the duct of the excretory system." [ISBN:0-87969-307-X]
+synonym: "exc duct" RELATED []
+synonym: "lineage name: ABplpaaaapa" RELATED []
+is_a: WBbt:0005754 ! interfacial epithelial cell
+relationship: part_of WBbt:0005736 ! excretory system
+
+[Term]
+id: WBbt:0004578
+name: Y cell
+namespace: worm_anatomy
+def: "Rectal cell at hatching, becomes PDA in hermaphrodite, postembryonic blast cell in male" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABprpppaaaa" RELATED []
+synonym: "postembryonic C cell" RELATED []
+is_a: WBbt:0006783 ! blast cell
+is_a: WBbt:0008182 ! rectal epithelial cell
+relationship: part_of WBbt:0005800 ! rectal epithelium
+
+[Term]
+id: WBbt:0004583
+name: W cell
+namespace: worm_anatomy
+def: "Postembryonic neuroblast, analogous to Pn.a cells, also known as P0." [ISBN:0-87969-307-X, WBpaper:00038216]
+synonym: "lineage name: ABprapaapa" RELATED []
+is_a: WBbt:0006783 ! blast cell
+
+[Term]
+id: WBbt:0004778
+name: H0L
+namespace: worm_anatomy
+def: "Seam hypodermal cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABplaaappa" RELATED []
+is_a: WBbt:0005753 ! seam cell
+is_a: WBbt:0007028 ! embryonic cell
+
+[Term]
+id: WBbt:0004780
+name: G1
+namespace: worm_anatomy
+def: "Postembryonic blast cell, excretory socket in embryo" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABprpaaaapa" RELATED []
+is_a: WBbt:0007028 ! embryonic cell
+is_a: WBbt:0008599 ! G cell
+
+[Term]
+id: WBbt:0004799
+name: F cell
+namespace: worm_anatomy
+def: "Rectal cell, blast cell in male" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABplppppapp" RELATED []
+is_a: WBbt:0006783 ! blast cell
+is_a: WBbt:0008182 ! rectal epithelial cell
+relationship: part_of WBbt:0005800 ! rectal epithelium
+
+[Term]
+id: WBbt:0004804
+name: E
+namespace: worm_anatomy
+def: "Embryonic founder cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: P0.pap" RELATED []
+is_a: WBbt:0005208 ! E lineage cell
+is_a: WBbt:0007028 ! embryonic cell
+
+[Term]
+id: WBbt:0004873
+name: D
+namespace: worm_anatomy
+def: "Embryonic founder cell" [ISBN:0-87969-307-X]
+synonym: "lineage name: P0.pppa" RELATED []
+is_a: WBbt:0008447 ! somatic blastomere
+
+[Term]
+id: WBbt:0004942
+name: U cell
+namespace: worm_anatomy
+def: "Rectal cell, postembryonic blast cell in male" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABplppppapa" RELATED []
+synonym: "postembryonic E cell" RELATED []
+is_a: WBbt:0006783 ! blast cell
+is_a: WBbt:0008182 ! rectal epithelial cell
+relationship: part_of WBbt:0005800 ! rectal epithelium
+
+[Term]
+id: WBbt:0004946
+name: TL
+namespace: worm_anatomy
+def: "Tail seam hypodermal cell, postembryonic blast cell, functions as phasmid socket in L1" [ISBN:0-87969-307-X]
+synonym: "lineage name: ABplappppp" RELATED []
+is_a: WBbt:0005753 ! seam cell
+is_a: WBbt:0008409 ! tail precursor cell
+
+[Term]
+id: WBbt:0005022
+name: Z1.paapp male
+namespace: worm_anatomy
+def: "Seminal vesicle, outer; cell of pedigree Z1.paapp in male." [ISBN:0-87969-307-X]
+comment: alternative nucleus Z4.aaapp male nucleus
+synonym: "gon_male_sves" RELATED []
+synonym: "lineage name: Z1.paapp" RELATED []
+is_a: WBbt:0007030 ! post-embryonic cell
+is_a: WBbt:0008249 ! gon_male_sves Z1 or Z4
+relationship: part_of WBbt:0006870 ! seminal vesicle
+
+[Term]
+id: WBbt:0005024
+name: gon_male_sves
+namespace: worm_anatomy
+def: "Seminal vesicle, inner" [ISBN:0-87969-307-X]
+synonym: "lineage name: Z4.appp" RELATED []
+is_a: WBbt:0008189 ! gon male sves
+relationship: part_of WBbt:0006870 ! seminal vesicle
+
+[Term]
+id: WBbt:0005098
+name: lumbar ganglion left
+namespace: worm_anatomy
+def: "lumbar ganglion, left side." [WB:rynl]
+is_a: WBbt:0005830 ! lumbar ganglion
+
+[Term]
+id: WBbt:0005107
+name: labial sensillum
+namespace: worm_anatomy
+def: "sensillum of inner or outer labial." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/IL.OLimagegallery.htm>
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0005116
+name: inner labial sensillum
+namespace: worm_anatomy
+def: "sensory organ of the inner labial." [WB:rynl]
+is_a: WBbt:0005107 ! labial sensillum
+
+[Term]
+id: WBbt:0005147
+name: obsolete gut
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005175
+name: gonad
+namespace: worm_anatomy
+def: "organ producing either sperm or ova." [ISBN:0140512888]
+is_a: WBbt:0003760 ! organ
+relationship: part_of WBbt:0005744 ! reproductive tract
+relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0005178
+name: hermaphrodite gonad
+namespace: worm_anatomy
+def: "organ in hermaphrodite animal that produces both ova and sperm." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem1.htm>
+synonym: "ovotestis" RELATED []
+is_a: WBbt:0005175 ! gonad
+is_a: WBbt:0005758 ! hermaphrodite-specific
+
+[Term]
+id: WBbt:0005189
+name: ganglion
+namespace: worm_anatomy
+def: "A cluster of nerve cells and associated glial cells (nuclear location)." [WB:rynl]
+xref: WB:rynl
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005735 ! nervous system
+
+[Term]
+id: WBbt:0005196
+name: obsolete excretory gland
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005208
+name: E lineage cell
+namespace: worm_anatomy
+def: "A cell that is the E blast cell or is a lineal descendant of E." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0005255
+name: buccal cavity
+namespace: worm_anatomy
+def: "cuticle-lined lumenal region surrounded by pharyngeal epithelium, situated at the anterior end of pharynx." [WB:rynl, WBPaper:00038216]
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005748 ! alimentary system
+relationship: part_of WBbt:0008374 ! stoma
+
+[Term]
+id: WBbt:0005312
+name: copulatory spicule
+namespace: worm_anatomy
+is_a: WBbt:0005757 ! male-specific
+
+[Term]
+id: WBbt:0005319
+name: spermatheca
+namespace: worm_anatomy
+def: "an accordion-like tube that contains sperm and is the site of oocyte fertilization." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem1.htm#Thespermatheca>
+is_a: WBbt:0005758 ! hermaphrodite-specific
+relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+
+[Term]
+id: WBbt:0005340
+name: obsolete V lineage
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005342
+name: uterine muscle
+namespace: worm_anatomy
+def: "muscle lining of the uterine wall." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/mesodermal.htm/musclepartIII.htm#um>
+is_a: WBbt:0005758 ! hermaphrodite-specific
+is_a: WBbt:0005781 ! smooth muscle
+relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0005347
+name: obsolete somatic gonad
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005364
+name: anus
+namespace: worm_anatomy
+alt_id: WBbt:0005335
+def: "openning of the rectum" [WB:rynl]
+synonym: "anus interface" RELATED []
+xref: WB:rynl
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0005368
+name: anterior spermatheca
+namespace: worm_anatomy
+def: "spermatheca in anterior gonad arm." [WB:rynl]
+synonym: "gon_herm_spth_A" RELATED []
+is_a: WBbt:0005319 ! spermatheca
+relationship: part_of WBbt:0005374 ! anterior gonad arm
+
+[Term]
+id: WBbt:0005374
+name: anterior gonad arm
+namespace: worm_anatomy
+def: "anterior lobe of the bi-lobbed hermaphrodite gonad." [WB:rynl]
+is_a: WBbt:0005729 ! Tissue
+relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+
+[Term]
+id: WBbt:0005391
+name: amphid sensillum
+namespace: worm_anatomy
+def: "Bilaterally symmetric chemosensory specializations located on the two lateral lips in the head involving a large hole in the anterior cuticle." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/Amphidimagegallery.htm>
+synonym: "amphid" RELATED []
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0005394
+name: amphid neuron
+namespace: worm_anatomy
+alt_id: WBbt:0005390
+def: "neuron of the amphid sensillum" [WB:rynl]
+synonym: "amphid sensory neuron" RELATED []
+is_a: WBbt:0006816 ! ciliated neuron
+relationship: part_of WBbt:0005391 ! amphid sensillum
+
+[Term]
+id: WBbt:0005407
+name: obsolete somatic cell
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005409
+name: motor neuron
+namespace: worm_anatomy
+def: "neuron making synapse on an effector (muscle, gland)." [WB:rynl]
+synonym: "motoneuron" RELATED []
+is_a: WBbt:0003679 ! neuron
+
+[Term]
+id: WBbt:0005425
+name: phasmid sensillum
+namespace: worm_anatomy
+def: "bilateral sensory organ in the tail, similar to the amphid in the head." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/Phasmidimagegallery.htm>
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0005426
+name: obsolete Q lineage
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005431
+name: phasmid left sensillum
+namespace: worm_anatomy
+def: "the left one in the pair of phasmid sensilla." [WB:rynl]
+is_a: WBbt:0005425 ! phasmid sensillum
+
+[Term]
+id: WBbt:0005451
+name: pharyngeal muscle cell
+namespace: worm_anatomy
+def: "type of cells that make up muscle layers in the pharynx." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary1.htm#pharyngealmuscle>
+is_a: WBbt:0005460 ! pharyngeal cell
+is_a: WBbt:0005820 ! alimentary muscle
+
+[Term]
+id: WBbt:0005460
+name: pharyngeal cell
+namespace: worm_anatomy
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0003681 ! pharynx
+
+[Term]
+id: WBbt:0005494
+name: obsolete P lineage
+namespace: worm_anatomy
+is_obsolete: true
+
+[Term]
+id: WBbt:0005501
+name: outer labial sensillum
+namespace: worm_anatomy
+is_a: WBbt:0005107 ! labial sensillum
+
+[Term]
+id: WBbt:0005671
+name: AWB
+namespace: worm_anatomy
+def: "Neuron class of two ciliated neurons with flattened, sheet-like endings that are associated with the sheath cells of the amphid sensilla" [WB:Paper00000938]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/neurons/Individual%20Neurons/AWBframeset.html>
+is_a: WBbt:0005394 ! amphid neuron
+is_a: WBbt:0005839 ! odorsensory neuron
+
+[Term]
+id: WBbt:0005729
+name: Tissue
+namespace: worm_anatomy
+def: "Association of cells with a common embryological origin or pathway and similar structure and function. Usually, cells of a tissue are contiguous at cell membranes and may be of one or more types. Tissues aggregate to form organs." [ISBN:0-14-051288-8, WB:rynl]
+xref: CARO:0000043
+xref: ISBN:0-14-051288-8
+xref: WB:rynl
+is_a: WBbt:0005763 ! Functional system
+
+[Term]
+id: WBbt:0005730
+name: epithelial system
+namespace: worm_anatomy
+def: "lies within the body wall, in close relation to nervous system and excretory system." [WBPaper:00038216]
+xref: WB:rynl
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005732
+name: extracellular component
+namespace: worm_anatomy
+def: "Anatomical structures that exist outside of cells; non-cellular." [WB:rynl]
+xref: CARO:0000040
+xref: WB:pws
+is_a: WBbt:0005766 ! Anatomy
+
+[Term]
+id: WBbt:0005733
+name: hypodermis
+namespace: worm_anatomy
+def: "Epidermal layer." [WB:pws]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/hypodermis.htm>
+synonym: "epidermis" RELATED []
+xref: CARO:0000066
+xref: WB:pws
+is_a: WBbt:0005729 ! Tissue
+relationship: part_of WBbt:0005730 ! epithelial system
+
+[Term]
+id: WBbt:0005735
+name: nervous system
+namespace: worm_anatomy
+def: "Complement of nervous tissue (neurones, nerves, receptors and support cells) serving to detect, relay and coordinate information about an animal's internal and external environments and to initiate and integrate its effector responses and activities." [ISBN:0-14-051288-8, WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/MoW_built0.92/nervous_system.html>
+xref: WB:rynl
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005736
+name: excretory system
+namespace: worm_anatomy
+is_a: WBbt:0006850 ! excretory secretory system
+
+[Term]
+id: WBbt:0005737
+name: muscular system
+namespace: worm_anatomy
+def: "the organ system that allows the animal move, includes all muscles." [WB:rynl]
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005738
+name: body region
+namespace: worm_anatomy
+def: "region of the body by which tissues, cells or cell parts are classified" [WBPaper:00038216]
+is_a: WBbt:0005766 ! Anatomy
+
+[Term]
+id: WBbt:0005739
+name: head
+namespace: worm_anatomy
+def: "anterior-most body region containing the pharynx." [WB:rynl]
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0005740
+name: midbody
+namespace: worm_anatomy
+def: "body region posterior to the head and anterior to the tail" [WB:rynl]
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0005741
+name: tail
+namespace: worm_anatomy
+def: "posterior region, from rectum to the end" [WB:rynl]
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0005743
+name: digestive tract
+namespace: worm_anatomy
+def: "inner tube of two concentric tubes that make up the body" [WB:rynl]
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0005744
+name: reproductive tract
+namespace: worm_anatomy
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0005745
+name: pseudocoelom
+namespace: worm_anatomy
+def: "A fluid-filled space enclosed on the outside by the basal laminae of the bodywall tissues, principally those of the bodywall muscles and the hypodermis. Within this space the digestive tract and reproductive tract lie separately, each enclosed by its own basal lamina.  Intercellular signals, nutrients and waste products can travel between all tissues bordering this space." [WBPaper:00038216]
+synonym: "body cavity" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005732 ! extracellular component
+is_a: WBbt:0005738 ! body region
+relationship: part_of WBbt:0005749 ! coelomic system
+
+[Term]
+id: WBbt:0005746
+name: Organ system
+namespace: worm_anatomy
+def: "intergrated group of organs, performing one or more unified functions." [ISBN:0-14-051288-8]
+xref: ISBN:0-14-051288-8
+is_a: WBbt:0005763 ! Functional system
+
+[Term]
+id: WBbt:0005747
+name: reproductive system
+namespace: worm_anatomy
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005748
+name: alimentary system
+namespace: worm_anatomy
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005749
+name: coelomic system
+namespace: worm_anatomy
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0005750
+name: socket cell
+namespace: worm_anatomy
+def: "An interfacial epithelial cell which forms a distal cap on a sheath cell to bind the sheath of a sensillum to the neighboring hypodermis, via adherens junctions. There is often a narrow opening through the socket from the exterior into the sheath channel, allowing ciliated dendrites to be exposed to the external environment. The socket cell functions similarly to a glial cell." [WBPaper:00038216]
+is_a: WBbt:0005754 ! interfacial epithelial cell
+is_a: WBbt:0005762 ! accessory cell
+
+[Term]
+id: WBbt:0005751
+name: coelomocyte
+namespace: worm_anatomy
+def: "A free-floating spherical cell lying in the pseudocoelomic cavity of larvae and adult C. elegans which can endocytose many compounds, possibly for immune surveillance.  There are six coelomocytes in adult hermaphrodites, and they display prominent cytoplasmic inclusions and vacuoles." [WBPaper:00038216]
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005749 ! coelomic system
+
+[Term]
+id: WBbt:0005752
+name: Sex specific entity
+namespace: worm_anatomy
+def: "anatomical or cell objects that exist in only one, male or hermaphrodite, sex." [WB:rynl]
+is_a: WBbt:0005763 ! Functional system
+
+[Term]
+id: WBbt:0005753
+name: seam cell
+namespace: worm_anatomy
+def: "a group of hypodermal cells that lie along the apical midline of the hypodermis, at the extreme left and right sides between nose and tail" [WB:rynl, WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/hypsupportseam.htm>
+synonym: "lateral hypodermis" RELATED []
+is_a: WBbt:0007846 ! hypodermal cell
+
+[Term]
+id: WBbt:0005754
+name: interfacial epithelial cell
+namespace: worm_anatomy
+def: "an epithelial cell that serves either to bridge two neighboring epithelial tissues or to form an opening in the epithelium." [WB:rynl, WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/hypsupportother.htm>
+synonym: "interfacial cell" RELATED []
+synonym: "interfacial epithelium" RELATED []
+synonym: "transitional epithelium" RELATED []
+is_a: WBbt:0003672 ! epithelial cell
+relationship: part_of WBbt:0005730 ! epithelial system
+
+[Term]
+id: WBbt:0005755
+name: cuticle
+namespace: worm_anatomy
+def: "a rigid external coating which is secreted by the hypodermis, seam and some transitional epithelial cells which covers the outer body, the major openings  into the body cavity from the exterior, and two large sensory bristles, the male spicules.  The cuticle of the spicules, the hook,  and of some portions of the spicule channels is especially rigid and is probably sclerotized.  Similar sclerotic features are occasionally noted in the ventral surface of the male tail fan." [WBPaper:00038216]
+synonym: "exoskeleton" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005730 ! epithelial system
+
+[Term]
+id: WBbt:0005756
+name: basal lamina
+namespace: worm_anatomy
+synonym: "basement membrane" RELATED []
+synonym: "ECM" RELATED []
+synonym: "extracellular matrix" RELATED []
+synonym: "lamina" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005730 ! epithelial system
+
+[Term]
+id: WBbt:0005757
+name: male-specific
+namespace: worm_anatomy
+def: "cells or anatomical parts specific to the male sex" [WB:rynl]
+is_a: WBbt:0005752 ! Sex specific entity
+relationship: part_of WBbt:0007850 ! male
+
+[Term]
+id: WBbt:0005758
+name: hermaphrodite-specific
+namespace: worm_anatomy
+def: "cells or anatomical parts specific to the hermaphrodite sex" [WB:rynl]
+is_a: WBbt:0005752 ! Sex specific entity
+relationship: part_of WBbt:0007849 ! hermaphrodite
+
+[Term]
+id: WBbt:0005759
+name: sensory neuron
+namespace: worm_anatomy
+def: "neuron that senses external stimuli and transduce them to signals internal to the organism." [WB:rynl]
+comment: WormAtlas NeuroTABLE 1 classification used.
+is_a: WBbt:0003679 ! neuron
+
+[Term]
+id: WBbt:0005760
+name: somatic nervous system
+namespace: worm_anatomy
+def: "Part of the nervous system that lies completely outside the pharynx." [WB:rynl]
+relationship: part_of WBbt:0005735 ! nervous system
+
+[Term]
+id: WBbt:0005762
+name: accessory cell
+namespace: worm_anatomy
+def: "cells that support sensory neurons, similar to glial cells in vertebrates. A category which collectively refers to socket cells, sheath cells, and structural cells, or their processes.  All of these cells extend long processes which serve a supporting role, rather like glia, to form a protective environment around sensory neuron endings.  In addition, some of these cells extend broad thin processes from their somata which wrap around neuronal ganglia, again in a glia-like fashion" [WB:rynl, WBPaper:00038216]
+synonym: "support cell" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005735 ! nervous system
+
+[Term]
+id: WBbt:0005763
+name: Functional system
+namespace: worm_anatomy
+def: "concerns with functional aspects of cells and anatomical parts" [WB:rynl]
+is_a: WBbt:0000100 ! C. elegans Cell and Anatomy
+
+[Term]
+id: WBbt:0005766
+name: Anatomy
+namespace: worm_anatomy
+alt_id: WBbt:0005764
+def: "entity of anatomical origin that is either entirely acellular or is a collection of cells and acellular parts." [WB:rynl]
+synonym: "Space" RELATED []
+is_a: WBbt:0000100 ! C. elegans Cell and Anatomy
+
+[Term]
+id: WBbt:0005767
+name: pharyngeal-intestinal valve
+namespace: worm_anatomy
+alt_id: WBbt:0005435
+def: "A group of six equivalent cells forms a tightly constructed 'valve' that links the posterior bulb of the pharynx to the anterior four cells of the intestine. These six cells comprise a small epithelial channel with a cuticular lining in continuity with the pharyngeal cuticle and link the lumen of the pharynx to the large lumen of the anterior intestine." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary1.htm#vip>
+synonym: "cardia" RELATED []
+synonym: "esophago-intestinal valve" RELATED []
+synonym: "pharyngeal valve" RELATED []
+synonym: "pharyngo-intestinal valve" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0005768
+name: axis
+namespace: worm_anatomy
+def: "spatial axis" [WB:rynl]
+is_a: WBbt:0005766 ! Anatomy
+
+[Term]
+id: WBbt:0005772
+name: intestine
+namespace: worm_anatomy
+def: "A chain of very large cuboidal cells forming a wide central lumen in which food arrives from the posterior pharynx, is digested, and from which waste products proceed to the rectum.  Intestinal rings form in groups of two and four cells surrounding the common lumen; thus the epithelium is only one cell deep at any point, with neighboring cells firmly secured to their neighbors by apical adherens junctions.  These cells have very large nuclei and many large vacuoles, yolk granules, and other inclusions; the latter increase in number and electron density as the animal ages." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://wormatlas.org/ver1/handbook/alimentary/alimentary2.htm>
+synonym: "gut" RELATED []
+synonym: "mesenteron" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0003760 ! organ
+relationship: part_of WBbt:0005743 ! digestive tract
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0005773
+name: rectum
+namespace: worm_anatomy
+def: "The passage from the posterior intestine, from the rectal valve to the opening to the exterior." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary3.htm>
+is_a: WBbt:0005758 ! hermaphrodite-specific
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0005774
+name: cloaca
+namespace: worm_anatomy
+def: "a feature of the male tail, caudal to the proctodeum, where the vas deferens and the intestine open out jointly near the tail tip to discharge their contents." [WBPaper:00038216]
+is_a: WBbt:0005757 ! male-specific
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0005775
+name: excretory canal
+namespace: worm_anatomy
+def: "Four processes  (canals) of the excretory canal cell each contain a central collecting lumen which feeds to a central lumenal canal in the cell body;  the central canal forms a specialized membrane to release fluids into the excretory duct.  These five canals form a continuous H-shaped channel which extends almost the full length of the body, generally in contact with the lateral hypodermis and the pseudocoelom." [WBPaper:00038216]
+synonym: "canal" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005812 ! excretory cell
+
+[Term]
+id: WBbt:0005776
+name: excretory gland cell
+namespace: worm_anatomy
+def: "gland cell of the secretory-excretory system, sends processes to ring, opens into excretory duct." [ISBN:0-87969-307-X, WB:rynl]
+synonym: "exc gl" RELATED []
+is_a: WBbt:0003670 ! gland cell
+is_a: WBbt:0008074 ! syncytium
+relationship: part_of WBbt:0005736 ! excretory system
+
+[Term]
+id: WBbt:0005779
+name: striated muscle
+namespace: worm_anatomy
+is_a: WBbt:0003675 ! muscle cell
+relationship: part_of WBbt:0005813 ! body wall musculature
+
+[Term]
+id: WBbt:0005780
+name: non-striated muscle
+namespace: worm_anatomy
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/mesodermal.htm/musclepartIII.htm>
+is_a: WBbt:0003675 ! muscle cell
+
+[Term]
+id: WBbt:0005781
+name: smooth muscle
+namespace: worm_anatomy
+is_a: WBbt:0005780 ! non-striated muscle
+is_a: WBbt:0007810 ! body muscle cell
+
+[Term]
+id: WBbt:0005784
+name: germ line
+namespace: worm_anatomy
+def: "cell line which early in development becomes differentiated from the remaining somatic cell line, and alone has the potential to undergo meiosis and form gametes." [ISBN:0140512888]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem2.htm>
+synonym: "germline" RELATED []
+is_a: WBbt:0004017 ! Cell
+is_a: WBbt:0005729 ! Tissue
+relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0005785
+name: somatic gonad
+namespace: worm_anatomy
+def: "The components of the gonad that are separate from the germline proper. In hermaphrodite, these include five tissues which are all derived from the somatic primordium : the distal tip cells, the gonadal sheath, the spermatheca, the spermatheca-uterine valve (sp-ut)  and the uterus." [WB:rynl, WBPaper:00038216]
+synonym: "somatic germline" RELATED []
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005175 ! gonad
+
+[Term]
+id: WBbt:0005786
+name: muscle of the reproductive system
+namespace: worm_anatomy
+is_a: WBbt:0003675 ! muscle cell
+relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0005789
+name: pharyngeal segment
+namespace: worm_anatomy
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0003681 ! pharynx
+
+[Term]
+id: WBbt:0005792
+name: intestinal cell
+namespace: worm_anatomy
+def: "any of 20 large epithelial cells which form a tube and are mostly situated as bilaterally symmetric pairs around the tubular lumen. Each of these cell pairs forms an intestinal ring ( II-IX int rings). The most anterior intestinal ring (int ring I), however, is made of four cells. Intestinal cells contain large nuclei with large nucleoli and numerous autofluorescent granules in their cytoplasm." [WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary2.htm#intcelllist>
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005772 ! intestine
+
+[Term]
+id: WBbt:0005800
+name: rectal epithelium
+namespace: worm_anatomy
+def: "epithelium connecting intestine and anus." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/alimentary/alimentary3.htm#rectepith>
+is_a: WBbt:0005733 ! hypodermis
+relationship: part_of WBbt:0005773 ! rectum
+
+[Term]
+id: WBbt:0005811
+name: neuronal sheath cell
+namespace: worm_anatomy
+def: "a structural (glial) cell which forms an specialized environment surrounding the sensory ending(s) of one or more neurons; sometimes accompanied by a more distal socket cell.  In early development of the sensory nerves and of the nerve ring some sheath cells (cephalics and labials) may also provide a substrate for axon guidance" [WBPaper:00038216]
+synonym: "pocket cell" RELATED []
+xref: WBPaper:00038216
+is_a: WBbt:0005754 ! interfacial epithelial cell
+is_a: WBbt:0005762 ! accessory cell
+
+[Term]
+id: WBbt:0005812
+name: excretory cell
+namespace: worm_anatomy
+alt_id: WBbt:0004542
+def: "H-shaped cell associated with the excretory system, largest cell in C. elegans." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/excretory.htm#exccanalcell>
+synonym: "exc_cell" RELATED []
+synonym: "excretory canal cell" RELATED []
+synonym: "lineage name: ABplpappaap" RELATED []
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005736 ! excretory system
+
+[Term]
+id: WBbt:0005813
+name: body wall musculature
+namespace: worm_anatomy
+def: "Longitudinal bands of muscle cells surrounding animal body, with one band running in each quadrant of the body, regulated contraction and relaxation of these muscles cause locomotion." [ISBN:0-87969-433-5]
+synonym: "body muscle" RELATED []
+is_a: WBbt:0005737 ! muscular system
+
+[Term]
+id: WBbt:0005820
+name: alimentary muscle
+namespace: worm_anatomy
+def: "muscle of the alimentary organ system." [WB:rynl]
+is_a: WBbt:0005780 ! non-striated muscle
+
+[Term]
+id: WBbt:0005821
+name: vulval muscle
+namespace: worm_anatomy
+def: "muscle associated with hermaphrodite vulva." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/mesodermal.htm/musclepartIII.htm#vm>
+is_a: WBbt:0005758 ! hermaphrodite-specific
+is_a: WBbt:0005780 ! non-striated muscle
+is_a: WBbt:0007810 ! body muscle cell
+relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0005828
+name: gonadal sheath cell
+namespace: worm_anatomy
+def: "five pairs of thin gonadal sheath cells form a single layer covering the germ line component of each arm, each pair occupying a stereotyped position along the gonad proximal-distal axis." [WBPaper:00038216]
+is_a: WBbt:0005781 ! smooth muscle
+is_a: WBbt:0005786 ! muscle of the reproductive system
+is_a: WBbt:0007815 ! hermaphrodite somatic gonadal cell
+
+[Term]
+id: WBbt:0005829
+name: ventral nerve cord
+namespace: worm_anatomy
+def: "a large process bundle that runs along the vental mid-line extending from the ventral region of the nerve ring." [WB:Paper00000938]
+synonym: "ventral cord" RELATED [WB:Paper00000938]
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005760 ! somatic nervous system
+
+[Term]
+id: WBbt:0005830
+name: lumbar ganglion
+namespace: worm_anatomy
+alt_id: WBbt:0005099
+def: "The left and right lumbar ganglia lie behind the pre-anal ganglion in the tail, in lateral positions. Each contains 12 neuron cell bodies that send most of their neuronal processes into the ventral nerve cord via lumbar commissures and the pre-anal ganglion. There is no local neuropil in these ganglia in the hermaphrodite, instead they form most synapses in the pre-anal ganglion. Most lumbar neurons have sensory functions. In the adult male tail, these two ganglia gain many additional neurons and have some local neuropil. The lumbar neurons lie in close association with the lateral hypodermis, and most are posterior to the anus." [WBPaper:00038216]
+synonym: "lumbar lateral ganglia" RELATED []
+synonym: "lumbar lateral ganglion" RELATED []
+xref: WB:rynl
+is_a: WBbt:0006977 ! tail ganglion
+
+[Term]
+id: WBbt:0005839
+name: odorsensory neuron
+namespace: worm_anatomy
+def: "neuron that senses volatile odorants" [Wb:rynl]
+is_a: WBbt:0005759 ! sensory neuron
+
+[Term]
+id: WBbt:0005843
+name: eggshell
+namespace: worm_anatomy
+def: "The shell or external calcareous covering of an egg" [ISBN:0198611862]
+is_a: WBbt:0005732 ! extracellular component
+
+[Term]
+id: WBbt:0006748
+name: vulva
+namespace: worm_anatomy
+def: "female genital." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem3a.htm#Thevulva>
+is_a: WBbt:0005758 ! hermaphrodite-specific
+is_a: WBbt:0008422 ! sex organ
+relationship: part_of WBbt:0005740 ! midbody
+relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0006754
+name: amphid sheath cell
+namespace: worm_anatomy
+def: "sheath cell of amphid sensillum." [WB:rynl]
+is_a: WBbt:0005811 ! neuronal sheath cell
+
+[Term]
+id: WBbt:0006760
+name: uterus
+namespace: worm_anatomy
+def: "The organ in which the eggs are developed and protected until laid." [ISBN:0198611862, WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem3a.htm#Theuterus>
+is_a: WBbt:0005729 ! Tissue
+relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0006761
+name: head muscle
+namespace: worm_anatomy
+def: "body wall muscle in the head, including first eight cells of each muscle quadrants which are innervated by nerve ring neurons." [WB:Paper00001594, WB:rynl]
+synonym: "head body wall muscle" RELATED []
+is_a: WBbt:0005813 ! body wall musculature
+relationship: part_of WBbt:0005739 ! head
+
+[Term]
+id: WBbt:0006770
+name: P1
+namespace: worm_anatomy
+alt_id: WBbt:0007206
+def: "The first (count from anterior-most) of twelve postembryonic blast cells for ventral cord motorneurons, ventral hypodermis, vulva, male preanal ganglion; ventral hypodermis in L1." [ISBN:0-87969-307-X, WB:rynl]
+synonym: "P1 post-embryonic blast cell" EXACT []
+is_a: WBbt:0008115 ! ventral cord blast cell
+
+[Term]
+id: WBbt:0006783
+name: blast cell
+namespace: worm_anatomy
+def: "precursor cell destined to divide some time after hatching." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0006794
+name: male gonad
+namespace: worm_anatomy
+def: "gonad of a male animal, produces sperm." [WB:wjc]
+is_a: WBbt:0005175 ! gonad
+
+[Term]
+id: WBbt:0006795
+name: proctodeum
+namespace: worm_anatomy
+def: "junction between the alimentary and genital tracts in the male." [WB:Paper00000462]
+is_a: WBbt:0005757 ! male-specific
+relationship: part_of WBbt:0005748 ! alimentary system
+
+[Term]
+id: WBbt:0006796
+name: germ cell
+namespace: worm_anatomy
+def: "a cell, of either sex, directly concerned in the production of a new organism." [WB:rynl]
+is_a: WBbt:0005784 ! germ line
+relationship: develops_from WBbt:0006849 ! germline precursor cell
+
+[Term]
+id: WBbt:0006797
+name: oocyte
+namespace: worm_anatomy
+def: "a female haploid germ cell." [WB:wjc]
+synonym: "ovum" RELATED []
+is_a: WBbt:0005758 ! hermaphrodite-specific
+is_a: WBbt:0006796 ! germ cell
+
+[Term]
+id: WBbt:0006798
+name: sperm
+namespace: worm_anatomy
+def: "Male haploid germ cell." [WB:rynl]
+synonym: "spermatozoa" RELATED []
+synonym: "spermatozoon" RELATED []
+is_a: WBbt:0006796 ! germ cell
+relationship: develops_from WBbt:0006800 ! spermatid
+
+[Term]
+id: WBbt:0006799
+name: spermatocyte
+namespace: worm_anatomy
+def: "A cell which gives rise to spermatids by meiosis." [ISBN:0198611862]
+is_a: WBbt:0006796 ! germ cell
+
+[Term]
+id: WBbt:0006800
+name: spermatid
+namespace: worm_anatomy
+def: "An immature sperm cell which undergoes morphogenesis to form mature, amoeboid sperm." [WB:wjc]
+is_a: WBbt:0006796 ! germ cell
+relationship: develops_from WBbt:0008592 ! secondary spermatocyte
+
+[Term]
+id: WBbt:0006804
+name: body wall muscle cell
+namespace: worm_anatomy
+def: "type of 95 cells that make up muscles of the body wall." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/mesodermal.htm/musclepartII.htm#CelllistBWM>
+synonym: "body muscle cell" RELATED []
+synonym: "body wall muscle" RELATED []
+synonym: "bodywall muscle" RELATED []
+synonym: "mu_bod" RELATED []
+is_a: WBbt:0005779 ! striated muscle
+is_a: WBbt:0007810 ! body muscle cell
+
+[Term]
+id: WBbt:0006816
+name: ciliated neuron
+namespace: worm_anatomy
+def: "neuron type, neurons that have ciliated nerve endings." [WB:rynl]
+is_a: WBbt:0003679 ! neuron
+
+[Term]
+id: WBbt:0006830
+name: HSN
+namespace: worm_anatomy
+def: "Neuron class of two motoneurons that innervate vulval muscles in the hermaphrodite." [WB:Paper00000938]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/neurons/Individual%20Neurons/hsframeset.html>
+synonym: "hermaphrodite specific neuron" RELATED []
+is_a: WBbt:0005409 ! motor neuron
+is_a: WBbt:0006837 ! serotonergic neuron
+is_a: WBbt:0006840 ! cholinergic neuron
+relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0006837
+name: serotonergic neuron
+namespace: worm_anatomy
+def: "neuron that uses serotonin as a vesicular neurotransmitter." [WB:rynl]
+synonym: "5-HT neuron" RELATED []
+is_a: WBbt:0003679 ! neuron
+
+[Term]
+id: WBbt:0006840
+name: cholinergic neuron
+namespace: worm_anatomy
+def: "neuron that uses vesicular acetylcholine as a neurotransmitter." [WB:rynl]
+synonym: "ACh neuron" RELATED []
+is_a: WBbt:0003679 ! neuron
+
+[Term]
+id: WBbt:0006849
+name: germline precursor cell
+namespace: worm_anatomy
+def: "member of a set of two cells that generate exclusively sperm and ovum." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem2.htm#germlinedevelopment>
+synonym: "PGC" RELATED []
+synonym: "primordial germ cell" RELATED []
+is_a: WBbt:0005784 ! germ line
+
+[Term]
+id: WBbt:0006850
+name: excretory secretory system
+namespace: worm_anatomy
+def: "An organ system consists of the excretory system and associated glands." [WB:Paper00000536, WB:rynl]
+is_a: WBbt:0005746 ! Organ system
+
+[Term]
+id: WBbt:0006870
+name: seminal vesicle
+namespace: worm_anatomy
+def: "part of male gonad that holds mature sperm, made of a total of 12 nuclei." [WB:Paper00000193, WB:rynl]
+synonym: "gon_male_sves" RELATED []
+is_a: WBbt:0005729 ! Tissue
+relationship: part_of WBbt:0006794 ! male gonad
+
+[Term]
+id: WBbt:0006908
+name: gubernacular muscle
+namespace: worm_anatomy
+def: "specialized muscle type in male sex organ." [WB:rynl]
+synonym: "mu_male_gub" RELATED []
+is_a: WBbt:0005757 ! male-specific
+is_a: WBbt:0005780 ! non-striated muscle
+is_a: WBbt:0007810 ! body muscle cell
+
+[Term]
+id: WBbt:0006920
+name: cephalic sensillum
+namespace: worm_anatomy
+def: "sensillum in the head, each with a CEP receptor neuron." [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/CEPimage%20gallery.htm>
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0006926
+name: deirid sensillum
+namespace: worm_anatomy
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/deiridimagegallery.htm>
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0006929
+name: sensillum
+namespace: worm_anatomy
+def: "sensory organ, consists of sensory neurons and supporting cells." [WB:rynl]
+is_a: WBbt:0003760 ! organ
+
+[Term]
+id: WBbt:0006941
+name: ray
+namespace: worm_anatomy
+def: "male sensory organ; nine bilateral pairs of finger-like rays (numbered 1 to 9, Left/Right) radiate from the tail and are embedded in a cuticlar fan." [WB:rynl, WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/maleHandbook/EpithelialMalePartII_Rays.htm>
+synonym: "male sensory ray" RELATED []
+is_a: WBbt:0005757 ! male-specific
+is_a: WBbt:0006929 ! sensillum
+
+[Term]
+id: WBbt:0006977
+name: tail ganglion
+namespace: worm_anatomy
+def: "ganglion in the tail region (posterior to rectum)." [WB:rynl]
+is_a: WBbt:0005189 ! ganglion
+relationship: part_of WBbt:0005741 ! tail
+
+[Term]
+id: WBbt:0006979
+name: tail spike
+namespace: worm_anatomy
+def: "An acellular thin cuticle whip formed at the very end of the tail during embryogenesis." [WB:rynl, WBPaper:00038216]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/hypodermis/hypsupportother.htm#tailspikecells>
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005741 ! tail
+
+[Term]
+id: WBbt:0007028
+name: embryonic cell
+namespace: worm_anatomy
+def: "cell that exists in and is part of an embryo." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0007030
+name: post-embryonic cell
+namespace: worm_anatomy
+def: "a cell that is born in a worm after hatching." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0007809
+name: vulval precursor cell
+namespace: worm_anatomy
+def: "cell that has the potential to form structural part of a vulva." [WB:rynl]
+synonym: "VPC" RELATED []
+synonym: "vulval precursor" RELATED []
+is_a: WBbt:0006783 ! blast cell
+
+[Term]
+id: WBbt:0007810
+name: body muscle cell
+namespace: worm_anatomy
+def: "any muscle cell that is not pharyngeal." [WB:Paper00001807]
+is_a: WBbt:0003675 ! muscle cell
+
+[Term]
+id: WBbt:0007815
+name: hermaphrodite somatic gonadal cell
+namespace: worm_anatomy
+def: "somatic (not germline) cell of the hermaphrodite gonad." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+relationship: part_of WBbt:0005785 ! somatic gonad
+
+[Term]
+id: WBbt:0007816
+name: spermathecal cell
+namespace: worm_anatomy
+def: "cell of the hermaphrodite spermatheca." [WB:rynl]
+synonym: "gon herm spth" RELATED []
+is_a: WBbt:0007815 ! hermaphrodite somatic gonadal cell
+
+[Term]
+id: WBbt:0007832
+name: cuticular ala
+namespace: worm_anatomy
+def: "Small linear ridges running along the lateral lines of the cuticle, lengthwise along the body; these thickenings lie in register with the seam cells which likely produce them and are present in the cuticle of the L1, dauer and adult stages, but not in other larval stages. The alae are suspected to provide better traction when the animal generates a bodywave. Since the animal usually lies on its side, the alae are in perfect position to catch against the substrate." [WB:rynl, WBPaper:00038216]
+synonym: "alae" RELATED []
+is_a: WBbt:0005732 ! extracellular component
+relationship: part_of WBbt:0005755 ! cuticle
+
+[Term]
+id: WBbt:0007833
+name: organism
+namespace: worm_anatomy
+def: "Anatomical structure that is an individual member of a species and consists of more than one cell." [WB:rynl]
+comment: XREF::CARO:0000012
+is_a: WBbt:0005766 ! Anatomy
+
+[Term]
+id: WBbt:0007846
+name: hypodermal cell
+namespace: worm_anatomy
+def: "primary cell type that forms the hypodermis." [WB:rynl]
+is_a: WBbt:0003672 ! epithelial cell
+relationship: part_of WBbt:0005733 ! hypodermis
+
+[Term]
+id: WBbt:0007849
+name: hermaphrodite
+namespace: worm_anatomy
+def: "Multi-cellular organism that can produce both male and female gametes." [CARO:0000029]
+synonym: "hermaphroditic organism" RELATED []
+xref: CARO:0000029
+is_a: WBbt:0007833 ! organism
+
+[Term]
+id: WBbt:0007850
+name: male
+namespace: worm_anatomy
+def: "Gonochoristic organism that can produce male gametes." [CARO:0000027]
+synonym: "male organism" RELATED []
+xref: CARO:0000027
+is_a: WBbt:0007833 ! organism
+
+[Term]
+id: WBbt:0008073
+name: syncytium precursor
+namespace: worm_anatomy
+def: "cell that is mononuclear and has a strong potential to fuse with other cell(s) to form a multinucleated cell." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0008074
+name: syncytium
+namespace: worm_anatomy
+def: "cell that has more than one nucleus." [WB:rynl]
+comment: http://en.wikipedia.org/wiki/Syncytium
+synonym: "syncitium" RELATED []
+synonym: "syncycia" RELATED []
+synonym: "syncytial cell" RELATED []
+is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0008115
+name: ventral cord blast cell
+namespace: worm_anatomy
+def: "Blast cell lying ventrolaterally in the late embryo and L1 larval stage which divides during the late L1 larva in stereotypical reiterated fashion to give rise to many motor neurons which begin function in the ventral cord and preanal ganglion of the early L2 larva, as well as hypodermal cells (which fuse into hyp7) and a series of programmed cell deaths. In addition, the Pn.p daughters of P3 through P8 lineages persist without fusing into the hyp7 syncytium until mid L3 stage when they can be induced to divide further to produce vulval epithelial cells (vulA - vulF) or more hyp7 cells. P0 is also known as W." [WB:rynl, WBpaper:00038216]
+synonym: "P cell" RELATED []
+is_a: WBbt:0006783 ! blast cell
+
+[Term]
+id: WBbt:0008182
+name: rectal epithelial cell
+namespace: worm_anatomy
+def: "These cells include: B, F, Y, U, K' and K. All rectal epithelial cells contain secretory membrane stacks along this region facing the lumenal cuticle and produce some portion of the cuticular lining of the rectum. These are interfacial cells that connect the alimentary system to the main body syncytium." [WBPaper:00038216]
+synonym: "rectal epithelium" RELATED []
+is_a: WBbt:0005754 ! interfacial epithelial cell
+
+[Term]
+id: WBbt:0008189
+name: gon male sves
+namespace: worm_anatomy
+def: "seminal vesicle cell of male gonad." [WB:rynl]
+comment: 23 cells in each animal, one cell has alternate fate.
+synonym: "seminal vesicle" RELATED []
+is_a: WBbt:0008209 ! male gonadal cell
+
+[Term]
+id: WBbt:0008209
+name: male gonadal cell
+namespace: worm_anatomy
+def: "cell of male gonad." [WB:rynl]
+synonym: "male somatic gonadal cell" RELATED []
+is_a: WBbt:0004017 ! Cell
+is_a: WBbt:0005757 ! male-specific
+
+[Term]
+id: WBbt:0008249
+name: gon_male_sves Z1 or Z4
+namespace: worm_anatomy
+def: "seminal vesicle, outer; cell of the pedigree Z1.paapp or Z4.aaapp." [WB:rynl]
+is_a: WBbt:0008189 ! gon male sves
+
+[Term]
+id: WBbt:0008289
+name: vulval syncytia precursor
+namespace: worm_anatomy
+def: "precursor cell of, before fusion to form vulval syncytia vulA(4), vulC(4), vulD(2), vulE(4) and vulF(4)." [WB:rynl]
+is_a: WBbt:0008073 ! syncytium precursor
+
+[Term]
+id: WBbt:0008374
+name: stoma
+namespace: worm_anatomy
+def: "Portion of the digestive tract between the oral opening and the definitely tri-radiate beginning of the esophagus (pharynx)." [ISBN:0-8391-0697-1]
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005743 ! digestive tract
+
+[Term]
+id: WBbt:0008409
+name: tail precursor cell
+namespace: worm_anatomy
+def: "Tail lateral ectoblasts that give rise to neurons, hypodermis and glial lineages. While initially identical, after the L2 lethargus the T cell lineages become markedly different between males and hermaphrodites helping to provide the sexually dimorphic tail structures found in males." [WBPaper:00038216]
+synonym: "T cell" RELATED []
+is_a: WBbt:0006783 ! blast cell
+
+[Term]
+id: WBbt:0008410
+name: phasmid socket cell
+namespace: worm_anatomy
+def: "Hypodermal socket cell of the phasmid sensillum." [WB:rynl]
+synonym: "Phso" RELATED []
+is_a: WBbt:0005750 ! socket cell
+
+[Term]
+id: WBbt:0008422
+name: sex organ
+namespace: worm_anatomy
+def: "anatomical part of the body which is involved in sexual reproduction and constitutes the reproductive system." [WB:rynl]
+comment: Term definition modified from wikipedia entry.
+synonym: "genitalia" RELATED []
+is_a: WBbt:0003760 ! organ
+relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0008447
+name: somatic blastomere
+namespace: worm_anatomy
+def: "Embryonic cell which descends from the same parent cell as a germline blastomere." [WB:Paper00003633, WB:rynl]
+is_a: WBbt:0007028 ! embryonic cell
+created_by: raymond
+creation_date: 2012-03-05T10:59:36Z
+
+[Term]
+id: WBbt:0008448
+name: germline blastomere
+namespace: worm_anatomy
+def: "Embryonic cell that has the developmental potential to generate a germ cell." [WB:Paper00003633, WB:rynl]
+is_a: WBbt:0007028 ! embryonic cell
+created_by: raymond
+creation_date: 2012-03-05T11:05:10Z
+
+[Term]
+id: WBbt:0008587
+name: egg-laying apparatus
+namespace: worm_anatomy
+def: "An apparatus for laying eggs of the hermaphrodite reproductive system, consists of the uterus, the uterine muscles, the vulva, the vulval muscles, and a local neuropil formed by the egg-laying neurons." [WB:Paper00038216, WB:rynl]
+is_a: WBbt:0008422 ! sex organ
+relationship: part_of WBbt:0005747 ! reproductive system
+created_by: raymond
+creation_date: 2012-10-30T12:29:21Z
+
+[Term]
+id: WBbt:0008591
+name: primary spermatocyte
+namespace: worm_anatomy
+def: "A diploid immature germ cell which forms in the gonad when a spermatogonial stem cell buds off from the rachis to form a single cell that quickly enters metaphase I and divides to form secondary spermatocytes attached to a residual body." [WBPaper:00038216]
+is_a: WBbt:0006799 ! spermatocyte
+created_by: raymond
+creation_date: 2013-04-17T09:54:03Z
+
+[Term]
+id: WBbt:0008592
+name: secondary spermatocyte
+namespace: worm_anatomy
+def: "A haploid immature germ cell which forms in the gonad by the division of a diploid primary spermatocyte. It undergoes a second meiotic division to complete meiosis, at which time the daughter cells detach from the residual body to become spermatids." [WBPaper:00038216]
+is_a: WBbt:0006799 ! spermatocyte
+relationship: develops_from WBbt:0008591 ! primary spermatocyte
+created_by: raymond
+creation_date: 2013-04-17T09:54:03Z
+
+[Term]
+id: WBbt:0008599
+name: G cell
+namespace: worm_anatomy
+def: "Ventral ganglion neuroblasts present at hatching, located near the excretory pore." [WBpaper:00038216]
+is_a: WBbt:0006783 ! blast cell
+created_by: raymond
+creation_date: 2013-12-02T03:30:08Z
+
+[Typedef]
+id: develops_from
+name: develops_from
+namespace: worm_anatomy
+xref: RO:0002202
+
 [Typedef]
 id: part_of
 name: part_of
