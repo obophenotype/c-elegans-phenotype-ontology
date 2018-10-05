@@ -29,11 +29,11 @@ IMPORTS = iao go ro pato bfo chebi cl wbbt wbls
 # Top-level targets
 # ----------------------------------------
 
-all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo
+all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl
 	echo 'Release files created successfully.'
 test: sparql_test all
 prepare_release: all
-	cp $(ONT).owl $(ONT).obo $(RELEASEDIR) &&\
+	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
 	cp imports/*.owl $(RELEASEDIR)/imports &&\
 	cp imports/*.obo $(RELEASEDIR)/imports &&\
@@ -57,8 +57,9 @@ $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert --check false -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@ &&\
 	echo "$(ONT).obo successfully created."
 
-$(ONT)-base.owl: $(SRC)
-	#$(ROBOT) merge edit and definitions.owl with no imports.
+$(ONT)-base.owl: $(SRC) ../patterns/definitions.owl
+	$(ROBOT) remove --input $< --select imports --output $@ &&\
+	$(ROBOT) merge -i $@ -i ../patterns/definitions.owl -o $@ &&\
 	echo "$(ONT)-base.owl successfully created."
 
 # ----------------------------------------
@@ -73,6 +74,7 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 # generate seed with all referenced entities
 
 ed_definitions_merged.owl: $(SRC) ../patterns/definitions.owl
+	$(ROBOT) merge -i $(SRC) -i ../patterns/definitions.owl -o $@
 
 seed.txt: ed_definitions_merged.owl
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
@@ -115,8 +117,8 @@ release: $(ONT).owl $(ONT).obo $(ONT)-base.owl
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-#  trailing-whitespace nolabels
-VCHECKS = equivalent-classes owldef-self-reference xref-syntax 
+#  trailing-whitespace nolabels equivalent-classes
+VCHECKS =  owldef-self-reference xref-syntax 
 
 # Only needed until robot supports catalogs
 
