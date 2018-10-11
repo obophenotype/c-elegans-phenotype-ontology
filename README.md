@@ -3,7 +3,7 @@
 
 # c-elegans-phenotype-ontology
 
-This ontology... YOUR DESCRIPTION HERE
+The _C. elegans_ phenotype ontology organizes terms representing observed and reported phenotypes of _C. elegans_ and related nematodes into a hiearchy for the purpose of phenotype term discovery (e.g. using ontology browsers) and logical reasoning (e.g. inferring genes whose perturbation results in a more general phenotype based on annotations to more specific phenotypes). There is an ongoing effort to generate logical definitions that will formalize the relationship between each phenotype term and the biological entities (cells, tissues, cellular components, biological processes, etc.) that are affected.
 
 ## Versions
 
