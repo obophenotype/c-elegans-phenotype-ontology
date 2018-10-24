@@ -226,10 +226,10 @@ pattern_term_lists_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.tx
 	$(ROBOT) merge $(addprefix -i , $(individual_patterns_manual)) $(addprefix -i , $(individual_patterns_auto)) annotate --ontology-iri $(OBO)/$(ONT)/patterns/definitions.owl -o $@
 
 $(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn: ../patterns/data/manual/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_MANUAL)
-	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
+	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
 
 $(DOSDP_TEMP_PATTERN_AUTO)/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_AUTO)
-	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true  --outfile=$@
+	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
 
 $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl: $(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl $(DOSDP_TEMP_ONTOLOGIES)
 	$(ROBOT) extract -i $(word 2, $^) -T $< --method BOT -o $@
