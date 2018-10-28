@@ -1091,6 +1091,11 @@ name: nuclear division
 is_a: GO:0048285 ! organelle fission
 
 [Term]
+id: GO:0000323
+name: lytic vacuole
+is_a: GO:0005773 ! vacuole
+
+[Term]
 id: GO:0001505
 name: regulation of neurotransmitter levels
 is_a: GO:0065008 ! regulation of biological quality
@@ -1198,8 +1203,19 @@ name: cytoplasm
 is_a: GO:0044424 ! intracellular part
 
 [Term]
+id: GO:0005764
+name: lysosome
+is_a: GO:0000323 ! lytic vacuole
+
+[Term]
 id: GO:0005773
 name: vacuole
+is_a: GO:0043231 ! intracellular membrane-bounded organelle
+is_a: GO:0044444 ! cytoplasmic part
+
+[Term]
+id: GO:0005794
+name: Golgi apparatus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
 is_a: GO:0044444 ! cytoplasmic part
 
@@ -1708,6 +1724,12 @@ is_a: GO:2000147 ! positive regulation of cell motility
 id: GO:0030855
 name: epithelial cell differentiation
 is_a: GO:0030154 ! cell differentiation
+
+[Term]
+id: GO:0031090
+name: organelle membrane
+is_a: GO:0016020 ! membrane
+is_a: GO:0044422 ! organelle part
 
 [Term]
 id: GO:0031323
