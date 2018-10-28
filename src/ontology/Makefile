@@ -35,8 +35,10 @@ test: sparql_test all
 prepare_release: all
 	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
+	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp imports/*.owl $(RELEASEDIR)/imports &&\
 	cp imports/*.obo $(RELEASEDIR)/imports &&\
+	cp ../patterns/definitions.owl $(RELEASEDIR)/patterns &&\
 	git add $(RELEASEDIR)/imports/*.obo &&\
 	git add $(RELEASEDIR)/imports/*.owl &&\
 	(test -f subsets/*owl && cp subsets/* $(RELEASEDIR)/subsets && git add $(RELEASEDIR)/subsets/* || echo "no subsets") &&\
@@ -207,6 +209,7 @@ pattern_schema_checks: ../patterns/dosdp-patterns
 
 ../patterns/dosdp-patterns: .FORCE
 	wget -N -P ../patterns/dosdp-patterns -i ../patterns/dosdp-patterns/external.txt
+	#echo 'external.txt'
 
 ../patterns/pattern.owl: pattern_schema_checks ../patterns/dosdp-patterns
 	$(DOSDPT) prototype --obo-prefixes --template=../patterns/dosdp-patterns --outfile=$@
@@ -234,8 +237,13 @@ $(DOSDP_TEMP_PATTERN_AUTO)/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-
 $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl: $(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl $(DOSDP_TEMP_ONTOLOGIES)
 	$(ROBOT) extract -i $(word 2, $^) -T $< --method BOT -o $@
 
-$(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) $(DOSDP_TEMP_ONTOLOGIES)
+$(DOSDP_TEMP_ONTOLOGIES)/pattern_owl_seed.txt: ../patterns/pattern.owl $(DOSDP_TEMP_ONTOLOGIES)
+	touch $@
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
+
+$(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) $(DOSDP_TEMP_ONTOLOGIES)/pattern_owl_seed.txt $(DOSDP_TEMP_ONTOLOGIES)
 	cat $^ $(word 2, $^) | sort | uniq >$@
+	
 
 $(DOSDP_TEMP_PATTERN_MANUAL)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv $(DOSDP_TEMP_PATTERN_MANUAL)
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
