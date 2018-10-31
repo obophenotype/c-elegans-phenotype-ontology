@@ -356,6 +356,16 @@ is_a: WBbt:0008189 ! gon male sves
 relationship: part_of WBbt:0006870 ! seminal vesicle
 
 [Term]
+id: WBbt:0005062
+name: linker cell
+namespace: worm_anatomy
+def: "male gonad cell, leads gonad during morphogenesis and initiates union with cloaca" [ISBN:0-87969-307-X]
+synonym: "gon_male_link" RELATED []
+synonym: "lineage name: Z1.paa/Z4.aaa" RELATED []
+is_a: WBbt:0008209 ! male gonadal cell
+relationship: part_of WBbt:0006794 ! male gonad
+
+[Term]
 id: WBbt:0005098
 name: lumbar ganglion left
 namespace: worm_anatomy
@@ -423,6 +433,18 @@ name: E lineage cell
 namespace: worm_anatomy
 def: "A cell that is the E blast cell or is a lineal descendant of E." [WB:rynl]
 is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0005237
+name: touch receptor neuron
+namespace: worm_anatomy
+alt_id: WBbt:0005235
+alt_id: WBbt:0005239
+def: "neurons that sense body touch, have specialized microtubules in processes." [WB:rynl]
+synonym: "microtubule cell" RELATED []
+synonym: "touch cell" RELATED []
+synonym: "touch receptor" RELATED []
+is_a: WBbt:0008431 ! mechanosensory neuron
 
 [Term]
 id: WBbt:0005255
@@ -1264,6 +1286,15 @@ def: "An organ system consists of the excretory system and associated glands." [
 is_a: WBbt:0005746 ! Organ system
 
 [Term]
+id: WBbt:0006865
+name: DTC
+namespace: worm_anatomy
+def: "somatic cell that situates at the tip of a gonad arm." [WB:rynl]
+synonym: "distal tip cell" RELATED []
+is_a: WBbt:0004017 ! Cell
+relationship: part_of WBbt:0005175 ! gonad
+
+[Term]
 id: WBbt:0006870
 name: seminal vesicle
 namespace: worm_anatomy
@@ -1280,6 +1311,19 @@ def: "specialized muscle type in male sex organ." [WB:rynl]
 synonym: "mu_male_gub" RELATED []
 is_a: WBbt:0005757 ! male-specific
 is_a: WBbt:0005780 ! non-striated muscle
+is_a: WBbt:0007810 ! body muscle cell
+
+[Term]
+id: WBbt:0006909
+name: longitudinal male muscle
+namespace: worm_anatomy
+alt_id: WBbt:0005814
+def: "specialized muscle type in the posterior of adult male." [WB:rynl]
+synonym: "mu_male_long" RELATED []
+synonym: "ventral longitudinal muscle" RELATED []
+is_a: WBbt:0005757 ! male-specific
+is_a: WBbt:0005780 ! non-striated muscle
+is_a: WBbt:0005786 ! muscle of the reproductive system
 is_a: WBbt:0007810 ! body muscle cell
 
 [Term]
@@ -1520,6 +1564,43 @@ comment: Term definition modified from wikipedia entry.
 synonym: "genitalia" RELATED []
 is_a: WBbt:0003760 ! organ
 relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0008423
+name: male genital
+namespace: worm_anatomy
+def: "antomical structure of the male involved in sexual reproduction." [WB:rynl]
+is_a: WBbt:0005757 ! male-specific
+is_a: WBbt:0008422 ! sex organ
+
+[Term]
+id: WBbt:0008424
+name: gubernaculum
+namespace: worm_anatomy
+def: "A sclerotized cuticular structure at the base of the male tail fan which houses the retracted spicules and guides the eversion of the spicules through the anus." [WB:Paper00038216]
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0008423 ! male genital
+
+[Term]
+id: WBbt:0008425
+name: hook
+namespace: worm_anatomy
+def: "A small lump on the gubernaculum of the male tail. This structure lies on the ventral surface just anterior and central to the base of the spicule openings and contains a sensory structure called the hook sensillum." [WB:Paper00038216]
+is_a: WBbt:0008424 ! gubernaculum
+
+[Term]
+id: WBbt:0008426
+name: nose
+namespace: worm_anatomy
+def: "The extreme anterior portion of the body." [WB:Paper00038216]
+is_a: WBbt:0005738 ! body region
+
+[Term]
+id: WBbt:0008431
+name: mechanosensory neuron
+namespace: worm_anatomy
+def: "neuron that senses and responds to mechanical stimuli, such as touch." [WB:rynl]
+is_a: WBbt:0005759 ! sensory neuron
 
 [Term]
 id: WBbt:0008447
