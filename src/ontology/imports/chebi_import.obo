@@ -16,13 +16,15 @@ synonym: "e-" RELATED [KEGG_COMPOUND]
 synonym: "electron" EXACT [KEGG_COMPOUND]
 synonym: "electron" EXACT IUPAC_NAME [IUPAC]
 synonym: "electron" EXACT [ChEBI]
+synonym: "Elektron" RELATED [ChEBI]
 synonym: "negatron" RELATED [IUPAC]
 xref: KEGG:C05359
 xref: PMID:21614077 "Europe PMC"
+xref: Wikipedia:Electron
 is_a: CHEBI:36338 ! lepton
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "0.000548579903" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*-]" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "0.0" xsd:string
 
 [Term]
 id: CHEBI:131604
@@ -9845,7 +9847,6 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "adenosine 5'-phosphates" RELATED [ChEBI]
 is_a: CHEBI:22256 ! adenosine phosphate
-is_a: CHEBI:37021 ! purine ribonucleoside 5'-monophosphate
 
 [Term]
 id: CHEBI:37141
