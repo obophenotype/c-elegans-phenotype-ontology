@@ -1,0 +1,8 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?term (COUNT(?equiv) AS ?count)
+WHERE {
+  ?term owl:equivalentClass ?equiv .
+  FILTER(isIRI(?term))
+}
+GROUP BY ?term
+HAVING(?count > 1)
