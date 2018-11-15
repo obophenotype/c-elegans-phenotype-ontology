@@ -106,7 +106,11 @@ imports/%_import.obo: imports/%_import.owl
 	$(ROBOT) convert --check false -i $< -f obo -o $@.tmp && mv $@.tmp $@
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
-mirror/%.owl:
+
+$(MIRROR):
+	mkdir -p $@
+
+mirror/%.owl: $(MIRROR)
 	wget -O $@ $(OBO)/$*.owl
 	$(ROBOT) convert -I $@ -o $@
 .PRECIOUS: mirror/%.owl
