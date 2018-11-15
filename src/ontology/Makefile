@@ -29,11 +29,11 @@ IMPORTS = iao go ro pato bfo chebi cl wbbt wbls
 # Top-level targets
 # ----------------------------------------
 
-all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.owl
+all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
 	echo 'Release files created successfully.'
 test: sparql_test all
 prepare_release: all
-	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(RELEASEDIR) &&\
+	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
 	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp imports/*.owl $(RELEASEDIR)/imports &&\
@@ -116,7 +116,7 @@ mirror/%.owl:
 # Release
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
-release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.owl
+release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
 # ----------------------------------------

@@ -265,12 +265,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0003672">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0004017"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005730"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell of epithelium, the layer of cells that cover the external surface of an organism as well as forming an inner lining between the tissues and organs of that organism and the external environment. In C. elegans epithelial cells include epithelium of the alimentary tract, intestinal cells, hypodermis, interfacial cells and somatic gonad cells.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epithelium</oboInOwl:hasRelatedSynonym>
@@ -2106,6 +2100,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005754">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0003672"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005730"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">an epithelial cell that serves either to bridge two neighboring epithelial tissues or to form an opening in the epithelium.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interfacial cell</oboInOwl:hasRelatedSynonym>
