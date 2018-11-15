@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2018-11-13
+data-version: releases/2018-11-14
 date: 20:08:2018 14:57
 saved-by: garys
 auto-generated-by: OBO-Edit 1.002
@@ -62,12 +62,17 @@ id: BFO:0000040
 is_a: BFO:0000004
 
 [Term]
+id: CARO:0000000
+is_a: CARO:0030000
+
+[Term]
 id: CARO:0000003
 is_a: CARO:0000006
 
 [Term]
 id: CARO:0000006
 is_a: BFO:0000040
+is_a: CARO:0000000
 
 [Term]
 id: CARO:0000014
@@ -76,6 +81,10 @@ is_a: CARO:0000003
 [Term]
 id: CARO:0010000
 is_a: CARO:0000003
+
+[Term]
+id: CARO:0030000
+is_a: BFO:0000004
 
 [Term]
 id: CHEBI:10545
@@ -2550,7 +2559,6 @@ is_a: CHEBI:37015
 [Term]
 id: CHEBI:37096
 is_a: CHEBI:22256
-is_a: CHEBI:37021
 
 [Term]
 id: CHEBI:37141
@@ -6634,6 +6642,10 @@ id: GO:0016246
 is_a: GO:0035194
 
 [Term]
+id: GO:0016301
+is_a: GO:0016772
+
+[Term]
 id: GO:0016310
 is_a: GO:0006796
 
@@ -6681,6 +6693,10 @@ is_a: GO:0003824
 
 [Term]
 id: GO:0016757
+is_a: GO:0016740
+
+[Term]
+id: GO:0016772
 is_a: GO:0016740
 
 [Term]
@@ -7999,6 +8015,18 @@ is_a: GO:0006950
 is_a: GO:0051716
 
 [Term]
+id: GO:0033673
+is_a: GO:0042326
+is_a: GO:0043549
+is_a: GO:0051348
+
+[Term]
+id: GO:0033674
+is_a: GO:0042327
+is_a: GO:0043549
+is_a: GO:0051347
+
+[Term]
 id: GO:0034242
 is_a: GO:0051093
 is_a: GO:0051129
@@ -8770,6 +8798,11 @@ id: GO:0043525
 is_a: GO:0043065
 is_a: GO:0043523
 is_a: GO:1901216
+
+[Term]
+id: GO:0043549
+is_a: GO:0042325
+is_a: GO:0051338
 
 [Term]
 id: GO:0043603
