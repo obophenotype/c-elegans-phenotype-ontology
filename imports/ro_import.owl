@@ -1890,6 +1890,18 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002447 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002447">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002436"/>
+        <obo:IAO_0000116>Axiomatization to GO to be added later</obo:IAO_0000116>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000118>An interaction relation between x and y in which x catalyzes a reaction in which a phosphate group is added to y.</obo:IAO_0000118>
+        <rdfs:label>phosphorylates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002448 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002448">
@@ -1944,6 +1956,17 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002464 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002464">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000232>This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning.</obo:IAO_0000232>
+        <rdfs:label>helper property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002479 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002479">
@@ -1967,6 +1990,16 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </owl:annotatedTarget>
         <obo:RO_0002581 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:RO_0002581>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002481 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002481">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002564"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:label>is kinase activity</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -2056,6 +2089,28 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <obo:IAO_0000589>causally influenced by (material entity to material entity)</obo:IAO_0000589>
         <rdfs:label>causally influenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002563 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002563">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002464"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:label>interaction relation helper property</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL_2%29"/>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002564 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002564">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002563"/>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:label>molecular interaction relation helper property</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2629,11 +2684,35 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0016301 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016301">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016772"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002481"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kinase activity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0016740 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016740">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transferase activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016772 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016772">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transferase activity, transferring phosphorus-containing groups</rdfs:label>
     </owl:Class>
     
 
