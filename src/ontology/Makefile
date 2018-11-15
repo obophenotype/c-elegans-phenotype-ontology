@@ -29,11 +29,11 @@ IMPORTS = iao go ro pato bfo chebi cl wbbt wbls
 # Top-level targets
 # ----------------------------------------
 
-all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl
+all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
 	echo 'Release files created successfully.'
 test: sparql_test all
 prepare_release: all
-	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(RELEASEDIR) &&\
+	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
 	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp imports/*.owl $(RELEASEDIR)/imports &&\
@@ -56,17 +56,17 @@ $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -i $< -r ELK -e none relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 $(ONT).obo: $(ONT).owl
-	$(ROBOT) convert --check false -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@ &&\
-	echo "$(ONT).obo successfully created."
+	$(ROBOT) convert --check false -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@ 
 
 $(ONT)-base.owl: $(SRC) ../patterns/definitions.owl
 	$(ROBOT) remove --input $< --select imports --output $@ &&\
-	$(ROBOT) merge -i $@ -i ../patterns/definitions.owl annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT)-base.owl annotate --ontology-iri $(BASE)/$(ONT)-base.owl -o $@ &&\
-	echo "$(ONT)-base.owl successfully created."
-	
+	$(ROBOT) merge -i $@ -i ../patterns/definitions.owl annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT)-base.owl annotate --ontology-iri $(BASE)/$(ONT)-base.owl -o $@	
+
 $(ONT)-merged.owl: $(ONT).owl
-	$(ROBOT) merge -i $< annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT)-merged.owl annotate --ontology-iri $(BASE)/$(ONT)-merged.owl -o $@ &&\
-	echo "$(ONT)-merged.owl successfully created."
+	$(ROBOT) merge -i $< annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT)-merged.owl annotate --ontology-iri $(BASE)/$(ONT)-merged.owl -o $@ 
+	
+$(ONT)-merged.obo: $(ONT)-merged.owl
+	$(ROBOT) convert --check false -i $< -f obo -o $(ONT)-merged.obo.tmp && mv $(ONT)-merged.obo.tmp $@ 
 
 # ----------------------------------------
 # Import modules
@@ -106,15 +106,17 @@ imports/%_import.obo: imports/%_import.owl
 	$(ROBOT) convert --check false -i $< -f obo -o $@.tmp && mv $@.tmp $@
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
+
 mirror/%.owl:
-	$(ROBOT) convert -I $(OBO)/$*.owl -o $@
+	mkdir -p mirror && wget -O $@ $(OBO)/$*.owl
+	#$(ROBOT) convert -I $@ -o $@
 .PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
 # Release
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
-release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl
+release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
 # ----------------------------------------
