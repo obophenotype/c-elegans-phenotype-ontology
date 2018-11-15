@@ -109,7 +109,7 @@ imports/%_import.obo: imports/%_import.owl
 
 mirror/%.owl:
 	mkdir -p mirror && wget -O $@ $(OBO)/$*.owl
-	$(ROBOT) convert -I $@ -o $@
+	#$(ROBOT) convert -I $@ -o $@
 .PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
