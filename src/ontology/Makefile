@@ -107,7 +107,8 @@ imports/%_import.obo: imports/%_import.owl
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.owl:
-	$(ROBOT) convert -I $(OBO)/$*.owl -o $@
+	wget -O $@ $(OBO)/$*.owl
+	$(ROBOT) convert -I $@ -o $@
 .PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
