@@ -29,6 +29,7 @@ Annotation(rdfs:comment "C elegans Phenotype Ontology")
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000006>))
@@ -2625,6 +2626,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000002> "WBPhenotype:0000002"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000002> "kinker"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000002> <http://purl.obolibrary.org/obo/WBPhenotype_0004017>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000003> (<http://purl.obolibrary.org/obo/WBPhenotype_0000003>)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000003> "obsolete"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/WBPhenotype_0000003> <http://purl.obolibrary.org/obo/WBPhenotype_0001309>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000003> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000003> "WBPhenotype:0000003")
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/WBPhenotype_0000003> "true"^^xsd:boolean)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000004> (constitutive egg laying)
 
@@ -14455,6 +14464,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001308> <http://purl.obo
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001309> (amplitude of sinusoidal movement decreased)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00043908"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2021"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001309> "Animals exhibit a decrease in the extent of a vibratory movement (as a worm bend) measured from the mean position to an extreme position compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/WBPhenotype_0001309> "WBPhenotype:0000003"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001309> "amplitude of body bends decreased"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001309> "flat locomotion path"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001309> "flattened locomotion path"^^xsd:string)
