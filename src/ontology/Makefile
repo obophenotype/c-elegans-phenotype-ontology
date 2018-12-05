@@ -34,6 +34,7 @@ all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ON
 test: sparql_test all
 prepare_release: all
 	cp $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo $(RELEASEDIR) &&\
+	cp wbphenotype-equivalent-axioms-subq.owl $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
 	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp imports/*.owl $(RELEASEDIR)/imports &&\
@@ -125,8 +126,8 @@ release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.o
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-#  trailing-whitespace nolabels equivalent-classes
-VCHECKS =  owldef-self-reference xref-syntax 
+#  nolabels equivalent-classes
+VCHECKS =  owldef-self-reference trailing-whitespace xref-syntax 
 
 # Only needed until robot supports catalogs
 
