@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/obophenotype/c-elegans-phenotype-ontology.svg?branch=master)](https://travis-ci.org/obophenotype/c-elegans-phenotype-ontology)
-[![DOI](https://zenodo.org/badge/13996/obophenotype/c-elegans-phenotype-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/obophenotype/c-elegans-phenotype-ontology)
+<!-- [![Build Status](https://travis-ci.org/obophenotype/c-elegans-phenotype-ontology.svg?branch=master)](https://travis-ci.org/obophenotype/c-elegans-phenotype-ontology)
+[![DOI](https://zenodo.org/badge/13996/obophenotype/c-elegans-phenotype-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/obophenotype/c-elegans-phenotype-ontology) -->
 
-# c-elegans-phenotype-ontology
+# C. elegans Phenotype Ontology
 
-The _C. elegans_ phenotype ontology organizes terms representing observed and reported phenotypes of _C. elegans_ and related nematodes into a hiearchy for the purpose of phenotype term discovery (e.g. using ontology browsers) and logical reasoning (e.g. inferring genes whose perturbation results in a more general phenotype based on annotations to more specific phenotypes). There is an ongoing effort to generate logical definitions that will formalize the relationship between each phenotype term and the biological entities (cells, tissues, cellular components, biological processes, etc.) that are affected.
+The _C. elegans_ Phenotype Ontology organizes terms representing observed and reported phenotypes of _C. elegans_ and related nematodes into a hiearchy for the purpose of phenotype term discovery (e.g. using ontology browsers) and logical reasoning (e.g. inferring genes whose perturbation results in a more general phenotype based on annotations to more specific phenotypes). There is an ongoing effort to generate logical definitions that will formalize the relationship between each phenotype term and the biological entities (cells, tissues, cellular components, biological processes, etc.) that are affected.
 
 ## Versions
 
@@ -12,8 +12,6 @@ The _C. elegans_ phenotype ontology organizes terms representing observed and re
 The latest version of the ontology can always be found at:
 
 http://purl.obolibrary.org/obo/wbphenotype.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
