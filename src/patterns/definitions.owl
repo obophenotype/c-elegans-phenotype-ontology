@@ -758,9 +758,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000462 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000462"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001558 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001558"/>
     
 
 
@@ -966,6 +978,33 @@
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005741"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBPhenotype_0000080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0000080">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000462"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0003733"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
@@ -5111,6 +5150,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBPhenotype_0001396 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0001396">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001558"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043050"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBPhenotype_0001398 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0001398">
@@ -6041,6 +6107,12 @@
     <!-- http://purl.obolibrary.org/obo/WBbt_0003732 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0003732"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0003733 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0003733"/>
     
 
 
