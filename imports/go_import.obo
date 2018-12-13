@@ -8179,6 +8179,14 @@ is_a: GO:0007530 ! sex determination
 relationship: part_of GO:0007275 ! multicellular organism development
 
 [Term]
+id: GO:0018996
+name: molting cycle, collagen and cuticulin-based cuticle
+namespace: biological_process
+def: "The periodic shedding of part or all of a collagen and cuticulin-based cuticle, which is then replaced by a new collagen and cuticulin-based cuticle. An example of this is found in the Nematode worm, Caenorhabditis elegans." [GOC:jl, GOC:mtg_sensu]
+synonym: "collagen and cuticulin-based cuticle molting cycle" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0042303 ! molting cycle
+
+[Term]
 id: GO:0019093
 name: mitochondrial RNA localization
 namespace: biological_process
@@ -8509,6 +8517,14 @@ namespace: biological_process
 def: "One of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GOC:mtg_cell_cycle]
 subset: gocheck_do_not_annotate
 is_a: GO:0044848 ! biological phase
+
+[Term]
+id: GO:0022404
+name: molting cycle process
+namespace: biological_process
+def: "A multicellular organismal process involved in the periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin." [GOC:isa_complete]
+is_a: GO:0032501 ! multicellular organismal process
+relationship: part_of GO:0042303 ! molting cycle
 
 [Term]
 id: GO:0022407
@@ -12112,16 +12128,24 @@ created_by: rfoulger
 creation_date: 2011-08-01T02:50:45Z
 
 [Term]
-id: GO:0040006
-name: obsolete protein-based cuticle attachment to epithelium
+id: GO:0040002
+name: collagen and cuticulin-based cuticle development
 namespace: biological_process
-def: "OBSOLETE. Attaching of a protein-based cuticle to the epithelium underlying it." [GOC:jl, GOC:mtg_sensu]
-comment: This term was made obsolete because 'protein-based cuticle' is an unnecessary grouping term.
+def: "Synthesis and deposition of a collagen and cuticulin-based noncellular, hardened, or membranous secretion from an epithelial sheet. An example of this process is found in Caenorhabditis elegans." [GOC:mtg_sensu]
+synonym: "collagen and cuticulin-based cuticle anabolism" EXACT []
+synonym: "collagen and cuticulin-based cuticle biosynthetic process" EXACT []
+synonym: "collagen and cuticulin-based cuticle formation" EXACT []
+synonym: "collagen and cuticulin-based cuticle synthesis" EXACT []
+is_a: GO:0042335 ! cuticle development
+
+[Term]
+id: GO:0040004
+name: collagen and cuticulin-based cuticle attachment to epithelium
+namespace: biological_process
+def: "Attaching of a collagen and cuticulin-based cuticle to the epithelium underlying it. An example of this process is found in Caenorhabditis elegans." [GOC:ems, GOC:mtg_sensu]
 synonym: "cuticular attachment to epithelium" BROAD []
-synonym: "protein-based cuticle attachment to epithelium" EXACT []
-is_obsolete: true
-consider: GO:0040004
-consider: GO:0040005
+is_a: GO:0022404 ! molting cycle process
+relationship: part_of GO:0018996 ! molting cycle, collagen and cuticulin-based cuticle
 
 [Term]
 id: GO:0040007
@@ -12529,6 +12553,14 @@ synonym: "response to chemical substance" EXACT []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0042303
+name: molting cycle
+namespace: biological_process
+def: "The periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin, etc." [GOC:jl, ISBN:0198506732]
+subset: goslim_pir
+is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
 id: GO:0042325
 name: regulation of phosphorylation
 namespace: biological_process
@@ -12604,6 +12636,21 @@ synonym: "cuticle formation" EXACT []
 synonym: "cuticle synthesis" EXACT []
 is_a: GO:0048856 ! anatomical structure development
 relationship: part_of GO:0007275 ! multicellular organism development
+
+[Term]
+id: GO:0042338
+name: cuticle development involved in collagen and cuticulin-based cuticle molting cycle
+namespace: biological_process
+def: "Synthesis and deposition of a collagen and cuticulin-based noncellular, hardened, or membranous secretion from an epithelial sheet, occurring as part of the molting cycle. An example of this process is found in Caenorhabditis elegans." [GOC:mtg_sensu]
+synonym: "collagen and cuticulin-based cuticle development during molting" RELATED [GOC:dph, GOC:tb]
+synonym: "cuticle anabolism during molting" BROAD []
+synonym: "cuticle biosynthetic process during molting" BROAD []
+synonym: "cuticle formation during molting" BROAD []
+synonym: "cuticle synthesis during molting" BROAD []
+is_a: GO:0040002 ! collagen and cuticulin-based cuticle development
+intersection_of: GO:0042335 ! cuticle development
+intersection_of: part_of GO:0018996 ! molting cycle, collagen and cuticulin-based cuticle
+relationship: part_of GO:0018996 ! molting cycle, collagen and cuticulin-based cuticle
 
 [Term]
 id: GO:0042391
