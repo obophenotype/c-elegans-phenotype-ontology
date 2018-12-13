@@ -3272,18 +3272,6 @@ intersection_of: part_of GO:0006909 ! phagocytosis
 relationship: part_of GO:0006909 ! phagocytosis
 
 [Term]
-id: GO:0006911
-name: phagocytosis, engulfment
-namespace: biological_process
-def: "The internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis, including the membrane and cytoskeletal processes required, which involves one of three mechanisms: zippering of pseudopods around a target via repeated receptor-ligand interactions, sinking of the target directly into plasma membrane of the phagocytosing cell, or induced uptake via an enhanced membrane ruffling of the phagocytosing cell similar to macropinocytosis." [GOC:curators, ISBN:0781735149]
-synonym: "phagosome biosynthesis" RELATED []
-synonym: "phagosome formation" RELATED []
-is_a: GO:0099024 ! plasma membrane invagination
-intersection_of: GO:0099024 ! plasma membrane invagination
-intersection_of: part_of GO:0006909 ! phagocytosis
-relationship: part_of GO:0006909 ! phagocytosis
-
-[Term]
 id: GO:0006913
 name: nucleocytoplasmic transport
 namespace: biological_process
@@ -4630,23 +4618,6 @@ is_a: GO:0048513 ! animal organ development
 is_a: GO:0061061 ! muscle structure development
 
 [Term]
-id: GO:0007519
-name: skeletal muscle tissue development
-namespace: biological_process
-alt_id: GO:0048637
-def: "The developmental sequence of events leading to the formation of adult skeletal muscle tissue. The main events are: the fusion of myoblasts to form myotubes that increase in size by further fusion to them of myoblasts, the formation of myofibrils within their cytoplasm and the establishment of functional neuromuscular junctions with motor neurons. At this stage they can be regarded as mature muscle fibers." [GOC:mtg_muscle]
-synonym: "myogenesis" RELATED []
-is_a: GO:0014706 ! striated muscle tissue development
-relationship: part_of GO:0060538 ! skeletal muscle organ development
-
-[Term]
-id: GO:0007525
-name: somatic muscle development
-namespace: biological_process
-def: "The process whose specific outcome is the progression of the somatic muscle over time, from its formation to the mature structure. Somatic muscles are striated muscle structures that connect to the exoskeleton or cuticle." [GOC:jid, GOC:mtg_muscle]
-is_a: GO:0061061 ! muscle structure development
-
-[Term]
 id: GO:0007530
 name: sex determination
 namespace: biological_process
@@ -4690,14 +4661,6 @@ def: "The elimination by an organism of the waste products that arise as a resul
 subset: goslim_pir
 xref: Wikipedia:Excretion
 is_a: GO:0003008 ! system process
-
-[Term]
-id: GO:0007591
-name: molting cycle, chitin-based cuticle
-namespace: biological_process
-def: "The periodic shedding of part or all of a chitin-based cuticle, which is then replaced by a new cuticle. An example of this is found in Drosophila melanogaster." [GOC:jl, GOC:mtg_sensu]
-synonym: "chitin-based cuticle molting cycle" EXACT [GOC:dph, GOC:tb]
-is_a: GO:0042303 ! molting cycle
 
 [Term]
 id: GO:0007600
@@ -6725,13 +6688,6 @@ is_a: GO:0009410 ! response to xenobiotic stimulus
 is_a: GO:0036276 ! response to antidepressant
 
 [Term]
-id: GO:0014706
-name: striated muscle tissue development
-namespace: biological_process
-def: "The process whose specific outcome is the progression of a striated muscle over time, from its formation to the mature structure. Striated muscle contain fibers that are divided by transverse bands into striations, and cardiac and skeletal muscle are types of striated muscle. Skeletal muscle myoblasts fuse to form myotubes and eventually multinucleated muscle fibers. The fusion of cardiac cells is very rare and can only form binucleate cells." [CL:0000737, GOC:dph, GOC:mtg_muscle]
-is_a: GO:0060537 ! muscle tissue development
-
-[Term]
 id: GO:0015031
 name: protein transport
 namespace: biological_process
@@ -6932,17 +6888,6 @@ synonym: "vesicle trafficking" RELATED []
 synonym: "vesicle transport" EXACT []
 synonym: "vesicular transport" EXACT [GOC:mah]
 is_a: GO:0006810 ! transport
-
-[Term]
-id: GO:0016202
-name: regulation of striated muscle tissue development
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of striated muscle development." [GOC:go_curators]
-is_a: GO:0048634 ! regulation of muscle organ development
-is_a: GO:1901861 ! regulation of muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0014706 ! striated muscle tissue development
-relationship: regulates GO:0014706 ! striated muscle tissue development
 
 [Term]
 id: GO:0016203
@@ -8216,14 +8161,6 @@ is_a: GO:0022414 ! reproductive process
 relationship: part_of GO:0007338 ! single fertilization
 
 [Term]
-id: GO:0018990
-name: ecdysis, chitin-based cuticle
-namespace: biological_process
-def: "The shedding of the old chitin-based cuticlar fragments during the molting cycle. An example of this is found in Drosophila melanogaster." [GOC:bf, GOC:mtg_sensu]
-is_a: GO:0022404 ! molting cycle process
-relationship: part_of GO:0007591 ! molting cycle, chitin-based cuticle
-
-[Term]
 id: GO:0018991
 name: oviposition
 namespace: biological_process
@@ -8572,14 +8509,6 @@ namespace: biological_process
 def: "One of the distinct periods or stages into which the cell cycle is divided. Each phase is characterized by the occurrence of specific biochemical and morphological events." [GOC:mtg_cell_cycle]
 subset: gocheck_do_not_annotate
 is_a: GO:0044848 ! biological phase
-
-[Term]
-id: GO:0022404
-name: molting cycle process
-namespace: biological_process
-def: "A multicellular organismal process involved in the periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin." [GOC:isa_complete]
-is_a: GO:0032501 ! multicellular organismal process
-relationship: part_of GO:0042303 ! molting cycle
 
 [Term]
 id: GO:0022407
@@ -10014,15 +9943,6 @@ comment: Note that this term should only be used as a grouping term for the mito
 subset: gocheck_do_not_manually_annotate
 synonym: "G2/M transition DNA damage checkpoint" EXACT []
 is_a: GO:0000077 ! DNA damage checkpoint
-
-[Term]
-id: GO:0031573
-name: intra-S DNA damage checkpoint
-namespace: biological_process
-def: "A mitotic cell cycle checkpoint that slows DNA synthesis in response to DNA damage by the prevention of new origin firing and the stabilization of slow replication fork progression." [GOC:vw]
-synonym: "mitotic intra-S DNA damage checkpoint" EXACT []
-synonym: "S-phase checkpoint" BROAD []
-is_a: GO:0044773 ! mitotic DNA damage checkpoint
 
 [Term]
 id: GO:0031577
@@ -12192,17 +12112,6 @@ created_by: rfoulger
 creation_date: 2011-08-01T02:50:45Z
 
 [Term]
-id: GO:0040003
-name: chitin-based cuticle development
-namespace: biological_process
-def: "Synthesis and deposition of a chitin-based noncellular, hardened, or membranous secretion from an epithelial sheet. An example of this process is found in Drosophila melanogaster." [GOC:mtg_sensu]
-synonym: "chitin-based cuticle anabolism" EXACT []
-synonym: "chitin-based cuticle biosynthetic process" EXACT []
-synonym: "chitin-based cuticle formation" EXACT []
-synonym: "chitin-based cuticle synthesis" EXACT []
-is_a: GO:0042335 ! cuticle development
-
-[Term]
 id: GO:0040006
 name: obsolete protein-based cuticle attachment to epithelium
 namespace: biological_process
@@ -12620,14 +12529,6 @@ synonym: "response to chemical substance" EXACT []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
-id: GO:0042303
-name: molting cycle
-namespace: biological_process
-def: "The periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin, etc." [GOC:jl, ISBN:0198506732]
-subset: goslim_pir
-is_a: GO:0032501 ! multicellular organismal process
-
-[Term]
 id: GO:0042325
 name: regulation of phosphorylation
 namespace: biological_process
@@ -12703,21 +12604,6 @@ synonym: "cuticle formation" EXACT []
 synonym: "cuticle synthesis" EXACT []
 is_a: GO:0048856 ! anatomical structure development
 relationship: part_of GO:0007275 ! multicellular organism development
-
-[Term]
-id: GO:0042337
-name: cuticle development involved in chitin-based cuticle molting cycle
-namespace: biological_process
-def: "The synthesis and deposition of a chitin-based non-cellular, hardened, or membranous secretion from an epithelial sheet, occurring as part of the molting cycle. An example of this is found in Drosophila melanogaster." [GOC:dph, GOC:jl, GOC:mtg_sensu, GOC:tb]
-synonym: "chitin-based cuticle development during molting" RELATED [GOC:dph, GOC:tb]
-synonym: "cuticle anabolism during molting" BROAD []
-synonym: "cuticle biosynthetic process during molting" BROAD []
-synonym: "cuticle formation during molting" BROAD []
-synonym: "cuticle synthesis during molting" BROAD []
-is_a: GO:0040003 ! chitin-based cuticle development
-intersection_of: GO:0042335 ! cuticle development
-intersection_of: part_of GO:0007591 ! molting cycle, chitin-based cuticle
-relationship: part_of GO:0007591 ! molting cycle, chitin-based cuticle
 
 [Term]
 id: GO:0042391
@@ -13210,16 +13096,6 @@ intersection_of: regulates GO:0043050 ! pharyngeal pumping
 relationship: regulates GO:0043050 ! pharyngeal pumping
 
 [Term]
-id: GO:0043052
-name: thermotaxis
-namespace: biological_process
-def: "The directed movement of a motile cell or organism in response to a temperature gradient. Movement may be towards either a higher or lower temperature." [GOC:cab1, WB_REF:cgc467]
-synonym: "taxis in response to temperature stimulus" EXACT []
-xref: Wikipedia:Thermotaxis
-is_a: GO:0009266 ! response to temperature stimulus
-is_a: GO:0042330 ! taxis
-
-[Term]
 id: GO:0043053
 name: dauer entry
 namespace: biological_process
@@ -13429,18 +13305,6 @@ synonym: "macromolecule metabolism" EXACT []
 synonym: "multicellular organismal macromolecule metabolic process" NARROW []
 synonym: "organismal macromolecule metabolism" EXACT []
 is_a: GO:0071704 ! organic substance metabolic process
-
-[Term]
-id: GO:0043186
-name: P granule
-namespace: cellular_component
-alt_id: GO:0018994
-def: "A small cytoplasmic, non-membranous RNA/protein complex aggregates in the primordial germ cells of many higher eukaryotes." [GOC:dph, GOC:kmv, PMID:11262230]
-synonym: "germline granule" EXACT []
-synonym: "nuage" BROAD []
-synonym: "polar granule" EXACT []
-is_a: GO:0036464 ! cytoplasmic ribonucleoprotein granule
-relationship: part_of GO:0060293 ! germ plasm
 
 [Term]
 id: GO:0043226
@@ -13791,17 +13655,6 @@ name: cellular protein complex disassembly
 namespace: biological_process
 def: "The disaggregation of a protein complex into its constituent components, occurring at the level of an individual cell. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups." [GOC:jl]
 is_a: GO:0032984 ! protein-containing complex disassembly
-
-[Term]
-id: GO:0043652
-name: engulfment of apoptotic cell
-namespace: biological_process
-def: "The removal of the apoptotic cell by phagocytosis, by a neighboring cell or by a phagocyte." [GOC:rk, PMID:15536015]
-comment: This term should be used to annotate gene products from the engulfing cell that facilitate phagocytosis of apoptotic cells. It should not be mistaken with GO:0070782 'phosphatidylserine exposure on apoptotic cell surface', a process occurring in apoptotic cells that acts as a signal for engulfing cells. If gene products involved in such instances of phosphatidylserine exposure are shown to have a positive effect on engulfment, they may be annotated to GO:1901076 'positive regulation of engulfment of apoptotic cell'.
-synonym: "engulfment of apoptotic cell corpse" EXACT []
-synonym: "engulfment of cell corpse" EXACT []
-is_a: GO:0006911 ! phagocytosis, engulfment
-relationship: part_of GO:0043277 ! apoptotic cell clearance
 
 [Term]
 id: GO:0043900
@@ -14949,15 +14802,6 @@ xref: Wikipedia:Chemical_synapse
 is_a: GO:0005575 ! cellular_component
 
 [Term]
-id: GO:0045495
-name: pole plasm
-namespace: cellular_component
-def: "Differentiated cytoplasm associated with a pole (animal, vegetal, anterior, or posterior) of an oocyte, egg or early embryo." [GOC:kmv, PMID:17113380]
-synonym: "germ plasm" NARROW []
-synonym: "polar plasm" EXACT []
-is_a: GO:0005737 ! cytoplasm
-
-[Term]
 id: GO:0045595
 name: regulation of cell differentiation
 namespace: biological_process
@@ -15477,39 +15321,6 @@ is_a: GO:1902101 ! positive regulation of metaphase/anaphase transition of cell 
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0007091 ! metaphase/anaphase transition of mitotic cell cycle
 relationship: positively_regulates GO:0007091 ! metaphase/anaphase transition of mitotic cell cycle
-
-[Term]
-id: GO:0045843
-name: negative regulation of striated muscle tissue development
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of striated muscle development." [GOC:go_curators]
-synonym: "down regulation of striated muscle development" EXACT []
-synonym: "down-regulation of striated muscle development" EXACT []
-synonym: "downregulation of striated muscle development" EXACT []
-synonym: "inhibition of striated muscle development" NARROW []
-is_a: GO:0016202 ! regulation of striated muscle tissue development
-is_a: GO:0048635 ! negative regulation of muscle organ development
-is_a: GO:1901862 ! negative regulation of muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0014706 ! striated muscle tissue development
-relationship: negatively_regulates GO:0014706 ! striated muscle tissue development
-
-[Term]
-id: GO:0045844
-name: positive regulation of striated muscle tissue development
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of striated muscle development." [GOC:go_curators]
-synonym: "activation of striated muscle development" NARROW []
-synonym: "stimulation of striated muscle development" NARROW []
-synonym: "up regulation of striated muscle development" EXACT []
-synonym: "up-regulation of striated muscle development" EXACT []
-synonym: "upregulation of striated muscle development" EXACT []
-is_a: GO:0016202 ! regulation of striated muscle tissue development
-is_a: GO:0048636 ! positive regulation of muscle organ development
-is_a: GO:1901863 ! positive regulation of muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0014706 ! striated muscle tissue development
-relationship: positively_regulates GO:0014706 ! striated muscle tissue development
 
 [Term]
 id: GO:0045851
@@ -17151,47 +16962,6 @@ is_a: GO:0051093 ! negative regulation of developmental process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0048589 ! developmental growth
 relationship: negatively_regulates GO:0048589 ! developmental growth
-
-[Term]
-id: GO:0048641
-name: regulation of skeletal muscle tissue development
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of skeletal muscle tissue development." [GOC:go_curators]
-is_a: GO:0016202 ! regulation of striated muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0007519 ! skeletal muscle tissue development
-relationship: regulates GO:0007519 ! skeletal muscle tissue development
-
-[Term]
-id: GO:0048642
-name: negative regulation of skeletal muscle tissue development
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of skeletal muscle tissue development." [GOC:go_curators]
-synonym: "down regulation of skeletal muscle development" EXACT []
-synonym: "down-regulation of skeletal muscle development" EXACT []
-synonym: "downregulation of skeletal muscle development" EXACT []
-synonym: "inhibition of skeletal muscle development" NARROW []
-is_a: GO:0045843 ! negative regulation of striated muscle tissue development
-is_a: GO:0048641 ! regulation of skeletal muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0007519 ! skeletal muscle tissue development
-relationship: negatively_regulates GO:0007519 ! skeletal muscle tissue development
-
-[Term]
-id: GO:0048643
-name: positive regulation of skeletal muscle tissue development
-namespace: biological_process
-def: "Any process that activates, maintains or increases the rate of skeletal muscle tissue development." [GOC:go_curators]
-synonym: "activation of skeletal muscle development" NARROW []
-synonym: "stimulation of skeletal muscle development" NARROW []
-synonym: "up regulation of skeletal muscle development" EXACT []
-synonym: "up-regulation of skeletal muscle development" EXACT []
-synonym: "upregulation of skeletal muscle development" EXACT []
-is_a: GO:0045844 ! positive regulation of striated muscle tissue development
-is_a: GO:0048641 ! regulation of skeletal muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0007519 ! skeletal muscle tissue development
-relationship: positively_regulates GO:0007519 ! skeletal muscle tissue development
 
 [Term]
 id: GO:0048646
@@ -19620,16 +19390,6 @@ created_by: jl
 creation_date: 2013-12-18T14:04:32Z
 
 [Term]
-id: GO:0051642
-name: centrosome localization
-namespace: biological_process
-def: "Any process in which a centrosome is transported to, and/or maintained in, a specific location within the cell." [GOC:ai]
-synonym: "centrosome localisation" EXACT [GOC:mah]
-synonym: "establishment and maintenance of centrosome localization" EXACT []
-is_a: GO:0051640 ! organelle localization
-is_a: GO:0061842 ! microtubule organizing center localization
-
-[Term]
 id: GO:0051647
 name: nucleus localization
 namespace: biological_process
@@ -20317,51 +20077,6 @@ subset: goslim_pir
 is_a: GO:0003674 ! molecular_function
 
 [Term]
-id: GO:0060097
-name: cytoskeletal rearrangement involved in phagocytosis, engulfment
-namespace: biological_process
-def: "The assembly, arrangement, or disassembly of cytoskeletal structures that is involved in the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
-is_a: GO:0007010 ! cytoskeleton organization
-intersection_of: GO:0007010 ! cytoskeleton organization
-intersection_of: part_of GO:0006911 ! phagocytosis, engulfment
-relationship: part_of GO:0006911 ! phagocytosis, engulfment
-
-[Term]
-id: GO:0060099
-name: regulation of phagocytosis, engulfment
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
-is_a: GO:0050764 ! regulation of phagocytosis
-is_a: GO:1905153 ! regulation of membrane invagination
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006911 ! phagocytosis, engulfment
-relationship: regulates GO:0006911 ! phagocytosis, engulfment
-
-[Term]
-id: GO:0060100
-name: positive regulation of phagocytosis, engulfment
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
-is_a: GO:0050766 ! positive regulation of phagocytosis
-is_a: GO:0060099 ! regulation of phagocytosis, engulfment
-is_a: GO:1905155 ! positive regulation of membrane invagination
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006911 ! phagocytosis, engulfment
-relationship: positively_regulates GO:0006911 ! phagocytosis, engulfment
-
-[Term]
-id: GO:0060101
-name: negative regulation of phagocytosis, engulfment
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
-is_a: GO:0050765 ! negative regulation of phagocytosis
-is_a: GO:0060099 ! regulation of phagocytosis, engulfment
-is_a: GO:1905154 ! negative regulation of membrane invagination
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006911 ! phagocytosis, engulfment
-relationship: negatively_regulates GO:0006911 ! phagocytosis, engulfment
-
-[Term]
 id: GO:0060102
 name: collagen and cuticulin-based cuticle extracellular matrix
 namespace: cellular_component
@@ -20601,14 +20316,6 @@ intersection_of: regulates GO:0048468 ! cell development
 relationship: regulates GO:0048468 ! cell development
 
 [Term]
-id: GO:0060293
-name: germ plasm
-namespace: cellular_component
-def: "Differentiated cytoplasm associated with a pole of an oocyte, egg or early embryo that will be inherited by the cells that will give rise to the germ line." [GOC:dph]
-xref: Wikipedia:Germ_plasm
-is_a: GO:0045495 ! pole plasm
-
-[Term]
 id: GO:0060322
 name: head development
 namespace: biological_process
@@ -20713,15 +20420,6 @@ is_a: GO:0044087 ! regulation of cellular component biogenesis
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0030031 ! cell projection assembly
 relationship: regulates GO:0030031 ! cell projection assembly
-
-[Term]
-id: GO:0060537
-name: muscle tissue development
-namespace: biological_process
-def: "The progression of muscle tissue over time, from its initial formation to its mature state. Muscle tissue is a contractile tissue made up of actin and myosin fibers." [GOC:dph]
-is_a: GO:0009888 ! tissue development
-created_by: dph
-creation_date: 2009-04-10T08:05:37Z
 
 [Term]
 id: GO:0060538
@@ -21257,16 +20955,6 @@ intersection_of: part_of GO:0000045 ! autophagosome assembly
 relationship: part_of GO:0000045 ! autophagosome assembly
 created_by: dph
 creation_date: 2015-09-14T14:10:24Z
-
-[Term]
-id: GO:0061842
-name: microtubule organizing center localization
-namespace: biological_process
-def: "Any process in which the microtubule organizing center is transported to, and/or maintained in, a specific location within the cell." [PMID:21281821]
-synonym: "microtubule organizing center polarity" NARROW []
-synonym: "MTOC localization" EXACT []
-synonym: "MTOC polarity" NARROW []
-is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:0061919
@@ -22156,19 +21844,6 @@ intersection_of: part_of GO:0031572 ! G2 DNA damage checkpoint
 relationship: part_of GO:0031572 ! G2 DNA damage checkpoint
 created_by: midori
 creation_date: 2010-12-08T04:25:26Z
-
-[Term]
-id: GO:0072428
-name: signal transduction involved in intra-S DNA damage checkpoint
-namespace: biological_process
-def: "A signal transduction process that contributes to an intra-S DNA damage checkpoint." [GOC:mah]
-is_a: GO:1902402 ! signal transduction involved in mitotic DNA damage checkpoint
-is_a: GO:1903464 ! negative regulation of mitotic cell cycle DNA replication
-intersection_of: GO:0035556 ! intracellular signal transduction
-intersection_of: part_of GO:0031573 ! intra-S DNA damage checkpoint
-relationship: part_of GO:0031573 ! intra-S DNA damage checkpoint
-created_by: midori
-creation_date: 2010-12-08T04:31:08Z
 
 [Term]
 id: GO:0072431
@@ -23477,13 +23152,6 @@ is_a: GO:0016192 ! vesicle-mediated transport
 intersection_of: GO:0016192 ! vesicle-mediated transport
 intersection_of: occurs_in GO:0045202 ! synapse
 relationship: occurs_in GO:0045202 ! synapse
-
-[Term]
-id: GO:0099024
-name: plasma membrane invagination
-namespace: biological_process
-def: "An infolding of the plasma membrane." [GOC:dos, GOC:vw]
-is_a: GO:0010324 ! membrane invagination
 
 [Term]
 id: GO:0099080
@@ -24937,77 +24605,6 @@ created_by: kmv
 creation_date: 2012-06-27T06:20:20Z
 
 [Term]
-id: GO:1901074
-name: regulation of engulfment of apoptotic cell
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
-synonym: "regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-is_a: GO:0060099 ! regulation of phagocytosis, engulfment
-is_a: GO:2000425 ! regulation of apoptotic cell clearance
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0043652 ! engulfment of apoptotic cell
-relationship: regulates GO:0043652 ! engulfment of apoptotic cell
-created_by: kmv
-creation_date: 2012-07-02T07:32:21Z
-
-[Term]
-id: GO:1901075
-name: negative regulation of engulfment of apoptotic cell
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
-synonym: "down regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "down regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "down regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "down-regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "down-regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "down-regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "downregulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "downregulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "downregulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "inhibition of engulfment of apoptotic cell" NARROW [GOC:TermGenie]
-synonym: "inhibition of engulfment of apoptotic cell corpse" NARROW [GOC:TermGenie]
-synonym: "inhibition of engulfment of cell corpse" NARROW [GOC:TermGenie]
-synonym: "negative regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "negative regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-is_a: GO:0060101 ! negative regulation of phagocytosis, engulfment
-is_a: GO:1901074 ! regulation of engulfment of apoptotic cell
-is_a: GO:2000426 ! negative regulation of apoptotic cell clearance
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0043652 ! engulfment of apoptotic cell
-relationship: negatively_regulates GO:0043652 ! engulfment of apoptotic cell
-created_by: kmv
-creation_date: 2012-07-02T07:32:43Z
-
-[Term]
-id: GO:1901076
-name: positive regulation of engulfment of apoptotic cell
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
-synonym: "activation of engulfment of apoptotic cell" NARROW [GOC:TermGenie]
-synonym: "activation of engulfment of apoptotic cell corpse" NARROW [GOC:TermGenie]
-synonym: "activation of engulfment of cell corpse" NARROW [GOC:TermGenie]
-synonym: "positive regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "positive regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "up regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "up regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "up regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "up-regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "up-regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "up-regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-synonym: "upregulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
-synonym: "upregulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
-synonym: "upregulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
-is_a: GO:0060100 ! positive regulation of phagocytosis, engulfment
-is_a: GO:1901074 ! regulation of engulfment of apoptotic cell
-is_a: GO:2000427 ! positive regulation of apoptotic cell clearance
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0043652 ! engulfment of apoptotic cell
-relationship: positively_regulates GO:0043652 ! engulfment of apoptotic cell
-created_by: kmv
-creation_date: 2012-07-02T07:32:51Z
-
-[Term]
 id: GO:1901160
 name: primary amino compound metabolic process
 namespace: biological_process
@@ -25509,52 +25106,6 @@ intersection_of: positively_regulates GO:0032042 ! mitochondrial DNA metabolic p
 relationship: positively_regulates GO:0032042 ! mitochondrial DNA metabolic process
 created_by: yaf
 creation_date: 2013-02-01T10:05:14Z
-
-[Term]
-id: GO:1901861
-name: regulation of muscle tissue development
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of muscle tissue development." [GOC:TermGenie, GOC:yaf, PMID:23150719]
-is_a: GO:0050793 ! regulation of developmental process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0060537 ! muscle tissue development
-relationship: regulates GO:0060537 ! muscle tissue development
-created_by: yaf
-creation_date: 2013-02-01T10:30:47Z
-
-[Term]
-id: GO:1901862
-name: negative regulation of muscle tissue development
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of muscle tissue development." [GOC:TermGenie, GOC:yaf, PMID:23150719]
-synonym: "down regulation of muscle tissue development" EXACT [GOC:TermGenie]
-synonym: "down-regulation of muscle tissue development" EXACT [GOC:TermGenie]
-synonym: "downregulation of muscle tissue development" EXACT [GOC:TermGenie]
-synonym: "inhibition of muscle tissue development" NARROW [GOC:TermGenie]
-is_a: GO:0051093 ! negative regulation of developmental process
-is_a: GO:1901861 ! regulation of muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0060537 ! muscle tissue development
-relationship: negatively_regulates GO:0060537 ! muscle tissue development
-created_by: yaf
-creation_date: 2013-02-01T10:30:52Z
-
-[Term]
-id: GO:1901863
-name: positive regulation of muscle tissue development
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of muscle tissue development." [GOC:TermGenie, GOC:yaf, PMID:23150719]
-synonym: "activation of muscle tissue development" NARROW [GOC:TermGenie]
-synonym: "up regulation of muscle tissue development" EXACT [GOC:TermGenie]
-synonym: "up-regulation of muscle tissue development" EXACT [GOC:TermGenie]
-synonym: "upregulation of muscle tissue development" EXACT [GOC:TermGenie]
-is_a: GO:0051094 ! positive regulation of developmental process
-is_a: GO:1901861 ! regulation of muscle tissue development
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0060537 ! muscle tissue development
-relationship: positively_regulates GO:0060537 ! muscle tissue development
-created_by: yaf
-creation_date: 2013-02-01T10:30:57Z
 
 [Term]
 id: GO:1901879
