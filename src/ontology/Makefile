@@ -126,8 +126,8 @@ release: $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.o
 
 # these live in the ../sparql directory, and have suffix -violation.sparql
 # adding the name here will make the violation check live
-#  nolabels equivalent-classes
-VCHECKS =  owldef-self-reference trailing-whitespace xref-syntax 
+#   equivalent-classes
+VCHECKS =  owldef-self-reference trailing-whitespace xref-syntax nolabels
 
 # Only needed until robot supports catalogs
 
