@@ -1172,6 +1172,30 @@ synonym: "organ system process" EXACT []
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0003365
+name: establishment of cell polarity involved in ameboidal cell migration
+namespace: biological_process
+def: "The specification and formation of anisotropic intracellular organization that contributes to the self-propelled directed movement of an ameboid cell." [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0030010 ! establishment of cell polarity
+intersection_of: GO:0030010 ! establishment of cell polarity
+intersection_of: part_of GO:0001667 ! ameboidal-type cell migration
+relationship: part_of GO:0001667 ! ameboidal-type cell migration
+created_by: dph
+creation_date: 2009-12-08T04:50:41Z
+
+[Term]
+id: GO:0003379
+name: establishment of cell polarity involved in gastrulation cell migration
+namespace: biological_process
+def: "The specification and formation of anisotropic intracellular organization that contributes to the self-propelled directed movement of an ameboid cell taking part in gastrulation." [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0003365 ! establishment of cell polarity involved in ameboidal cell migration
+intersection_of: GO:0030010 ! establishment of cell polarity
+intersection_of: part_of GO:0042074 ! cell migration involved in gastrulation
+relationship: part_of GO:0042074 ! cell migration involved in gastrulation
+created_by: dph
+creation_date: 2009-12-09T06:54:44Z
+
+[Term]
 id: GO:0003674
 name: molecular_function
 namespace: molecular_function
@@ -4754,6 +4778,13 @@ synonym: "circadian process" EXACT []
 synonym: "circadian response" RELATED []
 synonym: "response to circadian rhythm" RELATED []
 xref: Wikipedia:Circadian_rhythm
+is_a: GO:0048511 ! rhythmic process
+
+[Term]
+id: GO:0007624
+name: ultradian rhythm
+namespace: biological_process
+def: "The specific actions or reactions of an organism that recur with a regularity more frequent than every 24 hours." [GOC:jl, PMID:19708721]
 is_a: GO:0048511 ! rhythmic process
 
 [Term]
@@ -8791,6 +8822,17 @@ is_a: GO:0030003 ! cellular cation homeostasis
 is_a: GO:0055067 ! monovalent inorganic cation homeostasis
 
 [Term]
+id: GO:0030010
+name: establishment of cell polarity
+namespace: biological_process
+alt_id: GO:0000283
+alt_id: GO:0030468
+def: "The specification and formation of anisotropic intracellular organization or cell growth patterns." [GOC:mah]
+synonym: "bud site selection/establishment of cell polarity" NARROW []
+synonym: "cell polarization" EXACT []
+is_a: GO:0007163 ! establishment or maintenance of cell polarity
+
+[Term]
 id: GO:0030016
 name: myofibril
 namespace: cellular_component
@@ -11733,6 +11775,18 @@ is_a: GO:0006807 ! nitrogen compound metabolic process
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
+id: GO:0034644
+name: cellular response to UV
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an ultraviolet radiation (UV light) stimulus. Ultraviolet radiation is electromagnetic radiation with a wavelength in the range of 10 to 380 nanometers." [GOC:mah]
+synonym: "cellular response to ultraviolet light stimulus" EXACT []
+synonym: "cellular response to ultraviolet radiation stimulus" EXACT []
+synonym: "cellular response to UV light stimulus" EXACT []
+synonym: "cellular response to UV radiation stimulus" EXACT []
+is_a: GO:0009411 ! response to UV
+is_a: GO:0071482 ! cellular response to light stimulus
+
+[Term]
 id: GO:0034645
 name: cellular macromolecule biosynthetic process
 namespace: biological_process
@@ -11994,6 +12048,20 @@ is_a: GO:0043232 ! intracellular non-membrane-bounded organelle
 is_a: GO:1990904 ! ribonucleoprotein complex
 created_by: rfoulger
 creation_date: 2011-04-01T10:50:47Z
+
+[Term]
+id: GO:0035882
+name: defecation rhythm
+namespace: biological_process
+def: "The rhythmic process of defecation that consists of an intestinal oscillator which regulates calcium waves. These waves in turn control a stereotypical, three-part pattern of muscle contractions. In some organisms, defecation can recur with a regularity more frequent than every 24 hours. For example, in a well-fed Caenorhabditis elegans, the defecation motor program occurs approximately every 45 seconds, and is temperature- and touch-compensated." [GOC:bf, GOC:kmv, PMID:7479775, PMID:8158250, PMID:9066270]
+synonym: "defecation behavior" RELATED [PMID:7479775, PMID:9066270]
+synonym: "defecation cycle" EXACT [PMID:8158250]
+synonym: "defecation motor program" EXACT [GOC:kmv, PMID:9066270]
+synonym: "DMP" EXACT [PMID:9066270]
+is_a: GO:0007624 ! ultradian rhythm
+relationship: part_of GO:0030421 ! defecation
+created_by: rfoulger
+creation_date: 2011-06-06T11:36:35Z
 
 [Term]
 id: GO:0035966
@@ -21488,6 +21556,19 @@ created_by: midori
 creation_date: 2009-11-23T12:41:36Z
 
 [Term]
+id: GO:0071214
+name: cellular response to abiotic stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (non-living) stimulus." [GOC:mah]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+synonym: "cellular response to abiotic stress" NARROW [GOC:mah]
+is_a: GO:0009628 ! response to abiotic stimulus
+is_a: GO:0104004 ! cellular response to environmental stimulus
+created_by: midori
+creation_date: 2009-12-03T01:02:11Z
+
+[Term]
 id: GO:0071216
 name: cellular response to biotic stimulus
 namespace: biological_process
@@ -21538,6 +21619,53 @@ synonym: "mRNA-containing RNP export from nucleus" EXACT [GOC:mah]
 is_a: GO:0071426 ! ribonucleoprotein complex export from nucleus
 created_by: midori
 creation_date: 2009-12-16T10:13:59Z
+
+[Term]
+id: GO:0071478
+name: cellular response to radiation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation." [GOC:mah]
+comment: Note that 'radiation' refers to electromagnetic radiation of any wavelength.
+synonym: "cellular response to electromagnetic radiation stimulus" EXACT [GOC:mah]
+synonym: "cellular response to radiation stimulus" EXACT [GOC:mah]
+is_a: GO:0009314 ! response to radiation
+is_a: GO:0071214 ! cellular response to abiotic stimulus
+created_by: midori
+creation_date: 2009-12-18T01:59:37Z
+
+[Term]
+id: GO:0071479
+name: cellular response to ionizing radiation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a ionizing radiation stimulus. Ionizing radiation is radiation with sufficient energy to remove electrons from atoms and may arise from spontaneous decay of unstable isotopes, resulting in alpha and beta particles and gamma rays. Ionizing radiation also includes X-rays." [GOC:mah]
+synonym: "cellular response to ionising radiation" EXACT [GOC:mah]
+synonym: "cellular response to ionizing radiation stimulus" EXACT [GOC:mah]
+is_a: GO:0010212 ! response to ionizing radiation
+is_a: GO:0071478 ! cellular response to radiation
+created_by: midori
+creation_date: 2009-12-18T02:00:31Z
+
+[Term]
+id: GO:0071480
+name: cellular response to gamma radiation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gamma radiation stimulus. Gamma radiation is a form of electromagnetic radiation (EMR) or light emission of a specific frequency produced from sub-atomic particle interaction, such as electron-positron annihilation and radioactive decay. Gamma rays are generally characterized as EMR having the highest frequency and energy, and also the shortest wavelength, within the electromagnetic radiation spectrum." [GOC:mah]
+synonym: "cellular response to gamma ray" RELATED [GOC:mah]
+synonym: "cellular response to gamma-ray photon" RELATED [GOC:mah]
+is_a: GO:0010332 ! response to gamma radiation
+is_a: GO:0071479 ! cellular response to ionizing radiation
+created_by: midori
+creation_date: 2009-12-18T02:00:50Z
+
+[Term]
+id: GO:0071482
+name: cellular response to light stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light." [GOC:mah]
+is_a: GO:0009416 ! response to light stimulus
+is_a: GO:0071478 ! cellular response to radiation
+created_by: midori
+creation_date: 2009-12-18T02:03:49Z
 
 [Term]
 id: GO:0071684
@@ -21687,6 +21815,16 @@ def: "The dormancy process that results in exit from diapause. Diapause is a neu
 is_a: GO:0022611 ! dormancy process
 created_by: midori
 creation_date: 2010-10-21T04:45:40Z
+
+[Term]
+id: GO:0072347
+name: response to anesthetic
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an anesthetic stimulus. An anesthetic is a substance that causes loss of feeling, awareness, or sensation." [CHEBI:38867, GOC:sart]
+synonym: "response to anaesthetic" EXACT [GOC:mah]
+is_a: GO:0042493 ! response to drug
+created_by: midori
+creation_date: 2010-11-10T01:26:18Z
 
 [Term]
 id: GO:0072384
@@ -23573,6 +23711,15 @@ intersection_of: GO:0006366 ! transcription by RNA polymerase II
 intersection_of: negatively_regulates GO:0051402 ! neuron apoptotic process
 created_by: cjm
 creation_date: 2015-04-02T04:13:19Z
+
+[Term]
+id: GO:0104004
+name: cellular response to environmental stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an environmental stimulus." [GOC:dos]
+is_a: GO:0051716 ! cellular response to stimulus
+created_by: dos
+creation_date: 2017-02-17T16:02:42Z
 
 [Term]
 id: GO:0106030
@@ -29480,6 +29627,26 @@ created_by: es
 creation_date: 2015-10-19T15:02:28Z
 
 [Term]
+id: GO:1904803
+name: regulation of translation involved in cellular response to UV
+namespace: biological_process
+def: "Any regulation of translation that is involved in cellular response to UV." [GO_REF:0000060, GOC:TermGenie, PMID:17369398]
+synonym: "regulation of protein anabolism involved in cellular response to UV" EXACT [GOC:TermGenie]
+synonym: "regulation of protein biosynthesis involved in cellular response to UV" EXACT [GOC:TermGenie]
+synonym: "regulation of protein formation involved in cellular response to UV" EXACT [GOC:TermGenie]
+synonym: "regulation of protein synthesis involved in cellular response to UV" EXACT [GOC:TermGenie]
+synonym: "regulation of translation involved in cellular response to ultraviolet light stimulus" EXACT [GOC:TermGenie]
+synonym: "regulation of translation involved in cellular response to ultraviolet radiation stimulus" EXACT [GOC:TermGenie]
+synonym: "regulation of translation involved in cellular response to UV light stimulus" EXACT [GOC:TermGenie]
+synonym: "regulation of translation involved in cellular response to UV radiation stimulus" EXACT [GOC:TermGenie]
+is_a: GO:0006417 ! regulation of translation
+intersection_of: GO:0006417 ! regulation of translation
+intersection_of: part_of GO:0034644 ! cellular response to UV
+relationship: part_of GO:0034644 ! cellular response to UV
+created_by: mah
+creation_date: 2015-11-10T12:12:41Z
+
+[Term]
 id: GO:1904860
 name: DNA biosynthetic process involved in mitotic DNA replication
 namespace: biological_process
@@ -30758,6 +30925,77 @@ created_by: hbye
 creation_date: 2017-01-17T12:00:56Z
 
 [Term]
+id: GO:1905843
+name: regulation of cellular response to gamma radiation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cellular response to gamma radiation." [GO_REF:0000058, GOC:TermGenie, PMID:23505386]
+synonym: "regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:2001228 ! regulation of response to gamma radiation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0071480 ! cellular response to gamma radiation
+relationship: regulates GO:0071480 ! cellular response to gamma radiation
+created_by: rozaru
+creation_date: 2017-01-19T10:24:39Z
+
+[Term]
+id: GO:1905844
+name: negative regulation of cellular response to gamma radiation
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to gamma radiation." [GO_REF:0000058, GOC:TermGenie, PMID:23505386]
+synonym: "down regulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "down regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "down regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "down-regulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "down-regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "down-regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "downregulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "downregulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "downregulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "inhibition of cellular response to gamma radiation" NARROW [GOC:TermGenie]
+synonym: "inhibition of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "inhibition of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "negative regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "negative regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:1905843 ! regulation of cellular response to gamma radiation
+is_a: GO:2001229 ! negative regulation of response to gamma radiation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0071480 ! cellular response to gamma radiation
+relationship: negatively_regulates GO:0071480 ! cellular response to gamma radiation
+created_by: rozaru
+creation_date: 2017-01-19T10:24:48Z
+
+[Term]
+id: GO:1905845
+name: positive regulation of cellular response to gamma radiation
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cellular response to gamma radiation." [GO_REF:0000058, GOC:TermGenie, PMID:23505386]
+synonym: "activation of cellular response to gamma radiation" NARROW [GOC:TermGenie]
+synonym: "activation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "activation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "positive regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "positive regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "up regulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "up regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "up regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "up-regulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "up-regulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "up-regulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+synonym: "upregulation of cellular response to gamma radiation" EXACT [GOC:TermGenie]
+synonym: "upregulation of cellular response to gamma ray" RELATED [GOC:TermGenie]
+synonym: "upregulation of cellular response to gamma-ray photon" RELATED [GOC:TermGenie]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:1905843 ! regulation of cellular response to gamma radiation
+is_a: GO:2001230 ! positive regulation of response to gamma radiation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0071480 ! cellular response to gamma radiation
+relationship: positively_regulates GO:0071480 ! cellular response to gamma radiation
+created_by: rozaru
+creation_date: 2017-01-19T10:24:57Z
+
+[Term]
 id: GO:1905851
 name: negative regulation of backward locomotion
 namespace: biological_process
@@ -31548,6 +31786,20 @@ created_by: tanyaberardini
 creation_date: 2010-09-15T08:55:48Z
 
 [Term]
+id: GO:2000114
+name: regulation of establishment of cell polarity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of establishment of cell polarity." [GOC:dph]
+synonym: "regulation of bud site selection/establishment of cell polarity" RELATED [GOC:obol]
+synonym: "regulation of cell polarization" EXACT [GOC:obol]
+is_a: GO:0032878 ! regulation of establishment or maintenance of cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0030010 ! establishment of cell polarity
+relationship: regulates GO:0030010 ! establishment of cell polarity
+created_by: dph
+creation_date: 2010-09-16T01:22:36Z
+
+[Term]
 id: GO:2000134
 name: negative regulation of G1/S transition of mitotic cell cycle
 namespace: biological_process
@@ -32163,6 +32415,56 @@ intersection_of: positively_regulates GO:0000184 ! nuclear-transcribed mRNA cata
 relationship: positively_regulates GO:0000184 ! nuclear-transcribed mRNA catabolic process, nonsense-mediated decay
 created_by: pr
 creation_date: 2011-04-18T03:32:49Z
+
+[Term]
+id: GO:2000746
+name: regulation of defecation rhythm
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of defecation rhythm." [GOC:kmv]
+synonym: "regulation of defecation behavior" RELATED [GOC:obol]
+synonym: "regulation of defecation cycle" EXACT [GOC:obol]
+synonym: "regulation of defecation motor program" EXACT [GOC:obol]
+synonym: "regulation of DMP" EXACT [GOC:obol]
+is_a: GO:2000292 ! regulation of defecation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0035882 ! defecation rhythm
+relationship: regulates GO:0035882 ! defecation rhythm
+created_by: rfoulger
+creation_date: 2011-06-15T03:23:07Z
+
+[Term]
+id: GO:2000747
+name: negative regulation of defecation rhythm
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of defecation rhythm." [GOC:kmv]
+synonym: "negative regulation of defecation behavior" RELATED [GOC:obol]
+synonym: "negative regulation of defecation cycle" EXACT [GOC:obol]
+synonym: "negative regulation of defecation motor program" EXACT [GOC:obol]
+synonym: "negative regulation of DMP" EXACT [GOC:obol]
+is_a: GO:2000293 ! negative regulation of defecation
+is_a: GO:2000746 ! regulation of defecation rhythm
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0035882 ! defecation rhythm
+relationship: negatively_regulates GO:0035882 ! defecation rhythm
+created_by: rfoulger
+creation_date: 2011-06-15T03:23:10Z
+
+[Term]
+id: GO:2000748
+name: positive regulation of defecation rhythm
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of defecation rhythm." [GOC:kmv]
+synonym: "positive regulation of defecation behavior" RELATED [GOC:obol]
+synonym: "positive regulation of defecation cycle" EXACT [GOC:obol]
+synonym: "positive regulation of defecation motor program" EXACT [GOC:obol]
+synonym: "positive regulation of DMP" EXACT [GOC:obol]
+is_a: GO:2000294 ! positive regulation of defecation
+is_a: GO:2000746 ! regulation of defecation rhythm
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0035882 ! defecation rhythm
+relationship: positively_regulates GO:0035882 ! defecation rhythm
+created_by: rfoulger
+creation_date: 2011-06-15T03:23:13Z
 
 [Term]
 id: GO:2000765
