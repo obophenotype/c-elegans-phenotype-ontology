@@ -5890,7 +5890,7 @@ is_a: GO:0010212 ! response to ionizing radiation
 id: GO:0010389
 name: regulation of G2/M transition of mitotic cell cycle
 namespace: biological_process
-def: "Any signalling pathway that modulates the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the mitotic cell cycle." [GOC:mtg_cell_cycle, PMID:17329565]
+def: "Any process that modulates the rate or extent of progression from G2 phase to M phase of the mitotic cell cycle." [GOC:mtg_cell_cycle, PMID:17329565]
 synonym: "regulation of mitotic entry" EXACT [GOC:vw]
 is_a: GO:1901990 ! regulation of mitotic cell cycle phase transition
 is_a: GO:1902749 ! regulation of cell cycle G2/M phase transition
@@ -6549,7 +6549,7 @@ id: GO:0010971
 name: positive regulation of G2/M transition of mitotic cell cycle
 namespace: biological_process
 alt_id: GO:0031662
-def: "Any signalling pathway that activates or increases the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the mitotic cell cycle." [GOC:dph, GOC:mtg_cell_cycle, GOC:tb]
+def: "Any process that increases the rate or extent of progression from G2 phase to M phase of the mitotic cell cycle." [GOC:dph, GOC:mtg_cell_cycle, GOC:tb]
 synonym: "positive regulation of cyclin-dependent protein serine/threonine kinase activity involved in G2/M transition of mitotic cell cycle" RELATED []
 synonym: "positive regulation of mitotic entry" EXACT [GOC:mah]
 is_a: GO:0010389 ! regulation of G2/M transition of mitotic cell cycle
@@ -6565,7 +6565,7 @@ creation_date: 2009-06-01T10:16:34Z
 id: GO:0010972
 name: negative regulation of G2/M transition of mitotic cell cycle
 namespace: biological_process
-def: "Any signalling pathway that decreases or inhibits the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
+def: "Any cell cycle regulatory process that decreases the rate or extent of progression of a cell from G2 to M phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
 synonym: "negative regulation of mitotic entry" EXACT [GOC:vw]
 is_a: GO:0010389 ! regulation of G2/M transition of mitotic cell cycle
 is_a: GO:1901991 ! negative regulation of mitotic cell cycle phase transition
@@ -17746,6 +17746,14 @@ synonym: "pan-neural process" RELATED []
 is_a: GO:0003008 ! system process
 
 [Term]
+id: GO:0050879
+name: multicellular organismal movement
+namespace: biological_process
+def: "Any physiological process involved in changing the position of a multicellular organism or an anatomical part of a multicellular organism." [GOC:dph, GOC:mtg_muscle, GOC:tb]
+subset: goslim_pir
+is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
 id: GO:0050890
 name: cognition
 namespace: biological_process
@@ -21808,6 +21816,16 @@ created_by: midori
 creation_date: 2010-10-04T01:51:47Z
 
 [Term]
+id: GO:0071965
+name: multicellular organismal locomotion
+namespace: biological_process
+def: "Locomotion in a multicellular organism, i.e. self-propelled movement of a multicellular organism from one location to another." [GOC:mah]
+is_a: GO:0040011 ! locomotion
+is_a: GO:0050879 ! multicellular organismal movement
+created_by: midori
+creation_date: 2010-10-14T10:34:35Z
+
+[Term]
 id: GO:0071981
 name: exit from diapause
 namespace: biological_process
@@ -24164,7 +24182,7 @@ creation_date: 2012-01-26T10:14:22Z
 id: GO:1900087
 name: positive regulation of G1/S transition of mitotic cell cycle
 namespace: biological_process
-def: "Any signalling pathway that increases or activates a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
+def: "Any cell cycle regulatory process that promotes the commitment of a cell from G1 to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
 synonym: "activation of G1/S transition of mitotic cell cycle" NARROW [GOC:TermGenie]
 synonym: "up regulation of G1/S transition of mitotic cell cycle" EXACT [GOC:TermGenie]
 synonym: "up-regulation of G1/S transition of mitotic cell cycle" EXACT [GOC:TermGenie]
@@ -26865,7 +26883,7 @@ creation_date: 2014-02-28T13:09:43Z
 id: GO:1902749
 name: regulation of cell cycle G2/M phase transition
 namespace: biological_process
-def: "Any signalling pathway that modulates the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the cell cycle." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
+def: "Any process that modulates the frequency, rate or extent of cell cycle G2/M phase transition." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
 is_a: GO:1901987 ! regulation of cell cycle phase transition
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0044839 ! cell cycle G2/M phase transition
@@ -26877,7 +26895,7 @@ creation_date: 2014-03-05T15:38:15Z
 id: GO:1902750
 name: negative regulation of cell cycle G2/M phase transition
 namespace: biological_process
-def: "Any signalling pathway that decreases or inhibits the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the cell cycle." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cell cycle G2/M phase transition." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
 synonym: "down regulation of cell cycle G2/M phase transition" EXACT [GOC:TermGenie]
 synonym: "down-regulation of cell cycle G2/M phase transition" EXACT [GOC:TermGenie]
 synonym: "downregulation of cell cycle G2/M phase transition" EXACT [GOC:TermGenie]
@@ -26894,7 +26912,7 @@ creation_date: 2014-03-05T15:38:21Z
 id: GO:1902751
 name: positive regulation of cell cycle G2/M phase transition
 namespace: biological_process
-def: "Any signalling pathway that activates or increases the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G2 phase to M phase of the cell cycle." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
+def: "Any process that activates or increases the frequency, rate or extent of cell cycle G2/M phase transition." [GO_REF:0000058, GOC:jl, GOC:TermGenie]
 synonym: "activation of cell cycle G2/M phase transition" NARROW [GOC:TermGenie]
 synonym: "up regulation of cell cycle G2/M phase transition" EXACT [GOC:TermGenie]
 synonym: "up-regulation of cell cycle G2/M phase transition" EXACT [GOC:TermGenie]
@@ -26980,7 +26998,7 @@ creation_date: 2014-03-25T14:56:46Z
 id: GO:1902806
 name: regulation of cell cycle G1/S phase transition
 namespace: biological_process
-def: "Any signalling pathway that modulates the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the cell cycle." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
+def: "Any process that modulates the frequency, rate or extent of cell cycle G1/S phase transition." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
 is_a: GO:1901987 ! regulation of cell cycle phase transition
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0044843 ! cell cycle G1/S phase transition
@@ -26992,7 +27010,7 @@ creation_date: 2014-03-26T16:36:14Z
 id: GO:1902807
 name: negative regulation of cell cycle G1/S phase transition
 namespace: biological_process
-def: "Any signalling pathway that decreases or inhibits the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the cell cycle." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cell cycle G1/S phase transition." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
 synonym: "down regulation of cell cycle G1/S phase transition" EXACT [GOC:TermGenie]
 synonym: "down-regulation of cell cycle G1/S phase transition" EXACT [GOC:TermGenie]
 synonym: "downregulation of cell cycle G1/S phase transition" EXACT [GOC:TermGenie]
@@ -27009,7 +27027,7 @@ creation_date: 2014-03-26T16:36:20Z
 id: GO:1902808
 name: positive regulation of cell cycle G1/S phase transition
 namespace: biological_process
-def: "Any signalling pathway that activates or increases the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the cell cycle." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
+def: "Any process that activates or increases the frequency, rate or extent of cell cycle G1/S phase transition." [GO_REF:0000058, GOC:mtg_cell_cycle, GOC:TermGenie]
 synonym: "activation of cell cycle G1/S phase transition" NARROW [GOC:TermGenie]
 synonym: "up regulation of cell cycle G1/S phase transition" EXACT [GOC:TermGenie]
 synonym: "up-regulation of cell cycle G1/S phase transition" EXACT [GOC:TermGenie]
@@ -31712,7 +31730,7 @@ creation_date: 2010-08-05T11:34:53Z
 id: GO:2000045
 name: regulation of G1/S transition of mitotic cell cycle
 namespace: biological_process
-def: "Any signalling pathway that modulates the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
+def: "Any cell cycle regulatory process that controls the commitment of a cell from G1 to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
 comment: Note that this process is usually achieved by the regulation of the G1 cyclin-dependent protein kinase, consider annotating to the child term 'regulation of cyclin-dependent protein kinase activity involved in G1/S ; GO:0031657'.
 is_a: GO:1901990 ! regulation of mitotic cell cycle phase transition
 is_a: GO:1902806 ! regulation of cell cycle G1/S phase transition
@@ -31803,7 +31821,7 @@ creation_date: 2010-09-16T01:22:36Z
 id: GO:2000134
 name: negative regulation of G1/S transition of mitotic cell cycle
 namespace: biological_process
-def: "Any signalling pathway that decreases or inhibits the activity of a cell cycle cyclin-dependent protein kinase to modulate the switch from G1 phase to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
+def: "Any cell cycle regulatory process that prevents the commitment of a cell from G1 to S phase of the mitotic cell cycle." [GOC:mtg_cell_cycle]
 is_a: GO:1901991 ! negative regulation of mitotic cell cycle phase transition
 is_a: GO:1902807 ! negative regulation of cell cycle G1/S phase transition
 is_a: GO:2000045 ! regulation of G1/S transition of mitotic cell cycle

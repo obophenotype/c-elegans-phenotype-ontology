@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-01-09
+data-version: releases/2019-01-29
 date: 20:08:2018 14:57
 saved-by: garys
 auto-generated-by: OBO-Edit 1.002
@@ -62,17 +62,12 @@ id: BFO:0000040
 is_a: BFO:0000004
 
 [Term]
-id: CARO:0000000
-is_a: CARO:0030000
-
-[Term]
 id: CARO:0000003
 is_a: CARO:0000006
 
 [Term]
 id: CARO:0000006
 is_a: BFO:0000040
-is_a: CARO:0000000
 
 [Term]
 id: CARO:0000014
@@ -81,10 +76,6 @@ is_a: CARO:0000003
 [Term]
 id: CARO:0010000
 is_a: CARO:0000003
-
-[Term]
-id: CARO:0030000
-is_a: BFO:0000004
 
 [Term]
 id: CHEBI:10545
@@ -334,6 +325,10 @@ is_a: CHEBI:27175
 id: CHEBI:17137
 is_a: BFO:0000004
 is_a: CHEBI:33482
+
+[Term]
+id: CHEBI:17188
+is_a: CHEBI:25608
 
 [Term]
 id: CHEBI:17258
@@ -1075,6 +1070,10 @@ is_a: CHEBI:18282
 is_a: CHEBI:26401
 
 [Term]
+id: CHEBI:26392
+is_a: CHEBI:17188
+
+[Term]
 id: CHEBI:26393
 is_a: CHEBI:17326
 
@@ -1087,6 +1086,11 @@ is_a: CHEBI:33838
 id: CHEBI:26395
 is_a: CHEBI:26401
 is_a: CHEBI:36976
+
+[Term]
+id: CHEBI:26397
+is_a: CHEBI:26392
+is_a: CHEBI:26558
 
 [Term]
 id: CHEBI:26398
@@ -1143,6 +1147,10 @@ is_a: CHEBI:38101
 [Term]
 id: CHEBI:26547
 is_a: CHEBI:35315
+
+[Term]
+id: CHEBI:26558
+is_a: CHEBI:17188
 
 [Term]
 id: CHEBI:26561
@@ -2509,9 +2517,20 @@ is_a: CHEBI:23447
 is_a: CHEBI:26395
 
 [Term]
+id: CHEBI:37010
+is_a: CHEBI:26558
+is_a: CHEBI:37015
+
+[Term]
 id: CHEBI:37015
 is_a: CHEBI:16701
 is_a: CHEBI:26561
+
+[Term]
+id: CHEBI:37021
+is_a: CHEBI:26397
+is_a: CHEBI:26400
+is_a: CHEBI:37010
 
 [Term]
 id: CHEBI:37022
@@ -2531,6 +2550,7 @@ is_a: CHEBI:37015
 [Term]
 id: CHEBI:37096
 is_a: CHEBI:22256
+is_a: CHEBI:37021
 
 [Term]
 id: CHEBI:37141
@@ -3432,6 +3452,10 @@ is_a: CHEBI:25697
 is_a: CHEBI:35274
 
 [Term]
+id: CHEBI:58043
+is_a: CHEBI:58945
+
+[Term]
 id: CHEBI:58104
 is_a: CHEBI:59724
 
@@ -3626,6 +3650,10 @@ is_a: CHEBI:33280
 [Term]
 id: CHEBI:63161
 is_a: CHEBI:63299
+
+[Term]
+id: CHEBI:63165
+is_a: CHEBI:58945
 
 [Term]
 id: CHEBI:63299
@@ -10206,6 +10234,10 @@ id: GO:0050877
 is_a: GO:0003008
 
 [Term]
+id: GO:0050879
+is_a: GO:0032501
+
+[Term]
 id: GO:0050890
 is_a: GO:0050877
 
@@ -11624,6 +11656,11 @@ is_a: GO:0045893
 [Term]
 id: GO:0071944
 is_a: GO:0044464
+
+[Term]
+id: GO:0071965
+is_a: GO:0040011
+is_a: GO:0050879
 
 [Term]
 id: GO:0071981
@@ -20862,7 +20899,6 @@ synonym: "cell migration abnormal" NARROW []
 synonym: "Mig" BROAD []
 synonym: "migration of cells abnormal" RELATED []
 is_a: WBPhenotype:0000529 ! cell development variant
-is_a: WBPhenotype:0000643 ! locomotion variant
 
 [Term]
 id: WBPhenotype:0000595
@@ -27069,7 +27105,6 @@ name: chemotaxis variant
 def: "Any variation in the directed movement of a worm in response to a specific chemical concentration gradient compared to control. Directed movement may be towards a higher concentration (positive chemotaxis) or towards a lower concentration (negative chemotaxis)." [GO:0006935, WB:cab]
 synonym: "Che" RELATED []
 synonym: "chemotaxis abnormal" NARROW []
-is_a: WBPhenotype:0000643 ! locomotion variant
 is_a: WBPhenotype:0001040 ! chemosensory response variant
 
 [Term]
