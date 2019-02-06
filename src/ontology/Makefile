@@ -81,7 +81,7 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 # generate seed with all referenced entities
 
 seed.txt: $(SRC) all_pattern_terms.txt
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@ &&\
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@ &&\
 	cat $@ all_pattern_terms.txt | sort | uniq >  $@
 
 # Generate terms.txt for each import.  # Assume OBO-style Possibly hacky step?
@@ -210,7 +210,7 @@ all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) p
 	cat $^ | sort | uniq > $@
 	
 pattern_owl_seed.txt: ../patterns/pattern.owl
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@
 
 ../patterns/data/manual/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
