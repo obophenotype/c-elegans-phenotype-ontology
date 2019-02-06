@@ -52,115 +52,8 @@ name: cell part
 is_a: CARO:0000003 ! anatomical structure
 
 [Term]
-id: CHEBI:23367
-name: molecular entity
-is_a: CHEBI:24431 ! chemical entity
-
-[Term]
 id: CHEBI:24431
 name: chemical entity
-
-[Term]
-id: CHEBI:24651
-name: hydroxides
-is_a: CHEBI:25806 ! oxygen molecular entity
-is_a: CHEBI:33608 ! hydrogen molecular entity
-is_a: CHEBI:37577 ! heteroatomic molecular entity
-
-[Term]
-id: CHEBI:25367
-name: molecule
-is_a: CHEBI:36357 ! polyatomic entity
-
-[Term]
-id: CHEBI:25806
-name: oxygen molecular entity
-is_a: CHEBI:33304 ! chalcogen molecular entity
-
-[Term]
-id: CHEBI:33304
-name: chalcogen molecular entity
-is_a: CHEBI:33675 ! p-block molecular entity
-
-[Term]
-id: CHEBI:33579
-name: main group molecular entity
-is_a: CHEBI:23367 ! molecular entity
-
-[Term]
-id: CHEBI:33582
-name: carbon group molecular entity
-is_a: CHEBI:33675 ! p-block molecular entity
-
-[Term]
-id: CHEBI:33595
-name: cyclic compound
-is_a: CHEBI:25367 ! molecule
-
-[Term]
-id: CHEBI:33608
-name: hydrogen molecular entity
-is_a: CHEBI:33674 ! s-block molecular entity
-
-[Term]
-id: CHEBI:33655
-name: aromatic compound
-is_a: CHEBI:33595 ! cyclic compound
-
-[Term]
-id: CHEBI:33659
-name: organic aromatic compound
-is_a: CHEBI:33655 ! aromatic compound
-is_a: CHEBI:33832 ! organic cyclic compound
-
-[Term]
-id: CHEBI:33674
-name: s-block molecular entity
-is_a: CHEBI:33579 ! main group molecular entity
-
-[Term]
-id: CHEBI:33675
-name: p-block molecular entity
-is_a: CHEBI:33579 ! main group molecular entity
-
-[Term]
-id: CHEBI:33822
-name: organic hydroxy compound
-is_a: CHEBI:24651 ! hydroxides
-is_a: CHEBI:50860 ! organic molecular entity
-
-[Term]
-id: CHEBI:33832
-name: organic cyclic compound
-is_a: CHEBI:33595 ! cyclic compound
-is_a: CHEBI:72695 ! organic molecule
-
-[Term]
-id: CHEBI:33853
-name: phenols
-is_a: CHEBI:33659 ! organic aromatic compound
-is_a: CHEBI:33822 ! organic hydroxy compound
-
-[Term]
-id: CHEBI:36357
-name: polyatomic entity
-is_a: CHEBI:23367 ! molecular entity
-
-[Term]
-id: CHEBI:37577
-name: heteroatomic molecular entity
-is_a: CHEBI:36357 ! polyatomic entity
-
-[Term]
-id: CHEBI:50860
-name: organic molecular entity
-is_a: CHEBI:33582 ! carbon group molecular entity
-
-[Term]
-id: CHEBI:72695
-name: organic molecule
-is_a: CHEBI:25367 ! molecule
-is_a: CHEBI:50860 ! organic molecular entity
 
 [Term]
 id: CL:0000000
@@ -193,18 +86,6 @@ is_a: CL:0000000 ! cell
 is_a: GO:0005623 ! cell
 
 [Term]
-id: CL:0000006
-name: neuronal receptor cell
-namespace: cell
-synonym: "neuronal receptor cell (sensu Animalia)" EXACT []
-is_a: CL:0000101 ! sensory neuron
-is_a: CL:0000197 ! receptor cell
-intersection_of: CL:0000197 ! receptor cell
-intersection_of: CL:0000540 ! neuron
-intersection_of: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-relationship: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-
-[Term]
 id: CL:0000007
 name: early embryonic cell
 namespace: cell
@@ -234,40 +115,6 @@ is_a: CL:0000586 {is_inferred="true"} ! germ cell
 intersection_of: CL:0000586 ! germ cell
 intersection_of: RO:0002215 GO:0007283 ! capable of spermatogenesis
 relationship: RO:0002215 GO:0007283 ! capable of spermatogenesis
-
-[Term]
-id: CL:0000017
-name: spermatocyte
-namespace: cell
-def: "A male germ cell that develops from spermatogonia. The euploid primary spermatocytes undergo meiosis and give rise to the haploid secondary spermatocytes which in turn give rise to spermatids." [GOC:tfm, MESH:A05.360.490.890.880]
-xref: BTO:0001275
-xref: CALOHA:TS-0951
-xref: EMAPA:31484
-xref: FBbt:00004936
-xref: FMA:84049
-xref: WBbt:0006799
-is_a: CL:0000015 {is_inferred="true"} ! male germ cell
-intersection_of: CL:0000015 ! male germ cell
-intersection_of: RO:0002215 GO:0048137 ! capable of spermatocyte division
-relationship: RO:0002202 CL:0000020 ! develops from spermatogonium
-relationship: RO:0002215 GO:0048137 ! capable of spermatocyte division
-
-[Term]
-id: CL:0000020
-name: spermatogonium
-namespace: cell
-def: "An euploid male germ cell of an early stage of spermatogenesis." [MESH:A05.360.490.890.900]
-xref: BTO:0000958
-xref: CALOHA:TS-2193
-xref: EMAPA:31482
-xref: FBbt:00004935
-xref: FMA:72291
-is_a: CL:0000015 ! male germ cell
-intersection_of: CL:0000015 ! male germ cell
-intersection_of: RO:0000053 PATO:0001394 ! bearer of diploid
-intersection_of: RO:0000053 PATO:0001501 ! bearer of immature
-relationship: RO:0000053 PATO:0001394 ! bearer of diploid
-relationship: RO:0000053 PATO:0001501 ! bearer of immature
 
 [Term]
 id: CL:0000021
@@ -461,35 +308,6 @@ relationship: BFO:0000050 UBERON:0000115 ! part of lung epithelium
 relationship: BFO:0000050 UBERON:0002048 ! part of lung
 
 [Term]
-id: CL:0000098
-name: sensory epithelial cell
-namespace: cell
-def: "A specialized epithelial cell involved in sensory perception. Restricted to special sense organs of the olfactory, gustatory, and vestibulocochlear receptor systems; contain sensory cells surrounded by supportive, non-receptive cells." [GOC:tfm, ISBN:0517223651, ISBN:0721662544]
-comment: The term "neuroepithelial cell" is used to describe both this cell type and neurecto-epithelial cell (CL:0000710).
-synonym: "neuroepithelial cell" BROAD []
-xref: BTO:0004301
-is_a: CL:0000066 ! epithelial cell
-is_a: CL:0000197 ! receptor cell
-is_a: CL:0002371 ! somatic cell
-intersection_of: CL:0000066 ! epithelial cell
-intersection_of: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-relationship: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-
-[Term]
-id: CL:0000101
-name: sensory neuron
-namespace: cell
-def: "Any neuron having a sensory function; an afferent neuron conveying sensory impulses." [ISBN:0721662544]
-xref: BTO:0001037
-xref: FBbt:00005124
-xref: FMA:84649
-xref: WBbt:0005759
-is_a: CL:0000526 ! afferent neuron
-intersection_of: CL:0000540 ! neuron
-intersection_of: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-relationship: RO:0002215 GO:0050906 ! capable of detection of stimulus involved in sensory perception
-
-[Term]
 id: CL:0000133
 name: neurectodermal cell
 namespace: cell
@@ -517,32 +335,6 @@ is_a: CL:0000151 ! secretory cell
 intersection_of: CL:0000151 ! secretory cell
 intersection_of: RO:0002215 GO:0009306 ! capable of protein secretion
 relationship: RO:0002215 GO:0009306 ! capable of protein secretion
-
-[Term]
-id: CL:0000197
-name: receptor cell
-namespace: cell
-is_a: CL:0000003 ! native cell
-
-[Term]
-id: CL:0000199
-name: mechanoreceptor cell
-namespace: cell
-def: "A cell specialized to transduce mechanical stimuli and relay that information centrally in the nervous system." [MESH:A08.800.550.700.500]
-synonym: "mechanoreceptor" RELATED [MP:0000972]
-is_a: CL:0000101 ! sensory neuron
-intersection_of: CL:0000540 ! neuron
-intersection_of: RO:0002215 GO:0050974 ! capable of detection of mechanical stimulus involved in sensory perception
-relationship: RO:0002215 GO:0050974 ! capable of detection of mechanical stimulus involved in sensory perception
-
-[Term]
-id: CL:0000200
-name: touch receptor cell
-namespace: cell
-is_a: CL:0000199 ! mechanoreceptor cell
-intersection_of: CL:0000540 ! neuron
-intersection_of: RO:0002215 GO:0050976 ! capable of detection of mechanical stimulus involved in sensory perception of touch
-relationship: RO:0002215 GO:0050976 ! capable of detection of mechanical stimulus involved in sensory perception of touch
 
 [Term]
 id: CL:0000211
@@ -610,20 +402,6 @@ intersection_of: RO:0000053 PATO:0001908 ! bearer of multinucleate
 relationship: RO:0000053 PATO:0001908 ! bearer of multinucleate
 
 [Term]
-id: CL:0000234
-name: phagocyte
-namespace: cell
-def: "Any cell capable of ingesting particulate matter via phagocytosis." [GOC:add, ISBN:0721601464]
-xref: BTO:0001044
-xref: FMA:83806
-is_a: CL:0000219 ! motile cell
-is_a: CL:0000325 ! stuff accumulating cell
-is_a: CL:0000473 ! defensive cell
-intersection_of: CL:0000003 ! native cell
-intersection_of: RO:0002215 GO:0006909 ! capable of phagocytosis
-relationship: RO:0002215 GO:0006909 ! capable of phagocytosis
-
-[Term]
 id: CL:0000255
 name: eukaryotic cell
 namespace: cell
@@ -646,14 +424,6 @@ intersection_of: RO:0000053 PATO:0001375 ! bearer of haploid
 intersection_of: RO:0002215 GO:0009566 ! capable of fertilization
 relationship: RO:0000053 PATO:0001375 ! bearer of haploid
 relationship: RO:0002215 GO:0009566 ! capable of fertilization
-
-[Term]
-id: CL:0000325
-name: stuff accumulating cell
-namespace: cell
-def: "A cell that is specialised to accumulate a particular substance(s)." [FB:ma]
-subset: ubprop:upper_level
-is_a: CL:0000003 ! native cell
 
 [Term]
 id: CL:0000362
@@ -731,29 +501,6 @@ intersection_of: RO:0000053 PATO:0001375 ! bearer of haploid
 relationship: RO:0000053 PATO:0001375 ! bearer of haploid
 
 [Term]
-id: CL:0000422
-name: mitogenic signaling cell
-namespace: cell
-def: "A cell whose primary function is to cause growth by stimulating cell division in its immediate cellular environment." [FB:ma]
-is_a: CL:0000003 ! native cell
-
-[Term]
-id: CL:0000473
-name: defensive cell
-namespace: cell
-def: "A cell whose primary function is to protect the organism." [JB:jb]
-is_a: CL:0000003 ! native cell
-
-[Term]
-id: CL:0000526
-name: afferent neuron
-namespace: cell
-def: "A neuron which conveys sensory information centrally from the periphery." [GOC:tfm, MESH:A08.663.650]
-synonym: "input neuron" EXACT []
-xref: FMA:87653
-is_a: CL:0000540 ! neuron
-
-[Term]
 id: CL:0000540
 name: neuron
 namespace: cell
@@ -796,27 +543,6 @@ id: CL:0000618
 name: sheath cell
 namespace: cell
 is_a: CL:0000075 ! columnar/cuboidal epithelial cell
-
-[Term]
-id: CL:0000656
-name: primary spermatocyte
-namespace: cell
-def: "A diploid cell that has derived from a spermatogonium and can subsequently begin meiosis and divide into two haploid secondary spermatocytes." [GOC:tfm, ISBN:0721662544]
-xref: BTO:0001115
-xref: CALOHA:TS-2194
-xref: FMA:72292
-is_a: CL:0000017 {is_inferred="true"} ! spermatocyte
-intersection_of: CL:0000017 ! spermatocyte
-intersection_of: RO:0000053 PATO:0001394 ! bearer of diploid
-intersection_of: RO:0002215 GO:0007140 ! capable of male meiotic nuclear division
-relationship: RO:0000053 PATO:0001394 ! bearer of diploid
-relationship: RO:0002215 GO:0007140 ! capable of male meiotic nuclear division
-
-[Term]
-id: CL:0000661
-name: distal tip cell (sensu Nematoda)
-namespace: cell
-is_a: CL:0000422 ! mitogenic signaling cell
 
 [Term]
 id: CL:0000670
@@ -1106,28 +832,6 @@ name: ameboidal-type cell migration
 is_a: GO:0016477 ! cell migration
 
 [Term]
-id: GO:0002376
-name: immune system process
-is_a: GO:0008150 ! biological_process
-
-[Term]
-id: GO:0002682
-name: regulation of immune system process
-is_a: GO:0050789 ! regulation of biological process
-
-[Term]
-id: GO:0002683
-name: negative regulation of immune system process
-is_a: GO:0002682 ! regulation of immune system process
-is_a: GO:0048519 ! negative regulation of biological process
-
-[Term]
-id: GO:0002684
-name: positive regulation of immune system process
-is_a: GO:0002682 ! regulation of immune system process
-is_a: GO:0048518 ! positive regulation of biological process
-
-[Term]
 id: GO:0002790
 name: peptide secretion
 is_a: GO:0015833 ! peptide transport
@@ -1159,11 +863,6 @@ is_a: GO:0032501 ! multicellular organismal process
 [Term]
 id: GO:0003674
 name: molecular_function
-
-[Term]
-id: GO:0004871
-name: signal transducer activity
-is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0004872
@@ -1288,11 +987,6 @@ is_a: GO:0016192 ! vesicle-mediated transport
 is_a: GO:0098657 ! import into cell
 
 [Term]
-id: GO:0006909
-name: phagocytosis
-is_a: GO:0006897 ! endocytosis
-
-[Term]
 id: GO:0006928
 name: movement of cell or subcellular component
 is_a: GO:0009987 ! cellular process
@@ -1343,12 +1037,6 @@ id: GO:0007143
 name: female meiotic nuclear division
 is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
 is_a: GO:0140013 ! meiotic nuclear division
-
-[Term]
-id: GO:0007162
-name: negative regulation of cell adhesion
-is_a: GO:0030155 ! regulation of cell adhesion
-is_a: GO:0048523 ! negative regulation of cellular process
 
 [Term]
 id: GO:0007269
@@ -1436,11 +1124,6 @@ is_a: GO:0043170 ! macromolecule metabolic process
 is_a: GO:1901576 ! organic substance biosynthetic process
 
 [Term]
-id: GO:0009266
-name: response to temperature stimulus
-is_a: GO:0009628 ! response to abiotic stimulus
-
-[Term]
 id: GO:0009306
 name: protein secretion
 is_a: GO:0002790 ! peptide secretion
@@ -1468,32 +1151,9 @@ name: fertilization
 is_a: GO:0022414 ! reproductive process
 
 [Term]
-id: GO:0009581
-name: detection of external stimulus
-is_a: GO:0009605 ! response to external stimulus
-is_a: GO:0051606 ! detection of stimulus
-
-[Term]
-id: GO:0009582
-name: detection of abiotic stimulus
-is_a: GO:0009628 ! response to abiotic stimulus
-is_a: GO:0051606 ! detection of stimulus
-
-[Term]
 id: GO:0009605
 name: response to external stimulus
 is_a: GO:0050896 ! response to stimulus
-
-[Term]
-id: GO:0009607
-name: response to biotic stimulus
-is_a: GO:0050896 ! response to stimulus
-
-[Term]
-id: GO:0009612
-name: response to mechanical stimulus
-is_a: GO:0009605 ! response to external stimulus
-is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
 id: GO:0009628
@@ -1617,31 +1277,9 @@ is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0044249 ! cellular biosynthetic process
 
 [Term]
-id: GO:0021700
-name: developmental maturation
-is_a: GO:0032502 ! developmental process
-
-[Term]
 id: GO:0022402
 name: cell cycle process
 is_a: GO:0009987 ! cellular process
-
-[Term]
-id: GO:0022407
-name: regulation of cell-cell adhesion
-is_a: GO:0030155 ! regulation of cell adhesion
-
-[Term]
-id: GO:0022408
-name: negative regulation of cell-cell adhesion
-is_a: GO:0007162 ! negative regulation of cell adhesion
-is_a: GO:0022407 ! regulation of cell-cell adhesion
-
-[Term]
-id: GO:0022409
-name: positive regulation of cell-cell adhesion
-is_a: GO:0022407 ! regulation of cell-cell adhesion
-is_a: GO:0045785 ! positive regulation of cell adhesion
 
 [Term]
 id: GO:0022412
@@ -1675,11 +1313,6 @@ name: signal release
 is_a: GO:0032940 ! secretion by cell
 
 [Term]
-id: GO:0030017
-name: sarcomere
-is_a: GO:0044449 ! contractile fiber part
-
-[Term]
 id: GO:0030030
 name: cell projection organization
 is_a: GO:0016043 ! cellular component organization
@@ -1693,11 +1326,6 @@ is_a: GO:0005575 ! cellular_component
 id: GO:0030154
 name: cell differentiation
 is_a: GO:0048869 ! cellular developmental process
-
-[Term]
-id: GO:0030155
-name: regulation of cell adhesion
-is_a: GO:0050789 ! regulation of biological process
 
 [Term]
 id: GO:0030182
@@ -1837,17 +1465,6 @@ is_a: GO:0023052 ! signaling
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
-id: GO:0038023
-name: signaling receptor activity
-is_a: GO:0004871 ! signal transducer activity
-is_a: GO:0004872 ! receptor activity
-
-[Term]
-id: GO:0038024
-name: cargo receptor activity
-is_a: GO:0004872 ! receptor activity
-
-[Term]
 id: GO:0040011
 name: locomotion
 is_a: GO:0008150 ! biological_process
@@ -1881,16 +1498,6 @@ is_a: GO:0034641 ! cellular nitrogen compound metabolic process
 is_a: GO:0046483 ! heterocycle metabolic process
 is_a: GO:1901360 ! organic cyclic compound metabolic process
 is_a: GO:1901564 ! organonitrogen compound metabolic process
-
-[Term]
-id: GO:0042435
-name: indole-containing compound biosynthetic process
-is_a: GO:0018130 ! heterocycle biosynthetic process
-is_a: GO:0019438 ! aromatic compound biosynthetic process
-is_a: GO:0042430 ! indole-containing compound metabolic process
-is_a: GO:0044271 ! cellular nitrogen compound biosynthetic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
-is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 
 [Term]
 id: GO:0042445
@@ -1970,11 +1577,6 @@ is_a: GO:0043229 ! intracellular organelle
 id: GO:0043234
 name: protein complex
 is_a: GO:0032991 ! macromolecular complex
-
-[Term]
-id: GO:0043277
-name: apoptotic cell clearance
-is_a: GO:0006909 ! phagocytosis
 
 [Term]
 id: GO:0043603
@@ -2074,12 +1676,6 @@ is_a: GO:0044422 ! organelle part
 is_a: GO:0044424 ! intracellular part
 
 [Term]
-id: GO:0044449
-name: contractile fiber part
-is_a: GO:0044422 ! organelle part
-is_a: GO:0044444 ! cytoplasmic part
-
-[Term]
 id: GO:0044459
 name: plasma membrane part
 is_a: GO:0044425 ! membrane part
@@ -2111,12 +1707,6 @@ is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051094 ! positive regulation of developmental process
 
 [Term]
-id: GO:0045785
-name: positive regulation of cell adhesion
-is_a: GO:0030155 ! regulation of cell adhesion
-is_a: GO:0048518 ! positive regulation of biological process
-
-[Term]
 id: GO:0045911
 name: positive regulation of DNA recombination
 is_a: GO:0000018 ! regulation of DNA recombination
@@ -2140,12 +1730,6 @@ name: secretion
 is_a: GO:0006810 ! transport
 
 [Term]
-id: GO:0048137
-name: spermatocyte division
-is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
-is_a: GO:0051301 ! cell division
-
-[Term]
 id: GO:0048232
 name: male gamete generation
 is_a: GO:0007276 ! gamete generation
@@ -2159,12 +1743,6 @@ is_a: GO:0006996 ! organelle organization
 id: GO:0048468
 name: cell development
 is_a: GO:0048856 ! anatomical structure development
-is_a: GO:0048869 ! cellular developmental process
-
-[Term]
-id: GO:0048469
-name: cell maturation
-is_a: GO:0021700 ! developmental maturation
 is_a: GO:0048869 ! cellular developmental process
 
 [Term]
@@ -2290,11 +1868,6 @@ name: response to stimulus
 is_a: GO:0008150 ! biological_process
 
 [Term]
-id: GO:0050906
-name: detection of stimulus involved in sensory perception
-is_a: GO:0051606 ! detection of stimulus
-
-[Term]
 id: GO:0050920
 name: regulation of chemotaxis
 is_a: GO:0032101 ! regulation of response to external stimulus
@@ -2306,24 +1879,6 @@ name: positive regulation of chemotaxis
 is_a: GO:0032103 ! positive regulation of response to external stimulus
 is_a: GO:0040017 ! positive regulation of locomotion
 is_a: GO:0050920 ! regulation of chemotaxis
-
-[Term]
-id: GO:0050974
-name: detection of mechanical stimulus involved in sensory perception
-is_a: GO:0050906 ! detection of stimulus involved in sensory perception
-is_a: GO:0050982 ! detection of mechanical stimulus
-
-[Term]
-id: GO:0050976
-name: detection of mechanical stimulus involved in sensory perception of touch
-is_a: GO:0050974 ! detection of mechanical stimulus involved in sensory perception
-
-[Term]
-id: GO:0050982
-name: detection of mechanical stimulus
-is_a: GO:0009581 ! detection of external stimulus
-is_a: GO:0009582 ! detection of abiotic stimulus
-is_a: GO:0009612 ! response to mechanical stimulus
 
 [Term]
 id: GO:0051046
@@ -2452,11 +2007,6 @@ is_a: GO:0007049 ! cell cycle
 is_a: GO:0022414 ! reproductive process
 
 [Term]
-id: GO:0051606
-name: detection of stimulus
-is_a: GO:0050896 ! response to stimulus
-
-[Term]
 id: GO:0051641
 name: cellular localization
 is_a: GO:0051179 ! localization
@@ -2475,11 +2025,6 @@ is_a: GO:0008150 ! biological_process
 id: GO:0060089
 name: molecular transducer activity
 is_a: GO:0003674 ! molecular_function
-
-[Term]
-id: GO:0060249
-name: anatomical structure homeostasis
-is_a: GO:0042592 ! homeostatic process
 
 [Term]
 id: GO:0060255
@@ -2583,11 +2128,6 @@ is_a: GO:0044459 ! plasma membrane part
 is_a: GO:0098796 ! membrane protein complex
 
 [Term]
-id: GO:0099503
-name: secretory vesicle
-is_a: GO:0031410 ! cytoplasmic vesicle
-
-[Term]
 id: GO:0099531
 name: presynaptic process involved in chemical synaptic transmission
 is_a: GO:0008150 ! biological_process
@@ -2648,12 +2188,6 @@ name: organic hydroxy compound metabolic process
 is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
-id: GO:1901617
-name: organic hydroxy compound biosynthetic process
-is_a: GO:1901576 ! organic substance biosynthetic process
-is_a: GO:1901615 ! organic hydroxy compound metabolic process
-
-[Term]
 id: GO:1903046
 name: meiotic cell cycle process
 is_a: GO:0022402 ! cell cycle process
@@ -2677,11 +2211,6 @@ id: GO:1904951
 name: positive regulation of establishment of protein localization
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0070201 ! regulation of establishment of protein localization
-
-[Term]
-id: GO:1990904
-name: ribonucleoprotein complex
-is_a: GO:0032991 ! macromolecular complex
 
 [Term]
 id: GO:2000026
@@ -2747,11 +2276,6 @@ name: time
 is_a: PATO:0001018 ! physical quality
 
 [Term]
-id: PATO:0000261
-name: maturity
-is_a: PATO:0001995 ! organismal quality
-
-[Term]
 id: PATO:0000460
 name: abnormal
 is_a: PATO:0000069 ! deviation(from_normal)
@@ -2794,11 +2318,6 @@ name: euploid
 is_a: PATO:0001374 ! ploidy
 
 [Term]
-id: PATO:0001394
-name: diploid
-is_a: PATO:0001393 ! euploid
-
-[Term]
 id: PATO:0001396
 name: cellular quality
 is_a: PATO:0001241 ! physical object quality
@@ -2824,20 +2343,10 @@ name: anucleate
 is_a: PATO:0001404 ! nucleate quality
 
 [Term]
-id: PATO:0001501
-name: immature
-is_a: PATO:0000261 ! maturity
-
-[Term]
 id: PATO:0001604
 name: decreased life span
 is_a: PATO:0000050 ! life span
 is_a: PATO:0002303 ! decreased object quality
-
-[Term]
-id: PATO:0001857
-name: concave
-is_a: PATO:0002005 ! concavity
 
 [Term]
 id: PATO:0001873
@@ -2850,29 +2359,9 @@ name: multinucleate
 is_a: PATO:0002505 ! nucleated
 
 [Term]
-id: PATO:0001995
-name: organismal quality
-is_a: PATO:0001241 ! physical object quality
-
-[Term]
-id: PATO:0002005
-name: concavity
-is_a: PATO:0000052 ! shape
-
-[Term]
 id: PATO:0002007
 name: convex 3-D shape
 is_a: PATO:0002266 ! 3-D shape
-
-[Term]
-id: PATO:0002008
-name: concave 3-D shape
-is_a: PATO:0002266 ! 3-D shape
-
-[Term]
-id: PATO:0002182
-name: molecular quality
-is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0002266
