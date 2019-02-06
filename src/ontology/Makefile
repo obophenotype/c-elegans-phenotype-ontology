@@ -22,14 +22,14 @@ DOSDP_SCHEMA=http:// # change to PURL when ready.
 PATTERN_TESTER=simple_pattern_tester.py
 DOSDPT=dosdp-tools
 TARGET=target
-IMPORTS = iao go ro pato bfo chebi cl wbbt wbls
-
+IMPORTS = iao ro pato bfo wbbt wbls chebi go cl
+# chebi go cl
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-all: patterns all_imports sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
+all: all_imports patterns sparql_test $(ONT).owl $(ONT).obo $(ONT)-base.owl $(ONT)-merged.owl $(ONT)-merged.obo
 	echo 'Release files created successfully.'
 test: sparql_test all
 prepare_release: all
@@ -80,11 +80,9 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 
 # generate seed with all referenced entities
 
-ed_definitions_merged.owl: $(SRC) ../patterns/definitions.owl
-	$(ROBOT) merge -i $(SRC) -i ../patterns/definitions.owl -o $@
-
-seed.txt: ed_definitions_merged.owl
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
+seed.txt: $(SRC) all_pattern_terms.txt
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@ &&\
+	cat $@ all_pattern_terms.txt | sort | uniq >  $@
 
 # Generate terms.txt for each import.  # Assume OBO-style Possibly hacky step?
 # Should be able to drop this if robot can just take a big messy list of terms as input.
@@ -158,53 +156,17 @@ build-docker:
 	# Patterns (experimental)
 	# ----------------------------------------
 
-	# Test patterns for schema compliance:
-
-
-	# TODO - move declarations like this to top
-	IMS=$(TARGET)/intermediates
-
-	#PATTERN_IMPORTS = ../patterns/pattern.owl $(patsubst %, ../patterns/imports/%_import.owl,$(IMPORTS))
-
-
-	# Better to make this an intermediate & merge with pattern.owl file having correct iri and import statements - configured by make
-
-
 	# ----------------------------------------
 	# Main command to generate the pattern ontology and the definitions
 	# ----------------------------------------
 	# The pattern.owl ontology contains the OWL versions of all the patterns currently in the patterns directory
-DOSDP_TEMP=$(IMS)/dosdp
-DOSDP_TEMP_PATTERN=$(DOSDP_TEMP)/patterns
-DOSDP_TEMP_PATTERN_MANUAL=$(DOSDP_TEMP_PATTERN)/manual
-DOSDP_TEMP_PATTERN_AUTO=$(DOSDP_TEMP_PATTERN)/auto
-DOSDP_TEMP_TERMS=$(DOSDP_TEMP)/terms
-DOSDP_TEMP_ONTOLOGIES=$(DOSDP_TEMP)/ontologies
 
 .PHONY: .FORCE
 
 .PHONY patterns: ../patterns/pattern.owl ../patterns/definitions.owl
 
 pattern_clean:
-	rm -r $(DOSDP_TEMP)
-
-$(DOSDP_TEMP):
-	mkdir -p $@
-
-$(DOSDP_TEMP_PATTERN):
-	mkdir -p $@
-
-$(DOSDP_TEMP_TERMS):
-	mkdir -p $@
-
-$(DOSDP_TEMP_ONTOLOGIES):
-	mkdir -p $@
-
-$(DOSDP_TEMP_PATTERN_MANUAL): $(DOSDP_TEMP_PATTERN)
-	mkdir -p $@
-
-$(DOSDP_TEMP_PATTERN_AUTO): $(DOSDP_TEMP_PATTERN)
-	mkdir -p $@
+	echo "Not implemented"
 
 	# ----------------------------------------
 	# Build pattern.owl
@@ -214,9 +176,10 @@ $(DOSDP_TEMP_PATTERN_AUTO): $(DOSDP_TEMP_PATTERN)
 pattern_schema_checks: ../patterns/dosdp-patterns
 	simple_pattern_tester.py ../patterns/dosdp-patterns/ # 2>&1 | tee $@
 
+#This command is a workaround for the absence of -N and -i in wget of alpine (the one ODK depend on now). It downloads all patterns specified in external.txt
 ../patterns/dosdp-patterns: .FORCE
-	wget -N -P ../patterns/dosdp-patterns -i ../patterns/dosdp-patterns/external.txt
-	#echo 'external.txt'
+	< ../patterns/dosdp-patterns/external.txt tr '\n' '\0' | sed 's!.*/!!' | xargs -0 -I{} rm ../patterns/dosdp-patterns/{} &&\
+	< ../patterns/dosdp-patterns/external.txt tr '\n' '\0' | xargs -0 -I{} wget -q {} -P ../patterns/dosdp-patterns
 
 ../patterns/pattern.owl: pattern_schema_checks ../patterns/dosdp-patterns
 	$(DOSDPT) prototype --obo-prefixes --template=../patterns/dosdp-patterns --outfile=$@
@@ -227,40 +190,30 @@ pattern_schema_checks: ../patterns/dosdp-patterns
 	# ----------------------------------------
 	# The following target will create a merged version of all imports indicated as project import dependencies (including the edit file itself), and then extract a module based
 	# on the entities used in the TSV files
-individual_patterns_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
-individual_patterns_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.ofn, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
-pattern_term_lists_auto := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_AUTO)/%.txt, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
-pattern_term_lists_manual := $(patsubst %.tsv, $(DOSDP_TEMP_PATTERN_MANUAL)/%.txt, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
+individual_patterns_manual := $(patsubst %.tsv, ../patterns/data/manual/%.ofn, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
+individual_patterns_auto := $(patsubst %.tsv, ../patterns/data/auto/%.ofn, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
+pattern_term_lists_auto := $(patsubst %.tsv, ../patterns/data/auto/%.txt, $(notdir $(wildcard ../patterns/data/auto/*.tsv)))
+pattern_term_lists_manual := $(patsubst %.tsv, ../patterns/data/manual/%.txt, $(notdir $(wildcard ../patterns/data/manual/*.tsv)))
 
-../patterns/definitions.owl: $(DOSDP_TEMP_PATTERN_MANUAL) $(individual_patterns_manual) $(individual_patterns_auto)
+../patterns/definitions.owl: $(individual_patterns_manual) $(individual_patterns_auto)
 	$(ROBOT) merge $(addprefix -i , $(individual_patterns_manual)) $(addprefix -i , $(individual_patterns_auto)) annotate --ontology-iri $(OBO)/$(ONT)/patterns/definitions.owl -o definitions.ofn &&\
 	mv definitions.ofn $@
 
-$(DOSDP_TEMP_PATTERN_MANUAL)/%.ofn: ../patterns/data/manual/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_MANUAL)
-	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
+../patterns/data/manual/%.ofn: ../patterns/data/manual/%.tsv ../patterns/dosdp-patterns/%.yaml $(SRC) all_imports
+	dosdp-tools generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
 
-$(DOSDP_TEMP_PATTERN_AUTO)/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-patterns/%.yaml $(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl $(DOSDP_TEMP_PATTERN_AUTO)
-	dosdp-tools generate --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
+../patterns/data/auto/%.ofn: ../patterns/data/auto/%.tsv ../patterns/dosdp-patterns/%.yaml $(SRC) all_imports
+	dosdp-tools generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
 
-$(DOSDP_TEMP_ONTOLOGIES)/all_imports_module.owl: $(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl $(DOSDP_TEMP_ONTOLOGIES)
-	$(ROBOT) extract -i $(word 2, $^) -T $< --method BOT -o $@
-
-$(DOSDP_TEMP_ONTOLOGIES)/pattern_owl_seed.txt: ../patterns/pattern.owl $(DOSDP_TEMP_ONTOLOGIES)
-	touch $@
+# Generating the seed file from all the TSVs
+all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) pattern_owl_seed.txt
+	cat $^ | sort | uniq > $@
+	
+pattern_owl_seed.txt: ../patterns/pattern.owl
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
 
-$(DOSDP_TEMP_ONTOLOGIES)/all_pattern_terms.txt: $(pattern_term_lists_auto) $(pattern_term_lists_manual) $(DOSDP_TEMP_ONTOLOGIES)/pattern_owl_seed.txt $(DOSDP_TEMP_ONTOLOGIES)
-	cat $^ $(word 2, $^) | sort | uniq >$@
-	
-
-$(DOSDP_TEMP_PATTERN_MANUAL)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv $(DOSDP_TEMP_PATTERN_MANUAL)
+../patterns/data/manual/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/manual/%.tsv
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
 
-$(DOSDP_TEMP_PATTERN_AUTO)/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/auto/%.tsv $(DOSDP_TEMP_PATTERN_AUTO)
+../patterns/data/auto/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/auto/%.tsv
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
-
-imports_all_pattern := $(patsubst %, mirror/%.owl,$(IMPORTS))
-
-$(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl: $(imports_all_pattern)
-	echo 'imports: '$(imports_all_pattern) &&\
-	$(ROBOT) merge $(addprefix -i , $^) annotate --ontology-iri $(DOSDP_TEMP_ONTOLOGIES)/all_imports.owl -o $@
