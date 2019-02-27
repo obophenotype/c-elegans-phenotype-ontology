@@ -81,8 +81,8 @@ IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, impor
 # generate seed with all referenced entities
 
 seed.txt: $(SRC) all_pattern_terms.txt
-	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@ &&\
-	cat $@ all_pattern_terms.txt | sort | uniq >  $@
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql seed.txt.tmp &&\
+	cat seed.txt.tmp all_pattern_terms.txt | sort | uniq >  $@
 
 # Generate terms.txt for each import.  # Assume OBO-style Possibly hacky step?
 # Should be able to drop this if robot can just take a big messy list of terms as input.
