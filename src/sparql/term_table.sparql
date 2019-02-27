@@ -1,9 +1,12 @@
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix obo: <http://purl.obolibrary.org/obo/>
 
-SELECT DISTINCT ?term ?label
+SELECT DISTINCT ?term ?label ?definition
 WHERE {
   { 
-    ?term rdfs:label ?label .
+    ?term rdfs:label ?label ;
+    obo:IAO_0000115 ?definition .
   }
   FILTER(isIRI(?term) && regex(str(?term), "WBPhenotype_"))
 }
