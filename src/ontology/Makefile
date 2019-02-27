@@ -217,3 +217,6 @@ pattern_owl_seed.txt: ../patterns/pattern.owl
 
 ../patterns/data/auto/%.txt: ../patterns/dosdp-patterns/%.yaml ../patterns/data/auto/%.tsv
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
+
+labels.csv:
+	robot query --use-graphs true -f csv -i $(SRC) --query ../sparql/term_table.sparql $@
