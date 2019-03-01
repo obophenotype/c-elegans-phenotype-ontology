@@ -52,8 +52,115 @@ name: cell part
 is_a: CARO:0000003 ! anatomical structure
 
 [Term]
+id: CHEBI:23367
+name: molecular entity
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:24431
 name: chemical entity
+
+[Term]
+id: CHEBI:24651
+name: hydroxides
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:33608 ! hydrogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:25367
+name: molecule
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:25806
+name: oxygen molecular entity
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:33304
+name: chalcogen molecular entity
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33595
+name: cyclic compound
+is_a: CHEBI:25367 ! molecule
+
+[Term]
+id: CHEBI:33608
+name: hydrogen molecular entity
+is_a: CHEBI:33674 ! s-block molecular entity
+
+[Term]
+id: CHEBI:33655
+name: aromatic compound
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33659
+name: organic aromatic compound
+is_a: CHEBI:33655 ! aromatic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:33674
+name: s-block molecular entity
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:33822
+name: organic hydroxy compound
+is_a: CHEBI:24651 ! hydroxides
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33832
+name: organic cyclic compound
+is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:33853
+name: phenols
+is_a: CHEBI:33659 ! organic aromatic compound
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:37577
+name: heteroatomic molecular entity
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+is_a: CHEBI:33582 ! carbon group molecular entity
+
+[Term]
+id: CHEBI:72695
+name: organic molecule
+is_a: CHEBI:25367 ! molecule
+is_a: CHEBI:50860 ! organic molecular entity
 
 [Term]
 id: CL:0000000
@@ -832,6 +939,28 @@ name: ameboidal-type cell migration
 is_a: GO:0016477 ! cell migration
 
 [Term]
+id: GO:0002376
+name: immune system process
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0002682
+name: regulation of immune system process
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0002683
+name: negative regulation of immune system process
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048519 ! negative regulation of biological process
+
+[Term]
+id: GO:0002684
+name: positive regulation of immune system process
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048518 ! positive regulation of biological process
+
+[Term]
 id: GO:0002790
 name: peptide secretion
 is_a: GO:0015833 ! peptide transport
@@ -863,6 +992,11 @@ is_a: GO:0032501 ! multicellular organismal process
 [Term]
 id: GO:0003674
 name: molecular_function
+
+[Term]
+id: GO:0004871
+name: signal transducer activity
+is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0004872
@@ -1039,6 +1173,12 @@ is_a: GO:0022412 ! cellular process involved in reproduction in multicellular or
 is_a: GO:0140013 ! meiotic nuclear division
 
 [Term]
+id: GO:0007162
+name: negative regulation of cell adhesion
+is_a: GO:0030155 ! regulation of cell adhesion
+is_a: GO:0048523 ! negative regulation of cellular process
+
+[Term]
 id: GO:0007269
 name: neurotransmitter secretion
 is_a: GO:0001505 ! regulation of neurotransmitter levels
@@ -1153,6 +1293,11 @@ is_a: GO:0022414 ! reproductive process
 [Term]
 id: GO:0009605
 name: response to external stimulus
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0009607
+name: response to biotic stimulus
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
@@ -1277,9 +1422,31 @@ is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0044249 ! cellular biosynthetic process
 
 [Term]
+id: GO:0021700
+name: developmental maturation
+is_a: GO:0032502 ! developmental process
+
+[Term]
 id: GO:0022402
 name: cell cycle process
 is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0022407
+name: regulation of cell-cell adhesion
+is_a: GO:0030155 ! regulation of cell adhesion
+
+[Term]
+id: GO:0022408
+name: negative regulation of cell-cell adhesion
+is_a: GO:0007162 ! negative regulation of cell adhesion
+is_a: GO:0022407 ! regulation of cell-cell adhesion
+
+[Term]
+id: GO:0022409
+name: positive regulation of cell-cell adhesion
+is_a: GO:0022407 ! regulation of cell-cell adhesion
+is_a: GO:0045785 ! positive regulation of cell adhesion
 
 [Term]
 id: GO:0022412
@@ -1313,6 +1480,11 @@ name: signal release
 is_a: GO:0032940 ! secretion by cell
 
 [Term]
+id: GO:0030017
+name: sarcomere
+is_a: GO:0044449 ! contractile fiber part
+
+[Term]
 id: GO:0030030
 name: cell projection organization
 is_a: GO:0016043 ! cellular component organization
@@ -1326,6 +1498,11 @@ is_a: GO:0005575 ! cellular_component
 id: GO:0030154
 name: cell differentiation
 is_a: GO:0048869 ! cellular developmental process
+
+[Term]
+id: GO:0030155
+name: regulation of cell adhesion
+is_a: GO:0050789 ! regulation of biological process
 
 [Term]
 id: GO:0030182
@@ -1465,6 +1642,17 @@ is_a: GO:0023052 ! signaling
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0038023
+name: signaling receptor activity
+is_a: GO:0004871 ! signal transducer activity
+is_a: GO:0004872 ! receptor activity
+
+[Term]
+id: GO:0038024
+name: cargo receptor activity
+is_a: GO:0004872 ! receptor activity
+
+[Term]
 id: GO:0040011
 name: locomotion
 is_a: GO:0008150 ! biological_process
@@ -1498,6 +1686,16 @@ is_a: GO:0034641 ! cellular nitrogen compound metabolic process
 is_a: GO:0046483 ! heterocycle metabolic process
 is_a: GO:1901360 ! organic cyclic compound metabolic process
 is_a: GO:1901564 ! organonitrogen compound metabolic process
+
+[Term]
+id: GO:0042435
+name: indole-containing compound biosynthetic process
+is_a: GO:0018130 ! heterocycle biosynthetic process
+is_a: GO:0019438 ! aromatic compound biosynthetic process
+is_a: GO:0042430 ! indole-containing compound metabolic process
+is_a: GO:0044271 ! cellular nitrogen compound biosynthetic process
+is_a: GO:1901362 ! organic cyclic compound biosynthetic process
+is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 
 [Term]
 id: GO:0042445
@@ -1676,6 +1874,12 @@ is_a: GO:0044422 ! organelle part
 is_a: GO:0044424 ! intracellular part
 
 [Term]
+id: GO:0044449
+name: contractile fiber part
+is_a: GO:0044422 ! organelle part
+is_a: GO:0044444 ! cytoplasmic part
+
+[Term]
 id: GO:0044459
 name: plasma membrane part
 is_a: GO:0044425 ! membrane part
@@ -1705,6 +1909,12 @@ name: positive regulation of cell differentiation
 is_a: GO:0045595 ! regulation of cell differentiation
 is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051094 ! positive regulation of developmental process
+
+[Term]
+id: GO:0045785
+name: positive regulation of cell adhesion
+is_a: GO:0030155 ! regulation of cell adhesion
+is_a: GO:0048518 ! positive regulation of biological process
 
 [Term]
 id: GO:0045911
@@ -1743,6 +1953,12 @@ is_a: GO:0006996 ! organelle organization
 id: GO:0048468
 name: cell development
 is_a: GO:0048856 ! anatomical structure development
+is_a: GO:0048869 ! cellular developmental process
+
+[Term]
+id: GO:0048469
+name: cell maturation
+is_a: GO:0021700 ! developmental maturation
 is_a: GO:0048869 ! cellular developmental process
 
 [Term]
@@ -2027,6 +2243,11 @@ name: molecular transducer activity
 is_a: GO:0003674 ! molecular_function
 
 [Term]
+id: GO:0060249
+name: anatomical structure homeostasis
+is_a: GO:0042592 ! homeostatic process
+
+[Term]
 id: GO:0060255
 name: regulation of macromolecule metabolic process
 is_a: GO:0019222 ! regulation of metabolic process
@@ -2128,6 +2349,11 @@ is_a: GO:0044459 ! plasma membrane part
 is_a: GO:0098796 ! membrane protein complex
 
 [Term]
+id: GO:0099503
+name: secretory vesicle
+is_a: GO:0031410 ! cytoplasmic vesicle
+
+[Term]
 id: GO:0099531
 name: presynaptic process involved in chemical synaptic transmission
 is_a: GO:0008150 ! biological_process
@@ -2188,6 +2414,12 @@ name: organic hydroxy compound metabolic process
 is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
+id: GO:1901617
+name: organic hydroxy compound biosynthetic process
+is_a: GO:1901576 ! organic substance biosynthetic process
+is_a: GO:1901615 ! organic hydroxy compound metabolic process
+
+[Term]
 id: GO:1903046
 name: meiotic cell cycle process
 is_a: GO:0022402 ! cell cycle process
@@ -2211,6 +2443,11 @@ id: GO:1904951
 name: positive regulation of establishment of protein localization
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0070201 ! regulation of establishment of protein localization
+
+[Term]
+id: GO:1990904
+name: ribonucleoprotein complex
+is_a: GO:0032991 ! macromolecular complex
 
 [Term]
 id: GO:2000026
@@ -2349,6 +2586,11 @@ is_a: PATO:0000050 ! life span
 is_a: PATO:0002303 ! decreased object quality
 
 [Term]
+id: PATO:0001857
+name: concave
+is_a: PATO:0002005 ! concavity
+
+[Term]
 id: PATO:0001873
 name: cylindrical
 is_a: PATO:0002007 ! convex 3-D shape
@@ -2359,9 +2601,29 @@ name: multinucleate
 is_a: PATO:0002505 ! nucleated
 
 [Term]
+id: PATO:0001995
+name: organismal quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0002005
+name: concavity
+is_a: PATO:0000052 ! shape
+
+[Term]
 id: PATO:0002007
 name: convex 3-D shape
 is_a: PATO:0002266 ! 3-D shape
+
+[Term]
+id: PATO:0002008
+name: concave 3-D shape
+is_a: PATO:0002266 ! 3-D shape
+
+[Term]
+id: PATO:0002182
+name: molecular quality
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0002266
