@@ -19,11 +19,8 @@ Import(<http://purl.obolibrary.org/obo/wbphenotype/imports/wbbt_import.owl>)
 Import(<http://purl.obolibrary.org/obo/wbphenotype/imports/wbls_import.owl>)
 Import(<http://purl.obolibrary.org/obo/wbphenotype/patterns/definitions.owl>)
 Annotation(<http://purl.obolibrary.org/obo/wbphenotype#property-value> "http://purl.org/dc/elements/1.1/license http://creativecommons.org/licenses/by/4.0/"^^xsd:string)
-Annotation(<http://www.geneontology.org/formats/oboInOwl#auto-generated-by> "OBO-Edit 1.002"^^xsd:string)
-Annotation(<http://www.geneontology.org/formats/oboInOwl#date> "20:08:2018 14:57"^^xsd:string)
 Annotation(<http://www.geneontology.org/formats/oboInOwl#default-namespace> "C_elegans_phenotype_ontology"^^xsd:string)
-Annotation(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> "1.2"^^xsd:string)
-Annotation(<http://www.geneontology.org/formats/oboInOwl#saved-by> "garys"^^xsd:string)
+Annotation(<http://www.geneontology.org/formats/oboInOwl#saved-by> "chris-grove"^^xsd:string)
 Annotation(rdfs:comment "C elegans Phenotype Ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000000>))
@@ -2508,6 +2505,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002480>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002481>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002482>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002483>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002484>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002485>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002486>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002487>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002488>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002489>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -23880,7 +23883,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002361> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002361> "WBPhenotype:0002361"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002361> "membrane fluidity increased"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002361> <http://purl.obolibrary.org/obo/WBPhenotype_0001965>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002361> <http://purl.obolibrary.org/obo/WBPhenotype_0002484>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002362> (protein sumoylation variant)
 
@@ -24895,6 +24898,56 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002483> "WBPhenotype:0002483"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002483> "fungal resistance increased"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002483> <http://purl.obolibrary.org/obo/WBPhenotype_0001014>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002484> (membrane fluidity variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00055850"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002484> "Animals exhibit variations in fluidity of cell membranes, compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002484> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002484> "WBPhenotype:0002484"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002484> "membrane fluidity variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002484> <http://purl.obolibrary.org/obo/WBPhenotype_0001965>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002485> (germline precursor cell morphology variant)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "Any variation in the morphological appearance of germline precursor cells compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "primordial germ cell morphology variant"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "WBPhenotype:0002485"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "germline precursor cell morphology variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002485> <http://purl.obolibrary.org/obo/WBPhenotype_0002108>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002486> (persistent primordial germ cell lobes)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002486> "Animals exhibit persistent cellular lobes of the primordial germ cells Z2 and/or Z3 at the L1 larval stage or later, in contrast to wild type animals"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002486> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002486> "persistent germline precursor cell lobes"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002486> "WBPhenotype:0002486"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002486> "persistent primordial germ cell lobes"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002486> <http://purl.obolibrary.org/obo/WBPhenotype_0002485>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002487> (intestinal integrity variant)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002487> "Animals exhibit variations in the integrity of the intestine, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002487> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002487> "WBPhenotype:0002487"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002487> "intestinal integrity variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002487> <http://purl.obolibrary.org/obo/WBPhenotype_0001093>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002488> (intestinal integrity increased)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002488> "Animals exhibit an increase in the integrity of the intestine, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002488> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002488> "WBPhenotype:0002488"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002488> "intestinal integrity increased"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002488> <http://purl.obolibrary.org/obo/WBPhenotype_0002487>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002489> (intestinal integrity reduced)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002489> "Animals exhibit a reduction in the integrity of the intestine, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002489> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002489> "WBPhenotype:0002489"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002489> "intestinal integrity reduced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002489> <http://purl.obolibrary.org/obo/WBPhenotype_0002487>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
