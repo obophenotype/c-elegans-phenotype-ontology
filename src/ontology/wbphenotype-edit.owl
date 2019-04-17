@@ -2525,6 +2525,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002500>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002501>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002502>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002503>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002504>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002505>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002506>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002507>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -12040,6 +12044,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001013> <http://purl.obo
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2021"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001014> "Animals are less prone to infection compared to control."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001014> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001014> "pathogen susceptibility decreased"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001014> "WBPhenotype:0001014"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001014> "pathogen resistance increased"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001014> <http://purl.obolibrary.org/obo/WBPhenotype_0001012>)
@@ -22341,7 +22346,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002171> <http://purl.obo
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002172> (pathogen release variant)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00040246"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "Infected animals exhibit variations in the rate or extent to which they release pathogens back into the environment, compared to control."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00040246"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "Infected animals exhibit variations in the process of releasing pathogens back into the environment, compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "spore shedding variant"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "WBPhenotype:0002172"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002172> "pathogen release variant"^^xsd:string)
@@ -25081,6 +25087,39 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002503> "WBPhenotype:0002503"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002503> "meiotic DNA double strand break formation increased"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002503> <http://purl.obolibrary.org/obo/WBPhenotype_0001921>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002504> (pathogen release reduced)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00040246"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00045292"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson3965"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002504> "Infected animals exhibit a reduction in the release of pathogens back into the environment, compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002504> "spore shedding reduced"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002504> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002504> "WBPhenotype:0002504"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002504> "pathogen release reduced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002504> <http://purl.obolibrary.org/obo/WBPhenotype_0002172>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002505> (pathogen infection clearance variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00044624"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2706"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002505> "Infected animals exhibit variations in the clearance of pathogen infection compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002505> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002505> "WBPhenotype:0002505"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002505> "pathogen infection clearance variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002505> <http://purl.obolibrary.org/obo/WBPhenotype_0002164>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002506> (pathogen infection clearance rate increased)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00044624"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2706"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002506> "Infected animals exhibit an increased rate of clearance of pathogen infection compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002506> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002506> "WBPhenotype:0002506"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002506> "pathogen infection clearance rate increased"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002506> <http://purl.obolibrary.org/obo/WBPhenotype_0002505>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002507> (pathogen infection clearance rate decreased)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00044624"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2706"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002507> "Infected animals exhibit a decreased rate of clearance of pathogen infection compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002507> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002507> "WBPhenotype:0002507"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002507> "pathogen infection clearance rate decreased"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002507> <http://purl.obolibrary.org/obo/WBPhenotype_0002505>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
