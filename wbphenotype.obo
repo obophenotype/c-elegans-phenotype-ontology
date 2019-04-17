@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-04-12
+data-version: releases/2019-04-17
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -27270,6 +27270,7 @@ is_a: WBPhenotype:0001012 ! organism pathogen response variant
 id: WBPhenotype:0001014
 name: pathogen resistance increased
 def: "Animals are less prone to infection compared to control." [WB:WBPerson2021, WB:WBPerson557]
+synonym: "pathogen susceptibility decreased" RELATED []
 is_a: WBPhenotype:0001012 ! organism pathogen response variant
 
 [Term]
@@ -35396,7 +35397,8 @@ is_a: WBPhenotype:0001047 ! aqueous positive chemotaxis variant
 [Term]
 id: WBPhenotype:0002172
 name: pathogen release variant
-def: "Infected animals exhibit variations in the rate or extent to which they release pathogens back into the environment, compared to control." [WB:WBPaper00040246, WB:WBPerson2987]
+def: "Infected animals exhibit variations in the process of releasing pathogens back into the environment, compared to control." [WB:WBPaper00040246, WB:WBPerson2987]
+synonym: "spore shedding variant" NARROW []
 is_a: WBPhenotype:0001012 ! organism pathogen response variant
 
 [Term]
@@ -37474,6 +37476,31 @@ id: WBPhenotype:0002503
 name: meiotic DNA double strand break formation increased
 def: "Animals exhibit an increase the creation of double-strand breaks that occur during meiosis that may result in the initiation of meiotic recombination." [WB:WBPaper00046534, WB:WBPerson113, WB:WBPerson2987]
 is_a: WBPhenotype:0001921 ! meiotic DNA double strand break formation variant
+
+[Term]
+id: WBPhenotype:0002504
+name: pathogen release reduced
+def: "Infected animals exhibit a reduction in the release of pathogens back into the environment, compared to control." [WB:WBPaper00040246, WB:WBPaper00045292, WB:WBPerson2987, WB:WBPerson3965]
+synonym: "spore shedding reduced" NARROW []
+is_a: WBPhenotype:0002172 ! pathogen release variant
+
+[Term]
+id: WBPhenotype:0002505
+name: pathogen infection clearance variant
+def: "Infected animals exhibit variations in the clearance of pathogen infection compared to controls." [WB:WBPaper00044624, WB:WBPerson2706, WB:WBPerson2987]
+is_a: WBPhenotype:0002164 ! innate immune response variant
+
+[Term]
+id: WBPhenotype:0002506
+name: pathogen infection clearance rate increased
+def: "Infected animals exhibit an increased rate of clearance of pathogen infection compared to controls." [WB:WBPaper00044624, WB:WBPerson2706, WB:WBPerson2987]
+is_a: WBPhenotype:0002505 ! pathogen infection clearance variant
+
+[Term]
+id: WBPhenotype:0002507
+name: pathogen infection clearance rate decreased
+def: "Infected animals exhibit a decreased rate of clearance of pathogen infection compared to controls." [WB:WBPaper00044624, WB:WBPerson2706, WB:WBPerson2987]
+is_a: WBPhenotype:0002505 ! pathogen infection clearance variant
 
 [Term]
 id: WBPhenotype:0004001
