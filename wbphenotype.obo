@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-04-17
+data-version: releases/2019-04-22
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -37501,6 +37501,30 @@ id: WBPhenotype:0002507
 name: pathogen infection clearance rate decreased
 def: "Infected animals exhibit a decreased rate of clearance of pathogen infection compared to controls." [WB:WBPaper00044624, WB:WBPerson2706, WB:WBPerson2987]
 is_a: WBPhenotype:0002505 ! pathogen infection clearance variant
+
+[Term]
+id: WBPhenotype:0002508
+name: extra neuron
+def: "Animals produce an excess number of neurons compared to controls." [WB:WBPaper00053165, WB:WBPerson2987, WB:WBPerson3252]
+is_a: WBPhenotype:0002175 ! cell number increased
+
+[Term]
+id: WBPhenotype:0002509
+name: extra dopaminergic neuron
+def: "Animals produce an excess number of dopaminergic neurons compared to controls." [WB:WBPaper00053165, WB:WBPerson2987, WB:WBPerson3252]
+is_a: WBPhenotype:0002508 ! extra neuron
+
+[Term]
+id: WBPhenotype:0002510
+name: fewer neurons
+namespace: Animals exhibit fewer neurons compared to control animals. {xref="WB:WBPerson3252", xref="WB:WBPerson2987", xref="WB:WBPaper00053165"}
+is_a: WBPhenotype:0002174 ! cell number decreased
+
+[Term]
+id: WBPhenotype:0002511
+name: fewer glutamatergic neurons
+def: "Animals exhibit fewer glutamatergic neurons compared to control animals." [WB:WBPaper00053165, WB:WBPerson2987, WB:WBPerson3252]
+is_a: WBPhenotype:0002510 ! fewer neurons
 
 [Term]
 id: WBPhenotype:0004001
