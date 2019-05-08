@@ -1,0 +1,30 @@
+id: wbphenotype
+title: "C. elegans Phenotype Ontology"
+github_org: obophenotype
+repo: c-elegans-phenotype-ontology
+report_fail_on: none
+use_dosdps: TRUE
+dosdp_tools_options: "--obo-prefixes=true"
+namespaces: 
+  - http://purl.obolibrary.org/obo/WBPhenotype_
+release_artefacts: 
+  - base
+  - simple-non-classified
+  - full
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+import_group:
+  products: 
+    - id: go
+    - id: wbbt
+    - id: wbls 
+    - id: ro
+    - id: chebi
+    - id: pato
+    - id: cl
+    - id: iao
+    - id: bfo
+
