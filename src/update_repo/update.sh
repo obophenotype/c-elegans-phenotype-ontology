@@ -5,8 +5,4 @@ docker pull obolibrary/odkfull
 # -c means clean directory, delete temporary directory
 # -C means config file location
 
-cp target/wbphenotype/src/sparql/* ../sparql
-
-cp target/wbphenotype/src/ontology/Makefile ../ontology/
-
 
