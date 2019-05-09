@@ -1,0 +1,989 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000781>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005575>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005604>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005634>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005694>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005730>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005739>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005764>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005768>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005769>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005770>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005777>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005783>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005794>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005884>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005886>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005929>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005930>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031965>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031982>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044840>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045202>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0055037>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060107>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000051>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000071>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000072>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000073>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000180>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000196>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000256>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000257>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000262>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000289>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000299>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000300>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000321>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000388>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000443>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000505>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000532>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000533>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000534>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000535>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000581>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000598>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000599>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000600>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000601>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000603>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000604>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000605>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000615>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000616>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000695>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000704>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000709>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000710>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000722>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000770>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000884>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000898>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000899>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000900>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000901>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000902>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000903>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000904>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000905>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000907>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000908>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000909>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000910>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000911>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000913>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000914>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000916>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000917>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000918>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000923>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000924>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000926>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000927>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000948>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000949>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000968>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000969>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000972>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000977>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001260>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001263>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001305>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001323>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001331>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001348>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001354>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001355>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001357>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001359>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001398>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001399>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001401>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001412>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001489>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001517>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001525>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001526>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001530>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001531>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001532>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001533>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001535>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001659>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001674>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001676>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001836>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001877>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001880>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002089>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002091>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002092>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002093>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002096>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002097>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002139>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002176>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002240>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002485>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003670>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003672>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003673>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003675>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003679>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003681>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0003732>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0004017>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0004534>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0004540>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005062>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005107>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005116>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005175>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005237>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005312>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005319>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005364>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005391>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005409>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005425>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005501>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005671>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005730>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005735>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005736>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005737>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005738>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005739>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005740>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005741>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005745>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005746>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005747>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005748>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005749>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005751>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005753>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005755>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005762>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005767>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005768>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005772>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005773>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005774>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005775>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005776>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005779>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005780>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005785>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005792>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005811>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005812>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005813>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005843>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006748>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006754>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006760>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006783>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006794>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006795>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006796>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006797>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006798>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006816>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006849>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006865>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006909>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006920>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006926>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006929>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006941>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0006979>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007832>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007833>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007849>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007850>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0008424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0008425>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0008426>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000071> (abnormal morphology of head )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000071> "Any structural anomaly of the head."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000071> "abnormal shape of head"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000071> "abnormal morphology of head "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000071> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005739>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000072> (abnormal morphology of midbody )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000072> "Any structural anomaly of the midbody."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000072> "abnormal shape of midbody"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000072> "abnormal morphology of midbody "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005740>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000073> (abnormal morphology of tail )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000073> "Any structural anomaly of the tail."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000073> "abnormal shape of tail"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000073> "abnormal morphology of tail "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000073> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005741>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000180> (abnormal morphology of axon )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000180> "Any structural anomaly of the axon."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000180> "abnormal shape of axon"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000180> "abnormal morphology of axon "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000180> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030424>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000196> (abnormal morphology of DTC )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000196> "Any structural anomaly of the DTC."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000196> "abnormal shape of DTC"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000196> "abnormal morphology of DTC "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000196> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006865>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000256> (abnormal morphology of amphid sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "Any structural anomaly of the amphid sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "abnormal shape of amphid sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "abnormal morphology of amphid sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000256> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005391>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000257> (abnormal morphology of phasmid sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "Any structural anomaly of the phasmid sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "abnormal shape of phasmid sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "abnormal morphology of phasmid sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000257> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005425>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000262> (abnormal morphology of axoneme )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000262> "Any structural anomaly of the axoneme."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000262> "abnormal shape of axoneme"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000262> "abnormal morphology of axoneme "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000262> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005930>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000289> (abnormal morphology of uterus )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000289> "Any structural anomaly of the uterus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000289> "abnormal shape of uterus"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000289> "abnormal morphology of uterus "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000289> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006760>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000299> (abnormal morphology of sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000299> "Any structural anomaly of the sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000299> "abnormal shape of sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000299> "abnormal morphology of sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000299> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006929>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000300> (abnormal morphology of amphid sheath cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000300> "Any structural anomaly of the amphid sheath cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000300> "abnormal shape of amphid sheath cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000300> "abnormal morphology of amphid sheath cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000300> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006754>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000321> (abnormal morphology of nose )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000321> "Any structural anomaly of the nose."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000321> "abnormal shape of nose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000321> "abnormal morphology of nose "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000321> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0008426>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000388> (abnormal morphology of sperm )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000388> "Any structural anomaly of the sperm."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000388> "abnormal shape of sperm"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000388> "abnormal morphology of sperm "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000388> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006798>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000443> (abnormal morphology of copulatory spicule )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000443> "Any structural anomaly of the copulatory spicule."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000443> "abnormal shape of copulatory spicule"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000443> "abnormal morphology of copulatory spicule "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000443> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005312>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000505> (abnormal morphology of ray )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000505> "Any structural anomaly of the ray."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000505> "abnormal shape of ray"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000505> "abnormal morphology of ray "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000505> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006941>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000532> (abnormal morphology of body region )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000532> "Any structural anomaly of the body region."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000532> "abnormal shape of body region"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000532> "abnormal morphology of body region "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000532> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005738>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000533> (abnormal morphology of Cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000533> "Any structural anomaly of the Cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000533> "abnormal shape of Cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000533> "abnormal morphology of Cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000533> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0004017>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000534> (abnormal morphology of Organ system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000534> "Any structural anomaly of the Organ system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000534> "abnormal shape of Organ system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000534> "abnormal morphology of Organ system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000534> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005746>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000535> (abnormal morphology of organism )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000535> "Any structural anomaly of the organism."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000535> "abnormal shape of organism"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000535> "abnormal morphology of organism "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000535> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007833>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000581> (abnormal morphology of axis )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000581> "Any structural anomaly of the axis."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000581> "abnormal shape of axis"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000581> "abnormal morphology of axis "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000581> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005768>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000598> (abnormal morphology of alimentary system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000598> "Any structural anomaly of the alimentary system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000598> "abnormal shape of alimentary system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000598> "abnormal morphology of alimentary system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000598> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005748>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000599> (abnormal morphology of coelomic system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000599> "Any structural anomaly of the coelomic system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000599> "abnormal shape of coelomic system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000599> "abnormal morphology of coelomic system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000599> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005749>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000600> (abnormal morphology of epithelial system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000600> "Any structural anomaly of the epithelial system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000600> "abnormal shape of epithelial system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000600> "abnormal morphology of epithelial system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000600> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005730>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000601> (abnormal morphology of excretory system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000601> "Any structural anomaly of the excretory system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000601> "abnormal shape of excretory system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000601> "abnormal morphology of excretory system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000601> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005736>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000603> (abnormal morphology of muscular system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000603> "Any structural anomaly of the muscular system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000603> "abnormal shape of muscular system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000603> "abnormal morphology of muscular system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000603> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005737>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000604> (abnormal morphology of nervous system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000604> "Any structural anomaly of the nervous system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000604> "abnormal shape of nervous system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000604> "abnormal morphology of nervous system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000604> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005735>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000605> (abnormal morphology of reproductive system )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000605> "Any structural anomaly of the reproductive system."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000605> "abnormal shape of reproductive system"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000605> "abnormal morphology of reproductive system "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000605> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005747>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000615> (abnormal morphology of cilium )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000615> "Any structural anomaly of the cilium."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000615> "abnormal shape of cilium"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000615> "abnormal morphology of cilium "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000615> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005929>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000616> (abnormal morphology of synapse )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000616> "Any structural anomaly of the synapse."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000616> "abnormal shape of synapse"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000616> "abnormal morphology of synapse "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000616> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0045202>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000695> (abnormal morphology of vulva )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000695> "Any structural anomaly of the vulva."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000695> "abnormal shape of vulva"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000695> "abnormal morphology of vulva "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000695> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006748>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000704> (abnormal morphology of excretory canal )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000704> "Any structural anomaly of the excretory canal."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000704> "abnormal shape of excretory canal"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000704> "abnormal morphology of excretory canal "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000704> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005775>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000709> (abnormal morphology of pharynx )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000709> "Any structural anomaly of the pharynx."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000709> "abnormal shape of pharynx"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000709> "abnormal morphology of pharynx "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000709> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003681>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000710> (abnormal morphology of intestine )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000710> "Any structural anomaly of the intestine."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000710> "abnormal shape of intestine"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000710> "abnormal morphology of intestine "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000710> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005772>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000722> (abnormal morphology of nucleolus )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000722> "Any structural anomaly of the nucleolus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000722> "abnormal shape of nucleolus"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000722> "abnormal morphology of nucleolus "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000722> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005730>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000770> (abnormal morphology of embryonic cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000770> "Any structural anomaly of the embryonic cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000770> "abnormal shape of embryonic cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000770> "abnormal morphology of embryonic cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000770> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007028>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000884> (abnormal morphology of AWB )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000884> "Any structural anomaly of the AWB."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000884> "abnormal shape of AWB"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000884> "abnormal morphology of AWB "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005671>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000898> (abnormal morphology of blast cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000898> "Any structural anomaly of the blast cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000898> "abnormal shape of blast cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000898> "abnormal morphology of blast cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000898> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006783>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000899> (abnormal morphology of epithelial cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000899> "Any structural anomaly of the epithelial cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000899> "abnormal shape of epithelial cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000899> "abnormal morphology of epithelial cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000899> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003672>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000900> (abnormal morphology of germ cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000900> "Any structural anomaly of the germ cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000900> "abnormal shape of germ cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000900> "abnormal morphology of germ cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000900> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006796>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000901> (abnormal morphology of gland cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000901> "Any structural anomaly of the gland cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000901> "abnormal shape of gland cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000901> "abnormal morphology of gland cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000901> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003670>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000902> (abnormal morphology of intestinal cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000902> "Any structural anomaly of the intestinal cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000902> "abnormal shape of intestinal cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000902> "abnormal morphology of intestinal cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000902> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005792>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000903> (abnormal morphology of marginal cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000903> "Any structural anomaly of the marginal cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000903> "abnormal shape of marginal cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000903> "abnormal morphology of marginal cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000903> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003673>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000904> (abnormal morphology of muscle cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000904> "Any structural anomaly of the muscle cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000904> "abnormal shape of muscle cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000904> "abnormal morphology of muscle cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000904> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003675>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000905> (abnormal morphology of neuron )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000905> "Any structural anomaly of the neuron."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000905> "abnormal shape of neuron"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000905> "abnormal morphology of neuron "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000905> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003679>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000907> (abnormal morphology of anus )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000907> "Any structural anomaly of the anus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000907> "abnormal shape of anus"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000907> "abnormal morphology of anus "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000907> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005364>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000908> (abnormal morphology of cloaca )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000908> "Any structural anomaly of the cloaca."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000908> "abnormal shape of cloaca"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000908> "abnormal morphology of cloaca "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000908> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005774>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000909> (abnormal morphology of pharyngeal-intestinal valve )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000909> "Any structural anomaly of the pharyngeal-intestinal valve."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000909> "abnormal shape of pharyngeal-intestinal valve"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000909> "abnormal morphology of pharyngeal-intestinal valve "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000909> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005767>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000910> (abnormal morphology of rectum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000910> "Any structural anomaly of the rectum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000910> "abnormal shape of rectum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000910> "abnormal morphology of rectum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000910> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005773>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000911> (abnormal morphology of coelomocyte )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000911> "Any structural anomaly of the coelomocyte."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000911> "abnormal shape of coelomocyte"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000911> "abnormal morphology of coelomocyte "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000911> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005751>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000913> (abnormal morphology of basement membrane )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000913> "Any structural anomaly of the basement membrane."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000913> "abnormal shape of basement membrane"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000913> "abnormal morphology of basement membrane "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000913> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005604>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000914> (abnormal morphology of excretory gland cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000914> "Any structural anomaly of the excretory gland cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000914> "abnormal shape of excretory gland cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000914> "abnormal morphology of excretory gland cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000914> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005776>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000916> (abnormal morphology of excretory cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000916> "Any structural anomaly of the excretory cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000916> "abnormal shape of excretory cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000916> "abnormal morphology of excretory cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000916> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005812>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000917> (abnormal morphology of excretory duct cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000917> "Any structural anomaly of the excretory duct cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000917> "abnormal shape of excretory duct cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000917> "abnormal morphology of excretory duct cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000917> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0004540>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000918> (abnormal morphology of excretory socket cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000918> "Any structural anomaly of the excretory socket cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000918> "abnormal shape of excretory socket cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000918> "abnormal morphology of excretory socket cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000918> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0004534>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000923> (abnormal morphology of non-striated muscle )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000923> "Any structural anomaly of the non-striated muscle."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000923> "abnormal shape of non-striated muscle"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000923> "abnormal morphology of non-striated muscle "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000923> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005780>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000924> (abnormal morphology of striated muscle )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000924> "Any structural anomaly of the striated muscle."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000924> "abnormal shape of striated muscle"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000924> "abnormal morphology of striated muscle "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000924> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005779>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000926> (abnormal morphology of body wall musculature )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000926> "Any structural anomaly of the body wall musculature."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000926> "abnormal shape of body wall musculature"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000926> "abnormal morphology of body wall musculature "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000926> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005813>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000927> (abnormal morphology of longitudinal male muscle )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000927> "Any structural anomaly of the longitudinal male muscle."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000927> "abnormal shape of longitudinal male muscle"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000927> "abnormal morphology of longitudinal male muscle "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000927> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006909>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000948> (abnormal morphology of cuticle )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000948> "Any structural anomaly of the cuticle."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000948> "abnormal shape of cuticle"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000948> "abnormal morphology of cuticle "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000948> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005755>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000949> (abnormal morphology of pseudocoelom )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000949> "Any structural anomaly of the pseudocoelom."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000949> "abnormal shape of pseudocoelom"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000949> "abnormal morphology of pseudocoelom "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000949> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005745>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000968> (abnormal morphology of tail spike )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000968> "Any structural anomaly of the tail spike."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000968> "abnormal shape of tail spike"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000968> "abnormal morphology of tail spike "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000968> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006979>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000969> (abnormal morphology of accessory cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000969> "Any structural anomaly of the accessory cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000969> "abnormal shape of accessory cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000969> "abnormal morphology of accessory cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000969> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005762>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000972> (abnormal morphology of neuronal sheath cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000972> "Any structural anomaly of the neuronal sheath cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000972> "abnormal shape of neuronal sheath cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000972> "abnormal morphology of neuronal sheath cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000972> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005811>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000977> (abnormal morphology of somatic gonad )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000977> "Any structural anomaly of the somatic gonad."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000977> "abnormal shape of somatic gonad"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000977> "abnormal morphology of somatic gonad "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000977> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005785>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001024> (abnormal morphology of male )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001024> "Any structural anomaly of the male."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001024> "abnormal shape of male"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001024> "abnormal morphology of male "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001024> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007850>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001025> (abnormal morphology of hermaphrodite )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001025> "Any structural anomaly of the hermaphrodite."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001025> "abnormal shape of hermaphrodite"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001025> "abnormal morphology of hermaphrodite "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001025> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007849>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001028> (abnormal morphology of nucleus )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001028> "Any structural anomaly of the nucleus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001028> "abnormal shape of nucleus"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001028> "abnormal morphology of nucleus "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005634>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001260> (abnormal morphology of oocyte )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001260> "Any structural anomaly of the oocyte."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001260> "abnormal shape of oocyte"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001260> "abnormal morphology of oocyte "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001260> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006797>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001263> (abnormal morphology of peroxisome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001263> "Any structural anomaly of the peroxisome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001263> "abnormal shape of peroxisome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001263> "abnormal morphology of peroxisome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001263> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005777>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001305> (abnormal morphology of hook )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001305> "Any structural anomaly of the hook."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001305> "abnormal shape of hook"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001305> "abnormal morphology of hook "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001305> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0008425>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001323> (abnormal morphology of vesicle )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001323> "Any structural anomaly of the vesicle."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001323> "abnormal shape of vesicle"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001323> "abnormal morphology of vesicle "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001323> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0031982>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001331> (abnormal morphology of motor neuron )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001331> "Any structural anomaly of the motor neuron."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001331> "abnormal shape of motor neuron"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001331> "abnormal morphology of motor neuron "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001331> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005409>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001348> (abnormal morphology of chromosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001348> "Any structural anomaly of the chromosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001348> "abnormal shape of chromosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001348> "abnormal morphology of chromosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001348> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005694>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001354> (abnormal morphology of actin filament )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001354> "Any structural anomaly of the actin filament."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001354> "abnormal shape of actin filament"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001354> "abnormal morphology of actin filament "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001354> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005884>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001355> (abnormal morphology of gonad )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001355> "Any structural anomaly of the gonad."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001355> "abnormal shape of gonad"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001355> "abnormal morphology of gonad "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001355> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005175>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001357> (abnormal morphology of male gonad )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001357> "Any structural anomaly of the male gonad."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001357> "abnormal shape of male gonad"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001357> "abnormal morphology of male gonad "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001357> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006794>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001359> (abnormal morphology of proctodeum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001359> "Any structural anomaly of the proctodeum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001359> "abnormal shape of proctodeum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001359> "abnormal morphology of proctodeum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001359> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006795>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001398> (abnormal morphology of neuron projection )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001398> "Any structural anomaly of the neuron projection."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001398> "abnormal shape of neuron projection"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001398> "abnormal morphology of neuron projection "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001398> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0043005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001399> (abnormal morphology of plasma membrane )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001399> "Any structural anomaly of the plasma membrane."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001399> "abnormal shape of plasma membrane"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001399> "abnormal morphology of plasma membrane "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001399> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005886>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001401> (abnormal morphology of mitochondrion )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001401> "Any structural anomaly of the mitochondrion."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001401> "abnormal shape of mitochondrion"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001401> "abnormal morphology of mitochondrion "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001401> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005739>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001412> (abnormal morphology of cuticular ala )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001412> "Any structural anomaly of the cuticular ala."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001412> "abnormal shape of cuticular ala"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001412> "abnormal morphology of cuticular ala "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001412> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007832>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001489> (abnormal morphology of gubernaculum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001489> "Any structural anomaly of the gubernaculum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001489> "abnormal shape of gubernaculum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001489> "abnormal morphology of gubernaculum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001489> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0008424>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001517> (abnormal morphology of annuli extracellular matrix )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001517> "Any structural anomaly of the annuli extracellular matrix."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001517> "abnormal shape of annuli extracellular matrix"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001517> "abnormal morphology of annuli extracellular matrix "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001517> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0060107>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001525> (abnormal morphology of terminal bulb )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001525> "Any structural anomaly of the terminal bulb."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001525> "abnormal shape of terminal bulb"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001525> "abnormal morphology of terminal bulb "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001525> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0003732>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001526> (abnormal morphology of ciliated neuron )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001526> "Any structural anomaly of the ciliated neuron."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001526> "abnormal shape of ciliated neuron"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001526> "abnormal morphology of ciliated neuron "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001526> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006816>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001530> (abnormal morphology of cephalic sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001530> "Any structural anomaly of the cephalic sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001530> "abnormal shape of cephalic sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001530> "abnormal morphology of cephalic sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001530> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006920>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001531> (abnormal morphology of labial sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001531> "Any structural anomaly of the labial sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001531> "abnormal shape of labial sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001531> "abnormal morphology of labial sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001531> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005107>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001532> (abnormal morphology of inner labial sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001532> "Any structural anomaly of the inner labial sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001532> "abnormal shape of inner labial sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001532> "abnormal morphology of inner labial sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001532> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005116>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001533> (abnormal morphology of outer labial sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001533> "Any structural anomaly of the outer labial sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001533> "abnormal shape of outer labial sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001533> "abnormal morphology of outer labial sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001533> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005501>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001535> (abnormal morphology of deirid sensillum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001535> "Any structural anomaly of the deirid sensillum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001535> "abnormal shape of deirid sensillum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001535> "abnormal morphology of deirid sensillum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001535> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006926>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001659> (abnormal morphology of spermatheca )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001659> "Any structural anomaly of the spermatheca."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001659> "abnormal shape of spermatheca"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001659> "abnormal morphology of spermatheca "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001659> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005319>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001674> (abnormal morphology of chromosome, telomeric region )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001674> "Any structural anomaly of the chromosome, telomeric region."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001674> "abnormal shape of chromosome, telomeric region"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001674> "abnormal morphology of chromosome, telomeric region "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001674> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0000781>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001676> (abnormal morphology of touch receptor neuron )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001676> "Any structural anomaly of the touch receptor neuron."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001676> "abnormal shape of touch receptor neuron"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001676> "abnormal morphology of touch receptor neuron "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001676> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005237>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001836> (abnormal morphology of eggshell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001836> "Any structural anomaly of the eggshell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001836> "abnormal shape of eggshell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001836> "abnormal morphology of eggshell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001836> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005843>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001877> (abnormal morphology of nuclear membrane )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001877> "Any structural anomaly of the nuclear membrane."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001877> "abnormal shape of nuclear membrane"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001877> "abnormal morphology of nuclear membrane "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001877> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0031965>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001880> (abnormal morphology of endoplasmic reticulum )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001880> "Any structural anomaly of the endoplasmic reticulum."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001880> "abnormal shape of endoplasmic reticulum"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001880> "abnormal morphology of endoplasmic reticulum "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001880> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005783>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002089> (abnormal morphology of cellular_component )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002089> "Any structural anomaly of the cellular_component."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002089> "abnormal shape of cellular_component"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002089> "abnormal morphology of cellular_component "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002089> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005575>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002090> (abnormal morphology of endosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002090> "Any structural anomaly of the endosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002090> "abnormal shape of endosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002090> "abnormal morphology of endosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002090> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005768>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002091> (abnormal morphology of late endosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002091> "Any structural anomaly of the late endosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002091> "abnormal shape of late endosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002091> "abnormal morphology of late endosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002091> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005770>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002092> (abnormal morphology of early endosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002092> "Any structural anomaly of the early endosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002092> "abnormal shape of early endosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002092> "abnormal morphology of early endosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002092> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005769>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002093> (abnormal morphology of recycling endosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002093> "Any structural anomaly of the recycling endosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002093> "abnormal shape of recycling endosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002093> "abnormal morphology of recycling endosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002093> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0055037>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002096> (abnormal morphology of Golgi apparatus )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002096> "Any structural anomaly of the Golgi apparatus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002096> "abnormal shape of Golgi apparatus"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002096> "abnormal morphology of Golgi apparatus "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002096> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005794>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002097> (abnormal morphology of lysosome )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002097> "Any structural anomaly of the lysosome."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002097> "abnormal shape of lysosome"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002097> "abnormal morphology of lysosome "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002097> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005764>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002139> (abnormal morphology of linker cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002139> "Any structural anomaly of the linker cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002139> "abnormal shape of linker cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002139> "abnormal morphology of linker cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002139> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005062>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002176> (abnormal morphology of seam cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002176> "Any structural anomaly of the seam cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002176> "abnormal shape of seam cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002176> "abnormal morphology of seam cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002176> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005753>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002240> (abnormal morphology of gut granule )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002240> "Any structural anomaly of the gut granule."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002240> "abnormal shape of gut granule"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002240> "abnormal morphology of gut granule "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002240> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0044840>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002485> (abnormal morphology of germline precursor cell )
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "Any structural anomaly of the germline precursor cell."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "abnormal shape of germline precursor cell"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002485> "abnormal morphology of germline precursor cell "^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002485> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0006849>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+
+)

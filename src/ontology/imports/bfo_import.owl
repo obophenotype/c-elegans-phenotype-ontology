@@ -8,7 +8,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/imports/bfo_import.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/imports/bfo_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2019-05-09/imports/bfo_import.owl"/>
+    </owl:Ontology>
     
 
 
@@ -596,6 +598,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <obo:BFO_0000179>sdc</obo:BFO_0000179>
         <obo:BFO_0000180>SpecificallyDependentContinuant</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key</obo:IAO_0000112>

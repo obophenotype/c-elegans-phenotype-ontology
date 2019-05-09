@@ -1,4 +1,5 @@
 format-version: 1.2
+data-version: wbphenotype/releases/2019-05-09/imports/bfo_import.owl
 ontology: wbphenotype/imports/bfo_import
 
 [Term]
@@ -150,6 +151,7 @@ id: BFO:0000020
 name: specifically dependent continuant
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000031 ! generically dependent continuant
 property_value: BFO:0000179 "sdc" xsd:string
 property_value: BFO:0000180 "SpecificallyDependentContinuant" xsd:string
 property_value: IAO:0000112 "of one-sided specifically dependent continuants: the mass of this tomato" xsd:string
