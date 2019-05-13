@@ -1,0 +1,969 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000077>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000280>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0001708>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0001764>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0002064>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0002164>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006259>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006260>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006310>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006396>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006406>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006412>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006468>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006479>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006629>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006887>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006915>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006935>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006979>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0006986>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007049>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007059>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007097>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007163>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007271>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007274>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007276>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007281>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007283>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007296>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007369>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007399>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007409>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007411>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007413>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007416>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007530>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007549>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007620>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007631>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007635>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008219>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008283>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008291>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008406>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009306>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009790>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0009791>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0010467>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0012501>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016049>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016079>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016358>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016477>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0018991>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030154>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030261>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030421>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030534>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030537>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030728>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031175>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031571>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031572>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032094>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032502>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032940>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0033059>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0033554>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0034644>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0034976>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0035176>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0035188>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0040007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0040024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0040025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0040034>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042133>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042221>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042335>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042417>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042428>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042493>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043050>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043054>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043057>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043473>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045132>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0046333>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0046785>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0046959>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048066>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048094>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048102>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048468>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048488>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048565>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048589>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048599>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048666>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0050918>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0050919>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051081>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051301>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051452>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051932>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0055001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0060756>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0071479>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0071480>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0071965>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0072347>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000047>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000048>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000049>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000068>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000100>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000104>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000121>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000127>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000142>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000171>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000186>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000201>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000216>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000221>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000222>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000223>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000233>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000250>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000258>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000308>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000354>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000384>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000416>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000433>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000474>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000481>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000503>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000504>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000511>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000517>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000518>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000521>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000523>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000526>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000529>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000594>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000623>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000625>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000626>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000627>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000631>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000632>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000634>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000635>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000640>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000647>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000650>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000654>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000655>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000656>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000658>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000659>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000662>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000666>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000670>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000691>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000699>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000708>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000717>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000718>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000724>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000725>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000728>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000729>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000730>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000732>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000736>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000740>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000741>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000742>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000746>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000749>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000750>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000773>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000774>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000811>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000812>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000815>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000816>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000818>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000822>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000873>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000874>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000880>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000882>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000944>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000963>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001009>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001049>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001072>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001140>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001172>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001206>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001291>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001324>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001326>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001349>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001361>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001378>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001383>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001393>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001434>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001485>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001499>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001514>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001568>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001580>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001589>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001590>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001591>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0001719>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0010001>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000028> (abnormal RNA processing)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000028> "Abnormal RNA processing."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000028> "abnormal RNA processing"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006396>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000030> (abnormal growth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000030> "Abnormal growth."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000030> "abnormal growth"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0040007>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000033> (abnormal regulation of development, heterochronic)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000033> "Abnormal regulation of development, heterochronic."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000033> "abnormal regulation of development, heterochronic"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0040034>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000047> (abnormal gastrulation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000047> "Abnormal gastrulation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000047> "abnormal gastrulation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000047> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007369>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000048> (abnormal hatching)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000048> "Abnormal hatching."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000048> "abnormal hatching"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000048> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0035188>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000049> (abnormal post-embryonic development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000049> "Abnormal post-embryonic development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000049> "abnormal post-embryonic development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000049> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0009791>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000068> (abnormal response to oxidative stress)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000068> "Abnormal response to oxidative stress."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000068> "abnormal response to oxidative stress"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006979>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000100> (abnormal cellular response to UV)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000100> "Abnormal cellular response to UV."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000100> "abnormal cellular response to UV"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000100> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0034644>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000104> (abnormal establishment or maintenance of cell polarity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000104> "Abnormal establishment or maintenance of cell polarity."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000104> "abnormal establishment or maintenance of cell polarity"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000104> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007163>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000121> (abnormal translation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000121> "Abnormal translation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000121> "abnormal translation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000121> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006412>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000127> (abnormal dauer exit)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000127> "Abnormal dauer exit."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000127> "abnormal dauer exit"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000127> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0043054>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000142> (abnormal cellular response to stress)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000142> "Abnormal cellular response to stress."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000142> "abnormal cellular response to stress"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000142> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0033554>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000171> (abnormal cell population proliferation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000171> "Abnormal cell population proliferation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000171> "abnormal cell population proliferation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000171> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0008283>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000186> (abnormal oocyte development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000186> "Abnormal oocyte development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000186> "abnormal oocyte development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000186> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048599>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000201> (abnormal cuticle development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000201> "Abnormal cuticle development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000201> "abnormal cuticle development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000201> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042335>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000216> (abnormal cell fate specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000216> "Abnormal cell fate specification."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000216> "abnormal cell fate specification"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000216> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0001708>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000221> (abnormal neurotransmitter metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000221> "Abnormal neurotransmitter metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000221> "abnormal neurotransmitter metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000221> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042133>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000222> (abnormal serotonin metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000222> "Abnormal serotonin metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000222> "abnormal serotonin metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000222> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042428>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000223> (abnormal acetylcholine metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000223> "Abnormal acetylcholine metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000223> "abnormal acetylcholine metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000223> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0008291>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000233> (abnormal dopamine metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000233> "Abnormal dopamine metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000233> "abnormal dopamine metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042417>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000250> (abnormal octopamine metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000250> "Abnormal octopamine metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000250> "abnormal octopamine metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000250> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0046333>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000258> (abnormal secretion by cell)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000258> "Abnormal secretion by cell."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000258> "abnormal secretion by cell"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000258> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0032940>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000308> (abnormal dauer larval development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000308> "Abnormal dauer larval development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000308> "abnormal dauer larval development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000308> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0040024>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000354> (abnormal cell differentiation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000354> "Abnormal cell differentiation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000354> "abnormal cell differentiation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000354> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030154>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000384> (abnormal axon guidance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000384> "Abnormal axon guidance."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000384> "abnormal axon guidance"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000384> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007411>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000416> (abnormal vitellogenesis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000416> "Abnormal vitellogenesis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000416> "abnormal vitellogenesis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000416> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007296>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000433> (abnormal DNA replication)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000433> "Abnormal DNA replication."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000433> "abnormal DNA replication"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000433> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006260>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000474> (abnormal muscle attachment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000474> "Abnormal muscle attachment."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000474> "abnormal muscle attachment"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000474> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016203>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000481> (abnormal negative chemotaxis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000481> "Abnormal negative chemotaxis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000481> "abnormal negative chemotaxis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000481> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0050919>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000503> (abnormal DNA endoreduplication)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000503> "Abnormal DNA endoreduplication."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000503> "abnormal DNA endoreduplication"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000503> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042023>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000504> (abnormal nuclear division)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000504> "Abnormal nuclear division."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000504> "abnormal nuclear division"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000504> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0000280>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000511> (abnormal nuclear migration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000511> "Abnormal nuclear migration."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000511> "abnormal nuclear migration"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000511> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007097>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000517> (abnormal behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000517> "Abnormal behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000517> "abnormal behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000517> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007610>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000518> (abnormal developmental process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000518> "Abnormal developmental process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000518> "abnormal developmental process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000518> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0032502>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000521> (abnormal pigmentation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000521> "Abnormal pigmentation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000521> "abnormal pigmentation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000521> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0043473>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000523> (abnormal response to chemical)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000523> "Abnormal response to chemical."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000523> "abnormal response to chemical"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000523> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042221>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000526> (abnormal cellular pigmentation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000526> "Abnormal cellular pigmentation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000526> "abnormal cellular pigmentation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000526> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0033059>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000529> (abnormal cell development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000529> "Abnormal cell development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000529> "abnormal cell development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000529> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048468>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000594> (abnormal cell migration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000594> "Abnormal cell migration."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000594> "abnormal cell migration"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000594> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016477>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000623> (abnormal nervous system development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000623> "Abnormal nervous system development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000623> "abnormal nervous system development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000623> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007399>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000625> (abnormal synapse assembly)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000625> "Abnormal synapse assembly."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000625> "abnormal synapse assembly"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000625> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007416>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000626> (abnormal habituation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000626> "Abnormal habituation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000626> "abnormal habituation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000626> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0046959>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000627> (abnormal response to anesthetic)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000627> "Abnormal response to anesthetic."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000627> "abnormal response to anesthetic"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000627> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0072347>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000631> (abnormal response to drug)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000631> "Abnormal response to drug."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000631> "abnormal response to drug"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000631> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0042493>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000632> (abnormal axonal fasciculation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000632> "Abnormal axonal fasciculation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000632> "abnormal axonal fasciculation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000632> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007413>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000634> (abnormal pharyngeal pumping)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000634> "Abnormal pharyngeal pumping."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000634> "abnormal pharyngeal pumping"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000634> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0043050>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000635> (abnormal positive chemotaxis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000635> "Abnormal positive chemotaxis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000635> "abnormal positive chemotaxis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000635> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0050918>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000640> (abnormal oviposition)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000640> "Abnormal oviposition."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000640> "abnormal oviposition"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000640> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0018991>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000647> (abnormal copulation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000647> "Abnormal copulation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000647> "abnormal copulation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000647> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007620>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000650> (abnormal defecation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000650> "Abnormal defecation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000650> "abnormal defecation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030421>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000654> (abnormal synaptic vesicle exocytosis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000654> "Abnormal synaptic vesicle exocytosis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000654> "abnormal synaptic vesicle exocytosis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000654> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016079>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000655> (abnormal synaptic transmission, GABAergic)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000655> "Abnormal synaptic transmission, GABAergic."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000655> "abnormal synaptic transmission, GABAergic"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0051932>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000656> (abnormal synaptic transmission, cholinergic)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000656> "Abnormal synaptic transmission, cholinergic."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000656> "abnormal synaptic transmission, cholinergic"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000656> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007271>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000658> (abnormal neuromuscular synaptic transmission)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000658> "Abnormal neuromuscular synaptic transmission."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000658> "abnormal neuromuscular synaptic transmission"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000658> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007274>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000659> (abnormal feeding behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000659> "Abnormal feeding behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000659> "abnormal feeding behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000659> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007631>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000662> (abnormal foraging behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000662> "Abnormal foraging behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000662> "abnormal foraging behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000662> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0060756>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000666> (abnormal ovulation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000666> "Abnormal ovulation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000666> "abnormal ovulation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000666> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030728>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000670> (abnormal spermatogenesis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000670> "Abnormal spermatogenesis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000670> "abnormal spermatogenesis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000670> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007283>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000691> (abnormal gonad development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000691> "Abnormal gonad development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000691> "abnormal gonad development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000691> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0008406>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000699> (abnormal vulval development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000699> "Abnormal vulval development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000699> "abnormal vulval development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000699> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0040025>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000708> (abnormal digestive tract development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000708> "Abnormal digestive tract development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000708> "abnormal digestive tract development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000708> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048565>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000717> (abnormal gene expression)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000717> "Abnormal gene expression."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000717> "abnormal gene expression"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000717> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0010467>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000718> (abnormal dosage compensation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000718> "Abnormal dosage compensation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000718> "abnormal dosage compensation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000718> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007549>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000724> (abnormal protein secretion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000724> "Abnormal protein secretion."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000724> "abnormal protein secretion"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000724> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0009306>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000725> (abnormal lipid metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000725> "Abnormal lipid metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000725> "abnormal lipid metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000725> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006629>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000728> (abnormal exocytosis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000728> "Abnormal exocytosis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000728> "abnormal exocytosis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000728> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006887>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000729> (abnormal cell death)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000729> "Abnormal cell death."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000729> "abnormal cell death"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000729> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0008219>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000730> (abnormal apoptotic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000730> "Abnormal apoptotic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000730> "abnormal apoptotic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000730> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006915>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000732> (abnormal DNA metabolic process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000732> "Abnormal DNA metabolic process."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000732> "abnormal DNA metabolic process"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000732> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006259>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000736> (abnormal autophagic cell death)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000736> "Abnormal autophagic cell death."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000736> "abnormal autophagic cell death"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000736> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048102>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000740> (abnormal cell cycle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000740> "Abnormal cell cycle."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000740> "abnormal cell cycle"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000740> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007049>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000741> (abnormal DNA damage checkpoint)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000741> "Abnormal DNA damage checkpoint."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000741> "abnormal DNA damage checkpoint"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000741> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0000077>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000742> (abnormal DNA recombination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000742> "Abnormal DNA recombination."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000742> "abnormal DNA recombination"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000742> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006310>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000746> (abnormal cell division)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000746> "Abnormal cell division."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000746> "abnormal cell division"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000746> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0051301>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000749> (abnormal embryo development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000749> "Abnormal embryo development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000749> "abnormal embryo development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000749> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0009790>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000750> (abnormal larval development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000750> "Abnormal larval development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000750> "abnormal larval development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000750> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0002164>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000773> (abnormal chromosome segregation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000773> "Abnormal chromosome segregation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000773> "abnormal chromosome segregation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000773> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007059>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000774> (abnormal gamete generation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000774> "Abnormal gamete generation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000774> "abnormal gamete generation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000774> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007276>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000811> (abnormal epithelial cell development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000811> "Abnormal epithelial cell development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000811> "abnormal epithelial cell development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000811> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0002064>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000812> (abnormal germ cell development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000812> "Abnormal germ cell development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000812> "abnormal germ cell development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000812> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007281>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000815> (abnormal muscle cell development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000815> "Abnormal muscle cell development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000815> "abnormal muscle cell development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000815> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0055001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000816> (abnormal neuron development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000816> "Abnormal neuron development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000816> "abnormal neuron development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000816> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048666>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000818> (abnormal adult behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000818> "Abnormal adult behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000818> "abnormal adult behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000818> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030534>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000822> (abnormal sex determination)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000822> "Abnormal sex determination."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000822> "abnormal sex determination"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000822> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007530>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000873> (abnormal mitotic G1 DNA damage checkpoint)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000873> "Abnormal mitotic G1 DNA damage checkpoint."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000873> "abnormal mitotic G1 DNA damage checkpoint"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000873> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0031571>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000874> (abnormal G2 DNA damage checkpoint)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000874> "Abnormal G2 DNA damage checkpoint."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000874> "abnormal G2 DNA damage checkpoint"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000874> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0031572>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000880> (abnormal axonogenesis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000880> "Abnormal axonogenesis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000880> "abnormal axonogenesis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000880> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007409>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000882> (abnormal dendrite development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000882> "Abnormal dendrite development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000882> "abnormal dendrite development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000882> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016358>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000944> (abnormal neuron projection development)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000944> "Abnormal neuron projection development."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000944> "abnormal neuron projection development"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000944> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0031175>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000963> (abnormal male pigmentation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000963> "Abnormal male pigmentation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000963> "abnormal male pigmentation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000963> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048094>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001005> (abnormal backward locomotion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001005> "Abnormal backward locomotion."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001005> "abnormal backward locomotion"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0043057>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001009> (abnormal developmental pigmentation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001009> "Abnormal developmental pigmentation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001009> "abnormal developmental pigmentation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001009> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048066>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001015> (abnormal developmental growth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001015> "Abnormal developmental growth."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001015> "abnormal developmental growth"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048589>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001032> (abnormal larval behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001032> "Abnormal larval behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001032> "abnormal larval behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001032> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030537>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001049> (abnormal chemosensory behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001049> "Abnormal chemosensory behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001049> "abnormal chemosensory behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001049> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007635>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001072> (abnormal response to food)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001072> "Abnormal response to food."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001072> "abnormal response to food"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001072> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0032094>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001140> (abnormal neuron migration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001140> "Abnormal neuron migration."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001140> "abnormal neuron migration"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001140> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0001764>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001172> (abnormal programmed cell death)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001172> "Abnormal programmed cell death."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001172> "abnormal programmed cell death"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001172> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0012501>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001206> (abnormal multicellular organismal locomotion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001206> "Abnormal multicellular organismal locomotion."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001206> "abnormal multicellular organismal locomotion"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001206> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0071965>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001291> (abnormal social behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001291> "Abnormal social behavior."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001291> "abnormal social behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001291> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0035176>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001324> (abnormal cellular response to ionizing radiation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001324> "Abnormal cellular response to ionizing radiation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001324> "abnormal cellular response to ionizing radiation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001324> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0071479>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001326> (abnormal cellular response to gamma radiation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001326> "Abnormal cellular response to gamma radiation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001326> "abnormal cellular response to gamma radiation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001326> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0071480>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001349> (abnormal protein phosphorylation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001349> "Abnormal protein phosphorylation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001349> "abnormal protein phosphorylation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001349> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006468>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001361> (abnormal chromosome condensation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001361> "Abnormal chromosome condensation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001361> "abnormal chromosome condensation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001361> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030261>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001378> (abnormal mitotic sister chromatid segregation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001378> "Abnormal mitotic sister chromatid segregation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001378> "abnormal mitotic sister chromatid segregation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001378> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0000070>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001383> (abnormal protein methylation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001383> "Abnormal protein methylation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001383> "abnormal protein methylation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001383> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006479>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001393> (abnormal intracellular pH reduction)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001393> "Abnormal intracellular pH reduction."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001393> "abnormal intracellular pH reduction"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0051452>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001434> (abnormal chemotaxis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001434> "Abnormal chemotaxis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001434> "abnormal chemotaxis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001434> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006935>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001485> (abnormal response to endoplasmic reticulum stress)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001485> "Abnormal response to endoplasmic reticulum stress."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001485> "abnormal response to endoplasmic reticulum stress"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001485> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0034976>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001499> (abnormal meiotic chromosome segregation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001499> "Abnormal meiotic chromosome segregation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001499> "abnormal meiotic chromosome segregation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001499> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0045132>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001514> (abnormal synaptic vesicle endocytosis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001514> "Abnormal synaptic vesicle endocytosis."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001514> "abnormal synaptic vesicle endocytosis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001514> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0048488>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001568> (abnormal mRNA export from nucleus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001568> "Abnormal mRNA export from nucleus."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001568> "abnormal mRNA export from nucleus"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001568> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006406>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001580> (abnormal nuclear envelope disassembly)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001580> "Abnormal nuclear envelope disassembly."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001580> "abnormal nuclear envelope disassembly"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001580> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0051081>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001589> (abnormal microtubule nucleation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001589> "Abnormal microtubule nucleation."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001589> "abnormal microtubule nucleation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001589> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007020>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001590> (abnormal microtubule depolymerization)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001590> "Abnormal microtubule depolymerization."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001590> "abnormal microtubule depolymerization"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001590> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0007019>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001591> (abnormal microtubule polymerization)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001591> "Abnormal microtubule polymerization."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001591> "abnormal microtubule polymerization"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001591> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0046785>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001719> (abnormal response to unfolded protein)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001719> "Abnormal response to unfolded protein."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001719> "abnormal response to unfolded protein"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0001719> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0006986>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0010001> (abnormal cell growth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0010001> "Abnormal cell growth."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0010001> "abnormal cell growth"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0010001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016049>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+
+)
