@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-05-13/imports/pato_import.owl
+data-version: wbphenotype/releases/2019-05-14/imports/pato_import.owl
 ontology: wbphenotype/imports/pato_import
 
 [Term]
@@ -30,6 +30,17 @@ subset: attribute_slim
 subset: scalar_slim
 synonym: "velocity" RELATED []
 is_a: PATO:0001906 ! movement quality
+
+[Term]
+id: PATO:0000014
+name: color
+namespace: quality
+alt_id: PATO:0000020
+def: "A composite chromatic quality composed of hue, saturation and intensity parts." [PATOC:GVG]
+subset: attribute_slim
+synonym: "colour" EXACT []
+synonym: "relative color" EXACT []
+is_a: PATO:0001300 ! optical quality
 
 [Term]
 id: PATO:0000016
@@ -3094,6 +3105,18 @@ created_by: George Gkoutos
 creation_date: 2010-03-10T03:18:15Z
 
 [Term]
+id: PATO:0002247
+name: degree of pigmentation
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's having or lacking of substances produced by living organisms that have a color resulting from selective color absorption." [url:http\://en.wikipedia.org/wiki/Biological_pigment]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0000141 ! structure
+relationship: correlates_with PATO:0000014 ! color
+created_by: george
+creation_date: 2010-08-09T04:14:00Z
+
+[Term]
 id: PATO:0002255
 name: grooved
 namespace: quality
@@ -3308,6 +3331,11 @@ is_a: PATO:0000639 ! degenerate
 intersection_of: PATO:0000462 ! absent
 intersection_of: PATO:0000639 ! degenerate
 created_by: cjm
+
+[Typedef]
+id: correlates_with
+name: correlates_with
+namespace: quality
 
 [Typedef]
 id: decreased_in_magnitude_relative_to

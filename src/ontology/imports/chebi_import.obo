@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-05-13/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-05-14/imports/chebi_import.owl
 ontology: wbphenotype/imports/chebi_import
 
 [Term]
@@ -772,6 +772,24 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CPELXLSAUQHCOX-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "79.90400" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "78.91889" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Br-]" xsd:string
+
+[Term]
+id: CHEBI:15986
+name: polynucleotide
+namespace: chebi_ontology
+alt_id: CHEBI:13672
+alt_id: CHEBI:14859
+alt_id: CHEBI:8312
+def: "A nucleobase-containing molecular entity with a polymeric structure comprised of a linear sequence of 13 or more nucleotide residues." []
+subset: 3_STAR
+synonym: "Polynucleotide" EXACT [KEGG_COMPOUND]
+synonym: "polynucleotides" RELATED [ChEBI]
+xref: KEGG:C00419
+is_a: CHEBI:33695 ! information biomacromolecule
+is_a: CHEBI:61120 ! nucleobase-containing molecular entity
+relationship: has_part CHEBI:50319 ! nucleotide residue
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "(C5H8O6PR)n.C10H17O10PR2" xsd:string
 
 [Term]
 id: CHEBI:16042
@@ -7967,6 +7985,81 @@ is_a: CHEBI:33608 ! hydrogen molecular entity
 is_a: CHEBI:37577 ! heteroatomic molecular entity
 
 [Term]
+id: CHEBI:33694
+name: biomacromolecule
+namespace: chebi_ontology
+def: "A macromolecule formed by a living organism." []
+subset: 3_STAR
+synonym: "biomacromolecules" RELATED [ChEBI]
+synonym: "biopolymer" EXACT IUPAC_NAME [IUPAC]
+synonym: "Biopolymere" RELATED [ChEBI]
+synonym: "biopolymers" RELATED [ChEBI]
+is_a: CHEBI:33839 ! macromolecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33695
+name: information biomacromolecule
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "genetically encoded biomacromolecules" RELATED [ChEBI]
+synonym: "genetically encoded biopolymers" RELATED [ChEBI]
+synonym: "information biomacromolecules" RELATED [ChEBI]
+synonym: "information biopolymers" RELATED [ChEBI]
+synonym: "information macromolecule" RELATED [ChEBI]
+synonym: "information macromolecules" RELATED [ChEBI]
+is_a: CHEBI:33694 ! biomacromolecule
+
+[Term]
+id: CHEBI:33696
+name: nucleic acid
+namespace: chebi_ontology
+def: "A macromolecule made up of nucleotide units and hydrolysable into certain pyrimidine or purine bases (usually adenine, cytosine, guanine, thymine, uracil), D-ribose or 2-deoxy-D-ribose and phosphoric acid." []
+subset: 3_STAR
+synonym: "acide nucleique" RELATED [ChEBI]
+synonym: "acides nucleiques" RELATED [ChEBI]
+synonym: "acido nucleico" RELATED [ChEBI]
+synonym: "acidos nucleicos" RELATED [ChEBI]
+synonym: "NA" RELATED [ChEBI]
+synonym: "nucleic acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "Nukleinsaeure" RELATED [ChEBI]
+synonym: "Nukleinsaeuren" RELATED [ChEBI]
+is_a: CHEBI:15986 ! polynucleotide
+relationship: has_part CHEBI:33791 ! canonical nucleoside residue
+relationship: has_part CHEBI:50297 ! canonical nucleotide residue
+
+[Term]
+id: CHEBI:33697
+name: ribonucleic acid
+namespace: chebi_ontology
+def: "High molecular weight, linear polymers, composed of nucleotides containing ribose and linked by phosphodiester bonds; RNA is central to the synthesis of proteins." []
+subset: 3_STAR
+synonym: "pentosenucleic acids" RELATED [ChemIDplus]
+synonym: "ribonucleic acid" EXACT [IUPAC]
+synonym: "ribonucleic acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "ribonucleic acids" RELATED [ChEBI]
+synonym: "Ribonukleinsaeure" RELATED [ChEBI]
+synonym: "ribose nucleic acid" RELATED [ChEBI]
+synonym: "RNA" RELATED [IUPAC]
+synonym: "RNS" RELATED [ChEBI]
+synonym: "yeast nucleic acid" RELATED [ChEBI]
+xref: CAS:63231-63-0 "ChemIDplus"
+is_a: CHEBI:33696 ! nucleic acid
+relationship: has_part CHEBI:33792 ! canonical ribonucleoside residue
+relationship: has_part CHEBI:50299 ! canonical ribonucleotide residue
+
+[Term]
+id: CHEBI:33699
+name: messenger RNA
+namespace: chebi_ontology
+def: "An RNA molecule that transfers the coding information for protein synthesis from the chromosomes to the ribosomes mRNA is formed from a DNA template by transcription. It may be a copy of a single gene or of several adjacent genes (polycistronic mRNA). On the ribosome, the sequence is converted into the programmed amino acid sequence through translation." []
+subset: 3_STAR
+synonym: "messenger RNA" EXACT IUPAC_NAME [IUPAC]
+synonym: "mRNA" RELATED [IUPAC]
+synonym: "template RNA" RELATED [ChEBI]
+is_a: CHEBI:33697 ! ribonucleic acid
+
+[Term]
 id: CHEBI:33702
 name: polyatomic cation
 namespace: chebi_ontology
@@ -8075,6 +8168,30 @@ is_a: CHEBI:33676 ! d-block molecular entity
 relationship: has_part CHEBI:33366 ! copper group element atom
 
 [Term]
+id: CHEBI:33791
+name: canonical nucleoside residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "canonical nucleoside residues" RELATED [ChEBI]
+synonym: "common nucleoside residues" RELATED [CBN]
+synonym: "nucleoside residue" RELATED [CBN]
+synonym: "standard nucleoside residues" RELATED [ChEBI]
+is_a: CHEBI:50320 ! nucleoside residue
+
+[Term]
+id: CHEBI:33792
+name: canonical ribonucleoside residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "canonical ribonucleoside residues" RELATED [ChEBI]
+synonym: "common ribonucleoside residue" RELATED [CBN]
+synonym: "common ribonucleoside residues" RELATED [CBN]
+synonym: "N" RELATED [CBN]
+synonym: "Nuc" RELATED [CBN]
+synonym: "standard ribonucleoside residues" RELATED [ChEBI]
+is_a: CHEBI:33791 ! canonical nucleoside residue
+
+[Term]
 id: CHEBI:33822
 name: organic hydroxy compound
 namespace: chebi_ontology
@@ -8141,6 +8258,20 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H8O3R2" xsd:stri
 property_value: http://purl.obolibrary.org/obo/chebi/mass "116.115" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "116.04734" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H]1([C@H]([C@@H](*)[C@@H](O1)*)O)CO" xsd:string
+
+[Term]
+id: CHEBI:33839
+name: macromolecule
+namespace: chebi_ontology
+def: "A macromolecule is a molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." []
+subset: 3_STAR
+synonym: "macromolecule" EXACT IUPAC_NAME [IUPAC]
+synonym: "macromolecules" RELATED [ChEBI]
+synonym: "polymer" RELATED [ChEBI]
+synonym: "polymer molecule" RELATED [IUPAC]
+synonym: "polymers" RELATED [ChEBI]
+xref: Wikipedia:Macromolecule
+is_a: CHEBI:36357 ! polyatomic entity
 
 [Term]
 id: CHEBI:33853
@@ -12236,6 +12367,22 @@ synonym: "protective agents" RELATED [ChEBI]
 is_a: CHEBI:23888 ! drug
 
 [Term]
+id: CHEBI:50297
+name: canonical nucleotide residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "canonical nucleotide residues" RELATED [ChEBI]
+is_a: CHEBI:50319 ! nucleotide residue
+
+[Term]
+id: CHEBI:50299
+name: canonical ribonucleotide residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "canonical ribonucleotide residues" RELATED [ChEBI]
+is_a: CHEBI:50297 ! canonical nucleotide residue
+
+[Term]
 id: CHEBI:50312
 name: onium compound
 namespace: chebi_ontology
@@ -12313,6 +12460,22 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MGFYSGNNHQQTJW-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "128.92035" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "128.91957" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][I+][H]" xsd:string
+
+[Term]
+id: CHEBI:50319
+name: nucleotide residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "nucleotide residues" RELATED [ChEBI]
+is_a: CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:50320
+name: nucleoside residue
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "nucleoside residues" RELATED [ChEBI]
+is_a: CHEBI:33247 ! organic group
 
 [Term]
 id: CHEBI:50325

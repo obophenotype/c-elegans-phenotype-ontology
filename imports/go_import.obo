@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-05-13/imports/go_import.owl
+data-version: wbphenotype/releases/2019-05-14/imports/go_import.owl
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -4442,6 +4442,15 @@ is_a: GO:0043170 ! macromolecule metabolic process
 is_a: GO:1901576 ! organic substance biosynthetic process
 
 [Term]
+id: GO:0009266
+name: response to temperature stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus." [GOC:hb]
+synonym: "response to thermal stimulus" EXACT []
+xref: MIPS_funcat:34.11.09
+is_a: GO:0009628 ! response to abiotic stimulus
+
+[Term]
 id: GO:0009295
 name: nucleoid
 namespace: cellular_component
@@ -5531,6 +5540,27 @@ is_a: GO:0031122 ! cytoplasmic microtubule organization
 intersection_of: GO:0007019 ! microtubule depolymerization
 intersection_of: occurs_in GO:0005737 ! cytoplasm
 relationship: occurs_in GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0010939
+name: regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that modulates the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [PMID:16507998]
+is_a: GO:0010941 ! regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0070265 ! necrotic cell death
+relationship: regulates GO:0070265 ! necrotic cell death
+
+[Term]
+id: GO:0010940
+name: positive regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that increases the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [PMID:16507998]
+is_a: GO:0010939 ! regulation of necrotic cell death
+is_a: GO:0010942 ! positive regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0070265 ! necrotic cell death
+relationship: positively_regulates GO:0070265 ! necrotic cell death
 
 [Term]
 id: GO:0010941
@@ -9880,6 +9910,13 @@ is_a: GO:0033365 ! protein localization to organelle
 creation_date: 2012-11-07T15:45:54Z
 
 [Term]
+id: GO:0034608
+name: vulval location
+namespace: biological_process
+def: "Location, by the male, of his partner's vulva when backing along the ventral side of the hermaphrodite during mating. The male stops at the vulva, coordinates his movements to the hermaphrodite's, and positions his tail precisely over the vulva so that he may insert his spicules and ejaculate." [PMID:18050467]
+is_a: GO:0060179 ! male mating behavior
+
+[Term]
 id: GO:0034609
 name: spicule insertion
 namespace: biological_process
@@ -10573,6 +10610,17 @@ def: "The cell cycle process in which two small cells are generated, as byproduc
 is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
 is_a: GO:0033206 ! meiotic cytokinesis
 relationship: part_of GO:0007143 ! female meiotic nuclear division
+
+[Term]
+id: GO:0040040
+name: thermosensory behavior
+namespace: biological_process
+def: "Behavior that is dependent upon the sensation of temperature." [GOC:ems]
+synonym: "behavioral response to temperature stimulus" EXACT []
+synonym: "behavioural response to temperature stimulus" EXACT []
+synonym: "thermosensory behaviour" EXACT []
+is_a: GO:0007610 ! behavior
+is_a: GO:0009266 ! response to temperature stimulus
 
 [Term]
 id: GO:0042023
@@ -11289,6 +11337,16 @@ intersection_of: regulates GO:0043050 ! pharyngeal pumping
 relationship: regulates GO:0043050 ! pharyngeal pumping
 
 [Term]
+id: GO:0043052
+name: thermotaxis
+namespace: biological_process
+def: "The directed movement of a motile cell or organism in response to a temperature gradient. Movement may be towards either a higher or lower temperature." [GOC:cab1, WB_REF:cgc467]
+synonym: "taxis in response to temperature stimulus" EXACT []
+xref: Wikipedia:Thermotaxis
+is_a: GO:0009266 ! response to temperature stimulus
+is_a: GO:0042330 ! taxis
+
+[Term]
 id: GO:0043053
 name: dauer entry
 namespace: biological_process
@@ -11488,6 +11546,18 @@ synonym: "macromolecule metabolism" EXACT []
 synonym: "multicellular organismal macromolecule metabolic process" NARROW []
 synonym: "organismal macromolecule metabolism" EXACT []
 is_a: GO:0071704 ! organic substance metabolic process
+
+[Term]
+id: GO:0043186
+name: P granule
+namespace: cellular_component
+alt_id: GO:0018994
+def: "A small cytoplasmic, non-membranous RNA/protein complex aggregates in the primordial germ cells of many higher eukaryotes." [GOC:dph, GOC:kmv, PMID:11262230]
+synonym: "germline granule" EXACT []
+synonym: "nuage" BROAD []
+synonym: "polar granule" EXACT []
+is_a: GO:0036464 ! cytoplasmic ribonucleoprotein granule
+relationship: part_of GO:0060293 ! germ plasm
 
 [Term]
 id: GO:0043226
@@ -12924,6 +12994,15 @@ synonym: "synaptic junction" EXACT []
 xref: NIF_Subcellular:sao914572699
 xref: Wikipedia:Chemical_synapse
 is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0045495
+name: pole plasm
+namespace: cellular_component
+def: "Differentiated cytoplasm associated with a pole (animal, vegetal, anterior, or posterior) of an oocyte, egg or early embryo." [GOC:kmv, PMID:17113380]
+synonym: "germ plasm" NARROW []
+synonym: "polar plasm" EXACT []
+is_a: GO:0005737 ! cytoplasm
 
 [Term]
 id: GO:0045595
@@ -18145,6 +18224,14 @@ intersection_of: regulates GO:0048468 ! cell development
 relationship: regulates GO:0048468 ! cell development
 
 [Term]
+id: GO:0060293
+name: germ plasm
+namespace: cellular_component
+def: "Differentiated cytoplasm associated with a pole of an oocyte, egg or early embryo that will be inherited by the cells that will give rise to the germ line." [GOC:dph]
+xref: Wikipedia:Germ_plasm
+is_a: GO:0045495 ! pole plasm
+
+[Term]
 id: GO:0060322
 name: head development
 namespace: biological_process
@@ -18258,6 +18345,19 @@ def: "The progression of a skeletal muscle organ over time from its initial form
 is_a: GO:0007517 ! muscle organ development
 created_by: dph
 creation_date: 2009-04-10T08:25:12Z
+
+[Term]
+id: GO:0060547
+name: negative regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that decreases the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0010939 ! regulation of necrotic cell death
+is_a: GO:0060548 ! negative regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0070265 ! necrotic cell death
+relationship: negatively_regulates GO:0070265 ! necrotic cell death
+created_by: dph
+creation_date: 2009-04-13T01:51:25Z
 
 [Term]
 id: GO:0060548
@@ -19096,6 +19196,16 @@ is_a: GO:0032880 ! regulation of protein localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0045184 ! establishment of protein localization
 relationship: regulates GO:0045184 ! establishment of protein localization
+
+[Term]
+id: GO:0070265
+name: necrotic cell death
+namespace: biological_process
+def: "A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues." [GOC:mtg_apoptosis, PMID:18846107, PMID:20823910]
+comment: Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'.
+synonym: "cellular necrosis" EXACT [GOC:add]
+synonym: "necrosis" BROAD [GOC:mah]
+is_a: GO:0008219 ! cell death
 
 [Term]
 id: GO:0070382
