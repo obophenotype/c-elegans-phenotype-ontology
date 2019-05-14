@@ -2533,6 +2533,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002508>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002509>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002510>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002511>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002512>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002513>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -6977,7 +6979,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000478> "WBPhenotype:0000478"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/WBPhenotype_0000478> <http://purl.obolibrary.org/obo/wbphenotype#phenotype_slim_wb>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000478> "isothermal tracking behavior variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000478> <http://purl.obolibrary.org/obo/WBPhenotype_0000525>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000478> <http://purl.obolibrary.org/obo/WBPhenotype_0002513>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000479> (egg pale)
 
@@ -25156,6 +25158,23 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002511> "WBPhenotype:0002511"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002511> "fewer glutamatergic neurons"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002511> <http://purl.obolibrary.org/obo/WBPhenotype_0002510>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002512> (thermosensory behavior variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GO:0040040") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002512> "Variations in behavior that is dependent upon the sensation of temperature, compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002512> "thermosensory behavior abnormal"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002512> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002512> "WBPhenotype:0002512"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002512> "thermosensory behavior variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002512> <http://purl.obolibrary.org/obo/WBPhenotype_0000525>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002513> (thermotaxis variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GO:0043052"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002513> "Any variation in the directed movement of a worm in response to a specific temperature gradient compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002513> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002513> "WBPhenotype:0002513"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002513> "thermotaxis variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002513> <http://purl.obolibrary.org/obo/WBPhenotype_0002512>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
