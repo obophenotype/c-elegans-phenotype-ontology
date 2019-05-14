@@ -370,6 +370,16 @@
       "type" : "CLASS",
       "lbl" : "organized"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#correlates_with",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "correlates_with"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000937",
       "meta" : {
         "definition" : {
@@ -468,6 +478,33 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased duration"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000014",
+      "meta" : {
+        "definition" : {
+          "val" : "A composite chromatic quality composed of hue, saturation and intensity parts.",
+          "xrefs" : [ "PATOC:GVG" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "relative color",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "colour",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PATO:0000020"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "color"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000498",
       "meta" : {
@@ -6010,6 +6047,27 @@
       "type" : "CLASS",
       "lbl" : "concavity"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality inhering in a bearer by virtue of the bearer's having or lacking of substances produced by living organisms that have a color resulting from selective color absorption.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Biological_pigment" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2010-08-09T04:14:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "george"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "degree of pigmentation"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001159",
       "meta" : {
         "definition" : {
@@ -7350,13 +7408,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002083",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001555"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001716",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001662"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001555"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001570",
       "pred" : "is_a",
@@ -7373,6 +7431,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001393",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001374"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001835",
       "pred" : "is_a",
@@ -7422,13 +7484,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001625",
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000014",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001559"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001300"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001678",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001029"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001625",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001559"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000068",
       "pred" : "is_a",
@@ -7942,13 +8008,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000665",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000016"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000462"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000665",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000016"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000303",
       "pred" : "is_a",
@@ -8133,6 +8199,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001510",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001509"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "pred" : "http://purl.obolibrary.org/obo/pato#correlates_with",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001300",
       "pred" : "is_a",
@@ -8355,7 +8425,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-05-13/imports/pato_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-05-14/imports/pato_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-05-13/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-05-14/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -3372,7 +3372,7 @@ def: "Variations in the ability of an animal to remain within a defined temperat
 subset: phenotype_slim_wb
 synonym: "isothermal tracking behavior abnormal" NARROW []
 synonym: "thermotaxis abnormal" RELATED []
-is_a: WBPhenotype:0000525 ! organism behavior variant
+is_a: WBPhenotype:0002513 ! thermotaxis variant
 
 [Term]
 id: WBPhenotype:0000479
@@ -17475,6 +17475,19 @@ id: WBPhenotype:0002511
 name: fewer glutamatergic neurons
 def: "Animals exhibit fewer glutamatergic neurons compared to control animals." [WB:WBPaper00053165, WB:WBPerson2987, WB:WBPerson3252]
 is_a: WBPhenotype:0002510 ! fewer neurons
+
+[Term]
+id: WBPhenotype:0002512
+name: thermosensory behavior variant
+def: "Variations in behavior that is dependent upon the sensation of temperature, compared to control." [GO:0040040, WB:WBPerson2987]
+synonym: "thermosensory behavior abnormal" NARROW []
+is_a: WBPhenotype:0000525 ! organism behavior variant
+
+[Term]
+id: WBPhenotype:0002513
+name: thermotaxis variant
+def: "Any variation in the directed movement of a worm in response to a specific temperature gradient compared to control." [GO:0043052, WB:WBPerson2987]
+is_a: WBPhenotype:0002512 ! thermosensory behavior variant
 
 [Term]
 id: WBPhenotype:0004001
