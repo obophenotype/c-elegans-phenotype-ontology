@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-05-14/imports/go_import.owl
+data-version: wbphenotype/releases/2019-06-05/imports/go_import.owl
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -4485,6 +4485,7 @@ synonym: "protein secretion resulting in cell fate commitment" NARROW []
 is_a: GO:0002790 ! peptide secretion
 is_a: GO:0015031 ! protein transport
 is_a: GO:0032940 ! secretion by cell
+is_a: GO:0035592 ! establishment of protein localization to extracellular region
 
 [Term]
 id: GO:0009308
@@ -6699,10 +6700,14 @@ is_a: GO:0008641 ! ubiquitin-like modifier activating enzyme activity
 id: GO:0019783
 name: ubiquitin-like protein-specific protease activity
 namespace: molecular_function
+alt_id: GO:1904454
+alt_id: GO:1904455
 def: "Catalysis of the hydrolysis of peptide or isopeptide bonds within small proteins such as ubiquitin or ubiquitin-like proteins (e.g. APG8, ISG15, NEDD8, SUMO), or between the small protein and a larger protein to which it has been conjugated." [GOC:ma, GOC:mah]
 synonym: "small conjugating protein-specific protease activity" EXACT [GOC:dph]
 synonym: "ubiquitin-like specific protease activity" NARROW []
 synonym: "ubiquitin-like-protein-specific protease activity" NARROW []
+synonym: "ubiquitin-specific protease activity involved in negative regulation of ERAD pathway" NARROW []
+synonym: "ubiquitin-specific protease activity involved in positive regulation of ERAD pathway" NARROW []
 is_a: GO:0008234 ! cysteine-type peptidase activity
 
 [Term]
@@ -7581,7 +7586,6 @@ def: "A structure lying external to one or more cells, which provides structural
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pir
-subset: goslim_plant
 synonym: "matrisome" NARROW []
 synonym: "proteinaceous extracellular matrix" EXACT []
 xref: MIPS_funcat:70.27.01
@@ -9441,8 +9445,8 @@ namespace: biological_process
 def: "The controlled release of a substance by a cell." [GOC:mah]
 synonym: "cellular secretion" EXACT []
 xref: Wikipedia:Secretion
-is_a: GO:0009987 ! cellular process
 is_a: GO:0046903 ! secretion
+is_a: GO:0140352 ! export from cell
 
 [Term]
 id: GO:0032956
@@ -10187,6 +10191,18 @@ intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
 created_by: rfoulger
 creation_date: 2010-05-14T01:14:37Z
+
+[Term]
+id: GO:0035592
+name: establishment of protein localization to extracellular region
+namespace: biological_process
+def: "The directed movement of a protein to a specific location within the extracellular region." [GOC:bf, GOC:BHF]
+synonym: "establishment of protein localisation in extracellular region" EXACT [GOC:mah]
+synonym: "establishment of protein localization in extracellular region" EXACT [GOC:curators]
+is_a: GO:0045184 ! establishment of protein localization
+is_a: GO:0071692 ! protein localization to extracellular region
+created_by: rfoulger
+creation_date: 2010-11-09T10:25:08Z
 
 [Term]
 id: GO:0035637
@@ -17939,14 +17955,18 @@ is_a: GO:0048878 ! chemical homeostasis
 id: GO:0055085
 name: transmembrane transport
 namespace: biological_process
+alt_id: GO:0090662
 def: "The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other." [GOC:dph, GOC:jid]
-comment: Transmembrane transport requires transport of a solute across a lipid bilayer. Note that transport through the nuclear pore complex is not transmembrane because the nuclear membrane is a double membrane and is not traversed. For transport through the nuclear pore, consider instead the term 'nucleocytoplasmic transport ; GO:0006913' and its children. Note also that this term is not intended for use in annotating lateral movement within membranes.
+comment: Transmembrane transport is the transport of a solute across a lipid bilayer. Note that transport through the nuclear pore complex is not transmembrane because the nuclear membrane is a double membrane and is not traversed. For transport through the nuclear pore, consider instead the term 'nucleocytoplasmic transport ; GO:0006913' and its children. Note also that this term is not intended for use in annotating lateral movement within membranes.
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pombe
 subset: goslim_yeast
+synonym: "ATP hydrolysis coupled transmembrane transport" NARROW []
 synonym: "membrane transport" EXACT []
 is_a: GO:0006810 ! transport
+created_by: tanyaberardini
+creation_date: 2015-10-21T13:22:47Z
 
 [Term]
 id: GO:0055115
@@ -18953,6 +18973,18 @@ created_by: dph
 creation_date: 2018-04-23T14:32:23Z
 
 [Term]
+id: GO:0062125
+name: regulation of mitochondrial gene expression
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of mitochondrial gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product or products (proteins or RNA)." [PMID:28285835]
+is_a: GO:0010468 ! regulation of gene expression
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0140053 ! mitochondrial gene expression
+relationship: regulates GO:0140053 ! mitochondrial gene expression
+created_by: dph
+creation_date: 2019-05-30T16:45:04Z
+
+[Term]
 id: GO:0065003
 name: protein-containing complex assembly
 namespace: biological_process
@@ -19084,6 +19116,7 @@ synonym: "regulation of mitochondrial protein biosynthesis" EXACT [GOC:mah]
 synonym: "regulation of mitochondrial protein formation" EXACT [GOC:mah]
 synonym: "regulation of mitochondrial protein synthesis" EXACT [GOC:mah]
 is_a: GO:0006417 ! regulation of translation
+is_a: GO:0062125 ! regulation of mitochondrial gene expression
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0032543 ! mitochondrial translation
 relationship: regulates GO:0032543 ! mitochondrial translation
@@ -19485,6 +19518,17 @@ def: "The developmental process in which an organism emerges from a surrounding 
 is_a: GO:0032501 ! multicellular organismal process
 created_by: midori
 creation_date: 2010-02-19T04:23:55Z
+
+[Term]
+id: GO:0071692
+name: protein localization to extracellular region
+namespace: biological_process
+def: "Any process in which a protein is transported from one specific location in the extracellular region to another, or maintained in a specific extracellular location." [GOC:mah]
+synonym: "protein localisation in extracellular region" EXACT [GOC:mah]
+synonym: "protein localization in extracellular region" EXACT [GOC:curators]
+is_a: GO:0008104 ! protein localization
+created_by: midori
+creation_date: 2010-02-25T04:00:13Z
 
 [Term]
 id: GO:0071695
@@ -20695,8 +20739,8 @@ relationship: part_of GO:0098609 ! cell-cell adhesion
 id: GO:0098657
 name: import into cell
 namespace: biological_process
-def: "The directed movement of some substance from outside of a cell into the cytoplasmic compartment. This may occur via transport across the plasma membrane or via endocytosis." [GOC:dos]
-synonym: "uptake" EXACT []
+def: "The directed movement of some substance from outside of a cell into a cell. This may occur via transport across the plasma membrane or via endocytosis." [GOC:dos]
+synonym: "uptake" BROAD []
 is_a: GO:0006810 ! transport
 
 [Term]
@@ -20955,7 +20999,7 @@ relationship: regulates GO:0099537 ! trans-synaptic signaling
 id: GO:0099500
 name: vesicle fusion to plasma membrane
 namespace: biological_process
-def: "Fusion of the membrane of a vesicle with the plasma membrane, thereby releasing its contents into the extracellular space." [ISBN:0071120009]
+def: "Fusion of the membrane of a vesicle with the plasma membrane, thereby releasing its contents into the extracellular space." [GOC:aruk, GOC:bc, ISBN:0071120009, PMID:18618940]
 is_a: GO:0006906 ! vesicle fusion
 is_a: GO:0140029 ! exocytic process
 
@@ -21588,6 +21632,17 @@ is_a: GO:0009987 ! cellular process
 relationship: has_part GO:0045026 ! plasma membrane fusion
 created_by: pg
 creation_date: 2018-08-13T18:38:18Z
+
+[Term]
+id: GO:0140352
+name: export from cell
+namespace: biological_process
+def: "The directed movement of some substance from a cell, into the extracellular region. This may occur via transport across the plasma membrane or via exocytosis." [GOC:pg]
+synonym: "efflux" BROAD []
+is_a: GO:0006810 ! transport
+is_a: GO:0009987 ! cellular process
+created_by: pg
+creation_date: 2019-05-22T11:20:45Z
 
 [Term]
 id: GO:1900006
@@ -24925,6 +24980,7 @@ def: "Any process that modulates the frequency, rate or extent of transcription 
 synonym: "regulation of mitochondrial transcription" EXACT [GOC:TermGenie]
 synonym: "regulation of transcription from mitochondrial promoter" EXACT []
 is_a: GO:0006355 ! regulation of transcription, DNA-templated
+is_a: GO:0062125 ! regulation of mitochondrial gene expression
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006390 ! mitochondrial transcription
 relationship: regulates GO:0006390 ! mitochondrial transcription
