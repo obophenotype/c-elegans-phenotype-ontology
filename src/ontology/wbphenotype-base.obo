@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-05/wbphenotype-base.owl
+data-version: wbphenotype/releases/2019-06-10/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -9592,10 +9592,11 @@ is_a: WBPhenotype:0000616 ! synapse morphology variant
 
 [Term]
 id: WBPhenotype:0001322
-name: vesicle number reduced
-def: "Total presynaptic vesicle number is reduced, possibly refecting a defect in the replenishment of synaptic vesicles compared to control." [pmid:16803962, WB:cab]
+name: obsolete vesicle number reduced
+def: "OBSOLETE. Total presynaptic vesicle number is reduced, possibly refecting a defect in the replenishment of synaptic vesicles compared to control." [pmid:16803962, WB:cab]
 comment: Electron microscopic analysis.
-is_a: WBPhenotype:0001332 ! vesicle number variant
+is_obsolete: true
+replaced_by: WBPhenotype:0001670
 
 [Term]
 id: WBPhenotype:0001323
@@ -12041,6 +12042,7 @@ is_a: WBPhenotype:0001321 ! presynaptic region morphology variant
 [Term]
 id: WBPhenotype:0001670
 name: presynaptic vesicle number reduced
+alt_id: WBPhenotype:0001322
 def: "Animals exhibit an overall decrease in the quantity of synaptic vesicles at the synapse compared to control animals." [WB:WBPaper00027305, WB:WBPerson712]
 synonym: "synaptic vesicle number reduced" RELATED []
 is_a: WBPhenotype:0001669 ! presynaptic vesicle number variant
@@ -17489,6 +17491,12 @@ id: WBPhenotype:0002513
 name: thermotaxis variant
 def: "Any variation in the directed movement of a worm in response to a specific temperature gradient compared to control." [GO:0043052, WB:WBPerson2987]
 is_a: WBPhenotype:0002512 ! thermosensory behavior variant
+
+[Term]
+id: WBPhenotype:0002514
+name: backing absent
+def: "Animals do not exhibit backward locomotion under conditions that induce backward locomotion in control animals." [WB:WBPerson261, WB:WBPerson2987]
+is_a: WBPhenotype:0001005 ! backward locomotion variant
 
 [Term]
 id: WBPhenotype:0004001
