@@ -2525,6 +2525,20 @@ intersection_of: bearer_of PATO:0001908 ! multinucleate
 relationship: bearer_of PATO:0001908 ! multinucleate
 
 [Term]
+id: CL:0000234
+name: phagocyte
+namespace: cell
+def: "Any cell capable of ingesting particulate matter via phagocytosis." [GOC:add, ISBN:0721601464]
+xref: BTO:0001044
+xref: FMA:83806
+is_a: CL:0000219 ! motile cell
+is_a: CL:0000325 ! stuff accumulating cell
+is_a: CL:0000473 ! defensive cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0006909 ! phagocytosis
+relationship: capable_of GO:0006909 ! phagocytosis
+
+[Term]
 id: CL:0000255
 name: eukaryotic cell
 namespace: cell
@@ -2645,6 +2659,13 @@ is_a: CL:0000003 ! native cell
 intersection_of: CL:0000003 ! native cell
 intersection_of: bearer_of PATO:0001375 ! haploid
 relationship: bearer_of PATO:0001375 ! haploid
+
+[Term]
+id: CL:0000473
+name: defensive cell
+namespace: cell
+def: "A cell whose primary function is to protect the organism." [JB:jb]
+is_a: CL:0000003 ! native cell
 
 [Term]
 id: CL:0000540
@@ -4313,6 +4334,14 @@ is_a: GO:0061024 ! membrane organization
 relationship: part_of GO:0016192 ! vesicle-mediated transport
 created_by: jl
 creation_date: 2013-12-19T15:26:17Z
+
+[Term]
+id: GO:0006909
+name: phagocytosis
+namespace: biological_process
+def: "A vesicle-mediated transport process that results in the engulfment of external particulate material by phagocytes and their delivery to the lysosome. The particles are initially contained within phagocytic vacuoles (phagosomes), which then fuse with primary lysosomes to effect digestion of the particles." [ISBN:0198506732]
+xref: Wikipedia:Phagocytosis
+is_a: GO:0016192 ! vesicle-mediated transport
 
 [Term]
 id: GO:0006915
@@ -8368,6 +8397,17 @@ intersection_of: GO:0031974 ! membrane-enclosed lumen
 intersection_of: part_of GO:0043226 ! organelle
 
 [Term]
+id: GO:0043277
+name: apoptotic cell clearance
+namespace: biological_process
+def: "The recognition and removal of an apoptotic cell by a neighboring cell or by a phagocyte." [GOC:rk, PMID:14685684]
+comment: Note that unlike mammals or Drosophila, C. elegans (and many lower organisms) do not have professional macrophages/phagocytes, instead cell corpses are engulfed by neighboring cells. Cell types that can function as engulfing cells include hypodermal cells, gonadal sheath cells, pharyngeal muscle cells, and intestinal cells.
+synonym: "apoptotic cell removal" EXACT []
+synonym: "efferocytosis" EXACT [PMID:17548650]
+synonym: "programmed cell clearance" EXACT []
+is_a: GO:0006909 ! phagocytosis
+
+[Term]
 id: GO:0043292
 name: contractile fiber
 namespace: cellular_component
@@ -10148,6 +10188,47 @@ is_a: GO:1903532 ! positive regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0009306 ! protein secretion
 relationship: positively_regulates GO:0009306 ! protein secretion
+
+[Term]
+id: GO:0050764
+name: regulation of phagocytosis
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of phagocytosis, the process in which phagocytes engulf external particulate material." [GOC:ai]
+is_a: GO:0060627 ! regulation of vesicle-mediated transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006909 ! phagocytosis
+relationship: regulates GO:0006909 ! phagocytosis
+
+[Term]
+id: GO:0050765
+name: negative regulation of phagocytosis
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of phagocytosis." [GOC:ai]
+synonym: "down regulation of phagocytosis" EXACT []
+synonym: "down-regulation of phagocytosis" EXACT []
+synonym: "downregulation of phagocytosis" EXACT []
+synonym: "inhibition of phagocytosis" NARROW []
+is_a: GO:0050764 ! regulation of phagocytosis
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006909 ! phagocytosis
+relationship: negatively_regulates GO:0006909 ! phagocytosis
+
+[Term]
+id: GO:0050766
+name: positive regulation of phagocytosis
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of phagocytosis." [GOC:ai]
+synonym: "activation of phagocytosis" NARROW []
+synonym: "stimulation of phagocytosis" NARROW []
+synonym: "up regulation of phagocytosis" EXACT []
+synonym: "up-regulation of phagocytosis" EXACT []
+synonym: "upregulation of phagocytosis" EXACT []
+is_a: GO:0050764 ! regulation of phagocytosis
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006909 ! phagocytosis
+relationship: positively_regulates GO:0006909 ! phagocytosis
 
 [Term]
 id: GO:0050767
@@ -15002,6 +15083,53 @@ intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
 relationship: positively_regulates GO:0038023 ! signaling receptor activity
 created_by: rfoulger
 creation_date: 2010-12-02T09:28:50Z
+
+[Term]
+id: GO:2000425
+name: regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050764 ! regulation of phagocytosis
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0043277 ! apoptotic cell clearance
+relationship: regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:11Z
+
+[Term]
+id: GO:2000426
+name: negative regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "negative regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "negative regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "negative regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050765 ! negative regulation of phagocytosis
+is_a: GO:2000425 ! regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0043277 ! apoptotic cell clearance
+relationship: negatively_regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:39Z
+
+[Term]
+id: GO:2000427
+name: positive regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "positive regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "positive regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "positive regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050766 ! positive regulation of phagocytosis
+is_a: GO:2000425 ! regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0043277 ! apoptotic cell clearance
+relationship: positively_regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:59Z
 
 [Term]
 id: GO:2001023
@@ -34259,7 +34387,7 @@ name: actively participates in
 def: "x actively participates in y if and only if x participates in y and x realizes some active role" []
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 inverse_of: RO:0002218 ! obsolete has active participant
 
 [Typedef]
@@ -36073,7 +36201,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: involved_in
