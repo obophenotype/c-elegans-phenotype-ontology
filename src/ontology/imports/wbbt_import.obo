@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-10/imports/wbbt_import.owl
+data-version: wbphenotype/releases/2019-06-11/imports/wbbt_import.owl
 ontology: wbphenotype/imports/wbbt_import
 
 [Term]
@@ -1569,6 +1569,15 @@ def: "neuron that senses and responds to mechanical stimuli, such as touch." [WB
 is_a: WBbt:0005759 ! sensory neuron
 
 [Term]
+id: WBbt:0008439
+name: M lineage cell
+namespace: worm_anatomy
+def: "A cell that is the M blast cell or is a lineal descendant of M." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2012-01-26T02:48:40Z
+
+[Term]
 id: WBbt:0008447
 name: somatic blastomere
 namespace: worm_anatomy
@@ -1595,6 +1604,33 @@ is_a: WBbt:0008422 ! sex organ
 relationship: part_of WBbt:0005747 ! reproductive system
 created_by: raymond
 creation_date: 2012-10-30T12:29:21Z
+
+[Term]
+id: WBbt:0008588
+name: C lineage cell
+namespace: worm_anatomy
+def: "A cell that is the C blast cell or is a lineal descendant of C." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2013-03-15T08:44:18Z
+
+[Term]
+id: WBbt:0008589
+name: D lineage cell
+namespace: worm_anatomy
+def: "A cell that is the D blast cell or is a lineal descendant of D." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2013-03-15T08:44:18Z
+
+[Term]
+id: WBbt:0008590
+name: P lineage cell
+namespace: worm_anatomy
+def: "A cell that is the P embryonic blast cell or is a lineal descendant of P." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2013-03-15T08:44:18Z
 
 [Term]
 id: WBbt:0008591
@@ -1632,6 +1668,33 @@ def: "Ventral ganglion neuroblasts present at hatching, located near the excreto
 is_a: WBbt:0006783 ! blast cell
 created_by: raymond
 creation_date: 2013-12-02T03:30:08Z
+
+[Term]
+id: WBbt:0008608
+name: B lineage cell
+namespace: worm_anatomy
+def: "A cell that is the B post-embryonic blast cell or is a lineal descendant of B, in male." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2014-11-10T03:11:46Z
+
+[Term]
+id: WBbt:0008611
+name: AB lineage cell
+namespace: worm_anatomy
+def: "A cell that is the AB blast cell or is a lineal descendant of AB." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2015-05-27T01:48:04Z
+
+[Term]
+id: WBbt:0008627
+name: MS lineage cell
+namespace: worm_anatomy
+def: "A cell that is the MS blast cell or is a lineal descendant of MS." [WB:rynl]
+is_a: WBbt:0004017 ! Cell
+created_by: raymond
+creation_date: 2016-01-08T08:26:06Z
 
 [Typedef]
 id: develops_from
