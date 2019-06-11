@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-10/imports/go_import.owl
+data-version: wbphenotype/releases/2019-06-11/imports/go_import.owl
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -2621,6 +2621,42 @@ xref: MIPS_funcat:20.09.07.27
 is_a: GO:0016050 ! vesicle organization
 is_a: GO:0090174 ! organelle membrane fusion
 relationship: part_of GO:0016192 ! vesicle-mediated transport
+
+[Term]
+id: GO:0006909
+name: phagocytosis
+namespace: biological_process
+def: "A vesicle-mediated transport process that results in the engulfment of external particulate material by phagocytes and their delivery to the lysosome. The particles are initially contained within phagocytic vacuoles (phagosomes), which then fuse with primary lysosomes to effect digestion of the particles." [ISBN:0198506732]
+xref: MIPS_funcat:36.25.16.01.03
+xref: Wikipedia:Phagocytosis
+is_a: GO:0016192 ! vesicle-mediated transport
+
+[Term]
+id: GO:0006910
+name: phagocytosis, recognition
+namespace: biological_process
+def: "The initial step in phagocytosis involving adhesion to bacteria, immune complexes and other particulate matter, or an apoptotic cell and based on recognition of factors such as bacterial cell wall components, opsonins like complement and antibody or protein receptors and lipids like phosphatidyl serine, and leading to intracellular signaling in the phagocytosing cell." [GOC:curators, ISBN:0781735149]
+comment: Note that cell surface molecules involved in the direct binding of bacteria may be also annotated to the molecular function term 'bacterial cell surface binding ; GO:0051635'. Note that cell surface molecules involved in the direct binding to opsonins such as complement components or antibodies may be also annotated to the term 'opsonin binding ; GO:0001846'.
+synonym: "recognition of phagocytosed substance by phagocytic cell" EXACT []
+is_a: GO:0008037 ! cell recognition
+intersection_of: GO:0008037 ! cell recognition
+intersection_of: part_of GO:0006909 ! phagocytosis
+relationship: has_part GO:0038024 ! cargo receptor activity
+relationship: part_of GO:0006897 ! endocytosis
+relationship: part_of GO:0006909 ! phagocytosis
+
+[Term]
+id: GO:0006911
+name: phagocytosis, engulfment
+namespace: biological_process
+def: "The internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis, including the membrane and cytoskeletal processes required, which involves one of three mechanisms: zippering of pseudopods around a target via repeated receptor-ligand interactions, sinking of the target directly into plasma membrane of the phagocytosing cell, or induced uptake via an enhanced membrane ruffling of the phagocytosing cell similar to macropinocytosis." [GOC:curators, ISBN:0781735149]
+synonym: "phagosome biosynthesis" RELATED []
+synonym: "phagosome formation" RELATED []
+is_a: GO:0099024 ! plasma membrane invagination
+intersection_of: GO:0099024 ! plasma membrane invagination
+intersection_of: part_of GO:0006909 ! phagocytosis
+relationship: part_of GO:0006897 ! endocytosis
+relationship: part_of GO:0006909 ! phagocytosis
 
 [Term]
 id: GO:0006913
@@ -5511,6 +5547,13 @@ intersection_of: negatively_regulates GO:0007005 ! mitochondrion organization
 relationship: negatively_regulates GO:0007005 ! mitochondrion organization
 
 [Term]
+id: GO:0010833
+name: telomere maintenance via telomere lengthening
+namespace: biological_process
+def: "Any process that contributes to the maintenance of proper telomeric length and structure by affecting and monitoring the activity of telomeric proteins and lengthening the telomeric DNA." [GOC:dph, GOC:tb]
+is_a: GO:0000723 ! telomere maintenance
+
+[Term]
 id: GO:0010927
 name: cellular component assembly involved in morphogenesis
 namespace: biological_process
@@ -7396,6 +7439,17 @@ xref: Wikipedia:Axon
 is_a: GO:0043005 ! neuron projection
 
 [Term]
+id: GO:0030425
+name: dendrite
+namespace: cellular_component
+def: "A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body." [GOC:aruk, GOC:bc, GOC:dos, GOC:mah, GOC:nln, ISBN:0198506732]
+xref: NIF_Subcellular:sao1211023249
+xref: Wikipedia:Dendrite
+is_a: GO:0043005 ! neuron projection
+is_a: GO:0120038 ! plasma membrane bounded cell projection part
+relationship: part_of GO:0097447 ! dendritic tree
+
+[Term]
 id: GO:0030516
 name: regulation of axon extension
 namespace: biological_process
@@ -7470,6 +7524,13 @@ namespace: biological_process
 def: "Partial constriction of the cytoplasm of an embryo to form a furrow that resembles a cleavage furrow but does not complete cytokinesis." [GOC:mah, PMID:10751167, PMID:7729583]
 is_a: GO:0032501 ! multicellular organismal process
 relationship: part_of GO:0009790 ! embryo development
+
+[Term]
+id: GO:0030590
+name: first cell cycle pseudocleavage
+namespace: biological_process
+def: "A process that occurs during the first cell cycle in an embryo, in which anterior cortical contractions culminate in a single partial constriction of the embryo called the pseudocleavage furrow. An example of this process is found in nematode worms." [GOC:mtg_sensu, PMID:7729583]
+is_a: GO:0030588 ! pseudocleavage
 
 [Term]
 id: GO:0030641
@@ -8230,6 +8291,15 @@ synonym: "G2/M transition DNA damage checkpoint" EXACT []
 is_a: GO:0000077 ! DNA damage checkpoint
 
 [Term]
+id: GO:0031573
+name: intra-S DNA damage checkpoint
+namespace: biological_process
+def: "A mitotic cell cycle checkpoint that slows DNA synthesis in response to DNA damage by the prevention of new origin firing and the stabilization of slow replication fork progression." [GOC:vw]
+synonym: "mitotic intra-S DNA damage checkpoint" EXACT []
+synonym: "S-phase checkpoint" BROAD []
+is_a: GO:0044773 ! mitotic DNA damage checkpoint
+
+[Term]
 id: GO:0031577
 name: spindle checkpoint
 namespace: biological_process
@@ -8241,10 +8311,11 @@ is_a: GO:0000075 ! cell cycle checkpoint
 
 [Term]
 id: GO:0031644
-name: regulation of neurological system process
+name: regulation of nervous system process
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of neurological system." [GOC:dph, GOC:mah, GOC:tb]
+def: "Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of the nervous system." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "regulation of neurological system process" EXACT []
 synonym: "regulation of neurophysiological process" EXACT []
 is_a: GO:0044057 ! regulation of system process
 intersection_of: GO:0008150 ! biological_process
@@ -8253,7 +8324,7 @@ relationship: regulates GO:0050877 ! nervous system process
 
 [Term]
 id: GO:0031645
-name: negative regulation of neurological system process
+name: negative regulation of nervous system process
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "down regulation of neurological process" EXACT []
@@ -8261,8 +8332,9 @@ synonym: "down-regulation of neurological process" EXACT []
 synonym: "downregulation of neurological process" EXACT []
 synonym: "inhibition of neurological process" NARROW []
 synonym: "negative regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "negative regulation of neurological system process" EXACT []
 synonym: "negative regulation of neurophysiological process" EXACT []
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050877 ! nervous system process
@@ -8270,17 +8342,18 @@ relationship: negatively_regulates GO:0050877 ! nervous system process
 
 [Term]
 id: GO:0031646
-name: positive regulation of neurological system process
+name: positive regulation of nervous system process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "activation of neurological process" NARROW []
 synonym: "positive regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "positive regulation of neurological system process" EXACT []
 synonym: "positive regulation of neurophysiological process" EXACT []
 synonym: "stimulation of neurological process" NARROW []
 synonym: "up regulation of neurological process" EXACT []
 synonym: "up-regulation of neurological process" EXACT []
 synonym: "upregulation of neurological process" EXACT []
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0050877 ! nervous system process
@@ -9260,6 +9333,17 @@ is_a: GO:0099568 ! cytoplasmic region
 is_a: GO:0120038 ! plasma membrane bounded cell projection part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: part_of GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0032839
+name: dendrite cytoplasm
+namespace: cellular_component
+def: "All of the contents of a dendrite, excluding the surrounding plasma membrane." [GOC:mah]
+synonym: "dendritic cytoplasm" EXACT []
+is_a: GO:0120111 ! neuron projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0030425 ! dendrite
+relationship: part_of GO:0030425 ! dendrite
 
 [Term]
 id: GO:0032847
@@ -10244,6 +10328,20 @@ created_by: rfoulger
 creation_date: 2011-04-01T10:50:47Z
 
 [Term]
+id: GO:0035825
+name: homologous recombination
+namespace: biological_process
+def: "A DNA recombination process that results in the equal exchange of genetic material between the recombining DNA molecules." [GOC:mah, PMID:11139492, PMID:17304215]
+synonym: "chromosomal crossover" RELATED [GOC:mah, Wikipedia:Chromosomal_crossover]
+synonym: "interchromosomal DNA recombination" EXACT []
+synonym: "interstrand DNA recombination" EXACT []
+synonym: "reciprocal DNA recombination" NARROW []
+xref: Wikipedia:Chromosomal_crossover
+is_a: GO:0006310 ! DNA recombination
+created_by: rfoulger
+creation_date: 2011-05-04T01:23:31Z
+
+[Term]
 id: GO:0035882
 name: defecation rhythm
 namespace: biological_process
@@ -10350,6 +10448,15 @@ is_a: GO:0051649 ! establishment of localization in cell
 relationship: part_of GO:0099504 ! synaptic vesicle cycle
 created_by: rebeccafoulger
 creation_date: 2014-06-26T11:03:08Z
+
+[Term]
+id: GO:0036477
+name: somatodendritic compartment
+namespace: cellular_component
+def: "The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon." [GOC:pad, GOC:PARL]
+is_a: GO:0097458 ! neuron part
+created_by: rebeccafoulger
+creation_date: 2014-07-24T10:06:19Z
 
 [Term]
 id: GO:0038023
@@ -11713,6 +11820,17 @@ intersection_of: regulates GO:0065003 ! protein-containing complex assembly
 relationship: regulates GO:0065003 ! protein-containing complex assembly
 
 [Term]
+id: GO:0043277
+name: apoptotic cell clearance
+namespace: biological_process
+def: "The recognition and removal of an apoptotic cell by a neighboring cell or by a phagocyte." [GOC:rk, PMID:14685684]
+comment: Note that unlike mammals or Drosophila, C. elegans (and many lower organisms) do not have professional macrophages/phagocytes, instead cell corpses are engulfed by neighboring cells. Cell types that can function as engulfing cells include hypodermal cells, gonadal sheath cells, pharyngeal muscle cells, and intestinal cells.
+synonym: "apoptotic cell removal" EXACT []
+synonym: "efferocytosis" EXACT [PMID:17548650]
+synonym: "programmed cell clearance" EXACT []
+is_a: GO:0006909 ! phagocytosis
+
+[Term]
 id: GO:0043292
 name: contractile fiber
 namespace: cellular_component
@@ -11915,6 +12033,17 @@ name: cellular protein complex disassembly
 namespace: biological_process
 def: "The disaggregation of a protein complex into its constituent components, occurring at the level of an individual cell. Protein complexes may have other associated non-protein prosthetic groups, such as nucleic acids, metal ions or carbohydrate groups." [GOC:jl]
 is_a: GO:0032984 ! protein-containing complex disassembly
+
+[Term]
+id: GO:0043652
+name: engulfment of apoptotic cell
+namespace: biological_process
+def: "The removal of the apoptotic cell by phagocytosis, by a neighboring cell or by a phagocyte." [GOC:rk, PMID:15536015]
+comment: This term should be used to annotate gene products from the engulfing cell that facilitate phagocytosis of apoptotic cells. It should not be mistaken with GO:0070782 'phosphatidylserine exposure on apoptotic cell surface', a process occurring in apoptotic cells that acts as a signal for engulfing cells. If gene products involved in such instances of phosphatidylserine exposure are shown to have a positive effect on engulfment, they may be annotated to GO:1901076 'positive regulation of engulfment of apoptotic cell'.
+synonym: "engulfment of apoptotic cell corpse" EXACT []
+synonym: "engulfment of cell corpse" EXACT []
+is_a: GO:0006911 ! phagocytosis, engulfment
+relationship: part_of GO:0043277 ! apoptotic cell clearance
 
 [Term]
 id: GO:0043900
@@ -15433,6 +15562,47 @@ intersection_of: positively_regulates GO:0009306 ! protein secretion
 relationship: positively_regulates GO:0009306 ! protein secretion
 
 [Term]
+id: GO:0050764
+name: regulation of phagocytosis
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of phagocytosis, the process in which phagocytes engulf external particulate material." [GOC:ai]
+is_a: GO:0060627 ! regulation of vesicle-mediated transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006909 ! phagocytosis
+relationship: regulates GO:0006909 ! phagocytosis
+
+[Term]
+id: GO:0050765
+name: negative regulation of phagocytosis
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of phagocytosis." [GOC:ai]
+synonym: "down regulation of phagocytosis" EXACT []
+synonym: "down-regulation of phagocytosis" EXACT []
+synonym: "downregulation of phagocytosis" EXACT []
+synonym: "inhibition of phagocytosis" NARROW []
+is_a: GO:0050764 ! regulation of phagocytosis
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006909 ! phagocytosis
+relationship: negatively_regulates GO:0006909 ! phagocytosis
+
+[Term]
+id: GO:0050766
+name: positive regulation of phagocytosis
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of phagocytosis." [GOC:ai]
+synonym: "activation of phagocytosis" NARROW []
+synonym: "stimulation of phagocytosis" NARROW []
+synonym: "up regulation of phagocytosis" EXACT []
+synonym: "up-regulation of phagocytosis" EXACT []
+synonym: "upregulation of phagocytosis" EXACT []
+is_a: GO:0050764 ! regulation of phagocytosis
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006909 ! phagocytosis
+relationship: positively_regulates GO:0006909 ! phagocytosis
+
+[Term]
 id: GO:0050767
 name: regulation of neurogenesis
 namespace: biological_process
@@ -17777,7 +17947,7 @@ def: "Any process that modulates the frequency, rate or extent of transmission o
 synonym: "regulation of conduction of nerve impulse" EXACT [GOC:dph]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0023051 ! regulation of signaling
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0019226 ! transmission of nerve impulse
 relationship: regulates GO:0019226 ! transmission of nerve impulse
@@ -17794,7 +17964,7 @@ synonym: "inhibition of transmission of nerve impulse" NARROW []
 synonym: "negative regulation of conduction of nerve impulse" EXACT [GOC:dph]
 is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0023057 ! negative regulation of signaling
-is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:0051969 ! regulation of transmission of nerve impulse
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0019226 ! transmission of nerve impulse
@@ -17813,7 +17983,7 @@ synonym: "up-regulation of transmission of nerve impulse" EXACT []
 synonym: "upregulation of transmission of nerve impulse" EXACT []
 is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0023056 ! positive regulation of signaling
-is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:0051969 ! regulation of transmission of nerve impulse
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0019226 ! transmission of nerve impulse
@@ -18003,6 +18173,54 @@ synonym: "binding, bridging" EXACT []
 synonym: "protein complex scaffold activity" RELATED []
 synonym: "protein-containing complex scaffold activity" RELATED []
 is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0060097
+name: cytoskeletal rearrangement involved in phagocytosis, engulfment
+namespace: biological_process
+def: "The assembly, arrangement, or disassembly of cytoskeletal structures that is involved in the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
+is_a: GO:0007010 ! cytoskeleton organization
+intersection_of: GO:0007010 ! cytoskeleton organization
+intersection_of: part_of GO:0006911 ! phagocytosis, engulfment
+relationship: part_of GO:0006911 ! phagocytosis, engulfment
+
+[Term]
+id: GO:0060099
+name: regulation of phagocytosis, engulfment
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
+is_a: GO:0030100 ! regulation of endocytosis
+is_a: GO:0050764 ! regulation of phagocytosis
+is_a: GO:1905153 ! regulation of membrane invagination
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006911 ! phagocytosis, engulfment
+relationship: regulates GO:0006911 ! phagocytosis, engulfment
+
+[Term]
+id: GO:0060100
+name: positive regulation of phagocytosis, engulfment
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
+is_a: GO:0045807 ! positive regulation of endocytosis
+is_a: GO:0050766 ! positive regulation of phagocytosis
+is_a: GO:0060099 ! regulation of phagocytosis, engulfment
+is_a: GO:1905155 ! positive regulation of membrane invagination
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006911 ! phagocytosis, engulfment
+relationship: positively_regulates GO:0006911 ! phagocytosis, engulfment
+
+[Term]
+id: GO:0060101
+name: negative regulation of phagocytosis, engulfment
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the internalization of bacteria, immune complexes and other particulate matter or of an apoptotic cell by phagocytosis." [GOC:dph]
+is_a: GO:0045806 ! negative regulation of endocytosis
+is_a: GO:0050765 ! negative regulation of phagocytosis
+is_a: GO:0060099 ! regulation of phagocytosis, engulfment
+is_a: GO:1905154 ! negative regulation of membrane invagination
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006911 ! phagocytosis, engulfment
+relationship: negatively_regulates GO:0006911 ! phagocytosis, engulfment
 
 [Term]
 id: GO:0060102
@@ -19798,6 +20016,19 @@ created_by: midori
 creation_date: 2010-12-08T04:25:26Z
 
 [Term]
+id: GO:0072428
+name: signal transduction involved in intra-S DNA damage checkpoint
+namespace: biological_process
+def: "A signal transduction process that contributes to an intra-S DNA damage checkpoint." [GOC:mah]
+is_a: GO:1902402 ! signal transduction involved in mitotic DNA damage checkpoint
+is_a: GO:1903464 ! negative regulation of mitotic cell cycle DNA replication
+intersection_of: GO:0035556 ! intracellular signal transduction
+intersection_of: part_of GO:0031573 ! intra-S DNA damage checkpoint
+relationship: part_of GO:0031573 ! intra-S DNA damage checkpoint
+created_by: midori
+creation_date: 2010-12-08T04:31:08Z
+
+[Term]
 id: GO:0072431
 name: signal transduction involved in mitotic G1 DNA damage checkpoint
 namespace: biological_process
@@ -20612,6 +20843,18 @@ created_by: paola
 creation_date: 2012-11-27T15:46:25Z
 
 [Term]
+id: GO:0097447
+name: dendritic tree
+namespace: cellular_component
+def: "The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches." [GOC:aruk, GOC:bc, NIF_Subcellular:sao172297168]
+xref: NIF_Subcellular:sao172297168
+is_a: GO:0043005 ! neuron projection
+relationship: has_part GO:0030425 ! dendrite
+relationship: part_of GO:0036477 ! somatodendritic compartment
+created_by: paola
+creation_date: 2012-12-17T12:31:49Z
+
+[Term]
 id: GO:0097458
 name: neuron part
 namespace: cellular_component
@@ -20917,6 +21160,13 @@ is_a: GO:0016192 ! vesicle-mediated transport
 intersection_of: GO:0016192 ! vesicle-mediated transport
 intersection_of: occurs_in GO:0045202 ! synapse
 relationship: occurs_in GO:0045202 ! synapse
+
+[Term]
+id: GO:0099024
+name: plasma membrane invagination
+namespace: biological_process
+def: "An infolding of the plasma membrane." [GOC:dos, GOC:vw]
+is_a: GO:0010324 ! membrane invagination
 
 [Term]
 id: GO:0099080
@@ -22390,6 +22640,77 @@ created_by: kmv
 creation_date: 2012-06-27T06:20:20Z
 
 [Term]
+id: GO:1901074
+name: regulation of engulfment of apoptotic cell
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
+synonym: "regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+is_a: GO:0060099 ! regulation of phagocytosis, engulfment
+is_a: GO:2000425 ! regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0043652 ! engulfment of apoptotic cell
+relationship: regulates GO:0043652 ! engulfment of apoptotic cell
+created_by: kmv
+creation_date: 2012-07-02T07:32:21Z
+
+[Term]
+id: GO:1901075
+name: negative regulation of engulfment of apoptotic cell
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
+synonym: "down regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "down regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "down regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "down-regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "down-regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "down-regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "downregulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "downregulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "downregulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "inhibition of engulfment of apoptotic cell" NARROW [GOC:TermGenie]
+synonym: "inhibition of engulfment of apoptotic cell corpse" NARROW [GOC:TermGenie]
+synonym: "inhibition of engulfment of cell corpse" NARROW [GOC:TermGenie]
+synonym: "negative regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "negative regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+is_a: GO:0060101 ! negative regulation of phagocytosis, engulfment
+is_a: GO:1901074 ! regulation of engulfment of apoptotic cell
+is_a: GO:2000426 ! negative regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0043652 ! engulfment of apoptotic cell
+relationship: negatively_regulates GO:0043652 ! engulfment of apoptotic cell
+created_by: kmv
+creation_date: 2012-07-02T07:32:43Z
+
+[Term]
+id: GO:1901076
+name: positive regulation of engulfment of apoptotic cell
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of engulfment of apoptotic cell." [GO:kmv, GOC:TermGenie, PMID:19402756]
+synonym: "activation of engulfment of apoptotic cell" NARROW [GOC:TermGenie]
+synonym: "activation of engulfment of apoptotic cell corpse" NARROW [GOC:TermGenie]
+synonym: "activation of engulfment of cell corpse" NARROW [GOC:TermGenie]
+synonym: "positive regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "positive regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "up regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "up regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "up regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "up-regulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "up-regulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "up-regulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+synonym: "upregulation of engulfment of apoptotic cell" EXACT [GOC:TermGenie]
+synonym: "upregulation of engulfment of apoptotic cell corpse" EXACT [GOC:TermGenie]
+synonym: "upregulation of engulfment of cell corpse" EXACT [GOC:TermGenie]
+is_a: GO:0060100 ! positive regulation of phagocytosis, engulfment
+is_a: GO:1901074 ! regulation of engulfment of apoptotic cell
+is_a: GO:2000427 ! positive regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0043652 ! engulfment of apoptotic cell
+relationship: positively_regulates GO:0043652 ! engulfment of apoptotic cell
+created_by: kmv
+creation_date: 2012-07-02T07:32:51Z
+
+[Term]
 id: GO:1901160
 name: primary amino compound metabolic process
 namespace: biological_process
@@ -22698,6 +23019,23 @@ is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0071704 ! organic substance metabolic process
 created_by: pr
 creation_date: 2012-11-05T11:04:40Z
+
+[Term]
+id: GO:1901588
+name: dendritic microtubule
+namespace: cellular_component
+def: "Any microtubule in a dendrite, a neuron projection." [GOC:TermGenie, NIF_Subcellular:sao110773650]
+synonym: "microtubule of dendrite" EXACT [GOC:TermGenie]
+synonym: "microtubulus of dendrite" EXACT [GOC:TermGenie]
+xref: NIF_Subcellular:sao110773650
+is_a: GO:0005874 ! microtubule
+is_a: GO:0097458 ! neuron part
+is_a: GO:0120038 ! plasma membrane bounded cell projection part
+intersection_of: GO:0005874 ! microtubule
+intersection_of: part_of GO:0030425 ! dendrite
+relationship: part_of GO:0030425 ! dendrite
+created_by: pr
+creation_date: 2012-11-07T14:37:30Z
 
 [Term]
 id: GO:1901608
@@ -26557,6 +26895,52 @@ created_by: rl
 creation_date: 2015-06-12T09:10:49Z
 
 [Term]
+id: GO:1904356
+name: regulation of telomere maintenance via telomere lengthening
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of telomere maintenance via telomere lengthening." [GO_REF:0000058, GOC:BHF, GOC:BHF_telomere, GOC:nc, GOC:TermGenie, PMID:23959892]
+is_a: GO:0032204 ! regulation of telomere maintenance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0010833 ! telomere maintenance via telomere lengthening
+relationship: regulates GO:0010833 ! telomere maintenance via telomere lengthening
+created_by: nc
+creation_date: 2015-06-12T16:53:16Z
+
+[Term]
+id: GO:1904357
+name: negative regulation of telomere maintenance via telomere lengthening
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of telomere maintenance via telomere lengthening." [GO_REF:0000058, GOC:BHF, GOC:BHF_telomere, GOC:nc, GOC:TermGenie, PMID:23959892]
+synonym: "down regulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+synonym: "down-regulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+synonym: "downregulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+synonym: "inhibition of telomere maintenance via telomere lengthening" NARROW [GOC:TermGenie]
+is_a: GO:0032205 ! negative regulation of telomere maintenance
+is_a: GO:1904356 ! regulation of telomere maintenance via telomere lengthening
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0010833 ! telomere maintenance via telomere lengthening
+relationship: negatively_regulates GO:0010833 ! telomere maintenance via telomere lengthening
+created_by: nc
+creation_date: 2015-06-12T16:53:22Z
+
+[Term]
+id: GO:1904358
+name: positive regulation of telomere maintenance via telomere lengthening
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of telomere maintenance via telomere lengthening." [GO_REF:0000058, GOC:BHF, GOC:BHF_telomere, GOC:nc, GOC:TermGenie, PMID:23959892]
+synonym: "activation of telomere maintenance via telomere lengthening" NARROW [GOC:TermGenie]
+synonym: "up regulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+synonym: "up-regulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+synonym: "upregulation of telomere maintenance via telomere lengthening" EXACT [GOC:TermGenie]
+is_a: GO:0032206 ! positive regulation of telomere maintenance
+is_a: GO:1904356 ! regulation of telomere maintenance via telomere lengthening
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0010833 ! telomere maintenance via telomere lengthening
+relationship: positively_regulates GO:0010833 ! telomere maintenance via telomere lengthening
+created_by: nc
+creation_date: 2015-06-12T16:53:28Z
+
+[Term]
 id: GO:1904409
 name: regulation of secretory granule organization
 namespace: biological_process
@@ -29678,6 +30062,53 @@ intersection_of: positively_regulates GO:0007398 ! ectoderm development
 relationship: positively_regulates GO:0007398 ! ectoderm development
 created_by: vk
 creation_date: 2011-02-15T03:17:39Z
+
+[Term]
+id: GO:2000425
+name: regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050764 ! regulation of phagocytosis
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0043277 ! apoptotic cell clearance
+relationship: regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:11Z
+
+[Term]
+id: GO:2000426
+name: negative regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "negative regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "negative regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "negative regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050765 ! negative regulation of phagocytosis
+is_a: GO:2000425 ! regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0043277 ! apoptotic cell clearance
+relationship: negatively_regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:39Z
+
+[Term]
+id: GO:2000427
+name: positive regulation of apoptotic cell clearance
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of apoptotic cell clearance." [GOC:obol]
+synonym: "positive regulation of apoptotic cell removal" EXACT [GOC:obol]
+synonym: "positive regulation of efferocytosis" EXACT [GOC:obol]
+synonym: "positive regulation of programmed cell clearance" EXACT [GOC:obol]
+is_a: GO:0050766 ! positive regulation of phagocytosis
+is_a: GO:2000425 ! regulation of apoptotic cell clearance
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0043277 ! apoptotic cell clearance
+relationship: positively_regulates GO:0043277 ! apoptotic cell clearance
+created_by: rfoulger
+creation_date: 2011-02-25T11:50:59Z
 
 [Term]
 id: GO:2000542
