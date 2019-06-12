@@ -178,6 +178,23 @@
       "type" : "INDIVIDUAL",
       "lbl" : "term split"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001018",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "physical quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "physical quality"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000230",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -378,7 +395,7 @@
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
       "meta" : {
         "definition" : {
-          "val" : "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
+          "val" : "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -394,8 +411,14 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "definition"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "definition"
+        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://purl.obolibrary.org/obo/iao.owl"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "textual definition"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
@@ -498,6 +521,18 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "editor preferred label"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "editor preferred term"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "editor preferred term~editor preferred label"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "editor preferred label"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "PERSON:Daniel Schober"
         }, {
@@ -512,7 +547,7 @@
         } ]
       },
       "type" : "PROPERTY",
-      "lbl" : "editor preferred term"
+      "lbl" : "editor preferred label"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000078",
       "meta" : {
@@ -566,6 +601,23 @@
       "type" : "PROPERTY",
       "lbl" : "curator note"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001708",
+      "meta" : {
+        "definition" : {
+          "val" : "A size quality inhering in an bearer by virtue of the bearer's extension in one dimension.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "1-D extent"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "1-D extent"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000004",
       "meta" : {
         "definition" : {
@@ -616,10 +668,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "
@@ -806,6 +858,23 @@
       "type" : "PROPERTY",
       "lbl" : "has axiom label"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000051",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "morphology"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "morphology"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000120",
       "meta" : {
         "definition" : {
@@ -818,10 +887,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001900",
       "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://xmlns.com/foaf/0.1/page",
-          "val" : "https://github.com/oborel/obo-relations/wiki/ROAndTime"
-        } ]
+        "definition" : {
+          "val" : "An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context.",
+          "xrefs" : [ ]
+        }
       },
       "type" : "PROPERTY",
       "lbl" : "temporal interpretation"
@@ -857,16 +926,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has participant"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0001901",
-      "meta" : {
-        "definition" : {
-          "val" : "\n\n## Elucidation\n\nThis is used when the statement/axiom is assumed to hold true 'eternally'\n\n## How to interpret (informal)\n\nFirst the \"atemporal\" FOL is derived from the OWL using the standard\ninterpretation. This axiom is temporalized by embedding the axiom\nwithin a for-all-times quantified sentence. The t argument is added to\nall instantiation predicates and predicates that use this relation.\n\n## Example\n\n    Class: nucleus\n    SubClassOf: part_of some cell\n\n    forall t :\n      forall n :\n        instance_of(n,Nucleus,t)\n         implies\n        exists c :\n          instance_of(c,Cell,t)\n          part_of(n,c,t)\n\n## Notes\n\nThis interpretation is *not* the same as an at-all-times relation\n\n",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "INDIVIDUAL",
-      "lbl" : "axiom holds for all times"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001025",
       "meta" : {
@@ -1159,11 +1218,11 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] "
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an aggregate of human beings."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "an aggregate of human beings."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
           "val" : "MaterialEntity"
@@ -1389,10 +1448,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has member"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-      "type" : "PROPERTY",
-      "lbl" : "shorthand"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0001015",
       "meta" : {
@@ -1642,6 +1697,23 @@
       "type" : "PROPERTY",
       "lbl" : "role of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000117",
+      "meta" : {
+        "definition" : {
+          "val" : "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "size"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "size"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000087",
       "meta" : {
         "definition" : {
@@ -1678,6 +1750,23 @@
       },
       "type" : "PROPERTY",
       "lbl" : "BFO CLIF specification label"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001241",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality which inheres in a continuant.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "physical object quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/pato.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "physical object quality"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000226",
       "type" : "INDIVIDUAL",
@@ -1846,6 +1935,16 @@
       },
       "type" : "INDIVIDUAL",
       "lbl" : "terms merged"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "label"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "label"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000103",
       "meta" : {
@@ -2111,6 +2210,10 @@
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000409"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001241",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000230",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
@@ -2199,6 +2302,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000102"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000103",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
@@ -2247,9 +2354,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000122",
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000051",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000117",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000031",
       "pred" : "is_a",
@@ -2270,6 +2381,10 @@
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001708",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000117"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000023",
       "pred" : "is_a",
@@ -2295,6 +2410,10 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000050"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000122",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001708"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
@@ -2312,7 +2431,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-06-11/imports/iao_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-06-12/imports/iao_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
@@ -2320,6 +2439,10 @@
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0000057",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000002" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000004" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000066",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
