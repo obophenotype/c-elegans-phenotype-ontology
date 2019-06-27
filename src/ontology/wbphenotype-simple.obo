@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-14/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-06-27/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -266,11 +266,7 @@ def: "Any variation in the overall structure or appearance of the animal as it p
 subset: phenotype_slim_wb
 synonym: "larval body morphology abnormal" NARROW []
 synonym: "larval morphology abnormal" RELATED []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
 is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
@@ -279,7 +275,8 @@ name: adult body morphology variant
 def: "Any variation in the overall structure or appearance of the animal after it has completed progression through the larval stages compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 subset: phenotype_slim_wb
 synonym: "adult body morphology abnormal" NARROW []
-is_a: WBPhenotype:0000520 ! morphology variant
+is_a: WBPhenotype:0000072 ! body morphology variant
+is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000037
@@ -287,11 +284,6 @@ name: egg morphology variant
 def: "Any variation in the overall structure or appearance of fertilized oocytes that are laid compared to those laid by control animals." [WB:WBPaper00001075, WB:WBPerson2021]
 subset: phenotype_slim_wb
 synonym: "egg morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
 is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
@@ -573,12 +565,8 @@ id: WBPhenotype:0000071
 name: head morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of their anterior end (which typically includes the anterior sensilla, pharynx and all muscles that are innervated by the nerve ring) compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "head morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
 is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000072
@@ -586,19 +574,16 @@ name: body morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of their anatomy between the head and the tail compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 subset: phenotype_slim_wb
 synonym: "body morphology abnormal" NARROW []
-is_a: WBPhenotype:0000520 ! morphology variant
+is_a: WBPhenotype:0000532 ! body region morphology variant
+is_a: WBPhenotype:0000582 ! organism segment morphology variant
 
 [Term]
 id: WBPhenotype:0000073
 name: tail morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of the most posterior region of the body compared to control. The anterior bound of the tail is not well defined though it might range from the position of the post-deirids to the opening of the anus (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "tail morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
 is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000074
@@ -1597,12 +1582,7 @@ is_a: WBPhenotype:0000210 ! defecation contraction variant
 id: WBPhenotype:0000212
 name: body constriction
 def: "Animals contain body regions that are more narrow or drawn together than adjacent body regions." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000213
@@ -1735,12 +1715,7 @@ name: body size variant
 def: "Animals exhibit variations in the physical dimensions of its body compared to control animals of the same developmental stage." [WB:WBPerson712]
 comment: PATO:0000117.
 synonym: "body size abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000232
@@ -2070,6 +2045,7 @@ name: body region pigmentation variant
 def: "Animals exhibit variations in the accumulation or expression of biochromes or any other substances that alter transparency or translucency of a particular body region." [WB:WBPerson557]
 synonym: "body region pigmentation abnormal" NARROW []
 is_a: WBPhenotype:0000521 ! pigmentation variant
+is_a: WBPhenotype:0000532 ! body region morphology variant
 
 [Term]
 id: WBPhenotype:0000279
@@ -2944,12 +2920,7 @@ id: WBPhenotype:0000406
 name: lumpy
 def: "Animals have protrusions or bumps on their exterior which are not characteristic of control animals." [WB:WBPerson557]
 synonym: "Lpy" BROAD []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000407
@@ -2969,12 +2940,7 @@ id: WBPhenotype:0000409
 name: organism morphology variable
 def: "Animals exhibit variations in the form, structure or composition of any of its parts at different stages of the lifecycle, compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "Vab" BROAD []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000410
@@ -3272,12 +3238,7 @@ is_a: WBPhenotype:0000073 ! tail morphology variant
 id: WBPhenotype:0000453
 name: body protrusions
 def: "Any irregular swelling in discrete regions of the body region between the head and the tail." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000454
@@ -3758,12 +3719,7 @@ name: pigmentation variant
 def: "Animals exhibit variations in the accumulation or expression of biochromes or any other substances that alter transparency/translucency." [WB:WBPerson2021, WB:WBPerson557, WB:WBPerson712]
 subset: phenotype_slim_wb
 synonym: "pigmentation abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
+is_a: WBPhenotype:0000520 ! morphology variant
 
 [Term]
 id: WBPhenotype:0000522
@@ -3848,7 +3804,7 @@ id: WBPhenotype:0000532
 name: body region morphology variant
 def: "Animals exhibit variations in the form, structure or composition of a discrete region of their anatomy compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "body region morphology abnormal" NARROW []
-is_a: WBPhenotype:0000520 ! morphology variant
+is_a: WBPhenotype:0000535 ! organism morphology variant
 
 [Term]
 id: WBPhenotype:0000533
@@ -4202,19 +4158,14 @@ id: WBPhenotype:0000581
 name: body axis morphology variant
 def: "Animals exhibit variations in the form, structure or composition of a discrete axis (dorsal/ventral/anterior/posterior/transverse) of their anatomy, compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "body axis morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000582
 name: organism segment morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any anterior/posterior section of their anatomy compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "organism segment morphology abnormal" NARROW []
-is_a: WBPhenotype:0000520 ! morphology variant
+is_a: WBPhenotype:0000535 ! organism morphology variant
 
 [Term]
 id: WBPhenotype:0000583
@@ -5868,6 +5819,7 @@ def: "Animals exhibit variations in the form, structure or composition of the an
 synonym: "anterior body morphology abnormal" NARROW []
 synonym: "anterior region morphology abnormal" NARROW []
 synonym: "anterior region morphology variant" EXACT []
+is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000581 ! body axis morphology variant
 
 [Term]
@@ -5878,6 +5830,7 @@ def: "Animals exhibit variations in the form, structure or composition of the an
 synonym: "posterior body morphology abnormal" NARROW []
 synonym: "posterior region morphology abnormal" NARROW []
 synonym: "posterior region morphology variant" EXACT []
+is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000581 ! body axis morphology variant
 
 [Term]
@@ -6926,7 +6879,7 @@ name: developmental morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any of its parts during a given developmental stage compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 subset: phenotype_slim_wb
 synonym: "developmental morphology abnormal" NARROW []
-is_a: WBPhenotype:0000520 ! morphology variant
+is_a: WBPhenotype:0000535 ! organism morphology variant
 
 [Term]
 id: WBPhenotype:0000935
@@ -7032,13 +6985,8 @@ id: WBPhenotype:0000949
 name: pseudocoelom morphology variant
 def: "Any variation in the appearance of the body cavity compared to control. In C. elegans , an aberrancy in the psedocoelom can involve an accumulation of fluids or fluorescent reporters." [WB:WBPerson712]
 synonym: "pseudocoelom morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
 is_a: WBPhenotype:0000912 ! pericellular component morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0000950
@@ -7579,12 +7527,7 @@ name: sexually dimorphic morphology variant
 def: "Animals exhibit variations in the outcome of morphogenic processes required for formation or proper placement of sex-specific structures that distinguish the animal as one sex or the other in the population, from that observed for control animals." [GO:0009886, WB:WBPerson712]
 subset: phenotype_slim_wb
 synonym: "sexually dimorphic morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0001024
@@ -9620,12 +9563,7 @@ is_a: WBPhenotype:0000071 ! head morphology variant
 id: WBPhenotype:0001295
 name: body twisted
 def: "Any portion of the animal, between the head and the tail, appears distorted, usually due to uncharacteristic winding." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0001296
@@ -10318,12 +10256,7 @@ is_a: WBPhenotype:0001393 ! cell acidification variant
 id: WBPhenotype:0001395
 name: body vacuole
 def: "Vacuoles accumulate in the body. A vacuole is a closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material." [GO:0005776, WB:WBPerson557]
-is_a: WBPhenotype:0000036 ! adult body morphology variant
 is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0001396
@@ -11422,11 +11355,6 @@ id: WBPhenotype:0001545
 name: dauer body morphology variant
 def: "Any variation in the overall structure or appearance of an animal progressing through an alternative larval stage in response to environmental stresses compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer body morphology abnormal" NARROW []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
-is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
 is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
@@ -17433,12 +17361,7 @@ name: maternal effect morphology variant
 def: "Any variation in the form, structure or composition of any part of an animal caused by the perturbation of maternal gene products that are contributed to oogenesis and are required during embryogenesis." [WB:WBPerson557]
 synonym: "Mal" BROAD []
 synonym: "maternal effect morphology abnormal" RELATED []
-is_a: WBPhenotype:0000036 ! adult body morphology variant
-is_a: WBPhenotype:0000072 ! body morphology variant
-is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000535 ! organism morphology variant
-is_a: WBPhenotype:0000582 ! organism segment morphology variant
-is_a: WBPhenotype:0000934 ! developmental morphology variant
 
 [Term]
 id: WBPhenotype:0002459
