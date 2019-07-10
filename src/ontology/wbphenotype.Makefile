@@ -39,4 +39,7 @@ $(ONT).obo: $(ONT)-simple.owl
 
 $(PATTERNDIR)/dosdp-patterns: .FORCE
 	echo "WARNING WARNING Skipped until fixed: delete from wbphenotype.Makefile"
-	
+
+labels.csv:
+	robot query --use-graphs true -f csv -i $(SRC) --query ../sparql/term_table.sparql $@
+
