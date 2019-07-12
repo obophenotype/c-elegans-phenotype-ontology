@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-27/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-07-12/imports/chebi_import.owl
 ontology: wbphenotype/imports/chebi_import
 
 [Term]
@@ -269,12 +269,19 @@ name: xanthine
 namespace: chebi_ontology
 def: "A purine nucleobase found in humans and other organisms." []
 subset: 3_STAR
+synonym: "2,6-dioxopurine" RELATED [ChEBI]
+synonym: "2,6-dioxopurines" RELATED [ChEBI]
+synonym: "xanthine" EXACT [ChEBI]
+synonym: "xanthines" RELATED [ChEBI]
 xref: ECMDB:ECMDB00292
 xref: KNApSAcK:C00019660
+xref: PMID:1557408 "Europe PMC"
 xref: PMID:24629268 "Europe PMC"
+xref: PMID:9007687 "Europe PMC"
 xref: YMDB:YMDB00263
 is_a: CHEBI:25810 ! oxopurine
 is_a: CHEBI:26386 ! purine nucleobase
+relationship: has_functional_parent CHEBI:16235 ! guanine
 relationship: has_role CHEBI:78675 ! fundamental metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H4N4O2" xsd:string
@@ -999,6 +1006,55 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VNWKTOKETHGBQD-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "16.04246" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "16.03130" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C([H])([H])[H]" xsd:string
+
+[Term]
+id: CHEBI:16235
+name: guanine
+namespace: chebi_ontology
+alt_id: CHEBI:14371
+alt_id: CHEBI:14372
+alt_id: CHEBI:24443
+alt_id: CHEBI:42948
+alt_id: CHEBI:5563
+def: "A 2-aminopurine carrying a 6-oxo substituent." []
+subset: 3_STAR
+synonym: "2-amino-1,9-dihydro-6H-purin-6-one" EXACT IUPAC_NAME [IUPAC]
+synonym: "2-Amino-6-hydroxypurine" RELATED [KEGG_COMPOUND]
+synonym: "2-amino-6-oxopurine" RELATED [ChEBI]
+synonym: "G" RELATED [ChEBI]
+synonym: "Gua" RELATED [CBN]
+synonym: "GUANINE" EXACT [PDBeChem]
+synonym: "Guanine" EXACT [KEGG_COMPOUND]
+synonym: "guanine" EXACT [UniProt]
+xref: Beilstein:147911 "Beilstein"
+xref: CAS:73-40-5 "KEGG COMPOUND"
+xref: DrugBank:DB02377
+xref: Gmelin:431879 "Gmelin"
+xref: HMDB:HMDB0000132
+xref: KEGG:C00242
+xref: KNApSAcK:C00001501
+xref: MetaCyc:GUANINE
+xref: PDBeChem:GUN
+xref: PMID:22770225 "Europe PMC"
+xref: PMID:8070089 "Europe PMC"
+xref: Reaxys:147911 "Reaxys"
+xref: Wikipedia:Guanine
+is_a: CHEBI:20702 ! 2-aminopurines
+is_a: CHEBI:25810 ! oxopurine
+is_a: CHEBI:26386 ! purine nucleobase
+relationship: has_parent_hydride CHEBI:35589 ! 9H-purine
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: has_role CHEBI:84735 ! algal metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H5N5O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C5H5N5O/c6-5-9-3-2(4(11)10-5)7-1-8-3/h1H,(H4,6,7,8,9,10,11)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UYTPUPDQBNUYGX-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "151.126" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "151.04941" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C12=C(N=C(NC1=O)N)NC=N2" xsd:string
 
 [Term]
 id: CHEBI:16236
@@ -2857,6 +2913,15 @@ subset: 3_STAR
 synonym: "3',5'-cyclic purine nucleotides" RELATED [ChEBI]
 is_a: CHEBI:18375 ! nucleoside 3',5'-cyclic phosphate
 is_a: CHEBI:36982 ! cyclic purine nucleotide
+
+[Term]
+id: CHEBI:20702
+name: 2-aminopurines
+namespace: chebi_ontology
+def: "Any aminopurine having the amino substituent at the 2-position." []
+subset: 3_STAR
+synonym: "2-aminopurines" EXACT [ChEBI]
+is_a: CHEBI:22527 ! aminopurine
 
 [Term]
 id: CHEBI:20706
@@ -5904,7 +5969,6 @@ synonym: "carboxylic anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
 is_a: CHEBI:35406 ! oxoanion
 relationship: is_conjugate_base_of CHEBI:33575 ! carboxylic acid
-property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.00950" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
