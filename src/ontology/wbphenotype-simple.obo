@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-27/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-07-12/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -1154,10 +1154,10 @@ is_a: WBPhenotype:0001129 ! cleavage furrow defective early emb
 
 [Term]
 id: WBPhenotype:0000153
-name: body wall contraction variant
+name: body wall muscle contraction abnormal
 def: "Initiation, strength, extent or cessation of body wall muscle activity that results in the shortening of the muscle, is aberrant compared to control animals." [WB:WBPaper00032190, WB:WBPerson712]
 synonym: "body wall contraction abnormal" NARROW []
-synonym: "body wall muscle contraction abnormal" RELATED []
+synonym: "body wall contraction variant" EXACT []
 is_a: WBPhenotype:0000596 ! body behavior variant
 
 [Term]
@@ -1174,7 +1174,7 @@ is_a: WBPhenotype:0000104 ! cell polarity variant
 
 [Term]
 id: WBPhenotype:0000156
-name: body wall contraction interval variant
+name: body wall muscle contraction interval during defecation abnormal
 def: "Any variation in the time interval between successive contractions of the body wall muscles during the defecation motor program compared to cantrol." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "body wall contraction interval abnormal" NARROW []
 synonym: "body wall muscle contraction interval abnormal" RELATED []
@@ -2747,7 +2747,7 @@ is_a: WBPhenotype:0000071 ! head morphology variant
 [Term]
 id: WBPhenotype:0000380
 name: expulsion infrequent
-def: "The final step of the defecation motor program does not occur at each cycle, but is activated occasionally. During this step in C. eslegans specialized enteric muscles contract to expel the contents of the gut through the anus." [WB:WBPaper00002315, WB:WBPerson712]
+def: "The final step of the defecation motor program does not occur at each cycle, but is activated occasionally. During this step in C. elegans specialized enteric muscles contract to expel the contents of the gut through the anus." [WB:WBPaper00002315, WB:WBPerson712]
 is_a: WBPhenotype:0000996 ! expulsion defective
 
 [Term]
@@ -3471,14 +3471,14 @@ is_a: WBPhenotype:0000011 ! drug resistant
 
 [Term]
 id: WBPhenotype:0000488
-name: chloroquinone hypersensitive
-def: "Animals respond to chloroquinone at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
+name: chloroquine hypersensitive
+def: "Animals respond to chloroquine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
 
 [Term]
 id: WBPhenotype:0000489
-name: chloroquinone resistant
-def: "Animals fail to respond to the concentration of chloroquinone that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
+name: chloroquine resistant
+def: "Animals fail to respond to the concentration of chloroquine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
 
 [Term]
@@ -8242,11 +8242,11 @@ is_a: WBPhenotype:0001115 ! cell cycle timing defective early emb
 
 [Term]
 id: WBPhenotype:0001117
-name: cell cell contacts defective early emb
+name: cell cell contacts abnormal early emb
 def: "Cell-cell contacts are abnormal in the early embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 is_a: WBPhenotype:0001100 ! early embryonic lethal
-is_a: WBPhenotype:0002404 ! cell cell contacts defective
+is_a: WBPhenotype:0002404 ! cell cell contacts abnormal
 
 [Term]
 id: WBPhenotype:0001118
@@ -8309,11 +8309,11 @@ is_a: WBPhenotype:0001120 ! relative cell cycle timing defective early emb
 
 [Term]
 id: WBPhenotype:0001126
-name: cell cell contacts variant four emb
+name: cell cell contacts abnormal in four cell embryo
 def: "Aba, ABp, EMS, or P1 contacts fewer of its sister cells than in control embryos." [WB:cab, WB:cgc5599]
 synonym: "cell cell contacts abnormal" NARROW []
 synonym: "Emb" BROAD []
-is_a: WBPhenotype:0001117 ! cell cell contacts defective early emb
+is_a: WBPhenotype:0001117 ! cell cell contacts abnormal early emb
 
 [Term]
 id: WBPhenotype:0001127
@@ -9569,6 +9569,7 @@ is_a: WBPhenotype:0000072 ! body morphology variant
 id: WBPhenotype:0001296
 name: lannate resistant
 def: "Animals fail to respond to the concentration of lannate that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
+synonym: "methomyl resistant" EXACT []
 is_a: WBPhenotype:0001289 ! acetylcholinesterase inhibitor resistant
 
 [Term]
@@ -10105,7 +10106,7 @@ is_a: WBPhenotype:0001369 ! protein interaction variant
 
 [Term]
 id: WBPhenotype:0001373
-name: protein rna interaction abolished
+name: protein RNA interaction abolished
 def: "Animals lack a specific protein-RNA interaction observed in control animals." [WB:WBPerson2021]
 is_a: WBPhenotype:0001371 ! protein RNA interaction variant
 
@@ -16134,13 +16135,13 @@ is_a: WBPhenotype:0001685 ! postsynaptic region morphology variant
 [Term]
 id: WBPhenotype:0002263
 name: mitochondrial membrane potential increased
-def: "Any increase in the membrane potential (voltage gradient) across the inner\nmitochondrial membrane compared to control." [WB:WBPaper00040353, WB:WBPerson557]
+def: "Any increase in the membrane potential (voltage gradient) across the inner mitochondrial membrane compared to control." [WB:WBPaper00040353, WB:WBPerson557]
 is_a: WBPhenotype:0001282 ! mitochondrial metabolism variant
 
 [Term]
 id: WBPhenotype:0002264
 name: ATP levels increased
-def: "Animals exhibit an increase in the cellular levels of Adenosine-5'-triphosphate (ATP), compared to control. ATP is a nucleotide\nthat plays a versatile role in cell biology." [WB:WBPaper00036073, WB:WBPaper00040353, WB:WBPerson557]
+def: "Animals exhibit an increase in the cellular levels of Adenosine-5'-triphosphate (ATP), compared to control. ATP is a nucleotide that plays a versatile role in cell biology." [WB:WBPaper00036073, WB:WBPaper00040353, WB:WBPerson557]
 is_a: WBPhenotype:0001574 ! ATP levels variant
 
 [Term]
@@ -17014,8 +17015,8 @@ is_a: WBPhenotype:0002402 ! cell position defective
 
 [Term]
 id: WBPhenotype:0002404
-name: cell cell contacts defective
-def: "Cell-cell contacts are made in a similar fashion to control animals." [WB:WBPaper00040551, WB:WBPerson2987]
+name: cell cell contacts abnormal
+def: "Cell-cell contacts are abnormal, compared to control animals." [WB:WBPaper00040551, WB:WBPerson2987]
 synonym: "cell cell contacts abnormal" RELATED []
 is_a: WBPhenotype:0000533 ! cell morphology variant
 
@@ -17752,6 +17753,7 @@ name: male response to contact defective
 def: "The inability of a male to respond properly to a potential mate after contact. In C.elegans, proper response includes apposing the ventral side of his tail to the hermaphrodite's body and swimming backward." [GO:0034606, WB:WBPaper00000392, WB:WBPaper00002109, WB:WBPerson557]
 is_a: WBPhenotype:0001414 ! male mating defective
 is_a: WBPhenotype:0004006 ! post hermaphrodite contact variant
+is_a: WBPhenotype:0004030 ! male response to hermaphrodite variant
 
 [Term]
 id: WBPhenotype:0004005

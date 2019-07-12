@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-06-27/imports/go_import.owl
+data-version: wbphenotype/releases/2019-07-12/imports/go_import.owl
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -1192,7 +1192,7 @@ name: binding
 namespace: molecular_function
 def: "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule." [GOC:ceb, GOC:mah, ISBN:0198506732]
 comment: Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children.
-subset: gocheck_do_not_manually_annotate
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 subset: goslim_plant
 synonym: "ligand" NARROW []
@@ -18072,7 +18072,7 @@ synonym: "triacetin esterase" NARROW [EC:3.1.1.1]
 synonym: "vitamin A esterase" NARROW [EC:3.1.1.1]
 xref: EC:3.1.1
 xref: EC:3.1.1.1
-xref: KEGG:R00630
+xref: KEGG_REACTION:R00630
 xref: MetaCyc:CARBOXYLESTERASE-RXN
 xref: Reactome:R-HSA-5693691 "CES1 trimer.CES2 hydrolyse COCN to BEG"
 xref: Reactome:R-HSA-8937442 "CES3 hydrolyses CHEST to CHOL and LCFA(-)"
