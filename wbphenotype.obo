@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-12/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-07-16/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -17726,6 +17726,56 @@ def: "Animals exhibit a defective response to pathogens." [WB:WBPaper00055957, W
 is_a: WBPhenotype:0001012 ! organism pathogen response variant
 
 [Term]
+id: WBPhenotype:0002516
+name: burrowing assay distance abnormal
+def: "Animals exhibit variations, compared to control, in the distance traveled in a burrowing assay, in which animals are placed in a tube, separated from an attractant by solid medium through which the worms can burrow. Variations in distance traveled during the burrowing assay, when controlled for chemosensation defects, have been suggested to reflect variations in neuromuscular efficacy of locomotion." [WB:WBPaper00046657, WB:WBPaper00056369, WB:WBPerson2987, WB:WBPerson9270]
+is_a: WBPhenotype:0000643 ! locomotion variant
+is_a: WBPhenotype:0001206 ! movement variant
+
+[Term]
+id: WBPhenotype:0002517
+name: burrowing assay distance reduced
+def: "Animals exhibit a reduction, compared to control, in the distance traveled in a burrowing assay, in which animals are placed in a tube, separated from an attractant by solid medium through which the worms can burrow. Reductions in distance traveled during the burrowing assay, when controlled for chemosensation defects, have been suggested to reflect deficits in neuromuscular efficacy of locomotion." [WB:WBPaper00046657, WB:WBPaper00056369, WB:WBPerson2987, WB:WBPerson9270]
+is_a: WBPhenotype:0002516 ! burrowing assay distance abnormal
+
+[Term]
+id: WBPhenotype:0002518
+name: axon length abnormal
+def: "The length of one or more axons is abnormal compared to the length of the corresponding axon(s) in control animals." [WB:WBPaper00056369, WB:WBPerson2987, WB:WBPerson9270]
+is_a: WBPhenotype:0000180 ! axon morphology variant
+
+[Term]
+id: WBPhenotype:0002519
+name: axon length reduced
+def: "The length of one or more axons is reduced compared to the length of the corresponding axon(s) in control animals." [WB:WBPaper00056369, WB:WBPerson2987, WB:WBPerson9270]
+synonym: "short axon" EXACT []
+is_a: WBPhenotype:0002518 ! axon length abnormal
+
+[Term]
+id: WBPhenotype:0002520
+name: gap junction plaque morphology abnormal
+def: "One or more cells exhibit variations in the morphology of one or more gap junction plaques, sets of associated gap junctions, compared to controls." [WB:WBPaper00049389, WB:WBPerson2987, WB:WBPerson30255]
+is_a: WBPhenotype:0001658 ! intercellular junction variant
+
+[Term]
+id: WBPhenotype:0002521
+name: gap junction plaque number increased
+def: "One or more cells exhibit an increase in number of gap junction plaques, sets of associated gap junctions, compared to controls." [WB:WBPaper00049389, WB:WBPerson2987, WB:WBPerson30255]
+is_a: WBPhenotype:0002520 ! gap junction plaque morphology abnormal
+
+[Term]
+id: WBPhenotype:0002522
+name: starvation-induced L1 arrest recovery abnormal
+def: "Animals exhibit variations in the recovery from L1 larvae developmental arrest in response to a lack of food (starvation) available in the environment." [WB:WBPaper00049938, WB:WBPerson2987, WB:WBPerson6498]
+is_a: WBPhenotype:0000751 ! L1 larval development variant
+
+[Term]
+id: WBPhenotype:0002523
+name: slow recovery from starvation-induced L1 arrest
+def: "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls." [WB:WBPaper00049938, WB:WBPerson2987, WB:WBPerson6498]
+is_a: WBPhenotype:0002522 ! starvation-induced L1 arrest recovery abnormal
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -18020,6 +18070,17 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso "defining-property-chains-involving-reflexivity"
+holds_over_chain: RO:0000052 part_of
+transitive_over: part_of ! part_of
+
+[Typedef]
+id: RO:0002573
+name: has modifier
+def: "A relation that holds between an attribute or a qualifier and another attribute." []
+subset: ro-eco
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
+property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
 
 [Typedef]
 id: has_part
@@ -18045,19 +18106,53 @@ property_value: IAO:0000118 "has_part" xsd:string
 property_value: RO:0001900 RO:0001901
 is_cyclic: false
 is_transitive: true
-is_a: overlaps ! overlaps
 
 [Typedef]
-id: overlaps
-name: overlaps
+id: occurs_in
+name: occurs in
+namespace: external
+def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
+xref: BFO:0000066
+property_value: IAO:0000111 "occurs in" xsd:string
+property_value: IAO:0000118 "occurs_in" xsd:string
+property_value: IAO:0000118 "unfolds in" xsd:string
+property_value: IAO:0000118 "unfolds_in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+holds_over_chain: part_of occurs_in
+transitive_over: part_of ! part_of
+
+[Typedef]
+id: part_of
+name: part of
+name: part_of
+namespace: external
+namespace: protein
+namespace: quality
 namespace: uberon
-def: "A overlaps B if they share some part in common." []
-def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
-subset: ro-eco
-xref: RO:0002131
-property_value: IAO:0000114 IAO:0000125
+namespace: worm_anatomy
+namespace: worm_development
+def: "a core relation that holds between a part and its whole" []
+xref: BFO:0000050
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
 property_value: RO:0001900 RO:0001901
-holds_over_chain: has_part overlaps
-expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
-expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
+property_value: RO:0040042 BFO:0000002
+property_value: RO:0040042 BFO:0000003
+property_value: RO:0040042 BFO:0000004
+property_value: RO:0040042 BFO:0000017
+property_value: RO:0040042 BFO:0000019
+property_value: RO:0040042 BFO:0000020
+property_value: RO:0040042 BFO:0000031
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
+property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
+is_transitive: true
+inverse_of: has_part ! has part
 

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-12/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-07-16/imports/chebi_import.owl
 ontology: wbphenotype/imports/chebi_import
 
 [Term]
@@ -1905,31 +1905,6 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "LSNNMFCWUKXFEE-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "81.07214" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.96519" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OS([O-])=O" xsd:string
-
-[Term]
-id: CHEBI:17188
-name: nucleoside 5'-monophosphate
-namespace: chebi_ontology
-alt_id: CHEBI:14676
-alt_id: CHEBI:25607
-alt_id: CHEBI:7439
-alt_id: CHEBI:7653
-alt_id: CHEBI:7654
-subset: 3_STAR
-synonym: "NMP" RELATED [KEGG_COMPOUND]
-synonym: "Nucleoside monophosphate" RELATED [KEGG_COMPOUND]
-synonym: "nucleoside monophosphate" RELATED [ChEBI]
-synonym: "nucleoside monophosphates" RELATED [ChEBI]
-synonym: "Nucleoside phosphate" RELATED [KEGG_COMPOUND]
-xref: KEGG:C01329
-xref: KEGG:C02520
-is_a: CHEBI:25608 ! nucleoside phosphate
-relationship: is_conjugate_acid_of CHEBI:58043 ! nucleoside 5'-monophosphate(2-)
-property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H10O7PR" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "213.103" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "213.01641" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "O[C@H]1[C@H]([*])O[C@H](COP(O)(O)=O)[C@H]1O" xsd:string
 
 [Term]
 id: CHEBI:17258
@@ -4812,14 +4787,6 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "119.03577
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1(NC(=NC=2NC=NC12)*)=*" xsd:string
 
 [Term]
-id: CHEBI:26392
-name: purine nucleoside monophosphate
-namespace: chebi_ontology
-subset: 3_STAR
-synonym: "purine nucleoside monophosphates" RELATED [ChEBI]
-is_a: CHEBI:17188 ! nucleoside 5'-monophosphate
-
-[Term]
 id: CHEBI:26393
 name: purine nucleoside triphosphate
 namespace: chebi_ontology
@@ -4846,15 +4813,6 @@ subset: 3_STAR
 synonym: "purine nucleotides" RELATED [ChEBI]
 is_a: CHEBI:26401 ! purines
 is_a: CHEBI:36976 ! nucleotide
-
-[Term]
-id: CHEBI:26397
-name: purine ribonucleoside monophosphate
-namespace: chebi_ontology
-subset: 3_STAR
-synonym: "purine ribonucleoside monophosphates" RELATED [ChEBI]
-is_a: CHEBI:26392 ! purine nucleoside monophosphate
-is_a: CHEBI:26558 ! ribonucleoside monophosphate
 
 [Term]
 id: CHEBI:26398
@@ -4982,15 +4940,6 @@ subset: 3_STAR
 synonym: "rhamnoside" EXACT [ChEBI]
 synonym: "rhamnosides" RELATED [ChEBI]
 is_a: CHEBI:35315 ! deoxy hexoside
-
-[Term]
-id: CHEBI:26558
-name: ribonucleoside monophosphate
-namespace: chebi_ontology
-subset: 3_STAR
-synonym: "ribonucleoside monophosphates" RELATED [ChEBI]
-is_a: CHEBI:17188 ! nucleoside 5'-monophosphate
-relationship: is_conjugate_acid_of CHEBI:63165 ! ribonucleoside monophosphate oxoanion
 
 [Term]
 id: CHEBI:26561
@@ -10024,19 +9973,6 @@ is_a: CHEBI:23447 ! cyclic nucleotide
 is_a: CHEBI:26395 ! purine nucleotide
 
 [Term]
-id: CHEBI:37010
-name: ribonucleoside 5'-monophosphate
-namespace: chebi_ontology
-alt_id: CHEBI:1976
-alt_id: CHEBI:1977
-alt_id: CHEBI:20500
-alt_id: CHEBI:36996
-subset: 3_STAR
-synonym: "ribonucleoside 5'-monophosphates" RELATED [ChEBI]
-is_a: CHEBI:26558 ! ribonucleoside monophosphate
-is_a: CHEBI:37015 ! ribonucleoside 5'-phosphate
-
-[Term]
 id: CHEBI:37015
 name: ribonucleoside 5'-phosphate
 namespace: chebi_ontology
@@ -10044,16 +9980,6 @@ subset: 3_STAR
 synonym: "ribonucleoside 5'-phosphates" RELATED [ChEBI]
 is_a: CHEBI:16701 ! nucleoside 5'-phosphate
 is_a: CHEBI:26561 ! ribonucleotide
-
-[Term]
-id: CHEBI:37021
-name: purine ribonucleoside 5'-monophosphate
-namespace: chebi_ontology
-subset: 3_STAR
-synonym: "purine ribonucleoside 5'-monophosphates" RELATED [ChEBI]
-is_a: CHEBI:26397 ! purine ribonucleoside monophosphate
-is_a: CHEBI:26400 ! purine ribonucleotide
-is_a: CHEBI:37010 ! ribonucleoside 5'-monophosphate
 
 [Term]
 id: CHEBI:37022
@@ -13504,27 +13430,6 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "154.08626
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+]CC(O)c1ccc(O)cc1" xsd:string
 
 [Term]
-id: CHEBI:58043
-name: nucleoside 5'-monophosphate(2-)
-namespace: chebi_ontology
-alt_id: CHEBI:85513
-def: "The dianion of a nucleoside monophosphate: major species at pH 7.3." []
-subset: 3_STAR
-synonym: "5'-ribonucleotide(2-)" RELATED [ChEBI]
-synonym: "a ribonucleoside 5'-phosphate" RELATED [UniProt]
-synonym: "nucleoside monophosphate anion" RELATED [ChEBI]
-synonym: "nucleoside monophosphate anions" RELATED [ChEBI]
-synonym: "nucleoside monophosphate dianion" RELATED [ChEBI]
-synonym: "nucleoside monophosphate dianions" RELATED [ChEBI]
-is_a: CHEBI:58945 ! organophosphate oxoanion
-relationship: is_conjugate_base_of CHEBI:17188 ! nucleoside 5'-monophosphate
-property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H8O7PR" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "211.08660" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "211.00076" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "O[C@@H]1[C@H](O)[C@@H](COP([O-])([O-])=O)O[C@H]1[*]" xsd:string
-
-[Term]
 id: CHEBI:58104
 name: nucleoside triphosphate(3-)
 namespace: chebi_ontology
@@ -14224,16 +14129,6 @@ def: "A carbohydrate derivative arising formally from the elimination of water f
 subset: 3_STAR
 synonym: "glycosyl compounds" RELATED [ChEBI]
 is_a: CHEBI:63299 ! carbohydrate derivative
-
-[Term]
-id: CHEBI:63165
-name: ribonucleoside monophosphate oxoanion
-namespace: chebi_ontology
-def: "An organophosphate oxoanion resulting from deprotonation of at least one of the acidic hydroxy groups from the phosphate moiety of a ribonucleoside monophosphate." []
-subset: 3_STAR
-synonym: "ribonucleoside monophosphate oxoanions" RELATED [ChEBI]
-is_a: CHEBI:58945 ! organophosphate oxoanion
-relationship: is_conjugate_base_of CHEBI:26558 ! ribonucleoside monophosphate
 
 [Term]
 id: CHEBI:63299
