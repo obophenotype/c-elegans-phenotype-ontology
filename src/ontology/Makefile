@@ -188,7 +188,8 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl
+OTHER_SRC = $(PATTERNDIR)/definitions.owl wbphenotype-equivalent-axioms-subq.owl
+
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -222,8 +223,9 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 # drop every axiom: filter --term-file keep_terms.txt --trim true
 #	remove --select imports --trim false \
 
-simple_seed.txt: $(SRC) $(ONTOLOGYTERMS)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
+simple_seed.txt: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
+	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) --collapse-import-closure false \
+	query --use-graphs false -f csv --query ../sparql/simple-seed.sparql $@.tmp &&\
 	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
@@ -257,7 +259,7 @@ $(ONT)-simple-non-classified.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
 # These live in the imports/ folder
 
 tmp/%_logical.owl: mirror/%.owl
-	@if [ $(IMP) = true ]; then $(ROBOT) remove -i $< --term rdfs:label --select complement --select annotation-properties --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(IMP) = true ]; then $(ROBOT) remove -i $< --term rdfs:label --term owl:deprecated --select complement --select annotation-properties --preserve-structure false --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: tmp/%_logical.owl
 
 tmp/logical_dependencies_merged.owl: $(MIRROR_LOGICAL)
@@ -277,8 +279,9 @@ tmp/log_seed.txt: tmp/logical_dependencies_merged_module.owl
 
 # The seed of the source file. 
 
-tmp/src_seed.txt: $(SRC) prepare_patterns $(PATTERNDIR)/all_pattern_terms.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+tmp/src_seed.txt: #$(SRC) prepare_patterns $(PATTERNDIR)/all_pattern_terms.txt
+	@if [ $(IMP) = true ]; then $(ROBOT) merge --input $(SRC) $(patsubst %, -i %, $(OTHER_SRC)) --collapse-import-closure false \
+	query --use-graphs false -f csv --query ../sparql/terms.sparql $@.tmp &&\
 	cat $@.tmp $(PATTERNDIR)/all_pattern_terms.txt | sort | uniq >  $@; fi
 
 
