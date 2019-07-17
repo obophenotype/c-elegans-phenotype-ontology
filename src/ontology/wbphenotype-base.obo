@@ -1,11 +1,15 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-12/wbphenotype-base.owl
+data-version: wbphenotype/releases/2019-07-16/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
 ontology: wbphenotype/wbphenotype-base
 property_value: property-value "http://purl.org/dc/elements/1.1/license http://creativecommons.org/licenses/by/4.0/" xsd:string
+
+[Term]
+id: PATO:0000956
+alt_id: WBPhenotype:0000311
 
 [Term]
 id: WBPhenotype:0000000
@@ -17825,4 +17829,12 @@ def: "Variations in the process(es) that constitute cell corpse degradation with
 synonym: "cell corpse degradation abnormal" NARROW []
 xref: WB:rk
 is_a: WBPhenotype:0000730 ! apoptosis variant
+
+[Typedef]
+id: RO:0000052
+is_a: RO:0002314
+
+[Typedef]
+id: RO:0002314
+holds_over_chain: RO:0000052 BFO:0000050
 

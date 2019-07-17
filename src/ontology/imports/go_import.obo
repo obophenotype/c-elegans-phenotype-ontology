@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-12/imports/go_import.owl
+data-version: wbphenotype/releases/2019-07-16/imports/go_import.owl
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -49,23 +49,6 @@ intersection_of: GO:0051231 ! spindle elongation
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
 relationship: part_of GO:0000070 ! mitotic sister chromatid segregation
 relationship: part_of GO:0007052 ! mitotic spindle organization
-
-[Term]
-id: GO:0000045
-name: autophagosome assembly
-namespace: biological_process
-def: "The formation of a double membrane-bounded structure, the autophagosome, that occurs when a specialized membrane sac, called the isolation membrane, starts to enclose a portion of the cytoplasm." [GOC:autophagy, PMID:9412464]
-synonym: "autophagic vacuole assembly" EXACT [GOC:autophagy]
-synonym: "autophagic vacuole formation" RELATED [GOC:mah]
-synonym: "autophagosome biosynthesis" EXACT []
-synonym: "autophagosome formation" EXACT []
-synonym: "PAS formation" NARROW []
-is_a: GO:0070925 ! organelle assembly
-is_a: GO:1905037 ! autophagosome organization
-relationship: has_part GO:0019778 ! Atg12 activating enzyme activity
-relationship: has_part GO:0019786 ! Atg8-specific protease activity
-relationship: has_part GO:0061651 ! Atg12 conjugating enzyme activity
-relationship: has_part GO:0061660 ! Atg12 ligase activity
 
 [Term]
 id: GO:0000070
@@ -641,15 +624,6 @@ synonym: "amoeboidal cell migration" EXACT []
 is_a: GO:0016477 ! cell migration
 
 [Term]
-id: GO:0001677
-name: formation of translation initiation ternary complex
-namespace: biological_process
-def: "Formation of a complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2 (either eIF2 in eukaryotes, or IF2 in prokaryotes). In prokaryotes, fMet-tRNA (initiator) is used rather than Met-tRNA (initiator)." [GOC:hjd]
-synonym: "translation initiation ternary complex assembly" EXACT []
-is_a: GO:0022618 ! ribonucleoprotein complex assembly
-relationship: part_of GO:0006413 ! translational initiation
-
-[Term]
 id: GO:0001704
 name: formation of primary germ layer
 namespace: biological_process
@@ -814,55 +788,6 @@ namespace: biological_process
 def: "The process whose specific outcome is the progression of the larva over time, from its formation to the mature structure. The larva is the early, immature form of an that at birth or hatching is fundamentally unlike its parent and must metamorphose before assuming the adult characters." [GOC:jid, ISBN:0877795088]
 is_a: GO:0007275 ! multicellular organism development
 is_a: GO:0009791 ! post-embryonic development
-
-[Term]
-id: GO:0002181
-name: cytoplasmic translation
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of a protein in the cytoplasm. This is a ribosome-mediated process in which the information in messenger RNA (mRNA) is used to specify the sequence of amino acids in the protein." [GOC:hjd]
-comment: Note that this term applies to translation performed by cytoplasmic ribosomes, which is distinct from translation performed by organellar ribosomes. For mitochondrial translation, consider GO:0032543 'mitochondrial translation' or its child terms.
-subset: goslim_pombe
-subset: goslim_yeast
-is_a: GO:0006412 ! translation
-created_by: hjd
-creation_date: 2011-06-09T03:11:53Z
-
-[Term]
-id: GO:0002182
-name: cytoplasmic translational elongation
-namespace: biological_process
-def: "The successive addition of amino acid residues to a nascent polypeptide chain during protein biosynthesis in the cytoplasm." [GOC:hjd]
-is_a: GO:0006414 ! translational elongation
-intersection_of: GO:0006414 ! translational elongation
-intersection_of: part_of GO:0002181 ! cytoplasmic translation
-relationship: part_of GO:0002181 ! cytoplasmic translation
-created_by: hjd
-creation_date: 2011-06-09T03:14:42Z
-
-[Term]
-id: GO:0002183
-name: cytoplasmic translational initiation
-namespace: biological_process
-def: "The process preceding formation of the peptide bond between the first two amino acids of a protein in the cytoplasm. This includes the formation of a complex of the ribosome, mRNA or circRNA, and an initiation complex that contains the first aminoacyl-tRNA." [GOC:hjd]
-is_a: GO:0006413 ! translational initiation
-intersection_of: GO:0006413 ! translational initiation
-intersection_of: part_of GO:0002181 ! cytoplasmic translation
-relationship: part_of GO:0002181 ! cytoplasmic translation
-created_by: hjd
-creation_date: 2011-06-09T03:15:48Z
-
-[Term]
-id: GO:0002184
-name: cytoplasmic translational termination
-namespace: biological_process
-def: "The process resulting in the release of a polypeptide chain from the ribosome in the cytoplasm, usually in response to a termination codon." [GOC:hjd]
-is_a: GO:0006415 ! translational termination
-intersection_of: GO:0006415 ! translational termination
-intersection_of: occurs_in GO:0005829 ! cytosol
-relationship: occurs_in GO:0005829 ! cytosol
-relationship: part_of GO:0002181 ! cytoplasmic translation
-created_by: hjd
-creation_date: 2011-06-09T03:17:13Z
 
 [Term]
 id: GO:0002376
@@ -1154,20 +1079,6 @@ xref: EC:3.1.1.8
 xref: MetaCyc:CHOLINESTERASE-RXN
 xref: RHEA:21964
 is_a: GO:0052689 ! carboxylic ester hydrolase activity
-
-[Term]
-id: GO:0004871
-name: obsolete signal transducer activity
-namespace: molecular_function
-alt_id: GO:0005062
-alt_id: GO:0009369
-alt_id: GO:0009370
-def: "OBSOLETE. Conveys a signal across a cell to trigger a change in cell function or state. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:go_curators]
-comment: This term was obsoleted because it was not clearly defined and is not a useful grouping term, see https://github.com/geneontology/go-ontology/issues/14232.
-synonym: "hematopoietin/interferon-class (D200-domain) cytokine receptor signal transducer activity" NARROW []
-synonym: "quorum sensing response regulator activity" NARROW []
-synonym: "quorum sensing signal generator activity" NARROW []
-is_obsolete: true
 
 [Term]
 id: GO:0005102
@@ -2218,22 +2129,6 @@ relationship: has_part GO:0006414 ! translational elongation
 relationship: part_of GO:0010467 ! gene expression
 
 [Term]
-id: GO:0006413
-name: translational initiation
-namespace: biological_process
-alt_id: GO:0006440
-alt_id: GO:0006454
-def: "The process preceding formation of the peptide bond between the first two amino acids of a protein. This includes the formation of a complex of the ribosome, mRNA or circRNA, and an initiation complex that contains the first aminoacyl-tRNA." [ISBN:019879276X]
-subset: goslim_yeast
-synonym: "biopolymerisation" BROAD []
-synonym: "biopolymerization" BROAD []
-synonym: "protein synthesis initiation" BROAD []
-synonym: "translation initiation" EXACT []
-xref: MIPS_funcat:12.04.01
-is_a: GO:0044237 ! cellular metabolic process
-relationship: part_of GO:0006412 ! translation
-
-[Term]
 id: GO:0006414
 name: translational elongation
 namespace: biological_process
@@ -2245,20 +2140,6 @@ synonym: "protein synthesis elongation" BROAD []
 synonym: "translation elongation" EXACT []
 xref: MIPS_funcat:12.04.02
 is_a: GO:0034645 ! cellular macromolecule biosynthetic process
-relationship: part_of GO:0006412 ! translation
-
-[Term]
-id: GO:0006415
-name: translational termination
-namespace: biological_process
-alt_id: GO:0006443
-alt_id: GO:0006456
-def: "The process resulting in the release of a polypeptide chain from the ribosome, usually in response to a termination codon (UAA, UAG, or UGA in the universal genetic code)." [GOC:hjd, ISBN:019879276X]
-synonym: "protein synthesis termination" BROAD []
-synonym: "translation termination" EXACT []
-synonym: "translational complex disassembly" EXACT []
-xref: MIPS_funcat:12.04.03
-is_a: GO:0043624 ! cellular protein complex disassembly
 relationship: part_of GO:0006412 ! translation
 
 [Term]
@@ -2281,16 +2162,6 @@ intersection_of: regulates GO:0006412 ! translation
 relationship: regulates GO:0006412 ! translation
 
 [Term]
-id: GO:0006446
-name: regulation of translational initiation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of translational initiation." [GOC:go_curators]
-is_a: GO:0006417 ! regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006413 ! translational initiation
-relationship: regulates GO:0006413 ! translational initiation
-
-[Term]
 id: GO:0006448
 name: regulation of translational elongation
 namespace: biological_process
@@ -2299,17 +2170,6 @@ is_a: GO:0006417 ! regulation of translation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006414 ! translational elongation
 relationship: regulates GO:0006414 ! translational elongation
-
-[Term]
-id: GO:0006449
-name: regulation of translational termination
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of translational termination." [GOC:go_curators]
-is_a: GO:0006417 ! regulation of translation
-is_a: GO:0043244 ! regulation of protein complex disassembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006415 ! translational termination
-relationship: regulates GO:0006415 ! translational termination
 
 [Term]
 id: GO:0006464
@@ -2351,20 +2211,6 @@ synonym: "protein amino acid methylation" EXACT [GOC:bf]
 xref: MIPS_funcat:14.07.09
 is_a: GO:0008213 ! protein alkylation
 is_a: GO:0043414 ! macromolecule methylation
-
-[Term]
-id: GO:0006508
-name: proteolysis
-namespace: biological_process
-def: "The hydrolysis of proteins into smaller polypeptides and/or amino acids by cleavage of their peptide bonds." [GOC:bf, GOC:mah]
-comment: This term was intentionally placed under 'protein metabolic process ; GO:0019538' rather than 'protein catabolic process ; GO:0030163' to cover all processes centered on breaking peptide bonds, including those involved in protein processing.
-subset: goslim_chembl
-subset: goslim_metagenomics
-subset: goslim_pir
-synonym: "ATP-dependent proteolysis" NARROW [GOC:mah]
-synonym: "peptidolysis" EXACT []
-xref: Wikipedia:Proteolysis
-is_a: GO:0019538 ! protein metabolic process
 
 [Term]
 id: GO:0006518
@@ -2712,20 +2558,6 @@ synonym: "type I programmed cell death" NARROW []
 xref: MIPS_funcat:40.10.02
 xref: Wikipedia:Apoptosis
 is_a: GO:0012501 ! programmed cell death
-
-[Term]
-id: GO:0006921
-name: cellular component disassembly involved in execution phase of apoptosis
-namespace: biological_process
-def: "The breakdown of structures such as organelles, proteins, or other macromolecular structures during apoptosis." [GOC:dph, GOC:mah, GOC:mtg_apoptosis, GOC:tb]
-synonym: "cellular component disassembly involved in apoptosis" NARROW []
-synonym: "cellular component disassembly involved in apoptotic process" BROAD []
-synonym: "disassembly of cell structures" BROAD []
-xref: MIPS_funcat:40.10.02.02.03
-is_a: GO:0022411 ! cellular component disassembly
-intersection_of: GO:0022411 ! cellular component disassembly
-intersection_of: part_of GO:0097194 ! execution phase of apoptosis
-relationship: part_of GO:0097194 ! execution phase of apoptosis
 
 [Term]
 id: GO:0006928
@@ -3325,18 +3157,6 @@ is_a: GO:0045841 ! negative regulation of mitotic metaphase/anaphase transition
 is_a: GO:0071173 ! spindle assembly checkpoint
 is_a: GO:0071174 ! mitotic spindle checkpoint
 intersection_of: GO:0071173 ! spindle assembly checkpoint
-intersection_of: part_of GO:0000278 ! mitotic cell cycle
-
-[Term]
-id: GO:0007095
-name: mitotic G2 DNA damage checkpoint
-namespace: biological_process
-def: "A mitotic cell cycle checkpoint that detects and negatively regulates progression through the G2/M transition of the cell cycle in response to DNA damage." [GOC:mtg_cell_cycle]
-synonym: "mitotic cell cycle G2/M transition DNA damage checkpoint" EXACT []
-is_a: GO:0031572 ! G2 DNA damage checkpoint
-is_a: GO:0044773 ! mitotic DNA damage checkpoint
-is_a: GO:0044818 ! mitotic G2/M transition checkpoint
-intersection_of: GO:0031572 ! G2 DNA damage checkpoint
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
 
 [Term]
@@ -4180,51 +4000,6 @@ xref: MIPS_funcat:40.10
 is_a: GO:0009987 ! cellular process
 
 [Term]
-id: GO:0008233
-name: peptidase activity
-namespace: molecular_function
-def: "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid." [GOC:jl, ISBN:0815332181]
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_pir
-subset: goslim_yeast
-synonym: "hydrolase, acting on peptide bonds" EXACT []
-synonym: "peptide hydrolase activity" EXACT []
-synonym: "protease activity" EXACT []
-synonym: "proteinase activity" NARROW []
-xref: EC:3.4
-xref: Reactome:R-HSA-205112 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6"
-xref: Reactome:R-HSA-3000243 "Unknown protease degrades GIF:Cbl to release Cbl"
-xref: Reactome:R-HSA-3139027 "Maturation of HIV Virion"
-xref: Reactome:R-HSA-376149 "Proteolytic processing of SLIT"
-xref: Reactome:R-HSA-448678 "CTSG cleaves CASP1(1-404)"
-xref: Reactome:R-HSA-5655483 "USP1 autocleavage"
-xref: Reactome:R-HSA-5684864 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPB"
-xref: Reactome:R-HSA-5685902 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPC"
-xref: Reactome:R-HSA-5693319 "CTRC hydrolyses PRSS1"
-is_a: GO:0016787 ! hydrolase activity
-is_a: GO:0140096 ! catalytic activity, acting on a protein
-relationship: part_of GO:0006508 ! proteolysis
-
-[Term]
-id: GO:0008234
-name: cysteine-type peptidase activity
-namespace: molecular_function
-alt_id: GO:0004220
-def: "Catalysis of the hydrolysis of peptide bonds in a polypeptide chain by a mechanism in which the sulfhydryl group of a cysteine residue at the active center acts as a nucleophile." [GOC:mah, http://merops.sanger.ac.uk/about/glossary.htm#CATTYPE]
-synonym: "cysteine protease activity" NARROW []
-synonym: "thiol protease activity" NARROW []
-xref: EC:3.4
-xref: Reactome:R-HSA-2022381 "Cathepsin Z (Cathepsin X) hydrolyzes Angiotensin-(1-10) to Angiotensin-(1-8)"
-xref: Reactome:R-HSA-2467775 "Autocleavage of ESPL1 (Separase)"
-xref: Reactome:R-HSA-2467809 "ESPL1 (Separase) cleaves centromeric cohesin"
-xref: Reactome:R-HSA-5660752 "USP9X deubiquitinates Ub-SNCA"
-is_a: GO:0070011 ! peptidase activity, acting on L-amino acid peptides
-
-[Term]
 id: GO:0008283
 name: cell population proliferation
 namespace: biological_process
@@ -4391,17 +4166,6 @@ def: "A series of molecular signals in which an intracellular signal is conveyed
 synonym: "DNA damage response, signal transduction resulting in induction of apoptosis" RELATED []
 is_a: GO:0006974 ! cellular response to DNA damage stimulus
 is_a: GO:0097193 ! intrinsic apoptotic signaling pathway
-
-[Term]
-id: GO:0008641
-name: ubiquitin-like modifier activating enzyme activity
-namespace: molecular_function
-alt_id: GO:0008642
-def: "Catalysis of the activation of small proteins, such as ubiquitin or ubiquitin-like proteins, through the formation of an ATP-dependent high-energy thiolester bond." [GOC:jl, GOC:mah]
-comment: Discussion of class label in this ticket: https://github.com/geneontology/go-ontology/issues/14208
-subset: goslim_pir
-synonym: "small protein activating enzyme activity" NARROW []
-is_a: GO:0016877 ! ligase activity, forming carbon-sulfur bonds
 
 [Term]
 id: GO:0009056
@@ -5072,18 +4836,6 @@ intersection_of: positively_regulates GO:0045165 ! cell fate commitment
 relationship: positively_regulates GO:0045165 ! cell fate commitment
 
 [Term]
-id: GO:0010466
-name: negative regulation of peptidase activity
-namespace: biological_process
-def: "Any process that stops or reduces the rate of peptidase activity, the hydrolysis of peptide bonds within proteins." [GOC:dph, GOC:tb]
-is_a: GO:0045861 ! negative regulation of proteolysis
-is_a: GO:0051346 ! negative regulation of hydrolase activity
-is_a: GO:0052547 ! regulation of peptidase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0008233 ! peptidase activity
-relationship: negatively_regulates GO:0008233 ! peptidase activity
-
-[Term]
 id: GO:0010467
 name: gene expression
 namespace: biological_process
@@ -5105,18 +4857,6 @@ is_a: GO:0060255 ! regulation of macromolecule metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0010467 ! gene expression
 relationship: regulates GO:0010467 ! gene expression
-
-[Term]
-id: GO:0010469
-name: regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
-synonym: "regulation of receptor activity" BROAD []
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0038023 ! signaling receptor activity
-relationship: regulates GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0010470
@@ -5641,20 +5381,6 @@ created_by: tanyaberardini
 creation_date: 2009-04-27T09:53:22Z
 
 [Term]
-id: GO:0010952
-name: positive regulation of peptidase activity
-namespace: biological_process
-def: "Any process that increases the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [GOC:dph, GOC:tb]
-is_a: GO:0045862 ! positive regulation of proteolysis
-is_a: GO:0051345 ! positive regulation of hydrolase activity
-is_a: GO:0052547 ! regulation of peptidase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0008233 ! peptidase activity
-relationship: positively_regulates GO:0008233 ! peptidase activity
-created_by: tanyaberardini
-creation_date: 2009-04-27T11:54:32Z
-
-[Term]
 id: GO:0010965
 name: regulation of mitotic sister chromatid separation
 namespace: biological_process
@@ -6057,60 +5783,6 @@ is_a: GO:0032501 ! multicellular organismal process
 relationship: part_of GO:0060538 ! skeletal muscle organ development
 
 [Term]
-id: GO:0016236
-name: macroautophagy
-namespace: biological_process
-alt_id: GO:0034262
-def: "The major inducible pathway for the general turnover of cytoplasmic constituents in eukaryotic cells, it is also responsible for the degradation of active cytoplasmic enzymes and organelles during nutrient starvation. Macroautophagy involves the formation of double-membrane-bounded autophagosomes which enclose the cytoplasmic constituent targeted for degradation in a membrane-bounded structure.  Autophagosomes then fuse with a lysosome (or vacuole) releasing single-membrane-bounded autophagic bodies that are then degraded within the lysosome (or vacuole). Some types of macroautophagy, e.g. pexophagy, mitophagy, involve selective targeting of the targets to be degraded." [PMID:11099404, PMID:12914914, PMID:15798367, PMID:16973210, PMID:20159618, PMID:9412464]
-comment: Targeted macroautophagy sometimes targets regions of cytoplasm containing non-self, such as virus particles or components (e.g. see PMID:20159618).  As this is essentially the same process as macroautophagy that encloses and digests only self, the term autophagy is still used despite the enclosure of some non-self (non-auto) entities.
-synonym: "autophagy" BROAD []
-is_a: GO:0006914 ! autophagy
-
-[Term]
-id: GO:0016239
-name: positive regulation of macroautophagy
-namespace: biological_process
-def: "Any process, such as recognition of nutrient depletion, that activates or increases the rate of macroautophagy to bring cytosolic macromolecules to the vacuole/lysosome for degradation." [GOC:go_curators, PMID:9412464]
-synonym: "activation of macroautophagy" NARROW []
-synonym: "positive regulation of starvation-induced autophagy" EXACT [GOC:ascb_2009, GOC:dph, GOC:tb]
-synonym: "stimulation of macroautophagy" NARROW []
-synonym: "up regulation of macroautophagy" EXACT []
-synonym: "up-regulation of macroautophagy" EXACT []
-synonym: "upregulation of macroautophagy" EXACT []
-is_a: GO:0010508 ! positive regulation of autophagy
-is_a: GO:0016241 ! regulation of macroautophagy
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0016236 ! macroautophagy
-relationship: positively_regulates GO:0016236 ! macroautophagy
-
-[Term]
-id: GO:0016241
-name: regulation of macroautophagy
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of macroautophagy." [GOC:krc]
-synonym: "regulation of starvation-induced autophagy" EXACT [GOC:ascb_2009, GOC:dph, GOC:tb]
-is_a: GO:0010506 ! regulation of autophagy
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0016236 ! macroautophagy
-relationship: regulates GO:0016236 ! macroautophagy
-
-[Term]
-id: GO:0016242
-name: negative regulation of macroautophagy
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of macroautophagy." [GOC:go_curators]
-synonym: "down regulation of macroautophagy" EXACT []
-synonym: "down-regulation of macroautophagy" EXACT []
-synonym: "downregulation of macroautophagy" EXACT []
-synonym: "inhibition of macroautophagy" NARROW []
-synonym: "negative regulation of starvation-induced autophagy" EXACT [GOC:ascb_2009, GOC:dph, GOC:tb]
-is_a: GO:0010507 ! negative regulation of autophagy
-is_a: GO:0016241 ! regulation of macroautophagy
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0016236 ! macroautophagy
-relationship: negatively_regulates GO:0016236 ! macroautophagy
-
-[Term]
 id: GO:0016246
 name: RNA interference
 namespace: biological_process
@@ -6319,52 +5991,6 @@ xref: Reactome:R-HSA-9023619 "Platelet-activating factor acetylhydrolase (PLA2G7
 is_a: GO:0016787 ! hydrolase activity
 
 [Term]
-id: GO:0016874
-name: ligase activity
-namespace: molecular_function
-def: "Catalysis of the joining of two substances, or two groups within a single molecule, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [EC:6, GOC:mah]
-subset: goslim_agr
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_mouse
-subset: goslim_pir
-subset: goslim_yeast
-synonym: "synthetase activity" EXACT [GOC:jh2]
-xref: EC:6
-is_a: GO:0003824 ! catalytic activity
-
-[Term]
-id: GO:0016877
-name: ligase activity, forming carbon-sulfur bonds
-namespace: molecular_function
-def: "Catalysis of the joining of two molecules via a carbon-sulfur bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [EC:6.2, GOC:mah]
-synonym: "ligase activity, forming carbon-sulphur bonds" EXACT []
-xref: EC:6.2
-is_a: GO:0016874 ! ligase activity
-
-[Term]
-id: GO:0016879
-name: ligase activity, forming carbon-nitrogen bonds
-namespace: molecular_function
-def: "Catalysis of the joining of two molecules, or two groups within a single molecule, via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [EC:6.3, GOC:mah]
-comment: Note that enzymes of class EC:6.3.4.- should also be annotated to this term.
-synonym: "other carbon-nitrogen ligase activity" NARROW []
-xref: EC:6.3
-is_a: GO:0016874 ! ligase activity
-
-[Term]
-id: GO:0016881
-name: acid-amino acid ligase activity
-namespace: molecular_function
-def: "Catalysis of the ligation of an acid to an amino acid via a carbon-nitrogen bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [GOC:jl, GOC:mah]
-synonym: "peptide synthase activity" EXACT []
-xref: EC:6.3.2
-is_a: GO:0016879 ! ligase activity, forming carbon-nitrogen bonds
-
-[Term]
 id: GO:0017144
 name: drug metabolic process
 namespace: biological_process
@@ -6410,15 +6036,6 @@ intersection_of: negatively_regulates GO:0006412 ! translation
 relationship: negatively_regulates GO:0006412 ! translation
 
 [Term]
-id: GO:0017156
-name: calcium-ion regulated exocytosis
-namespace: biological_process
-def: "The release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell, induced by a rise in cytosolic calcium-ion levels." [GOC:go_curators]
-comment: Note that the calcium regulated exocytosis pathway can be leaky: some level of exocytosis via this pathway occurs spontaneously.  This phenomenon underlies spontaneous neurotransmitter release from presynapses.  This phenomenon is distinct from the unregulated, calcium independent exocytosis pathway.
-synonym: "calcium ion-dependent exocytosis" EXACT []
-is_a: GO:0045055 ! regulated exocytosis
-
-[Term]
 id: GO:0017157
 name: regulation of exocytosis
 namespace: biological_process
@@ -6428,16 +6045,6 @@ is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006887 ! exocytosis
 relationship: regulates GO:0006887 ! exocytosis
-
-[Term]
-id: GO:0017158
-name: regulation of calcium ion-dependent exocytosis
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of calcium ion-dependent exocytosis." [GOC:go_curators]
-is_a: GO:1903305 ! regulation of regulated secretory pathway
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0017156 ! calcium-ion regulated exocytosis
-relationship: regulates GO:0017156 ! calcium-ion regulated exocytosis
 
 [Term]
 id: GO:0018130
@@ -6718,69 +6325,6 @@ synonym: "secondary metabolite metabolism" EXACT []
 xref: MIPS_funcat:01.20
 xref: Wikipedia:Secondary_metabolism
 is_a: GO:0008152 ! metabolic process
-
-[Term]
-id: GO:0019777
-name: Atg12 transferase activity
-namespace: molecular_function
-def: "Catalysis of the transfer of ATG12 from one protein to another via the reaction X-ATG12 + Y --> Y-ATG12 + X, where both X-ATG12 and Y-ATG12 are covalent linkages." [GOC:mah, PMID:12826404]
-synonym: "APG12 conjugating enzyme activity" NARROW []
-synonym: "APG12 ligase activity" NARROW []
-synonym: "Atg12 conjugating enzyme activity" NARROW []
-synonym: "Atg12 ligase activity" NARROW []
-xref: Reactome:R-HSA-5681999 "ATG10 transfers ATG12 from ATG7 to ATG10"
-is_a: GO:0019787 ! ubiquitin-like protein transferase activity
-
-[Term]
-id: GO:0019778
-name: Atg12 activating enzyme activity
-namespace: molecular_function
-def: "Catalysis of the activation of the small ubiquitin-related modifier APG12, through the formation of an ATP-dependent high-energy thiolester bond." [GOC:mah]
-synonym: "APG12 activating enzyme activity" RELATED [GOC:vw]
-is_a: GO:0008641 ! ubiquitin-like modifier activating enzyme activity
-
-[Term]
-id: GO:0019783
-name: ubiquitin-like protein-specific protease activity
-namespace: molecular_function
-alt_id: GO:1904454
-alt_id: GO:1904455
-def: "Catalysis of the hydrolysis of peptide or isopeptide bonds within small proteins such as ubiquitin or ubiquitin-like proteins (e.g. APG8, ISG15, NEDD8, SUMO), or between the small protein and a larger protein to which it has been conjugated." [GOC:ma, GOC:mah]
-synonym: "small conjugating protein-specific protease activity" EXACT [GOC:dph]
-synonym: "ubiquitin-like specific protease activity" NARROW []
-synonym: "ubiquitin-like-protein-specific protease activity" NARROW []
-synonym: "ubiquitin-specific protease activity involved in negative regulation of ERAD pathway" NARROW []
-synonym: "ubiquitin-specific protease activity involved in positive regulation of ERAD pathway" NARROW []
-is_a: GO:0008234 ! cysteine-type peptidase activity
-
-[Term]
-id: GO:0019786
-name: Atg8-specific protease activity
-namespace: molecular_function
-def: "Catalysis of the hydrolysis of APG8, a small ubiquitin-related modifier." [GOC:mah]
-synonym: "APG8-PE hydrolase" RELATED []
-synonym: "APG8-specific protease activity" RELATED [GOC:vw]
-is_a: GO:0019783 ! ubiquitin-like protein-specific protease activity
-
-[Term]
-id: GO:0019787
-name: ubiquitin-like protein transferase activity
-namespace: molecular_function
-alt_id: GO:0008639
-alt_id: GO:0008640
-def: "Catalysis of the transfer of a ubiquitin-like from one protein to another via the reaction X-ULP + Y --> Y-ULP + X, where both X-ULP and Y-ULP are covalent linkages. ULP represents a ubiquitin-like protein." [GOC:mah, GOC:rn, PMID:10806345, PMID:10884686]
-subset: goslim_pir
-synonym: "E2" RELATED []
-synonym: "E3" RELATED [dph:GOC]
-synonym: "small conjugating protein ligase activity" NARROW [GOC:dph]
-synonym: "small conjugating protein transferase activity" EXACT [GOC:dph]
-synonym: "small protein conjugating enzyme activity" NARROW []
-synonym: "ubiquitin-like conjugating enzyme activity" NARROW []
-synonym: "ubiquitin-like-protein ligase activity" NARROW []
-xref: Reactome:R-HSA-5678490 "ATG16L1 complex transfers LC3 from ATG3 to PE"
-xref: Reactome:R-HSA-688137 "RIP2 is K63 polyubiquitinated"
-is_a: GO:0016740 ! transferase activity
-is_a: GO:0140096 ! catalytic activity, acting on a protein
 
 [Term]
 id: GO:0019932
@@ -7158,16 +6702,6 @@ synonym: "cell surface structure organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0016043 ! cellular component organization
 
 [Term]
-id: GO:0030031
-name: cell projection assembly
-namespace: biological_process
-def: "Formation of a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, GOC:mah, http://www.cogsci.princeton.edu/~wn/]
-synonym: "cell projection biogenesis" RELATED [GOC:mah]
-synonym: "formation of a cell surface projection" EXACT []
-is_a: GO:0022607 ! cellular component assembly
-is_a: GO:0030030 ! cell projection organization
-
-[Term]
 id: GO:0030036
 name: actin cytoskeleton organization
 namespace: biological_process
@@ -7267,17 +6801,6 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007155 ! cell adhesion
 relationship: regulates GO:0007155 ! cell adhesion
-
-[Term]
-id: GO:0030162
-name: regulation of proteolysis
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:mah]
-synonym: "regulation of peptidolysis" EXACT []
-is_a: GO:0051246 ! regulation of protein metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006508 ! proteolysis
-relationship: regulates GO:0006508 ! proteolysis
 
 [Term]
 id: GO:0030163
@@ -7437,17 +6960,6 @@ def: "The long process of a neuron that conducts nerve impulses, usually away fr
 xref: NIF_Subcellular:sao1770195789
 xref: Wikipedia:Axon
 is_a: GO:0043005 ! neuron projection
-
-[Term]
-id: GO:0030425
-name: dendrite
-namespace: cellular_component
-def: "A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body." [GOC:aruk, GOC:bc, GOC:dos, GOC:mah, GOC:nln, ISBN:0198506732]
-xref: NIF_Subcellular:sao1211023249
-xref: Wikipedia:Dendrite
-is_a: GO:0043005 ! neuron projection
-is_a: GO:0120038 ! plasma membrane bounded cell projection part
-relationship: part_of GO:0097447 ! dendritic tree
 
 [Term]
 id: GO:0030516
@@ -8269,28 +7781,6 @@ def: "A cell cycle process that controls cell cycle progression in response to c
 is_a: GO:0000075 ! cell cycle checkpoint
 
 [Term]
-id: GO:0031571
-name: mitotic G1 DNA damage checkpoint
-namespace: biological_process
-def: "A mitotic cell cycle checkpoint that detects and negatively regulates progression through the G1/S transition of the cell cycle in response to DNA damage." [GOC:mtg_cell_cycle]
-synonym: "mitotic cell cycle G1/S transition DNA damage checkpoint" EXACT []
-is_a: GO:0044773 ! mitotic DNA damage checkpoint
-is_a: GO:0044783 ! G1 DNA damage checkpoint
-is_a: GO:0044819 ! mitotic G1/S transition checkpoint
-intersection_of: GO:0044783 ! G1 DNA damage checkpoint
-intersection_of: negatively_regulates GO:0000082 ! G1/S transition of mitotic cell cycle
-
-[Term]
-id: GO:0031572
-name: G2 DNA damage checkpoint
-namespace: biological_process
-def: "A cell cycle checkpoint that detects and negatively regulates progression from G2 to M phase in the cell cycle in response to DNA damage." [GOC:mtg_cell_cycle]
-comment: Note that this term should only be used as a grouping term for the mitotic and meiotic G2 DNA damage checkpoints, and should not be used for direct manual annotation. You should always be able to choose one of its child terms instead.
-subset: gocheck_do_not_manually_annotate
-synonym: "G2/M transition DNA damage checkpoint" EXACT []
-is_a: GO:0000077 ! DNA damage checkpoint
-
-[Term]
 id: GO:0031573
 name: intra-S DNA damage checkpoint
 namespace: biological_process
@@ -8466,18 +7956,6 @@ intersection_of: GO:0006259 ! DNA metabolic process
 intersection_of: occurs_in GO:0005739 ! mitochondrion
 relationship: occurs_in GO:0005739 ! mitochondrion
 relationship: part_of GO:0000002 ! mitochondrial genome maintenance
-
-[Term]
-id: GO:0032060
-name: bleb assembly
-namespace: biological_process
-def: "The assembly of a bleb, a cell extension caused by localized decoupling of the cytoskeleton from the plasma membrane and characterized by rapid formation, rounded shape, and scarcity of organelles within the protrusion. Plasma membrane blebbing occurs during apoptosis and other cellular processes, including cell locomotion, cell division, and as a result of physical or chemical stresses." [GOC:mah, GOC:mtg_apoptosis, http://en.wikipedia.org/wiki/Bleb_(cell_biology), PMID:12083798, PMID:16624291]
-synonym: "blebbing" BROAD [GOC:pr]
-synonym: "cell blebbing" EXACT []
-synonym: "membrane blebbing" BROAD [GOC:pr]
-synonym: "plasma membrane bleb assembly" EXACT [GOC:pr]
-synonym: "plasma membrane blebbing" EXACT [GOC:pr]
-is_a: GO:0120031 ! plasma membrane bounded cell projection assembly
 
 [Term]
 id: GO:0032091
@@ -9335,17 +8813,6 @@ intersection_of: GO:0005737 ! cytoplasm
 intersection_of: part_of GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
-id: GO:0032839
-name: dendrite cytoplasm
-namespace: cellular_component
-def: "All of the contents of a dendrite, excluding the surrounding plasma membrane." [GOC:mah]
-synonym: "dendritic cytoplasm" EXACT []
-is_a: GO:0120111 ! neuron projection cytoplasm
-intersection_of: GO:0005737 ! cytoplasm
-intersection_of: part_of GO:0030425 ! dendrite
-relationship: part_of GO:0030425 ! dendrite
-
-[Term]
 id: GO:0032847
 name: regulation of cellular pH reduction
 namespace: biological_process
@@ -10113,50 +9580,6 @@ is_a: GO:0046700 ! heterocycle catabolic process
 is_a: GO:1901361 ! organic cyclic compound catabolic process
 
 [Term]
-id: GO:0034762
-name: regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "regulation of membrane transport" EXACT []
-is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0055085 ! transmembrane transport
-relationship: regulates GO:0055085 ! transmembrane transport
-
-[Term]
-id: GO:0034763
-name: negative regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "down regulation of transmembrane transport" EXACT []
-synonym: "down-regulation of transmembrane transport" EXACT []
-synonym: "downregulation of transmembrane transport" EXACT []
-synonym: "inhibition of transmembrane transport" NARROW []
-synonym: "negative regulation of membrane transport" EXACT []
-is_a: GO:0034762 ! regulation of transmembrane transport
-is_a: GO:0051051 ! negative regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0055085 ! transmembrane transport
-relationship: negatively_regulates GO:0055085 ! transmembrane transport
-
-[Term]
-id: GO:0034764
-name: positive regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "activation of transmembrane transport" NARROW []
-synonym: "positive regulation of membrane transport" EXACT []
-synonym: "stimulation of transmembrane transport" NARROW []
-synonym: "up regulation of transmembrane transport" EXACT []
-synonym: "up-regulation of transmembrane transport" EXACT []
-synonym: "upregulation of transmembrane transport" EXACT []
-is_a: GO:0034762 ! regulation of transmembrane transport
-is_a: GO:0051050 ! positive regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0055085 ! transmembrane transport
-relationship: positively_regulates GO:0055085 ! transmembrane transport
-
-[Term]
 id: GO:0034976
 name: response to endoplasmic reticulum stress
 namespace: biological_process
@@ -10450,33 +9873,8 @@ created_by: rebeccafoulger
 creation_date: 2014-06-26T11:03:08Z
 
 [Term]
-id: GO:0036477
-name: somatodendritic compartment
-namespace: cellular_component
-def: "The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon." [GOC:pad, GOC:PARL]
-is_a: GO:0097458 ! neuron part
-created_by: rebeccafoulger
-creation_date: 2014-07-24T10:06:19Z
-
-[Term]
 id: GO:0038023
-name: signaling receptor activity
-namespace: molecular_function
 alt_id: GO:0004872
-alt_id: GO:0019041
-def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
-subset: goslim_agr
-subset: goslim_chembl
-subset: goslim_flybase_ribbon
-subset: goslim_metagenomics
-subset: goslim_mouse
-subset: goslim_pir
-subset: goslim_plant
-synonym: "receptor activity" BROAD []
-synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
-is_a: GO:0060089 ! molecular transducer activity
-created_by: rfoulger
-creation_date: 2011-08-01T02:45:27Z
 
 [Term]
 id: GO:0038024
@@ -12860,16 +12258,6 @@ created_by: janelomax
 creation_date: 2013-03-27T15:09:58Z
 
 [Term]
-id: GO:0044783
-name: G1 DNA damage checkpoint
-namespace: biological_process
-def: "A cell cycle checkpoint that detects and negatively regulates progression from G1 to S phase in the cell cycle in response to DNA damage." [GOC:mtg_cell_cycle]
-synonym: "G1/S DNA damage checkpoint" EXACT []
-is_a: GO:0000077 ! DNA damage checkpoint
-created_by: janelomax
-creation_date: 2013-05-02T12:52:39Z
-
-[Term]
 id: GO:0044784
 name: metaphase/anaphase transition of cell cycle
 namespace: biological_process
@@ -13673,39 +13061,6 @@ def: "Any process that increases the internal pH of an organism, part of an orga
 is_a: GO:0006885 ! regulation of pH
 
 [Term]
-id: GO:0045861
-name: negative regulation of proteolysis
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:go_curators]
-synonym: "down regulation of proteolysis" EXACT []
-synonym: "down-regulation of proteolysis" EXACT []
-synonym: "downregulation of proteolysis" EXACT []
-synonym: "inhibition of proteolysis" NARROW []
-synonym: "negative regulation of peptidolysis" EXACT []
-is_a: GO:0030162 ! regulation of proteolysis
-is_a: GO:0032269 ! negative regulation of cellular protein metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006508 ! proteolysis
-relationship: negatively_regulates GO:0006508 ! proteolysis
-
-[Term]
-id: GO:0045862
-name: positive regulation of proteolysis
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:go_curators]
-synonym: "activation of proteolysis" NARROW []
-synonym: "positive regulation of peptidolysis" EXACT []
-synonym: "stimulation of proteolysis" NARROW []
-synonym: "up regulation of proteolysis" EXACT []
-synonym: "up-regulation of proteolysis" EXACT []
-synonym: "upregulation of proteolysis" EXACT []
-is_a: GO:0030162 ! regulation of proteolysis
-is_a: GO:0032270 ! positive regulation of cellular protein metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006508 ! proteolysis
-relationship: positively_regulates GO:0006508 ! proteolysis
-
-[Term]
 id: GO:0045892
 name: negative regulation of transcription, DNA-templated
 namespace: biological_process
@@ -13792,39 +13147,6 @@ is_a: GO:0045727 ! positive regulation of translation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006414 ! translational elongation
 relationship: positively_regulates GO:0006414 ! translational elongation
-
-[Term]
-id: GO:0045904
-name: negative regulation of translational termination
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of translational termination." [GOC:go_curators]
-synonym: "down regulation of translational termination" EXACT []
-synonym: "down-regulation of translational termination" EXACT []
-synonym: "downregulation of translational termination" EXACT []
-synonym: "inhibition of translational termination" NARROW []
-is_a: GO:0006449 ! regulation of translational termination
-is_a: GO:0017148 ! negative regulation of translation
-is_a: GO:0043242 ! negative regulation of protein complex disassembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006415 ! translational termination
-relationship: negatively_regulates GO:0006415 ! translational termination
-
-[Term]
-id: GO:0045905
-name: positive regulation of translational termination
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of translational termination." [GOC:go_curators]
-synonym: "activation of translational termination" NARROW []
-synonym: "stimulation of translational termination" NARROW []
-synonym: "up regulation of translational termination" EXACT []
-synonym: "up-regulation of translational termination" EXACT []
-synonym: "upregulation of translational termination" EXACT []
-is_a: GO:0006449 ! regulation of translational termination
-is_a: GO:0043243 ! positive regulation of protein complex disassembly
-is_a: GO:0045727 ! positive regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006415 ! translational termination
-relationship: positively_regulates GO:0006415 ! translational termination
 
 [Term]
 id: GO:0045910
@@ -14084,68 +13406,6 @@ is_a: GO:0045893 ! positive regulation of transcription, DNA-templated
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006366 ! transcription by RNA polymerase II
 relationship: positively_regulates GO:0006366 ! transcription by RNA polymerase II
-
-[Term]
-id: GO:0045947
-name: negative regulation of translational initiation
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of translational initiation." [GOC:go_curators]
-synonym: "down regulation of translational initiation" EXACT []
-synonym: "down-regulation of translational initiation" EXACT []
-synonym: "downregulation of translational initiation" EXACT []
-synonym: "inhibition of translational initiation" NARROW []
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0017148 ! negative regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006413 ! translational initiation
-relationship: negatively_regulates GO:0006413 ! translational initiation
-
-[Term]
-id: GO:0045948
-name: positive regulation of translational initiation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of translational initiation." [GOC:go_curators]
-synonym: "activation of translational initiation" NARROW []
-synonym: "stimulation of translational initiation" NARROW []
-synonym: "up regulation of translational initiation" EXACT []
-synonym: "up-regulation of translational initiation" EXACT []
-synonym: "upregulation of translational initiation" EXACT []
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0045727 ! positive regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006413 ! translational initiation
-relationship: positively_regulates GO:0006413 ! translational initiation
-
-[Term]
-id: GO:0045955
-name: negative regulation of calcium ion-dependent exocytosis
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of calcium ion-dependent exocytosis." [GOC:go_curators]
-synonym: "down regulation of calcium ion-dependent exocytosis" EXACT []
-synonym: "down-regulation of calcium ion-dependent exocytosis" EXACT []
-synonym: "downregulation of calcium ion-dependent exocytosis" EXACT []
-synonym: "inhibition of calcium ion-dependent exocytosis" NARROW []
-is_a: GO:0017158 ! regulation of calcium ion-dependent exocytosis
-is_a: GO:1903306 ! negative regulation of regulated secretory pathway
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0017156 ! calcium-ion regulated exocytosis
-relationship: negatively_regulates GO:0017156 ! calcium-ion regulated exocytosis
-
-[Term]
-id: GO:0045956
-name: positive regulation of calcium ion-dependent exocytosis
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of calcium ion-dependent exocytosis." [GOC:go_curators]
-synonym: "activation of calcium ion-dependent exocytosis" NARROW []
-synonym: "stimulation of calcium ion-dependent exocytosis" NARROW []
-synonym: "up regulation of calcium ion-dependent exocytosis" EXACT []
-synonym: "up-regulation of calcium ion-dependent exocytosis" EXACT []
-synonym: "upregulation of calcium ion-dependent exocytosis" EXACT []
-is_a: GO:0017158 ! regulation of calcium ion-dependent exocytosis
-is_a: GO:1903307 ! positive regulation of regulated secretory pathway
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0017156 ! calcium-ion regulated exocytosis
-relationship: positively_regulates GO:0017156 ! calcium-ion regulated exocytosis
 
 [Term]
 id: GO:0045963
@@ -14620,15 +13880,6 @@ intersection_of: regulates GO:0048066 ! developmental pigmentation
 relationship: regulates GO:0048066 ! developmental pigmentation
 
 [Term]
-id: GO:0048071
-name: sex-specific pigmentation
-namespace: biological_process
-def: "Establishment of a pattern of pigment in one sex that is not observed in the other sex." [GOC:jid]
-is_a: GO:0003006 ! developmental process involved in reproduction
-is_a: GO:0048066 ! developmental pigmentation
-relationship: part_of GO:0007548 ! sex differentiation
-
-[Term]
 id: GO:0048086
 name: negative regulation of developmental pigmentation
 namespace: biological_process
@@ -14658,79 +13909,6 @@ is_a: GO:0048518 ! positive regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0048066 ! developmental pigmentation
 relationship: positively_regulates GO:0048066 ! developmental pigmentation
-
-[Term]
-id: GO:0048088
-name: regulation of male pigmentation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of establishment of a pattern of pigment in males." [GOC:jid]
-is_a: GO:0048070 ! regulation of developmental pigmentation
-is_a: GO:2000026 ! regulation of multicellular organismal development
-is_a: GO:2000241 ! regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0048094 ! male pigmentation
-relationship: regulates GO:0048094 ! male pigmentation
-
-[Term]
-id: GO:0048092
-name: negative regulation of male pigmentation
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of establishment of a pattern of pigment in males." [GOC:jid]
-synonym: "down regulation of male pigmentation" EXACT []
-synonym: "down-regulation of male pigmentation" EXACT []
-synonym: "downregulation of male pigmentation" EXACT []
-synonym: "inhibition of male pigmentation" NARROW []
-is_a: GO:0048086 ! negative regulation of developmental pigmentation
-is_a: GO:0048088 ! regulation of male pigmentation
-is_a: GO:0051093 ! negative regulation of developmental process
-is_a: GO:0051241 ! negative regulation of multicellular organismal process
-is_a: GO:2000242 ! negative regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0048094 ! male pigmentation
-relationship: negatively_regulates GO:0048094 ! male pigmentation
-
-[Term]
-id: GO:0048093
-name: positive regulation of male pigmentation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of establishment of a pattern of pigment in males." [GOC:jid]
-synonym: "activation of male pigmentation" NARROW []
-synonym: "stimulation of male pigmentation" NARROW []
-synonym: "up regulation of male pigmentation" EXACT []
-synonym: "up-regulation of male pigmentation" EXACT []
-synonym: "upregulation of male pigmentation" EXACT []
-is_a: GO:0048087 ! positive regulation of developmental pigmentation
-is_a: GO:0048088 ! regulation of male pigmentation
-is_a: GO:0051094 ! positive regulation of developmental process
-is_a: GO:0051240 ! positive regulation of multicellular organismal process
-is_a: GO:2000243 ! positive regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0048094 ! male pigmentation
-relationship: positively_regulates GO:0048094 ! male pigmentation
-
-[Term]
-id: GO:0048094
-name: male pigmentation
-namespace: biological_process
-def: "Establishment of a pattern of pigment in males." [GOC:jid]
-is_a: GO:0048071 ! sex-specific pigmentation
-relationship: part_of GO:0046661 ! male sex differentiation
-
-[Term]
-id: GO:0048102
-name: autophagic cell death
-namespace: biological_process
-def: "A form of programmed cell death that is accompanied by the formation of autophagosomes. Autophagic cell death is characterized by lack of chromatin condensation and massive vacuolization of the cytoplasm, with little or no uptake by phagocytic cells." [GOC:autophagy, GOC:mah, GOC:mtg_apoptosis, PMID:18846107, PMID:23347517]
-comment: The precise nature of autophagic cell death is still being debated, and the link between autophagy and cell death unclear. As autophagy is often induced under conditions of stress that could also lead to cell death, there has been a propagation of the idea that autophagy can act as a cell death mechanism; but others suggest that autophagy may simply be an attempt of dying cells to adapt to lethal stress rather than a mechanism to execute a cell death program. Further studies are required to resolve this controversy (see e.g. PMID:22082964, PMID:22052193, PMID:25236395). In the meantime, curators should carefully examine the experimental evidence presented in papers concerning autophagic cell death, and annotate accordingly. Recently, an instance of autophagic cell death, termed autosis, was discovered that relies on the plasma membrane Na+/K+-ATPase. Autosis was observed in vivo in the brain of rats subjected to an ischemic insult. It's still unclear if all cases of autophagic cell death require the Na+/K+-ATPase or not.
-synonym: "autophagic death" BROAD []
-synonym: "autosis" RELATED [PMID:25236395]
-synonym: "programmed cell death by autophagy" BROAD [GOC:pr]
-synonym: "programmed cell death by macroautophagy" EXACT [GOC:cjm]
-synonym: "type II programmed cell death" RELATED [GOC:sl]
-is_a: GO:0012501 ! programmed cell death
-intersection_of: GO:0012501 ! programmed cell death
-intersection_of: has_part GO:0016236 ! macroautophagy
-relationship: has_part GO:0016236 ! macroautophagy
 
 [Term]
 id: GO:0048232
@@ -17209,17 +16387,6 @@ intersection_of: regulates GO:0016740 ! transferase activity
 relationship: regulates GO:0016740 ! transferase activity
 
 [Term]
-id: GO:0051340
-name: regulation of ligase activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of ligase activity, the catalysis of the ligation of two substances with concomitant breaking of a diphosphate linkage, usually in a nucleoside triphosphate. Ligase is the systematic name for any enzyme of EC class 6." [EC:6.-.-.-, GOC:ai]
-synonym: "ligase regulator" EXACT []
-is_a: GO:0050790 ! regulation of catalytic activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0016874 ! ligase activity
-relationship: regulates GO:0016874 ! ligase activity
-
-[Term]
 id: GO:0051345
 name: positive regulation of hydrolase activity
 namespace: biological_process
@@ -17288,39 +16455,6 @@ is_a: GO:0051338 ! regulation of transferase activity
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0016740 ! transferase activity
 relationship: negatively_regulates GO:0016740 ! transferase activity
-
-[Term]
-id: GO:0051351
-name: positive regulation of ligase activity
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of ligase activity, the catalysis of the ligation of two substances with concomitant breaking of a diphosphate linkage, usually in a nucleoside triphosphate." [GOC:ai]
-synonym: "activation of ligase activity" NARROW []
-synonym: "ligase activator" EXACT []
-synonym: "stimulation of ligase activity" NARROW []
-synonym: "up regulation of ligase activity" EXACT []
-synonym: "up-regulation of ligase activity" EXACT []
-synonym: "upregulation of ligase activity" EXACT []
-is_a: GO:0043085 ! positive regulation of catalytic activity
-is_a: GO:0051340 ! regulation of ligase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0016874 ! ligase activity
-relationship: positively_regulates GO:0016874 ! ligase activity
-
-[Term]
-id: GO:0051352
-name: negative regulation of ligase activity
-namespace: biological_process
-def: "Any process that stops or reduces the rate of ligase activity, the catalysis of the ligation of two substances with concomitant breaking of a diphosphate linkage, usually in a nucleoside triphosphate." [GOC:ai]
-synonym: "down regulation of ligase activity" EXACT []
-synonym: "down-regulation of ligase activity" EXACT []
-synonym: "downregulation of ligase activity" EXACT []
-synonym: "inhibition of ligase activity" NARROW []
-synonym: "ligase inhibitor" EXACT []
-is_a: GO:0043086 ! negative regulation of catalytic activity
-is_a: GO:0051340 ! regulation of ligase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0016874 ! ligase activity
-relationship: negatively_regulates GO:0016874 ! ligase activity
 
 [Term]
 id: GO:0051402
@@ -17541,23 +16675,6 @@ is_a: GO:0051588 ! regulation of neurotransmitter transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006836 ! neurotransmitter transport
 relationship: positively_regulates GO:0006836 ! neurotransmitter transport
-
-[Term]
-id: GO:0051603
-name: proteolysis involved in cellular protein catabolic process
-namespace: biological_process
-def: "The hydrolysis of a peptide bond or bonds within a protein as part of the chemical reactions and pathways resulting in the breakdown of a protein by individual cells." [GOC:ai, GOC:dph, GOC:tb]
-subset: goslim_yeast
-synonym: "peptidolysis during cellular protein catabolic process" RELATED []
-synonym: "peptidolysis during cellular protein catabolism" RELATED []
-synonym: "peptidolysis involved in cellular protein catabolic process" EXACT []
-synonym: "peptidolysis involved in cellular protein catabolism" EXACT []
-synonym: "proteolysis during cellular protein catabolic process" RELATED []
-synonym: "proteolysis during cellular protein catabolism" RELATED []
-is_a: GO:0006508 ! proteolysis
-intersection_of: GO:0006508 ! proteolysis
-intersection_of: part_of GO:0044257 ! cellular protein catabolic process
-relationship: part_of GO:0044257 ! cellular protein catabolic process
 
 [Term]
 id: GO:0051640
@@ -18031,18 +17148,6 @@ intersection_of: negatively_regulates GO:0007059 ! chromosome segregation
 relationship: negatively_regulates GO:0007059 ! chromosome segregation
 
 [Term]
-id: GO:0052547
-name: regulation of peptidase activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [EC:3.4, GOC:ai]
-synonym: "peptidase regulator activity" RELATED []
-is_a: GO:0030162 ! regulation of proteolysis
-is_a: GO:0051336 ! regulation of hydrolase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0008233 ! peptidase activity
-relationship: regulates GO:0008233 ! peptidase activity
-
-[Term]
 id: GO:0052689
 name: carboxylic ester hydrolase activity
 namespace: molecular_function
@@ -18122,23 +17227,6 @@ is_a: GO:0019725 ! cellular homeostasis
 is_a: GO:0048878 ! chemical homeostasis
 
 [Term]
-id: GO:0055085
-name: transmembrane transport
-namespace: biological_process
-alt_id: GO:0090662
-def: "The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other." [GOC:dph, GOC:jid]
-comment: Transmembrane transport is the transport of a solute across a lipid bilayer. Note that transport through the nuclear pore complex is not transmembrane because the nuclear membrane is a double membrane and is not traversed. For transport through the nuclear pore, consider instead the term 'nucleocytoplasmic transport ; GO:0006913' and its children. Note also that this term is not intended for use in annotating lateral movement within membranes.
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_pombe
-subset: goslim_yeast
-synonym: "ATP hydrolysis coupled transmembrane transport" NARROW []
-synonym: "membrane transport" EXACT []
-is_a: GO:0006810 ! transport
-created_by: tanyaberardini
-creation_date: 2015-10-21T13:22:47Z
-
-[Term]
 id: GO:0055115
 name: entry into diapause
 namespace: biological_process
@@ -18152,15 +17240,6 @@ name: digestive system development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the digestive system over time, from its formation to the mature structure. The digestive system is the entire structure in which digestion takes place. Digestion is all of the physical, chemical, and biochemical processes carried out by multicellular organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:jid]
 is_a: GO:0048731 ! system development
-
-[Term]
-id: GO:0060089
-name: molecular transducer activity
-namespace: molecular_function
-def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
-subset: gocheck_do_not_manually_annotate
-subset: goslim_pir
-is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0060090
@@ -18267,14 +17346,6 @@ name: medial layer of collagen and cuticulin-based cuticle extracellular matrix
 namespace: cellular_component
 def: "The fluid-filled cuticle layer that lies between the cortical and basal layers and is characterized by the presence of regularly spaced columnar struts that lie on either side of the annular furrows and link the two surrounding layers. In C. elegans, a defined medial layer is found only in adult animals." [GOC:dph, GOC:kmv, ISSN:15518507]
 synonym: "medial layer struts" RELATED []
-is_a: GO:0060103 ! collagen and cuticulin-based cuticle extracellular matrix part
-
-[Term]
-id: GO:0060111
-name: alae of collagen and cuticulin-based cuticle extracellular matrix
-namespace: cellular_component
-def: "Raised, thickened cuticular ridges that run longitudinally, and in parallel, along the left and right sides of the animal. The alae lie above the hypodermal cells known as the lateral seam cells. In C. elegans, alae are produced in L1 larvae, dauer larvae and adult stage animals, where they consist of three, five, and three ridges of distinct morphology, respectively." [GOC:dph, GOC:kmv, ISSN:15518507]
-synonym: "alae of collagen and cuticulin-based exoskeleton extracellular matrix" RELATED []
 is_a: GO:0060103 ! collagen and cuticulin-based cuticle extracellular matrix part
 
 [Term]
@@ -18562,18 +17633,6 @@ is_a: GO:2000242 ! negative regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0009566 ! fertilization
 relationship: negatively_regulates GO:0009566 ! fertilization
-
-[Term]
-id: GO:0060491
-name: regulation of cell projection assembly
-namespace: biological_process
-def: "Any process that modulates the rate, frequency, or extent of cell projection assembly." [GOC:dph, GOC:tb]
-synonym: "regulation of cell projection formation" RELATED [GOC:dph, GOC:tb]
-is_a: GO:0031344 ! regulation of cell projection organization
-is_a: GO:0044087 ! regulation of cellular component biogenesis
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0030031 ! cell projection assembly
-relationship: regulates GO:0030031 ! cell projection assembly
 
 [Term]
 id: GO:0060538
@@ -19050,62 +18109,6 @@ created_by: dph
 creation_date: 2014-08-29T08:35:40Z
 
 [Term]
-id: GO:0061650
-name: ubiquitin-like protein conjugating enzyme activity
-namespace: molecular_function
-def: "Isoenergetic transfer of a ubiquitin-like protein (ULP) from one protein to another via the reaction X-SCP + Y -> Y-SCP + X, where both the X-SCP and Y-SCP linkages are thioester bonds between the C-terminal amino acid of SCP and a sulfhydryl side group of a cysteine residue." [GOC:dph]
-synonym: "E2" RELATED []
-synonym: "small conjugating protein conjugating enzyme activity" EXACT [GOC:dph]
-is_a: GO:0019787 ! ubiquitin-like protein transferase activity
-created_by: dph
-creation_date: 2014-11-06T13:15:27Z
-
-[Term]
-id: GO:0061651
-name: Atg12 conjugating enzyme activity
-namespace: molecular_function
-def: "Isoenergetic transfer of Atg12 from one protein to another via the reaction X-Atg12 + Y -> Y-Atg12 + X, where both the X-Atg12 and Y-Atg12 linkages are thioester bonds between the C-terminal amino acid of Atg12 and a sulfhydryl side group of a cysteine residue." [GOC:dph]
-synonym: "E2" RELATED [GOC:dph]
-is_a: GO:0019777 ! Atg12 transferase activity
-is_a: GO:0061650 ! ubiquitin-like protein conjugating enzyme activity
-created_by: dph
-creation_date: 2014-11-06T13:17:36Z
-
-[Term]
-id: GO:0061659
-name: ubiquitin-like protein ligase activity
-namespace: molecular_function
-def: "Catalysis of the transfer of a ubiquitin-like protein (ULP) to a substrate protein via the reaction X-ULP + S --> X + S-ULP, where X is either an E2 or E3 enzyme, the X-ULP linkage is a thioester bond, and the S-ULP linkage is an isopeptide bond between the C-terminal glycine of ULP and the epsilon-amino group of lysine residues in the substrate." [GOC:dph]
-synonym: "E3" RELATED [GOC:dph]
-synonym: "small conjugating protein ligase activity" EXACT [GOC:dph]
-is_a: GO:0019787 ! ubiquitin-like protein transferase activity
-created_by: dph
-creation_date: 2014-11-06T13:46:23Z
-
-[Term]
-id: GO:0061660
-name: Atg12 ligase activity
-namespace: molecular_function
-def: "Catalysis of the transfer of Atg12 to a substrate protein via the reaction X-Atg12 + S --> X + S-Atg12, where X is either an E2 or E3 enzyme, the X-Atg12 linkage is a thioester bond, and the S-Atg12 linkage is an isopeptide bond between the C-terminal amino acid of Atg12 and the epsilon-amino group of lysine residues in the substrate." [GOC:dph]
-synonym: "E3" RELATED [GOC:dph]
-is_a: GO:0019777 ! Atg12 transferase activity
-is_a: GO:0061659 ! ubiquitin-like protein ligase activity
-created_by: dph
-creation_date: 2014-11-06T13:50:42Z
-
-[Term]
-id: GO:0061736
-name: engulfment of target by autophagosome
-namespace: biological_process
-def: "The membrane invagination process by which an autophagosomal membrane surrounds an object that will be degraded by macroautophagy." [GOC:autophagy, GOC:dph, GOC:pad, GOC:PARL]
-is_a: GO:0010324 ! membrane invagination
-intersection_of: GO:0010324 ! membrane invagination
-intersection_of: part_of GO:0000045 ! autophagosome assembly
-relationship: part_of GO:0000045 ! autophagosome assembly
-created_by: dph
-creation_date: 2015-09-14T14:10:24Z
-
-[Term]
 id: GO:0061919
 name: process utilizing autophagic mechanism
 namespace: biological_process
@@ -19266,17 +18269,6 @@ intersection_of: regulates GO:0003674 ! molecular_function
 relationship: regulates GO:0003674 ! molecular_function
 
 [Term]
-id: GO:0070011
-name: peptidase activity, acting on L-amino acid peptides
-namespace: molecular_function
-def: "Catalysis of the hydrolysis of peptide bonds formed between L-amino acids." [GOC:mah]
-xref: Reactome:R-HSA-3065958 "An unknown protease degrades ACACA"
-xref: Reactome:R-HSA-3065959 "An unknown protease degrades hCBXs"
-xref: Reactome:R-HSA-4167501 "An unknown protease degrades ACACB"
-xref: Reactome:R-HSA-6803060 "DCD(63-110) is processed to DCD(63-109)"
-is_a: GO:0008233 ! peptidase activity
-
-[Term]
 id: GO:0070013
 name: intracellular organelle lumen
 namespace: cellular_component
@@ -19289,18 +18281,6 @@ intersection_of: part_of GO:0043229 ! intracellular organelle
 relationship: part_of GO:0043229 ! intracellular organelle
 
 [Term]
-id: GO:0070124
-name: mitochondrial translational initiation
-namespace: biological_process
-def: "The process preceding formation of the peptide bond between the first two amino acids of a protein in a mitochondrion. This includes the formation of a complex of the ribosome, mRNA, and an initiation complex that contains the first aminoacyl-tRNA." [GOC:mah]
-synonym: "mitochondrial translation initiation" EXACT [GOC:mah]
-is_a: GO:0006413 ! translational initiation
-intersection_of: GO:0006413 ! translational initiation
-intersection_of: occurs_in GO:0005739 ! mitochondrion
-relationship: occurs_in GO:0005739 ! mitochondrion
-relationship: part_of GO:0032543 ! mitochondrial translation
-
-[Term]
 id: GO:0070125
 name: mitochondrial translational elongation
 namespace: biological_process
@@ -19308,18 +18288,6 @@ def: "The successive addition of amino acid residues to a nascent polypeptide ch
 synonym: "mitochondrial translation elongation" EXACT [GOC:mah]
 is_a: GO:0006414 ! translational elongation
 intersection_of: GO:0006414 ! translational elongation
-intersection_of: occurs_in GO:0005739 ! mitochondrion
-relationship: occurs_in GO:0005739 ! mitochondrion
-relationship: part_of GO:0032543 ! mitochondrial translation
-
-[Term]
-id: GO:0070126
-name: mitochondrial translational termination
-namespace: biological_process
-def: "The process resulting in the release of a polypeptide chain from the ribosome in a mitochondrion, usually in response to a termination codon (note that mitochondria use variants of the universal genetic code that differ between different taxa)." [GOC:mah, http://mitogenome.org/index.php/Genetic_Code_of_mitochondria]
-synonym: "mitochondrial translation termination" EXACT [GOC:mah]
-is_a: GO:0006415 ! translational termination
-intersection_of: GO:0006415 ! translational termination
 intersection_of: occurs_in GO:0005739 ! mitochondrion
 relationship: occurs_in GO:0005739 ! mitochondrion
 relationship: part_of GO:0032543 ! mitochondrial translation
@@ -19368,44 +18336,6 @@ is_a: GO:0070129 ! regulation of mitochondrial translation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0032543 ! mitochondrial translation
 relationship: positively_regulates GO:0032543 ! mitochondrial translation
-
-[Term]
-id: GO:0070132
-name: regulation of mitochondrial translational initiation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the process preceding formation of the peptide bond between the first two amino acids of a protein in a mitochondrion." [GOC:mah]
-synonym: "regulation of mitochondrial translation initiation" EXACT [GOC:mah]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0070129 ! regulation of mitochondrial translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0070124 ! mitochondrial translational initiation
-relationship: regulates GO:0070124 ! mitochondrial translational initiation
-
-[Term]
-id: GO:0070133
-name: negative regulation of mitochondrial translational initiation
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the process preceding formation of the peptide bond between the first two amino acids of a protein in a mitochondrion." [GOC:mah]
-synonym: "negative regulation of mitochondrial translation initiation" EXACT [GOC:mah]
-is_a: GO:0045947 ! negative regulation of translational initiation
-is_a: GO:0070130 ! negative regulation of mitochondrial translation
-is_a: GO:0070132 ! regulation of mitochondrial translational initiation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0070124 ! mitochondrial translational initiation
-relationship: negatively_regulates GO:0070124 ! mitochondrial translational initiation
-
-[Term]
-id: GO:0070134
-name: positive regulation of mitochondrial translational initiation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the process preceding formation of the peptide bond between the first two amino acids of a protein in a mitochondrion." [GOC:mah]
-synonym: "positive regulation of mitochondrial translation initiation" EXACT [GOC:mah]
-is_a: GO:0045948 ! positive regulation of translational initiation
-is_a: GO:0070131 ! positive regulation of mitochondrial translation
-is_a: GO:0070132 ! regulation of mitochondrial translational initiation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0070124 ! mitochondrial translational initiation
-relationship: positively_regulates GO:0070124 ! mitochondrial translational initiation
 
 [Term]
 id: GO:0070160
@@ -20002,20 +18932,6 @@ created_by: midori
 creation_date: 2010-12-08T04:18:11Z
 
 [Term]
-id: GO:0072425
-name: signal transduction involved in G2 DNA damage checkpoint
-namespace: biological_process
-def: "A signal transduction process that contributes to a G2/M transition DNA damage checkpoint." [GOC:mtg_cell_cycle]
-synonym: "signal transduction involved in G2/M transition DNA damage checkpoint" EXACT []
-is_a: GO:0072422 ! signal transduction involved in DNA damage checkpoint
-is_a: GO:1902750 ! negative regulation of cell cycle G2/M phase transition
-intersection_of: GO:0035556 ! intracellular signal transduction
-intersection_of: part_of GO:0031572 ! G2 DNA damage checkpoint
-relationship: part_of GO:0031572 ! G2 DNA damage checkpoint
-created_by: midori
-creation_date: 2010-12-08T04:25:26Z
-
-[Term]
 id: GO:0072428
 name: signal transduction involved in intra-S DNA damage checkpoint
 namespace: biological_process
@@ -20027,36 +18943,6 @@ intersection_of: part_of GO:0031573 ! intra-S DNA damage checkpoint
 relationship: part_of GO:0031573 ! intra-S DNA damage checkpoint
 created_by: midori
 creation_date: 2010-12-08T04:31:08Z
-
-[Term]
-id: GO:0072431
-name: signal transduction involved in mitotic G1 DNA damage checkpoint
-namespace: biological_process
-def: "A signal transduction process that contributes to a mitotic cell cycle G1/S transition DNA damage checkpoint." [GOC:mtg_cell_cycle]
-synonym: "signal transduction involved in mitotic cell cycle G1/S transition DNA damage checkpoint" EXACT []
-is_a: GO:1902400 ! intracellular signal transduction involved in G1 DNA damage checkpoint
-is_a: GO:1902402 ! signal transduction involved in mitotic DNA damage checkpoint
-is_a: GO:2000134 ! negative regulation of G1/S transition of mitotic cell cycle
-intersection_of: GO:0035556 ! intracellular signal transduction
-intersection_of: part_of GO:0031571 ! mitotic G1 DNA damage checkpoint
-relationship: part_of GO:0031571 ! mitotic G1 DNA damage checkpoint
-created_by: midori
-creation_date: 2010-12-08T04:37:55Z
-
-[Term]
-id: GO:0072434
-name: signal transduction involved in mitotic G2 DNA damage checkpoint
-namespace: biological_process
-def: "A signal transduction process that contributes to a mitotic G2/M transition DNA damage checkpoint." [GOC:mtg_cell_cycle]
-synonym: "signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT []
-is_a: GO:0010972 ! negative regulation of G2/M transition of mitotic cell cycle
-is_a: GO:0072425 ! signal transduction involved in G2 DNA damage checkpoint
-is_a: GO:1902402 ! signal transduction involved in mitotic DNA damage checkpoint
-intersection_of: GO:0007165 ! signal transduction
-intersection_of: part_of GO:0007095 ! mitotic G2 DNA damage checkpoint
-relationship: part_of GO:0007095 ! mitotic G2 DNA damage checkpoint
-created_by: midori
-creation_date: 2010-12-08T04:43:48Z
 
 [Term]
 id: GO:0072450
@@ -20815,19 +19701,6 @@ created_by: paola
 creation_date: 2011-11-23T09:40:50Z
 
 [Term]
-id: GO:0097194
-name: execution phase of apoptosis
-namespace: biological_process
-def: "A stage of the apoptotic process that starts with the controlled breakdown of the cell through the action of effector caspases or other effector molecules (e.g. cathepsins, calpains etc.). Key steps of the execution phase are rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), plasma membrane blebbing and fragmentation of the cell into apoptotic bodies. When the execution phase is completed, the cell has died." [GOC:mtg_apoptosis, PMID:21760595]
-synonym: "apoptosis" NARROW []
-synonym: "execution phase of apoptotic process" EXACT []
-is_a: GO:0009987 ! cellular process
-relationship: has_part GO:0032060 ! bleb assembly
-relationship: part_of GO:0006915 ! apoptotic process
-created_by: paola
-creation_date: 2011-11-23T09:45:24Z
-
-[Term]
 id: GO:0097435
 name: supramolecular fiber organization
 namespace: biological_process
@@ -20841,18 +19714,6 @@ synonym: "fibril organization" RELATED []
 is_a: GO:0016043 ! cellular component organization
 created_by: paola
 creation_date: 2012-11-27T15:46:25Z
-
-[Term]
-id: GO:0097447
-name: dendritic tree
-namespace: cellular_component
-def: "The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches." [GOC:aruk, GOC:bc, NIF_Subcellular:sao172297168]
-xref: NIF_Subcellular:sao172297168
-is_a: GO:0043005 ! neuron projection
-relationship: has_part GO:0030425 ! dendrite
-relationship: part_of GO:0036477 ! somatodendritic compartment
-created_by: paola
-creation_date: 2012-12-17T12:31:49Z
 
 [Term]
 id: GO:0097458
@@ -20876,17 +19737,6 @@ synonym: "synaptic vesicle localisation" EXACT []
 is_a: GO:0051648 ! vesicle localization
 created_by: paola
 creation_date: 2013-05-22T14:29:55Z
-
-[Term]
-id: GO:0097480
-name: establishment of synaptic vesicle localization
-namespace: biological_process
-def: "The directed movement of a synaptic vesicle or vesicles to a specific location." [GOC:pr]
-synonym: "establishment of synaptic vesicle localisation" EXACT []
-is_a: GO:0051650 ! establishment of vesicle localization
-relationship: part_of GO:0097479 ! synaptic vesicle localization
-created_by: paola
-creation_date: 2013-05-22T14:32:12Z
 
 [Term]
 id: GO:0097485
@@ -21614,56 +20464,6 @@ created_by: kchris
 creation_date: 2017-03-21T17:26:07Z
 
 [Term]
-id: GO:0120031
-name: plasma membrane bounded cell projection assembly
-namespace: biological_process
-def: "Formation of a prolongation or process extending and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon." [GOC:krc]
-is_a: GO:0030031 ! cell projection assembly
-is_a: GO:0120036 ! plasma membrane bounded cell projection organization
-created_by: kchris
-creation_date: 2017-04-24T23:56:08Z
-
-[Term]
-id: GO:0120032
-name: regulation of plasma membrane bounded cell projection assembly
-namespace: biological_process
-def: "Any process that modulates the rate, frequency, or extent of plasma membrane bounded cell projection assembly." [GOC:krc]
-is_a: GO:0060491 ! regulation of cell projection assembly
-is_a: GO:0120035 ! regulation of plasma membrane bounded cell projection organization
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-relationship: regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-created_by: kchris
-creation_date: 2017-04-26T04:27:04Z
-
-[Term]
-id: GO:0120033
-name: negative regulation of plasma membrane bounded cell projection assembly
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of plasma membrane bounded cell projection assembly." [GOC:krc]
-is_a: GO:0031345 ! negative regulation of cell projection organization
-is_a: GO:0120032 ! regulation of plasma membrane bounded cell projection assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-relationship: negatively_regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-created_by: kchris
-creation_date: 2017-04-26T04:34:31Z
-
-[Term]
-id: GO:0120034
-name: positive regulation of plasma membrane bounded cell projection assembly
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of plasma membrane bounded cell projection assembly." [GOC:krc]
-is_a: GO:0031346 ! positive regulation of cell projection organization
-is_a: GO:0044089 ! positive regulation of cellular component biogenesis
-is_a: GO:0120032 ! regulation of plasma membrane bounded cell projection assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-relationship: positively_regulates GO:0120031 ! plasma membrane bounded cell projection assembly
-created_by: kchris
-creation_date: 2017-04-26T04:34:45Z
-
-[Term]
 id: GO:0120035
 name: regulation of plasma membrane bounded cell projection organization
 namespace: biological_process
@@ -21770,16 +20570,6 @@ intersection_of: occurs_in GO:0005739 ! mitochondrion
 relationship: occurs_in GO:0005739 ! mitochondrion
 created_by: pg
 creation_date: 2017-06-26T10:57:45Z
-
-[Term]
-id: GO:0140096
-name: catalytic activity, acting on a protein
-namespace: molecular_function
-def: "Catalytic activity that acts to modify a protein." [GOC:pdt]
-comment: https://github.com/geneontology/go-ontology/issues/14225
-is_a: GO:0003824 ! catalytic activity
-created_by: pg
-creation_date: 2017-09-14T10:32:59Z
 
 [Term]
 id: GO:0140236
@@ -22135,52 +20925,6 @@ created_by: bf
 creation_date: 2012-02-22T10:27:56Z
 
 [Term]
-id: GO:1900117
-name: regulation of execution phase of apoptosis
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of execution phase of apoptosis." [GOC:mtg_apoptosis, GOC:TermGenie]
-is_a: GO:0042981 ! regulation of apoptotic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0097194 ! execution phase of apoptosis
-relationship: regulates GO:0097194 ! execution phase of apoptosis
-created_by: pr
-creation_date: 2012-02-22T11:26:20Z
-
-[Term]
-id: GO:1900118
-name: negative regulation of execution phase of apoptosis
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of execution phase of apoptosis." [GOC:mtg_apoptosis, GOC:TermGenie]
-synonym: "down regulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-synonym: "down-regulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-synonym: "downregulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-synonym: "inhibition of execution phase of apoptosis" NARROW [GOC:TermGenie]
-is_a: GO:0043066 ! negative regulation of apoptotic process
-is_a: GO:1900117 ! regulation of execution phase of apoptosis
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0097194 ! execution phase of apoptosis
-relationship: negatively_regulates GO:0097194 ! execution phase of apoptosis
-created_by: pr
-creation_date: 2012-02-22T11:26:24Z
-
-[Term]
-id: GO:1900119
-name: positive regulation of execution phase of apoptosis
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of execution phase of apoptosis." [GOC:mtg_apoptosis, GOC:TermGenie]
-synonym: "activation of execution phase of apoptosis" NARROW [GOC:TermGenie]
-synonym: "up regulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-synonym: "up-regulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-synonym: "upregulation of execution phase of apoptosis" EXACT [GOC:TermGenie]
-is_a: GO:0043065 ! positive regulation of apoptotic process
-is_a: GO:1900117 ! regulation of execution phase of apoptosis
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0097194 ! execution phase of apoptosis
-relationship: positively_regulates GO:0097194 ! execution phase of apoptosis
-created_by: pr
-creation_date: 2012-02-22T11:26:27Z
-
-[Term]
 id: GO:1900120
 name: regulation of receptor binding
 namespace: biological_process
@@ -22367,55 +21111,6 @@ intersection_of: positively_regulates GO:0048488 ! synaptic vesicle endocytosis
 relationship: positively_regulates GO:0048488 ! synaptic vesicle endocytosis
 created_by: rl
 creation_date: 2012-03-28T01:40:44Z
-
-[Term]
-id: GO:1900247
-name: regulation of cytoplasmic translational elongation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of cytoplasmic translational elongation." [GOC:TermGenie]
-is_a: GO:0006448 ! regulation of translational elongation
-is_a: GO:2000765 ! regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0002182 ! cytoplasmic translational elongation
-relationship: regulates GO:0002182 ! cytoplasmic translational elongation
-created_by: vw
-creation_date: 2012-04-03T05:07:02Z
-
-[Term]
-id: GO:1900248
-name: negative regulation of cytoplasmic translational elongation
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of cytoplasmic translational elongation." [GOC:TermGenie]
-synonym: "down regulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-synonym: "downregulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-synonym: "inhibition of cytoplasmic translational elongation" NARROW [GOC:TermGenie]
-is_a: GO:0045900 ! negative regulation of translational elongation
-is_a: GO:1900247 ! regulation of cytoplasmic translational elongation
-is_a: GO:2000766 ! negative regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0002182 ! cytoplasmic translational elongation
-relationship: negatively_regulates GO:0002182 ! cytoplasmic translational elongation
-created_by: vw
-creation_date: 2012-04-03T05:07:14Z
-
-[Term]
-id: GO:1900249
-name: positive regulation of cytoplasmic translational elongation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of cytoplasmic translational elongation." [GOC:TermGenie]
-synonym: "activation of cytoplasmic translational elongation" NARROW [GOC:TermGenie]
-synonym: "up regulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-synonym: "upregulation of cytoplasmic translational elongation" EXACT [GOC:TermGenie]
-is_a: GO:0045901 ! positive regulation of translational elongation
-is_a: GO:1900247 ! regulation of cytoplasmic translational elongation
-is_a: GO:2000767 ! positive regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0002182 ! cytoplasmic translational elongation
-relationship: positively_regulates GO:0002182 ! cytoplasmic translational elongation
-created_by: vw
-creation_date: 2012-04-03T05:07:24Z
 
 [Term]
 id: GO:1900368
@@ -22748,66 +21443,6 @@ created_by: bf
 creation_date: 2012-07-18T04:45:14Z
 
 [Term]
-id: GO:1901190
-name: regulation of formation of translation initiation ternary complex
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-synonym: "regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:0043254 ! regulation of protein complex assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0001677 ! formation of translation initiation ternary complex
-relationship: regulates GO:0001677 ! formation of translation initiation ternary complex
-created_by: ss
-creation_date: 2012-07-25T02:26:58Z
-
-[Term]
-id: GO:1901191
-name: negative regulation of formation of translation initiation ternary complex
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-synonym: "down regulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "down regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "down-regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "downregulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "inhibition of formation of translation initiation ternary complex" NARROW [GOC:TermGenie]
-synonym: "inhibition of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-is_a: GO:0031333 ! negative regulation of protein complex assembly
-is_a: GO:0045947 ! negative regulation of translational initiation
-is_a: GO:1901190 ! regulation of formation of translation initiation ternary complex
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0001677 ! formation of translation initiation ternary complex
-relationship: negatively_regulates GO:0001677 ! formation of translation initiation ternary complex
-created_by: ss
-creation_date: 2012-07-25T02:27:21Z
-
-[Term]
-id: GO:1901192
-name: positive regulation of formation of translation initiation ternary complex
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of formation of translation initiation ternary complex." [GOC:TermGenie]
-synonym: "activation of formation of translation initiation ternary complex" NARROW [GOC:TermGenie]
-synonym: "activation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "up regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "up-regulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of formation of translation initiation ternary complex" EXACT [GOC:TermGenie]
-synonym: "upregulation of translation initiation ternary complex assembly" EXACT [GOC:TermGenie]
-is_a: GO:0031334 ! positive regulation of protein complex assembly
-is_a: GO:0045948 ! positive regulation of translational initiation
-is_a: GO:1901190 ! regulation of formation of translation initiation ternary complex
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0001677 ! formation of translation initiation ternary complex
-relationship: positively_regulates GO:0001677 ! formation of translation initiation ternary complex
-created_by: ss
-creation_date: 2012-07-25T02:27:29Z
-
-[Term]
 id: GO:1901214
 name: regulation of neuron death
 namespace: biological_process
@@ -23019,23 +21654,6 @@ is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0071704 ! organic substance metabolic process
 created_by: pr
 creation_date: 2012-11-05T11:04:40Z
-
-[Term]
-id: GO:1901588
-name: dendritic microtubule
-namespace: cellular_component
-def: "Any microtubule in a dendrite, a neuron projection." [GOC:TermGenie, NIF_Subcellular:sao110773650]
-synonym: "microtubule of dendrite" EXACT [GOC:TermGenie]
-synonym: "microtubulus of dendrite" EXACT [GOC:TermGenie]
-xref: NIF_Subcellular:sao110773650
-is_a: GO:0005874 ! microtubule
-is_a: GO:0097458 ! neuron part
-is_a: GO:0120038 ! plasma membrane bounded cell projection part
-intersection_of: GO:0005874 ! microtubule
-intersection_of: part_of GO:0030425 ! dendrite
-relationship: part_of GO:0030425 ! dendrite
-created_by: pr
-creation_date: 2012-11-07T14:37:30Z
 
 [Term]
 id: GO:1901608
@@ -24134,32 +22752,6 @@ created_by: jl
 creation_date: 2013-09-12T12:01:41Z
 
 [Term]
-id: GO:1902400
-name: intracellular signal transduction involved in G1 DNA damage checkpoint
-namespace: biological_process
-def: "Any intracellular signal transduction that is involved in G1 DNA damage checkpoint." [GOC:mtg_cell_cycle, GOC:TermGenie]
-synonym: "intracellular signal transduction involved in G1/S DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "intracellular signal transduction pathway involved in G1 DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "intracellular signal transduction pathway involved in G1/S DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "intracellular signaling cascade involved in G1 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "intracellular signaling cascade involved in G1/S DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "intracellular signaling chain involved in G1 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "intracellular signaling chain involved in G1/S DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "intracellular signaling pathway involved in G1 DNA damage checkpoint" RELATED [GOC:TermGenie]
-synonym: "intracellular signaling pathway involved in G1/S DNA damage checkpoint" RELATED [GOC:TermGenie]
-synonym: "signal transduction via intracellular signaling cascade involved in G1 DNA damage checkpoint" RELATED [GOC:TermGenie]
-synonym: "signal transduction via intracellular signaling cascade involved in G1/S DNA damage checkpoint" RELATED [GOC:TermGenie]
-synonym: "signal transmission via intracellular cascade involved in G1 DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "signal transmission via intracellular cascade involved in G1/S DNA damage checkpoint" NARROW [GOC:TermGenie]
-is_a: GO:0072422 ! signal transduction involved in DNA damage checkpoint
-is_a: GO:1902807 ! negative regulation of cell cycle G1/S phase transition
-intersection_of: GO:0035556 ! intracellular signal transduction
-intersection_of: part_of GO:0044783 ! G1 DNA damage checkpoint
-relationship: part_of GO:0044783 ! G1 DNA damage checkpoint
-created_by: jl
-creation_date: 2013-09-12T12:01:58Z
-
-[Term]
 id: GO:1902402
 name: signal transduction involved in mitotic DNA damage checkpoint
 namespace: biological_process
@@ -24309,68 +22901,6 @@ intersection_of: positively_regulates GO:0060179 ! male mating behavior
 relationship: positively_regulates GO:0060179 ! male mating behavior
 created_by: mm2
 creation_date: 2013-10-09T15:50:14Z
-
-[Term]
-id: GO:1902504
-name: regulation of signal transduction involved in mitotic G2 DNA damage checkpoint
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of signal transduction involved in mitotic G2 DNA damage checkpoint." [GOC:TermGenie, PMID:16299494]
-synonym: "regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-is_a: GO:0010389 ! regulation of G2/M transition of mitotic cell cycle
-is_a: GO:1902531 ! regulation of intracellular signal transduction
-is_a: GO:1904289 ! regulation of mitotic DNA damage checkpoint
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-relationship: regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-created_by: vw
-creation_date: 2013-11-14T15:26:46Z
-
-[Term]
-id: GO:1902505
-name: negative regulation of signal transduction involved in mitotic G2 DNA damage checkpoint
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of signal transduction involved in mitotic G2 DNA damage checkpoint." [GOC:TermGenie, PMID:16299494]
-synonym: "down regulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "down regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "down-regulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "down-regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "downregulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "downregulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "inhibition of signal transduction involved in mitotic G2 DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "inhibition of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "negative regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-is_a: GO:0010971 ! positive regulation of G2/M transition of mitotic cell cycle
-is_a: GO:1902504 ! regulation of signal transduction involved in mitotic G2 DNA damage checkpoint
-is_a: GO:1902532 ! negative regulation of intracellular signal transduction
-is_a: GO:1904290 ! negative regulation of mitotic DNA damage checkpoint
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-relationship: negatively_regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-created_by: vw
-creation_date: 2013-11-14T15:26:55Z
-
-[Term]
-id: GO:1902506
-name: positive regulation of signal transduction involved in mitotic G2 DNA damage checkpoint
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of signal transduction involved in mitotic G2 DNA damage checkpoint." [GOC:TermGenie, PMID:16299494]
-synonym: "activation of signal transduction involved in mitotic G2 DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "activation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" NARROW [GOC:TermGenie]
-synonym: "positive regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "up regulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "up regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "up-regulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "up-regulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "upregulation of signal transduction involved in mitotic G2 DNA damage checkpoint" EXACT [GOC:TermGenie]
-synonym: "upregulation of signal transduction involved in mitotic G2/M transition DNA damage checkpoint" EXACT [GOC:TermGenie]
-is_a: GO:1902504 ! regulation of signal transduction involved in mitotic G2 DNA damage checkpoint
-is_a: GO:1902533 ! positive regulation of intracellular signal transduction
-is_a: GO:1904291 ! positive regulation of mitotic DNA damage checkpoint
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-relationship: positively_regulates GO:0072434 ! signal transduction involved in mitotic G2 DNA damage checkpoint
-created_by: vw
-creation_date: 2013-11-14T15:27:04Z
 
 [Term]
 id: GO:1902513
@@ -25009,45 +23539,6 @@ created_by: kmv
 creation_date: 2014-04-03T20:30:47Z
 
 [Term]
-id: GO:1902902
-name: negative regulation of autophagosome assembly
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of autophagosome assembly." [GO_REF:0000058, GOC:als, GOC:autophagy, GOC:TermGenie, PMID:21975012]
-synonym: "down regulation of autophagic vacuole assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of autophagic vacuole formation" RELATED [GOC:TermGenie]
-synonym: "down regulation of autophagosome biosynthesis" EXACT [GOC:TermGenie]
-synonym: "down regulation of autophagosome formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of PAS formation" NARROW [GOC:TermGenie]
-synonym: "down-regulation of autophagic vacuole assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of autophagic vacuole formation" RELATED [GOC:TermGenie]
-synonym: "down-regulation of autophagosome biosynthesis" EXACT [GOC:TermGenie]
-synonym: "down-regulation of autophagosome formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of PAS formation" NARROW [GOC:TermGenie]
-synonym: "downregulation of autophagic vacuole assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of autophagic vacuole formation" RELATED [GOC:TermGenie]
-synonym: "downregulation of autophagosome biosynthesis" EXACT [GOC:TermGenie]
-synonym: "downregulation of autophagosome formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of PAS formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of autophagic vacuole assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of autophagic vacuole formation" RELATED [GOC:TermGenie]
-synonym: "inhibition of autophagosome biosynthesis" NARROW [GOC:TermGenie]
-synonym: "inhibition of autophagosome formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of PAS formation" NARROW [GOC:TermGenie]
-synonym: "negative regulation of autophagic vacuole assembly" EXACT [GOC:autophagy]
-synonym: "negative regulation of autophagic vacuole formation" RELATED [GOC:TermGenie]
-synonym: "negative regulation of autophagosome biosynthesis" EXACT [GOC:TermGenie]
-synonym: "negative regulation of autophagosome formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of PAS formation" NARROW [GOC:TermGenie]
-is_a: GO:0016242 ! negative regulation of macroautophagy
-is_a: GO:1902116 ! negative regulation of organelle assembly
-is_a: GO:2000785 ! regulation of autophagosome assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0000045 ! autophagosome assembly
-relationship: negatively_regulates GO:0000045 ! autophagosome assembly
-created_by: als
-creation_date: 2014-04-15T10:37:40Z
-
-[Term]
 id: GO:1902903
 name: regulation of supramolecular fiber organization
 namespace: biological_process
@@ -25191,124 +23682,6 @@ intersection_of: part_of GO:0000278 ! mitotic cell cycle
 relationship: part_of GO:0000278 ! mitotic cell cycle
 created_by: jl
 creation_date: 2014-05-22T14:22:34Z
-
-[Term]
-id: GO:1903050
-name: regulation of proteolysis involved in cellular protein catabolic process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of proteolysis involved in cellular protein catabolic process." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:18307834]
-comment: overexpression of cathepsin C propeptide significantly increased the degradation of of intestinal alkaline phosphatase (IAP)
-synonym: "regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-is_a: GO:0030162 ! regulation of proteolysis
-is_a: GO:1903362 ! regulation of cellular protein catabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-relationship: regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-created_by: rl
-creation_date: 2014-05-22T18:00:45Z
-
-[Term]
-id: GO:1903051
-name: negative regulation of proteolysis involved in cellular protein catabolic process
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of proteolysis involved in cellular protein catabolic process." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:18307834]
-comment: Overexpression of cathepsin C propeptide significantly increased the degradation of intestinal alkaline phosphatase (IAP).
-synonym: "down regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "down regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "down regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "down regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "down regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "down regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "down regulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "down-regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "down-regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "down-regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "down-regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "down-regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "down-regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "down-regulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "downregulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "downregulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "downregulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "downregulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "downregulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "downregulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "downregulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "inhibition of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "inhibition of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "inhibition of peptidolysis involved in cellular protein catabolic process" NARROW [GOC:TermGenie]
-synonym: "inhibition of peptidolysis involved in cellular protein catabolism" NARROW [GOC:TermGenie]
-synonym: "inhibition of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "inhibition of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "inhibition of proteolysis involved in cellular protein catabolic process" NARROW [GOC:TermGenie]
-synonym: "negative regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "negative regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "negative regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "negative regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "negative regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "negative regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-is_a: GO:0045861 ! negative regulation of proteolysis
-is_a: GO:1903050 ! regulation of proteolysis involved in cellular protein catabolic process
-is_a: GO:1903363 ! negative regulation of cellular protein catabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-relationship: negatively_regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-created_by: rl
-creation_date: 2014-05-22T18:00:51Z
-
-[Term]
-id: GO:1903052
-name: positive regulation of proteolysis involved in cellular protein catabolic process
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of proteolysis involved in cellular protein catabolic process." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:18307834]
-comment: overexpression of cathepsin C propeptide significantly increased the degradation of of intestinal alkaline phosphatase (IAP)
-synonym: "activation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "activation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "activation of peptidolysis involved in cellular protein catabolic process" NARROW [GOC:TermGenie]
-synonym: "activation of peptidolysis involved in cellular protein catabolism" NARROW [GOC:TermGenie]
-synonym: "activation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "activation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "activation of proteolysis involved in cellular protein catabolic process" NARROW [GOC:TermGenie]
-synonym: "positive regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "positive regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "positive regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "positive regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "positive regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "positive regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "up regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "up regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "up regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "up regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "up regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "up regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "up regulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "up-regulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "up-regulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "up-regulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "up-regulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "up-regulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "up-regulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "up-regulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "upregulation of peptidolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "upregulation of peptidolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "upregulation of peptidolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-synonym: "upregulation of peptidolysis involved in cellular protein catabolism" EXACT [GOC:TermGenie]
-synonym: "upregulation of proteolysis during cellular protein catabolic process" RELATED [GOC:TermGenie]
-synonym: "upregulation of proteolysis during cellular protein catabolism" RELATED [GOC:TermGenie]
-synonym: "upregulation of proteolysis involved in cellular protein catabolic process" EXACT [GOC:TermGenie]
-is_a: GO:0045862 ! positive regulation of proteolysis
-is_a: GO:1903050 ! regulation of proteolysis involved in cellular protein catabolic process
-is_a: GO:1903364 ! positive regulation of cellular protein catabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-relationship: positively_regulates GO:0051603 ! proteolysis involved in cellular protein catabolic process
-created_by: rl
-creation_date: 2014-05-22T18:00:57Z
 
 [Term]
 id: GO:1903108
@@ -26612,76 +24985,6 @@ created_by: pr
 creation_date: 2015-03-25T21:04:51Z
 
 [Term]
-id: GO:1904092
-name: regulation of autophagic cell death
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of autophagic cell death." [GO_REF:0000058, GOC:bhm, GOC:TermGenie, PMID:25736836]
-synonym: "regulation of autophagic death" BROAD [GOC:TermGenie]
-synonym: "regulation of programmed cell death by autophagy" BROAD [GOC:TermGenie]
-synonym: "regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-is_a: GO:0043067 ! regulation of programmed cell death
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0048102 ! autophagic cell death
-relationship: regulates GO:0048102 ! autophagic cell death
-created_by: bhm
-creation_date: 2015-03-26T16:41:32Z
-
-[Term]
-id: GO:1904093
-name: negative regulation of autophagic cell death
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of autophagic cell death." [GO_REF:0000058, GOC:bhm, GOC:TermGenie, PMID:25736836]
-synonym: "down regulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "down regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "down regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "down-regulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "down-regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "down-regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "downregulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "downregulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "downregulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "inhibition of autophagic cell death" NARROW [GOC:TermGenie]
-synonym: "inhibition of programmed cell death by macroautophagy" NARROW [GOC:TermGenie]
-synonym: "inhibition of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "negative regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "negative regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-is_a: GO:0043069 ! negative regulation of programmed cell death
-is_a: GO:1904092 ! regulation of autophagic cell death
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0048102 ! autophagic cell death
-relationship: negatively_regulates GO:0048102 ! autophagic cell death
-created_by: bhm
-creation_date: 2015-03-26T16:41:39Z
-
-[Term]
-id: GO:1904094
-name: positive regulation of autophagic cell death
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of autophagic cell death." [GO_REF:0000058, GOC:bhm, GOC:TermGenie, PMID:25736836]
-synonym: "activation of autophagic cell death" NARROW [GOC:TermGenie]
-synonym: "activation of programmed cell death by macroautophagy" NARROW [GOC:TermGenie]
-synonym: "activation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "positive regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "positive regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "up regulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "up regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "up regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "up-regulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "up-regulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "up-regulation of type II programmed cell death" RELATED [GOC:TermGenie]
-synonym: "upregulation of autophagic cell death" EXACT [GOC:TermGenie]
-synonym: "upregulation of programmed cell death by macroautophagy" EXACT [GOC:TermGenie]
-synonym: "upregulation of type II programmed cell death" RELATED [GOC:TermGenie]
-is_a: GO:0043068 ! positive regulation of programmed cell death
-is_a: GO:1904092 ! regulation of autophagic cell death
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0048102 ! autophagic cell death
-relationship: positively_regulates GO:0048102 ! autophagic cell death
-created_by: bhm
-creation_date: 2015-03-26T16:41:45Z
-
-[Term]
 id: GO:1904115
 name: axon cytoplasm
 namespace: cellular_component
@@ -26693,63 +24996,6 @@ intersection_of: GO:0005737 ! cytoplasm
 intersection_of: part_of GO:0030424 ! axon
 created_by: sl
 creation_date: 2015-04-06T18:13:14Z
-
-[Term]
-id: GO:1904170
-name: regulation of bleb assembly
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of bleb assembly." [GO_REF:0000058, GOC:als, GOC:TermGenie, PMID:25651887]
-synonym: "regulation of cell blebbing" EXACT [GOC:TermGenie]
-is_a: GO:0120032 ! regulation of plasma membrane bounded cell projection assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0032060 ! bleb assembly
-relationship: regulates GO:0032060 ! bleb assembly
-created_by: als
-creation_date: 2015-04-23T09:32:19Z
-
-[Term]
-id: GO:1904171
-name: negative regulation of bleb assembly
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of bleb assembly." [GO_REF:0000058, GOC:als, GOC:TermGenie, PMID:25651887]
-synonym: "down regulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "down-regulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "downregulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "inhibition of bleb assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of cell blebbing" NARROW [GOC:TermGenie]
-synonym: "negative regulation of cell blebbing" EXACT [GOC:TermGenie]
-is_a: GO:0120033 ! negative regulation of plasma membrane bounded cell projection assembly
-is_a: GO:1904170 ! regulation of bleb assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0032060 ! bleb assembly
-relationship: negatively_regulates GO:0032060 ! bleb assembly
-created_by: als
-creation_date: 2015-04-23T09:32:25Z
-
-[Term]
-id: GO:1904172
-name: positive regulation of bleb assembly
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of bleb assembly." [GO_REF:0000058, GOC:als, GOC:TermGenie, PMID:25651887]
-synonym: "activation of bleb assembly" NARROW [GOC:TermGenie]
-synonym: "activation of cell blebbing" NARROW [GOC:TermGenie]
-synonym: "positive regulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "up regulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "up-regulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of cell blebbing" EXACT [GOC:TermGenie]
-synonym: "upregulation of bleb assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of cell blebbing" EXACT [GOC:TermGenie]
-is_a: GO:0120034 ! positive regulation of plasma membrane bounded cell projection assembly
-is_a: GO:1904170 ! regulation of bleb assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0032060 ! bleb assembly
-relationship: positively_regulates GO:0032060 ! bleb assembly
-created_by: als
-creation_date: 2015-04-23T09:32:31Z
 
 [Term]
 id: GO:1904289
@@ -27105,55 +25351,6 @@ created_by: mah
 creation_date: 2015-07-28T12:59:29Z
 
 [Term]
-id: GO:1904688
-name: regulation of cytoplasmic translational initiation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of cytoplasmic translational initiation." [GO_REF:0000058, GOC:TermGenie, PMID:12242291]
-is_a: GO:0006446 ! regulation of translational initiation
-is_a: GO:2000765 ! regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0002183 ! cytoplasmic translational initiation
-relationship: regulates GO:0002183 ! cytoplasmic translational initiation
-created_by: dos
-creation_date: 2015-09-25T14:39:38Z
-
-[Term]
-id: GO:1904689
-name: negative regulation of cytoplasmic translational initiation
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of cytoplasmic translational initiation." [GO_REF:0000058, GOC:TermGenie, PMID:12242291]
-synonym: "down regulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-synonym: "downregulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-synonym: "inhibition of cytoplasmic translational initiation" NARROW [GOC:TermGenie]
-is_a: GO:0045947 ! negative regulation of translational initiation
-is_a: GO:1904688 ! regulation of cytoplasmic translational initiation
-is_a: GO:2000766 ! negative regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0002183 ! cytoplasmic translational initiation
-relationship: negatively_regulates GO:0002183 ! cytoplasmic translational initiation
-created_by: dos
-creation_date: 2015-09-25T14:39:44Z
-
-[Term]
-id: GO:1904690
-name: positive regulation of cytoplasmic translational initiation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of cytoplasmic translational initiation." [GO_REF:0000058, GOC:TermGenie, PMID:12242291]
-synonym: "activation of cytoplasmic translational initiation" NARROW [GOC:TermGenie]
-synonym: "up regulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-synonym: "upregulation of cytoplasmic translational initiation" EXACT [GOC:TermGenie]
-is_a: GO:0045948 ! positive regulation of translational initiation
-is_a: GO:1904688 ! regulation of cytoplasmic translational initiation
-is_a: GO:2000767 ! positive regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0002183 ! cytoplasmic translational initiation
-relationship: positively_regulates GO:0002183 ! cytoplasmic translational initiation
-created_by: dos
-creation_date: 2015-09-25T14:39:50Z
-
-[Term]
 id: GO:1904739
 name: regulation of synapse organization by posttranscriptional regulation of gene expression
 namespace: biological_process
@@ -27168,30 +25365,6 @@ intersection_of: GO:0010608 ! posttranscriptional regulation of gene expression
 intersection_of: regulates GO:0050808 ! synapse organization
 created_by: tb
 creation_date: 2015-10-15T21:25:46Z
-
-[Term]
-id: GO:1904745
-name: Atg1/ULK1 kinase complex assembly
-namespace: biological_process
-def: "The aggregation, arrangement and bonding together of a set of components to form an Atg1/UKL1 kinase complex." [GO_REF:0000079, GOC:dph, GOC:TermGenie, PMID:25139988]
-synonym: "ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-is_a: GO:0065003 ! protein-containing complex assembly
-created_by: dph
-creation_date: 2015-10-19T12:33:08Z
 
 [Term]
 id: GO:1904746
@@ -27683,18 +25856,6 @@ intersection_of: positively_regulates GO:0045184 ! establishment of protein loca
 relationship: positively_regulates GO:0045184 ! establishment of protein localization
 created_by: mec
 creation_date: 2016-02-05T09:59:32Z
-
-[Term]
-id: GO:1905037
-name: autophagosome organization
-namespace: biological_process
-def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an autophagosome." [GO_REF:000103, GOC:bf, GOC:PARL, GOC:TermGenie, PMID:22186024]
-synonym: "autophagic vacuole organization" EXACT [GOC:TermGenie]
-synonym: "initial autophagic vacuole organization" RELATED [GOC:TermGenie]
-is_a: GO:0007033 ! vacuole organization
-relationship: part_of GO:0016236 ! macroautophagy
-created_by: bf
-creation_date: 2016-03-08T14:18:10Z
 
 [Term]
 id: GO:1905082
@@ -28842,217 +27003,6 @@ created_by: rozaru
 creation_date: 2017-01-23T11:04:25Z
 
 [Term]
-id: GO:1905864
-name: regulation of Atg1/ULK1 kinase complex assembly
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of Atg1/ULK1 kinase complex assembly." [GO_REF:0000058, GOC:autophagy, GOC:mf, GOC:TermGenie, PMID:26567215]
-synonym: "regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-is_a: GO:0043254 ! regulation of protein complex assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-relationship: regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-created_by: paolaroncaglia
-creation_date: 2017-01-26T13:23:26Z
-
-[Term]
-id: GO:1905865
-name: negative regulation of Atg1/ULK1 kinase complex assembly
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of Atg1/ULK1 kinase complex assembly." [GO_REF:0000058, GOC:autophagy, GOC:mf, GOC:TermGenie, PMID:26567215]
-synonym: "down regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "down-regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "downregulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "inhibition of ATG1 kinase complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1 kinase complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1-ATG13 complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1-ATG13 complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1/ULK1 kinase complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1/ULK1 kinase complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1/ULK1 signaling complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ATG1/ULK1 signaling complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of Atg1p signalling complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of Atg1p signalling complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1 signaling complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1 signaling complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1-ATG13-FIP200 complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1-ATG13-FIP200 complex formation" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1-ATG13-RB1CC1 complex assembly" NARROW [GOC:TermGenie]
-synonym: "inhibition of ULK1-ATG13-RB1CC1 complex formation" NARROW [GOC:TermGenie]
-synonym: "negative regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "negative regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-is_a: GO:0031333 ! negative regulation of protein complex assembly
-is_a: GO:1905864 ! regulation of Atg1/ULK1 kinase complex assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-relationship: negatively_regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-created_by: paolaroncaglia
-creation_date: 2017-01-26T13:23:35Z
-
-[Term]
-id: GO:1905866
-name: positive regulation of Atg1/ULK1 kinase complex assembly
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of Atg1/ULK1 kinase complex assembly." [GO_REF:0000058, GOC:autophagy, GOC:mf, GOC:TermGenie, PMID:26567215]
-synonym: "activation of ATG1 kinase complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1 kinase complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1-ATG13 complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1-ATG13 complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1/ULK1 kinase complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1/ULK1 kinase complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1/ULK1 signaling complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ATG1/ULK1 signaling complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of Atg1p signalling complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of Atg1p signalling complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1 signaling complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1 signaling complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1-ATG13-FIP200 complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1-ATG13-FIP200 complex formation" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1-ATG13-RB1CC1 complex assembly" NARROW [GOC:TermGenie]
-synonym: "activation of ULK1-ATG13-RB1CC1 complex formation" NARROW [GOC:TermGenie]
-synonym: "positive regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "positive regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "up-regulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1-ATG13 complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1-ATG13 complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1/ULK1 kinase complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1/ULK1 kinase complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1/ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ATG1/ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of Atg1p signalling complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of Atg1p signalling complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1 signaling complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1 signaling complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1-ATG13-FIP200 complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1-ATG13-FIP200 complex formation" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1-ATG13-RB1CC1 complex assembly" EXACT [GOC:TermGenie]
-synonym: "upregulation of ULK1-ATG13-RB1CC1 complex formation" EXACT [GOC:TermGenie]
-is_a: GO:0031334 ! positive regulation of protein complex assembly
-is_a: GO:1905864 ! regulation of Atg1/ULK1 kinase complex assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-relationship: positively_regulates GO:1904745 ! Atg1/ULK1 kinase complex assembly
-created_by: paolaroncaglia
-creation_date: 2017-01-26T13:23:44Z
-
-[Term]
 id: GO:1905879
 name: regulation of oogenesis
 namespace: biological_process
@@ -29361,19 +27311,6 @@ is_a: GO:0060560 ! developmental growth involved in morphogenesis
 relationship: part_of GO:0048812 ! neuron projection morphogenesis
 created_by: pr
 creation_date: 2013-07-08T08:40:45Z
-
-[Term]
-id: GO:1990580
-name: regulation of cytoplasmic translational termination
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of cytoplasmic translational termination." [PMID:11570975]
-is_a: GO:0006449 ! regulation of translational termination
-is_a: GO:2000765 ! regulation of cytoplasmic translation
-intersection_of: GO:0050789 ! regulation of biological process
-intersection_of: regulates GO:0002184 ! cytoplasmic translational termination
-relationship: regulates GO:0002184 ! cytoplasmic translational termination
-created_by: vw
-creation_date: 2014-12-10T15:48:55Z
 
 [Term]
 id: GO:1990613
@@ -29843,33 +27780,6 @@ created_by: yaf
 creation_date: 2010-11-18T11:24:18Z
 
 [Term]
-id: GO:2000272
-name: negative regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity." [GOC:obol]
-synonym: "negative regulation of receptor activity" BROAD []
-is_a: GO:0010469 ! regulation of signaling receptor activity
-is_a: GO:0044092 ! negative regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
-relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
-creation_date: 2010-12-02T09:28:47Z
-
-[Term]
-id: GO:2000273
-name: positive regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
-is_a: GO:0010469 ! regulation of signaling receptor activity
-is_a: GO:0044093 ! positive regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
-relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
-creation_date: 2010-12-02T09:28:50Z
-
-[Term]
 id: GO:2000278
 name: regulation of DNA biosynthetic process
 namespace: biological_process
@@ -30260,83 +28170,6 @@ intersection_of: positively_regulates GO:0035882 ! defecation rhythm
 relationship: positively_regulates GO:0035882 ! defecation rhythm
 created_by: rfoulger
 creation_date: 2011-06-15T03:23:13Z
-
-[Term]
-id: GO:2000765
-name: regulation of cytoplasmic translation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of cytoplasmic translation." [GOC:obol]
-is_a: GO:0006417 ! regulation of translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0002181 ! cytoplasmic translation
-relationship: regulates GO:0002181 ! cytoplasmic translation
-created_by: vw
-creation_date: 2011-06-20T10:39:19Z
-
-[Term]
-id: GO:2000766
-name: negative regulation of cytoplasmic translation
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of cytoplasmic translation." [GOC:obol]
-is_a: GO:0017148 ! negative regulation of translation
-is_a: GO:2000765 ! regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0002181 ! cytoplasmic translation
-relationship: negatively_regulates GO:0002181 ! cytoplasmic translation
-created_by: vw
-creation_date: 2011-06-20T10:39:23Z
-
-[Term]
-id: GO:2000767
-name: positive regulation of cytoplasmic translation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of cytoplasmic translation." [GOC:obol]
-is_a: GO:0045727 ! positive regulation of translation
-is_a: GO:2000765 ! regulation of cytoplasmic translation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0002181 ! cytoplasmic translation
-relationship: positively_regulates GO:0002181 ! cytoplasmic translation
-created_by: vw
-creation_date: 2011-06-20T10:39:26Z
-
-[Term]
-id: GO:2000785
-name: regulation of autophagosome assembly
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of autophagosome assembly." [GOC:autophagy, GOC:BHF]
-synonym: "regulation of autophagic vacuole assembly" EXACT [GOC:autophagy]
-synonym: "regulation of autophagic vacuole formation" RELATED [GOC:obol]
-synonym: "regulation of autophagosome biosynthesis" EXACT [GOC:obol]
-synonym: "regulation of autophagosome formation" EXACT [GOC:obol]
-synonym: "regulation of PAS formation" RELATED [GOC:obol]
-is_a: GO:0016241 ! regulation of macroautophagy
-is_a: GO:0044088 ! regulation of vacuole organization
-is_a: GO:1902115 ! regulation of organelle assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0000045 ! autophagosome assembly
-relationship: regulates GO:0000045 ! autophagosome assembly
-created_by: rl
-creation_date: 2011-06-24T11:19:08Z
-
-[Term]
-id: GO:2000786
-name: positive regulation of autophagosome assembly
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of autophagic vacuole assembly." [GOC:autophagy, GOC:BHF]
-synonym: "positive regulation of autophagic vacuole assembly" EXACT [GOC:autophagy]
-synonym: "positive regulation of autophagic vacuole formation" RELATED [GOC:obol]
-synonym: "positive regulation of autophagosome biosynthesis" EXACT [GOC:obol]
-synonym: "positive regulation of autophagosome formation" EXACT [GOC:obol]
-synonym: "positive regulation of PAS formation" RELATED [GOC:obol]
-is_a: GO:0016239 ! positive regulation of macroautophagy
-is_a: GO:0044090 ! positive regulation of vacuole organization
-is_a: GO:1902117 ! positive regulation of organelle assembly
-is_a: GO:2000785 ! regulation of autophagosome assembly
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0000045 ! autophagosome assembly
-relationship: positively_regulates GO:0000045 ! autophagosome assembly
-created_by: rl
-creation_date: 2011-06-24T11:19:12Z
 
 [Term]
 id: GO:2000803
