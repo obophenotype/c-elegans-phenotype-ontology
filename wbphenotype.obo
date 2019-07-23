@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-16/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-07-23/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -209,6 +209,7 @@ name: RNA processing variant
 def: "Variations in the processes involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules compared to control." [GO:0006396, WB:WBPerson2021]
 synonym: "RNA processing abnormal" NARROW []
 is_a: WBPhenotype:0000113 ! RNA expression variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0000029
@@ -719,7 +720,10 @@ id: WBPhenotype:0000092
 name: intestinal cell proliferation variant
 def: "Any variation in the processes that govern the expansion of intestinal cell populations compared to control." [WB:WBPerson2021]
 synonym: "intestinal cell proliferation abnormal" NARROW []
+is_a: WBPhenotype:0000171 ! cell proliferation variant
+is_a: WBPhenotype:0000536 ! cell physiology variant
 is_a: WBPhenotype:0000705 ! intestinal cell development variant
+is_a: WBPhenotype:0001093 ! intestinal physiology variant
 
 [Term]
 id: WBPhenotype:0000093
@@ -781,6 +785,7 @@ name: cell UV response variant
 def: "Cells exhibit variations in their response to ultraviolet radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell UV response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000143 ! organism UV response variant
 
 [Term]
 id: WBPhenotype:0000101
@@ -978,6 +983,7 @@ name: dauer recovery variant
 def: "Characteristic exit from the dauer stage is altered compared to control animals." [WB:cab]
 synonym: "dauer recovery abnormal" NARROW []
 is_a: WBPhenotype:0000159 ! dauer arrest variant
+is_a: WBPhenotype:0000308 ! dauer development variant
 
 [Term]
 id: WBPhenotype:0000128
@@ -1078,6 +1084,7 @@ id: WBPhenotype:0000142
 name: cell stress response variant
 def: "Variations in the activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress, compared to control. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GO:0033554, WB:WBPerson2021]
 synonym: "cell stress response abnormal" NARROW []
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000585 ! cell homeostasis metabolism variant
 
 [Term]
@@ -1086,6 +1093,7 @@ name: organism UV response variant
 def: "Animals exhibit variations in their response to ultraviolet radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "organism UV response abnormal" NARROW []
 is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0001897 ! light response variant
 
 [Term]
 id: WBPhenotype:0000144
@@ -1203,8 +1211,8 @@ name: dauer arrest variant
 def: "Animals exhibit variations in the entry/exit into a state of arrested tissue development during the dauer larval stage in response to harsh environmental conditions, compared to control. In C. elegans, the dauer larva enters a state of arrest in which no developmental changes occur, until the animal finds more suitable growing conditions, or until it spontaneously shifts back into a normal developmental schedule. (WormAtlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer arrest abnormal" NARROW []
 synonym: "diapause variant" RELATED []
-is_a: WBPhenotype:0000518 ! development variant
 is_a: WBPhenotype:0000576 ! organism physiology variant
+is_a: WBPhenotype:0000750 ! larval development variant
 
 [Term]
 id: WBPhenotype:0000160
@@ -1373,7 +1381,6 @@ id: WBPhenotype:0000183
 name: apoptosis increased
 def: "Any perturbation that causes an elevation in the frequency of cell death by apoptosis compared to control animals." [GO:0043066, WB:WBPerson2021]
 is_a: WBPhenotype:0000730 ! apoptosis variant
-is_a: WBPhenotype:0001397 ! necrotic cell death increased
 
 [Term]
 id: WBPhenotype:0000184
@@ -2207,6 +2214,7 @@ is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
 is_a: WBPhenotype:0000256 ! amphid morphology variant
 is_a: WBPhenotype:0000972 ! neuronal sheath cell morphology variant
 is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
+is_a: WBPhenotype:0001529 ! sensilium sheath cell variant
 
 [Term]
 id: WBPhenotype:0000301
@@ -2261,6 +2269,7 @@ id: WBPhenotype:0000308
 name: dauer development variant
 def: "Any variation in the processes that govern development of the dauer larva, a developmentally arrested, larval stage that is specialized for survival under harsh, or otherwise unfavorable, environmental conditions. In C. elegans this is an alternative third larval stage." [WB:kmva]
 synonym: "dauer development abnormal" NARROW []
+is_a: WBPhenotype:0000576 ! organism physiology variant
 is_a: WBPhenotype:0000750 ! larval development variant
 
 [Term]
@@ -3456,6 +3465,7 @@ name: dauer death increased
 def: "The survival of animals in the alternative larval stage which they enter when placed under conditions of environmental stress is reduced." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "reduced dauer survival" RELATED []
 is_a: WBPhenotype:0000159 ! dauer arrest variant
+is_a: WBPhenotype:0000308 ! dauer development variant
 
 [Term]
 id: WBPhenotype:0000486
@@ -5201,6 +5211,7 @@ name: germ cell ionizing radiation response variant
 def: "Germ cells exhibit variations in their response to ionizing radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "germ cell ionizing radiation response abnormal" NARROW []
 is_a: WBPhenotype:0000987 ! germ cell physiology variant
+is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000713
@@ -5346,7 +5357,6 @@ id: WBPhenotype:0000731
 name: germ cell hypersensitive ionizing radiation
 def: "Germ cells exhibit increased sensitivity to the effects of ion producing radiation compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000712 ! germ cell ionizing radiation response variant
-is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000732
@@ -5389,7 +5399,6 @@ id: WBPhenotype:0000737
 name: germ cell resistant ionizing radiation
 def: "Germ cells fail to respond to the dosage of ion producing radiation that elicits a response in control animals. Alternatively, germ cells require a higher dosage or a longer exposure to ion producing radiation to elicit the same response as control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000712 ! germ cell ionizing radiation response variant
-is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000738
@@ -5567,7 +5576,6 @@ def: "The alignment of the spindle relative to other cellular structures in the 
 synonym: "Emb" BROAD []
 synonym: "Spn" BROAD []
 is_a: WBPhenotype:0000761 ! spindle position orientation defective early emb
-is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0000761
@@ -6435,7 +6443,7 @@ id: WBPhenotype:0000876
 name: organism osmotic stress response variant
 def: "Animals exhibit variations in their response to osmotic stress compared to that observed in control animals." [WB:WBPerson557]
 synonym: "organism osmotic stress response abnormal" NARROW []
-is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000142 ! cell stress response variant
 
 [Term]
 id: WBPhenotype:0000877
@@ -6504,7 +6512,6 @@ def: "Any variation in the removal of a cell corpse, by a neighboring cell or a 
 synonym: "engulfment abnormal" NARROW []
 synonym: "phagocytosis abnormal" RELATED []
 is_a: WBPhenotype:0000730 ! apoptosis variant
-is_a: WBPhenotype:0001752 ! vesicle trafficking variant
 
 [Term]
 id: WBPhenotype:0000886
@@ -7151,6 +7158,7 @@ def: "Animals exhibit variations in the structure or composition of the glia-lik
 synonym: "neuronal sheath cell morphology abnormal" NARROW []
 is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
 is_a: WBPhenotype:0000969 ! accessory cell morphology variant
+is_a: WBPhenotype:0001528 ! sensillum accessory cell morphology variant
 
 [Term]
 id: WBPhenotype:0000973
@@ -8081,6 +8089,7 @@ id: WBPhenotype:0001095
 name: organism high sodium chloride hypersensitive
 def: "Animals respond to sodium chloride at a lower concentration or a shorter exposure compared to control animals. In C. elegans, this is often assayed through generation time and progeny number." [pmid:16027367, WB:cab]
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
+is_a: WBPhenotype:0001725 ! osmotic stress response variant
 
 [Term]
 id: WBPhenotype:0001096
@@ -8160,7 +8169,6 @@ name: spindle orientation variant AB or P1 early emb
 def: "The orientation of the spindle is aberrant in either the AB or the P1 cell." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
 is_a: WBPhenotype:0000761 ! spindle position orientation defective early emb
-is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0001107
@@ -9769,6 +9777,7 @@ name: cell ionizing radiation response variant
 def: "Cells exhibit variations in their response to ionizing radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell ionizing radiation response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000686 ! organism ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0001325
@@ -9781,6 +9790,7 @@ id: WBPhenotype:0001326
 name: cell gamma ray response variant
 def: "Cells exhibit variations in their response to gamma ray radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell gamma ray response abnormal" NARROW []
+is_a: WBPhenotype:0000497 ! organism gamma ray response variant
 is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
@@ -9919,7 +9929,8 @@ name: actin cytoskeleton dynamics variant
 def: "Any variation in the dynamic structural changes to the arrangement of constituent parts of cytoskeletal structures comprising actin filaments and their associated proteins compared to control." [GO:0031532, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 synonym: "actin cytoskeleton dynamic abnormal" NARROW []
-is_a: WBPhenotype:0001587 ! actin organization biogenesis variant
+is_a: WBPhenotype:0000519 ! physiology variant
+is_a: WBPhenotype:0001345 ! cytoskeleton organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0001347
@@ -9942,7 +9953,6 @@ name: protein phosphorylation variant
 def: "Variations in the processes that incorporate phosphate groups to one or more amino acids within a protein, compared to control." [GO:0006468, WB:WBPerson2021]
 synonym: "protein phosphorylation abnormal" NARROW []
 is_a: WBPhenotype:0001382 ! protein modification variant
-is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
 id: WBPhenotype:0001350
@@ -9976,6 +9986,7 @@ id: WBPhenotype:0001354
 name: actin cytoskeleton filament morphology variant
 def: "Animals exhibit variations in the form, structure, composition or arrangement of actin, an abundant cytoskeletal protein in most cells, often linked to the plasma membrane and concentrated at cell junctions compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "actin cytoskeleton filament morphology abnormal" NARROW []
+is_a: WBPhenotype:0001346 ! actin cytoskeleton dynamics variant
 is_a: WBPhenotype:0001587 ! actin organization biogenesis variant
 
 [Term]
@@ -10173,6 +10184,7 @@ name: protein modification variant
 def: "Variations in the covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications), compared to control. This includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification)." [GO:0006464, WB:WBPerson2021]
 synonym: "protein modification abnormal" NARROW []
 is_a: WBPhenotype:0000112 ! protein expression variant
+is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
 id: WBPhenotype:0001383
@@ -10180,7 +10192,6 @@ name: protein methylation variant
 def: "Variations in the processes that incorporate methyl groups to one or more amino acids within a protein, compared to control." [GO:0006479, WB:WBPerson2021]
 synonym: "protein methylation abnormal" NARROW []
 is_a: WBPhenotype:0001382 ! protein modification variant
-is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
 id: WBPhenotype:0001384
@@ -10438,7 +10449,7 @@ id: WBPhenotype:0001421
 name: endocytic transport variant
 def: "Animals exhibit variations in the directed movement of substances into, out of or mediated by the endosome, a membrane-bound organelle that trafficks material to different compartments of the cell or back to the plasma membrane for recycling compared to control." [GO:0016197, WB:WBPaper00031894, WB:WBPerson712]
 synonym: "endocytic transport abnormal" NARROW []
-is_a: WBPhenotype:0000536 ! cell physiology variant
+is_a: WBPhenotype:0001752 ! vesicle trafficking variant
 
 [Term]
 id: WBPhenotype:0001422
@@ -11128,7 +11139,6 @@ def: "Variations in the uptake of a small membrane-bound organelle, filled with 
 synonym: "synaptic vesicle endocytosis abnormal" NARROW []
 is_a: WBPhenotype:0001422 ! endocytic transport defect
 is_a: WBPhenotype:0001684 ! synaptic vesicle homeostasis variant
-is_a: WBPhenotype:0001752 ! vesicle trafficking variant
 
 [Term]
 id: WBPhenotype:0001515
@@ -11241,8 +11251,9 @@ id: WBPhenotype:0001529
 name: sensilium sheath cell variant
 def: "Any variation in the form, structure or composition of an interfacial epithelial cell which forms a specialized environment surrounding the ciliated sensory ending(s) of one or more neurons and is often accompanied by a more distal socket cell compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "sensilium sheath cell abnormal" NARROW []
+is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
+is_a: WBPhenotype:0000969 ! accessory cell morphology variant
 is_a: WBPhenotype:0001528 ! sensillum accessory cell morphology variant
-is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001530
@@ -11314,6 +11325,7 @@ name: dauer induction variant
 def: "Animals exhibit variations in the entry into the dauer stage when exposed to conditions that induce dauer formation in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer induction abnormal" NARROW []
 is_a: WBPhenotype:0000159 ! dauer arrest variant
+is_a: WBPhenotype:0000308 ! dauer development variant
 
 [Term]
 id: WBPhenotype:0001540
@@ -11364,6 +11376,7 @@ name: dauer resistance to harsh conditions variant
 def: "Variations which lead to the decreased ability of dauer larva to survive at extreme conditions, such as high or low temperatures, the presence of dilute acids, detergents, anesthetics, or even fixatives, compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer resistance to harsh conditions abnormal" NARROW []
 is_a: WBPhenotype:0000159 ! dauer arrest variant
+is_a: WBPhenotype:0000308 ! dauer development variant
 
 [Term]
 id: WBPhenotype:0001547
@@ -11371,6 +11384,7 @@ name: dauer metabolism variant
 def: "Animals exhibit variations in the chemical reactions and pathways that occur during the dauer life stage, compared to control." [WB:WBPerson2021]
 synonym: "dauer metabolism abnormal" NARROW []
 is_a: WBPhenotype:0000159 ! dauer arrest variant
+is_a: WBPhenotype:0000308 ! dauer development variant
 
 [Term]
 id: WBPhenotype:0001548
@@ -11664,6 +11678,7 @@ name: actin organization biogenesis variant
 def: "Animals exhibit variations in the formation and/or arrangement of actin, an abundant cytoskeletal protein in most cells, often linked to the plasma membrane and concentrated at cell junctions compared to control (Wormatlas)." [GO:0030036, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 synonym: "actin organization biogenesis abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0001345 ! cytoskeleton organization biogenesis variant
 
 [Term]
@@ -11672,6 +11687,7 @@ name: microtubule organization biogenesis variant
 def: "Animals exhibit variations in the form, structure, composition or arrangement of a robust macromolecular array, composed primarily of tubulin, which forms long extended cytoskeletal elements compared to control (Wormatlas)." [GO:0000226, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 synonym: "microtubule organization biogenesis abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0001345 ! cytoskeleton organization biogenesis variant
 
 [Term]
@@ -11679,7 +11695,6 @@ id: WBPhenotype:0001589
 name: microtubule nucleation variant
 def: "Any variation that alters the characteristic de novo formation of a microtubule compared to control." [GO:0007020]
 synonym: "microtubule nucleation abnormal" NARROW []
-is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
@@ -11687,7 +11702,6 @@ id: WBPhenotype:0001590
 name: microtubule depolymerization variant
 def: "Any variation that alters the characteristic removal of tubulin heterodimers from one or both ends of a microtubule compared to control." [GO:0007019]
 synonym: "microtubule depolymerization abnormal" NARROW []
-is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
@@ -11695,7 +11709,7 @@ id: WBPhenotype:0001591
 name: microtubule polymerization variant
 def: "Any variation that alters the characteristic addition of tubulin heterodimers to one or both ends of a microtubule compared to control." [GO:0046785]
 synonym: "microtubule polymerization abnormal" NARROW []
-is_a: WBPhenotype:0000519 ! physiology variant
+is_a: WBPhenotype:0001369 ! protein interaction variant
 is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
@@ -11886,12 +11900,13 @@ id: WBPhenotype:0001620
 name: organism oxidative stress response variant
 def: "Animals exhibit variations in their response to oxidative stress compared to that observed in control animals." [WB:WBPerson557]
 synonym: "organism oxidative stress response abnormal" NARROW []
-is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000142 ! cell stress response variant
 
 [Term]
 id: WBPhenotype:0001621
 name: organism oxidative stress response hypersensitive
 def: "Animals respond to a lower concentration of reactive oxygen species or a shorter exposure compared to control animals." [WB:WBPerson2021]
+is_a: WBPhenotype:0000068 ! oxidative stress response variant
 is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
@@ -12192,6 +12207,7 @@ id: WBPhenotype:0001663
 name: organism oxidative stress resistant
 def: "Animals fail to respond to the levels of reactive oxygen species that elicit a response in control animals." [WB:WBPerson2021]
 synonym: "Oxr" BROAD []
+is_a: WBPhenotype:0000068 ! oxidative stress response variant
 is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
@@ -12234,6 +12250,7 @@ def: "Animals exhibit a variation in the ratio of synaptic vesicles per synapse 
 synonym: "presynaptic vesicle number abnormal" NARROW []
 synonym: "synaptic vesicle number abnormal" RELATED []
 is_a: WBPhenotype:0001321 ! presynaptic region morphology variant
+is_a: WBPhenotype:0001332 ! vesicle number variant
 
 [Term]
 id: WBPhenotype:0001670
@@ -12248,6 +12265,7 @@ id: WBPhenotype:0001671
 name: vesicle organization variant
 def: "Animals display variations in the distribution of spherical membrane-bound fluid-filled organelles, compared to that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "vesicle organization abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
@@ -12276,6 +12294,7 @@ id: WBPhenotype:0001675
 name: male gonad development variant
 def: "Males exhibit variations in the reproductive system, from its formation to the mature structure compared to control." [WB:WBPerson712]
 synonym: "male gonad development abnormal" NARROW []
+is_a: WBPhenotype:0000613 ! reproductive system physiology variant
 is_a: WBPhenotype:0000691 ! gonad development variant
 
 [Term]
@@ -12322,7 +12341,6 @@ name: spindle orientation variant
 def: "The alignment of the spindle relative to other cellular structures varies from that observed in control animals." [GO:0051294, WB:WBPaper00031898, WB:WBPerson712]
 synonym: "spindle orientation abnormal" NARROW []
 is_a: WBPhenotype:0000761 ! spindle position orientation defective early emb
-is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0001682
@@ -12746,6 +12764,7 @@ id: WBPhenotype:0001739
 name: aging variant
 def: "Any variation in an organism's decline over time from its optimal fertility and viability compared to control animals." [WB:WBPaper00032067, WB:WBPerson712]
 synonym: "aging abnormal" NARROW []
+is_a: WBPhenotype:0000518 ! development variant
 is_a: WBPhenotype:0000576 ! organism physiology variant
 
 [Term]
@@ -12772,6 +12791,7 @@ id: WBPhenotype:0001742
 name: lipid synthesis increased
 def: "The endogenous anabolism of any lipid species has been increased compared to that observed in control animals." [WB:WBPaper00032082, WB:WBPerson712]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0001696 ! biosynthesis variant
 
 [Term]
 id: WBPhenotype:0001743
@@ -12785,6 +12805,7 @@ id: WBPhenotype:0001744
 name: cell adhesion variant
 def: "Any variation in the attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix compared to control." [GO:0007155, WB:WBPerson557]
 synonym: "cell adhesion abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology variant
 is_a: WBPhenotype:0001657 ! cell junction variant
 
 [Term]
@@ -12836,6 +12857,7 @@ synonym: "Hos" RELATED []
 synonym: "hypertonic sensitive" RELATED []
 is_a: WBPhenotype:0000141 ! stress induced lethality increased
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
+is_a: WBPhenotype:0001725 ! osmotic stress response variant
 
 [Term]
 id: WBPhenotype:0001752
@@ -13031,6 +13053,7 @@ is_a: WBPhenotype:0000113 ! RNA expression variant
 id: WBPhenotype:0001780
 name: associative learning variant
 def: "Variations in the behavioral plasticity induced by the integration of two sensory signals compared to control. In C. elegans animals exhibit enhancement of butanone chemotaxis by preexposure to butanone and food." [WB:WBPaper00029060, WB:WBPerson2021]
+is_a: WBPhenotype:0000517 ! behavior variant
 is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
 [Term]
@@ -13083,7 +13106,6 @@ is_a: WBPhenotype:0001897 ! light response variant
 id: WBPhenotype:0001788
 name: resistant to mutagens
 def: "Animals survive longer than control animals after or during exposure to DNA damaging agents." [WB:WBPaper00031934, WB:WBPerson712]
-is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 is_a: WBPhenotype:0000739 ! DNA damage response variant
 
 [Term]
@@ -13352,7 +13374,6 @@ id: WBPhenotype:0001826
 name: RNA degradation variant
 def: "Variations in the regulated breakdown of RNA species via the action of cellular enzymes (RNases) compared to control." [WB:WBPaper00032091, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
-is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001827
@@ -13404,7 +13425,6 @@ id: WBPhenotype:0001834
 name: mRNA splicing variant
 def: "Variations in the processes regulating the excision of intervening introns from the primary mRNA transcript, compared to control." [GO:0008380, WB:WBPaper00032287, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
-is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001835
@@ -14504,6 +14524,7 @@ id: WBPhenotype:0002004
 name: actomyosin contractility defective
 def: "Animals exhibit defects in the flow rate or targeting of the cortical actomyosin network, which occurs during polarization as well as contraction of the contractile ring, compared to control animals." [WB:WBPaper00038098, WB:WBPerson712]
 is_a: WBPhenotype:0000034 ! embryonic polarity variant
+is_a: WBPhenotype:0001346 ! actin cytoskeleton dynamics variant
 is_a: WBPhenotype:0001587 ! actin organization biogenesis variant
 is_a: WBPhenotype:0002408 ! cytokinesis variant
 
@@ -14512,6 +14533,7 @@ id: WBPhenotype:0002005
 name: actomyosin cytoskeletal tension variant
 def: "The tension of the cytoskeleton comprised of the actomyosin network differs from controls. This tension can be measured by laser-cutting of the actomyosin cytoskeleton and observing any differences the recoil velocity of cortex adjacent to the cut site." [WB:WBPaper00038098, WB:WBPerson712]
 is_a: WBPhenotype:0001346 ! actin cytoskeleton dynamics variant
+is_a: WBPhenotype:0001587 ! actin organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0002006
@@ -15252,6 +15274,7 @@ is_a: WBPhenotype:0001917 ! protein acetylation variant
 id: WBPhenotype:0002124
 name: circumferential actin bundles disorganized
 def: "The distribution or presence of actin in circumferential actin bundles (CFB) differs from that observed in control animals. Contraction of CFBs provide the driving force for epidermal elongation." [WB:WBPaper00006290, WB:WBPerson712]
+is_a: WBPhenotype:0001346 ! actin cytoskeleton dynamics variant
 is_a: WBPhenotype:0001587 ! actin organization biogenesis variant
 
 [Term]
@@ -15942,6 +15965,7 @@ id: WBPhenotype:0002231
 name: manganese induced oxidative stress response
 def: "Oxidative stress induced by manganese differs from that of control worms." [WB:WBPaper00044740, WB:WBPerson712]
 is_a: WBPhenotype:0000068 ! oxidative stress response variant
+is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
 id: WBPhenotype:0002232
@@ -15953,6 +15977,7 @@ is_a: WBPhenotype:0000625 ! synaptogenesis variant
 id: WBPhenotype:0002233
 name: osmolarity modulated swimming variant
 def: "The swimming behavior of animals are influenced or modulate by the osmolarity of the swimming buffer. The swimming of wild-type C. elegans animals are not affected by the osmolarity of the swimming liquid." [WB:WBPaper00041219, WB:WBPerson712]
+is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
 is_a: WBPhenotype:0001725 ! osmotic stress response variant
 
 [Term]
@@ -16052,6 +16077,7 @@ id: WBPhenotype:0002249
 name: reduced protein oxidation levels
 def: "Protein oxidation levels, as measured by carbonylated protein levels for example, are reduced compared to controls." [WB:WBPaper00040914, WB:WBPerson2987]
 is_a: WBPhenotype:0000068 ! oxidative stress response variant
+is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
 id: WBPhenotype:0002250
@@ -16244,12 +16270,14 @@ id: WBPhenotype:0002280
 name: organism osmostic stress resistant
 def: "Animals exhibit resistance to osmotic stress compared to that observed in control animals." [WB:WBPaper00032396, WB:WBPerson2987]
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
+is_a: WBPhenotype:0001725 ! osmotic stress response variant
 
 [Term]
 id: WBPhenotype:0002281
 name: organism osmostic stress hypersensitive
 def: "Animals exhibit hypersensitivty to osmotic stress compared to that observed in control animals." [WB:WBPaper00032396, WB:WBPerson2987]
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
+is_a: WBPhenotype:0001725 ! osmotic stress response variant
 
 [Term]
 id: WBPhenotype:0002282
@@ -16912,7 +16940,6 @@ id: WBPhenotype:0002387
 name: supernumerary asters
 def: "Dividing cells exhibit additional arrays of microtubules emanating from a spindle pole that do not connect to kinetochores, compared to control." [WB:WBPaper00041071, WB:WBPerson602]
 is_a: WBPhenotype:0002419 ! spindle aster variant
-is_a: WBPhenotype:0010002 ! cell organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0002388
@@ -17083,6 +17110,7 @@ name: spindle variant
 def: "Any variation in the assembly, disassembly, arrangement, elongation or stabilization of the array of microtubules and associated molecules that forms between opposite poles of a eukaryotic cell during mitosis or meiosis and serves to move the duplicated chromosomes apart compared to control." [GO:0005819, WB:WBPerson557]
 synonym: "spindle abnormal" RELATED []
 is_a: WBPhenotype:0000746 ! cell division variant
+is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0002415
@@ -17703,6 +17731,7 @@ id: WBPhenotype:0002512
 name: thermosensory behavior variant
 def: "Variations in behavior that is dependent upon the sensation of temperature, compared to control." [GO:0040040, WB:WBPerson2987]
 synonym: "thermosensory behavior abnormal" NARROW []
+is_a: WBPhenotype:0000146 ! organism temperature response variant
 is_a: WBPhenotype:0000525 ! organism behavior variant
 
 [Term]
