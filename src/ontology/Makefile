@@ -1,6 +1,7 @@
 # ----------------------------------------
 # Makefile for wbphenotype
 # Generated using ontology-starter-kit
+# ODK Version: v1.2.17
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -24,6 +25,7 @@ REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+ODK_VERSION =               v1.2.17
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
@@ -43,9 +45,13 @@ RELEASE_ARTEFACTS = $(sort  base simple-non-classified full simple base full)
 # ----------------------------------------
 
 .PHONY: .FORCE
-all: all_imports patterns all_main all_subsets sparql_test all_reports all_assets
-test: sparql_test all_reports
+all: odkversion all_imports patterns all_main all_subsets sparql_test all_reports all_assets
+test: odkversion sparql_test all_reports
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --output test.owl && rm test.owl && echo "Success"
+
+odkversion:
+	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
+	echo "ROBOT version (ODK): " && $(ROBOT) --version
 
 ## -- main targets --
 ##
@@ -139,7 +145,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
+  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 prepare_initial_release: prepare_release
 	cd $(RELEASEDIR) && git add $(ASSETS)
@@ -279,6 +285,7 @@ imports/%_terms_combined.txt: seed.txt imports/%_terms.txt
 # This pattern uses ROBOT to generate an import module
 imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --force true --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/%_import.owl
 
@@ -423,7 +430,7 @@ sparql_test: $(SRC)
 # ROBOT report
 # ----------------------------------------
 reports/%-obo-report.tsv: %
-	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
+	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
 
 # ----------------------------------------
 # Sparql queries: Exports
@@ -501,6 +508,12 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 prepare_patterns:
 	touch $(pattern_term_lists_default)   &&\
   touch $(individual_patterns_default)  
+
+
+
+
+
+
 
 
 
