@@ -2546,6 +2546,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002521>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002522>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002523>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002524>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002525>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002526>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -18940,6 +18942,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001766> "WBPhenotype:0001766"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001766> "cholesterol depletion hypersensitive"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001766> <http://purl.obolibrary.org/obo/WBPhenotype_0000725>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001766> <http://purl.obolibrary.org/obo/WBPhenotype_0002525>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001767> (commissure handedness defective)
 
@@ -19563,6 +19566,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001837> "WBPhenotype:0001837"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001837> "diet induced life span variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001837> <http://purl.obolibrary.org/obo/WBPhenotype_0000039>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001837> <http://purl.obolibrary.org/obo/WBPhenotype_0002525>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001838> (drug induced gene expression variant)
 
@@ -23193,7 +23197,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002273> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002273> "WBPhenotype:0002273"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002273> "dietary sugar response variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002273> <http://purl.obolibrary.org/obo/WBPhenotype_0000027>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002273> <http://purl.obolibrary.org/obo/WBPhenotype_0002525>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002274> (plugged on body)
 
@@ -23940,6 +23944,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002363> "WBPhenotype:0002363"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002363> "cholesterol depletion resistant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002363> <http://purl.obolibrary.org/obo/WBPhenotype_0000725>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002363> <http://purl.obolibrary.org/obo/WBPhenotype_0002525>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002364> (axonal degeneration)
 
@@ -25270,13 +25275,30 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "slow recovery from starvation-induced L1 arrest"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002523> <http://purl.obolibrary.org/obo/WBPhenotype_0002522>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002524> (dependent on dietary molybdenum cofactor)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002524> (molybdenum cofactor depletion hypersensitive)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00056452"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "Animals depend on a diet consisting of molybdenum cofactor, suggesting that there are defects in the endogenous metabolic pathway responsible for synthesizing molybdenum cofactor. Without molybdenum cofactor supplied in the diet, animals exhibit lethality or slow growth."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00056452"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "Animals are more sensitive to the depletion of molybdenum cofactor from the diet compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "dependent on dietary molybdenum cofactor"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "WBPhenotype:0002524"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "dependent on dietary molybdenum cofactor"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002524> <http://purl.obolibrary.org/obo/WBPhenotype_0000027>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002524> "molybdenum cofactor depletion hypersensitive"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002524> <http://purl.obolibrary.org/obo/WBPhenotype_0002526>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002525> (diet response variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00024451"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00026641"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032936"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00045849"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00056452"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002525> "Animals exhibit variations in their response to diet, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002525> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002525> "WBPhenotype:0002525"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002525> "diet response variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002525> <http://purl.obolibrary.org/obo/WBPhenotype_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002526> (response to molybdenum cofactor depletion abnormal)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00056452"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002526> "Animals exhibit variations in the response to the depletion of molybdenum cofactor from the diet compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002526> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002526> "WBPhenotype:0002526"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002526> "response to molybdenum cofactor depletion abnormal"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002526> <http://purl.obolibrary.org/obo/WBPhenotype_0002525>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
