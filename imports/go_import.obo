@@ -1,5 +1,20 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-23/imports/go_import.owl
+data-version: wbphenotype/releases/2019-08-13/imports/go_import.owl
+subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: goslim_agr "AGR slim"
+subsetdef: goslim_aspergillus "Aspergillus GO slim"
+subsetdef: goslim_candida "Candida GO slim"
+subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
+subsetdef: goslim_generic "Generic GO slim"
+subsetdef: goslim_metagenomics "Metagenomics GO slim"
+subsetdef: goslim_mouse "Mouse GO slim"
+subsetdef: goslim_pir "PIR GO slim"
+subsetdef: goslim_plant "Plant GO slim"
+subsetdef: goslim_pombe "Fission yeast GO slim"
+subsetdef: goslim_synapse "synapse GO slim"
+subsetdef: goslim_yeast "Yeast GO slim"
 ontology: wbphenotype/imports/go_import
 
 [Term]
@@ -182,6 +197,22 @@ intersection_of: negatively_regulates GO:0006366 ! transcription by RNA polymera
 relationship: negatively_regulates GO:0006366 ! transcription by RNA polymerase II
 
 [Term]
+id: GO:0000132
+name: establishment of mitotic spindle orientation
+namespace: biological_process
+alt_id: GO:0030607
+alt_id: GO:0030609
+def: "A cell cycle process that sets the alignment of mitotic spindle relative to other cellular structures." [GOC:ems]
+synonym: "establishment of spindle orientation during mitosis" RELATED [GOC:dph, GOC:tb]
+synonym: "establishment of spindle orientation involved in mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "mitotic spindle orientation" EXACT []
+synonym: "orienting of mitotic spindle" EXACT []
+is_a: GO:0040001 ! establishment of mitotic spindle localization
+is_a: GO:0051294 ! establishment of spindle orientation
+intersection_of: GO:0051294 ! establishment of spindle orientation
+intersection_of: part_of GO:0000278 ! mitotic cell cycle
+
+[Term]
 id: GO:0000184
 name: nuclear-transcribed mRNA catabolic process, nonsense-mediated decay
 namespace: biological_process
@@ -330,6 +361,20 @@ intersection_of: GO:0061640 ! cytoskeleton-dependent cytokinesis
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
 
 [Term]
+id: GO:0000302
+name: response to reactive oxygen species
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a reactive oxygen species stimulus. Reactive oxygen species include singlet oxygen, superoxide, and oxygen free radicals." [GOC:krc]
+synonym: "response to active oxygen species" EXACT []
+synonym: "response to AOS" EXACT []
+synonym: "response to reactive oxidative species" EXACT []
+synonym: "response to reactive oxygen intermediate" EXACT []
+synonym: "response to ROI" EXACT []
+synonym: "response to ROS" EXACT []
+is_a: GO:0006979 ! response to oxidative stress
+is_a: GO:1901700 ! response to oxygen-containing compound
+
+[Term]
 id: GO:0000323
 name: lytic vacuole
 namespace: cellular_component
@@ -367,6 +412,25 @@ def: "Splicing of RNA via a series of two transesterification reactions with a b
 synonym: "lariat RNA biosynthesis" RELATED []
 synonym: "lariat RNA formation" RELATED []
 is_a: GO:0000375 ! RNA splicing, via transesterification reactions
+
+[Term]
+id: GO:0000398
+name: mRNA splicing, via spliceosome
+namespace: biological_process
+alt_id: GO:0006374
+alt_id: GO:0006375
+def: "The joining together of exons from one or more primary transcripts of messenger RNA (mRNA) and the excision of intron sequences, via a spliceosomal mechanism, so that mRNA consisting only of the joined exons is produced." [GOC:krc, ISBN:0198506732, ISBN:0879695897]
+comment: Note that although the many U12-type introns have the sequence AT-AC at the intron termini, some introns with these terminal sequences are spliced by the U2-type spliceosome. The distinguishing characteristics are sequences near the 5' splice site and the branch point sequences of the intron. Note that although the majority of U2-type introns have the sequence GU-AG at the intron termini, some introns with these terminal sequences are spliced by the U12-type spliceosome. The distinguishing characteristics are sequences near the 5' splice site and the branch point sequences of the intron.
+synonym: "mRNA splicing" BROAD []
+synonym: "nuclear mRNA splicing via U12-type spliceosome" NARROW []
+synonym: "nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "nuclear mRNA splicing, via spliceosome" EXACT [GOC:krc, GOC:vw]
+synonym: "pre-mRNA splicing" BROAD []
+synonym: "splicing AT-AC intron" RELATED []
+synonym: "splicing GT-AG intron" RELATED []
+xref: MIPS_funcat:11.04.03
+is_a: GO:0000377 ! RNA splicing, via transesterification reactions with bulged adenosine as nucleophile
+is_a: GO:0006397 ! mRNA processing
 
 [Term]
 id: GO:0000723
@@ -586,6 +650,18 @@ intersection_of: GO:0006396 ! RNA processing
 intersection_of: occurs_in GO:0005739 ! mitochondrion
 
 [Term]
+id: GO:0001101
+name: response to acid chemical
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus by the chemical structure of the anion portion of a dissociated acid (rather than the acid acting as a proton donor). The acid chemical may be in gaseous, liquid or solid form." [GOC:go_curators, GOC:rn, http://en.wikipedia.org/wiki/Acid]
+comment: This term should be used to describe a response to a specific acid as a chemical. E.g., if an organism were responding to glutamate, then the response would be glutamate-specific; the organism is actually responding to the chemical structure of the anion portion of the dissociated acid. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC. If annotating experiments where an acid is playing a role as a proton donor, please annotate to GO:0010447 'response to acidic pH' instead.
+subset: gocheck_do_not_manually_annotate
+synonym: "response to acid" BROAD []
+synonym: "response to acid anion" RELATED []
+synonym: "response to oxoanion" RELATED []
+is_a: GO:0042221 ! response to chemical
+
+[Term]
 id: GO:0001505
 name: regulation of neurotransmitter levels
 namespace: biological_process
@@ -602,6 +678,18 @@ xref: MIPS_funcat:34.03.03
 is_a: GO:0042391 ! regulation of membrane potential
 
 [Term]
+id: GO:0001556
+name: oocyte maturation
+namespace: biological_process
+def: "A developmental process, independent of morphogenetic (shape) change, that is required for an oocyte to attain its fully functional state. Oocyte maturation commences after reinitiation of meiosis commonly starting with germinal vesicle breakdown, and continues up to the second meiotic arrest prior to fertilization." [GOC:devbiol, http://ovary.stanford.edu]
+xref: Wikipedia:Oocyte_maturation
+is_a: GO:0003006 ! developmental process involved in reproduction
+is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
+is_a: GO:0048469 ! cell maturation
+is_a: GO:0071695 ! anatomical structure maturation
+relationship: part_of GO:0048599 ! oocyte development
+
+[Term]
 id: GO:0001558
 name: regulation of cell growth
 namespace: biological_process
@@ -611,6 +699,19 @@ is_a: GO:0051128 ! regulation of cellular component organization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0016049 ! cell growth
 relationship: regulates GO:0016049 ! cell growth
+
+[Term]
+id: GO:0001666
+name: response to hypoxia
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating lowered oxygen tension. Hypoxia, defined as a decline in O2 levels below normoxic levels of 20.8 - 20.95%, results in metabolic adaptation at both the cellular and organismal level." [GOC:hjd]
+comment: Note that this term should not be confused with 'response to anoxia ; GO:0034059'. Note that in laboratory studies, hypoxia is typically studied at O2 concentrations ranging from 0.1 - 5%.
+synonym: "response to hypoxic stress" EXACT []
+synonym: "response to intermittent hypoxia" NARROW []
+synonym: "response to lowered oxygen tension" EXACT []
+synonym: "response to sustained hypoxia" NARROW []
+is_a: GO:0006950 ! response to stress
+is_a: GO:0036293 ! response to decreased oxygen levels
 
 [Term]
 id: GO:0001667
@@ -905,6 +1006,18 @@ intersection_of: positively_regulates GO:0002790 ! peptide secretion
 relationship: positively_regulates GO:0002790 ! peptide secretion
 
 [Term]
+id: GO:0002818
+name: intracellular defense response
+namespace: biological_process
+def: "A physiological defense response which occurs intracellularly." [GOC:add]
+synonym: "intracellular defence response" EXACT []
+is_a: GO:0006968 ! cellular defense response
+is_a: GO:0033554 ! cellular response to stress
+intersection_of: GO:0006952 ! defense response
+intersection_of: occurs_in GO:0005622 ! intracellular
+relationship: occurs_in GO:0005622 ! intracellular
+
+[Term]
 id: GO:0002831
 name: regulation of response to biotic stimulus
 namespace: biological_process
@@ -970,6 +1083,38 @@ namespace: biological_process
 def: "A multicellular organismal process carried out by any of the organs or tissues in an organ system. An organ system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a biological objective." [GOC:mtg_cardio]
 synonym: "organ system process" EXACT []
 is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0003012
+name: muscle system process
+namespace: biological_process
+def: "A organ system process carried out at the level of a muscle. Muscle tissue is composed of contractile cells or fibers." [GOC:mtg_cardio]
+synonym: "muscle physiological process" RELATED []
+is_a: GO:0003008 ! system process
+
+[Term]
+id: GO:0003365
+name: establishment of cell polarity involved in ameboidal cell migration
+namespace: biological_process
+def: "The specification and formation of anisotropic intracellular organization that contributes to the self-propelled directed movement of an ameboid cell." [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0030010 ! establishment of cell polarity
+intersection_of: GO:0030010 ! establishment of cell polarity
+intersection_of: part_of GO:0001667 ! ameboidal-type cell migration
+relationship: part_of GO:0001667 ! ameboidal-type cell migration
+created_by: dph
+creation_date: 2009-12-08T04:50:41Z
+
+[Term]
+id: GO:0003379
+name: establishment of cell polarity involved in gastrulation cell migration
+namespace: biological_process
+def: "The specification and formation of anisotropic intracellular organization that contributes to the self-propelled directed movement of an ameboid cell taking part in gastrulation." [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0003365 ! establishment of cell polarity involved in ameboidal cell migration
+intersection_of: GO:0030010 ! establishment of cell polarity
+intersection_of: part_of GO:0042074 ! cell migration involved in gastrulation
+relationship: part_of GO:0042074 ! cell migration involved in gastrulation
+created_by: dph
+creation_date: 2009-12-09T06:54:44Z
 
 [Term]
 id: GO:0003674
@@ -2037,6 +2182,19 @@ is_a: GO:0016070 ! RNA metabolic process
 relationship: part_of GO:0010467 ! gene expression
 
 [Term]
+id: GO:0006397
+name: mRNA processing
+namespace: biological_process
+def: "Any process involved in the conversion of a primary mRNA transcript into one or more mature mRNA(s) prior to translation into polypeptide." [GOC:mah]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_yeast
+synonym: "mRNA maturation" RELATED []
+xref: MIPS_funcat:11.04.03
+is_a: GO:0006396 ! RNA processing
+is_a: GO:0016071 ! mRNA metabolic process
+
+[Term]
 id: GO:0006401
 name: RNA catabolic process
 namespace: biological_process
@@ -2586,6 +2744,27 @@ is_a: GO:0042330 ! taxis
 relationship: part_of GO:0042221 ! response to chemical
 
 [Term]
+id: GO:0006936
+name: muscle contraction
+namespace: biological_process
+def: "A process in which force is generated within muscle tissue, resulting in a change in muscle geometry. Force generation involves a chemo-mechanical energy conversion step that is carried out by the actin/myosin complex activity, which generates force through ATP hydrolysis." [GOC:ef, GOC:mtg_muscle, ISBN:0198506732]
+subset: goslim_pir
+xref: MIPS_funcat:36.25.09
+xref: Wikipedia:Muscle_contraction
+is_a: GO:0003012 ! muscle system process
+
+[Term]
+id: GO:0006937
+name: regulation of muscle contraction
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of muscle contraction." [GOC:go_curators]
+xref: MIPS_funcat:36.25.09.05
+is_a: GO:0090257 ! regulation of muscle system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006936 ! muscle contraction
+relationship: regulates GO:0006936 ! muscle contraction
+
+[Term]
 id: GO:0006949
 name: syncytium formation
 namespace: biological_process
@@ -2611,6 +2790,40 @@ synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
 xref: MIPS_funcat:32.01
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0006952
+name: defense response
+namespace: biological_process
+alt_id: GO:0002217
+alt_id: GO:0042829
+def: "Reactions, triggered in response to the presence of a foreign body or the occurrence of an injury, which result in restriction of damage to the organism attacked or prevention/recovery from the infection caused by the attack." [GOC:go_curators]
+synonym: "antimicrobial peptide activity" RELATED []
+synonym: "defence response" EXACT []
+synonym: "defense/immunity protein activity" RELATED []
+synonym: "physiological defense response" EXACT []
+is_a: GO:0006950 ! response to stress
+
+[Term]
+id: GO:0006955
+name: immune response
+namespace: biological_process
+def: "Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat." [GO_REF:0000022, GOC:add, GOC:mtg_15nov05]
+comment: This term was improved by GO_REF:0000022. It was redefined and moved.
+xref: MIPS_funcat:36.25.16
+is_a: GO:0002376 ! immune system process
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0006968
+name: cellular defense response
+namespace: biological_process
+alt_id: GO:0016066
+alt_id: GO:0016067
+def: "A defense response that is mediated by cells." [GOC:ebc]
+comment: Note that this term refers to any type of defense response made by any cell, whether only a single-celled organism or part of a multicellular organism; also includes responses that occur in the context of multiorganism processes.
+synonym: "cellular defence response" EXACT []
+is_a: GO:0006952 ! defense response
 
 [Term]
 id: GO:0006970
@@ -3092,6 +3305,17 @@ is_a: GO:0051081 ! nuclear envelope disassembly
 is_a: GO:1903047 ! mitotic cell cycle process
 intersection_of: GO:0051081 ! nuclear envelope disassembly
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
+
+[Term]
+id: GO:0007080
+name: mitotic metaphase plate congression
+namespace: biological_process
+def: "The cell cycle process in which chromosomes are aligned at the metaphase plate, a plane halfway between the poles of the mitotic spindle, during mitosis." [GOC:mah, ISBN:0815316194]
+is_a: GO:0051310 ! metaphase plate congression
+is_a: GO:1903047 ! mitotic cell cycle process
+intersection_of: GO:0051310 ! metaphase plate congression
+intersection_of: part_of GO:0000278 ! mitotic cell cycle
+relationship: part_of GO:0000070 ! mitotic sister chromatid segregation
 
 [Term]
 id: GO:0007084
@@ -4251,6 +4475,24 @@ xref: MIPS_funcat:34.11.09
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
+id: GO:0009268
+name: response to pH
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pH stimulus. pH is a measure of the acidity or basicity of an aqueous solution." [GOC:jl, http://en.wikipedia.org/wiki/PH]
+xref: MIPS_funcat:32.01.04
+xref: MIPS_funcat:34.11.03.11
+xref: MIPS_funcat:36.20.35.09.03
+is_a: GO:0009628 ! response to abiotic stimulus
+
+[Term]
+id: GO:0009269
+name: response to desiccation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a desiccation stimulus, extreme dryness resulting from the prolonged deprivation of water." [GOC:jl]
+synonym: "desiccation tolerance" RELATED []
+is_a: GO:0009414 ! response to water deprivation
+
+[Term]
 id: GO:0009295
 name: nucleoid
 namespace: cellular_component
@@ -4309,6 +4551,18 @@ xref: MIPS_funcat:32.01.13
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
+id: GO:0009408
+name: response to heat
+namespace: biological_process
+alt_id: GO:0006951
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a heat stimulus, a temperature stimulus above the optimal temperature for that organism." [GOC:lr]
+subset: goslim_yeast
+synonym: "response to heat shock" NARROW []
+xref: MIPS_funcat:32.01.05
+is_a: GO:0006950 ! response to stress
+is_a: GO:0009266 ! response to temperature stimulus
+
+[Term]
 id: GO:0009410
 name: response to xenobiotic stimulus
 namespace: biological_process
@@ -4326,6 +4580,30 @@ synonym: "response to ultraviolet radiation stimulus" EXACT []
 synonym: "response to UV light stimulus" EXACT []
 synonym: "response to UV radiation stimulus" EXACT []
 is_a: GO:0009416 ! response to light stimulus
+
+[Term]
+id: GO:0009414
+name: response to water deprivation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a water deprivation stimulus, prolonged deprivation of water." [GOC:lr]
+synonym: "drought tolerance" RELATED []
+synonym: "response to dehydration" EXACT []
+synonym: "response to drought" EXACT []
+synonym: "response to thirst" EXACT []
+is_a: GO:0006950 ! response to stress
+is_a: GO:0009415 ! response to water
+
+[Term]
+id: GO:0009415
+name: response to water
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus reflecting the presence, absence, or concentration of water." [GOC:jl]
+synonym: "response to water stimulus" EXACT [GOC:dos]
+xref: MIPS_funcat:36.20.35.09.01
+is_a: GO:0001101 ! response to acid chemical
+is_a: GO:0009628 ! response to abiotic stimulus
+is_a: GO:0010035 ! response to inorganic substance
+is_a: GO:1901700 ! response to oxygen-containing compound
 
 [Term]
 id: GO:0009416
@@ -4382,6 +4660,15 @@ synonym: "response to biotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0009611
+name: response to wounding
+namespace: biological_process
+alt_id: GO:0002245
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating damage to the organism." [GOC:go_curators]
+synonym: "physiological response to wounding" EXACT []
+is_a: GO:0006950 ! response to stress
+
+[Term]
 id: GO:0009628
 name: response to abiotic stimulus
 namespace: biological_process
@@ -4392,6 +4679,26 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0009635
+name: response to herbicide
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a herbicide stimulus. Herbicides are chemicals used to kill or control the growth of plants." [GOC:curators]
+synonym: "herbicide susceptibility/resistance" RELATED []
+is_a: GO:0006950 ! response to stress
+is_a: GO:0009636 ! response to toxic substance
+
+[Term]
+id: GO:0009636
+name: response to toxic substance
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a toxic stimulus." [GOC:lr]
+subset: goslim_chembl
+synonym: "detoxification response" NARROW []
+synonym: "toxin resistance" RELATED []
+synonym: "toxin susceptibility/resistance" RELATED []
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0009653
@@ -4744,6 +5051,85 @@ def: "Any process that results in a change in state or activity of a cell or an 
 is_a: GO:0042221 ! response to chemical
 
 [Term]
+id: GO:0010035
+name: response to inorganic substance
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an inorganic substance stimulus." [GOC:sm]
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:0010037
+name: response to carbon dioxide
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a carbon dioxide (CO2) stimulus." [GOC:sm]
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:0072347 ! response to anesthetic
+is_a: GO:1901700 ! response to oxygen-containing compound
+
+[Term]
+id: GO:0010038
+name: response to metal ion
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a metal ion stimulus." [GOC:sm]
+synonym: "heavy metal sensitivity/resistance" RELATED []
+synonym: "response to heavy metal" NARROW []
+synonym: "response to metal" EXACT []
+is_a: GO:0010035 ! response to inorganic substance
+
+[Term]
+id: GO:0010042
+name: response to manganese ion
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a manganese ion stimulus." [GOC:sm]
+synonym: "response to manganese" EXACT []
+is_a: GO:0010038 ! response to metal ion
+
+[Term]
+id: GO:0010044
+name: response to aluminum ion
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an aluminum ion stimulus." [GOC:sm]
+synonym: "response to aluminium ion" EXACT []
+synonym: "response to aluminum" EXACT []
+is_a: GO:0010038 ! response to metal ion
+
+[Term]
+id: GO:0010165
+name: response to X-ray
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of X-ray radiation. An X-ray is a form of electromagnetic radiation with a wavelength in the range of 10 nanometers to 100 picometers (corresponding to frequencies in the range 30 PHz to 3 EHz)." [GOC:sm, Wikipedia:X-ray]
+synonym: "response to X-ray radiation stimulus" EXACT []
+is_a: GO:0010212 ! response to ionizing radiation
+
+[Term]
+id: GO:0010185
+name: regulation of cellular defense response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cellular defense response." [GOC:sm]
+synonym: "regulation of cellular defence response" EXACT []
+is_a: GO:0031347 ! regulation of defense response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006968 ! cellular defense response
+relationship: regulates GO:0006968 ! cellular defense response
+
+[Term]
+id: GO:0010186
+name: positive regulation of cellular defense response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cellular defense response." [GOC:sm]
+synonym: "activation of cellular defense response" NARROW []
+synonym: "positive regulation of cellular defence response" EXACT []
+synonym: "stimulation of cellular defense response" NARROW []
+synonym: "up regulation of cellular defense response" EXACT []
+synonym: "up-regulation of cellular defense response" EXACT []
+synonym: "upregulation of cellular defense response" EXACT []
+is_a: GO:0010185 ! regulation of cellular defense response
+is_a: GO:0031349 ! positive regulation of defense response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006968 ! cellular defense response
+relationship: positively_regulates GO:0006968 ! cellular defense response
+
+[Term]
 id: GO:0010212
 name: response to ionizing radiation
 namespace: biological_process
@@ -4751,6 +5137,15 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to ionising radiation" EXACT []
 synonym: "response to ionizing radiation stimulus" EXACT []
 is_a: GO:0009314 ! response to radiation
+
+[Term]
+id: GO:0010243
+name: response to organonitrogen compound
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond." [CHEBI:35352, PMID:9869419]
+synonym: "response to organic nitrogen" EXACT []
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:1901698 ! response to nitrogen compound
 
 [Term]
 id: GO:0010256
@@ -4769,6 +5164,20 @@ alt_id: GO:0010261
 def: "The process that occurs in an animal organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism." [GOC:tb]
 is_a: GO:0007568 ! aging
 relationship: part_of GO:0048513 ! animal organ development
+
+[Term]
+id: GO:0010269
+name: response to selenium ion
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from selenium ion." [GOC:mg]
+is_a: GO:0010035 ! response to inorganic substance
+
+[Term]
+id: GO:0010288
+name: response to lead ion
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lead ion stimulus." [GOC:tair_curators, PMID:16461380]
+is_a: GO:0010038 ! response to metal ion
 
 [Term]
 id: GO:0010324
@@ -4857,6 +5266,18 @@ is_a: GO:0060255 ! regulation of macromolecule metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0010467 ! gene expression
 relationship: regulates GO:0010467 ! gene expression
+
+[Term]
+id: GO:0010469
+name: regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
+synonym: "regulation of receptor activity" BROAD []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0038023 ! signaling receptor activity
+relationship: regulates GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0010470
@@ -5578,6 +5999,14 @@ is_a: GO:1903430 ! negative regulation of cell maturation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0042551 ! neuron maturation
 relationship: negatively_regulates GO:0042551 ! neuron maturation
+
+[Term]
+id: GO:0014070
+name: response to organic cyclic compound
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic cyclic compound stimulus." [CHEBI:33832, GOC:ef]
+synonym: "response to organic cyclic substance" EXACT [GOC:mah]
+is_a: GO:0010033 ! response to organic substance
 
 [Term]
 id: GO:0014076
@@ -6665,6 +7094,17 @@ is_a: GO:0030003 ! cellular cation homeostasis
 is_a: GO:0055067 ! monovalent inorganic cation homeostasis
 
 [Term]
+id: GO:0030010
+name: establishment of cell polarity
+namespace: biological_process
+alt_id: GO:0000283
+alt_id: GO:0030468
+def: "The specification and formation of anisotropic intracellular organization or cell growth patterns." [GOC:mah]
+synonym: "bud site selection/establishment of cell polarity" NARROW []
+synonym: "cell polarization" EXACT []
+is_a: GO:0007163 ! establishment or maintenance of cell polarity
+
+[Term]
 id: GO:0030016
 name: myofibril
 namespace: cellular_component
@@ -6761,6 +7201,18 @@ is_a: GO:0060627 ! regulation of vesicle-mediated transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006897 ! endocytosis
 relationship: regulates GO:0006897 ! endocytosis
+
+[Term]
+id: GO:0030104
+name: water homeostasis
+namespace: biological_process
+alt_id: GO:0018987
+def: "Any process involved in the maintenance of an internal steady state of water within an organism or cell." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "osmoregulation" RELATED []
+synonym: "regulation of osmotic pressure" EXACT []
+xref: MIPS_funcat:36.20.35.09.01
+xref: Wikipedia:Osmoregulation
+is_a: GO:0048878 ! chemical homeostasis
 
 [Term]
 id: GO:0030133
@@ -7645,6 +8097,47 @@ is_a: GO:0051130 ! positive regulation of cellular component organization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0030030 ! cell projection organization
 relationship: positively_regulates GO:0030030 ! cell projection organization
+
+[Term]
+id: GO:0031347
+name: regulation of defense response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a defense response." [GOC:mah]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006952 ! defense response
+relationship: regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031348
+name: negative regulation of defense response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "down regulation of defense response" EXACT []
+synonym: "down-regulation of defense response" EXACT []
+synonym: "downregulation of defense response" EXACT []
+synonym: "inhibition of defense response" NARROW []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006952 ! defense response
+relationship: negatively_regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031349
+name: positive regulation of defense response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "activation of defense response" NARROW []
+synonym: "stimulation of defense response" NARROW []
+synonym: "up regulation of defense response" EXACT []
+synonym: "up-regulation of defense response" EXACT []
+synonym: "upregulation of defense response" EXACT []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006952 ! defense response
+relationship: positively_regulates GO:0006952 ! defense response
 
 [Term]
 id: GO:0031399
@@ -9390,6 +9883,16 @@ intersection_of: positively_regulates GO:0016301 ! kinase activity
 relationship: positively_regulates GO:0016301 ! kinase activity
 
 [Term]
+id: GO:0034059
+name: response to anoxia
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating a decline in oxygen levels to trace amounts, <0.1%." [GOC:kmv]
+comment: Note that this term should not be confused with 'response to hypoxia ; GO:0001666'.
+synonym: "response to anoxic stress" EXACT []
+is_a: GO:0006950 ! response to stress
+is_a: GO:0036293 ! response to decreased oxygen levels
+
+[Term]
 id: GO:0034242
 name: negative regulation of syncytium formation by plasma membrane fusion
 namespace: biological_process
@@ -9463,6 +9966,13 @@ synonym: "protein localization in nucleus" EXACT [GOC:mah]
 synonym: "protein targeting to nucleus" RELATED []
 is_a: GO:0033365 ! protein localization to organelle
 creation_date: 2012-11-07T15:45:54Z
+
+[Term]
+id: GO:0034606
+name: response to hermaphrodite contact
+namespace: biological_process
+def: "The response by the male to a hermaphrodite after initial contact following mate finding. The male stops forward locomotion, presses the ventral side of his tail against his partner's body, and begins moving backward along the hermaphrodite. Male response behavior is initiated when sensory neurons located in the rays of his tail contact a potential mate." [PMID:18050467, WB_REF:WBPaper00002109]
+is_a: GO:0060179 ! male mating behavior
 
 [Term]
 id: GO:0034608
@@ -9751,6 +10261,19 @@ created_by: rfoulger
 creation_date: 2011-04-01T10:50:47Z
 
 [Term]
+id: GO:0035821
+name: modification of morphology or physiology of other organism
+namespace: biological_process
+def: "The process in which an organism effects a change in the structure or processes of a second organism." [GOC:bf]
+synonym: "regulation of morphology of other organism" NARROW [GOC:bf]
+synonym: "regulation of morphology or physiology of other organism" RELATED [GOC:bf]
+synonym: "regulation of physiological process of other organism" NARROW [GOC:bf]
+synonym: "regulation of physiology of other organism" NARROW [GOC:bf]
+is_a: GO:0044419 ! interspecies interaction between organisms
+created_by: rfoulger
+creation_date: 2011-04-21T01:31:51Z
+
+[Term]
 id: GO:0035825
 name: homologous recombination
 namespace: biological_process
@@ -9777,6 +10300,20 @@ is_a: GO:0007624 ! ultradian rhythm
 relationship: part_of GO:0030421 ! defecation
 created_by: rfoulger
 creation_date: 2011-06-06T11:36:35Z
+
+[Term]
+id: GO:0035915
+name: pore formation in membrane of other organism
+namespace: biological_process
+def: "The aggregation, arrangement and bonding together of a set of components by an organism to form a pore complex in a membrane of another organism." [GOC:bf, GOC:fj, PMID:21549739]
+synonym: "pore biosynthesis in other organism" EXACT [GOC:bf]
+synonym: "pore complex assembly in other organism" EXACT []
+synonym: "pore complex biogenesis in other organism" EXACT [GOC:bf]
+synonym: "pore formation in other organism" EXACT [GOC:bf]
+synonym: "pore-forming toxin activity" RELATED [GOC:bf]
+is_a: GO:0051673 ! membrane disruption in other organism
+created_by: rfoulger
+creation_date: 2011-07-01T11:45:01Z
 
 [Term]
 id: GO:0035966
@@ -9822,6 +10359,17 @@ subset: gocheck_do_not_manually_annotate
 is_a: GO:0042493 ! response to drug
 created_by: rfoulger
 creation_date: 2012-07-09T02:12:44Z
+
+[Term]
+id: GO:0036293
+name: response to decreased oxygen levels
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus reflecting a decline in the level of oxygen." [GOC:al]
+comment: This term should be used when a decrease in oxygen levels is not considered a stress response. For a hypoxic stress response, consider instead 'response to hypoxia ; GO:0001666'.
+synonym: "response to lowered oxygen levels" EXACT [GOC:bf]
+is_a: GO:0070482 ! response to oxygen levels
+created_by: rfoulger
+creation_date: 2012-07-20T01:05:46Z
 
 [Term]
 id: GO:0036379
@@ -9874,7 +10422,23 @@ creation_date: 2014-06-26T11:03:08Z
 
 [Term]
 id: GO:0038023
+name: signaling receptor activity
+namespace: molecular_function
 alt_id: GO:0004872
+alt_id: GO:0019041
+def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+synonym: "receptor activity" BROAD []
+synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
+is_a: GO:0060089 ! molecular transducer activity
+created_by: rfoulger
+creation_date: 2011-08-01T02:45:27Z
 
 [Term]
 id: GO:0038024
@@ -9891,6 +10455,27 @@ relationship: has_part GO:0060090 ! molecular adaptor activity
 relationship: part_of GO:0006897 ! endocytosis
 created_by: rfoulger
 creation_date: 2011-08-01T02:50:45Z
+
+[Term]
+id: GO:0040001
+name: establishment of mitotic spindle localization
+namespace: biological_process
+alt_id: GO:0018986
+alt_id: GO:0030605
+alt_id: GO:0030606
+alt_id: GO:0030608
+alt_id: GO:0030610
+def: "The cell cycle process in which the directed movement of the mitotic spindle to a specific location in the cell occurs." [GOC:ai]
+synonym: "establishment of mitotic spindle localisation" EXACT [GOC:mah]
+synonym: "mitotic spindle positioning" EXACT []
+synonym: "mitotic spindle positioning and orientation" NARROW []
+synonym: "mitotic spindle positioning or orientation" EXACT []
+synonym: "spindle positioning during mitosis" RELATED []
+synonym: "spindle positioning involved in mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0051293 ! establishment of spindle localization
+is_a: GO:1902850 ! microtubule cytoskeleton organization involved in mitosis
+intersection_of: GO:0051293 ! establishment of spindle localization
+intersection_of: part_of GO:0000278 ! mitotic cell cycle
 
 [Term]
 id: GO:0040002
@@ -10153,6 +10738,19 @@ synonym: "DNA endoreplication" EXACT []
 synonym: "DNA re-duplication" EXACT []
 is_a: GO:0044786 ! cell cycle DNA replication
 relationship: has_part GO:0006270 ! DNA replication initiation
+
+[Term]
+id: GO:0042048
+name: olfactory behavior
+namespace: biological_process
+def: "The behavior of an organism in response to an odor." [GOC:jid, GOC:pr]
+synonym: "behavioral response to scent" EXACT []
+synonym: "behavioral response to smell" EXACT []
+synonym: "behavioural response to odour" EXACT []
+synonym: "behavioural response to scent" EXACT []
+synonym: "behavioural response to smell" EXACT []
+synonym: "olfactory behaviour" EXACT []
+is_a: GO:0007635 ! chemosensory behavior
 
 [Term]
 id: GO:0042053
@@ -10641,6 +11239,16 @@ synonym: "regulation of homeostatic process" RELATED []
 is_a: GO:0065008 ! regulation of biological quality
 
 [Term]
+id: GO:0042594
+name: response to starvation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a starvation stimulus, deprivation of nourishment." [GOC:go_curators]
+subset: goslim_yeast
+xref: MIPS_funcat:32.01.11
+is_a: GO:0006950 ! response to stress
+is_a: GO:0031667 ! response to nutrient levels
+
+[Term]
 id: GO:0042645
 name: mitochondrial nucleoid
 namespace: cellular_component
@@ -11079,6 +11687,14 @@ synonym: "nuage" BROAD []
 synonym: "polar granule" EXACT []
 is_a: GO:0036464 ! cytoplasmic ribonucleoprotein granule
 relationship: part_of GO:0060293 ! germ plasm
+
+[Term]
+id: GO:0043207
+name: response to external biotic stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external biotic stimulus, an external stimulus caused by, or produced by living things." [GOC:go_curators]
+is_a: GO:0009605 ! response to external stimulus
+is_a: GO:0009607 ! response to biotic stimulus
 
 [Term]
 id: GO:0043226
@@ -11732,6 +12348,18 @@ synonym: "small molecule metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
 created_by: jane
 creation_date: 2010-01-26T12:05:20Z
+
+[Term]
+id: GO:0044419
+name: interspecies interaction between organisms
+namespace: biological_process
+def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+subset: goslim_candida
+subset: goslim_pir
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044420
@@ -12400,6 +13028,53 @@ synonym: "regulated secretory pathway" EXACT []
 is_a: GO:0006887 ! exocytosis
 
 [Term]
+id: GO:0045087
+name: innate immune response
+namespace: biological_process
+alt_id: GO:0002226
+def: "Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens." [GO_REF:0000022, GOC:add, GOC:ebc, GOC:mtg_15nov05, GOC:mtg_sensu]
+comment: This term was improved by GO_REF:0000022. It was moved.
+synonym: "innate immunity" EXACT [GOC:pg]
+synonym: "nonspecific immune response" EXACT []
+xref: MIPS_funcat:36.25.16.01
+xref: Wikipedia:Innate_immune_system
+is_a: GO:0006955 ! immune response
+is_a: GO:0098542 ! defense response to other organism
+
+[Term]
+id: GO:0045088
+name: regulation of innate immune response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the innate immune response, the organism's first line of defense against infection." [GOC:ebc]
+is_a: GO:0002831 ! regulation of response to biotic stimulus
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0032101 ! regulation of response to external stimulus
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0045087 ! innate immune response
+relationship: regulates GO:0045087 ! innate immune response
+
+[Term]
+id: GO:0045089
+name: positive regulation of innate immune response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the innate immune response, the organism's first line of defense against infection." [GOC:ebc]
+synonym: "stimulation of innate immune response" NARROW []
+synonym: "up regulation of innate immune response" EXACT []
+synonym: "up-regulation of innate immune response" EXACT []
+synonym: "upregulation of innate immune response" EXACT []
+is_a: GO:0002833 ! positive regulation of response to biotic stimulus
+is_a: GO:0031349 ! positive regulation of defense response
+is_a: GO:0032103 ! positive regulation of response to external stimulus
+is_a: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0045088 ! regulation of innate immune response
+is_a: GO:0050778 ! positive regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0045087 ! innate immune response
+relationship: positively_regulates GO:0045087 ! innate immune response
+
+[Term]
 id: GO:0045120
 name: pronucleus
 namespace: cellular_component
@@ -12903,6 +13578,25 @@ intersection_of: positively_regulates GO:0006897 ! endocytosis
 relationship: positively_regulates GO:0006897 ! endocytosis
 
 [Term]
+id: GO:0045824
+name: negative regulation of innate immune response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the innate immune response." [GOC:go_curators]
+synonym: "down regulation of innate immune response" EXACT []
+synonym: "down-regulation of innate immune response" EXACT []
+synonym: "downregulation of innate immune response" EXACT []
+synonym: "inhibition of innate immune response" NARROW []
+is_a: GO:0002832 ! negative regulation of response to biotic stimulus
+is_a: GO:0031348 ! negative regulation of defense response
+is_a: GO:0032102 ! negative regulation of response to external stimulus
+is_a: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0045088 ! regulation of innate immune response
+is_a: GO:0050777 ! negative regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0045087 ! innate immune response
+relationship: negatively_regulates GO:0045087 ! innate immune response
+
+[Term]
 id: GO:0045833
 name: negative regulation of lipid metabolic process
 namespace: biological_process
@@ -13310,6 +14004,37 @@ intersection_of: positively_regulates GO:0000278 ! mitotic cell cycle
 relationship: positively_regulates GO:0000278 ! mitotic cell cycle
 
 [Term]
+id: GO:0045932
+name: negative regulation of muscle contraction
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of muscle contraction." [GOC:go_curators]
+synonym: "down regulation of muscle contraction" EXACT []
+synonym: "down-regulation of muscle contraction" EXACT []
+synonym: "downregulation of muscle contraction" EXACT []
+synonym: "inhibition of muscle contraction" NARROW []
+is_a: GO:0006937 ! regulation of muscle contraction
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006936 ! muscle contraction
+relationship: negatively_regulates GO:0006936 ! muscle contraction
+
+[Term]
+id: GO:0045933
+name: positive regulation of muscle contraction
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of muscle contraction." [GOC:go_curators]
+synonym: "activation of muscle contraction" NARROW []
+synonym: "stimulation of muscle contraction" NARROW []
+synonym: "up regulation of muscle contraction" EXACT []
+synonym: "up-regulation of muscle contraction" EXACT []
+synonym: "upregulation of muscle contraction" EXACT []
+is_a: GO:0006937 ! regulation of muscle contraction
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006936 ! muscle contraction
+relationship: positively_regulates GO:0006936 ! muscle contraction
+
+[Term]
 id: GO:0045934
 name: negative regulation of nucleobase-containing compound metabolic process
 namespace: biological_process
@@ -13534,6 +14259,15 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0018991 ! oviposition
 relationship: regulates GO:0018991 ! oviposition
+
+[Term]
+id: GO:0046677
+name: response to antibiotic
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:ai, GOC:ef]
+subset: goslim_chembl
+synonym: "antibiotic susceptibility/resistance" RELATED []
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0046700
@@ -13859,6 +14593,71 @@ is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
 created_by: midori
 creation_date: 2010-09-13T04:51:59Z
+
+[Term]
+id: GO:0048024
+name: regulation of mRNA splicing, via spliceosome
+namespace: biological_process
+alt_id: GO:0035055
+def: "Any process that modulates the frequency, rate or extent of mRNA splicing via a spliceosomal mechanism." [GOC:jid]
+synonym: "regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "regulation of nuclear mRNA splicing, via spliceosome" EXACT [GOC:vw]
+synonym: "regulation of pre-mRNA splicing" BROAD []
+is_a: GO:0043484 ! regulation of RNA splicing
+is_a: GO:0050684 ! regulation of mRNA processing
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0000398 ! mRNA splicing, via spliceosome
+relationship: regulates GO:0000398 ! mRNA splicing, via spliceosome
+
+[Term]
+id: GO:0048025
+name: negative regulation of mRNA splicing, via spliceosome
+namespace: biological_process
+alt_id: GO:0035056
+def: "Any process that stops, prevents or reduces the rate or extent of mRNA splicing via a spliceosomal mechanism." [GOC:jid]
+synonym: "down regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "down regulation of nuclear mRNA splicing, via spliceosome" EXACT []
+synonym: "down-regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "down-regulation of nuclear mRNA splicing, via spliceosome" EXACT []
+synonym: "downregulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "downregulation of nuclear mRNA splicing, via spliceosome" EXACT []
+synonym: "inhibition of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "inhibition of nuclear mRNA splicing, via spliceosome" NARROW []
+synonym: "negative regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "negative regulation of nuclear mRNA splicing, via spliceosome" EXACT [GOC:vw]
+synonym: "negative regulation of pre-mRNA splicing" BROAD []
+is_a: GO:0033119 ! negative regulation of RNA splicing
+is_a: GO:0048024 ! regulation of mRNA splicing, via spliceosome
+is_a: GO:0050686 ! negative regulation of mRNA processing
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0000398 ! mRNA splicing, via spliceosome
+relationship: negatively_regulates GO:0000398 ! mRNA splicing, via spliceosome
+
+[Term]
+id: GO:0048026
+name: positive regulation of mRNA splicing, via spliceosome
+namespace: biological_process
+alt_id: GO:0035057
+def: "Any process that activates or increases the rate or extent of mRNA splicing via a spliceosomal mechanism." [GOC:jid]
+synonym: "activation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "activation of nuclear mRNA splicing, via spliceosome" NARROW []
+synonym: "positive regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "positive regulation of nuclear mRNA splicing, via spliceosome" EXACT [GOC:vw]
+synonym: "positive regulation of pre-mRNA splicing" BROAD []
+synonym: "stimulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "stimulation of nuclear mRNA splicing, via spliceosome" NARROW []
+synonym: "up regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "up regulation of nuclear mRNA splicing, via spliceosome" EXACT []
+synonym: "up-regulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "up-regulation of nuclear mRNA splicing, via spliceosome" EXACT []
+synonym: "upregulation of nuclear mRNA splicing via U2-type spliceosome" NARROW []
+synonym: "upregulation of nuclear mRNA splicing, via spliceosome" EXACT []
+is_a: GO:0033120 ! positive regulation of RNA splicing
+is_a: GO:0048024 ! regulation of mRNA splicing, via spliceosome
+is_a: GO:0050685 ! positive regulation of mRNA processing
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0000398 ! mRNA splicing, via spliceosome
+relationship: positively_regulates GO:0000398 ! mRNA splicing, via spliceosome
 
 [Term]
 id: GO:0048066
@@ -14677,6 +15476,16 @@ def: "The process whose specific outcome is the progression of a sensory system 
 is_a: GO:0048731 ! system development
 
 [Term]
+id: GO:0050000
+name: chromosome localization
+namespace: biological_process
+def: "Any process in which a chromosome is transported to, or maintained in, a specific location." [GOC:ai]
+synonym: "chromosome localisation" EXACT [GOC:mah]
+synonym: "establishment and maintenance of chromosome localization" EXACT []
+synonym: "establishment and maintenance of chromosome position" EXACT []
+is_a: GO:0051640 ! organelle localization
+
+[Term]
 id: GO:0050657
 name: nucleic acid transport
 namespace: biological_process
@@ -14691,6 +15500,50 @@ def: "The directed movement of RNA, ribonucleic acids, into, out of or within a 
 xref: MIPS_funcat:20.01.21
 is_a: GO:0050657 ! nucleic acid transport
 is_a: GO:0051236 ! establishment of RNA localization
+
+[Term]
+id: GO:0050684
+name: regulation of mRNA processing
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of mRNA processing, those processes involved in the conversion of a primary mRNA transcript into a mature mRNA prior to its translation into polypeptide." [GOC:ai]
+is_a: GO:0010468 ! regulation of gene expression
+is_a: GO:1903311 ! regulation of mRNA metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006397 ! mRNA processing
+relationship: regulates GO:0006397 ! mRNA processing
+
+[Term]
+id: GO:0050685
+name: positive regulation of mRNA processing
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of mRNA processing." [GOC:ai]
+synonym: "activation of mRNA processing" NARROW []
+synonym: "stimulation of mRNA processing" NARROW []
+synonym: "up regulation of mRNA processing" EXACT []
+synonym: "up-regulation of mRNA processing" EXACT []
+synonym: "upregulation of mRNA processing" EXACT []
+is_a: GO:0010628 ! positive regulation of gene expression
+is_a: GO:0050684 ! regulation of mRNA processing
+is_a: GO:1903313 ! positive regulation of mRNA metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006397 ! mRNA processing
+relationship: positively_regulates GO:0006397 ! mRNA processing
+
+[Term]
+id: GO:0050686
+name: negative regulation of mRNA processing
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of mRNA processing." [GOC:ai]
+synonym: "down regulation of mRNA processing" EXACT []
+synonym: "down-regulation of mRNA processing" EXACT []
+synonym: "downregulation of mRNA processing" EXACT []
+synonym: "inhibition of mRNA processing" NARROW []
+is_a: GO:0010629 ! negative regulation of gene expression
+is_a: GO:0050684 ! regulation of mRNA processing
+is_a: GO:1903312 ! negative regulation of mRNA metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006397 ! mRNA processing
+relationship: negatively_regulates GO:0006397 ! mRNA processing
 
 [Term]
 id: GO:0050708
@@ -14878,6 +15731,49 @@ is_a: GO:0010975 ! regulation of neuron projection development
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0016358 ! dendrite development
 relationship: regulates GO:0016358 ! dendrite development
+
+[Term]
+id: GO:0050776
+name: regulation of immune response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006955 ! immune response
+relationship: regulates GO:0006955 ! immune response
+
+[Term]
+id: GO:0050777
+name: negative regulation of immune response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+synonym: "down regulation of immune response" EXACT []
+synonym: "down-regulation of immune response" EXACT []
+synonym: "downregulation of immune response" EXACT []
+synonym: "inhibition of immune response" NARROW []
+is_a: GO:0002683 ! negative regulation of immune system process
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006955 ! immune response
+relationship: negatively_regulates GO:0006955 ! immune response
+
+[Term]
+id: GO:0050778
+name: positive regulation of immune response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+synonym: "stimulation of immune response" NARROW []
+synonym: "up regulation of immune response" EXACT []
+synonym: "up-regulation of immune response" EXACT []
+synonym: "upregulation of immune response" EXACT []
+is_a: GO:0002684 ! positive regulation of immune system process
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006955 ! immune response
+relationship: positively_regulates GO:0006955 ! immune response
 
 [Term]
 id: GO:0050789
@@ -15973,6 +16869,22 @@ intersection_of: negatively_regulates GO:0032501 ! multicellular organismal proc
 relationship: negatively_regulates GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0051245
+name: negative regulation of cellular defense response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the rate of the cellular defense response." [GOC:ai]
+synonym: "down regulation of cellular defense response" EXACT []
+synonym: "down-regulation of cellular defense response" EXACT []
+synonym: "downregulation of cellular defense response" EXACT []
+synonym: "inhibition of cellular defense response" NARROW []
+synonym: "negative regulation of cellular defence response" EXACT []
+is_a: GO:0010185 ! regulation of cellular defense response
+is_a: GO:0031348 ! negative regulation of defense response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006968 ! cellular defense response
+relationship: negatively_regulates GO:0006968 ! cellular defense response
+
+[Term]
 id: GO:0051246
 name: regulation of protein metabolic process
 namespace: biological_process
@@ -16172,6 +17084,56 @@ xref: MIPS_funcat:42.10.03
 is_a: GO:0006996 ! organelle organization
 
 [Term]
+id: GO:0051293
+name: establishment of spindle localization
+namespace: biological_process
+def: "The directed movement of the spindle to a specific location in the cell." [GOC:ai]
+synonym: "establishment of spindle localisation" EXACT [GOC:mah]
+synonym: "spindle positioning" EXACT []
+is_a: GO:0000226 ! microtubule cytoskeleton organization
+is_a: GO:0051649 ! establishment of localization in cell
+is_a: GO:0051653 ! spindle localization
+is_a: GO:0051656 ! establishment of organelle localization
+
+[Term]
+id: GO:0051294
+name: establishment of spindle orientation
+namespace: biological_process
+def: "Any process that set the alignment of spindle relative to other cellular structures." [GOC:ai]
+synonym: "orienting of spindle" EXACT []
+synonym: "spindle orientation" EXACT []
+is_a: GO:0051293 ! establishment of spindle localization
+relationship: part_of GO:0030010 ! establishment of cell polarity
+
+[Term]
+id: GO:0051295
+name: establishment of meiotic spindle localization
+namespace: biological_process
+def: "The cell cycle process in which the directed movement of the meiotic spindle to a specific location in the cell occurs." [GOC:ai]
+synonym: "establishment of meiotic spindle localisation" EXACT [GOC:mah]
+synonym: "meiotic spindle positioning" EXACT []
+synonym: "spindle positioning during meiosis" RELATED []
+synonym: "spindle positioning involved in meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0051293 ! establishment of spindle localization
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0051293 ! establishment of spindle localization
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0051296
+name: establishment of meiotic spindle orientation
+namespace: biological_process
+def: "Any process that set the alignment of meiotic spindle relative to other cellular structures." [GOC:ai]
+synonym: "establishment of spindle orientation during meiosis" RELATED []
+synonym: "establishment of spindle orientation involved in meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "meiotic spindle orientation" EXACT []
+synonym: "orienting of meiotic spindle" EXACT []
+is_a: GO:0051294 ! establishment of spindle orientation
+is_a: GO:0051295 ! establishment of meiotic spindle localization
+intersection_of: GO:0051294 ! establishment of spindle orientation
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+
+[Term]
 id: GO:0051301
 name: cell division
 namespace: biological_process
@@ -16192,6 +17154,17 @@ is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0051301 ! cell division
 relationship: regulates GO:0051301 ! cell division
+
+[Term]
+id: GO:0051303
+name: establishment of chromosome localization
+namespace: biological_process
+def: "The directed movement of a chromosome to a specific location." [GOC:ai]
+synonym: "chromosome positioning" EXACT []
+synonym: "establishment of chromosome localisation" EXACT [GOC:mah]
+is_a: GO:0050000 ! chromosome localization
+is_a: GO:0051649 ! establishment of localization in cell
+is_a: GO:0051656 ! establishment of organelle localization
 
 [Term]
 id: GO:0051304
@@ -16253,6 +17226,27 @@ is_a: GO:0016321 ! female meiosis chromosome segregation
 is_a: GO:0051307 ! meiotic chromosome separation
 intersection_of: GO:0051304 ! chromosome separation
 intersection_of: part_of GO:0007143 ! female meiotic nuclear division
+
+[Term]
+id: GO:0051310
+name: metaphase plate congression
+namespace: biological_process
+def: "The alignment of chromosomes at the metaphase plate (spindle equator), a plane halfway between the poles of the spindle." [GOC:ai]
+synonym: "chromosome congression" EXACT [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0051303 ! establishment of chromosome localization
+relationship: part_of GO:0098813 ! nuclear chromosome segregation
+
+[Term]
+id: GO:0051311
+name: meiotic metaphase plate congression
+namespace: biological_process
+def: "The cell cycle process in which chromosomes are aligned at the metaphase plate, a plane halfway between the poles of the meiotic spindle, during meiosis." [GOC:ai]
+synonym: "metaphase plate congression during meiosis" EXACT []
+is_a: GO:0051310 ! metaphase plate congression
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0051310 ! metaphase plate congression
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+relationship: part_of GO:0045132 ! meiotic chromosome segregation
 
 [Term]
 id: GO:0051318
@@ -16775,6 +17769,16 @@ is_a: GO:0051235 ! maintenance of location
 relationship: part_of GO:0051641 ! cellular localization
 
 [Term]
+id: GO:0051653
+name: spindle localization
+namespace: biological_process
+def: "Any process in which is the spindle is transported to, and/or maintained in, a specific location." [GOC:ai]
+synonym: "establishment and maintenance of spindle localization" EXACT []
+synonym: "spindle localisation" EXACT [GOC:mah]
+is_a: GO:0022402 ! cell cycle process
+is_a: GO:0051640 ! organelle localization
+
+[Term]
 id: GO:0051656
 name: establishment of organelle localization
 namespace: biological_process
@@ -16797,6 +17801,15 @@ is_a: GO:0051641 ! cellular localization
 intersection_of: GO:0051179 ! localization
 intersection_of: occurs_in GO:0016020 ! membrane
 relationship: occurs_in GO:0016020 ! membrane
+
+[Term]
+id: GO:0051673
+name: membrane disruption in other organism
+namespace: biological_process
+def: "The disruption of the membranes of another organism, leading to damage to its cells and possibly death of that organism." [GOC:ai]
+synonym: "cytolysis, by membrane disruption, in other organism" NARROW []
+synonym: "membrane disruption in another organism" EXACT [GOC:bf]
+is_a: GO:0035821 ! modification of morphology or physiology of other organism
 
 [Term]
 id: GO:0051674
@@ -16846,6 +17859,16 @@ synonym: "behavioral signalling" NARROW [GOC:mah]
 synonym: "behavioural interaction between organisms" EXACT []
 synonym: "behavioural interaction with other organism" EXACT []
 is_a: GO:0007610 ! behavior
+is_a: GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0051707
+name: response to other organism
+namespace: biological_process
+alt_id: GO:0009613
+alt_id: GO:0042828
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from another living organism." [GOC:ai]
+is_a: GO:0043207 ! response to external biotic stimulus
 is_a: GO:0051704 ! multi-organism process
 
 [Term]
@@ -17240,6 +18263,15 @@ name: digestive system development
 namespace: biological_process
 def: "The process whose specific outcome is the progression of the digestive system over time, from its formation to the mature structure. The digestive system is the entire structure in which digestion takes place. Digestion is all of the physical, chemical, and biochemical processes carried out by multicellular organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:jid]
 is_a: GO:0048731 ! system development
+
+[Term]
+id: GO:0060089
+name: molecular transducer activity
+namespace: molecular_function
+def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
+subset: gocheck_do_not_manually_annotate
+subset: goslim_pir
+is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0060090
@@ -17871,6 +18903,16 @@ created_by: dph
 creation_date: 2009-10-05T03:26:19Z
 
 [Term]
+id: GO:0060992
+name: response to fungicide
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a fungicide stimulus. Fungicides are chemicals used to kill fungi." [GOC:dph]
+is_a: GO:0009636 ! response to toxic substance
+is_a: GO:0046677 ! response to antibiotic
+created_by: dph
+creation_date: 2010-01-13T08:05:58Z
+
+[Term]
 id: GO:0061013
 name: regulation of mRNA catabolic process
 namespace: biological_process
@@ -18399,6 +19441,13 @@ is_a: GO:0030133 ! transport vesicle
 is_a: GO:0099503 ! secretory vesicle
 
 [Term]
+id: GO:0070482
+name: response to oxygen levels
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus reflecting the presence, absence, or concentration of oxygen." [GOC:BHF, GOC:mah]
+is_a: GO:0009628 ! response to abiotic stimulus
+
+[Term]
 id: GO:0070507
 name: regulation of microtubule cytoskeleton organization
 namespace: biological_process
@@ -18494,6 +19543,57 @@ synonym: "neuronal cell death" EXACT [GOC:mah]
 is_a: GO:0008219 ! cell death
 created_by: midori
 creation_date: 2009-11-03T02:37:17Z
+
+[Term]
+id: GO:0071025
+name: RNA surveillance
+namespace: biological_process
+def: "The set of processes involved in identifying and degrading defective or aberrant RNAs." [GOC:dgf, GOC:krc, PMID:18644474]
+synonym: "aberrant RNA catabolic process" EXACT [GOC:dgf, GOC:krc]
+synonym: "RNA quality control" EXACT [GOC:dgf, GOC:krc]
+is_a: GO:0006401 ! RNA catabolic process
+created_by: kchris
+creation_date: 2009-07-28T03:10:28Z
+
+[Term]
+id: GO:0071026
+name: cytoplasmic RNA surveillance
+namespace: biological_process
+def: "The set of processes involved in identifying and degrading defective or aberrant RNAs within the cytoplasm." [GOC:dgf, GOC:krc, PMID:18644474]
+synonym: "cytoplasmic aberrant RNA catabolic process" EXACT [GOC:dgf, GOC:krc]
+synonym: "cytoplasmic RNA quality control" EXACT [GOC:dgf, GOC:krc]
+is_a: GO:0071025 ! RNA surveillance
+intersection_of: GO:0071025 ! RNA surveillance
+intersection_of: occurs_in GO:0005737 ! cytoplasm
+relationship: occurs_in GO:0005737 ! cytoplasm
+created_by: kchris
+creation_date: 2009-07-28T03:14:03Z
+
+[Term]
+id: GO:0071027
+name: nuclear RNA surveillance
+namespace: biological_process
+def: "The set of processes involved in identifying and degrading defective or aberrant RNAs within the nucleus." [GOC:dgf, GOC:krc, PMID:18644474]
+synonym: "nuclear aberrant RNA catabolic process" EXACT [GOC:dgf, GOC:krc]
+synonym: "nuclear RNA quality control" EXACT [GOC:dgf, GOC:krc]
+is_a: GO:0071025 ! RNA surveillance
+intersection_of: GO:0071025 ! RNA surveillance
+intersection_of: occurs_in GO:0005634 ! nucleus
+relationship: occurs_in GO:0005634 ! nucleus
+created_by: kchris
+creation_date: 2009-07-28T03:45:02Z
+
+[Term]
+id: GO:0071028
+name: nuclear mRNA surveillance
+namespace: biological_process
+def: "The set of processes involved in identifying and degrading defective or aberrant mRNAs within the nucleus." [GOC:dgf, GOC:krc, PMID:18644474]
+synonym: "nuclear aberrant mRNA catabolic process" EXACT [GOC:dgf, GOC:krc]
+synonym: "nuclear mRNA quality control" EXACT [GOC:dgf, GOC:krc]
+is_a: GO:0000956 ! nuclear-transcribed mRNA catabolic process
+is_a: GO:0071027 ! nuclear RNA surveillance
+created_by: kchris
+creation_date: 2009-07-28T04:14:29Z
 
 [Term]
 id: GO:0071103
@@ -19109,6 +20209,15 @@ created_by: midori
 creation_date: 2011-02-14T02:56:57Z
 
 [Term]
+id: GO:0072687
+name: meiotic spindle
+namespace: cellular_component
+def: "A spindle that forms as part of meiosis. Several proteins, such as budding yeast Spo21p, fission yeast Spo2 and Spo13, and C. elegans mei-1, localize specifically to the meiotic spindle and are absent from the mitotic spindle." [GOC:mah, GOC:vw, PMID:11408572, PMID:18367542, PMID:8027178]
+is_a: GO:0005819 ! spindle
+created_by: midori
+creation_date: 2011-07-08T05:17:08Z
+
+[Term]
 id: GO:0072691
 name: initiation of premeiotic DNA replication
 namespace: biological_process
@@ -19123,6 +20232,19 @@ intersection_of: part_of GO:0006279 ! premeiotic DNA replication
 relationship: part_of GO:0006279 ! premeiotic DNA replication
 created_by: midori
 creation_date: 2011-08-19T03:16:20Z
+
+[Term]
+id: GO:0072710
+name: response to hydroxyurea
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a hydroxyurea stimulus." [CHEBI:44423, GOC:mah]
+synonym: "response to HU" EXACT [GOC:mah]
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:0097327 ! response to antineoplastic agent
+is_a: GO:0097329 ! response to antimetabolite
+is_a: GO:1901698 ! response to nitrogen compound
+created_by: midori
+creation_date: 2012-04-11T04:15:42Z
 
 [Term]
 id: GO:0080090
@@ -19368,6 +20490,33 @@ intersection_of: negatively_regulates GO:0031577 ! spindle checkpoint
 relationship: negatively_regulates GO:0031577 ! spindle checkpoint
 created_by: tanyaberardini
 creation_date: 2010-01-20T10:29:43Z
+
+[Term]
+id: GO:0090235
+name: regulation of metaphase plate congression
+namespace: biological_process
+def: "Any process that modulates the rate, frequency, or extent of metaphase plate congression, the alignment of chromosomes at the metaphase plate, a plane halfway between the poles of the spindle." [GOC:ascb_2009, GOC:dph, GOC:tb]
+synonym: "regulation of chromosome congression" EXACT [GOC:ascb_2009, GOC:dph, GOC:tb]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0051983 ! regulation of chromosome segregation
+is_a: GO:0060341 ! regulation of cellular localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0051310 ! metaphase plate congression
+relationship: regulates GO:0051310 ! metaphase plate congression
+created_by: tanyaberardini
+creation_date: 2010-01-20T11:05:55Z
+
+[Term]
+id: GO:0090257
+name: regulation of muscle system process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a muscle system process, a multicellular organismal process carried out by any of the organs or tissues in a muscle system." [GOC:dph, GOC:tb]
+is_a: GO:0044057 ! regulation of system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0003012 ! muscle system process
+relationship: regulates GO:0003012 ! muscle system process
+created_by: tanyaberardini
+creation_date: 2010-02-03T11:48:13Z
 
 [Term]
 id: GO:0090266
@@ -19616,6 +20765,29 @@ created_by: tanyaberardini
 creation_date: 2014-06-06T13:54:36Z
 
 [Term]
+id: GO:0090615
+name: mitochondrial mRNA processing
+namespace: biological_process
+def: "Steps involved in processing precursor RNAs arising from transcription of operons in the mitochondrial genome into mature mRNAs." [GOC:tb, PMID:25181358]
+is_a: GO:0000963 ! mitochondrial RNA processing
+is_a: GO:0006397 ! mRNA processing
+intersection_of: GO:0006397 ! mRNA processing
+intersection_of: occurs_in GO:0005739 ! mitochondrion
+created_by: tanyaberardini
+creation_date: 2014-10-24T12:43:27Z
+
+[Term]
+id: GO:0090664
+name: response to high population density
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or a multicellular organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a higher than normal number of multicellular organisms living per unit area." [GOC:mr, PMID:26439857]
+synonym: "response to crowding" EXACT [GOC:mr]
+is_a: GO:0006950 ! response to stress
+is_a: GO:0032501 ! multicellular organismal process
+created_by: tanyaberardini
+creation_date: 2015-10-21T16:00:30Z
+
+[Term]
 id: GO:0097014
 name: ciliary plasm
 namespace: cellular_component
@@ -19648,6 +20820,18 @@ intersection_of: GO:0098590 ! plasma membrane region
 intersection_of: part_of GO:0045202 ! synapse
 created_by: paola
 creation_date: 2011-06-07T11:22:09Z
+
+[Term]
+id: GO:0097091
+name: synaptic vesicle clustering
+namespace: biological_process
+def: "The process that results in grouping synaptic vesicles in presynaptic structures." [GOC:ans, GOC:pr, PMID:19900895, PMID:7568108]
+comment: Updated definition as requested by SynGO group, see https://github.com/geneontology/synapse/issues/163.
+subset: goslim_synapse
+is_a: GO:0097479 ! synaptic vesicle localization
+relationship: part_of GO:0099504 ! synaptic vesicle cycle
+created_by: paola
+creation_date: 2011-07-04T01:48:24Z
 
 [Term]
 id: GO:0097159
@@ -19699,6 +20883,24 @@ is_a: GO:0035556 ! intracellular signal transduction
 is_a: GO:0097190 ! apoptotic signaling pathway
 created_by: paola
 creation_date: 2011-11-23T09:40:50Z
+
+[Term]
+id: GO:0097327
+name: response to antineoplastic agent
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antineoplastic agent stimulus. An antineoplastic agent is a substance that inhibits or prevents the proliferation of neoplasms." [CHEBI:35610, GOC:pr]
+is_a: GO:0042493 ! response to drug
+created_by: paola
+creation_date: 2012-06-12T10:48:28Z
+
+[Term]
+id: GO:0097329
+name: response to antimetabolite
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antimetabolite stimulus. An antimetabolite is a substance which is structurally similar to a metabolite but which competes with it or replaces it, and so prevents or reduces its normal utilization." [CHEBI:35221, GOC:pr]
+is_a: GO:0042221 ! response to chemical
+created_by: paola
+creation_date: 2012-06-12T10:52:01Z
 
 [Term]
 id: GO:0097435
@@ -19776,6 +20978,16 @@ intersection_of: GO:0031982 ! vesicle
 intersection_of: part_of GO:0005622 ! intracellular
 created_by: paola
 creation_date: 2016-03-29T17:39:45Z
+
+[Term]
+id: GO:0098542
+name: defense response to other organism
+namespace: biological_process
+def: "Reactions triggered in response to the presence of another organism that act to protect the cell or organism from damage caused by that organism." [GOC:dos]
+is_a: GO:0006952 ! defense response
+is_a: GO:0051707 ! response to other organism
+created_by: davidos
+creation_date: 2013-11-11T12:59:11Z
 
 [Term]
 id: GO:0098590
@@ -21052,6 +22264,55 @@ created_by: bf
 creation_date: 2012-03-12T01:23:52Z
 
 [Term]
+id: GO:1900193
+name: regulation of oocyte maturation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of oocyte maturation." [GOC:kmv, GOC:TermGenie]
+is_a: GO:0060281 ! regulation of oocyte development
+is_a: GO:1903429 ! regulation of cell maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0001556 ! oocyte maturation
+relationship: regulates GO:0001556 ! oocyte maturation
+created_by: kmv
+creation_date: 2012-03-19T09:41:18Z
+
+[Term]
+id: GO:1900194
+name: negative regulation of oocyte maturation
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of oocyte maturation." [GOC:kmv, GOC:TermGenie]
+synonym: "down regulation of oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "down-regulation of oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "downregulation of oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "inhibition of oocyte maturation" NARROW [GOC:TermGenie]
+is_a: GO:0060283 ! negative regulation of oocyte development
+is_a: GO:1900193 ! regulation of oocyte maturation
+is_a: GO:1903430 ! negative regulation of cell maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0001556 ! oocyte maturation
+relationship: negatively_regulates GO:0001556 ! oocyte maturation
+created_by: kmv
+creation_date: 2012-03-19T09:41:27Z
+
+[Term]
+id: GO:1900195
+name: positive regulation of oocyte maturation
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of oocyte maturation." [GOC:kmv, GOC:TermGenie]
+synonym: "activation of oocyte maturation" NARROW [GOC:TermGenie]
+synonym: "up regulation of oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "up-regulation of oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "upregulation of oocyte maturation" EXACT [GOC:TermGenie]
+is_a: GO:0060282 ! positive regulation of oocyte development
+is_a: GO:1900193 ! regulation of oocyte maturation
+is_a: GO:1903431 ! positive regulation of cell maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0001556 ! oocyte maturation
+relationship: positively_regulates GO:0001556 ! oocyte maturation
+created_by: kmv
+creation_date: 2012-03-19T09:41:35Z
+
+[Term]
 id: GO:1900242
 name: regulation of synaptic vesicle endocytosis
 namespace: biological_process
@@ -21275,6 +22536,118 @@ intersection_of: GO:0019722 ! calcium-mediated signaling
 intersection_of: positively_regulates GO:0006366 ! transcription by RNA polymerase II
 created_by: bf
 creation_date: 2012-05-18T01:01:04Z
+
+[Term]
+id: GO:1901031
+name: regulation of response to reactive oxygen species
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of response to reactive oxygen species." [GOC:kmv, GOC:TermGenie]
+synonym: "regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "regulation of response to ROS" EXACT [GOC:TermGenie]
+is_a: GO:1902882 ! regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0000302 ! response to reactive oxygen species
+relationship: regulates GO:0000302 ! response to reactive oxygen species
+created_by: kmv
+creation_date: 2012-06-20T07:47:06Z
+
+[Term]
+id: GO:1901032
+name: negative regulation of response to reactive oxygen species
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to reactive oxygen species." [GOC:kmv, GOC:TermGenie]
+synonym: "down regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to AOS" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to reactive oxygen species" NARROW [GOC:TermGenie]
+synonym: "inhibition of response to ROI" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to ROS" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "negative regulation of response to ROS" EXACT [GOC:TermGenie]
+is_a: GO:1901031 ! regulation of response to reactive oxygen species
+is_a: GO:1902883 ! negative regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0000302 ! response to reactive oxygen species
+relationship: negatively_regulates GO:0000302 ! response to reactive oxygen species
+created_by: kmv
+creation_date: 2012-06-20T07:47:28Z
+
+[Term]
+id: GO:1901033
+name: positive regulation of response to reactive oxygen species
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of response to reactive oxygen species." [GOC:kmv, GOC:TermGenie]
+synonym: "activation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "activation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "activation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "activation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "activation of response to reactive oxygen species" NARROW [GOC:TermGenie]
+synonym: "activation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "activation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to ROS" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to active oxygen species" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to AOS" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to reactive oxidative species" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to reactive oxygen intermediate" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to reactive oxygen species" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to ROI" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to ROS" EXACT [GOC:TermGenie]
+is_a: GO:1901031 ! regulation of response to reactive oxygen species
+is_a: GO:1902884 ! positive regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0000302 ! response to reactive oxygen species
+relationship: positively_regulates GO:0000302 ! response to reactive oxygen species
+created_by: kmv
+creation_date: 2012-06-20T07:47:35Z
 
 [Term]
 id: GO:1901045
@@ -21582,6 +22955,40 @@ created_by: al
 creation_date: 2012-10-19T08:25:05Z
 
 [Term]
+id: GO:1901530
+name: response to hypochlorite
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a hypochlorite stimulus." [GOC:pr, GOC:TermGenie, PMID:22223481]
+is_a: GO:0000302 ! response to reactive oxygen species
+is_a: GO:0001101 ! response to acid chemical
+is_a: GO:0010035 ! response to inorganic substance
+created_by: pr
+creation_date: 2012-10-24T07:12:21Z
+
+[Term]
+id: GO:1901561
+name: response to benomyl
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a benomyl stimulus." [GOC:TermGenie]
+is_a: GO:0010243 ! response to organonitrogen compound
+is_a: GO:0014070 ! response to organic cyclic compound
+is_a: GO:0042493 ! response to drug
+is_a: GO:0060992 ! response to fungicide
+is_a: GO:1901700 ! response to oxygen-containing compound
+created_by: mah
+creation_date: 2012-11-02T15:32:33Z
+
+[Term]
+id: GO:1901562
+name: response to paraquat
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a paraquat stimulus." [GOC:TermGenie]
+is_a: GO:0009635 ! response to herbicide
+is_a: GO:0010033 ! response to organic substance
+created_by: mah
+creation_date: 2012-11-02T15:32:41Z
+
+[Term]
 id: GO:1901564
 name: organonitrogen compound metabolic process
 namespace: biological_process
@@ -21765,6 +23172,26 @@ intersection_of: regulates GO:0090307 ! mitotic spindle assembly
 relationship: regulates GO:0090307 ! mitotic spindle assembly
 created_by: al
 creation_date: 2012-11-22T09:50:00Z
+
+[Term]
+id: GO:1901698
+name: response to nitrogen compound
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nitrogen compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "response to nitrogen molecular entity" EXACT []
+is_a: GO:0042221 ! response to chemical
+created_by: pr
+creation_date: 2012-12-13T15:06:08Z
+
+[Term]
+id: GO:1901700
+name: response to oxygen-containing compound
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an oxygen-containing compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "response to oxygen molecular entity" EXACT []
+is_a: GO:0042221 ! response to chemical
+created_by: pr
+creation_date: 2012-12-13T15:11:37Z
 
 [Term]
 id: GO:1901858
@@ -23068,6 +24495,43 @@ created_by: mah
 creation_date: 2013-12-17T14:03:02Z
 
 [Term]
+id: GO:1902584
+name: positive regulation of response to water deprivation
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of response to water deprivation." [GO_REF:0000058, GOC:TermGenie, PMID:24198318]
+synonym: "activation of drought tolerance" RELATED [GOC:TermGenie]
+synonym: "activation of response to dehydration" NARROW [GOC:TermGenie]
+synonym: "activation of response to drought" NARROW [GOC:TermGenie]
+synonym: "activation of response to thirst" NARROW [GOC:TermGenie]
+synonym: "activation of response to water deprivation" NARROW [GOC:TermGenie]
+synonym: "positive regulation of drought tolerance" RELATED [GOC:TermGenie]
+synonym: "positive regulation of response to dehydration" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to drought" EXACT [GOC:TermGenie]
+synonym: "positive regulation of response to thirst" EXACT [GOC:TermGenie]
+synonym: "up regulation of drought tolerance" RELATED [GOC:TermGenie]
+synonym: "up regulation of response to dehydration" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to drought" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to thirst" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to water deprivation" EXACT [GOC:TermGenie]
+synonym: "up-regulation of drought tolerance" RELATED [GOC:TermGenie]
+synonym: "up-regulation of response to dehydration" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to drought" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to thirst" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to water deprivation" EXACT [GOC:TermGenie]
+synonym: "upregulation of drought tolerance" RELATED [GOC:TermGenie]
+synonym: "upregulation of response to dehydration" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to drought" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to thirst" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to water deprivation" EXACT [GOC:TermGenie]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:2000070 ! regulation of response to water deprivation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0009414 ! response to water deprivation
+relationship: positively_regulates GO:0009414 ! response to water deprivation
+created_by: tb
+creation_date: 2013-12-19T00:31:58Z
+
+[Term]
 id: GO:1902667
 name: regulation of axon guidance
 namespace: biological_process
@@ -23654,6 +25118,63 @@ is_a: GO:0006996 ! organelle organization
 is_a: GO:0022411 ! cellular component disassembly
 created_by: jl
 creation_date: 2014-05-13T12:36:03Z
+
+[Term]
+id: GO:1903034
+name: regulation of response to wounding
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of response to wounding." [GO_REF:0000058, GOC:kmv, GOC:TermGenie, pmid:19164535]
+synonym: "regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0009611 ! response to wounding
+relationship: regulates GO:0009611 ! response to wounding
+created_by: kmv
+creation_date: 2014-05-18T01:28:46Z
+
+[Term]
+id: GO:1903035
+name: negative regulation of response to wounding
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to wounding." [GO_REF:0000058, GOC:kmv, GOC:TermGenie, pmid:19164535]
+synonym: "down regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to wounding" EXACT [GOC:TermGenie]
+synonym: "down-regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to wounding" EXACT [GOC:TermGenie]
+synonym: "downregulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to wounding" EXACT [GOC:TermGenie]
+synonym: "inhibition of physiological response to wounding" NARROW [GOC:TermGenie]
+synonym: "inhibition of response to wounding" NARROW [GOC:TermGenie]
+synonym: "negative regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:1903034 ! regulation of response to wounding
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0009611 ! response to wounding
+relationship: negatively_regulates GO:0009611 ! response to wounding
+created_by: kmv
+creation_date: 2014-05-18T01:28:52Z
+
+[Term]
+id: GO:1903036
+name: positive regulation of response to wounding
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of response to wounding." [GO_REF:0000058, GOC:kmv, GOC:TermGenie, pmid:19164535]
+synonym: "activation of physiological response to wounding" NARROW [GOC:TermGenie]
+synonym: "activation of response to wounding" NARROW [GOC:TermGenie]
+synonym: "positive regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "up regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to wounding" EXACT [GOC:TermGenie]
+synonym: "up-regulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to wounding" EXACT [GOC:TermGenie]
+synonym: "upregulation of physiological response to wounding" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to wounding" EXACT [GOC:TermGenie]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:1903034 ! regulation of response to wounding
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0009611 ! response to wounding
+relationship: positively_regulates GO:0009611 ! response to wounding
+created_by: kmv
+creation_date: 2014-05-18T01:28:58Z
 
 [Term]
 id: GO:1903046
@@ -24622,6 +26143,35 @@ created_by: pm
 creation_date: 2014-10-08T13:25:17Z
 
 [Term]
+id: GO:1903537
+name: meiotic cell cycle process involved in oocyte maturation
+namespace: biological_process
+def: "Any meiotic cell cycle process that is involved in oocyte maturation." [GO_REF:0000060, GOC:jz, GOC:TermGenie, PMID:25212395]
+synonym: "meiosis involved in oocyte maturation" BROAD []
+is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:1903046 ! meiotic cell cycle process
+intersection_of: part_of GO:0001556 ! oocyte maturation
+relationship: part_of GO:0001556 ! oocyte maturation
+created_by: pr
+creation_date: 2014-10-09T10:46:14Z
+
+[Term]
+id: GO:1903538
+name: regulation of meiotic cell cycle process involved in oocyte maturation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of meiotic cell cycle process involved in oocyte maturation." [GO_REF:0000058, GOC:jz, GOC:TermGenie, PMID:25212395]
+synonym: "regulation of meiosis involved in oocyte maturation" BROAD [GOC:TermGenie]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+is_a: GO:1900193 ! regulation of oocyte maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+relationship: regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+created_by: pr
+creation_date: 2014-10-09T10:52:38Z
+
+[Term]
 id: GO:1903561
 name: extracellular vesicle
 namespace: cellular_component
@@ -24998,6 +26548,44 @@ created_by: sl
 creation_date: 2015-04-06T18:13:14Z
 
 [Term]
+id: GO:1904145
+name: negative regulation of meiotic cell cycle process involved in oocyte maturation
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of meiotic cell cycle process involved in oocyte maturation." [GO_REF:0000058, GOC:TermGenie, PMID:22674394]
+synonym: "down regulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "down-regulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "downregulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "inhibition of meiotic cell cycle process involved in oocyte maturation" NARROW [GOC:TermGenie]
+is_a: GO:0010948 ! negative regulation of cell cycle process
+is_a: GO:0051447 ! negative regulation of meiotic cell cycle
+is_a: GO:1900194 ! negative regulation of oocyte maturation
+is_a: GO:1903538 ! regulation of meiotic cell cycle process involved in oocyte maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+relationship: negatively_regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+created_by: tb
+creation_date: 2015-04-14T15:59:22Z
+
+[Term]
+id: GO:1904146
+name: positive regulation of meiotic cell cycle process involved in oocyte maturation
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of meiotic cell cycle process involved in oocyte maturation." [GO_REF:0000058, GOC:TermGenie, PMID:22674394]
+synonym: "activation of meiotic cell cycle process involved in oocyte maturation" NARROW [GOC:TermGenie]
+synonym: "up regulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "up-regulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+synonym: "upregulation of meiotic cell cycle process involved in oocyte maturation" EXACT [GOC:TermGenie]
+is_a: GO:0051446 ! positive regulation of meiotic cell cycle
+is_a: GO:0090068 ! positive regulation of cell cycle process
+is_a: GO:1900195 ! positive regulation of oocyte maturation
+is_a: GO:1903538 ! regulation of meiotic cell cycle process involved in oocyte maturation
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+relationship: positively_regulates GO:1903537 ! meiotic cell cycle process involved in oocyte maturation
+created_by: tb
+creation_date: 2015-04-14T15:59:28Z
+
+[Term]
 id: GO:1904289
 name: regulation of mitotic DNA damage checkpoint
 namespace: biological_process
@@ -25349,6 +26937,15 @@ intersection_of: positively_regulates GO:0072691 ! initiation of premeiotic DNA 
 relationship: positively_regulates GO:0072691 ! initiation of premeiotic DNA replication
 created_by: mah
 creation_date: 2015-07-28T12:59:29Z
+
+[Term]
+id: GO:1904576
+name: response to tunicamycin
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a tunicamycin stimulus." [GO_REF:0000071, GOC:TermGenie, PMID:23106379]
+is_a: GO:0046677 ! response to antibiotic
+created_by: sl
+creation_date: 2015-08-19T18:01:52Z
 
 [Term]
 id: GO:1904739
@@ -27313,6 +28910,18 @@ created_by: pr
 creation_date: 2013-07-08T08:40:45Z
 
 [Term]
+id: GO:1990574
+name: meiotic spindle astral microtubule
+namespace: cellular_component
+def: "Any of the meiotic spindle microtubules that radiate in all directions from the spindle poles and are thought to contribute to the forces that separate the poles and position them in relation to the rest of the cell." [PMID:10366596]
+is_a: GO:0000235 ! astral microtubule
+intersection_of: GO:0000235 ! astral microtubule
+intersection_of: part_of GO:0072687 ! meiotic spindle
+relationship: part_of GO:0072687 ! meiotic spindle
+created_by: vw
+creation_date: 2014-12-04T09:55:09Z
+
+[Term]
 id: GO:1990613
 name: mitochondrial membrane fusion
 namespace: biological_process
@@ -27323,6 +28932,16 @@ intersection_of: GO:0061025 ! membrane fusion
 intersection_of: occurs_in GO:0005739 ! mitochondrion
 created_by: vw
 creation_date: 2015-01-21T06:58:18Z
+
+[Term]
+id: GO:1990840
+name: response to lectin
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lectin stimulus. A lectin is a carbohydrate-binding protein, highly specific for binding sugar moieties." [PMID:25996210, PMID:26306444]
+comment: This term refers to endogenous (evolved) responses to lectins (endogenous or exogenous), it does not cover the events that happen due to lectin toxicity.
+is_a: GO:0009607 ! response to biotic stimulus
+created_by: sl
+creation_date: 2015-08-27T20:02:21Z
 
 [Term]
 id: GO:1990904
@@ -27472,6 +29091,22 @@ created_by: tanyaberardini
 creation_date: 2010-08-19T09:10:56Z
 
 [Term]
+id: GO:2000070
+name: regulation of response to water deprivation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of response to water deprivation." [GOC:obol]
+synonym: "regulation of drought tolerance" RELATED [GOC:obol]
+synonym: "regulation of response to dehydration" EXACT [GOC:obol]
+synonym: "regulation of response to drought" EXACT [GOC:obol]
+synonym: "regulation of response to thirst" EXACT [GOC:obol]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0009414 ! response to water deprivation
+relationship: regulates GO:0009414 ! response to water deprivation
+created_by: tanyaberardini
+creation_date: 2010-08-23T11:32:32Z
+
+[Term]
 id: GO:2000104
 name: negative regulation of DNA-dependent DNA replication
 namespace: biological_process
@@ -27533,6 +29168,20 @@ intersection_of: negatively_regulates GO:0034645 ! cellular macromolecule biosyn
 relationship: negatively_regulates GO:0034645 ! cellular macromolecule biosynthetic process
 created_by: tanyaberardini
 creation_date: 2010-09-15T08:55:48Z
+
+[Term]
+id: GO:2000114
+name: regulation of establishment of cell polarity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of establishment of cell polarity." [GOC:dph]
+synonym: "regulation of bud site selection/establishment of cell polarity" RELATED [GOC:obol]
+synonym: "regulation of cell polarization" EXACT [GOC:obol]
+is_a: GO:0032878 ! regulation of establishment or maintenance of cell polarity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0030010 ! establishment of cell polarity
+relationship: regulates GO:0030010 ! establishment of cell polarity
+created_by: dph
+creation_date: 2010-09-16T01:22:36Z
 
 [Term]
 id: GO:2000134
@@ -27778,6 +29427,33 @@ intersection_of: positively_regulates GO:0007631 ! feeding behavior
 relationship: positively_regulates GO:0007631 ! feeding behavior
 created_by: yaf
 creation_date: 2010-11-18T11:24:18Z
+
+[Term]
+id: GO:2000272
+name: negative regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity." [GOC:obol]
+synonym: "negative regulation of receptor activity" BROAD []
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044092 ! negative regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
+relationship: negatively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:47Z
+
+[Term]
+id: GO:2000273
+name: positive regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044093 ! positive regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
+relationship: positively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:50Z
 
 [Term]
 id: GO:2000278
@@ -28190,6 +29866,44 @@ created_by: rfoulger
 creation_date: 2011-07-01T03:45:12Z
 
 [Term]
+id: GO:2000807
+name: regulation of synaptic vesicle clustering
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of synaptic vesicle clustering." [PMID:21513708]
+is_a: GO:0098693 ! regulation of synaptic vesicle cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0097091 ! synaptic vesicle clustering
+relationship: regulates GO:0097091 ! synaptic vesicle clustering
+created_by: pr
+creation_date: 2011-07-06T09:50:30Z
+
+[Term]
+id: GO:2000808
+name: negative regulation of synaptic vesicle clustering
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of synaptic vesicle clustering." [PMID:21513708]
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:2000807 ! regulation of synaptic vesicle clustering
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0097091 ! synaptic vesicle clustering
+relationship: negatively_regulates GO:0097091 ! synaptic vesicle clustering
+created_by: pr
+creation_date: 2011-07-06T09:50:34Z
+
+[Term]
+id: GO:2000809
+name: positive regulation of synaptic vesicle clustering
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of synaptic vesicle clustering." [PMID:21513708]
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:2000807 ! regulation of synaptic vesicle clustering
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0097091 ! synaptic vesicle clustering
+relationship: positively_regulates GO:0097091 ! synaptic vesicle clustering
+created_by: pr
+creation_date: 2011-07-06T09:50:37Z
+
+[Term]
 id: GO:2000816
 name: negative regulation of mitotic sister chromatid separation
 namespace: biological_process
@@ -28206,6 +29920,23 @@ intersection_of: negatively_regulates GO:0051306 ! mitotic sister chromatid sepa
 relationship: negatively_regulates GO:0051306 ! mitotic sister chromatid separation
 created_by: midori
 creation_date: 2011-07-11T04:45:06Z
+
+[Term]
+id: GO:2000827
+name: mitochondrial RNA surveillance
+namespace: biological_process
+def: "The set of processes involved in identifying and degrading defective or aberrant RNAs that takes place in the mitochondrion." [PMID:19864255]
+synonym: "aberrant RNA catabolic process in mitochondria" EXACT [GOC:obol]
+synonym: "aberrant RNA catabolic process in mitochondrion" EXACT [GOC:obol]
+synonym: "RNA quality control in mitochondria" EXACT [GOC:obol]
+synonym: "RNA quality control in mitochondrion" EXACT [GOC:obol]
+synonym: "RNA surveillance in mitochondria" EXACT [GOC:obol]
+is_a: GO:0000957 ! mitochondrial RNA catabolic process
+is_a: GO:0071026 ! cytoplasmic RNA surveillance
+intersection_of: GO:0071025 ! RNA surveillance
+intersection_of: occurs_in GO:0005739 ! mitochondrion
+created_by: rfoulger
+creation_date: 2011-07-20T01:33:23Z
 
 [Term]
 id: GO:2001020

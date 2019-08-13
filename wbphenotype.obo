@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-23/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-08-13/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -800,6 +800,7 @@ name: presynaptic vesicle cluster variant
 def: "Animals display variations in the organization, accumulation or distribution of transmitter-containing membrane-bound organelles (synaptic vesicles) compared to that observed in control animals." [WB:WBPaper00027305]
 synonym: "presynaptic vesicle cluster abnormal" NARROW []
 synonym: "synaptic vesicle cluster abnormal" RELATED []
+is_a: WBPhenotype:0000846 ! presynaptic region physiology variant
 is_a: WBPhenotype:0001321 ! presynaptic region morphology variant
 
 [Term]
@@ -1167,6 +1168,7 @@ def: "Initiation, strength, extent or cessation of body wall muscle activity tha
 synonym: "body wall contraction abnormal" NARROW []
 synonym: "body wall contraction variant" EXACT []
 is_a: WBPhenotype:0000596 ! body behavior variant
+is_a: WBPhenotype:0000611 ! muscle system physiology variant
 
 [Term]
 id: WBPhenotype:0000154
@@ -3295,6 +3297,7 @@ synonym: "methyl viologen response abnormal" RELATED []
 synonym: "paraquat response abnormal" NARROW []
 is_a: WBPhenotype:0000068 ! oxidative stress response variant
 is_a: WBPhenotype:0000459 ! pesticide response variant
+is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
 is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
@@ -3750,7 +3753,9 @@ id: WBPhenotype:0000524
 name: bleach response variant
 def: "Animals exhibit variations in their response to bleach compared to that observed in control animals." [WB:WBPerson557]
 synonym: "bleach response abnormal" NARROW []
+is_a: WBPhenotype:0000068 ! oxidative stress response variant
 is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
+is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
 id: WBPhenotype:0000525
@@ -7453,7 +7458,7 @@ name: organism pathogen response variant
 def: "Animals exhibit variations in their response to disease causing agents, compared to control. Pathogen response includes prevention, damage control and recovery from the infection caused by the attack." [GO:0006952, WB:WBPaper00032196, WB:WBPerson2021, WB:WBPerson712]
 synonym: "bacterial load variant" NARROW []
 synonym: "organism pathogen response abnormal" NARROW []
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0000067 ! organism stress response variant
 
 [Term]
 id: WBPhenotype:0001013
@@ -9422,7 +9427,7 @@ id: WBPhenotype:0001273
 name: organism heat response variant
 def: "Any variation in the state or activity of an organism (in terms of movement, gene expression, etc.) in response to heat (high temperatures above the optimal temperature for that organism), compared to control." [GO:0009408, WB:WBPerson2021]
 synonym: "organism heat response abnormal" NARROW []
-is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000146 ! organism temperature response variant
 
 [Term]
 id: WBPhenotype:0001274
@@ -10424,6 +10429,7 @@ name: organism desiccation response variant
 def: "Any variation in the state or activity of an organism in response to extreme dryness or drought-like conditions, compared to control ." [GO:0009819, WB:WBPerson2021]
 synonym: "organism desication response abnormal" NARROW []
 is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0001418
@@ -10865,7 +10871,7 @@ id: WBPhenotype:0001477
 name: anterograde transport variant
 def: "Any variation in the directed movement of organelles or molecules along microtubules from the cell body toward the cell periphery in nerve cell axons, compared to control." [GO:0008089, WB:WBPerson2021, WB:WBPerson557]
 synonym: "anterograde transport abnormal" NARROW []
-is_a: WBPhenotype:0000853 ! intraflagellar transport variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0001478
@@ -11310,7 +11316,8 @@ id: WBPhenotype:0001537
 name: mRNA turnover variant
 def: "Any variation in the ability of cells to monitor the quality of their mRNAs and degrade any transcripts that are poorly or incompletely translated compared to control." [WB:WBPaper00004926]
 synonym: "mRNA turnover abnormal" NARROW []
-is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001283 ! organelle metabolism variant
+is_a: WBPhenotype:0001826 ! RNA degradation variant
 
 [Term]
 id: WBPhenotype:0001538
@@ -11543,7 +11550,7 @@ name: mRNA export variant
 def: "Any variation in the export of mRNA from the cell nucleus compared to control." [WB:WBPaper00005960]
 synonym: "mRNA export abnormal" NARROW []
 is_a: WBPhenotype:0000114 ! mRNA expression variant
-is_a: WBPhenotype:0001708 ! protein export from nucleus defective
+is_a: WBPhenotype:0001706 ! nuclear export defective
 
 [Term]
 id: WBPhenotype:0001569
@@ -11942,7 +11949,6 @@ id: WBPhenotype:0001626
 name: locomotion rate serotonin variant
 def: "Any variation in the locomotion rate after application of exogenous serotonin compared to control." [WB:WBPaper00002141]
 synonym: "locomotion rate serotonin abnormal" NARROW []
-is_a: WBPhenotype:0000517 ! behavior variant
 is_a: WBPhenotype:0001232 ! serotonin response variant
 
 [Term]
@@ -11975,6 +11981,7 @@ name: gut obstructed
 def: "Any variation in the developmental progression of the intestine that leads to a blockage in the alimentary canal." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "Gob" BROAD []
 is_a: WBPhenotype:0000708 ! intestinal development variant
+is_a: WBPhenotype:0000710 ! intestinal morphology variant
 
 [Term]
 id: WBPhenotype:0001631
@@ -12945,7 +12952,7 @@ id: WBPhenotype:0001764
 name: carbon dioxide response variant
 def: "Animals exhibit variations in their response to carbon dioxide compared to control." [WB:WBPerson712]
 synonym: "carbon dioxide response abnormal" NARROW []
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0000627 ! anesthetic response variant
 
 [Term]
 id: WBPhenotype:0001765
@@ -12961,6 +12968,7 @@ id: WBPhenotype:0001766
 name: cholesterol depletion hypersensitive
 def: "Animals are more sensitive to the reduction of cholesterol in the environment compared to control animals." [GO:0042632, WB:WBPaper00026641, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0001767
@@ -13122,7 +13130,7 @@ id: WBPhenotype:0001790
 name: thermoreceptor currents absent
 def: "Cooling or warming evoked changes in membrane currents are not observed." [WB:WBPaper00032060, WB:WBPerson712]
 synonym: "ThRC absent" RELATED []
-is_a: WBPhenotype:0000851 ! ciliated neuron physiology variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0001791
@@ -13443,6 +13451,7 @@ id: WBPhenotype:0001837
 name: diet induced life span variant
 def: "Life span of the animal is not influenced by changes in diet in the same manner as control animals." [WB:WBPaper00032936, WB:WBPerson2021]
 is_a: WBPhenotype:0000039 ! life span variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0001838
@@ -13554,6 +13563,7 @@ id: WBPhenotype:0001854
 name: benomyl response variant
 def: "Animals exhibit variations in their response to the microtubule-depolymerizing drug benomyl, compared to that observed in control animals." [WB:WBPaper00035150, WB:WBPerson2021]
 is_a: WBPhenotype:0000631 ! drug response variant
+is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
 
 [Term]
 id: WBPhenotype:0001855
@@ -13614,6 +13624,7 @@ id: WBPhenotype:0001863
 name: manganese response variant
 def: "Animals exhibit variations in their response to manganese compared to that observed in control animals." [GO:0010042, WB:WBPaper00035485, WB:WBPerson2021]
 comment: Possible XP.
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -14750,7 +14761,7 @@ is_a: WBPhenotype:0000851 ! ciliated neuron physiology variant
 id: WBPhenotype:0002039
 name: retrograde transport variant
 def: "Animals exhibit variation in the directed movement of organelles or molecules along microtubules from the cell periphery in nerve cell axons to the cell body, compared to control." [WB:WBPaper00038442, WB:WBPerson712]
-is_a: WBPhenotype:0000853 ! intraflagellar transport variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0002040
@@ -15940,12 +15951,14 @@ is_a: WBPhenotype:0000591 ! metal response variant
 id: WBPhenotype:0002227
 name: lead response variant
 def: "Animals exhibit variations in their response to lead compared to that observed in control animals." [WB:WBPaper00029261, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
 id: WBPhenotype:0002228
 name: aluminum response variant
 def: "Animals exhibit variations in their response to aluminum compared to that observed in control animals." [WB:WBPaper00029261, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -16119,6 +16132,7 @@ is_a: WBPhenotype:0000463 ! metabolic pathway variant
 id: WBPhenotype:0002256
 name: selenium response variant
 def: "Animals exhibit variations in their response to selenium compared to that observed in control animals." [WB:WBPaper00038278, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -16222,7 +16236,7 @@ is_a: WBPhenotype:0001382 ! protein modification variant
 id: WBPhenotype:0002273
 name: dietary sugar response variant
 def: "Animals exhibit enhanced negative effects on growth, health, development or metabolism, in response to dietary sugar-rich diets, compared to controls." [WB:WBPaper00045849, WB:WBPerson712]
-is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0002274
@@ -16792,6 +16806,7 @@ id: WBPhenotype:0002363
 name: cholesterol depletion resistant
 def: "Animals are more resistant to the reduction of cholesterol in the environment compared to control animals." [WB:WBPaper00024451, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0002364
@@ -17128,7 +17143,7 @@ is_a: WBPhenotype:0002414 ! spindle variant
 id: WBPhenotype:0002417
 name: spindle rotation variant
 def: "Any variation in the rotation of the spindle compared to control." [WB:WBPerson557]
-is_a: WBPhenotype:0002414 ! spindle variant
+is_a: WBPhenotype:0002416 ! spindle position variant
 
 [Term]
 id: WBPhenotype:0002418
@@ -17165,12 +17180,14 @@ is_a: WBPhenotype:0000359 ! tunicamycin response variant
 id: WBPhenotype:0002423
 name: hypoxia response variant
 def: "Animals exhibit variations in response to hypoxia, low oxygen conditions, compared to controls." [WB:WBPaper00037064, WB:WBPerson2987]
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000464 ! oxygen response variant
 
 [Term]
 id: WBPhenotype:0002424
 name: anoxia response variant
 def: "Animals exhibit variations in response to anoxia, trace oxygen conditions, compared to controls." [WB:WBPerson557]
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000464 ! oxygen response variant
 
 [Term]
@@ -17805,6 +17822,25 @@ def: "Animals exhibit a slow recovery from starvation-induced L1 arrest, compare
 is_a: WBPhenotype:0002522 ! starvation-induced L1 arrest recovery abnormal
 
 [Term]
+id: WBPhenotype:0002524
+name: molybdenum cofactor depletion hypersensitive
+def: "Animals are more sensitive to the depletion of molybdenum cofactor from the diet compared to control animals." [WB:WBPaper00056452, WB:WBPerson2987]
+synonym: "dependent on dietary molybdenum cofactor" EXACT []
+is_a: WBPhenotype:0002526 ! response to molybdenum cofactor depletion abnormal
+
+[Term]
+id: WBPhenotype:0002525
+name: diet response variant
+def: "Animals exhibit variations in their response to diet, compared to controls." [WB:WBPaper00024451, WB:WBPaper00026641, WB:WBPaper00032936, WB:WBPaper00045849, WB:WBPaper00056452, WB:WBPerson2987]
+is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+
+[Term]
+id: WBPhenotype:0002526
+name: response to molybdenum cofactor depletion abnormal
+def: "Animals exhibit variations in the response to the depletion of molybdenum cofactor from the diet compared to control animals." [WB:WBPaper00056452, WB:WBPerson2987]
+is_a: WBPhenotype:0002525 ! diet response variant
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -18007,6 +18043,7 @@ name: male response to hermaphrodite variant
 def: "Any variation in the response by the male to a hermaphrodite after initial contact following mate finding compared to control. In C. elegans the male stops forward locomotion, presses the ventral side of his tail against his partner's body, and begins moving backward along the hermaphrodite. Male response behavior is initiated when sensory neurons located in the rays of his tail contact a potential mate." [GO:0034606, WB:WBPaper00002109, WB:WBPerson2021, WB:WBPerson557]
 synonym: "male response to hermaphrodite abnormal" NARROW []
 synonym: "Rsp" BROAD []
+is_a: WBPhenotype:0000648 ! male mating variant
 is_a: WBPhenotype:0004029 ! sexually dimorphic mechanosensation variant
 
 [Term]

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-23/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-08-13/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -10683,7 +10683,7 @@ id: WBPhenotype:0001477
 name: anterograde transport variant
 def: "Any variation in the directed movement of organelles or molecules along microtubules from the cell body toward the cell periphery in nerve cell axons, compared to control." [GO:0008089, WB:WBPerson2021, WB:WBPerson557]
 synonym: "anterograde transport abnormal" NARROW []
-is_a: WBPhenotype:0000853 ! intraflagellar transport variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0001478
@@ -12740,6 +12740,7 @@ id: WBPhenotype:0001766
 name: cholesterol depletion hypersensitive
 def: "Animals are more sensitive to the reduction of cholesterol in the environment compared to control animals." [GO:0042632, WB:WBPaper00026641, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0001767
@@ -12901,7 +12902,7 @@ id: WBPhenotype:0001790
 name: thermoreceptor currents absent
 def: "Cooling or warming evoked changes in membrane currents are not observed." [WB:WBPaper00032060, WB:WBPerson712]
 synonym: "ThRC absent" RELATED []
-is_a: WBPhenotype:0000851 ! ciliated neuron physiology variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0001791
@@ -13221,6 +13222,7 @@ id: WBPhenotype:0001837
 name: diet induced life span variant
 def: "Life span of the animal is not influenced by changes in diet in the same manner as control animals." [WB:WBPaper00032936, WB:WBPerson2021]
 is_a: WBPhenotype:0000039 ! life span variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0001838
@@ -14517,7 +14519,7 @@ is_a: WBPhenotype:0000851 ! ciliated neuron physiology variant
 id: WBPhenotype:0002039
 name: retrograde transport variant
 def: "Animals exhibit variation in the directed movement of organelles or molecules along microtubules from the cell periphery in nerve cell axons to the cell body, compared to control." [WB:WBPaper00038442, WB:WBPerson712]
-is_a: WBPhenotype:0000853 ! intraflagellar transport variant
+is_a: WBPhenotype:0000991 ! neuron physiology variant
 
 [Term]
 id: WBPhenotype:0002040
@@ -15982,7 +15984,7 @@ is_a: WBPhenotype:0001382 ! protein modification variant
 id: WBPhenotype:0002273
 name: dietary sugar response variant
 def: "Animals exhibit enhanced negative effects on growth, health, development or metabolism, in response to dietary sugar-rich diets, compared to controls." [WB:WBPaper00045849, WB:WBPerson712]
-is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0002274
@@ -16549,6 +16551,7 @@ id: WBPhenotype:0002363
 name: cholesterol depletion resistant
 def: "Animals are more resistant to the reduction of cholesterol in the environment compared to control animals." [WB:WBPaper00024451, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0002364
@@ -17552,6 +17555,25 @@ id: WBPhenotype:0002523
 name: slow recovery from starvation-induced L1 arrest
 def: "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls." [WB:WBPaper00049938, WB:WBPerson2987, WB:WBPerson6498]
 is_a: WBPhenotype:0002522 ! starvation-induced L1 arrest recovery abnormal
+
+[Term]
+id: WBPhenotype:0002524
+name: molybdenum cofactor depletion hypersensitive
+def: "Animals are more sensitive to the depletion of molybdenum cofactor from the diet compared to control animals." [WB:WBPaper00056452, WB:WBPerson2987]
+synonym: "dependent on dietary molybdenum cofactor" EXACT []
+is_a: WBPhenotype:0002526 ! response to molybdenum cofactor depletion abnormal
+
+[Term]
+id: WBPhenotype:0002525
+name: diet response variant
+def: "Animals exhibit variations in their response to diet, compared to controls." [WB:WBPaper00024451, WB:WBPaper00026641, WB:WBPaper00032936, WB:WBPaper00045849, WB:WBPaper00056452, WB:WBPerson2987]
+is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+
+[Term]
+id: WBPhenotype:0002526
+name: response to molybdenum cofactor depletion abnormal
+def: "Animals exhibit variations in the response to the depletion of molybdenum cofactor from the diet compared to control animals." [WB:WBPaper00056452, WB:WBPerson2987]
+is_a: WBPhenotype:0002525 ! diet response variant
 
 [Term]
 id: WBPhenotype:0004001
