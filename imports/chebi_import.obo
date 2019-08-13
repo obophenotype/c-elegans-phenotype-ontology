@@ -1,5 +1,8 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-07-23/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-08-13/imports/chebi_import.owl
+subsetdef: 1_STAR "Preliminary entries"
+subsetdef: 2_STAR "Annotated by 3rd party"
+subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 ontology: wbphenotype/imports/chebi_import
 
 [Term]
@@ -517,6 +520,7 @@ xref: Reaxys:73010 "Reaxys"
 xref: Wikipedia:Adenosine_triphosphate
 is_a: CHEBI:37045 ! purine ribonucleoside 5'-triphosphate
 is_a: CHEBI:37096 ! adenosine 5'-phosphate
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:27027 ! micronutrient
 relationship: has_role CHEBI:50733 ! nutraceutical
 relationship: has_role CHEBI:78675 ! fundamental metabolite
@@ -2498,6 +2502,7 @@ xref: PDBeChem:CL
 xref: UM-BBD_compID:c0884 "UM-BBD"
 is_a: CHEBI:16042 ! halide anion
 is_a: CHEBI:33432 ! monoatomic chlorine
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_base_of CHEBI:17883 ! hydrogen chloride
@@ -3345,6 +3350,17 @@ is_a: CHEBI:24471 ! halogen molecular entity
 relationship: has_part CHEBI:23116 ! chlorine atom
 
 [Term]
+id: CHEBI:23357
+name: cofactor
+namespace: chebi_ontology
+def: "An organic molecule or ion (usually a metal ion) that is required by an enzyme for its activity. It may be attached either loosely (coenzyme) or tightly (prosthetic group)." []
+subset: 3_STAR
+synonym: "cofactor" EXACT [IUPAC]
+synonym: "cofactors" EXACT IUPAC_NAME [IUPAC]
+xref: Wikipedia:Cofactor_(biochemistry)
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
 id: CHEBI:23359
 name: colchicine
 namespace: chebi_ontology
@@ -4033,6 +4049,7 @@ xref: PMID:17439666 "Europe PMC"
 xref: PMID:22264337 "Europe PMC"
 xref: Reaxys:1616991 "Reaxys"
 xref: Wikipedia:Lysine
+is_a: CHEBI:26167 ! polar amino acid
 is_a: CHEBI:33704 ! alpha-amino acid
 is_a: CHEBI:35987 ! diamino acid
 relationship: has_functional_parent CHEBI:30776 ! hexanoic acid
@@ -4722,6 +4739,27 @@ namespace: chebi_ontology
 subset: 3_STAR
 is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:26167
+name: polar amino acid
+namespace: chebi_ontology
+alt_id: CHEBI:8283
+def: "Any amino acid whose side chain is capable of forming one or more hydrogen bonds as proton donors or acceptors." []
+subset: 3_STAR
+synonym: "polar amino acid" EXACT [ChEBI]
+synonym: "polar amino acids" RELATED [ChEBI]
+synonym: "polar amino-acid" RELATED [ChEBI]
+synonym: "polar amino-acids" RELATED [ChEBI]
+xref: MetaCyc:Polar-amino-acids
+xref: PMID:12016058 "Europe PMC"
+is_a: CHEBI:33709 ! amino acid
+relationship: is_tautomer_of CHEBI:62031 ! polar amino acid zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(C(*)N)=O" xsd:string
 
 [Term]
 id: CHEBI:26216
@@ -5890,6 +5928,7 @@ is_a: CHEBI:35106 ! nitrogen hydride
 is_a: CHEBI:35274 ! ammonium ion
 is_a: CHEBI:50313 ! onium cation
 is_a: CHEBI:60242 ! monovalent inorganic cation
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
@@ -5918,6 +5957,7 @@ synonym: "carboxylic anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
 is_a: CHEBI:35406 ! oxoanion
 relationship: is_conjugate_base_of CHEBI:33575 ! carboxylic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.00950" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
@@ -5965,6 +6005,7 @@ is_a: CHEBI:25414 ! monoatomic monocation
 is_a: CHEBI:33504 ! alkali metal cation
 is_a: CHEBI:37246 ! elemental sodium
 is_a: CHEBI:60242 ! monovalent inorganic cation
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:77746 ! human metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Na" xsd:string
@@ -6382,6 +6423,7 @@ synonym: "atp" RELATED [IUPAC]
 xref: Beilstein:3581767 "Beilstein"
 xref: Gmelin:342798 "Gmelin"
 is_a: CHEBI:61557 ! nucleoside triphosphate(4-)
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:78675 ! fundamental metabolite
 relationship: is_conjugate_base_of CHEBI:57299 ! ATP(3-)
@@ -11281,6 +11323,7 @@ xref: PDBeChem:IPS
 xref: PDBeChem:PI
 is_a: CHEBI:35780 ! phosphate ion
 is_a: CHEBI:79388 ! divalent inorganic anion
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: is_conjugate_acid_of CHEBI:18367 ! phosphate(3-)
 relationship: is_conjugate_base_of CHEBI:39745 ! dihydrogenphosphate
@@ -13334,6 +13377,7 @@ subset: 3_STAR
 synonym: "ATP(3-)" EXACT [UniProt]
 xref: Beilstein:9535056 "Beilstein"
 is_a: CHEBI:59724 ! ribonucleoside triphosphate oxoanion
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: has_role CHEBI:78675 ! fundamental metabolite
 relationship: is_conjugate_acid_of CHEBI:30616 ! ATP(4-)
@@ -14087,6 +14131,22 @@ synonym: "microtubule-destabilizing agents" RELATED [ChEBI]
 xref: PMID:17099073 "Europe PMC"
 is_a: CHEBI:60832 ! tubulin modulator
 is_a: CHEBI:64911 ! antimitotic
+
+[Term]
+id: CHEBI:62031
+name: polar amino acid zwitterion
+namespace: chebi_ontology
+def: "Zwitterionic form of a polar amino acid having an anionic carboxy group and a protonated amino group." []
+subset: 2_STAR
+synonym: "a polar amino acid" RELATED [UniProt]
+xref: MetaCyc:Polar-amino-acids "SUBMITTER"
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_tautomer_of CHEBI:26167 ! polar amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(C([O-])=O)(*)[NH3+]" xsd:string
 
 [Term]
 id: CHEBI:62081
