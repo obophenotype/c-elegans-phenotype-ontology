@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2019-08-14/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -124,6 +124,7 @@ def: "Animals respond to aldicarb at a lower concentration or a shorter exposure
 synonym: "Hic" BROAD []
 is_a: WBPhenotype:0000500 ! acetylcholinesterase inhibitor hypersensitive
 is_a: WBPhenotype:0000680 ! aldicarb response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000017
@@ -133,6 +134,7 @@ synonym: "Ald R" BROAD []
 synonym: "Ric" BROAD []
 is_a: WBPhenotype:0000680 ! aldicarb response variant
 is_a: WBPhenotype:0001289 ! acetylcholinesterase inhibitor resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000018
@@ -174,12 +176,14 @@ id: WBPhenotype:0000023
 name: serotonin hypersensitive
 def: "Animals respond to serotonin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000024
 name: serotonin resistant
 def: "Animals fail to respond to the concentration of serotonin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000025
@@ -330,8 +334,8 @@ id: WBPhenotype:0000042
 name: slow embryonic development
 def: "The progression through stages between fertilization to hatching are temporally retarded." [WB:WBPerson712]
 synonym: "Sle" BROAD []
-is_a: WBPhenotype:0000126 ! general pace of development defective early emb
 is_a: WBPhenotype:0000674 ! slow development
+is_a: WBPhenotype:0000749 ! embryonic development variant
 
 [Term]
 id: WBPhenotype:0000043
@@ -347,7 +351,6 @@ name: egg size defective early emb
 def: "Egg is smaller or larger compared to eggs of control animals." [WB:cab, WB:cgc7141]
 synonym: "Emb" BROAD []
 is_a: WBPhenotype:0001100 ! early embryonic lethal
-is_a: WBPhenotype:0002089 ! cell component morphology variant
 is_a: WBPhenotype:0002407 ! egg size variant
 
 [Term]
@@ -698,6 +701,7 @@ id: WBPhenotype:0000089
 name: alpha amanitin resistant
 def: "Animals fail to respond to the concentration of alpha amanitin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000090
@@ -755,6 +759,7 @@ name: cloacal development variant
 def: "Variations in the progression of the epithelial chamber that links the genital and alimentary tracts to the exterior via the anus (cloacal opening) over time compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "cloacal development abnormal" NARROW []
 is_a: WBPhenotype:0000617 ! alimentary system development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0000097
@@ -976,7 +981,6 @@ def: "Variations in the time from pronuclei meeting to furrow initiation during 
 synonym: "Emb" BROAD []
 synonym: "general pace of development abnormal" NARROW []
 is_a: WBPhenotype:0000043 ! general pace of development variant
-is_a: WBPhenotype:0000749 ! embryonic development variant
 
 [Term]
 id: WBPhenotype:0000127
@@ -1457,7 +1461,6 @@ name: first polar body position variant
 def: "Variations in the placement of the polar body formed in the first division of meiosis of a primary oocyte, compared to control. A polar body is the by-product of meiosis (destined to degenerate) in female or hermaphrodite animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "first polar body position abnormal" NARROW []
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0000195
@@ -1493,6 +1496,7 @@ id: WBPhenotype:0000199
 name: male tail sensory ray development variant
 def: "Any variation in the progression of the finger-like sensory sensilla that project from the tail and embed in the male fan from its formation to the mature structure when compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male tail sensory ray development abnormal" NARROW []
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 is_a: WBPhenotype:0001008 ! male nervous system development variant
 
 [Term]
@@ -1605,6 +1609,7 @@ id: WBPhenotype:0000214
 name: alpha amanitin hypersensitive
 def: "Animals respond to alpha amanitin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000215
@@ -1867,6 +1872,7 @@ id: WBPhenotype:0000252
 name: caffeine resistant
 def: "Animals fail to respond to the concentration of caffeine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000253
@@ -1891,7 +1897,7 @@ comment: WBbt:0005394, WBbt:0006753.
 synonym: "amphid phasmid morphology abnormal" NARROW []
 synonym: "dye filling defect" RELATED []
 synonym: "Dyf" BROAD []
-is_a: WBPhenotype:0000299 ! sensillum morphology variant
+is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0000256
@@ -1899,7 +1905,7 @@ name: amphid morphology variant
 def: "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the amphid sensillum, from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO." [WB:WBPaper00000938]
 comment: WBbt:0005394.
 synonym: "amphid morphology abnormal" NARROW []
-is_a: WBPhenotype:0000299 ! sensillum morphology variant
+is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
 
 [Term]
 id: WBPhenotype:0000257
@@ -1908,8 +1914,6 @@ def: "Animals exhibit variations in the quantity, structure or organization of t
 comment: WBbt:0006753.
 synonym: "phasmid morphology abnormal" NARROW []
 is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
-is_a: WBPhenotype:0000256 ! amphid morphology variant
-is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0000258
@@ -2212,8 +2216,6 @@ id: WBPhenotype:0000300
 name: amphid sheath cell morphology variant
 def: "Animals exhibit variations in the structure or composition of the amphid sensillum cell that ensheathes the dendrite tips of channel neurons and wing cell dedritic processes, from that observed in control animals. Sheath cells in C.elegans have highly invaginated and vesiculated surfaces, which provide a specialized environment for the dendritic structures." [WB:WBPaper00000214, WB:WBPaper00000503, WB:WBPaper00000822, WB:WBPerson712]
 synonym: "amphid sheath cell morphology abnormal" NARROW []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
-is_a: WBPhenotype:0000256 ! amphid morphology variant
 is_a: WBPhenotype:0000972 ! neuronal sheath cell morphology variant
 is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 is_a: WBPhenotype:0001529 ! sensilium sheath cell variant
@@ -2390,11 +2392,13 @@ id: WBPhenotype:0000325
 name: arecoline hypersensitive
 def: "Animals respond to arecoline at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000326
 name: arecoline resistant
 def: "Animals fail to respond to the concentration of arecoline that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
 [Term]
@@ -2487,6 +2491,7 @@ id: WBPhenotype:0000340
 name: imipramine resistant
 def: "Animals fail to respond to the concentration of imipramine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001598 ! inhibitor of serotonin uptake variant
 
 [Term]
@@ -2494,6 +2499,7 @@ id: WBPhenotype:0000341
 name: imipramine hypersensitive
 def: "Animals respond to imipramine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000342
@@ -2535,6 +2541,7 @@ name: rectal development variant
 def: "Any variation in the progression of the cuticle-lined sinus opening on the posterior ventral surface of the animal over time from its formation to its mature structure compared to control (Wormatlas). The function of the rectum is to excrete waste products from the alimentary system." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "rectal development abnormal" NARROW []
 is_a: WBPhenotype:0000617 ! alimentary system development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0000348
@@ -2710,7 +2717,6 @@ id: WBPhenotype:0000372
 name: no polar body formation
 def: "Animals lack the two small cells produced, each during one of the two meiotic cell divisions (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0000373
@@ -3030,6 +3036,7 @@ def: "Animals respond to levamisole at a lower concentration or a shorter exposu
 synonym: "tetramisole hypersensitive" RELATED []
 is_a: WBPhenotype:0000845 ! levamisole response variant
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000421
@@ -3038,6 +3045,7 @@ def: "Animals fail to respond to the concentration of levamisole that elicits a 
 synonym: "Lev R" BROAD []
 synonym: "tetramisole resistant" RELATED []
 is_a: WBPhenotype:0000845 ! levamisole response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
 [Term]
@@ -3305,6 +3313,7 @@ id: WBPhenotype:0000461
 name: paraquat resistant
 def: "Animals fail to respond to the concentration of paraquat that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000460 ! paraquat response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000462
@@ -3312,6 +3321,7 @@ name: paraquat hypersensitive
 def: "Animals respond to paraquat at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 synonym: "reactive oxygen species hypersensitive" BROAD [WB:WBPaper00031296]
 is_a: WBPhenotype:0000460 ! paraquat response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000463
@@ -3475,24 +3485,28 @@ id: WBPhenotype:0000486
 name: colchicine hypersensitive
 def: "Animals respond to colchicine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000487
 name: colchicine resistant
 def: "Animals fail to respond to the concentration of colchicine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000488
 name: chloroquine hypersensitive
 def: "Animals respond to chloroquine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000489
 name: chloroquine resistant
 def: "Animals fail to respond to the concentration of chloroquine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000490
@@ -4217,6 +4231,7 @@ id: WBPhenotype:0000586
 name: bleach hypersensitive
 def: "Animals respond to bleach at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000524 ! bleach response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000587
@@ -4268,6 +4283,7 @@ id: WBPhenotype:0000593
 name: copper hypersensitive
 def: "Animals respond to copper at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000592 ! copper response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000594
@@ -4899,6 +4915,7 @@ id: WBPhenotype:0000671
 name: resistant to copper
 def: "Animals fail to respond to the concentration of copper that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to copper to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000592 ! copper response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000672
@@ -5711,7 +5728,6 @@ synonym: "Mei" RELATED []
 synonym: "meiosis abnormal" NARROW []
 is_a: WBPhenotype:0000746 ! cell division variant
 is_a: WBPhenotype:0000812 ! germ cell development variant
-is_a: WBPhenotype:0001100 ! early embryonic lethal
 
 [Term]
 id: WBPhenotype:0000776
@@ -5719,7 +5735,6 @@ name: passage through meiosis defective early emb
 def: "Male and female PNs not visible; embryo often fills egg shell completely." [WB:cab, WB:cgc71441]
 synonym: "Emb" BROAD []
 synonym: "passage through meiosis abnormal" NARROW []
-is_a: WBPhenotype:0000775 ! meiosis variant
 is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
@@ -5729,7 +5744,6 @@ def: "Unextruded or resorbed polar body(ies) leading to an extra PNs in P0 and/o
 synonym: "Emb" BROAD []
 synonym: "polar body extrusion abnormal" NARROW []
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 is_a: WBPhenotype:0001147 ! polar body defective early emb
 
 [Term]
@@ -5812,12 +5826,14 @@ id: WBPhenotype:0000789
 name: fluoxetine hypersensitive
 def: "Animals respond to fluoxetine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000790
 name: fluoxetine resistant
 def: "Animals fail to respond to the concentration of fluoxetine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
-is_a: WBPhenotype:0000381 ! serotonin reuptake inhibitor resistant
+is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000791
@@ -5926,6 +5942,7 @@ id: WBPhenotype:0000805
 name: tail development variant
 def: "Any variation in the process whose specific outcome is the progression of the tail over time, from its formation to the mature structure, compared to control. The tail includes the posterior region that spans from the rectum to the end." [WB:WBPerson2021]
 synonym: "tail development abnormal" NARROW []
+is_a: WBPhenotype:0000528 ! body region development variant
 is_a: WBPhenotype:0000579 ! organism segment development variant
 
 [Term]
@@ -6292,6 +6309,7 @@ name: pseudocoelom development variant
 def: "Variations in the progression of the fluid-filled space which separates the body wall from internal organs over time from its initial formation to its mature form compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "pseudocoelom development abnormal" NARROW []
 is_a: WBPhenotype:0000200 ! pericellular component development variant
+is_a: WBPhenotype:0000528 ! body region development variant
 
 [Term]
 id: WBPhenotype:0000856
@@ -6505,10 +6523,8 @@ name: AWB morphology variant
 def: "Animals exhibit variations in the structure or organization of either of a set of two ciliated wing neurons, AWBL or AWBR, of the amphid sensilla, compared to that observed in control animals." [WB:WBPaper00000938, WB:WBPerson712]
 comment: WBbt:0005671.
 synonym: "AWB morphology abnormal" NARROW []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
 is_a: WBPhenotype:0000256 ! amphid morphology variant
 is_a: WBPhenotype:0001526 ! ciliated neuron morphology variant
-is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0000885
@@ -6801,7 +6817,9 @@ id: WBPhenotype:0000922
 name: male longitudinal muscle development variant
 def: "Any variation in the progression of somatic (striated) muscles that run longitudinally in males over time from its initial formation to its mature form compared to control. In C. elegans males have 3 additional sets of sex-specific longitudinal muscles (anterior and posterior outer, anterior and posterior inner, and caudal) that contribute to the body wall musculature (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male longitudinal muscle development abnormal" NARROW []
+is_a: WBPhenotype:0000860 ! nonstriated muscle development variant
 is_a: WBPhenotype:0000921 ! striated muscle development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0000923
@@ -6876,6 +6894,7 @@ id: WBPhenotype:0000932
 name: bis phenol A hypersensitive
 def: "Animals respond to bis phenol A at a lower concentration or a shorter exposure time compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000931 ! bis phenol A response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000933
@@ -7104,6 +7123,7 @@ id: WBPhenotype:0000964
 name: DMPP resistant
 def: "Animals fail to respond to the concentration of DMPP that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000681 ! DMPP response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000965
@@ -7311,6 +7331,7 @@ is_a: WBPhenotype:0000612 ! nervous system physiology variant
 id: WBPhenotype:0000992
 name: high sodium chloride concentration osmotic avoidance defective
 def: "Failure to execute the characteristic response to high concentrations of sodium chloride solution. C. elegans typically avoids high concentrations of sodium chloride solution." [WB:WBPerson2021]
+is_a: WBPhenotype:0000249 ! osmotic avoidance defective
 is_a: WBPhenotype:0001453 ! high sodium chloride concentration osmotic avoidance variant
 
 [Term]
@@ -7562,9 +7583,8 @@ name: nuclear morphology variation early emb
 def: "Animals exhibit variations in the form, structure or composition of the membrane enclosed organelle which contains most of the cell's genetic material during the early embryonic stage compared to control animals (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "Emb" BROAD []
 synonym: "Nmo" BROAD []
-is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
-is_a: WBPhenotype:0001100 ! early embryonic lethal
-is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
+is_a: WBPhenotype:0001028 ! nuclear appearance variant
+is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
 
 [Term]
 id: WBPhenotype:0001027
@@ -7574,12 +7594,7 @@ synonym: "Emb" BROAD []
 synonym: "Npo" BROAD []
 synonym: "nuclear position abnormal" NARROW []
 is_a: WBPhenotype:0000511 ! nuclear positioning variant
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
-is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
 is_a: WBPhenotype:0001138 ! nucleus defective early emb
-is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
-is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
 [Term]
 id: WBPhenotype:0001028
@@ -7604,10 +7619,7 @@ def: "Any deficiency in the lipid bilayer, the equivalent of the nuclear envelop
 synonym: "Emb" BROAD []
 synonym: "Pna" BROAD []
 synonym: "pronuclear envelope abnormal" NARROW []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
@@ -7640,7 +7652,7 @@ name: pronuclear nuclear appearance defective early emb
 def: "The morphology of pronuclei and nuclei are defective in the early embryo. In C. elegans, this defect is often characterized by pronuclei and nuclei that are small or missing altogether and are often accompanied by spindle defects." [WB:cab, WB:cgc7141]
 synonym: "Emb" BROAD []
 synonym: "pronuclear nuclear appearance abnormal" NARROW []
-is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
+is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001100 ! early embryonic lethal
 is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
 
@@ -7652,8 +7664,7 @@ synonym: "Emb" BROAD []
 synonym: "nuclear appearance number abnormal" NARROW []
 synonym: "nucleus abnormal emb" RELATED []
 is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
-is_a: WBPhenotype:0001100 ! early embryonic lethal
-is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
+is_a: WBPhenotype:0001138 ! nucleus defective early emb
 
 [Term]
 id: WBPhenotype:0001036
@@ -7699,8 +7710,7 @@ name: meiosis defective early emb
 def: "Animals exhibit defects in the progression of meiosis which ultimately result in embryonic lethality." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "Emb" BROAD []
 synonym: "Mei" BROAD []
-is_a: WBPhenotype:0000746 ! cell division variant
-is_a: WBPhenotype:0000812 ! germ cell development variant
+is_a: WBPhenotype:0000775 ! meiosis variant
 is_a: WBPhenotype:0001100 ! early embryonic lethal
 
 [Term]
@@ -8095,6 +8105,7 @@ name: organism high sodium chloride hypersensitive
 def: "Animals respond to sodium chloride at a lower concentration or a shorter exposure compared to control animals. In C. elegans, this is often assayed through generation time and progeny number." [pmid:16027367, WB:cab]
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
 is_a: WBPhenotype:0001725 ! osmotic stress response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001096
@@ -8418,9 +8429,7 @@ name: nucleus defective early emb
 def: "Nucleus is abnormal in the inviable one- to four-cell embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "nucleus abnormal" NARROW []
-is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
-is_a: WBPhenotype:0001100 ! early embryonic lethal
-is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
+is_a: WBPhenotype:0000764 ! embryonic cell organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0001139
@@ -8428,12 +8437,7 @@ name: nuclear envelope assembly variant early emb
 def: "Nuclear envelope does not reassemble properly." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
 synonym: "nuclear reassembly defective early emb" RELATED []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
-is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
 is_a: WBPhenotype:0001138 ! nucleus defective early emb
-is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
-is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 is_a: WBPhenotype:0002037 ! nuclear envelope organization variant
 
 [Term]
@@ -8455,12 +8459,7 @@ id: WBPhenotype:0001142
 name: nuclear number defective early emb
 def: "Nuclear number is abnormal in the inviable one- to four-cell embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
-is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
 is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
-is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
-is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 is_a: WBPhenotype:0001894 ! nuclear number variant
 
 [Term]
@@ -8534,7 +8533,7 @@ name: pronucleus centrosomes defective early emb
 def: "Pronucleus is abnormal in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronucleus centrosomes abnormal" NARROW []
-is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
+is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001100 ! early embryonic lethal
 is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
 
@@ -8544,10 +8543,7 @@ name: pronuclear migration defective early emb
 def: "Pronucleus migration is abnormal in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronuclear migration abnormal" NARROW []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
@@ -8578,10 +8574,7 @@ name: pronuclear size defective early emb
 def: "Maternal or paternal pronucleus is either too small or too large." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
 synonym: "pronuclear size abnormal" NARROW []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
@@ -8591,10 +8584,7 @@ name: pronuclear breakdown defective early emb
 def: "Pronuclear breakdown is atypical in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronuclear breakdown abnormal" NARROW []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
@@ -8611,7 +8601,7 @@ name: pronuclear morphology defective early emb
 def: "Pronucleus morphology is atypical in the inviable embryo." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
 synonym: "pronuclear morphology abnormal" NARROW []
-is_a: WBPhenotype:0000770 ! embryonic cell morphology variant
+is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001100 ! early embryonic lethal
 is_a: WBPhenotype:0001374 ! pronuclear nuclear appearance variant emb
 
@@ -8621,10 +8611,7 @@ name: pronuclear envelope morphology defective early emb
 def: "Morphology of the pronuclear envelope is atypical in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronuclear envelope morphology abnormal" NARROW []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
-is_a: WBPhenotype:0001138 ! nucleus defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
@@ -8641,7 +8628,10 @@ name: pronuclear number defective early emb
 def: "There are more than two pronuclei in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronuclear number abnormal" NARROW []
+is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
 is_a: WBPhenotype:0001142 ! nuclear number defective early emb
+is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
+is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
 [Term]
 id: WBPhenotype:0001163
@@ -8937,11 +8927,13 @@ name: nicotine hypersensitive
 def: "Animals respond to nicotine at lower concentrations or shorter exposure compared to control. Nicotine is a cholinergic agonist." [WB:cab, WB:cgc7388, WB:WBPerson557]
 is_a: WBPhenotype:0001573 ! nicotine response variant
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001203
 name: nicotine resistant
 def: "Animals fail to respond to the concentration of nicotine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:cab, WB:cgc7388, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001573 ! nicotine response variant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
@@ -8950,6 +8942,7 @@ id: WBPhenotype:0001204
 name: muscimol resistant
 def: "Animals fail to respond to the concentration of muscimol that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0002047 ! muscimol response variant
 
 [Term]
@@ -8957,6 +8950,7 @@ id: WBPhenotype:0001205
 name: muscimol hypersensitive
 def: "Animals respond to muscimol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002047 ! muscimol response variant
 
 [Term]
@@ -9038,7 +9032,6 @@ name: meiosis metaphase to anaphase transition block
 def: "Oocyte chromosomes arrest in metaphase of meiosis I without transitioning to anaphase or producing polar bodies." [pmid:11134076, WB:cab]
 synonym: "Mat" BROAD []
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 is_a: WBPhenotype:0001496 ! metaphase to anaphase transition defect
 
 [Term]
@@ -9584,6 +9577,7 @@ name: lannate resistant
 def: "Animals fail to respond to the concentration of lannate that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 synonym: "methomyl resistant" EXACT []
 is_a: WBPhenotype:0001289 ! acetylcholinesterase inhibitor resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001297
@@ -9878,6 +9872,7 @@ id: WBPhenotype:0001338
 name: phentolamine resistant
 def: "Animals fail to respond to the concentration of phentolamine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001337 ! adrenergic receptor antagonist response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001339
@@ -10084,6 +10079,7 @@ id: WBPhenotype:0001367
 name: proctodeum development variant
 def: "Any variation in the process whose specific outcome is the progression of the male proctodeum over time, from its formation to the mature structure, compared to control. The union of the vas deferens and the intestine give rise to the proctodeum which contains copulatory spicules." [WB:WBPerson2021]
 synonym: "proctodeum development abnormal" NARROW []
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 is_a: WBPhenotype:0001297 ! male tail development variant
 
 [Term]
@@ -10133,7 +10129,6 @@ def: "The shape and size of nuclei as well as the distribution of nucleoporins a
 synonym: "Pna" RELATED []
 synonym: "pronuclear nuclear appearance abnormal" NARROW []
 is_a: WBPhenotype:0000764 ! embryonic cell organization biogenesis variant
-is_a: WBPhenotype:0001028 ! nuclear appearance variant
 
 [Term]
 id: WBPhenotype:0001375
@@ -10442,6 +10437,7 @@ id: WBPhenotype:0001419
 name: emetine hypersensitive
 def: "Animals respond to emetine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001420
@@ -10490,7 +10486,7 @@ is_a: WBPhenotype:0001424 ! oocyte physiology variant
 
 [Term]
 id: WBPhenotype:0001426
-name: coelomocyte uptake defective
+name: coelomocyte endocytosis defective
 def: "Fluid-phase endocytosis by coelomocytes is less frequent or efficient compared to control." [pmid:16042554, WB:cab]
 synonym: "Cup" RELATED []
 is_a: WBPhenotype:0001422 ! endocytic transport defect
@@ -10696,7 +10692,7 @@ id: WBPhenotype:0001453
 name: high sodium chloride concentration osmotic avoidance variant
 def: "Animals exhibit variations in their avoidance response to high concentrations of sodium chloride solution compared to control." [WB:WBPerson2021]
 synonym: "high sodium chloride concentration osmotic avoidance abnormal" NARROW []
-is_a: WBPhenotype:0000249 ! osmotic avoidance defective
+is_a: WBPhenotype:0000663 ! osmotic avoidance variant
 
 [Term]
 id: WBPhenotype:0001454
@@ -10948,6 +10944,7 @@ name: male spicule development variant
 def: "Animals exhibit variations in the development of the male elongated sclerotized structures covered by a hardened layer of cuticle in the tail (which are actively everted during copulation to fasten the male copulatory fan to the vulva) compared to control." [WB:cab, WB:WBPerson363]
 synonym: "male spicule development abnormal" NARROW []
 is_a: WBPhenotype:0000430 ! male copulatory structure development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0001488
@@ -11316,8 +11313,7 @@ id: WBPhenotype:0001537
 name: mRNA turnover variant
 def: "Any variation in the ability of cells to monitor the quality of their mRNAs and degrade any transcripts that are poorly or incompletely translated compared to control." [WB:WBPaper00004926]
 synonym: "mRNA turnover abnormal" NARROW []
-is_a: WBPhenotype:0001283 ! organelle metabolism variant
-is_a: WBPhenotype:0001826 ! RNA degradation variant
+is_a: WBPhenotype:0000028 ! RNA processing variant
 
 [Term]
 id: WBPhenotype:0001538
@@ -11473,9 +11469,7 @@ id: WBPhenotype:0001558
 name: dauer amphid sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of any component of any specialized chemosensory organs located on the head, compared to that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer amphid sensillum abnormal" NARROW []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
 is_a: WBPhenotype:0000256 ! amphid morphology variant
-is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 is_a: WBPhenotype:0001556 ! dauer sensillum variant
 
 [Term]
@@ -11771,6 +11765,7 @@ id: WBPhenotype:0001599
 name: ouabain resistant
 def: "Animals fail to respond to the concentration of ouabain that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans, resistance to ouabain is often assayed via body contraction response." [WB:WBPaper00000484, WB:WBPerson2021]
 is_a: WBPhenotype:0000331 ! inhibitors of na k atpase resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001600
@@ -11789,12 +11784,14 @@ is_a: WBPhenotype:0000011 ! drug resistant
 id: WBPhenotype:0001602
 name: methiothepin resistant
 def: "Animals fail to respond to the concentration of methiothepin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
 id: WBPhenotype:0001603
 name: cyproheptadine resistant
 def: "Animals fail to respond to the concentration of cyproheptadine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
@@ -11802,6 +11799,7 @@ id: WBPhenotype:0001604
 name: mianserin resistant
 def: "Animals fail to respond to the concentration of mianserin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
 synonym: "dibenzazepine resistant" RELATED []
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
@@ -11816,6 +11814,7 @@ name: ethanol hypersensitive
 def: "Animals respond to ethanol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00002358, WB:WBPerson712]
 synonym: "alcohol sensitive" BROAD []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001607
@@ -11829,6 +11828,7 @@ name: enflurane hypersensitive
 def: "Animals respond to the anesthetic enflurane at lower concentrations or shorter exposure times than control animals." [WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001609
@@ -11836,6 +11836,7 @@ name: isoflurane hypersensitive
 def: "Animals respond to the anesthetic isoflurane at lower concentrations or shorter response times than control animals." [WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001610
@@ -11843,12 +11844,14 @@ name: diethyl ether hypersensitive
 def: "Animals respond to the anesthetic ether at lower concentrations or shorter response times than control animals." [WB:WBPaper00001063, WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001611
 name: halothane hypersensitive
 def: "Animals respond to the lipid-soluble anesthetic halothane at lower concentrations or shorter response times compared to control animals." [WB:WBPaper00000958, WB:WBPaper00031286, WB:WBPerson721]
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001612
@@ -11857,6 +11860,7 @@ def: "Animals fail to respond to the concentration of ethanol that elicits a res
 synonym: "alcohol resistant" BROAD []
 synonym: "Jud" BROAD []
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001613
@@ -11882,12 +11886,14 @@ is_a: WBPhenotype:0001614 ! anticonvulsant response variant
 id: WBPhenotype:0001616
 name: trimethadione resistant
 def: "Animals fail to respond to the concentration of trimethadione, which acts as an anticonvulsant, that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00024698, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001615 ! anticonvulsant resistant
 
 [Term]
 id: WBPhenotype:0001617
 name: ethosuximide resistant
 def: "Animals fail to respond to the concentration of ethosuximide, which acts as an anticonvulsant, that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001615 ! anticonvulsant resistant
 
 [Term]
@@ -11895,12 +11901,14 @@ id: WBPhenotype:0001618
 name: halothane resistant
 def: "Animals fail to respond to the concentration of the anesthetic halothane that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00004721, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001619
 name: isoflurane resistant
 def: "Animals fail to respond to the concentration of the volatile anesthetic isoflurane that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00004721, WB:WBPerson712]
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001620
@@ -12000,7 +12008,6 @@ is_a: WBPhenotype:0001664 ! X chromosome nondisjunction
 id: WBPhenotype:0001633
 name: lethal gamete
 def: "Animals produce ova/sperm that contain lethal factors as a result of chromosomal disjunction defects." [WB:WBPaper00000179, WB:WBPerson712]
-is_a: WBPhenotype:0000966 ! germline mortal
 is_a: WBPhenotype:0001174 ! chromosome disjunction defective
 
 [Term]
@@ -12116,6 +12123,7 @@ name: Fluorouracil resistant
 def: "Animals fail to respond to the concentration of Fluorouracil (5-FU) that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. Elegans Fluorouracil induces germ cell death, inhibits embryogenesis and inhibits larval growth (depending on dose) in control animals." [WB:WBPaper00031571, WB:WBPerson721]
 synonym: "5 FU resistant" EXACT []
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001650
@@ -12147,6 +12155,7 @@ is_a: WBPhenotype:0000591 ! metal response variant
 id: WBPhenotype:0001654
 name: cadmium resistant
 def: "Animals fail to respond to the concentration of cadmium that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to cadmium to elicit the response compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001653 ! cadmium response variant
 
 [Term]
@@ -12154,6 +12163,7 @@ id: WBPhenotype:0001655
 name: cadmium hypersensitive
 def: "Animals respond to cadmium at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001653 ! cadmium response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001656
@@ -12208,6 +12218,7 @@ name: spermatheca development variant
 def: "Any variation in the progression of the somatic gonad structure that connects the distal gonad arm to the uterus over time from an initial condition to a later condition compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "spermatheca development abnormal" NARROW []
 is_a: WBPhenotype:0000399 ! somatic gonad development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0001663
@@ -12242,6 +12253,7 @@ name: methyl methanesulfonate hypersensitive
 def: "Animals respond to the chemical mutagen methyl methanesulfonate (MMS) a methanesulfonate ester and alkylating agent at a lower concentration or a shorter exposure compared to control animals. In C. elegans, increased sensitivity to MMS can be observed as a decrease in egg hatch upon acute exposure or inhibition of growth after chronic exposure compared to control animals given the same treatment." [WB:WBPaper00000565, WB:WBPerson712]
 synonym: "MMS hypersensitive" EXACT []
 is_a: WBPhenotype:0000498 ! methyl methanesulfonate response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001668
@@ -12665,6 +12677,7 @@ id: WBPhenotype:0001724
 name: tunicamycin hypersensitive
 def: "Animals respond to tunicamycin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00030877, WB:WBPerson557]
 is_a: WBPhenotype:0000359 ! tunicamycin response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001725
@@ -12849,11 +12862,13 @@ id: WBPhenotype:0001749
 name: zinc toxicity hypersensitive
 def: "The toxic response to zinc occurs at a lower concentration or a shorter exposure compared to control animals. In C. elegans hypersensitive animals exhibit delayed development or lethality at concentrations of zinc (e.g. ZnSO4), which has little or no effect on control worms." [WB:WBPaper00031911, WB:WBPerson712]
 is_a: WBPhenotype:0001747 ! zinc response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001750
 name: zinc toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of zinc that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to zinc include delayed development or lethality." [WB:WBPaper00031911, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001747 ! zinc response variant
 
 [Term]
@@ -12877,7 +12892,7 @@ is_a: WBPhenotype:0000536 ! cell physiology variant
 id: WBPhenotype:0001753
 name: coelomocyte uptake increased
 def: "Animals exhibit intensified accumulation of fluids or fluorescent markers etc. within their coelomocytes compared to control animals." [WB:WBPaper00004883, WB:WBPerson712]
-is_a: WBPhenotype:0001426 ! coelomocyte uptake defective
+is_a: WBPhenotype:0001423 ! coelomocyte physiology variant
 
 [Term]
 id: WBPhenotype:0001754
@@ -12945,7 +12960,6 @@ id: WBPhenotype:0001763
 name: uptake by intestinal cell defective
 def: "Uptake of subtances from the intestine is altered from that observed in control animals." [WB:WBPaper00004883, WB:WBPerson712]
 is_a: WBPhenotype:0000986 ! epithelial cell physiology variant
-is_a: WBPhenotype:0001422 ! endocytic transport defect
 
 [Term]
 id: WBPhenotype:0001764
@@ -13028,7 +13042,7 @@ is_a: WBPhenotype:0000047 ! gastrulation variant
 id: WBPhenotype:0001775
 name: hormetic temperature induced life span extension defective
 def: "Pre-treatment with stress-inducing temperatures does not result in a life-span extension as it does in control animals." [WB:WBPaper00028750, WB:WBPaper00031942, WB:WBPerson712]
-is_a: WBPhenotype:0000061 ! extended life span
+is_a: WBPhenotype:0000039 ! life span variant
 is_a: WBPhenotype:0000146 ! organism temperature response variant
 
 [Term]
@@ -13197,6 +13211,7 @@ id: WBPhenotype:0001800
 name: antimicrobial gene expression variant
 def: "Changes in the levels of innate immune gene products in response to pathogen exposure are significantly different from that observed in control animals." [WB:WBPaper00031865, WB:WBPerson712]
 synonym: "antimicrobial gene expression abnormal" NARROW []
+is_a: WBPhenotype:0001857 ! pathogen induced gene expression variant
 is_a: WBPhenotype:0002164 ! innate immune response variant
 
 [Term]
@@ -13369,7 +13384,6 @@ name: meiotic progression prophase variant
 def: "Animals exhibit variations in any process necessary for the progression through prophase during meiosis compared to control animals." [WB:WBPaper00005486, WB:WBPerson557]
 is_a: WBPhenotype:0000313 ! meiotic progression during oogenesis variant
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0001825
@@ -13464,6 +13478,7 @@ id: WBPhenotype:0001839
 name: phorbol ester resistant
 def: "Animals fail to respond to the concentration of phorbol esters that elicit a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. Phorbol esters such as PMA act as DAG mimetics." [WB:WBPaper00033094, WB:WBPerson2021]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001840
@@ -13662,7 +13677,6 @@ id: WBPhenotype:0001868
 name: meiotic spindle defective
 def: "Cells undergoing meiosis exhibit defects in the overall function or activity of the meiotic spindle." [WB:WBPaper00032910, WB:WBPerson2987]
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0001869
@@ -13736,6 +13750,7 @@ name: hydroxyurea hypersensitive
 def: "Animals respond to hydroxyurea at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
 is_a: WBPhenotype:0001878 ! hydroxyurea response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001880
@@ -13823,12 +13838,7 @@ id: WBPhenotype:0001895
 name: parental chromosome mixing defective
 def: "Parental chromosomes fail to undergo appropriate mixing upon pronuclear fusion resulting in a zygotic nucleus in which parental genomes remain segregated." [GO:0007344, WB:WBPerson2987]
 synonym: "pronuclear fusion defective" RELATED []
-is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
-is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
-is_a: WBPhenotype:0001035 ! nuclear appearance number defective early emb
 is_a: WBPhenotype:0001138 ! nucleus defective early emb
-is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
-is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
 [Term]
 id: WBPhenotype:0001896
@@ -13887,6 +13897,7 @@ is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 id: WBPhenotype:0001904
 name: manganese toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of manganese that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to manganese include dopamine (DA) neuron neurodegeneration." [WB:WBPaper00035259, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001863 ! manganese response variant
 
 [Term]
@@ -13998,7 +14009,6 @@ name: meiotic DNA double strand break formation variant
 def: "Any variation in the creation of double-strand breaks that occur during meiosis that may result in the initiation of meiotic recombination." [GO:0042138, WB:WBPerson557]
 comment: Possible XP.
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0001922
@@ -14551,7 +14561,6 @@ id: WBPhenotype:0002006
 name: anaphase I progression variant early embryo
 def: "Compared to controls, embryos exhibit variations in the part meiosis I in which homologous chromosomes separate and migrate away from each other." [WB:WBPaper00031064, WB:WBPerson712]
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 is_a: WBPhenotype:0002389 ! anaphase variant
 
 [Term]
@@ -14590,7 +14599,6 @@ id: WBPhenotype:0002012
 name: meiotic chromosome organization variant
 def: "Any variation in the process of chromosome organization that is involved in meiosis, compared to control." [GO:0070192, WB:WBPerson557]
 is_a: WBPhenotype:0000775 ! meiosis variant
-is_a: WBPhenotype:0001041 ! meiosis defective early emb
 
 [Term]
 id: WBPhenotype:0002013
@@ -14816,6 +14824,7 @@ is_a: WBPhenotype:0000631 ! drug response variant
 id: WBPhenotype:0002048
 name: abamectin resistant
 def: "Animals survive longer, or do not respond to the same degree as control animals under similar conditions of abamectin exposure." [WB:WBPaper00040740, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0002049 ! abamectin repsonse variant
 
 [Term]
@@ -14829,6 +14838,7 @@ is_a: WBPhenotype:0001852 ! antihelmintic response variant
 id: WBPhenotype:0002050
 name: abamectin sensitive
 def: "Animals are do not survive, or become paralyzed in the presence of abamectin." [WB:WBPaper00040740, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002049 ! abamectin repsonse variant
 
 [Term]
@@ -14848,6 +14858,7 @@ id: WBPhenotype:0002053
 name: ivermectin resistant
 def: "Animals fail to respond to or exhibit an attenuated response to ivermectin under conditions that elicits a response in control animals." [WB:WBPaper00003945, WB:WBPaper00040740, WB:WBPerson712]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001856 ! ivermectin response variant
 
 [Term]
@@ -14855,6 +14866,7 @@ id: WBPhenotype:0002054
 name: magnesium hypersensitivity
 def: "Animals exhibit an exaggerated response to magnesium compared to control animals exposed to similar concentrations." [WB:WBPaper00036046, WB:WBPerson712]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002055
@@ -15001,6 +15013,7 @@ id: WBPhenotype:0002077
 name: dopamine resistant
 def: "Animals fail to respond to the concentration of a dopamine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00038270, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002078
@@ -15062,6 +15075,7 @@ id: WBPhenotype:0002087
 name: hydrogen sulfide hypersensitive
 def: "Animals respond to hydrogen sulfide at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00039977, WB:WBPerson712]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002088
@@ -15814,6 +15828,7 @@ id: WBPhenotype:0002205
 name: hypersensitive to galactose
 def: "Animals exhibit negative effects on growth, development, or metabolism when exposed to a galactose-rich diet, compared to control animals." [WB:WBPaper00045849, WB:WBPerson712]
 is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002206
@@ -15837,7 +15852,7 @@ is_a: WBPhenotype:0000424 ! antibody staining variant
 id: WBPhenotype:0002209
 name: hook development variant
 def: "Any variation in the development of the structure that lies on the ventral surface just anterior and central to the base of the spicule openings (small lump on the gubernaculum of the male tail) and contains a sensory structure called the hook sensillum, compared to control. In C. elegans the hook is necessary for proper male mating." [WB:WBPaper00003428, WB:WBPerson2987]
-is_a: WBPhenotype:0001297 ! male tail development variant
+is_a: WBPhenotype:0001488 ! gubernaculum development variant
 
 [Term]
 id: WBPhenotype:0002210
@@ -15859,9 +15874,7 @@ name: amphid dye filling defect
 def: "Animals exhibit defects in dye-filling of the neuronal cells of the amphid sensilla. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO." [WB:WBPerson557]
 synonym: "dye filling defect" RELATED []
 synonym: "Dyf" BROAD []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
 is_a: WBPhenotype:0000256 ! amphid morphology variant
-is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0002213
@@ -15928,17 +15941,20 @@ id: WBPhenotype:0002223
 name: manganese hypersensitivity
 def: "Animals respond at a faster rate or to lower concentrations of manganese that that observed for control animals." [WB:WBPaper00044740, WB:WBPerson712]
 is_a: WBPhenotype:0001863 ! manganese response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002224
 name: mercury hypersensitive
 def: "Animals respond to mercury at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00004381, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002225
 name: lead hypersensitive
 def: "Animals respond to lead at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00004381, WB:WBPerson2987]
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002227 ! lead response variant
 
 [Term]
@@ -15946,6 +15962,7 @@ id: WBPhenotype:0002226
 name: cobalt hypersensitive
 def: "Animals respond to cobalt at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00005255, WB:WBPaper00006388, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002227
@@ -16060,6 +16077,7 @@ id: WBPhenotype:0002244
 name: arsenic hypersensitive
 def: "Animals respond to arsenic at a lower concentration or at a shorter exposure time compared to control animals." [WB:WBPaper00036020, WB:WBPerson712]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002245
@@ -16097,6 +16115,7 @@ id: WBPhenotype:0002250
 name: silver hypersensitive
 def: "Animals respond to silver at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002251
@@ -16140,12 +16159,14 @@ id: WBPhenotype:0002257
 name: iron hypersensitive
 def: "Animals respond to iron at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00038278, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002258
 name: nickel toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of nickel that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to nickel include delayed development or lethality." [WB:WBPaper00038278, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002259
@@ -17175,6 +17196,7 @@ id: WBPhenotype:0002422
 name: tunicamycin resistant
 def: "Animals respond to tunicamycin at a higher concentration or a longer exposure compared to control animals." [WB:WBPaper00036076, WB:WBPaper00037064, WB:WBPerson2987]
 is_a: WBPhenotype:0000359 ! tunicamycin response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002423
@@ -18140,6 +18162,14 @@ holds_over_chain: RO:0000052 part_of
 transitive_over: part_of ! part_of
 
 [Typedef]
+id: RO:0002503
+name: towards
+def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
+property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
+
+[Typedef]
 id: RO:0002573
 name: has modifier
 def: "A relation that holds between an attribute or a qualifier and another attribute." []
@@ -18221,4 +18251,13 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartO
 property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
 inverse_of: has_part ! has part
+
+[Typedef]
+id: results_in_developmental_progression_of
+name: results in developmental progression of
+def: "p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss)." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This property and its subproperties are being used primarily for the definition of GO developmental processes. The property hierarchy mirrors the core GO hierarchy. In future we may be able to make do with a more minimal set of properties, but due to the way GO is currently structured we require highly specific relations to avoid incorrect entailments. To avoid this, the corresponding genus terms in GO should be declared mutually disjoint." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: seeAlso Ontology:extensions
 

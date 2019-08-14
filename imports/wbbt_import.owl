@@ -15,7 +15,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/imports/wbbt_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2019-08-13/imports/wbbt_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2019-08-14/imports/wbbt_import.owl"/>
     </owl:Ontology>
     
 
@@ -1190,6 +1190,23 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>Inverse of developmentally preceded by</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <rdfs:label xml:lang="en">developmentally succeeded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002295 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002295">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002324"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).</obo:IAO_0000115>
+        <obo:IAO_0000116>This property and its subproperties are being used primarily for the definition of GO developmental processes. The property hierarchy mirrors the core GO hierarchy. In future we may be able to make do with a more minimal set of properties, but due to the way GO is currently structured we require highly specific relations to avoid incorrect entailments. To avoid this, the corresponding genus terms in GO should be declared mutually disjoint.</obo:IAO_0000116>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <oboInOwl:shorthand>results_in_developmental_progression_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">results in developmental progression of</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wiki.geneontology.org/index.php/Ontology_extensions"/>
     </owl:ObjectProperty>
     
 
@@ -3423,6 +3440,27 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005135"/>
+        <obo:IAO_0000115>The left and right lateral ganglia lie beside the nerve ring in the head. They each contain about (30) neuron cell bodies and send their neuronal processes into the ring at its posterior margin either laterally or ventrally via the amphid commissures and ventral ganglion, but form no local neuropil separate from the nerve ring. The lateral ganglia are in close contact with the lateral hypodermal cords.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>lateral ganglia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0005105</oboInOwl:id>
+        <rdfs:label>lateral ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005105"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The left and right lateral ganglia lie beside the nerve ring in the head. They each contain about (30) neuron cell bodies and send their neuronal processes into the ring at its posterior margin either laterally or ventrally via the amphid commissures and ventral ganglion, but form no local neuropil separate from the nerve ring. The lateral ganglia are in close contact with the lateral hypodermal cords.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005107 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005107">
@@ -3460,6 +3498,30 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005189"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005739"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>ganglion in the head.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005135</oboInOwl:id>
+        <rdfs:label>head ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005135"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion in the head.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005175 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005175">
@@ -3486,6 +3548,35 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>organ producing either sperm or ova.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0140512888</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005762"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005737"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>set of six cells that form a thin cylindrical sheet between pharynx and ring neuropile; no chemical synapses, but gap junctions with muscle arms and RME motor neurons, might be glial cells</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>WBbt:0005387</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>WBbt:0005782</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>GLR scaffold cell</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>anomalous_pharynx_cells (TreeNode)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0005176</oboInOwl:id>
+        <rdfs:comment>LINKOUT::WORMATLAS::&lt;http://www.wormatlas.org/ver1/handbook/mesodermal.htm/glr.htm&gt;</rdfs:comment>
+        <rdfs:label>GLR</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005176"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>set of six cells that form a thin cylindrical sheet between pharynx and ring neuropile; no chemical synapses, but gap junctions with muscle arms and RME motor neurons, might be glial cells</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3554,6 +3645,43 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006977"/>
+        <obo:IAO_0000115>the ganglion that lies above and behind the rectum in the tail, in close continuity with the anal hypodermal ridge. It contains 3 neuron cell bodies (DVA, DVB and DVC) that send their neuronal processes into the ventral nerve cord via dorso-rectal commissures that encircle the anus. The ganglion contains no local neuropil in the hermaphrodite. In the adult male tail, this ganglion gains additional neurons and some local neuropil.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005212</oboInOwl:id>
+        <rdfs:label>dorso-rectal ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005212"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>the ganglion that lies above and behind the rectum in the tail, in close continuity with the anal hypodermal ridge. It contains 3 neuron cell bodies (DVA, DVB and DVC) that send their neuronal processes into the ventral nerve cord via dorso-rectal commissures that encircle the anus. The ganglion contains no local neuropil in the hermaphrodite. In the adult male tail, this ganglion gains additional neurons and some local neuropil.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005214">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005135"/>
+        <obo:IAO_0000115>ganglion that lies beside the nerve ring in the head. It contains neuron cell bodies that send their neuronal processes into the ring and longitudinal nerves, but form no local neuropil separate from the nerve ring. The dorsal ganglion is in close contact with the dorsal hypodermal cord.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>WBbt:0005228</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005214</oboInOwl:id>
+        <rdfs:label>dorsal ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005214"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion that lies beside the nerve ring in the head. It contains neuron cell bodies that send their neuronal processes into the ring and longitudinal nerves, but form no local neuropil separate from the nerve ring. The dorsal ganglion is in close contact with the dorsal hypodermal cord.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005237 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005237">
@@ -3608,6 +3736,26 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005298 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005298">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005135"/>
+        <obo:IAO_0000115>ganglion lies beside the nerve ring in the head, just anterior of the retrovesicular ganglion. It contains about 20 interneuron and motorneuron cell bodies that all send their neuronal processes into the ring. The cell bodies are divided into two groups by the intrusion of the excretory duct and canal. The cells are bounded by a basal lamina which physically separates them from the lateral ganglion even though they are adjacent to one another.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>WB:rynl</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ventral ganglia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0005298</oboInOwl:id>
+        <rdfs:label>ventral ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005298"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion lies beside the nerve ring in the head, just anterior of the retrovesicular ganglion. It contains about 20 interneuron and motorneuron cell bodies that all send their neuronal processes into the ring. The cell bodies are divided into two groups by the intrusion of the excretory duct and canal. The cells are bounded by a basal lamina which physically separates them from the lateral ganglion even though they are adjacent to one another.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005312 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005312">
@@ -3640,6 +3788,24 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>an accordion-like tube that contains sperm and is the site of oocyte fertilization.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005332 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005332">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005189"/>
+        <obo:IAO_0000115>ganglion in the trunk of the body.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005332</oboInOwl:id>
+        <rdfs:label>body ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005332"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion in the trunk of the body.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3741,6 +3907,25 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005374"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>anterior lobe of the bi-lobbed hermaphrodite gonad.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005375 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005375">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005135"/>
+        <obo:IAO_0000115>ganglion anterior to the nerve ring</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005375</oboInOwl:id>
+        <rdfs:label>anterior ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005375"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion anterior to the nerve ring</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3848,6 +4033,54 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005440 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005440">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005746"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0003681"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005735"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The pharyngeal nervous system is composed of 20 pharyngeal neurons which lie completely within the pharynx.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005440</oboInOwl:id>
+        <rdfs:label>pharyngeal nervous system</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005440"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The pharyngeal nervous system is composed of 20 pharyngeal neurons which lie completely within the pharynx.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005448 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005448">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005332"/>
+        <obo:IAO_0000115>ganglion anterior to the anus.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005448</oboInOwl:id>
+        <rdfs:label>preanal ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005448"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion anterior to the anus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005451">
@@ -3885,6 +4118,26 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005465">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005332"/>
+        <obo:IAO_0000115>ganglion on the lateral side, in postior portion of the body, associated with posterior deirid.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>posterior lateral ganglia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0005465</oboInOwl:id>
+        <rdfs:label>posterior lateral ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005465"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>ganglion on the lateral side, in postior portion of the body, associated with posterior deirid.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005501 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005501">
@@ -3893,6 +4146,24 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:id>WBbt:0005501</oboInOwl:id>
         <rdfs:label>outer labial sensillum</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005656 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005656">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005332"/>
+        <obo:IAO_0000115>Ganglion that lies at the anterior limit of the ventral nerve cord, near the ventral ganglion and nerve ring in the head posterior to the excretory pore. It is open and continuous with the region containing the motoneurons of the ventral cord. In the early L1 this ganglion holds 12 neuron cell bodies plus one neuroblast (Sulston and Horvitz, 1977; White et al., 1986). In the adult animal, the ganglion holds 20 neuron cell bodies.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005656</oboInOwl:id>
+        <rdfs:label>retrovesicular ganglion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005656"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Ganglion that lies at the anterior limit of the ventral nerve cord, near the ventral ganglion and nerve ring in the head posterior to the excretory pore. It is open and continuous with the region containing the motoneurons of the ventral cord. In the early L1 this ganglion holds 12 neuron cell bodies plus one neuroblast (Sulston and Horvitz, 1977; White et al., 1986). In the adult animal, the ganglion holds 20 neuron cell bodies.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -5094,6 +5365,24 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/WBbt_0005837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005837">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005759"/>
+        <obo:IAO_0000115>neuron that senses soluable chemicals</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0005837</oboInOwl:id>
+        <rdfs:label>chemosensory neuron</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005837"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>neuron that senses soluable chemicals</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/WBbt_0005839 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005839">
@@ -5158,6 +5447,74 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>female genital.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0006749 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0006749">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005766"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005739"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005760"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>the most extensive region of neuropil in the animal, consists of a large toroidal bundle of processes.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>circumpharyngeal nerve ring</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0006749</oboInOwl:id>
+        <rdfs:label>nerve ring</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006749"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>the most extensive region of neuropil in the animal, consists of a large toroidal bundle of processes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00000938</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006749"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>circumpharyngeal nerve ring</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00000938</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0006750 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0006750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005766"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005760"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a bundle of nerve processes that runs along the dorsal mid-line of the animal.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>dorsal cord</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0006750</oboInOwl:id>
+        <rdfs:label>dorsal nerve cord</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006750"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>a bundle of nerve processes that runs along the dorsal mid-line of the animal.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00000938</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006750"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>dorsal cord</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00000938</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5272,6 +5629,33 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006783"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>precursor cell destined to divide some time after hatching.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0006790 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0006790">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0007815"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008435"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006760"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>monoucleate interfacial cell between the uterus and vulva (uv1-uv3), four sets total (L/R, A/P)</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>uv cell</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>WBbt:0006790</oboInOwl:id>
+        <rdfs:label>uterine-vulval cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006790"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>monoucleate interfacial cell between the uterus and vulva (uv1-uv3), four sets total (L/R, A/P)</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00002608</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6382,6 +6766,24 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008431"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>neuron that senses and responds to mechanical stimuli, such as touch.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0008435 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0008435">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0003672"/>
+        <obo:IAO_0000115>cell of the epithelia of uterus.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBbt:0008435</oboInOwl:id>
+        <rdfs:label>uterine epithelial cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008435"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>cell of the epithelia of uterus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     

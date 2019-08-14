@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/imports/cl_import.owl
+data-version: wbphenotype/releases/2019-08-14/imports/cl_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -380,8 +380,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -15845,6 +15845,96 @@ synonym: "manatees" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:9774 ! Sirenia
 property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:class
+name: class
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:family
+name: family
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:genus
+name: genus
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:infraclass
+name: infraclass
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:kingdom
+name: kingdom
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:order
+name: order
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:phylum
+name: phylum
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:species
+name: species
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:subclass
+name: subclass
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:subphylum
+name: subphylum
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:superclass
+name: superclass
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:superfamily
+name: superfamily
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:superkingdom
+name: superkingdom
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:superorder
+name: superorder
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:taxonomic_rank
+name: taxonomic rank
+namespace: ncbi_taxonomy
+comment: This is an abstract class for use with the NCBI taxonomy to name the depth of the node within the tree. The link between the node term and the rank is only visible if you are using an obo 1.3 aware browser/editor; otherwise this can be ignored.
 
 [Term]
 id: OBI:0100026
@@ -36136,6 +36226,13 @@ is_cyclic: true
 is_transitive: false
 
 [Typedef]
+id: is_count_of
+name: is count of
+namespace: uberon
+xref: UBPROP:0000100
+is_metadata_tag: true
+
+[Typedef]
 id: is_opposite_of
 name: is opposite of
 namespace: quality
@@ -36344,9 +36441,9 @@ name: pharyngeal arch number
 namespace: uberon
 def: "x pharyngeal_arch_number N if and only if (i) x is a pharyngeal arch, and (ii) x is ancestrally pharyngeal arch number N in a series of pharyngeal arches repeated along a antero-posterior axis, with arch_number 1 being the mandibular arch." [https://orcid.org/0000-0002-6601-2165]
 xref: UBPROP:0000103
+property_value: is_count_of UBERON:0002539
+property_value: preceding_element_is BSPO:0000096
 property_value: terminology_notes "gill arch N = PA N-2. the term branchial_arch is ambiguous." xsd:string
-property_value: UBPROP:0000100 UBERON:0002539
-property_value: UBPROP:0000101 BSPO:0000096
 is_metadata_tag: true
 
 [Typedef]
@@ -36419,6 +36516,14 @@ range: BFO:0000003 ! occurrent
 holds_over_chain: part_of precedes
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: preceding_element_is
+name: preceding element is
+namespace: uberon
+def: "A property used in conjunction with repeated_element_number to indicate an axis and directionality along that axis. If P preceding_element_is R, and P is_count_of S, and X P N, and X' P N+1, then it follows that every X R some X', and the class expression [S and R some X' and inv(R) some X] is empty (i.e. X is followed by X', with no intermediates)" [https://orcid.org/0000-0002-6601-2165]
+xref: UBPROP:0000101
+is_metadata_tag: true
 
 [Typedef]
 id: present_in_taxon

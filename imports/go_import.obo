@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/imports/go_import.owl
+data-version: wbphenotype/releases/2019-08-14/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -10337,6 +10337,18 @@ is_a: GO:0035966 ! response to topologically incorrect protein
 is_a: GO:0071310 ! cellular response to organic substance
 created_by: rfoulger
 creation_date: 2011-08-03T11:44:50Z
+
+[Term]
+id: GO:0036194
+name: muscle cell projection
+namespace: cellular_component
+def: "A prolongation or process extending from a muscle cell. A muscle cell is a mature contractile cell, commonly known as a myocyte. This cell has as part of its cytoplasm myofibrils organized in various patterns." [CL:0000187, GOC:kmv, PMID:15930100, PMID:22464329]
+synonym: "muscle arm" NARROW [GOC:kmv]
+synonym: "myocyte projection" EXACT [CL:0000187]
+synonym: "myopodia" NARROW [GOC:kmv]
+is_a: GO:0120025 ! plasma membrane bounded cell projection
+created_by: rfoulger
+creation_date: 2012-04-20T10:20:47Z
 
 [Term]
 id: GO:0036211

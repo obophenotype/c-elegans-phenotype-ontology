@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-08-14/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -7212,6 +7212,7 @@ is_a: WBPhenotype:0000536 ! cell physiology variant
 id: WBPhenotype:0000992
 name: high sodium chloride concentration osmotic avoidance defective
 def: "Failure to execute the characteristic response to high concentrations of sodium chloride solution. C. elegans typically avoids high concentrations of sodium chloride solution." [WB:WBPerson2021]
+is_a: WBPhenotype:0000249 ! osmotic avoidance defective
 is_a: WBPhenotype:0001453 ! high sodium chloride concentration osmotic avoidance variant
 
 [Term]
@@ -8291,7 +8292,7 @@ name: nucleus defective early emb
 def: "Nucleus is abnormal in the inviable one- to four-cell embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "nucleus abnormal" NARROW []
-is_a: WBPhenotype:0001034 ! pronuclear nuclear appearance defective early emb
+is_a: WBPhenotype:0000764 ! embryonic cell organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0001139
@@ -10306,7 +10307,7 @@ is_a: WBPhenotype:0001424 ! oocyte physiology variant
 
 [Term]
 id: WBPhenotype:0001426
-name: coelomocyte uptake defective
+name: coelomocyte endocytosis defective
 def: "Fluid-phase endocytosis by coelomocytes is less frequent or efficient compared to control." [pmid:16042554, WB:cab]
 synonym: "Cup" RELATED []
 is_a: WBPhenotype:0001422 ! endocytic transport defect
@@ -10508,7 +10509,7 @@ id: WBPhenotype:0001453
 name: high sodium chloride concentration osmotic avoidance variant
 def: "Animals exhibit variations in their avoidance response to high concentrations of sodium chloride solution compared to control." [WB:WBPerson2021]
 synonym: "high sodium chloride concentration osmotic avoidance abnormal" NARROW []
-is_a: WBPhenotype:0000249 ! osmotic avoidance defective
+is_a: WBPhenotype:0000663 ! osmotic avoidance variant
 
 [Term]
 id: WBPhenotype:0001454
@@ -12649,7 +12650,7 @@ is_a: WBPhenotype:0000536 ! cell physiology variant
 id: WBPhenotype:0001753
 name: coelomocyte uptake increased
 def: "Animals exhibit intensified accumulation of fluids or fluorescent markers etc. within their coelomocytes compared to control animals." [WB:WBPaper00004883, WB:WBPerson712]
-is_a: WBPhenotype:0001426 ! coelomocyte uptake defective
+is_a: WBPhenotype:0001423 ! coelomocyte physiology variant
 
 [Term]
 id: WBPhenotype:0001754
@@ -12717,7 +12718,6 @@ id: WBPhenotype:0001763
 name: uptake by intestinal cell defective
 def: "Uptake of subtances from the intestine is altered from that observed in control animals." [WB:WBPaper00004883, WB:WBPerson712]
 is_a: WBPhenotype:0000986 ! epithelial cell physiology variant
-is_a: WBPhenotype:0001422 ! endocytic transport defect
 
 [Term]
 id: WBPhenotype:0001764
@@ -12799,7 +12799,7 @@ is_a: WBPhenotype:0000047 ! gastrulation variant
 id: WBPhenotype:0001775
 name: hormetic temperature induced life span extension defective
 def: "Pre-treatment with stress-inducing temperatures does not result in a life-span extension as it does in control animals." [WB:WBPaper00028750, WB:WBPaper00031942, WB:WBPerson712]
-is_a: WBPhenotype:0000061 ! extended life span
+is_a: WBPhenotype:0000039 ! life span variant
 is_a: WBPhenotype:0000146 ! organism temperature response variant
 
 [Term]
@@ -12969,6 +12969,7 @@ id: WBPhenotype:0001800
 name: antimicrobial gene expression variant
 def: "Changes in the levels of innate immune gene products in response to pathogen exposure are significantly different from that observed in control animals." [WB:WBPaper00031865, WB:WBPerson712]
 synonym: "antimicrobial gene expression abnormal" NARROW []
+is_a: WBPhenotype:0001857 ! pathogen induced gene expression variant
 is_a: WBPhenotype:0002164 ! innate immune response variant
 
 [Term]
