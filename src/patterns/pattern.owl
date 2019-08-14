@@ -9,6 +9,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<urn:unnamed:ontology#ont1>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CARO_0010004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
@@ -33,6 +34,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000912>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001558>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001624>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001650>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001651>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001819>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001928>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001997>))
@@ -43,6 +46,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAb
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMolecularFunction.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMorphologyOfAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMorphologyOfAnatomicalEntityInLocation.yaml>))
@@ -58,6 +62,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormally
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedRateOfBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedRateOfBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedRateOfMolecularFunction.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedSizeOfAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDelayedBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedLengthOfAnatomicalEntity.yaml>))
@@ -66,6 +71,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormally
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfMolecularFunction.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedSizeOfAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/atreticAnatomicalEntity>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/blisteredAnatomicalEntity.yaml>))
@@ -76,7 +82,9 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002295>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002314>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002503>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
@@ -123,6 +131,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> "abnormalBiologicalProcessInLocation"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> "abnormal 'biological process' in 'independent continuant'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008150> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/BFO_0000004>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> (abnormal development of 'anatomical entity')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> "An abnormal development of the 'anatomical entity'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> "abnormalDevelopmentOfAnatomicalEntity"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> "abnormal development of 'anatomical entity'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008150> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002295> <http://purl.obolibrary.org/obo/UBERON_0001062>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMolecularFunction.yaml> (abnormal 'molecular function')
 
@@ -239,6 +254,14 @@ AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedRateOfMolecularFunction.yaml> "decreased 'molecular function'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedRateOfMolecularFunction.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000911> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0003674>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> (decreased resistance of organism to 'chemical entity')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "Decreased resistance of organism to 'chemical entity'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "increased sensitivity of organism to 'chemical entity'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "decreased resistance of organism to 'chemical entity'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToChemicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001651> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> <http://purl.obolibrary.org/obo/CHEBI_24431>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedSizeOfAnatomicalEntity.yaml> (decreased size of the 'anatomical entity')
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedSizeOfAnatomicalEntity.yaml> "An abnormal reduction in the size of the 'anatomical entity'."^^xsd:string)
@@ -298,6 +321,14 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfMolecularFunction.yaml> "abnormallyIncreasedRateOfMolecularFunction"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfMolecularFunction.yaml> "increased 'molecular function'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedRateOfMolecularFunction.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000912> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0003674>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> (increased resistance of organism to 'chemical entity')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "Increased resistance of organism to 'chemical entity'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "decreased sensitivity of organism to 'chemical entity'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> "increased resistance of organism to 'chemical entity'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToChemicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> <http://purl.obolibrary.org/obo/CHEBI_24431>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedSizeOfAnatomicalEntity.yaml> (increased size of the 'anatomical entity')
 

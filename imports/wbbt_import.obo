@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/imports/wbbt_import.owl
+data-version: wbphenotype/releases/2019-08-14/imports/wbbt_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: wbphenotype/imports/wbbt_import
@@ -504,6 +504,15 @@ def: "lumbar ganglion, left side." [WB:rynl]
 is_a: WBbt:0005830 ! lumbar ganglion
 
 [Term]
+id: WBbt:0005105
+name: lateral ganglion
+namespace: worm_anatomy
+def: "The left and right lateral ganglia lie beside the nerve ring in the head. They each contain about (30) neuron cell bodies and send their neuronal processes into the ring at its posterior margin either laterally or ventrally via the amphid commissures and ventral ganglion, but form no local neuropil separate from the nerve ring. The lateral ganglia are in close contact with the lateral hypodermal cords." [WB:rynl, WBPaper:00038216]
+synonym: "lateral ganglia" RELATED []
+xref: WB:rynl
+is_a: WBbt:0005135 ! head ganglion
+
+[Term]
 id: WBbt:0005107
 name: labial sensillum
 namespace: worm_anatomy
@@ -519,6 +528,14 @@ def: "sensory organ of the inner labial." [WB:rynl]
 is_a: WBbt:0005107 ! labial sensillum
 
 [Term]
+id: WBbt:0005135
+name: head ganglion
+namespace: worm_anatomy
+def: "ganglion in the head." [WB:rynl]
+is_a: WBbt:0005189 ! ganglion
+relationship: part_of WBbt:0005739 ! head
+
+[Term]
 id: WBbt:0005175
 name: gonad
 namespace: worm_anatomy
@@ -526,6 +543,19 @@ def: "organ producing either sperm or ova." [ISBN:0140512888]
 is_a: WBbt:0003760 ! organ
 relationship: part_of WBbt:0005744 ! reproductive tract
 relationship: part_of WBbt:0005747 ! reproductive system
+
+[Term]
+id: WBbt:0005176
+name: GLR
+namespace: worm_anatomy
+alt_id: WBbt:0005387
+alt_id: WBbt:0005782
+def: "set of six cells that form a thin cylindrical sheet between pharynx and ring neuropile; no chemical synapses, but gap junctions with muscle arms and RME motor neurons, might be glial cells" [WB:rynl]
+comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/mesodermal.htm/glr.htm>
+synonym: "anomalous_pharynx_cells (TreeNode)" RELATED []
+synonym: "GLR scaffold cell" RELATED []
+is_a: WBbt:0005762 ! accessory cell
+relationship: part_of WBbt:0005737 ! muscular system
 
 [Term]
 id: WBbt:0005178
@@ -554,6 +584,21 @@ def: "A cell that is the E blast cell or is a lineal descendant of E." [WB:rynl]
 is_a: WBbt:0004017 ! Cell
 
 [Term]
+id: WBbt:0005212
+name: dorso-rectal ganglion
+namespace: worm_anatomy
+def: "the ganglion that lies above and behind the rectum in the tail, in close continuity with the anal hypodermal ridge. It contains 3 neuron cell bodies (DVA, DVB and DVC) that send their neuronal processes into the ventral nerve cord via dorso-rectal commissures that encircle the anus. The ganglion contains no local neuropil in the hermaphrodite. In the adult male tail, this ganglion gains additional neurons and some local neuropil." [WBPaper:00038216]
+is_a: WBbt:0006977 ! tail ganglion
+
+[Term]
+id: WBbt:0005214
+name: dorsal ganglion
+namespace: worm_anatomy
+alt_id: WBbt:0005228
+def: "ganglion that lies beside the nerve ring in the head. It contains neuron cell bodies that send their neuronal processes into the ring and longitudinal nerves, but form no local neuropil separate from the nerve ring. The dorsal ganglion is in close contact with the dorsal hypodermal cord." [WBPaper:00038216]
+is_a: WBbt:0005135 ! head ganglion
+
+[Term]
 id: WBbt:0005237
 name: touch receptor neuron
 namespace: worm_anatomy
@@ -575,6 +620,15 @@ relationship: part_of WBbt:0005748 ! alimentary system
 relationship: part_of WBbt:0008374 ! stoma
 
 [Term]
+id: WBbt:0005298
+name: ventral ganglion
+namespace: worm_anatomy
+def: "ganglion lies beside the nerve ring in the head, just anterior of the retrovesicular ganglion. It contains about 20 interneuron and motorneuron cell bodies that all send their neuronal processes into the ring. The cell bodies are divided into two groups by the intrusion of the excretory duct and canal. The cells are bounded by a basal lamina which physically separates them from the lateral ganglion even though they are adjacent to one another." [WBPaper:00038216]
+synonym: "ventral ganglia" RELATED []
+xref: WB:rynl
+is_a: WBbt:0005135 ! head ganglion
+
+[Term]
 id: WBbt:0005312
 name: copulatory spicule
 namespace: worm_anatomy
@@ -588,6 +642,13 @@ def: "an accordion-like tube that contains sperm and is the site of oocyte ferti
 comment: LINKOUT::WORMATLAS::<http://www.wormatlas.org/ver1/handbook/reproductivesystem/reproductivesystem1.htm#Thespermatheca>
 is_a: WBbt:0005758 ! hermaphrodite-specific
 relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+
+[Term]
+id: WBbt:0005332
+name: body ganglion
+namespace: worm_anatomy
+def: "ganglion in the trunk of the body." [WB:rynl]
+is_a: WBbt:0005189 ! ganglion
 
 [Term]
 id: WBbt:0005342
@@ -626,6 +687,14 @@ namespace: worm_anatomy
 def: "anterior lobe of the bi-lobbed hermaphrodite gonad." [WB:rynl]
 is_a: WBbt:0005729 ! Tissue
 relationship: part_of WBbt:0005178 ! hermaphrodite gonad
+
+[Term]
+id: WBbt:0005375
+name: anterior ganglion
+namespace: worm_anatomy
+def: "ganglion anterior to the nerve ring" [WB:rynl]
+xref: WB:rynl
+is_a: WBbt:0005135 ! head ganglion
 
 [Term]
 id: WBbt:0005391
@@ -670,6 +739,22 @@ def: "the left one in the pair of phasmid sensilla." [WB:rynl]
 is_a: WBbt:0005425 ! phasmid sensillum
 
 [Term]
+id: WBbt:0005440
+name: pharyngeal nervous system
+namespace: worm_anatomy
+def: "The pharyngeal nervous system is composed of 20 pharyngeal neurons which lie completely within the pharynx." [WBPaper:00038216]
+is_a: WBbt:0005746 ! Organ system
+relationship: part_of WBbt:0003681 ! pharynx
+relationship: part_of WBbt:0005735 ! nervous system
+
+[Term]
+id: WBbt:0005448
+name: preanal ganglion
+namespace: worm_anatomy
+def: "ganglion anterior to the anus." [WB:rynl]
+is_a: WBbt:0005332 ! body ganglion
+
+[Term]
 id: WBbt:0005451
 name: pharyngeal muscle cell
 namespace: worm_anatomy
@@ -686,10 +771,26 @@ is_a: WBbt:0004017 ! Cell
 relationship: part_of WBbt:0003681 ! pharynx
 
 [Term]
+id: WBbt:0005465
+name: posterior lateral ganglion
+namespace: worm_anatomy
+def: "ganglion on the lateral side, in postior portion of the body, associated with posterior deirid." [WB:rynl]
+synonym: "posterior lateral ganglia" RELATED []
+xref: WB:rynl
+is_a: WBbt:0005332 ! body ganglion
+
+[Term]
 id: WBbt:0005501
 name: outer labial sensillum
 namespace: worm_anatomy
 is_a: WBbt:0005107 ! labial sensillum
+
+[Term]
+id: WBbt:0005656
+name: retrovesicular ganglion
+namespace: worm_anatomy
+def: "Ganglion that lies at the anterior limit of the ventral nerve cord, near the ventral ganglion and nerve ring in the head posterior to the excretory pore. It is open and continuous with the region containing the motoneurons of the ventral cord. In the early L1 this ganglion holds 12 neuron cell bodies plus one neuroblast (Sulston and Horvitz, 1977; White et al., 1986). In the adult animal, the ganglion holds 20 neuron cell bodies." [WBPaper:00038216]
+is_a: WBbt:0005332 ! body ganglion
 
 [Term]
 id: WBbt:0005671
@@ -1186,6 +1287,13 @@ xref: WB:rynl
 is_a: WBbt:0006977 ! tail ganglion
 
 [Term]
+id: WBbt:0005837
+name: chemosensory neuron
+namespace: worm_anatomy
+def: "neuron that senses soluable chemicals" [WB:rynl]
+is_a: WBbt:0005759 ! sensory neuron
+
+[Term]
 id: WBbt:0005839
 name: odorsensory neuron
 namespace: worm_anatomy
@@ -1209,6 +1317,25 @@ is_a: WBbt:0005758 ! hermaphrodite-specific
 is_a: WBbt:0008422 ! sex organ
 relationship: part_of WBbt:0005740 ! midbody
 relationship: part_of WBbt:0008587 ! egg-laying apparatus
+
+[Term]
+id: WBbt:0006749
+name: nerve ring
+namespace: worm_anatomy
+def: "the most extensive region of neuropil in the animal, consists of a large toroidal bundle of processes." [WB:Paper00000938]
+synonym: "circumpharyngeal nerve ring" RELATED [WB:Paper00000938]
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005739 ! head
+relationship: part_of WBbt:0005760 ! somatic nervous system
+
+[Term]
+id: WBbt:0006750
+name: dorsal nerve cord
+namespace: worm_anatomy
+def: "a bundle of nerve processes that runs along the dorsal mid-line of the animal." [WB:Paper00000938]
+synonym: "dorsal cord" RELATED [WB:Paper00000938]
+is_a: WBbt:0005766 ! Anatomy
+relationship: part_of WBbt:0005760 ! somatic nervous system
 
 [Term]
 id: WBbt:0006754
@@ -1251,6 +1378,16 @@ name: blast cell
 namespace: worm_anatomy
 def: "precursor cell destined to divide some time after hatching." [WB:rynl]
 is_a: WBbt:0004017 ! Cell
+
+[Term]
+id: WBbt:0006790
+name: uterine-vulval cell
+namespace: worm_anatomy
+def: "monoucleate interfacial cell between the uterus and vulva (uv1-uv3), four sets total (L/R, A/P)" [WB:Paper00002608, WB:rynl]
+synonym: "uv cell" RELATED []
+is_a: WBbt:0007815 ! hermaphrodite somatic gonadal cell
+is_a: WBbt:0008435 ! uterine epithelial cell
+relationship: part_of WBbt:0006760 ! uterus
 
 [Term]
 id: WBbt:0006794
@@ -1698,6 +1835,13 @@ name: mechanosensory neuron
 namespace: worm_anatomy
 def: "neuron that senses and responds to mechanical stimuli, such as touch." [WB:rynl]
 is_a: WBbt:0005759 ! sensory neuron
+
+[Term]
+id: WBbt:0008435
+name: uterine epithelial cell
+namespace: worm_anatomy
+def: "cell of the epithelia of uterus." [WB:rynl]
+is_a: WBbt:0003672 ! epithelial cell
 
 [Term]
 id: WBbt:0008439
@@ -2983,4 +3127,16 @@ property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
 is_a: RO:0002131 ! overlaps
 inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: results_in_developmental_progression_of
+name: results in developmental progression of
+def: "p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss)." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This property and its subproperties are being used primarily for the definition of GO developmental processes. The property hierarchy mirrors the core GO hierarchy. In future we may be able to make do with a more minimal set of properties, but due to the way GO is currently structured we require highly specific relations to avoid incorrect entailments. To avoid this, the corresponding genus terms in GO should be declared mutually disjoint." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: seeAlso Ontology:extensions
+domain: GO:0008150 ! biological_process
+range: CARO:0000003 ! connected anatomical structure
+is_a: RO:0002324 ! developmentally related to
 

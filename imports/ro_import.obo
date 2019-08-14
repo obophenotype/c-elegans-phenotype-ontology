@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-13/imports/ro_import.owl
+data-version: wbphenotype/releases/2019-08-14/imports/ro_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: wbphenotype/imports/ro_import
@@ -212,6 +212,11 @@ id: GO:0043005
 name: neuron projection
 is_a: GO:0042995 ! cell projection
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0044419
+name: interspecies interaction between organisms
+is_a: GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044456
@@ -1887,6 +1892,15 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: seeAlso BFO:0000169
 
 [Typedef]
+id: RO:0002503
+name: towards
+def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
+property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
+is_a: RO:0002502 ! depends on
+
+[Typedef]
 id: RO:0002506
 name: causal relation between material entities
 property_value: IAO:0000116 "The intent is that the process branch of the causal property hierarchy is primary (causal relations hold between occurrents/processes), and that the material branch is defined in terms of the process branch" xsd:string
@@ -2176,4 +2190,16 @@ property_value: RO:0004049 RO:0002418
 is_a: RO:0002418 ! causally upstream of or within
 created_by: cjm
 creation_date: 2018-03-13T23:55:19Z
+
+[Typedef]
+id: results_in_developmental_progression_of
+name: results in developmental progression of
+def: "p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss)." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "This property and its subproperties are being used primarily for the definition of GO developmental processes. The property hierarchy mirrors the core GO hierarchy. In future we may be able to make do with a more minimal set of properties, but due to the way GO is currently structured we require highly specific relations to avoid incorrect entailments. To avoid this, the corresponding genus terms in GO should be declared mutually disjoint." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: seeAlso Ontology:extensions
+domain: GO:0008150 ! biological_process
+range: CARO:0000003 ! connected anatomical structure
+is_a: RO:0002324 ! developmentally related to
 
