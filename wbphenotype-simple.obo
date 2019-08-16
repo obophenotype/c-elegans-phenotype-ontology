@@ -4289,8 +4289,6 @@ synonym: "cell migration abnormal" NARROW []
 synonym: "Mig" BROAD []
 synonym: "migration of cells abnormal" RELATED []
 is_a: WBPhenotype:0000529 ! cell development variant
-is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0000595
@@ -4668,7 +4666,6 @@ name: activity level variant
 def: "Any variation in the degree of movement compared to control animals." [WB:cab]
 synonym: "activity level abnormal" NARROW []
 is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0000642
@@ -4686,7 +4683,7 @@ synonym: "locomotion abnormal" NARROW []
 synonym: "movement defect" RELATED []
 synonym: "Unc" BROAD []
 synonym: "uncoordinated" RELATED []
-is_a: WBPhenotype:0000525 ! organism behavior variant
+is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0000644
@@ -10518,9 +10515,7 @@ name: chemotaxis variant
 def: "Any variation in the directed movement of a worm in response to a specific chemical concentration gradient compared to control. Directed movement may be towards a higher concentration (positive chemotaxis) or towards a lower concentration (negative chemotaxis)." [GO:0006935, WB:cab]
 synonym: "Che" RELATED []
 synonym: "chemotaxis abnormal" NARROW []
-is_a: WBPhenotype:0000643 ! locomotion variant
 is_a: WBPhenotype:0001040 ! chemosensory response variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0001435
@@ -12449,7 +12444,6 @@ id: WBPhenotype:0001699
 name: localized movement variant
 def: "Specific body regions of an animal display variations in movement compared to that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "localized movement abnormal" NARROW []
-is_a: WBPhenotype:0000643 ! locomotion variant
 is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
@@ -12459,7 +12453,6 @@ def: "Animals exhibit variations in movement in liquid from that observed for co
 synonym: "movement in liquid abnormal" RELATED []
 synonym: "swimming abnormal" NARROW []
 synonym: "thrashing abnormal" RELATED []
-is_a: WBPhenotype:0000643 ! locomotion variant
 is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
@@ -12988,7 +12981,6 @@ is_a: WBPhenotype:0000745 ! transposon silencing variant
 id: WBPhenotype:0001773
 name: enhanced locomotion defective
 def: "Animals do not exhibit an increase in speed when placed in an environment that relies on a combination of swimming and crawling behaviors compared to control." [WB:WBPaper00031965, WB:WBPerson712]
-is_a: WBPhenotype:0000643 ! locomotion variant
 is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
@@ -16667,7 +16659,6 @@ id: WBPhenotype:0002345
 name: forward locomotion variant
 def: "Variations in the spontaneous or induced forward crawling locomotion of an animal compared to control." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0002346
@@ -17726,8 +17717,6 @@ is_a: WBPhenotype:0000525 ! organism behavior variant
 id: WBPhenotype:0002513
 name: thermotaxis variant
 def: "Any variation in the directed movement of a worm in response to a specific temperature gradient compared to control." [GO:0043052, WB:WBPerson2987]
-is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 is_a: WBPhenotype:0002512 ! thermosensory behavior variant
 
 [Term]
@@ -17747,7 +17736,6 @@ id: WBPhenotype:0002516
 name: burrowing assay distance abnormal
 def: "Animals exhibit variations, compared to control, in the distance traveled in a burrowing assay, in which animals are placed in a tube, separated from an attractant by solid medium through which the worms can burrow. Variations in distance traveled during the burrowing assay, when controlled for chemosensation defects, have been suggested to reflect variations in neuromuscular efficacy of locomotion." [WB:WBPaper00046657, WB:WBPaper00056369, WB:WBPerson2987, WB:WBPerson9270]
 is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0002517
@@ -17937,7 +17925,6 @@ name: locomotor coordination variant
 def: "Animals exhibit variations in their ability to maintain characteristic and effective locomotion compared to control." [WB:WBperson557]
 synonym: "locomotor coordination abnormal" NARROW []
 is_a: WBPhenotype:0000643 ! locomotion variant
-is_a: WBPhenotype:0001206 ! movement variant
 
 [Term]
 id: WBPhenotype:0004018
