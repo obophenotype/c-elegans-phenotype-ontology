@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-14/imports/go_import.owl
+data-version: wbphenotype/releases/2019-08-16/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -9968,6 +9968,16 @@ is_a: GO:0033365 ! protein localization to organelle
 creation_date: 2012-11-07T15:45:54Z
 
 [Term]
+id: GO:0034599
+name: cellular response to oxidative stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of oxidative stress, a state often resulting from exposure to high levels of reactive oxygen species, e.g. superoxide anions, hydrogen peroxide (H2O2), and hydroxyl radicals." [GOC:mah]
+synonym: "adaptive response to oxidative stress" NARROW [GOC:add, GOC:vk]
+is_a: GO:0006979 ! response to oxidative stress
+is_a: GO:0033554 ! cellular response to stress
+is_a: GO:0070887 ! cellular response to chemical stimulus
+
+[Term]
 id: GO:0034606
 name: response to hermaphrodite contact
 namespace: biological_process
@@ -19724,6 +19734,19 @@ created_by: midori
 creation_date: 2009-12-16T10:13:59Z
 
 [Term]
+id: GO:0071470
+name: cellular response to osmotic stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell." [GOC:mah]
+synonym: "cellular osmotic response" EXACT [GOC:mah]
+synonym: "cellular osmotic stress response" EXACT [GOC:mah]
+is_a: GO:0006970 ! response to osmotic stress
+is_a: GO:0033554 ! cellular response to stress
+is_a: GO:0071214 ! cellular response to abiotic stimulus
+created_by: midori
+creation_date: 2009-12-18T11:45:33Z
+
+[Term]
 id: GO:0071478
 name: cellular response to radiation
 namespace: biological_process
@@ -21581,6 +21604,18 @@ created_by: cjm
 creation_date: 2015-04-02T04:13:19Z
 
 [Term]
+id: GO:0100038
+name: regulation of cellular response to oxidative stress by transcription from RNA polymerase II promoter
+namespace: biological_process
+def: "Any transcription from RNA polymerase II promoter process that regulates cellular response to oxidative stress" [GOC:cjm, GOC:obol]
+is_a: GO:0006366 ! transcription by RNA polymerase II
+is_a: GO:1900407 ! regulation of cellular response to oxidative stress
+intersection_of: GO:0006366 ! transcription by RNA polymerase II
+intersection_of: regulates GO:0034599 ! cellular response to oxidative stress
+created_by: cjm
+creation_date: 2015-04-02T04:13:19Z
+
+[Term]
 id: GO:0100051
 name: positive regulation of meiotic nuclear division by transcription from RNA polymerase II promoter
 namespace: biological_process
@@ -21633,6 +21668,19 @@ def: "The collection of neuronal projections into a bundle of rods, known as a f
 is_a: GO:0031175 ! neuron projection development
 created_by: hjd
 creation_date: 2017-06-26T19:43:23Z
+
+[Term]
+id: GO:0106049
+name: regulation of cellular response to osmotic stress
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the cellular response to osmotic stress." [PMID:10398679]
+is_a: GO:0047484 ! regulation of response to osmotic stress
+is_a: GO:0080135 ! regulation of cellular response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0071470 ! cellular response to osmotic stress
+relationship: regulates GO:0071470 ! cellular response to osmotic stress
+created_by: hjd
+creation_date: 2017-08-04T14:53:47Z
 
 [Term]
 id: GO:0110028
@@ -22479,6 +22527,80 @@ intersection_of: negatively_regulates GO:0100020 ! regulation of transport by tr
 relationship: negatively_regulates GO:0100020 ! regulation of transport by transcription from RNA polymerase II promoter
 created_by: mah
 creation_date: 2012-04-18T04:20:25Z
+
+[Term]
+id: GO:1900407
+name: regulation of cellular response to oxidative stress
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cellular response to oxidative stress." [GOC:mah, GOC:TermGenie]
+synonym: "regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+is_a: GO:0080135 ! regulation of cellular response to stress
+is_a: GO:1902882 ! regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0034599 ! cellular response to oxidative stress
+relationship: regulates GO:0034599 ! cellular response to oxidative stress
+created_by: mah
+creation_date: 2012-04-20T03:30:52Z
+
+[Term]
+id: GO:1900408
+name: negative regulation of cellular response to oxidative stress
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to oxidative stress." [GOC:mah, GOC:TermGenie]
+synonym: "down regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "down regulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+synonym: "down-regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "down-regulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+synonym: "downregulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "downregulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+synonym: "inhibition of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "inhibition of cellular response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "negative regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:1900407 ! regulation of cellular response to oxidative stress
+is_a: GO:1902883 ! negative regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0034599 ! cellular response to oxidative stress
+relationship: negatively_regulates GO:0034599 ! cellular response to oxidative stress
+created_by: mah
+creation_date: 2012-04-20T03:31:05Z
+
+[Term]
+id: GO:1900409
+name: positive regulation of cellular response to oxidative stress
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cellular response to oxidative stress." [GOC:mah, GOC:TermGenie]
+synonym: "activation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "activation of cellular response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "positive regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "up regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "up regulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+synonym: "up-regulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "up-regulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+synonym: "upregulation of adaptive response to oxidative stress" NARROW [GOC:TermGenie]
+synonym: "upregulation of cellular response to oxidative stress" EXACT [GOC:TermGenie]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:1900407 ! regulation of cellular response to oxidative stress
+is_a: GO:1902884 ! positive regulation of response to oxidative stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0034599 ! cellular response to oxidative stress
+relationship: positively_regulates GO:0034599 ! cellular response to oxidative stress
+created_by: mah
+creation_date: 2012-04-20T03:31:16Z
+
+[Term]
+id: GO:1900427
+name: regulation of cellular response to oxidative stress by regulation of transcription from RNA polymerase II promoter
+namespace: biological_process
+def: "A regulation of transcription from RNA polymerase II promoter that results in regulation of cellular response to oxidative stress." [GOC:mah, GOC:TermGenie, PMID:10348908]
+synonym: "regulation of adaptive response to oxidative stress by regulation of transcription from RNA polymerase II promoter" NARROW [GOC:TermGenie]
+is_a: GO:0006357 ! regulation of transcription by RNA polymerase II
+is_a: GO:1900407 ! regulation of cellular response to oxidative stress
+intersection_of: GO:0050789 ! regulation of biological process
+intersection_of: regulates GO:0100038 ! regulation of cellular response to oxidative stress by transcription from RNA polymerase II promoter
+relationship: regulates GO:0100038 ! regulation of cellular response to oxidative stress by transcription from RNA polymerase II promoter
+created_by: mah
+creation_date: 2012-04-25T09:11:41Z
 
 [Term]
 id: GO:1900477
