@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-16/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-08-20/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -2034,6 +2034,7 @@ is_a: WBPhenotype:0004006 ! post hermaphrodite contact variant
 id: WBPhenotype:0000280
 name: breaks in alae
 def: "The small linear ridges running along the lateral lines of the cuticle, lengthwise along the body, contain gaps as opposed to a continuous arrangement (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
+synonym: "gapped alae" EXACT []
 is_a: WBPhenotype:0001412 ! alae morphology variant
 
 [Term]
@@ -15254,7 +15255,7 @@ id: WBPhenotype:0002155
 name: pre miRNA processing defective
 def: "The production of mature miRNA from pre-miRNA is significantly deficient compared to controls. Deficiencies in this process can result in the accumulation of pre-miRNA species and or the absence or smaller amount of mature miRNA compared to controls." [WB:WBPaper00029211, WB:WBPerson712]
 is_a: WBPhenotype:0000028 ! RNA processing variant
-is_a: WBPhenotype:0001779 ! miRNA expression variant
+is_a: WBPhenotype:0002528 ! miRNA biogenesis defective
 
 [Term]
 id: WBPhenotype:0002156
@@ -17587,6 +17588,18 @@ id: WBPhenotype:0002527
 name: dauer larva physiology variant
 def: "Animals in the dauer larval stage exhibit variations in their physiology (any biological process including but not limited to development, behavior, or metabolism) compared to controls." [ISBN:978-087969433-3, WB:WBPerson2987]
 is_a: WBPhenotype:0001293 ! larval physiology variant
+
+[Term]
+id: WBPhenotype:0002528
+name: miRNA biogenesis defective
+def: "Animals (or cells) exhibit defects in the ability to produce mature microRNAs (miRNAs) from a miRNA locus. The defects could be at the level of miRNA transcription, pri-miRNA processing, and/or pre-miRNA processing." [WB:WBPaper00041677, WB:WBPerson2987, WB:WBPerson5649]
+is_a: WBPhenotype:0001779 ! miRNA expression variant
+
+[Term]
+id: WBPhenotype:0002529
+name: proteasome defective
+def: "Animals exhibit defects or impairments in the functioning of the proteasome." [WB:WBPaper00056554, WB:WBPerson2987, WB:WBPerson5649]
+is_a: WBPhenotype:0002009 ! proteasome core activity variant
 
 [Term]
 id: WBPhenotype:0004001
