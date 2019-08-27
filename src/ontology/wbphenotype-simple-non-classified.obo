@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-20/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-08-27/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -4524,7 +4524,6 @@ is_a: WBPhenotype:0001454 ! quinine chemotaxis variant
 id: WBPhenotype:0000631
 name: drug response variant
 def: "Any variation in the characteristic response(s) to drug(s) as defined by control animals." [WB:cab]
-synonym: "drug response abnormal" NARROW []
 synonym: "drug response abnormal" RELATED []
 is_a: WBPhenotype:0000523 ! chemical response variant
 
@@ -16145,7 +16144,7 @@ is_a: WBPhenotype:0000001 ! body posture variant
 
 [Term]
 id: WBPhenotype:0002298
-name: coiling frequency
+name: coiling frequency variant
 def: "Animals exhibit variations in the amount of time spent with its body posture in a coil or the frequency with which they form coils compared to control animals." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0002297 ! coiling variant
 
@@ -16153,13 +16152,13 @@ is_a: WBPhenotype:0002297 ! coiling variant
 id: WBPhenotype:0002299
 name: coiling frequency decreased
 def: "Animals spend less time with their body posture in a coil or they decrease the frequency with which they form coils compared to control animals." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
-is_a: WBPhenotype:0002298 ! coiling frequency
+is_a: WBPhenotype:0002298 ! coiling frequency variant
 
 [Term]
 id: WBPhenotype:0002300
 name: coiling frequency increased
 def: "Animals spend more time with their body posture in a coil or they increase the frequency with which they form coils compared to control animals." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
-is_a: WBPhenotype:0002298 ! coiling frequency
+is_a: WBPhenotype:0002298 ! coiling frequency variant
 
 [Term]
 id: WBPhenotype:0002301
@@ -16216,13 +16215,13 @@ is_a: WBPhenotype:0001213 ! locomotion reduced
 
 [Term]
 id: WBPhenotype:0002309
-name: Pausing decreased
+name: pausing decreased
 def: "Animals exhibit a decrease in the amount of time spent in a paused state, which is neither moving forward or backward, compared to control animals." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0002308 ! pausing variant
 
 [Term]
 id: WBPhenotype:0002310
-name: Pausing increased
+name: pausing increased
 def: "Animals exhibit an increase in the amount of time spent in a paused state, which is neither moving forward or backward, compared to control animals." [WB:WBPaper00043908, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0002308 ! pausing variant
 
@@ -17600,6 +17599,13 @@ id: WBPhenotype:0002529
 name: proteasome defective
 def: "Animals exhibit defects or impairments in the functioning of the proteasome." [WB:WBPaper00056554, WB:WBPerson2987, WB:WBPerson5649]
 is_a: WBPhenotype:0002009 ! proteasome core activity variant
+
+[Term]
+id: WBPhenotype:0002530
+name: axotomy-induced phosphatidylserine exposure abnormal
+def: "The level of phosphatidylserine exposed on the external axonal membrane following transection (axotomy) is changed compared to controls." [WB:WBPaper00053570, WB:WBPerson2987, WB:WBPerson9270]
+is_a: WBPhenotype:0001399 ! cell membrane morphology variant
+is_a: WBPhenotype:0002478 ! axotomy response variant
 
 [Term]
 id: WBPhenotype:0004001
