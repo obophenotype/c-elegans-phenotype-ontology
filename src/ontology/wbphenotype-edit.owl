@@ -3,6 +3,7 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(obda:=<https://w3id.org/obda/vocabulary#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
@@ -2554,6 +2555,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002529>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002530>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002531>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002532>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002534>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002535>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002536>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002537>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002538>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002539>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002540>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002541>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -5032,36 +5041,34 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_00002
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000254> <http://purl.obolibrary.org/obo/WBPhenotype_0001439>)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000254> <http://purl.obolibrary.org/obo/WBPhenotype_0001458>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000255> (amphid phasmid morphology variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000255> (amphid phasmid neuron morphology variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00000938"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the amphid and phasmid sensilla from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "Dyf"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "amphid phasmid morphology abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "C_elegans_phenotype_ontology"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "dye filling defect"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "WBPhenotype:0000255"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "WBbt:0005394, WBbt:0006753."^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "amphid phasmid morphology variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000255> "amphid phasmid neuron morphology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000255> <http://purl.obolibrary.org/obo/WBPhenotype_0001527>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000256> (amphid morphology variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000256> (amphid neuron morphology variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00000938"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the amphid sensillum, from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "amphid morphology abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "WBPhenotype:0000256"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "WBbt:0005394."^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "amphid morphology variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000256> "amphid neuron morphology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000256> <http://purl.obolibrary.org/obo/WBPhenotype_0000255>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000257> (phasmid morphology variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000257> (phasmid neuron morphology variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00000938"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the phasmid sensillum, from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "phasmid morphology abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "WBPhenotype:0000257"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "WBbt:0006753."^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "phasmid morphology variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000257> "phasmid neuron morphology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000257> <http://purl.obolibrary.org/obo/WBPhenotype_0000255>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000258> (cell secretion variant)
@@ -6196,14 +6203,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000385> "sperm excess"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000385> <http://purl.obolibrary.org/obo/WBPhenotype_0000670>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000386> (genotoxic induced apoptosis variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000386> (genotoxic chemical induced apoptosis variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032006"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032243"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032356"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "Programmed cell death of germ cells caused by exposure to DNA-damaging chemical agents does not occur to the same extent as it does in control animals."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "genotoxic induced apoptosis abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "DNA damage induced apoptosis abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "WBPhenotype:0000386"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "genotoxic induced apoptosis variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000386> "genotoxic chemical induced apoptosis variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000386> <http://purl.obolibrary.org/obo/WBPhenotype_0002152>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000387> (sperm nonmotile)
@@ -13763,13 +13770,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001191> "pharyngeal muscle physiology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001191> <http://purl.obolibrary.org/obo/WBPhenotype_0001190>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001192> (calcium signaling pharynx variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001192> (calcium signaling in pharynx variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2021"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "Any variation in the series of molecular signals in which a pharyngeal cell uses calcium ions to convert an extracellular signal into a response, compared to control."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "calcium signaling pharynx abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "WBPhenotype:0001192"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "calcium signaling pharynx variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001192> "calcium signaling in pharynx variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001192> <http://purl.obolibrary.org/obo/WBPhenotype_0001191>)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001192> <http://purl.obolibrary.org/obo/WBPhenotype_0002170>)
 
@@ -14066,7 +14073,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001225> "Psa"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001225> "WBPhenotype:0001225"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001225> "phasmid socket absent"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001225> <http://purl.obolibrary.org/obo/WBPhenotype_0000257>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001225> <http://purl.obolibrary.org/obo/WBPhenotype_0001527>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001226> (commissure variant)
 
@@ -14725,13 +14732,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001300> "germ cell cytoplasmic morphology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001300> <http://purl.obolibrary.org/obo/WBPhenotype_0000900>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001301> (P granule defective)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001301> (P granule abnormal)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:cab"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "pmid:11262230"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "Localization or structural appearance of P-granules is altered compared to control. P-granules are cytoplasmic structures associated with germ nuclei in the C. elegans gonad, and are localized exclusively to germ cells, or germ cell precursors, throughout the life cycle."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "P granule abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "WBPhenotype:0001301"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "P granule defective"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001301> "P granule abnormal"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001301> <http://purl.obolibrary.org/obo/WBPhenotype_0001300>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001302> (P granule localization defective)
@@ -19244,15 +19250,16 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001799> "inhibition of synaptogenesis hyperactive"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001799> <http://purl.obolibrary.org/obo/WBPhenotype_0000944>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001800> (antimicrobial gene expression variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001800> (pathogen induced antimicrobial gene expression variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00031865"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "Changes in the levels of innate immune gene products in response to pathogen exposure are significantly different from that observed in control animals."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "antimicrobial gene expression abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "WBPhenotype:0001800"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "antimicrobial gene expression variant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001800> "pathogen induced antimicrobial gene expression variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001800> <http://purl.obolibrary.org/obo/WBPhenotype_0001857>)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001800> <http://purl.obolibrary.org/obo/WBPhenotype_0002164>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001800> <http://purl.obolibrary.org/obo/WBPhenotype_0002534>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001801> (axodendritic polarity variant)
 
@@ -19684,12 +19691,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001849> "zinc homeostasis variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001849> <http://purl.obolibrary.org/obo/WBPhenotype_0002029>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001850> (radiation induced germ cell apoptosis resistant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001850> (radiation induced germ cell apoptosis variant)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032006"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032243"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032356"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "Programmed cell death of germ cells caused by exposure to ionizing energy does not occur to the same extent as it does in control animals."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032243"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032356"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "Programmed cell death of germ cells caused by exposure to ionizing energy does not occur to the same extent as it does in control animals."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "WBPhenotype:0001850"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "radiation induced germ cell apoptosis resistant"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001850> "radiation induced germ cell apoptosis variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001850> <http://purl.obolibrary.org/obo/WBPhenotype_0000737>)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001850> <http://purl.obolibrary.org/obo/WBPhenotype_0002152>)
 
@@ -20804,8 +20811,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001982> <http://purl.obo
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001983> (lawn leaving behavior variant)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00038234"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson363"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "Variation of the time an individual spent on a patch of food (bacterial lawn) before leaving, compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "food leaving behavior variant"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "patch leaving behavior variant"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> ""^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "exploratory behavior variant"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001983> "exploration behavior variant"^^xsd:string)
@@ -22702,25 +22709,23 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002210> "extra rays"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002210> <http://purl.obolibrary.org/obo/WBPhenotype_0000199>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002211> (phasmid dye filling defect)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002211> (phasmid neuron dye filling defect)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00003450"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "Animals exhibit defects in dye-filling of the neuronal cells of the phasmid sensilla. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "Dyf"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "C_elegans_phenotype_ontology"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "dye filling defect"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "WBPhenotype:0002211"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "phasmid dye filling defect"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002211> "phasmid neuron dye filling defect"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002211> <http://purl.obolibrary.org/obo/WBPhenotype_0000257>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002211> <http://purl.obolibrary.org/obo/WBPhenotype_0002535>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002212> (amphid dye filling defect)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002212> (amphid neuron dye filling defect)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "Animals exhibit defects in dye-filling of the neuronal cells of the amphid sensilla. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "Dyf"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "C_elegans_phenotype_ontology"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "dye filling defect"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "WBPhenotype:0002212"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "amphid dye filling defect"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002212> "amphid neuron dye filling defect"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002212> <http://purl.obolibrary.org/obo/WBPhenotype_0000256>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002212> <http://purl.obolibrary.org/obo/WBPhenotype_0002535>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002213> (kinase activity reduced)
 
@@ -25282,7 +25287,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002522> <http://purl.obo
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002523> (slow recovery from starvation-induced L1 arrest)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00049938"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson6498"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00049938"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson34124"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson6498"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "WBPhenotype:0002523"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002523> "slow recovery from starvation-induced L1 arrest"@en)
@@ -25361,6 +25366,73 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002532> "WBPhenotype:0002532"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002532> "allophagy defective"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002532> <http://purl.obolibrary.org/obo/WBPhenotype_0002531>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002534> (antimicrobial gene expression variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00031865"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002534> "Animals exhibit variations in the expression of one or more known, endogenous, antimicrobial genes, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002534> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002534> "WBPhenotype:0002534"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002534> "antimicrobial gene expression variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002534> <http://purl.obolibrary.org/obo/WBPhenotype_0000717>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002535> (dye filling defect)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00000793"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "Animals exhibit variations in the extent to which one or more sensory neurons associated with sensilla (typically one or more amphids and/or phasmids) take up dye from the environment, compared to controls. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "Dyf"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "dye filling abnormal"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "WBPhenotype:0002535"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002535> "dye filling defect"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002535> <http://purl.obolibrary.org/obo/WBPhenotype_0000299>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002536> (P granule number abnormal)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00044160"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002536> "Animals exhibit germ cells with a number of P granules that differs from control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002536> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002536> "WBPhenotype:0002536"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002536> "P granule number abnormal"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002536> <http://purl.obolibrary.org/obo/WBPhenotype_0001300>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002537> (P granule number reduced)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00044160"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson557"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002537> "Animals exhibit germ cells with a reduced number of P granules compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002537> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002537> "WBPhenotype:0002537"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002537> "P granule number reduced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002537> <http://purl.obolibrary.org/obo/WBPhenotype_0002536>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002538> (calcium signaling in spermatheca variant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00056137"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson30989"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002538> "Any variation in the series of molecular signals in which the spermatheca uses calcium ions to convert an extracellular signal into a response, compared to control."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002538> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002538> "WBPhenotype:0002538"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002538> "calcium signaling in spermatheca variant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002538> <http://purl.obolibrary.org/obo/WBPhenotype_0002170>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002539> (antimicrobial gene expression increased)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00047109"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson15627"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002539> "Animals exhibit an increase in the expression of one or more known, endogenous, antimicrobial genes, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002539> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002539> "WBPhenotype:0002539"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002539> "antimicrobial gene expression increased"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002539> <http://purl.obolibrary.org/obo/WBPhenotype_0002534>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002540> (lawn leaving reduced)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00053007"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson262"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002540> "Animals exhibit a reduced rate of lawn/food leaving events, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002540> "food leaving reduced"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002540> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002540> "WBPhenotype:0002540"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002540> "lawn leaving reduced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002540> <http://purl.obolibrary.org/obo/WBPhenotype_0001983>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002541> (radiation induced germ cell apoptosis resistant)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032243"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032356"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002541> "Programmed cell death of germ cells caused by exposure to ionizing energy occurs to a lesser extent than it does in control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002541> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002541> "WBPhenotype:0002541"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002541> "radiation induced germ cell apoptosis resistant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002541> <http://purl.obolibrary.org/obo/WBPhenotype_0001850>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
