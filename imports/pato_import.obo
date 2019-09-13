@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-27/imports/pato_import.owl
+data-version: wbphenotype/releases/2019-09-13/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -18,7 +18,6 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 
 [Term]
 id: PATO:0000004
@@ -50,6 +49,7 @@ def: "A composite chromatic quality composed of hue, saturation and intensity pa
 subset: attribute_slim
 synonym: "colour" EXACT []
 synonym: "relative color" EXACT []
+is_a: PATO:0000051 ! morphology
 is_a: PATO:0001300 ! optical quality
 
 [Term]
@@ -124,7 +124,7 @@ namespace: quality
 def: "A physical quality which inheres in a bearer by virtue of the number of the bearer's repetitive actions in a particular time." [Wikipedia:http\://en.wikipedia.org/wiki/frequency]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050000 ! rate of occurence
 
 [Term]
 id: PATO:0000047
@@ -185,7 +185,7 @@ subset: attribute_slim
 subset: hpo_slim
 synonym: "distribution" EXACT []
 synonym: "pattern" RELATED []
-is_a: PATO:0000140 ! position
+is_a: PATO:0000051 ! morphology
 
 [Term]
 id: PATO:0000068
@@ -213,7 +213,6 @@ alt_id: PATO:0001226
 def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
 comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
 subset: attribute_slim
-synonym: "count" EXACT []
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
@@ -701,7 +700,7 @@ subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
 relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
@@ -1417,6 +1416,7 @@ def: "A optical quality inhering in a bearer by virtue of the bearer's lacking o
 subset: mpath_slim
 subset: value_slim
 synonym: "clear" EXACT []
+synonym: "hyaline" EXACT []
 is_a: PATO:0000957 ! opacity
 relationship: is_opposite_of PATO:0000963 ! opaque
 
@@ -1925,7 +1925,7 @@ namespace: quality
 comment: This term will be obsoleted; Use GO:growth and PATO:rate.
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050001 ! rate of continuous process
 
 [Term]
 id: PATO:0001495
@@ -2058,6 +2058,7 @@ synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
 is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -2067,6 +2068,7 @@ def: "A quality of a process inhering in a bearer by virtue of the bearer's lack
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0001559
@@ -2825,6 +2827,7 @@ subset: relational_slim
 synonym: "lacks all physical parts of type" EXACT []
 xref: OBO_REL:lacks_part
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0002001
@@ -3341,6 +3344,20 @@ is_a: PATO:0000639 ! degenerate
 intersection_of: PATO:0000462 ! absent
 intersection_of: PATO:0000639 ! degenerate
 created_by: cjm
+
+[Term]
+id: PATO:0050000
+name: rate of occurence
+namespace: quality
+def: "The number of repeated events per unit time, occurring in a repeating series. (e.g. the number of heart beats occurring over 1 minute)" [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
+
+[Term]
+id: PATO:0050001
+name: rate of continuous process
+namespace: quality
+def: "The rate of output of a continuous process. Example include: growth rate, cell migration rate, enzyme reaction rate." [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
 
 [Typedef]
 id: correlates_with

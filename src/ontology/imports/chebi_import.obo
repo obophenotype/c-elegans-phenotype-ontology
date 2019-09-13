@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-27/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-09-13/imports/chebi_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 2_STAR "Annotated by 3rd party"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
@@ -3804,8 +3804,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -5358,7 +5358,7 @@ is_a: CHEBI:26079 ! phosphoric acid derivative
 id: CHEBI:26078
 name: phosphoric acid
 namespace: chebi_ontology
-def: "A phosphorus oxoacid that consits of one oxo and three hydroxy groups joined covalently to a central phosphorus atom." []
+def: "A phosphorus oxoacid that consists of one oxo and three hydroxy groups joined covalently to a central phosphorus atom." []
 subset: 3_STAR
 synonym: "[PO(OH)3]" RELATED [IUPAC]
 synonym: "acide phosphorique" RELATED [ChEBI]
@@ -5445,7 +5445,7 @@ id: CHEBI:26167
 name: polar amino acid
 namespace: chebi_ontology
 alt_id: CHEBI:8283
-def: "Any amino acid whose side chain is capable of forming one or more hydrogen bonds as proton donors or acceptors." []
+def: "Any amino acid whose side chain is capable of forming one or more hydrogen bonds." []
 subset: 3_STAR
 synonym: "polar amino acid" EXACT [ChEBI]
 synonym: "polar amino acids" RELATED [ChEBI]
@@ -6849,7 +6849,7 @@ subset: 3_STAR
 synonym: "[NH4](+)" RELATED [MolBase]
 synonym: "ammonium" EXACT IUPAC_NAME [IUPAC]
 synonym: "ammonium" EXACT [ChEBI]
-synonym: "AMMONIUM ION" RELATED [PDBeChem]
+synonym: "ammonium ion" RELATED [PDBeChem]
 synonym: "Ammonium(1+)" RELATED [ChemIDplus]
 synonym: "azanium" EXACT IUPAC_NAME [IUPAC]
 synonym: "NH4(+)" RELATED [UniProt]
@@ -6882,7 +6882,6 @@ xref: PMID:22631217 "Europe PMC"
 xref: Reaxys:16093784 "Reaxys"
 xref: Wikipedia:Ammonium
 is_a: CHEBI:35106 ! nitrogen hydride
-is_a: CHEBI:35274 ! ammonium ion
 is_a: CHEBI:50313 ! onium cation
 is_a: CHEBI:60242 ! monovalent inorganic cation
 relationship: has_role CHEBI:23357 ! cofactor
@@ -10074,7 +10073,7 @@ subset: 3_STAR
 synonym: "2-(5-hydroxy-1H-indol-3-yl)ethanaminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "serotonin" RELATED [UniProt]
 synonym: "serotonin cation" RELATED [ChEBI]
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_acid_of CHEBI:28790 ! serotonin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -10205,7 +10204,7 @@ synonym: "quaternary ammonium ion" EXACT IUPAC_NAME [IUPAC]
 synonym: "quaternary ammonium ions" RELATED [ChEBI]
 xref: KEGG:C06703
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_parent_hydride CHEBI:28938 ! ammonium
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "NR4" xsd:string
@@ -10231,14 +10230,18 @@ relationship: has_part CHEBI:35267 ! quaternary ammonium ion
 
 [Term]
 id: CHEBI:35274
-name: ammonium ion
+name: ammonium ion derivative
 namespace: chebi_ontology
-def: "Ammonium, NH4(+), and derivatives formed by substitution by univalent groups." []
+def: "A derivative of ammonium, NH4(+), in which one (or more) of the hydrogens bonded to the nitrogen have been replaced with univalent organyl groups. The substituting carbon of the organyl group must not itself be directly attached to a heteroatom (thereby excluding protonated amides, hemiaminals, etc)." []
 subset: 3_STAR
+synonym: "ammonium ion derivatives" RELATED [ChEBI]
 synonym: "ammonium ions" RELATED [ChEBI]
+synonym: "azanium ion derivative" RELATED [ChEBI]
+synonym: "azanium ion derivatives" RELATED [ChEBI]
 synonym: "azanium ions" RELATED [ChEBI]
 is_a: CHEBI:33702 ! polyatomic cation
 is_a: CHEBI:51143 ! nitrogen molecular entity
+relationship: has_parent_hydride CHEBI:28938 ! ammonium
 
 [Term]
 id: CHEBI:35276
@@ -10250,7 +10253,7 @@ synonym: "ammonium compounds" RELATED [ChEBI]
 synonym: "ammonium compounds" RELATED [IUPAC]
 synonym: "azanium compounds" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:51143 ! nitrogen molecular entity
-relationship: has_part CHEBI:35274 ! ammonium ion
+relationship: has_part CHEBI:35274 ! ammonium ion derivative
 
 [Term]
 id: CHEBI:35287
@@ -16213,7 +16216,7 @@ synonym: "tryptamine" RELATED [UniProt]
 synonym: "tryptaminium cation" RELATED [ChEBI]
 synonym: "tryptaminium(1+)" RELATED [ChEBI]
 xref: Gmelin:533978 "Gmelin"
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:76924 ! plant metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
@@ -16258,7 +16261,7 @@ synonym: "4-(2-azaniumyl-1-hydroxyethyl)phenol" RELATED [ChEBI]
 synonym: "octopaminium cation" RELATED [ChEBI]
 synonym: "octopaminium(1+)" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:17134 ! octopamine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H12NO2" xsd:string
@@ -16631,7 +16634,7 @@ synonym: "(S)-nicotine" RELATED [UniProt]
 synonym: "(S)-nicotinium cation" RELATED [ChEBI]
 xref: Gmelin:329042 "Gmelin"
 xref: MetaCyc:NICOTINE
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_role CHEBI:76924 ! plant metabolite
 relationship: is_conjugate_acid_of CHEBI:17688 ! (S)-nicotine
 relationship: is_enantiomer_of CHEBI:79008 ! (R)-nicotinium(1+)
@@ -16674,7 +16677,7 @@ synonym: "2-(3,4-dihydroxyphenyl)ethanaminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "dopamine" RELATED [UniProt]
 synonym: "dopaminium cation" RELATED [ChEBI]
 xref: Gmelin:328863 "Gmelin"
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_acid_of CHEBI:18243 ! dopamine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -17387,7 +17390,7 @@ subset: 3_STAR
 synonym: "1-methyl-4-[8-(methylthio)-10,11-dihydrodibenzo[b,f]thiepin-10-yl]piperazinediium" EXACT IUPAC_NAME [IUPAC]
 synonym: "methiothepin cation" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:64203 ! methiothepin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C20H26N2S2" xsd:string
@@ -17842,7 +17845,7 @@ subset: 3_STAR
 synonym: "a primary amine" RELATED [UniProt]
 synonym: "substituted ammonium" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:32877 ! primary amine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H3NR" xsd:string
@@ -19003,7 +19006,7 @@ synonym: "(2R)-1-methyl-2-(pyridin-3-yl)pyrrolidinium" EXACT IUPAC_NAME [IUPAC]
 synonym: "(R)-nicotine" RELATED [UniProt]
 xref: MetaCyc:R-NICOTINE "SUBMITTER"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:39162 ! (R)-nicotine
 relationship: is_enantiomer_of CHEBI:59806 ! (S)-nicotinium(1+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -19425,7 +19428,7 @@ synonym: "(+)-fluoxetine(1+)" RELATED [ChEBI]
 synonym: "(3R)-N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-aminium" EXACT IUPAC_NAME [IUPAC]
 xref: Reaxys:25263171 "Reaxys"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:86991 ! (R)-fluoxetine
 relationship: is_enantiomer_of CHEBI:86995 ! (S)-fluoxetine(1+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -19446,7 +19449,7 @@ synonym: "(-)-fluoxetine(1+)" RELATED [ChEBI]
 synonym: "(3S)-N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-aminium" EXACT IUPAC_NAME [IUPAC]
 xref: Reaxys:25263174 "Reaxys"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:86992 ! (S)-fluoxetine
 relationship: is_enantiomer_of CHEBI:86993 ! (R)-fluoxetine(1+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
