@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-08-27/wbphenotype-base.owl
+data-version: wbphenotype/releases/2019-09-13/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -1860,29 +1860,27 @@ is_a: WBPhenotype:0001458 ! chloride chemotaxis variant
 
 [Term]
 id: WBPhenotype:0000255
-name: amphid phasmid morphology variant
+name: amphid phasmid neuron morphology variant
 def: "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the amphid and phasmid sensilla from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO." [WB:WBPaper00000938]
 comment: WBbt:0005394, WBbt:0006753.
 synonym: "amphid phasmid morphology abnormal" NARROW []
-synonym: "dye filling defect" RELATED []
-synonym: "Dyf" BROAD []
 is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0000256
-name: amphid morphology variant
+name: amphid neuron morphology variant
 def: "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the amphid sensillum, from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO." [WB:WBPaper00000938]
 comment: WBbt:0005394.
 synonym: "amphid morphology abnormal" NARROW []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
+is_a: WBPhenotype:0000255 ! amphid phasmid neuron morphology variant
 
 [Term]
 id: WBPhenotype:0000257
-name: phasmid morphology variant
+name: phasmid neuron morphology variant
 def: "Animals exhibit variations in the quantity, structure or organization of the components of the neuronal cells of the phasmid sensillum, from that observed in control animals. In C. elegans, these neurons are commonly assayed by dye-filling experiments using FITC, DiI or DiO." [WB:WBPaper00000938]
 comment: WBbt:0006753.
 synonym: "phasmid morphology abnormal" NARROW []
-is_a: WBPhenotype:0000255 ! amphid phasmid morphology variant
+is_a: WBPhenotype:0000255 ! amphid phasmid neuron morphology variant
 
 [Term]
 id: WBPhenotype:0000258
@@ -2762,7 +2760,7 @@ is_a: WBPhenotype:0000670 ! spermatogenesis variant
 
 [Term]
 id: WBPhenotype:0000386
-name: genotoxic induced apoptosis variant
+name: genotoxic chemical induced apoptosis variant
 def: "Programmed cell death of germ cells caused by exposure to DNA-damaging chemical agents does not occur to the same extent as it does in control animals." [WB:WBPaper00032006, WB:WBPaper00032243, WB:WBPaper00032356, WB:WBPerson712]
 synonym: "DNA damage induced apoptosis abnormal" RELATED []
 synonym: "genotoxic induced apoptosis abnormal" NARROW []
@@ -6442,7 +6440,7 @@ name: AWB morphology variant
 def: "Animals exhibit variations in the structure or organization of either of a set of two ciliated wing neurons, AWBL or AWBR, of the amphid sensilla, compared to that observed in control animals." [WB:WBPaper00000938, WB:WBPerson712]
 comment: WBbt:0005671.
 synonym: "AWB morphology abnormal" NARROW []
-is_a: WBPhenotype:0000256 ! amphid morphology variant
+is_a: WBPhenotype:0000256 ! amphid neuron morphology variant
 
 [Term]
 id: WBPhenotype:0000885
@@ -8714,7 +8712,7 @@ is_a: WBPhenotype:0001190 ! pharyngeal physiology variant
 
 [Term]
 id: WBPhenotype:0001192
-name: calcium signaling pharynx variant
+name: calcium signaling in pharynx variant
 def: "Any variation in the series of molecular signals in which a pharyngeal cell uses calcium ions to convert an extracellular signal into a response, compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "calcium signaling pharynx abnormal" NARROW []
 is_a: WBPhenotype:0001191 ! pharyngeal muscle physiology variant
@@ -8736,13 +8734,13 @@ is_a: WBPhenotype:0001303 ! extra and ectopic cell
 id: WBPhenotype:0001195
 name: generation calcium signal defective pharynx
 def: "Rhythmic calcium increases in the pharynx are observed less often than in control animals. In C. elegans, rhythmic increases in intracellular calcium are often observed using a transgenically expressed cameleon, a ratiometric calcium indicator." [WB:cab, WB:cgc4194, WB:cgc7545]
-is_a: WBPhenotype:0001192 ! calcium signaling pharynx variant
+is_a: WBPhenotype:0001192 ! calcium signaling in pharynx variant
 
 [Term]
 id: WBPhenotype:0001196
 name: synchronization calcium signal defective pharynx
 def: "Calcium spikes lack synchrony in the musculature of the corpus and the terminal bulb as seen in control." [WB:cab, WB:cgc7545]
-is_a: WBPhenotype:0001192 ! calcium signaling pharynx variant
+is_a: WBPhenotype:0001192 ! calcium signaling in pharynx variant
 
 [Term]
 id: WBPhenotype:0001197
@@ -8947,7 +8945,7 @@ id: WBPhenotype:0001225
 name: phasmid socket absent
 def: "Animals are missing the interfacial hypodermal cell (socket cell) of the phasmid sensillum pore." [WB:WBPaper00000938, WB:WBPaper00004350, WB:WBPaper00026656, WB:WBPerson712]
 synonym: "Psa" RELATED []
-is_a: WBPhenotype:0000257 ! phasmid morphology variant
+is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
 id: WBPhenotype:0001226
@@ -9458,9 +9456,8 @@ is_a: WBPhenotype:0000900 ! germ cell morphology variant
 
 [Term]
 id: WBPhenotype:0001301
-name: P granule defective
+name: P granule abnormal
 def: "Localization or structural appearance of P-granules is altered compared to control. P-granules are cytoplasmic structures associated with germ nuclei in the C. elegans gonad, and are localized exclusively to germ cells, or germ cell precursors, throughout the life cycle." [pmid:11262230, WB:cab]
-synonym: "P granule abnormal" NARROW []
 is_a: WBPhenotype:0001300 ! germ cell cytoplasmic morphology variant
 
 [Term]
@@ -9469,7 +9466,7 @@ name: P granule localization defective
 def: "The restricted localization of P granules to germ cells or germ cell precursors is altered compared to control." [WB:WBPaper00001477, WB:WBPerson2021]
 synonym: "germ granule localization defective" RELATED []
 synonym: "P granule localization abnormal" NARROW []
-is_a: WBPhenotype:0001301 ! P granule defective
+is_a: WBPhenotype:0001301 ! P granule abnormal
 
 [Term]
 id: WBPhenotype:0001303
@@ -12977,11 +12974,12 @@ is_a: WBPhenotype:0000944 ! neurite development variant
 
 [Term]
 id: WBPhenotype:0001800
-name: antimicrobial gene expression variant
+name: pathogen induced antimicrobial gene expression variant
 def: "Changes in the levels of innate immune gene products in response to pathogen exposure are significantly different from that observed in control animals." [WB:WBPaper00031865, WB:WBPerson712]
 synonym: "antimicrobial gene expression abnormal" NARROW []
 is_a: WBPhenotype:0001857 ! pathogen induced gene expression variant
 is_a: WBPhenotype:0002164 ! innate immune response variant
+is_a: WBPhenotype:0002534 ! antimicrobial gene expression variant
 
 [Term]
 id: WBPhenotype:0001801
@@ -13317,8 +13315,8 @@ is_a: WBPhenotype:0002029 ! metal homeostasis variant
 
 [Term]
 id: WBPhenotype:0001850
-name: radiation induced germ cell apoptosis resistant
-def: "Programmed cell death of germ cells caused by exposure to ionizing energy does not occur to the same extent as it does in control animals." [WB:WBPaper00032006, WB:WBPaper00032243, WB:WBPaper00032356, WB:WBPerson712]
+name: radiation induced germ cell apoptosis variant
+def: "Programmed cell death of germ cells caused by exposure to ionizing energy does not occur to the same extent as it does in control animals." [WB:WBPaper00032243, WB:WBPaper00032356, WB:WBPerson712]
 is_a: WBPhenotype:0000737 ! germ cell resistant ionizing radiation
 is_a: WBPhenotype:0002152 ! mutagen induced apoptosis variant
 
@@ -14176,6 +14174,7 @@ name: lawn leaving behavior variant
 def: "Variation of the time an individual spent on a patch of food (bacterial lawn) before leaving, compared to control animals." [WB:WBPaper00038234, WB:WBPerson363]
 synonym: "exploration behavior variant" RELATED []
 synonym: "exploratory behavior variant" NARROW []
+synonym: "food leaving behavior variant" EXACT []
 synonym: "patch leaving behavior variant" EXACT []
 is_a: WBPhenotype:0000662 ! foraging behavior variant
 
@@ -15279,7 +15278,7 @@ is_a: WBPhenotype:0000121 ! translation variant
 id: WBPhenotype:0002158
 name: P granule degradation defective
 def: "The selective elimination of P granule components and subsequent aggregation of degraded components into PGL granules is disrupted." [WB:WBPaper00044350, WB:WBPerson712]
-is_a: WBPhenotype:0001301 ! P granule defective
+is_a: WBPhenotype:0001301 ! P granule abnormal
 
 [Term]
 id: WBPhenotype:0002159
@@ -15616,19 +15615,17 @@ is_a: WBPhenotype:0000199 ! male tail sensory ray development variant
 
 [Term]
 id: WBPhenotype:0002211
-name: phasmid dye filling defect
+name: phasmid neuron dye filling defect
 def: "Animals exhibit defects in dye-filling of the neuronal cells of the phasmid sensilla. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO." [WB:WBPaper00003450, WB:WBPerson2987, WB:WBPerson557]
-synonym: "dye filling defect" RELATED []
-synonym: "Dyf" BROAD []
-is_a: WBPhenotype:0000257 ! phasmid morphology variant
+is_a: WBPhenotype:0000257 ! phasmid neuron morphology variant
+is_a: WBPhenotype:0002535 ! dye filling defect
 
 [Term]
 id: WBPhenotype:0002212
-name: amphid dye filling defect
+name: amphid neuron dye filling defect
 def: "Animals exhibit defects in dye-filling of the neuronal cells of the amphid sensilla. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO." [WB:WBPerson557]
-synonym: "dye filling defect" RELATED []
-synonym: "Dyf" BROAD []
-is_a: WBPhenotype:0000256 ! amphid morphology variant
+is_a: WBPhenotype:0000256 ! amphid neuron morphology variant
+is_a: WBPhenotype:0002535 ! dye filling defect
 
 [Term]
 id: WBPhenotype:0002213
@@ -17165,13 +17162,13 @@ is_a: WBPhenotype:0000535 ! organism morphology variant
 id: WBPhenotype:0002459
 name: hyperinduction of antimicrobial peptide expression after infection
 def: "Animals exhibit hyperinduction of expression of an antimicrobial peptide after an infection, compared to control animals." [WB:WBPerson168, WB:WBPerson2987]
-is_a: WBPhenotype:0001800 ! antimicrobial gene expression variant
+is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
 
 [Term]
 id: WBPhenotype:0002460
 name: no induction of antimicrobial peptide expression after infection
 def: "Animals exhibit no induction of expression of an antimicrobial peptide after an infection, unlike control animals." [WB:WBPerson168, WB:WBPerson2987]
-is_a: WBPhenotype:0001800 ! antimicrobial gene expression variant
+is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
 
 [Term]
 id: WBPhenotype:0002461
@@ -17565,7 +17562,7 @@ is_a: WBPhenotype:0000751 ! L1 larval development variant
 [Term]
 id: WBPhenotype:0002523
 name: slow recovery from starvation-induced L1 arrest
-def: "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls." [WB:WBPaper00049938, WB:WBPerson2987, WB:WBPerson6498]
+def: "Animals exhibit a slow recovery from starvation-induced L1 arrest, compared to controls." [WB:WBPaper00049938, WB:WBPerson2987, WB:WBPerson34124, WB:WBPerson6498]
 is_a: WBPhenotype:0002522 ! starvation-induced L1 arrest recovery abnormal
 
 [Term]
@@ -17611,6 +17608,69 @@ name: axotomy-induced phosphatidylserine exposure abnormal
 def: "The level of phosphatidylserine exposed on the external axonal membrane following transection (axotomy) is changed compared to controls." [WB:WBPaper00053570, WB:WBPerson2987, WB:WBPerson9270]
 is_a: WBPhenotype:0001399 ! cell membrane morphology variant
 is_a: WBPhenotype:0002478 ! axotomy response variant
+
+[Term]
+id: WBPhenotype:0002531
+name: allophagy abnormal
+def: "Animals exhibit variations in allogenic (non-self) organelle autophagy, or allophagy, a macroautophagy process whereby organelles of non-self origin, like paternal mitochondria from sperm in a newly fertilized oocyte, are selectively degraded." [WB:WBPaper00040312, WB:WBPaper00041104, WB:WBPaper00053507, WB:WBPerson2987, WB:WBPerson3859]
+is_a: WBPhenotype:0000736 ! autophagy variant
+
+[Term]
+id: WBPhenotype:0002532
+name: allophagy defective
+def: "Animals exhibit defects in allogenic (non-self) organelle autophagy, or allophagy, a macroautophagy process whereby organelles of non-self origin, like paternal mitochondria from sperm in a newly fertilized oocyte, are selectively degraded." [WB:WBPaper00053507, WB:WBPerson2987, WB:WBPerson3859]
+is_a: WBPhenotype:0002531 ! allophagy abnormal
+
+[Term]
+id: WBPhenotype:0002534
+name: antimicrobial gene expression variant
+def: "Animals exhibit variations in the expression of one or more known, endogenous, antimicrobial genes, compared to controls." [WB:WBPaper00031865, WB:WBPerson2987]
+is_a: WBPhenotype:0000717 ! gene expression variant
+
+[Term]
+id: WBPhenotype:0002535
+name: dye filling defect
+def: "Animals exhibit variations in the extent to which one or more sensory neurons associated with sensilla (typically one or more amphids and/or phasmids) take up dye from the environment, compared to controls. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO." [WB:WBPaper00000793, WB:WBPerson2987]
+synonym: "dye filling abnormal" EXACT []
+synonym: "Dyf" EXACT []
+is_a: WBPhenotype:0000299 ! sensillum morphology variant
+
+[Term]
+id: WBPhenotype:0002536
+name: P granule number abnormal
+def: "Animals exhibit germ cells with a number of P granules that differs from control animals." [WB:WBPaper00044160, WB:WBPerson2987, WB:WBPerson557]
+is_a: WBPhenotype:0001300 ! germ cell cytoplasmic morphology variant
+
+[Term]
+id: WBPhenotype:0002537
+name: P granule number reduced
+def: "Animals exhibit germ cells with a reduced number of P granules compared to control animals." [WB:WBPaper00044160, WB:WBPerson2987, WB:WBPerson557]
+is_a: WBPhenotype:0002536 ! P granule number abnormal
+
+[Term]
+id: WBPhenotype:0002538
+name: calcium signaling in spermatheca variant
+def: "Any variation in the series of molecular signals in which the spermatheca uses calcium ions to convert an extracellular signal into a response, compared to control." [WB:WBPaper00056137, WB:WBPerson2987, WB:WBPerson30989]
+is_a: WBPhenotype:0002170 ! calcium mediated signaling variant
+
+[Term]
+id: WBPhenotype:0002539
+name: antimicrobial gene expression increased
+def: "Animals exhibit an increase in the expression of one or more known, endogenous, antimicrobial genes, compared to controls." [WB:WBPaper00047109, WB:WBPerson15627, WB:WBPerson2987]
+is_a: WBPhenotype:0002534 ! antimicrobial gene expression variant
+
+[Term]
+id: WBPhenotype:0002540
+name: lawn leaving reduced
+def: "Animals exhibit a reduced rate of lawn/food leaving events, compared to controls." [WB:WBPaper00053007, WB:WBPerson262, WB:WBPerson2987]
+synonym: "food leaving reduced" EXACT []
+is_a: WBPhenotype:0001983 ! lawn leaving behavior variant
+
+[Term]
+id: WBPhenotype:0002541
+name: radiation induced germ cell apoptosis resistant
+def: "Programmed cell death of germ cells caused by exposure to ionizing energy occurs to a lesser extent than it does in control animals." [WB:WBPaper00032243, WB:WBPaper00032356, WB:WBPerson2987]
+is_a: WBPhenotype:0001850 ! radiation induced germ cell apoptosis variant
 
 [Term]
 id: WBPhenotype:0004001
