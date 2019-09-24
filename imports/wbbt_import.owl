@@ -15,7 +15,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/imports/wbbt_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2019-09-13/imports/wbbt_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2019-09-24/imports/wbbt_import.owl"/>
     </owl:Ontology>
     
 
@@ -803,59 +803,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002170 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002170">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RO_0002577"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RO_0002577"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <obo:IAO_0000112>a &apos;toe distal phalanx bone&apos; that is connected to a &apos;toe medial phalanx bone&apos; (an interphalangeal joint *connects* these two bones).</obo:IAO_0000112>
-        <obo:IAO_0000115>a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/22293552"/>
-        <rdfs:label xml:lang="en">connected to</rdfs:label>
-        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Connectivity-Design-Pattern</foaf:page>
-        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Modeling-articulations-Design-Pattern</foaf:page>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002177 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002177">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002567"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002371"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        </owl:propertyChainAxiom>
-        <obo:IAO_0000115>a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b.</obo:IAO_0000115>
-        <obo:IAO_0000589>attached to part of (anatomical structure to anatomical structure)</obo:IAO_0000589>
-        <rdfs:label xml:lang="en">attached to part of</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002177"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#propertyChainAxiom"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002371"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        </owl:annotatedTarget>
-        <obo:RO_0002582 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:RO_0002582>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002180 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002180">
@@ -1412,40 +1359,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002371 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002371">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002170"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002177"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <obo:IAO_0000115>a is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000589>attached to (anatomical structure to anatomical structure)</obo:IAO_0000589>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:label xml:lang="en">attached to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002375 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002375">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115>A relationship that holds between two material entities in a system of connected structures, where the branching relationship holds based on properties of the connecting network.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving branching relationships</obo:IAO_0000232>
-        <obo:IAO_0000232>This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (plant branches and roots, leaf veins, animal veins, arteries, nerves)</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">in branching relationship with</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ro/docs/branching_part_of.png"/>
-        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/170</foaf:page>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002384 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002384">
@@ -1468,6 +1381,18 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115 xml:lang="en">x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <rdfs:label xml:lang="en">has potential to developmentally contribute to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002386 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002386">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002384"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">x has potential to developmentally induce y iff x developmentally induces y or x is capable of developmentally inducing y</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">has potential to developmentally induce</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1963,20 +1888,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <obo:IAO_0000589>causally influences (material entity to material entity)</obo:IAO_0000589>
         <rdfs:label>causally influences</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002567 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002567">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
-        <obo:IAO_0000115>A relation that holds between elements of a musculoskeletal system or its analogs.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving the biomechanical processes.</obo:IAO_0000232>
-        <rdfs:label>biomechanically related to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2517,19 +2428,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/GO_0048018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0048018"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002577 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0002577">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <obo:IAO_0000115>A material entity consisting of multiple components that are causally integrated.</obo:IAO_0000115>
-        <obo:IAO_0000116>May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43</obo:IAO_0000116>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000119>http://www.jbiomedsem.com/content/4/1/43</obo:IAO_0000119>
-        <rdfs:label>system</rdfs:label>
-    </owl:Class>
     
 
 
@@ -3077,7 +2975,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>anchor cell, induces vulva, part of hermaphrodite gonad.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>AC</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>gon_herm_anch</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>gon herm anch</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>lineage name: Z1.ppp/Z4.aaa</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>WBbt:0004522</oboInOwl:id>
         <rdfs:label>anchor cell</rdfs:label>
@@ -3891,14 +3789,14 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/WBbt_0005374 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005374">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005729"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008629"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005178"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>anterior lobe of the bi-lobbed hermaphrodite gonad.</obo:IAO_0000115>
+        <obo:IAO_0000115>Anterior lobe of the bi-lobbed hermaphrodite gonad.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBbt:0005374</oboInOwl:id>
         <rdfs:label>anterior gonad arm</rdfs:label>
@@ -3906,7 +3804,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005374"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>anterior lobe of the bi-lobbed hermaphrodite gonad.</owl:annotatedTarget>
+        <owl:annotatedTarget>Anterior lobe of the bi-lobbed hermaphrodite gonad.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4802,7 +4700,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>entity of anatomical origin that is either entirely acellular or is a collection of cells and acellular parts.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>WBbt:0005764</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Space</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>anatomical structure</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>WBbt:0005766</oboInOwl:id>
         <rdfs:label>Anatomy</rdfs:label>
     </owl:Class>
@@ -4901,14 +4799,14 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/WBbt_0005773 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0005773">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005758"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005766"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005748"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The passage from the posterior intestine, from the rectal valve to the opening to the exterior.</obo:IAO_0000115>
+        <obo:IAO_0000115>The passageway in the hindgut between the posterior intestine, the rectal valve and the opening to the exterior.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBbt:0005773</oboInOwl:id>
         <rdfs:comment>LINKOUT::WORMATLAS::&lt;http://www.wormatlas.org/ver1/handbook/alimentary/alimentary3.htm&gt;</rdfs:comment>
@@ -4917,7 +4815,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005773"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The passage from the posterior intestine, from the rectal valve to the opening to the exterior.</owl:annotatedTarget>
+        <owl:annotatedTarget>The passageway in the hindgut between the posterior intestine, the rectal valve and the opening to the exterior.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5683,13 +5582,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0006795">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005757"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005748"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>junction between the alimentary and genital tracts in the male.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005773"/>
+        <obo:IAO_0000115>Essensially a modified rectum, junction between the alimentary and genital tracts in the male.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBbt:0006795</oboInOwl:id>
         <rdfs:label>proctodeum</rdfs:label>
@@ -5697,8 +5591,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006795"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>junction between the alimentary and genital tracts in the male.</owl:annotatedTarget>
+        <owl:annotatedTarget>Essensially a modified rectum, junction between the alimentary and genital tracts in the male.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:Paper00000462</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WBPaper:00038216</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5976,9 +5871,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </rdfs:subClassOf>
         <obo:IAO_0000115>somatic cell that situates at the tip of a gonad arm.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>distal tip cell</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>DTC</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>WBbt:0006865</oboInOwl:id>
-        <rdfs:label>DTC</rdfs:label>
+        <rdfs:label>distal tip cell</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0006865"/>
@@ -6702,7 +6597,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/WBbt_0008425 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0008425">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008424"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005766"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008423"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A small lump on the gubernaculum of the male tail. This structure lies on the ventral surface just anterior and central to the base of the spicule openings and contains a sensory structure called the hook sensillum.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>worm_anatomy</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBbt:0008425</oboInOwl:id>
@@ -7073,6 +6974,22 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008627"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell that is the MS blast cell or is a lineal descendant of MS.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBbt_0008629 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBbt_0008629">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBbt_0005729"/>
+        <obo:IAO_0000115>A lobe of the gonad. In a monodelphic gonad, there is one arm, whereas in a didelphic gonad, there are two arms.</obo:IAO_0000115>
+        <rdfs:label>gonad arm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBbt_0008629"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A lobe of the gonad. In a monodelphic gonad, there is one arm, whereas in a didelphic gonad, there are two arms.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB:rynl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
