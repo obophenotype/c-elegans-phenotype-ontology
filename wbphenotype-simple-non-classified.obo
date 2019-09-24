@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-09-13/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-09-24/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -23,7 +23,7 @@ is_a: WBPhenotype:0000525 ! organism behavior variant
 [Term]
 id: WBPhenotype:0000002
 name: kinker
-def: "The animal moves or rests with uncharacteristic muscle spasms causing loss of smooth sinusoidal motion or body posture. Movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control animals." [WB:WBPerson2021, WB:WBPerson557, WB:WBPerson712]
+def: "The animal moves or rests with uncharacteristic loss of smooth sinusoidal motion or body posture. Movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control animals." [WB:WBPerson2021, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0004017 ! locomotor coordination variant
 
 [Term]
@@ -2864,6 +2864,7 @@ id: WBPhenotype:0000402
 name: avoids bacterial lawn
 def: "Lawn avoidance refers to behavior in which animals initially enter the bacterial lawn but later exit and remain near the edge of the bacteria. Lawn avoidance is often a response to bacterial food, that is pathogenic or low quality to the animal." [WB:WBPaper00029071, WB:WBPerson2021]
 is_a: WBPhenotype:0000659 ! feeding behavior variant
+is_a: WBPhenotype:0002545 ! response to bacteria variant
 
 [Term]
 id: WBPhenotype:0000403
@@ -3853,13 +3854,13 @@ is_a: WBPhenotype:0001727 ! body width variant
 [Term]
 id: WBPhenotype:0000543
 name: forward kinker
-def: "Forward movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control. Animal moves forward with uncharacteristic muscle spasms causing loss of smooth sinusoidal motion or body posture (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
+def: "Forward movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control. Animal moves forward with uncharacteristic loss of smooth sinusoidal motion or body posture (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000002 ! kinker
 
 [Term]
 id: WBPhenotype:0000544
 name: backward kinker
-def: "Backward movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control. Animal moves backward with uncharacteristic muscle spasms causing loss of smooth sinusoidal motion or body posture (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
+def: "Backward movement is often characterized by severe bending motions, more sharply angled and/or much deeper than stereotypical sinusoidal body bends of the control. Animal moves backward with uncharacteristic loss of smooth sinusoidal motion or body posture (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000002 ! kinker
 
 [Term]
@@ -10224,6 +10225,7 @@ def: "Animals do not exhibit tail-swelling in response to infection by a bacteri
 synonym: "Bus" BROAD []
 is_a: WBPhenotype:0000073 ! tail morphology variant
 is_a: WBPhenotype:0001014 ! pathogen resistance increased
+is_a: WBPhenotype:0002545 ! response to bacteria variant
 
 [Term]
 id: WBPhenotype:0001414
@@ -14745,7 +14747,7 @@ is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 id: WBPhenotype:0002074
 name: centrosome dynamics variant
 def: "Animals vary in the directed or coordinated movement of their centrosomes during cell division, compared to the pattern of movement observed in control animals." [WB:WBPaper00040172, WB:WBPerson712]
-is_a: WBPhenotype:0000764 ! embryonic cell organization biogenesis variant
+is_a: WBPhenotype:0000536 ! cell physiology variant
 
 [Term]
 id: WBPhenotype:0002075
@@ -16507,12 +16509,13 @@ id: WBPhenotype:0002355
 name: increased susceptibility to bacterial pathogens
 def: "Animals are more prone to infection by bacterial pathogens compared to control animals." [WB:WBPaper00045575, WB:WBPerson712]
 is_a: WBPhenotype:0001013 ! pathogen susceptibility increased
+is_a: WBPhenotype:0002545 ! response to bacteria variant
 
 [Term]
 id: WBPhenotype:0002356
 name: sickened by nonpathogenic bacteria
 def: "Animals are negatively affected by bacteria that is nonpathogenic to control animals." [WB:WBPaper00045575, WB:WBPerson712]
-is_a: WBPhenotype:0001072 ! response to food variant
+is_a: WBPhenotype:0002545 ! response to bacteria variant
 
 [Term]
 id: WBPhenotype:0002357
@@ -16617,6 +16620,7 @@ id: WBPhenotype:0002373
 name: conditional attraction to bacterial lawn
 def: "Animals show a stronger preference for a particular bacterium that has been grown under conditions that differ from a control lawn." [WB:WBPaper00048410, WB:WBPerson712]
 is_a: WBPhenotype:0000659 ! feeding behavior variant
+is_a: WBPhenotype:0002545 ! response to bacteria variant
 
 [Term]
 id: WBPhenotype:0002374
@@ -17156,13 +17160,15 @@ is_a: WBPhenotype:0000535 ! organism morphology variant
 [Term]
 id: WBPhenotype:0002459
 name: hyperinduction of antimicrobial peptide expression after infection
-def: "Animals exhibit hyperinduction of expression of an antimicrobial peptide after an infection, compared to control animals." [WB:WBPerson168, WB:WBPerson2987]
+def: "Animals exhibit hyperinduction of expression of an antimicrobial peptide after an infection, compared to control animals." [WB:WBPaper00049531, WB:WBPerson168, WB:WBPerson2987]
+synonym: "Hipi" EXACT []
 is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
 
 [Term]
 id: WBPhenotype:0002460
 name: no induction of antimicrobial peptide expression after infection
-def: "Animals exhibit no induction of expression of an antimicrobial peptide after an infection, unlike control animals." [WB:WBPerson168, WB:WBPerson2987]
+def: "Animals exhibit no induction of expression of an antimicrobial peptide after an infection, unlike control animals." [WB:WBPaper00038424, WB:WBPaper00040946, WB:WBPaper00049531, WB:WBPerson168, WB:WBPerson2987]
+synonym: "Nipi" EXACT []
 is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
 
 [Term]
@@ -17628,7 +17634,7 @@ name: dye filling defect
 def: "Animals exhibit variations in the extent to which one or more sensory neurons associated with sensilla (typically one or more amphids and/or phasmids) take up dye from the environment, compared to controls. In C. elegans, these neurons are commonly assayed by dye-filling with FITC, DiI or DiO." [WB:WBPaper00000793, WB:WBPerson2987]
 synonym: "dye filling abnormal" EXACT []
 synonym: "Dyf" EXACT []
-is_a: WBPhenotype:0000299 ! sensillum morphology variant
+is_a: WBPhenotype:0000255 ! amphid phasmid neuron morphology variant
 
 [Term]
 id: WBPhenotype:0002536
@@ -17666,6 +17672,49 @@ id: WBPhenotype:0002541
 name: radiation induced germ cell apoptosis resistant
 def: "Programmed cell death of germ cells caused by exposure to ionizing energy occurs to a lesser extent than it does in control animals." [WB:WBPaper00032243, WB:WBPaper00032356, WB:WBPerson2987]
 is_a: WBPhenotype:0001850 ! radiation induced germ cell apoptosis variant
+
+[Term]
+id: WBPhenotype:0002542
+name: intranuclear chromatin localization variant
+def: "Cells exhibit specific regions of chromatin (e.g. an integrated array reporter) that localize to different regions within the nucleus, compared to controls." [WB:WBPaper00056796, WB:WBPerson2987, WB:WBPerson32254]
+synonym: "intranuclear chromatin localization abnormal" EXACT []
+is_a: WBPhenotype:0001348 ! chromosome morphology variant
+
+[Term]
+id: WBPhenotype:0002543
+name: spontaneous mitochondrial DNA mutation rate increased
+def: "Animals accumulate a greater number of mitochondrial genetic lesions than control animals in the absence of an externally controlled mutagen." [WB:WBPaper00053883, WB:WBPerson2987, WB:WBPerson31184]
+is_a: WBPhenotype:0000228 ! spontaneous mutation rate increased
+
+[Term]
+id: WBPhenotype:0002544
+name: hypersensitive to Enterobacter commensals
+def: "Normally beneficial (or otherwise harmless, non-pathogenic) commensal Enterobacter bacteria, for example Enterobacter cloacae, become pathogenic to animals, unlike in control animals." [WB:WBPaper00056139, WB:WBPerson2987, WB:WBPerson3878]
+is_a: WBPhenotype:0002356 ! sickened by nonpathogenic bacteria
+
+[Term]
+id: WBPhenotype:0002545
+name: response to bacteria variant
+def: "Animals exhibit variations in their response to bacteria (pathogenic or non-pathogenic), compared to controls." [WB:WBPaper00056139, WB:WBPerson2987, WB:WBPerson3878]
+is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+
+[Term]
+id: WBPhenotype:0002546
+name: bacterial load in gut variant
+def: "Animals exhibit variations in the load of bacteria, of a particular clade or in general, in the gut, compared to controls." [WB:WBPaper00056139, WB:WBPerson2987, WB:WBPerson3878]
+is_a: WBPhenotype:0002545 ! response to bacteria variant
+
+[Term]
+id: WBPhenotype:0002547
+name: gut Enterobacteriaceae bloom
+def: "Animals exhibit a greater abundance of bacteria of the Enterobacteriaceae family in the gut, compared to controls." [WB:WBPaper00056139, WB:WBPerson2987, WB:WBPerson3878]
+is_a: WBPhenotype:0002546 ! bacterial load in gut variant
+
+[Term]
+id: WBPhenotype:0002548
+name: kinker from conflicting forward and backward body bend propagation
+def: "Animals exhibit a kinker phenotype that is due to conflicting, simultaneous forward and backward propagating bending waves." [WB:WBPaper00040432, WB:WBPerson2987, WB:WBPerson720]
+is_a: WBPhenotype:0000002 ! kinker
 
 [Term]
 id: WBPhenotype:0004001

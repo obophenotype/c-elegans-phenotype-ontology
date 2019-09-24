@@ -10,11 +10,10 @@ $(ONT)-simple.obo: $(ONT)-simple.owl
 	rm -f $@.tmp.obo $@.tmp
 	
 $(ONT).obo: $(ONT)-simple.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$(ONT).owl --version-iri $(ONTBASE)/releases/$(TODAY)/$(ONT).owl convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
 #$(PATTERNDIR)/dosdp-patterns: .FORCE
 #	echo "WARNING WARNING Skipped until fixed: delete from wbphenotype.Makefile"
 
 labels.csv:
 	robot query --use-graphs true -f csv -i $(SRC) --query ../sparql/term_table.sparql $@
-

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-09-13/imports/wbls_import.owl
+data-version: wbphenotype/releases/2019-09-24/imports/wbls_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: wbphenotype/imports/wbls_import
@@ -23,8 +23,6 @@ id: BFO:0000004
 name: independent continuant
 def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
 is_a: BFO:0000002 ! continuant
-disjoint_from: BFO:0000020 ! specifically dependent continuant
-disjoint_from: BFO:0000031 ! generically dependent continuant
 relationship: part_of BFO:0000004 ! independent continuant
 
 [Term]
@@ -32,35 +30,6 @@ id: BFO:0000015
 name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
 is_a: BFO:0000003 ! occurrent
-
-[Term]
-id: BFO:0000017
-name: realizable entity
-def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
-is_a: BFO:0000020 ! specifically dependent continuant
-disjoint_from: BFO:0000019 ! quality
-relationship: part_of BFO:0000017 ! realizable entity
-
-[Term]
-id: BFO:0000019
-name: quality
-is_a: BFO:0000020 ! specifically dependent continuant
-relationship: part_of BFO:0000019 ! quality
-
-[Term]
-id: BFO:0000020
-name: specifically dependent continuant
-def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
-is_a: BFO:0000002 ! continuant
-disjoint_from: BFO:0000031 ! generically dependent continuant
-relationship: part_of BFO:0000020 ! specifically dependent continuant
-
-[Term]
-id: BFO:0000031
-name: generically dependent continuant
-def: "A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time." []
-is_a: BFO:0000002 ! continuant
-relationship: part_of BFO:0000031 ! generically dependent continuant
 
 [Term]
 id: BFO:0000040
@@ -109,6 +78,15 @@ is_a: GO:0003824 ! catalytic activity
 id: GO:0016772
 name: transferase activity, transferring phosphorus-containing groups
 is_a: GO:0016740 ! transferase activity
+
+[Term]
+id: RO:0002577
+name: system
+def: "A material entity consisting of multiple components that are causally integrated." []
+is_a: BFO:0000040 ! material entity
+property_value: IAO:0000116 "May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.jbiomedsem.com/content/4/1/43 xsd:string
 
 [Term]
 id: WBls:0000001
@@ -164,6 +142,7 @@ synonym: "1-cell embryo" BROAD []
 synonym: "fertilized egg" EXACT [WB:dr]
 is_a: BFO:0000003 ! occurrent
 is_a: WBls:0000813 ! C. elegans life stage occurring during blastula embryo
+is_a: WBls:0000823 ! C. elegans life stage by number of cells
 relationship: part_of WBls:0000005 ! blastula embryo Ce
 relationship: starts_at_end_of WBls:0000669 ! unfertilized egg Ce
 
@@ -303,6 +282,7 @@ def: "From the time after hatch till becomes adult." [WB:wjc]
 synonym: "larva" BROAD []
 is_a: BFO:0000003 ! occurrent
 is_a: WBls:0000105 ! nematode larval stage
+is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
 relationship: part_of WBls:0000022 ! postembryonic Ce
 relationship: starts_at_end_of WBls:0000003 ! embryo Ce
 
@@ -313,7 +293,8 @@ namespace: worm_development
 def: "The first stage larva. At 25 Centigrade, it ranges 14-25.5 hours after fertilization, 0-11.5 hours after hatch." [WB:wjc]
 synonym: "L1 larva" BROAD []
 is_a: BFO:0000003 ! occurrent
-is_a: WBls:0000106 ! L1
+is_a: WBls:0000106 ! L1 larval stage
+is_a: WBls:0000818 ! C. elegans life stage occurring during L1 larval stage
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: starts_at_end_of WBls:0000003 ! embryo Ce
 
@@ -324,7 +305,7 @@ namespace: worm_development
 def: "The stage when an animal shifts from L1 larva to L2 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
 synonym: "L1-L2 molt" BROAD []
 is_a: BFO:0000003 ! occurrent
-is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
+is_a: WBls:0000824 ! C. elegans life stage occurring during larval molt
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: starts_at_end_of WBls:0000024 ! L1 larva Ce
 
@@ -334,7 +315,8 @@ name: L2 larva Ce
 namespace: worm_development
 def: "The second stage larva. At 25 Centigrade, it ranges 25.5-32.5 hours after fertilization, 11.5-18.5 hours after hatch." [WB:wjc]
 synonym: "L2 larva" BROAD []
-is_a: WBls:0000107 ! L2
+is_a: WBls:0000107 ! L2 larval stage
+is_a: WBls:0000819 ! C. elegans life stage occurring during L2 larval stage
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: preceded_by WBls:0000024 ! L1 larva Ce
 relationship: starts_at_end_of WBls:0000026 ! L1-L2 molt Ce
@@ -346,7 +328,7 @@ namespace: worm_development
 def: "The stage when an animal shifts from L2 larva to L3 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
 synonym: "L2-L3 molt" BROAD []
 is_a: BFO:0000003 ! occurrent
-is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
+is_a: WBls:0000824 ! C. elegans life stage occurring during larval molt
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: starts_at_end_of WBls:0000027 ! L2 larva Ce
 
@@ -367,7 +349,8 @@ name: L3 larva Ce
 namespace: worm_development
 def: "The third stage larva. At 25 Centigrade, it ranges 32.5-40 hours after fertilization, 18.5-26 hours after hatch." [WB:wjc]
 synonym: "L3 larva" BROAD []
-is_a: WBls:0000108 ! L3
+is_a: WBls:0000108 ! L3 larval stage
+is_a: WBls:0000820 ! C. elegans life stage occurring during L3 larval stage
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: preceded_by WBls:0000027 ! L2 larva Ce
 relationship: starts_at_end_of WBls:0000029 ! L2-L3 molt Ce
@@ -379,7 +362,7 @@ namespace: worm_development
 def: "The stage when an animal shifts from L3 larva to L4 larva. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
 synonym: "L3-L4 molt" BROAD []
 is_a: BFO:0000003 ! occurrent
-is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
+is_a: WBls:0000824 ! C. elegans life stage occurring during larval molt
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: starts_at_end_of WBls:0000035 ! L3 larva Ce
 
@@ -389,7 +372,8 @@ name: L4 larva Ce
 namespace: worm_development
 def: "The fourth stage larva. At 25 Centigrade, it ranges 40-49.5 hours after fertilization, 26-35.5 hours after hatch." [WB:wjc]
 synonym: "L4 larva" BROAD []
-is_a: WBls:0000109 ! L4
+is_a: WBls:0000109 ! L4 larval stage
+is_a: WBls:0000821 ! C. elegans life stage occurring during L4 larval stage
 relationship: part_of WBls:0000023 ! larva Ce
 relationship: preceded_by WBls:0000035 ! L3 larva Ce
 relationship: starts_at_end_of WBls:0000032 ! dauer larva Ce
@@ -402,7 +386,7 @@ namespace: worm_development
 def: "The stage when an animal shifts from L4 larva to adult. It includes the synthesis of new cuticle, cease of phrayngeal pumping during a lethargus stage, and the shed off of old cuticle." [WB:wjc]
 synonym: "L4-adult molt" BROAD []
 is_a: BFO:0000003 ! occurrent
-is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
+is_a: WBls:0000824 ! C. elegans life stage occurring during larval molt
 relationship: part_of WBls:0000023 ! larva Ce
 
 [Term]
@@ -412,6 +396,7 @@ namespace: worm_development
 def: "The stage that begins when a C.elegans individual is fully-developed and has reached maturity." [WB:wjc]
 synonym: "adult" BROAD []
 is_a: WBls:0000104 ! nematode adult
+is_a: WBls:0000816 ! C. elegans life stage occurring during adulthood
 relationship: part_of WBls:0000022 ! postembryonic Ce
 relationship: preceded_by WBls:0000038 ! L4 larva Ce
 relationship: starts_at_end_of WBls:0000023 ! larva Ce
@@ -500,7 +485,7 @@ creation_date: 2013-11-25T06:19:27Z
 
 [Term]
 id: WBls:0000106
-name: L1
+name: L1 larval stage
 namespace: worm_development
 def: "The first stage larva of nematodes." [WB:dr]
 synonym: "L1 larva nematode" EXACT []
@@ -510,37 +495,37 @@ creation_date: 2013-11-25T06:20:28Z
 
 [Term]
 id: WBls:0000107
-name: L2
+name: L2 larval stage
 namespace: worm_development
 def: "The second stage larva of nematodes." [WB:dr]
 synonym: "L2 larva nematode" EXACT []
 is_a: BFO:0000003 ! occurrent
 is_a: WBls:0000105 ! nematode larval stage
-relationship: starts_at_end_of WBls:0000106 ! L1
+relationship: starts_at_end_of WBls:0000106 ! L1 larval stage
 created_by: danielaraciti
 creation_date: 2013-11-25T06:20:54Z
 
 [Term]
 id: WBls:0000108
-name: L3
+name: L3 larval stage
 namespace: worm_development
 def: "The third stage larva of nematodes." [WB:dr]
 synonym: "L3 larva nematode" EXACT []
 is_a: BFO:0000003 ! occurrent
 is_a: WBls:0000105 ! nematode larval stage
-relationship: starts_at_end_of WBls:0000107 ! L2
+relationship: starts_at_end_of WBls:0000107 ! L2 larval stage
 created_by: danielaraciti
 creation_date: 2013-11-25T06:21:33Z
 
 [Term]
 id: WBls:0000109
-name: L4
+name: L4 larval stage
 namespace: worm_development
 def: "The fourth stage larva of nematodes." [WB:dr]
 synonym: "L4 larva nematode" EXACT []
 is_a: BFO:0000003 ! occurrent
 is_a: WBls:0000105 ! nematode larval stage
-relationship: starts_at_end_of WBls:0000108 ! L3
+relationship: starts_at_end_of WBls:0000108 ! L3 larval stage
 created_by: danielaraciti
 creation_date: 2013-11-25T06:22:48Z
 
@@ -709,6 +694,20 @@ id: WBls:0000821
 name: C. elegans life stage occurring during L4 larval stage
 namespace: worm_development
 def: "A C. elegans life stage that occurs during the L4 larval life stage" [WB:WBPerson2987]
+is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
+
+[Term]
+id: WBls:0000823
+name: C. elegans life stage by number of cells
+namespace: worm_development
+def: "C. elegans life stage classified by the number of cells in the organism." [WB:WBPerson2987]
+is_a: WBls:0000002 ! all stages Ce
+
+[Term]
+id: WBls:0000824
+name: C. elegans life stage occurring during larval molt
+namespace: worm_development
+def: "C. elegans life stage that occurs during a larval molt" [WB:WBPerson2987]
 is_a: WBls:0000817 ! C. elegans life stage occurring during larval stage
 
 [Typedef]
