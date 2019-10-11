@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-09-24/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-10-11/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -3333,6 +3333,7 @@ is_a: WBPhenotype:0001520 ! posterior neuron migration variant
 id: WBPhenotype:0000472
 name: endoderm absent
 def: "Animals lack the early blast cells that give rise to the gut tissue (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
+synonym: "gutless" EXACT []
 is_a: WBPhenotype:0000749 ! embryonic development variant
 
 [Term]
@@ -10900,7 +10901,7 @@ is_a: WBPhenotype:0002320 ! reversal variant
 [Term]
 id: WBPhenotype:0001506
 name: spontaneous reversal rate variant
-def: "Any variation in the processes that govern the rate at which spontaneous backward locomotion is initiated compared to control. In C. elegans, animals moving forward consistently initiate backward locomotion approximately 10 times per 3 minutes." [WB:WBPaper00001311, WB:WBPaper00026650, WB:WBPerson557]
+def: "Any variation in the processes that govern the rate at which spontaneous backward locomotion is initiated compared to control." [WB:WBPaper00001311, WB:WBPaper00026650, WB:WBPerson557]
 synonym: "spontaneous reversal rate abnormal" NARROW []
 is_a: WBPhenotype:0001505 ! spontaneous reversal variant
 
@@ -17714,7 +17715,68 @@ is_a: WBPhenotype:0002546 ! bacterial load in gut variant
 id: WBPhenotype:0002548
 name: kinker from conflicting forward and backward body bend propagation
 def: "Animals exhibit a kinker phenotype that is due to conflicting, simultaneous forward and backward propagating bending waves." [WB:WBPaper00040432, WB:WBPerson2987, WB:WBPerson720]
+synonym: "conflicted kinker" EXACT []
 is_a: WBPhenotype:0000002 ! kinker
+
+[Term]
+id: WBPhenotype:0002549
+name: increased frequency of spontaneous reversal initiation
+def: "Animals exhibit an increase in the rate at which spontaneous backward locomotion is initiated compared to control." [WB:WBPaper00040432, WB:WBPerson2987, WB:WBPerson720]
+is_a: WBPhenotype:0001506 ! spontaneous reversal rate variant
+
+[Term]
+id: WBPhenotype:0002550
+name: conflicted kinker with gradual backward movement
+def: "Animals exhibit a kinker phenotype that is due to conflicting, simultaneous forward and backward propagating bending waves, and over time has a tendency to move slowly backward due to a dominating reversal neural circuit." [WB:WBPaper00040432, WB:WBPerson2987, WB:WBPerson720]
+is_a: WBPhenotype:0002548 ! kinker from conflicting forward and backward body bend propagation
+
+[Term]
+id: WBPhenotype:0002551
+name: anatomical phenotype
+def: "A phenotype affecting a particular anatomical entity." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002552
+name: cell phenotype
+def: "A phenotype affecting a particular cell." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002553
+name: organ phenotype
+def: "A phenotype affecting a particular organ." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002554
+name: organ system phenotype
+def: "A phenotype affecting a particular organ system." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002555
+name: organismal phenotype
+def: "A phenotype affecting the whole organism." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002556
+name: tissue phenotype
+def: "A phenotype affecting a particular tissue." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002557
+name: body region phenotype
+def: "A phenotype affecting a particular body region." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
+
+[Term]
+id: WBPhenotype:0002558
+name: extracellular component phenotype
+def: "A phenotype affecting a particular extracellular component." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! Variant
 
 [Term]
 id: WBPhenotype:0004001
