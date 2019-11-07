@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-06/imports/cl_import.owl
+data-version: wbphenotype/releases/2019-11-07/imports/cl_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -380,8 +380,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -2573,6 +2573,38 @@ synonym: "endoderm cell" EXACT []
 xref: FMA:72555
 is_a: CL:0002321 ! embryonic cell
 relationship: part_of UBERON:0000925 ! endoderm
+
+[Term]
+id: CL:0000225
+name: anucleate cell
+namespace: cell
+def: "A cell that lacks a nucleus." [FB:ma]
+synonym: "non-nucleated cell" EXACT []
+xref: FMA:68647
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: bearer_of PATO:0001405 ! anucleate
+disjoint_from: CL:0002242 ! nucleate cell
+relationship: bearer_of PATO:0001405 ! anucleate
+
+[Term]
+id: CL:0000226
+name: single nucleate cell
+namespace: cell
+def: "A cell with a single nucleus." [FB:ma, GOC:tfm]
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: bearer_of PATO:0001407 ! mononucleate
+relationship: bearer_of PATO:0001407 ! mononucleate
+
+[Term]
+id: CL:0000227
+name: binucleate cell
+namespace: cell
+is_a: CL:0000228 ! multinucleate cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: bearer_of PATO:0001406 ! binucleate
+relationship: bearer_of PATO:0001406 ! binucleate
 
 [Term]
 id: CL:0000228
@@ -16237,6 +16269,36 @@ namespace: quality
 def: "A cellular quality inhering in a bearer by virtue of bearer's number of nuclei." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001396 ! cellular quality
+
+[Term]
+id: PATO:0001405
+name: anucleate
+namespace: quality
+def: "A nucleate quality inhering in a bearer by virtue of the bearer's having no nucleus." [Biology-online:Biology-online]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0001404 ! nucleate quality
+
+[Term]
+id: PATO:0001406
+name: binucleate
+namespace: quality
+def: "A nucleate quality inhering in a bearer by virtue of the bearer's having two nuclei." [Biology-online:Biology-online]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0001908 ! multinucleate
+
+[Term]
+id: PATO:0001407
+name: mononucleate
+namespace: quality
+def: "A nucleate quality inhering in a bearer by virtue of the bearer's having one nucleus." [Biology-online:Biology-online]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0002505 ! nucleated
 
 [Term]
 id: PATO:0001603
@@ -35012,6 +35074,13 @@ name: process has causal agent
 def: "Inverse of 'causal agent in process'" []
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 is_a: RO:0002410 ! causally related to
+
+[Typedef]
+id: RO:0002609
+name: obsolete related via dependence to
+def: "A relationship that holds between two entities, where the relationship holds based on the presence or absence of statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes." []
+property_value: curator_notes "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
+is_obsolete: true
 
 [Typedef]
 id: RO:0002629
