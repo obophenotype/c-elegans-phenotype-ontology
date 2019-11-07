@@ -2584,6 +2584,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002559>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002560>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002561>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002562>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002563>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -10619,7 +10620,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000851> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000851> "WBPhenotype:0000851"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000851> "ciliated neuron physiology variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000851> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000851> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000852> (coelomocyte development variant)
 
@@ -11906,14 +11907,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000990> "muscle cell physiology variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000990> <http://purl.obolibrary.org/obo/WBPhenotype_0000536>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000991> (neuron physiology variant)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000991> (obsolete neuron physiology variant)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032221"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "Activity of the neuron varies from that observed for control animals or neurons. In C. elegans neuron activity is often assayed by observing calcium spikes."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "neuron physiology abnormal"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00032221"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "OBSOLETE: Activity of the neuron varies from that observed for control animals or neurons. In C. elegans neuron activity is often assayed by observing calcium spikes."^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "WBPhenotype:0000991"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "neuron physiology variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0000991> <http://purl.obolibrary.org/obo/WBPhenotype_0000536>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "obsolete neuron physiology variant"^^xsd:string)
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/WBPhenotype_0000991> "true"^^xsd:boolean)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000992> (high sodium chloride concentration osmotic avoidance defective)
 
@@ -12401,7 +12402,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001042> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001042> "WBPhenotype:0001042"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001042> "neuron function reduced"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001042> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001042> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001043> (interphase entry defective early emb)
 
@@ -16370,7 +16371,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001477> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001477> "WBPhenotype:0001477"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001477> "anterograde transport variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001477> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001477> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001478> (body elongation variant)
 
@@ -19173,7 +19174,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0001785> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001785> "WBPhenotype:0001785"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001785> "memory retention defective"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001785> <http://purl.obolibrary.org/obo/WBPhenotype_0000738>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001785> <http://purl.obolibrary.org/obo/WBPhenotype_0001780>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001786> (neuronal ion channel clustering defective)
 
@@ -19183,7 +19184,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001786> "neuronal ion channel clustering defective"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001786> <http://purl.obolibrary.org/obo/WBPhenotype_0000612>)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001786> <http://purl.obolibrary.org/obo/WBPhenotype_0000816>)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001786> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001786> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001787> (phototaxis defective)
 
@@ -19220,7 +19221,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001790> "ThRC absent"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001790> "WBPhenotype:0001790"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001790> "thermoreceptor currents absent"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001790> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001790> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001791> (defecation cycle temperature compensation variant)
 
@@ -19474,7 +19475,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0001818> "neuron activity abnormal"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001818> "WBPhenotype:0001818"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001818> "neuron activation variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001818> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001818> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001819> (pathogen load variant)
 
@@ -20349,7 +20350,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0001922> "WBPhenotype:0001922"^^xsd:string)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/WBPhenotype_0001922> "Possible XP."^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0001922> "axonal transport variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001922> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0001922> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0001923> (fewer seam cells)
 
@@ -21334,7 +21335,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002039> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002039> "WBPhenotype:0002039"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002039> "retrograde transport variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002039> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002039> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002040> (asymmetric chromosome segregation)
 
@@ -22670,7 +22671,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002199> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002199> "WBPhenotype:0002199"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002199> "neuron calcium transient levels variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002199> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002199> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002200> (oviduct muscle defective)
 
@@ -24973,7 +24974,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002478> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002478> "WBPhenotype:0002478"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002478> "axotomy response variant"^^xsd:string)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002478> <http://purl.obolibrary.org/obo/WBPhenotype_0000991>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002478> <http://purl.obolibrary.org/obo/WBPhenotype_0002563>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002479> (axon regeneration enhanced)
 
@@ -25595,13 +25596,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002554> "organ system phenotype"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002554> <http://purl.obolibrary.org/obo/WBPhenotype_0000886>)
 
-# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002555> (obsolete organismal phenotype)
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002555> (organismal phenotype)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "OBSOLETE: A phenotype affecting the whole organism."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "A phenotype affecting the whole organism."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "WBPhenotype:0002555"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "obsolete organismal phenotype"@en)
-AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "true"^^xsd:boolean)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002555> "organismal phenotype"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002555> <http://purl.obolibrary.org/obo/WBPhenotype_0000886>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002556> (tissue phenotype)
 
@@ -25660,6 +25661,17 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002562> "WBPhenotype:0002562"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002562> "lysosome homeostasis abnormal"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002562> <http://purl.obolibrary.org/obo/WBPhenotype_0000536>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002563> (neuron physiology phenotype)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "Animals exhibit variations in any physical or chemical process required for the neuron to carry out its normal functions or activities or be able to perceive and respond to cues, compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "WBPhenotype:0000991"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "neuron physiology abnormal"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "neuron physiology variant"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "WBPhenotype:0002563"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002563> "neuron physiology phenotype"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002563> <http://purl.obolibrary.org/obo/WBPhenotype_0000536>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
