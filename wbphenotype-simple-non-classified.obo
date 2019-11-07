@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-06/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-11-07/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -6215,7 +6215,7 @@ id: WBPhenotype:0000851
 name: ciliated neuron physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the ciliated neuron to carry out its normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "ciliated neuron physiology abnormal" NARROW []
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0000852
@@ -7226,10 +7226,10 @@ is_a: WBPhenotype:0000536 ! cell physiology phenotype
 
 [Term]
 id: WBPhenotype:0000991
-name: neuron physiology variant
-def: "Activity of the neuron varies from that observed for control animals or neurons. In C. elegans neuron activity is often assayed by observing calcium spikes." [WB:WBPaper00032221, WB:WBPerson712]
-synonym: "neuron physiology abnormal" NARROW []
-is_a: WBPhenotype:0000536 ! cell physiology phenotype
+name: obsolete neuron physiology variant
+def: "OBSOLETE: Activity of the neuron varies from that observed for control animals or neurons. In C. elegans neuron activity is often assayed by observing calcium spikes." [WB:WBPaper00032221, WB:WBPerson712]
+is_obsolete: true
+replaced_by: WBPhenotype:0002563
 
 [Term]
 id: WBPhenotype:0000992
@@ -7615,7 +7615,7 @@ is_a: WBPhenotype:0001100 ! early embryonic lethal
 id: WBPhenotype:0001042
 name: neuron function reduced
 def: "Neurons show impaired ability in the detection, transmission, coordination or their response to information about an animal's internal and external environments." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001043
@@ -10712,7 +10712,7 @@ id: WBPhenotype:0001477
 name: anterograde transport variant
 def: "Any variation in the directed movement of organelles or molecules along microtubules from the cell body toward the cell periphery in nerve cell axons, compared to control." [GO:0008089, WB:WBPerson2021, WB:WBPerson557]
 synonym: "anterograde transport abnormal" NARROW []
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001478
@@ -12897,7 +12897,7 @@ replaced_by: WBPhenotype:0002562
 id: WBPhenotype:0001785
 name: memory retention defective
 def: "Animals are deficient in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms." [WB:WBPaper00031974, WB:WBPerson712]
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0001780 ! associative learning variant
 
 [Term]
 id: WBPhenotype:0001786
@@ -12905,7 +12905,7 @@ name: neuronal ion channel clustering defective
 def: "Animals exhibit variations in the targeting, clustering and or maintenance of ion channels in distinct subcellular domains of the neuron compared to control animals." [GO:0045161, WB:WBPaper00031930, WB:WBPerson712]
 is_a: WBPhenotype:0000612 ! nervous system physiology variant
 is_a: WBPhenotype:0000816 ! neuron development variant
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001787
@@ -12934,7 +12934,7 @@ id: WBPhenotype:0001790
 name: thermoreceptor currents absent
 def: "Cooling or warming evoked changes in membrane currents are not observed." [WB:WBPaper00032060, WB:WBPerson712]
 synonym: "ThRC absent" RELATED []
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001791
@@ -13132,7 +13132,7 @@ name: neuron activation variant
 def: "Activity of the neuron varies from that observed for control animals or neurons. In C. elegans neuron activity is often assayed by observing calcium spikes." [WB:WBPaper00032221, WB:WBPerson712]
 synonym: "neuron activation abnormal" NARROW []
 synonym: "neuron activity abnormal" RELATED []
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001819
@@ -13803,7 +13803,7 @@ def: "Any variation in the directed movement of organelles or molecules along mi
 comment: Possible XP.
 synonym: "axon cargo transport variant" RELATED []
 synonym: "axon transport variant" EXACT []
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0001923
@@ -14554,7 +14554,7 @@ is_a: WBPhenotype:0000851 ! ciliated neuron physiology variant
 id: WBPhenotype:0002039
 name: retrograde transport variant
 def: "Animals exhibit variation in the directed movement of organelles or molecules along microtubules from the cell periphery in nerve cell axons to the cell body, compared to control." [WB:WBPaper00038442, WB:WBPerson712]
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0002040
@@ -15570,7 +15570,7 @@ is_a: WBPhenotype:0000625 ! synaptogenesis variant
 id: WBPhenotype:0002199
 name: neuron calcium transient levels variant
 def: "The degree of stimulus-evoked calcium concentration changes differs from that of controls." [WB:WBPaper00039855, WB:WBPerson712]
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0002200
@@ -17314,7 +17314,7 @@ is_a: WBPhenotype:0002098 ! cell component localization variant
 id: WBPhenotype:0002478
 name: axotomy response variant
 def: "Any variation in the cellular and molecular pathways in a neuron in response to having its axon severed compared to severing in control animals." [WB:WBPaper00053323, WB:WBPerson557, WB:WBPerson9270]
-is_a: WBPhenotype:0000991 ! neuron physiology variant
+is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
 id: WBPhenotype:0002479
@@ -17783,9 +17783,9 @@ is_a: WBPhenotype:0000886 ! nematode phenotype
 
 [Term]
 id: WBPhenotype:0002555
-name: obsolete organismal phenotype
-def: "OBSOLETE: A phenotype affecting the whole organism." [WB:WBPerson2987]
-is_obsolete: true
+name: organismal phenotype
+def: "A phenotype affecting the whole organism." [WB:WBPerson2987]
+is_a: WBPhenotype:0000886 ! nematode phenotype
 
 [Term]
 id: WBPhenotype:0002556
@@ -17829,6 +17829,15 @@ id: WBPhenotype:0002562
 name: lysosome homeostasis abnormal
 alt_id: WBPhenotype:0001784
 def: "Cells exhibit variations or abnormalities in their maintenance of lysosome function, compared to controls." [WB:WBPaper00029049, WB:WBPerson2987]
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
+
+[Term]
+id: WBPhenotype:0002563
+name: neuron physiology phenotype
+alt_id: WBPhenotype:0000991
+def: "Animals exhibit variations in any physical or chemical process required for the neuron to carry out its normal functions or activities or be able to perceive and respond to cues, compared to control animals." [WB:WBPerson2987]
+synonym: "neuron physiology abnormal" EXACT []
+synonym: "neuron physiology variant" EXACT []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
 
 [Term]
