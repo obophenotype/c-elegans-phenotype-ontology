@@ -15,6 +15,29 @@
       "type" : "CLASS",
       "lbl" : "metacorpus"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002170",
+      "meta" : {
+        "definition" : {
+          "val" : "a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "http://www.ncbi.nlm.nih.gov/pubmed/22293552"
+        }, {
+          "pred" : "http://xmlns.com/foaf/0.1/page",
+          "val" : "https://github.com/obophenotype/uberon/wiki/Connectivity-Design-Pattern"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "a 'toe distal phalanx bone' that is connected to a 'toe medial phalanx bone' (an interphalangeal joint *connects* these two bones)."
+        }, {
+          "pred" : "http://xmlns.com/foaf/0.1/page",
+          "val" : "https://github.com/obophenotype/uberon/wiki/Modeling-articulations-Design-Pattern"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "connected to"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBbt_0008608",
       "meta" : {
         "definition" : {
@@ -63,6 +86,20 @@
       },
       "type" : "CLASS",
       "lbl" : "molecular_function"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002177",
+      "meta" : {
+        "definition" : {
+          "val" : "a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
+          "val" : "attached to part of (anatomical structure to anatomical structure)"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "attached to part of"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002295",
       "meta" : {
@@ -484,6 +521,20 @@
       "type" : "CLASS",
       "lbl" : "inner labial sensillum"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBbt_0000100",
+      "meta" : {
+        "definition" : {
+          "val" : "An anatomical entity of the nematode Caenorhabditis elegans.",
+          "xrefs" : [ "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "worm_anatomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "C. elegans anatomical entity"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBbt_0008189",
       "meta" : {
         "definition" : {
@@ -505,16 +556,6 @@
       },
       "type" : "CLASS",
       "lbl" : "gon male sves"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/WBbt_0000100",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "worm_anatomy"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "C. elegans Cell and Anatomy"
     }, {
       "id" : "http://purl.obolibrary.org/obo/WBbt_0005319",
       "meta" : {
@@ -1340,6 +1381,24 @@
       },
       "type" : "CLASS",
       "lbl" : "gubernacular muscle"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002371",
+      "meta" : {
+        "definition" : {
+          "val" : "a is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
+          "val" : "attached to (anatomical structure to anatomical structure)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Chris Mungall"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "attached to"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0044464",
       "meta" : {
@@ -2176,11 +2235,11 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "https://en.wikipedia.org/wiki/Allen%27s_interval_algebra"
         }, {
-          "pred" : "http://purl.org/dc/elements/1.1/source",
-          "val" : "https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends."
+        }, {
+          "pred" : "http://purl.org/dc/terms/source",
+          "val" : "https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
@@ -2330,6 +2389,26 @@
       },
       "type" : "PROPERTY",
       "lbl" : "negatively regulated by"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002577",
+      "meta" : {
+        "definition" : {
+          "val" : "A material entity consisting of multiple components that are causally integrated.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Chris Mungall"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "http://www.jbiomedsem.com/content/4/1/43"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "system"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002578",
       "meta" : {
@@ -3083,6 +3162,23 @@
       },
       "type" : "PROPERTY",
       "lbl" : "causally influences"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002567",
+      "meta" : {
+        "definition" : {
+          "val" : "A relation that holds between elements of a musculoskeletal system or its analogs.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Chris Mungall"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
+          "val" : "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving the biomechanical processes."
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "biomechanically related to"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002447",
       "meta" : {
@@ -4113,7 +4209,7 @@
           "pred" : "http://purl.obolibrary.org/obo/RO_0004050",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
         }, {
-          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "pred" : "http://purl.org/dc/terms/creator",
           "val" : "cjm"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
@@ -4183,11 +4279,11 @@
       "id" : "http://purl.obolibrary.org/obo/RO_0002304",
       "meta" : {
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/creator",
+          "val" : "cjm"
+        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y"
-        }, {
-          "pred" : "http://purl.org/dc/elements/1.1/creator",
-          "val" : "cjm"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004049",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
@@ -5629,6 +5725,20 @@
       "type" : "CLASS",
       "lbl" : "basal lamina"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBbt_0005757",
+      "meta" : {
+        "definition" : {
+          "val" : "cells or anatomical parts specific to the male sex",
+          "xrefs" : [ "WB:rynl" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "worm_anatomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "male-specific anatomical entity"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBbt_0007815",
       "meta" : {
         "definition" : {
@@ -5643,20 +5753,6 @@
       "type" : "CLASS",
       "lbl" : "hermaphrodite somatic gonadal cell"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/WBbt_0005757",
-      "meta" : {
-        "definition" : {
-          "val" : "cells or anatomical parts specific to the male sex",
-          "xrefs" : [ "WB:rynl" ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "worm_anatomy"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "male-specific"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/WBbt_0005758",
       "meta" : {
         "definition" : {
@@ -5669,7 +5765,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "hermaphrodite-specific"
+      "lbl" : "hermaphrodite-specific anatomical entity"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
       "type" : "PROPERTY",
@@ -6389,13 +6485,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0003760"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005105",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005135"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002203"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005105",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005135"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0007816",
       "pred" : "is_a",
@@ -6405,17 +6501,21 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002324"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004112",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005098"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005135",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005189"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004112",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005098"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005022",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0007030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002177",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002567"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0008429",
       "pred" : "is_a",
@@ -6517,13 +6617,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005774",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005748"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005762",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005735"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005774",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005748"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005237",
       "pred" : "is_a",
@@ -6588,6 +6688,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002087",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002090"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002567",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000062",
       "pred" : "inverseOf",
@@ -6877,13 +6981,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0006783"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0008439",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002327",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002333"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0008439",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0006749",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -6937,13 +7041,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0007846"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005501",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005107"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005752",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005763"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005501",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005107"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005332",
       "pred" : "is_a",
@@ -6968,6 +7072,14 @@
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0006790",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0008435"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0006796",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002577",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002429",
       "pred" : "subPropertyOf",
@@ -7004,10 +7116,6 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002449",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002448"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0006796",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005784"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005751",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -7193,13 +7301,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0008591"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005342",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005781"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0004578",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005800"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005342",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005781"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005811",
       "pred" : "is_a",
@@ -7313,13 +7421,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CARO_0030000"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005751",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0004946",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0008409"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005751",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002481",
       "pred" : "subPropertyOf",
@@ -7425,9 +7533,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044464"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005784",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002177",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002323"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005176",
       "pred" : "is_a",
@@ -7661,6 +7769,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005732"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002371",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002170"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005736",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0006850"
@@ -7669,13 +7781,13 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005800"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002014",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000063",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002222"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002014",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005738",
       "pred" : "is_a",
@@ -7801,17 +7913,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005460"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004942",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005800"
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004778",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0007028"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005800",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005773"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004778",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0007028"
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0004942",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005800"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002559",
       "pred" : "inverseOf",
@@ -7871,7 +7983,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0006849",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005784"
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0004017"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005255",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -7941,25 +8053,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005781"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0004032",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002264"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002212",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002335"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0004032",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002264"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0004873",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0008447"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005409",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0003679"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002211",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002334"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005409",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0003679"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005750",
       "pred" : "is_a",
@@ -8060,6 +8172,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0003675",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005737"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002371",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002177"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005792",
       "pred" : "is_a",
@@ -8177,13 +8293,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002384"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002305",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0004046"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002258",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002286"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002305",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0004046"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0003679",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -8256,6 +8372,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002500",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002608"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002170",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002323"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0004522",
       "pred" : "is_a",
@@ -8365,13 +8485,13 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005739"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005745",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005732"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0006797",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBbt_0005758"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBbt_0005745",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBbt_0005732"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBbt_0005843",
       "pred" : "is_a",
@@ -8386,7 +8506,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-11-07/imports/wbbt_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-11-19/imports/wbbt_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
@@ -8398,6 +8518,10 @@
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0003001",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000040" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002177",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/CARO_0000003" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/CARO_0000003" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002254",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/CARO_0000000" ],
@@ -8425,6 +8549,10 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "allValuesFromEdges" : [ {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
+      }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
@@ -8432,10 +8560,6 @@
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-      }, {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
-        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
       } ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002506",
@@ -8449,6 +8573,10 @@
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002501",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
       "rangeClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002567",
+      "domainClassIds" : [ "http://purl.obolibrary.org/obo/CARO_0000003" ],
+      "rangeClassIds" : [ "http://purl.obolibrary.org/obo/CARO_0000003" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002222",
       "domainClassIds" : [ "http://purl.obolibrary.org/obo/BFO_0000003" ],
@@ -8543,6 +8671,12 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002430",
       "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002327", "http://purl.obolibrary.org/obo/RO_0002212" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002131",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002131", "http://purl.obolibrary.org/obo/BFO_0000050" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002177",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002371", "http://purl.obolibrary.org/obo/BFO_0000050" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0004034",
       "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002327", "http://purl.obolibrary.org/obo/RO_0002304" ]

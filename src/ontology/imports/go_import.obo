@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-07/imports/go_import.owl
+data-version: wbphenotype/releases/2019-11-19/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -3972,6 +3972,14 @@ name: learning
 namespace: biological_process
 def: "Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience." [ISBN:0582227089, ISBN:0721662544]
 xref: Wikipedia:Learning
+is_a: GO:0007611 ! learning or memory
+
+[Term]
+id: GO:0007613
+name: memory
+namespace: biological_process
+def: "The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task)." [GOC:curators, http://www.onelook.com/, ISBN:0582227089]
+xref: Wikipedia:Memory
 is_a: GO:0007611 ! learning or memory
 
 [Term]

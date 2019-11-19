@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-07/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-11-19/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 remark: C elegans Phenotype Ontology
@@ -12895,9 +12895,9 @@ replaced_by: WBPhenotype:0002562
 
 [Term]
 id: WBPhenotype:0001785
-name: memory retention defective
+name: associative memory defective
 def: "Animals are deficient in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms." [WB:WBPaper00031974, WB:WBPerson712]
-is_a: WBPhenotype:0001780 ! associative learning variant
+is_a: WBPhenotype:0002564 ! associative memory phenotype
 
 [Term]
 id: WBPhenotype:0001786
@@ -17839,6 +17839,46 @@ def: "Animals exhibit variations in any physical or chemical process required fo
 synonym: "neuron physiology abnormal" EXACT []
 synonym: "neuron physiology variant" EXACT []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
+
+[Term]
+id: WBPhenotype:0002564
+name: associative memory phenotype
+def: "Animals exhibit variations in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms, compared to controls." [WB:WBPaper00036296, WB:WBPerson2987]
+synonym: "associative memory abnormal" EXACT []
+synonym: "associative memory variant" EXACT []
+is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+
+[Term]
+id: WBPhenotype:0002565
+name: associative olfactory memory phenotype
+def: "Animals exhibit variations in their recalled and repeated responses to olfactory stimuli they are exposed to during learning and memory paradigms, compared to controls." [WB:WBPaper00036296, WB:WBPerson2987, WB:WBPerson3142]
+synonym: "olfactory memory abnormal" EXACT []
+synonym: "olfactory memory variant" EXACT []
+is_a: WBPhenotype:0002564 ! associative memory phenotype
+
+[Term]
+id: WBPhenotype:0002566
+name: long-term associative olfactory memory phenotype
+def: "Animals exhibit variations in their recalled and repeated responses to olfactory stimuli they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term associative memory is memory that lasts for hours to days after the associative learning (training) event(s)." [WB:WBPaper00036296, WB:WBPerson2987, WB:WBPerson3142]
+synonym: "long-term associative olfactory memory abnormal" EXACT []
+synonym: "long-term associative olfactory memory variant" EXACT []
+is_a: WBPhenotype:0002565 ! associative olfactory memory phenotype
+is_a: WBPhenotype:0002568 ! long-term associative memory phenotype
+
+[Term]
+id: WBPhenotype:0002567
+name: long-term associative olfactory memory defective
+def: "Animals are deficient in their recalled and repeated responses to olfactory stimuli they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term associative memory is memory that lasts for hours to days after the associative learning (training) event(s)." [WB:WBPaper00036296, WB:WBPerson2987, WB:WBPerson3142]
+is_a: WBPhenotype:0001785 ! associative memory defective
+is_a: WBPhenotype:0002566 ! long-term associative olfactory memory phenotype
+
+[Term]
+id: WBPhenotype:0002568
+name: long-term associative memory phenotype
+def: "Animals exhibit variations in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term associative memory is memory that lasts for hours to days after the associative learning (training) event(s)." [WB:WBPaper00036296, WB:WBPerson2987, WB:WBPerson3142]
+synonym: "long-term associative memory abnormal" EXACT []
+synonym: "long-term associative memory variant" EXACT []
+is_a: WBPhenotype:0002564 ! associative memory phenotype
 
 [Term]
 id: WBPhenotype:0004001
