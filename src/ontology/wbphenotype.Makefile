@@ -17,3 +17,15 @@ $(ONT).obo: $(ONT)-simple.owl
 
 labels.csv:
 	robot query --use-graphs true -f csv -i $(SRC) --query ../sparql/term_table.sparql $@
+
+# Make sure you first generate definitions.owl!
+patternised_classes.txt: .FORCE
+	$(ROBOT) query -f csv -i ../patterns/definitions.owl --query ../sparql/$(ONT)_terms.sparql $@
+	sed -i 's/http[:][/][/]purl.obolibrary.org[/]obo[/]//g' $@
+	sed -i '/^[^W]/d' $@
+
+EQS=components/wbphenotype-equivalent-axioms-subq.owl
+
+remove_patternised_classes: $(SRC) patternised_classes.txt
+	sed -i -r "/^EquivalentClasses[(][<]http[:][/][/]purl[.]obolibrary[.]org[/]obo[/]($(shell cat patternised_classes.txt | xargs | sed -e 's/ /\|/g'))/d" $(SRC)
+	sed -i -r "/^EquivalentClasses[(][<]http[:][/][/]purl[.]obolibrary[.]org[/]obo[/]($(shell cat patternised_classes.txt | xargs | sed -e 's/ /\|/g'))/d" $(EQS)
