@@ -392,6 +392,26 @@
       "type" : "CLASS",
       "lbl" : "having decreased processual parts"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0065009",
+      "meta" : {
+        "definition" : {
+          "val" : "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.",
+          "xrefs" : [ "GOC:isa_complete" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "regulation of a molecular function",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "regulation of molecular function"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009892",
       "meta" : {
         "definition" : {
@@ -441,26 +461,6 @@
       },
       "type" : "CLASS",
       "lbl" : "negative regulation of metabolic process"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0065009",
-      "meta" : {
-        "definition" : {
-          "val" : "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.",
-          "xrefs" : [ "GOC:isa_complete" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "regulation of a molecular function",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "biological_process"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "regulation of molecular function"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009893",
       "meta" : {
@@ -15391,13 +15391,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0110165"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002023",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002630"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002023",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002630"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CARO_0030000",
       "pred" : "is_a",
@@ -15411,13 +15411,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002283",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000299"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000374",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002283",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000299"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050794",
       "pred" : "is_a",
@@ -16519,13 +16519,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002384"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001476",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000140"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001509",
       "pred" : "is_a",
@@ -16647,13 +16647,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002211",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002334"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000694",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002325"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002211",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002334"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000596",
       "pred" : "is_a",
@@ -16675,13 +16675,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000957"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001559",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000570",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000586"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001559",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002448",
       "pred" : "subPropertyOf",
@@ -17027,13 +17027,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002418",
-      "pred" : "inverseOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002427"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0042326",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0016310"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002418",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002427"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001796",
       "pred" : "is_a",
@@ -18139,13 +18139,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000665",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000016"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000462"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000665",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000016"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000303",
       "pred" : "is_a",
@@ -18528,7 +18528,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-11-19/imports/pato_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2019-11-21/imports/pato_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -18907,17 +18907,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010647",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010648",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010647",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
       } ]
     }, {

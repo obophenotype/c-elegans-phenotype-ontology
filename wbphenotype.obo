@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: releases/2019-11-19
+data-version: releases/2019-11-21
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
-remark: C elegans Phenotype Ontology
 ontology: wbphenotype
-property_value: property-value "http://purl.org/dc/elements/1.1/license http://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Ontology about C elegans phenotypes" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/ xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -11336,10 +11337,11 @@ is_a: WBPhenotype:0000050 ! embryonic lethal
 
 [Term]
 id: WBPhenotype:0001537
-name: mRNA turnover variant
+name: mRNA surveillance variant
 def: "Any variation in the ability of cells to monitor the quality of their mRNAs and degrade any transcripts that are poorly or incompletely translated compared to control." [WB:WBPaper00004926]
 synonym: "mRNA turnover abnormal" NARROW []
-is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001283 ! organelle metabolism variant
+is_a: WBPhenotype:0001826 ! RNA degradation variant
 
 [Term]
 id: WBPhenotype:0001538
@@ -16767,18 +16769,21 @@ id: WBPhenotype:0002349
 name: phosphatidylinositol 3-phosphate levels reduced
 def: "The levels of phosphatidylinositol 3-phosphate (a.k.a. PtdIns3P or PI3P) are reduced compared to those of control animals" [WB:WBPaper00044390, WB:WBPerson2987]
 is_a: WBPhenotype:0000138 ! lipid composition variant
+is_a: WBPhenotype:0001183 ! fat content reduced
 
 [Term]
 id: WBPhenotype:0002350
 name: hydrogen peroxide levels increased
 def: "Animals exhibit increases in steady-state levels of hydrogen peroxide (H2O2) compared to control." [WB:WBPaper00041478, WB:WBPerson2987]
 is_a: WBPhenotype:0002003 ! hydrogen peroxide homeostasis variant
+is_a: WBPhenotype:0002238 ! increased levels of reactive oxygen species
 
 [Term]
 id: WBPhenotype:0002351
 name: hydrogen peroxide levels reduced
 def: "Animals exhibit reductions in steady-state levels of hydrogen peroxide (H2O2) compared to control." [WB:WBPaper00041478, WB:WBPerson2987]
 is_a: WBPhenotype:0002003 ! hydrogen peroxide homeostasis variant
+is_a: WBPhenotype:0002239 ! reduced levels of reactive oxygen species
 
 [Term]
 id: WBPhenotype:0002352

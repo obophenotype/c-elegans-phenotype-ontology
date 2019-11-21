@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-19/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-11-21/imports/chebi_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 2_STAR "Annotated by 3rd party"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
@@ -38,6 +38,15 @@ def: "Any bacterial metabolite produced during a metabolic reaction in Mycoplasm
 subset: 3_STAR
 synonym: "Mycoplasma genitalium metabolites" RELATED [ChEBI]
 is_a: CHEBI:76969 ! bacterial metabolite
+
+[Term]
+id: CHEBI:132717
+name: bleaching agent
+namespace: chebi_ontology
+def: "A reagent that lightens or whitens a substrate through chemical reaction. Bleaching reactions usually involve oxidative or reductive processes that degrade colour systems. Bleaching can occur by destroying one or more of the double bonds in the conjugated chain, by cleaving the conjugated chain, or by oxidation of one of the other moieties in the conjugated chain. Their reactivity results in many bleaches having strong bactericidal, disinfecting, and sterilising properties." []
+subset: 3_STAR
+xref: Wikipedia:Bleach
+is_a: CHEBI:33893 ! reagent
 
 [Term]
 id: CHEBI:132992
@@ -510,6 +519,53 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "146.11756
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(=O)OCC[N+](C)(C)C" xsd:string
 
 [Term]
+id: CHEBI:15356
+name: cysteine
+namespace: chebi_ontology
+alt_id: CHEBI:14061
+alt_id: CHEBI:23508
+alt_id: CHEBI:4050
+def: "A sulfur-containing amino acid that is propanoic acid with an amino group at position 2 and a sulfanyl group at position 3." []
+subset: 3_STAR
+synonym: "2-amino-3-mercaptopropanoic acid" RELATED [JCBN]
+synonym: "2-Amino-3-mercaptopropionic acid" RELATED [KEGG_COMPOUND]
+synonym: "2-amino-3-sulfanylpropanoic acid" RELATED [IUPAC]
+synonym: "C" RELATED [ChEBI]
+synonym: "cisteina" RELATED [ChEBI]
+synonym: "Cys" RELATED [ChEBI]
+synonym: "Cystein" RELATED [ChEBI]
+synonym: "Cysteine" EXACT [KEGG_COMPOUND]
+synonym: "cysteine" EXACT IUPAC_NAME [IUPAC]
+synonym: "cysteine" EXACT [ChEBI]
+synonym: "Hcys" RELATED [IUPAC]
+synonym: "Zystein" RELATED [ChEBI]
+xref: Beilstein:1721406 "Beilstein"
+xref: CAS:3374-22-9 "KEGG COMPOUND"
+xref: Gmelin:2933 "Gmelin"
+xref: KEGG:C00736
+xref: KNApSAcK:C00001351
+xref: KNApSAcK:C00007323
+xref: PMID:17439666 "Europe PMC"
+xref: PMID:25181601 "Europe PMC"
+xref: Reaxys:1721406 "Reaxys"
+xref: Wikipedia:Cysteine
+is_a: CHEBI:26167 ! polar amino acid
+is_a: CHEBI:26834 ! sulfur-containing amino acid
+is_a: CHEBI:33704 ! alpha-amino acid
+relationship: has_part CHEBI:50326 ! sulfanylmethyl group
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_acid_of CHEBI:32456 ! cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32458 ! cysteinium
+relationship: is_tautomer_of CHEBI:35237 ! cysteine zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "NC(CS)C(O)=O" xsd:string
+
+[Term]
 id: CHEBI:15366
 name: acetic acid
 namespace: chebi_ontology
@@ -638,6 +694,33 @@ xref: Wikipedia:Aldose
 is_a: CHEBI:35381 ! monosaccharide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4O2(CH2O)n" xsd:string
+
+[Term]
+id: CHEBI:15705
+name: L-alpha-amino acid
+namespace: chebi_ontology
+alt_id: CHEBI:13072
+alt_id: CHEBI:13243
+alt_id: CHEBI:13797
+alt_id: CHEBI:21224
+alt_id: CHEBI:6175
+def: "Any alpha-amino acid having L-configuration at the alpha-carbon." []
+subset: 3_STAR
+synonym: "L-2-Amino acid" RELATED [KEGG_COMPOUND]
+synonym: "L-alpha-amino acid" EXACT [IUPAC]
+synonym: "L-alpha-amino acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-alpha-amino acids" RELATED [ChEBI]
+synonym: "L-Amino acid" RELATED [KEGG_COMPOUND]
+xref: KEGG:C00151
+is_a: CHEBI:33704 ! alpha-amino acid
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: is_conjugate_acid_of CHEBI:59814 ! L-alpha-amino acid anion
+relationship: is_tautomer_of CHEBI:59869 ! L-alpha-amino acid zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.05870" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H]([*])C(O)=O" xsd:string
 
 [Term]
 id: CHEBI:15734
@@ -1433,6 +1516,132 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "46.04186"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCO" xsd:string
 
 [Term]
+id: CHEBI:16240
+name: hydrogen peroxide
+namespace: chebi_ontology
+alt_id: CHEBI:13354
+alt_id: CHEBI:13355
+alt_id: CHEBI:24637
+alt_id: CHEBI:44812
+alt_id: CHEBI:5586
+def: "An inorganic peroxide consisting of two hydroxy groups joined by a covalent oxygen-oxygen single bond." []
+subset: 3_STAR
+synonym: "[OH(OH)]" RELATED [MolBase]
+synonym: "bis(hydridooxygen)(O--O)" EXACT IUPAC_NAME [IUPAC]
+synonym: "dihydrogen dioxide" RELATED [IUPAC]
+synonym: "dihydrogen peroxide" EXACT IUPAC_NAME [IUPAC]
+synonym: "dihydrogen(peroxide)" EXACT IUPAC_NAME [IUPAC]
+synonym: "dioxidane" EXACT IUPAC_NAME [IUPAC]
+synonym: "H2O2" RELATED [UniProt]
+synonym: "H2O2" RELATED [KEGG_COMPOUND]
+synonym: "HOOH" RELATED [IUPAC]
+synonym: "HYDROGEN PEROXIDE" EXACT [PDBeChem]
+synonym: "Hydrogen peroxide" EXACT [KEGG_COMPOUND]
+synonym: "hydrogen peroxide" EXACT IUPAC_NAME [IUPAC]
+synonym: "Oxydol" RELATED [KEGG_COMPOUND]
+synonym: "perhydrol" RELATED [MetaCyc]
+xref: Beilstein:3587191 "Beilstein"
+xref: CAS:7722-84-1 "KEGG COMPOUND"
+xref: Drug_Central:3281 "DrugCentral"
+xref: Gmelin:509 "Gmelin"
+xref: HMDB:HMDB0003125
+xref: KEGG:C00027
+xref: KEGG:D00008
+xref: MetaCyc:HYDROGEN-PEROXIDE
+xref: MolBase:932
+xref: PDBeChem:PEO
+xref: PMID:10455187 "Europe PMC"
+xref: PMID:10557015 "Europe PMC"
+xref: PMID:10849784 "Europe PMC"
+xref: PMID:11033421 "Europe PMC"
+xref: PMID:11105916 "Europe PMC"
+xref: PMID:11318558 "Europe PMC"
+xref: PMID:11387393 "Europe PMC"
+xref: PMID:11809417 "Europe PMC"
+xref: PMID:11864786 "Europe PMC"
+xref: PMID:11893576 "Europe PMC"
+xref: PMID:12867293 "Europe PMC"
+xref: PMID:12934880 "Europe PMC"
+xref: PMID:14679422 "Europe PMC"
+xref: PMID:15028418 "Europe PMC"
+xref: PMID:15133946 "Europe PMC"
+xref: PMID:15298493 "Europe PMC"
+xref: PMID:16337875 "Europe PMC"
+xref: PMID:16463018 "Europe PMC"
+xref: PMID:16864869 "Europe PMC"
+xref: PMID:17020896 "Europe PMC"
+xref: PMID:17179007 "Europe PMC"
+xref: PMID:17610934 "Europe PMC"
+xref: PMID:17948137 "Europe PMC"
+xref: PMID:18179203 "Europe PMC"
+xref: PMID:18182702 "Europe PMC"
+xref: PMID:18306736 "Europe PMC"
+xref: PMID:18443210 "Europe PMC"
+xref: PMID:18592736 "Europe PMC"
+xref: PMID:19107210 "Europe PMC"
+xref: PMID:19229032 "Europe PMC"
+xref: PMID:19297450 "Europe PMC"
+xref: PMID:19509065 "Europe PMC"
+xref: PMID:26352695 "Europe PMC"
+xref: PMID:26365231 "Europe PMC"
+xref: PMID:7548021 "Europe PMC"
+xref: PMID:7581816 "Europe PMC"
+xref: PMID:8048546 "Europe PMC"
+xref: PMID:8375042 "Europe PMC"
+xref: PMID:8451754 "Europe PMC"
+xref: PMID:9051670 "Europe PMC"
+xref: PMID:9100841 "Europe PMC"
+xref: PMID:9168257 "Europe PMC"
+xref: PMID:9202721 "Europe PMC"
+xref: PMID:9558114 "Europe PMC"
+xref: PPDB:387
+xref: Reaxys:3587191 "Reaxys"
+xref: Wikipedia:Hydrogen_peroxide
+is_a: CHEBI:24837 ! inorganic peroxide
+is_a: CHEBI:26523 ! reactive oxygen species
+relationship: has_role CHEBI:132717 ! bleaching agent
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:33281 ! antimicrobial agent
+relationship: has_role CHEBI:48219 ! disinfectant
+relationship: has_role CHEBI:50902 ! genotoxin
+relationship: has_role CHEBI:50910 ! neurotoxin
+relationship: has_role CHEBI:59163 ! biomarker
+relationship: has_role CHEBI:63248 ! oxidising agent
+relationship: has_role CHEBI:63490 ! explosive
+relationship: has_role CHEBI:65259 ! GABA antagonist
+relationship: has_role CHEBI:68495 ! apoptosis inducer
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:76967 ! human xenobiotic metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: is_conjugate_acid_of CHEBI:29192 ! hydrogenperoxide(1-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H2O2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2O2/c1-2/h1-2H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MHAJPDPJQMAIIY-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "34.01468" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "34.00548" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]OO[H]" xsd:string
+
+[Term]
+id: CHEBI:16247
+name: phospholipid
+namespace: chebi_ontology
+alt_id: CHEBI:14816
+alt_id: CHEBI:26063
+alt_id: CHEBI:8150
+def: "A lipid containing phosphoric acid as a mono- or di-ester. The term encompasses phosphatidic acids and phosphoglycerides." []
+subset: 3_STAR
+synonym: "a phospholipid derivative" RELATED [UniProt]
+synonym: "Phospholipid" EXACT [KEGG_COMPOUND]
+synonym: "phospholipids" RELATED [ChEBI]
+xref: KEGG:C00865
+is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:25703 ! organic phosphate
+is_a: CHEBI:37734 ! phosphoric ester
+relationship: is_conjugate_acid_of CHEBI:62643 ! anionic phospholipid
+
+[Term]
 id: CHEBI:16335
 name: adenosine
 namespace: chebi_ontology
@@ -1503,6 +1712,54 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "OIRDTQYFTABQOQ-KQ
 property_value: http://purl.obolibrary.org/obo/chebi/mass "267.24152" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "267.09675" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1ncnc2n(cnc12)[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O" xsd:string
+
+[Term]
+id: CHEBI:16375
+name: D-cysteine
+namespace: chebi_ontology
+alt_id: CHEBI:12919
+alt_id: CHEBI:20921
+alt_id: CHEBI:4111
+alt_id: CHEBI:41887
+def: "An optically active form of cysteine having D-configuration." []
+subset: 3_STAR
+synonym: "(2S)-2-amino-3-mercaptopropanoic acid" RELATED [JCBN]
+synonym: "(2S)-2-amino-3-sulfanylpropanoic acid" RELATED [IUPAC]
+synonym: "(S)-2-amino-3-mercaptopropanoic acid" RELATED [ChEBI]
+synonym: "D-Amino-3-mercaptopropionic acid" RELATED [KEGG_COMPOUND]
+synonym: "D-Cystein" RELATED [ChEBI]
+synonym: "D-CYSTEINE" EXACT [PDBeChem]
+synonym: "D-Cysteine" EXACT [KEGG_COMPOUND]
+synonym: "D-cysteine" EXACT IUPAC_NAME [IUPAC]
+synonym: "D-Zystein" RELATED [ChEBI]
+synonym: "DCY" RELATED [PDBeChem]
+xref: Beilstein:1721407 "Beilstein"
+xref: CAS:921-01-7 "KEGG COMPOUND"
+xref: DrugBank:DB03201
+xref: ECMDB:ECMDB03417
+xref: Gmelin:363236 "Gmelin"
+xref: HMDB:HMDB0003417
+xref: KEGG:C00793
+xref: KNApSAcK:C00007323
+xref: PDBeChem:DCY
+xref: PMID:13761469 "Europe PMC"
+xref: PMID:23340406 "Europe PMC"
+xref: PMID:24800864 "Europe PMC"
+xref: Reaxys:1721407 "Reaxys"
+xref: YMDB:YMDB00913
+is_a: CHEBI:15356 ! cysteine
+is_a: CHEBI:16733 ! D-alpha-amino acid
+relationship: is_conjugate_acid_of CHEBI:32449 ! D-cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32451 ! D-cysteinium
+relationship: is_enantiomer_of CHEBI:17561 ! L-cysteine
+relationship: is_tautomer_of CHEBI:35236 ! D-cysteine zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UWTATZPHSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@H](CS)C(O)=O" xsd:string
 
 [Term]
 id: CHEBI:16382
@@ -1835,6 +2092,29 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "135.05450
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1ncnc2[nH]cnc12" xsd:string
 
 [Term]
+id: CHEBI:16733
+name: D-alpha-amino acid
+namespace: chebi_ontology
+alt_id: CHEBI:12909
+alt_id: CHEBI:13625
+alt_id: CHEBI:20906
+alt_id: CHEBI:4097
+subset: 3_STAR
+synonym: "D-alpha-amino acid" EXACT [ChEBI]
+synonym: "D-alpha-amino acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "D-alpha-amino acids" RELATED [ChEBI]
+synonym: "D-Amino acid" RELATED [KEGG_COMPOUND]
+xref: KEGG:C00405
+is_a: CHEBI:83925 ! non-proteinogenic alpha-amino acid
+relationship: is_conjugate_acid_of CHEBI:60895 ! D-alpha-amino acid anion
+relationship: is_tautomer_of CHEBI:59871 ! D-alpha-amino acid zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.05870" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@H]([*])C(O)=O" xsd:string
+
+[Term]
 id: CHEBI:16765
 name: tryptamine
 namespace: chebi_ontology
@@ -1880,6 +2160,58 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "APJYDQYYACXCRM-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "160.21570" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "160.10005" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "NCCc1c[nH]c2ccccc12" xsd:string
+
+[Term]
+id: CHEBI:16856
+name: glutathione
+namespace: chebi_ontology
+alt_id: CHEBI:12402
+alt_id: CHEBI:14327
+alt_id: CHEBI:24334
+alt_id: CHEBI:42873
+alt_id: CHEBI:43049
+alt_id: CHEBI:5437
+def: "A tripeptide compound consisting of glutamic acid attached via its side chain to the N-terminus of cysteinylglycine." []
+subset: 3_STAR
+synonym: "5-L-Glutamyl-L-cysteinylglycine" RELATED [KEGG_COMPOUND]
+synonym: "gamma-L-Glutamyl-L-cysteinyl-glycine" RELATED [KEGG_COMPOUND]
+synonym: "Glutathione" EXACT [KEGG_COMPOUND]
+synonym: "Glutathione-SH" RELATED [HMDB]
+synonym: "GSH" RELATED [KEGG_COMPOUND]
+synonym: "L-gamma-glutamyl-L-cysteinylglycine" EXACT IUPAC_NAME [IUPAC]
+synonym: "N-(N-gamma-L-Glutamyl-L-cysteinyl)glycine" RELATED [KEGG_COMPOUND]
+synonym: "Reduced glutathione" RELATED [KEGG_COMPOUND]
+xref: CAS:70-18-8 "ChemIDplus"
+xref: Drug_Central:1312 "DrugCentral"
+xref: DrugBank:DB00143
+xref: HMDB:HMDB0000125
+xref: KEGG:C00051
+xref: KEGG:D00014
+xref: KNApSAcK:C00001518
+xref: MetaCyc:GLUTATHIONE
+xref: PDBeChem:GSH
+xref: PMID:17439666 "Europe PMC"
+xref: PMID:4200890 "Europe PMC"
+xref: PMID:4745654 "Europe PMC"
+xref: Reaxys:1729812 "Reaxys"
+xref: Wikipedia:Glutathione
+is_a: CHEBI:29256 ! thiol
+is_a: CHEBI:47923 ! tripeptide
+is_a: CHEBI:83824 ! L-cysteine derivative
+relationship: has_role CHEBI:22586 ! antioxidant
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: has_role CHEBI:85046 ! skin lightening agent
+relationship: is_conjugate_acid_of CHEBI:57925 ! glutathionate(1-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H17N3O6S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H17N3O6S/c11-5(10(18)19)1-2-7(14)13-6(4-20)9(17)12-3-8(15)16/h5-6,20H,1-4,11H2,(H,12,17)(H,13,14)(H,15,16)(H,18,19)/t5-,6-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSXRVCMGQZWBV-WDSKDSINSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "307.325" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "307.08381" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](CCC(=O)N[C@@H](CS)C(=O)NCC(=O)O)C(=O)O" xsd:string
 
 [Term]
 id: CHEBI:16865
@@ -2334,6 +2666,27 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "329.05252
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1ncnc2n(cnc12)[C@@H]1O[C@@H]2COP(O)(=O)O[C@H]2[C@H]1O" xsd:string
 
 [Term]
+id: CHEBI:17522
+name: alditol
+namespace: chebi_ontology
+alt_id: CHEBI:13754
+alt_id: CHEBI:22298
+alt_id: CHEBI:2556
+def: "A carbohydrate that is an acyclic polyol having the general formula HOCH2[CH(OH)]nCH2OH (formally derivable from an aldose by reduction of the carbonyl group)." []
+subset: 3_STAR
+synonym: "Alditol" EXACT [KEGG_COMPOUND]
+synonym: "alditol" EXACT [UniProt]
+synonym: "alditols" RELATED [ChEBI]
+synonym: "Glycitol" RELATED [KEGG_COMPOUND]
+synonym: "Sugar alcohol" RELATED [KEGG_COMPOUND]
+xref: KEGG:C00717
+xref: Wikipedia:Glycerin
+is_a: CHEBI:16646 ! carbohydrate
+is_a: CHEBI:26191 ! polyol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "(CH2O)nC2H6O2" xsd:string
+
+[Term]
 id: CHEBI:17544
 name: hydrogencarbonate
 namespace: chebi_ontology
@@ -2389,6 +2742,72 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "BVKZGUZCCUSVTD-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "61.01684" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "60.99312" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:17561
+name: L-cysteine
+namespace: chebi_ontology
+alt_id: CHEBI:13095
+alt_id: CHEBI:21261
+alt_id: CHEBI:41227
+alt_id: CHEBI:41700
+alt_id: CHEBI:41768
+alt_id: CHEBI:41781
+alt_id: CHEBI:41811
+alt_id: CHEBI:6207
+def: "An optically active form of cysteine having L-configuration." []
+subset: 3_STAR
+synonym: "(2R)-2-amino-3-mercaptopropanoic acid" RELATED [JCBN]
+synonym: "(2R)-2-amino-3-sulfanylpropanoic acid" RELATED [IUPAC]
+synonym: "(R)-2-amino-3-mercaptopropanoic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "C" RELATED [ChEBI]
+synonym: "Cys" RELATED [ChEBI]
+synonym: "CYSTEINE" RELATED [PDBeChem]
+synonym: "E 920" RELATED [ChEBI]
+synonym: "E-920" RELATED [ChEBI]
+synonym: "E920" RELATED [ChEBI]
+synonym: "FREE CYSTEINE" RELATED [PDBeChem]
+synonym: "L-2-Amino-3-mercaptopropionic acid" RELATED [KEGG_COMPOUND]
+synonym: "L-Cystein" RELATED [ChEBI]
+synonym: "L-Cysteine" EXACT [KEGG_COMPOUND]
+synonym: "L-cysteine" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-Zystein" RELATED [ChEBI]
+xref: Beilstein:1721408 "Beilstein"
+xref: CAS:52-90-4 "KEGG COMPOUND"
+xref: Drug_Central:769 "DrugCentral"
+xref: DrugBank:DB00151
+xref: ECMDB:ECMDB00574
+xref: Gmelin:49991 "Gmelin"
+xref: HMDB:HMDB0000574
+xref: KEGG:C00097
+xref: KEGG:D00026
+xref: KNApSAcK:C00001351
+xref: MetaCyc:CYS
+xref: PDBeChem:CYS
+xref: PMID:11732994 "Europe PMC"
+xref: PMID:13761469 "Europe PMC"
+xref: PMID:22735334 "Europe PMC"
+xref: Reaxys:1721408 "Reaxys"
+xref: Wikipedia:Cysteine
+xref: YMDB:YMDB00046
+is_a: CHEBI:15356 ! cysteine
+is_a: CHEBI:15705 ! L-alpha-amino acid
+is_a: CHEBI:26650 ! serine family amino acid
+is_a: CHEBI:83813 ! proteinogenic amino acid
+relationship: has_role CHEBI:64577 ! flour treatment agent
+relationship: has_role CHEBI:77703 ! EC 4.3.1.3 (histidine ammonia-lyase) inhibitor
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: is_conjugate_acid_of CHEBI:32442 ! L-cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32445 ! L-cysteinium
+relationship: is_enantiomer_of CHEBI:16375 ! D-cysteine
+relationship: is_tautomer_of CHEBI:35235 ! L-cysteine zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-REOHCLBHSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15800" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](CS)C(O)=O" xsd:string
 
 [Term]
 id: CHEBI:17568
@@ -2661,6 +3080,103 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "SNICXCGAKADSCV-JT
 property_value: http://purl.obolibrary.org/obo/chebi/mass "162.232" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "162.11570" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C=1C=C([C@]2(N(CCC2)C)[H])C=NC1" xsd:string
+
+[Term]
+id: CHEBI:17754
+name: glycerol
+namespace: chebi_ontology
+alt_id: CHEBI:131422
+alt_id: CHEBI:14334
+alt_id: CHEBI:24351
+alt_id: CHEBI:42998
+alt_id: CHEBI:5448
+def: "A triol with a structure of propane substituted at positions 1, 2 and 3 by hydroxy groups." []
+subset: 3_STAR
+synonym: "1,2,3-Propanetriol" RELATED [KEGG_COMPOUND]
+synonym: "1,2,3-Trihydroxypropane" RELATED [KEGG_COMPOUND]
+synonym: "Glycerin" RELATED [KEGG_COMPOUND]
+synonym: "glycerine" RELATED [ChEBI]
+synonym: "Glyceritol" RELATED [HMDB]
+synonym: "GLYCEROL" EXACT [PDBeChem]
+synonym: "Glycerol" EXACT [KEGG_COMPOUND]
+synonym: "glycerol" EXACT [UniProt]
+synonym: "glycerol" EXACT [ChEBI]
+synonym: "glycerol" RELATED INN [ChemIDplus]
+synonym: "glycerolum" RELATED INN [ChemIDplus]
+synonym: "glycyl alcohol" RELATED [NIST_Chemistry_WebBook]
+synonym: "Glyzerin" RELATED [ChEBI]
+synonym: "Gro" RELATED [JCBN]
+synonym: "Oelsuess" RELATED [ChEBI]
+synonym: "propane-1,2,3-triol" EXACT IUPAC_NAME [IUPAC]
+synonym: "Propanetriol" RELATED [HMDB]
+synonym: "Trihydroxypropane" RELATED [HMDB]
+xref: Beilstein:635685 "Beilstein"
+xref: CAS:56-81-5 "ChemIDplus"
+xref: Drug_Central:1316 "DrugCentral"
+xref: DrugBank:DB04077
+xref: ECMDB:ECMDB00131
+xref: Gmelin:26279 "Gmelin"
+xref: HMDB:HMDB0000131
+xref: KEGG:C00116
+xref: KEGG:D00028
+xref: KNApSAcK:C00001163
+xref: LINCS:LSM-37180
+xref: MetaCyc:GLYCEROL
+xref: PDB:2AJS
+xref: PDB:2D03
+xref: PDBeChem:GOL
+xref: PMID:11958517 "Europe PMC"
+xref: PMID:12672239 "ChEMBL"
+xref: PMID:12689633 "Europe PMC"
+xref: PMID:14559393 "Europe PMC"
+xref: PMID:14563847 "Europe PMC"
+xref: PMID:15342117 "Europe PMC"
+xref: PMID:15786693 "Europe PMC"
+xref: PMID:16244855 "Europe PMC"
+xref: PMID:16258193 "Europe PMC"
+xref: PMID:16319039 "Europe PMC"
+xref: PMID:16349488 "Europe PMC"
+xref: PMID:16651733 "Europe PMC"
+xref: PMID:16664750 "Europe PMC"
+xref: PMID:16901854 "Europe PMC"
+xref: PMID:17336832 "Europe PMC"
+xref: PMID:17439666 "Europe PMC"
+xref: PMID:17979222 "Europe PMC"
+xref: PMID:19184438 "Europe PMC"
+xref: PMID:19231894 "Europe PMC"
+xref: PMID:19460032 "Europe PMC"
+xref: PMID:19548674 "Europe PMC"
+xref: PMID:19795216 "Europe PMC"
+xref: PMID:19956799 "Europe PMC"
+xref: PMID:22705534 "Europe PMC"
+xref: PMID:23562176 "Europe PMC"
+xref: PMID:23747440 "Europe PMC"
+xref: PMID:24643482 "Europe PMC"
+xref: PMID:25108762 "Europe PMC"
+xref: PMID:7031247 "ChEMBL"
+xref: PMID:7392035 "ChEMBL"
+xref: PPDB:1317
+xref: Reaxys:635685 "Reaxys"
+xref: UM-BBD_compID:c0066 "UM-BBD"
+xref: Wikipedia:Glycerol
+xref: YMDB:YMDB00283
+is_a: CHEBI:17522 ! alditol
+is_a: CHEBI:27136 ! triol
+relationship: has_role CHEBI:25728 ! osmolyte
+relationship: has_role CHEBI:27780 ! detergent
+relationship: has_role CHEBI:46787 ! solvent
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: has_role CHEBI:84735 ! algal metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H8O3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H8O3/c4-1-3(6)2-5/h3-6H,1-2H2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "PEDCQBHIVMGVHV-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "92.09382" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "92.04734" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OCC(O)CO" xsd:string
 
 [Term]
 id: CHEBI:17790
@@ -2988,6 +3504,43 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "HX" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "1.008" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1.00783" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[F,Cl,Br,I]" xsd:string
+
+[Term]
+id: CHEBI:18154
+name: polysaccharide
+namespace: chebi_ontology
+alt_id: CHEBI:14864
+alt_id: CHEBI:26205
+alt_id: CHEBI:8322
+def: "A biomacromolecule consisting of large numbers of monosaccharide residues linked glycosidically. This term is commonly used only for those containing more than ten monosaccharide residues." []
+subset: 3_STAR
+synonym: "Glycan" RELATED [KEGG_COMPOUND]
+synonym: "Glycane" RELATED [ChEBI]
+synonym: "glycans" RELATED [IUPAC]
+synonym: "Glykan" RELATED [ChEBI]
+synonym: "Glykane" RELATED [ChEBI]
+synonym: "polisacarido" RELATED [ChEBI]
+synonym: "polisacaridos" RELATED [IUPAC]
+synonym: "Polysaccharide" EXACT [KEGG_COMPOUND]
+synonym: "polysaccharides" EXACT IUPAC_NAME [IUPAC]
+xref: KEGG:C00420
+is_a: CHEBI:16646 ! carbohydrate
+is_a: CHEBI:33694 ! biomacromolecule
+
+[Term]
+id: CHEBI:18179
+name: phosphoinositide
+namespace: chebi_ontology
+alt_id: CHEBI:14806
+alt_id: CHEBI:60751
+alt_id: CHEBI:8132
+def: "Any phosphatidylinositol that is phosphorylated at one or more of the hydroxy groups of inositol." []
+subset: 3_STAR
+xref: PMID:10782093 "Europe PMC"
+xref: PMID:15269334 "Europe PMC"
+xref: PMID:17035995 "Europe PMC"
+xref: PMID:19154715 "Europe PMC"
+is_a: CHEBI:28874 ! phosphatidylinositol
 
 [Term]
 id: CHEBI:18243
@@ -3804,8 +4357,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -3951,6 +4504,15 @@ synonym: "Zyklopeptid" RELATED [ChEBI]
 is_a: CHEBI:16670 ! peptide
 
 [Term]
+id: CHEBI:23451
+name: cyclitol
+namespace: chebi_ontology
+def: "A polyol consisting of a cycloalkane containing at least three hydroxy groups, each attached to a different ring carbon atom." []
+subset: 3_STAR
+synonym: "cyclitols" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:26191 ! polyol
+
+[Term]
 id: CHEBI:23480
 name: cyclohexanols
 namespace: chebi_ontology
@@ -3974,6 +4536,16 @@ def: "An alcohol in which one or more hydroxy groups are attached to a cyclopent
 subset: 3_STAR
 is_a: CHEBI:23493 ! cyclopentanes
 is_a: CHEBI:30879 ! alcohol
+
+[Term]
+id: CHEBI:23509
+name: cysteine derivative
+namespace: chebi_ontology
+def: "An amino acid derivative resulting from reaction of cysteine at the amino group, carboxy group, or thiol group, or from the replacement of any hydrogen of cysteine by a heteroatom. The definition normally excludes peptides containing cysteine residues." []
+subset: 3_STAR
+synonym: "cysteine derivative" EXACT [ChEBI]
+is_a: CHEBI:83821 ! amino acid derivative
+relationship: has_functional_parent CHEBI:15356 ! cysteine
 
 [Term]
 id: CHEBI:23677
@@ -4176,6 +4748,13 @@ subset: 3_STAR
 synonym: "oxacyclopenta-2,4-dienes" RELATED [ChEBI]
 is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38104 ! oxacycle
+
+[Term]
+id: CHEBI:24384
+name: glycogens
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:37163 ! glucan
 
 [Term]
 id: CHEBI:24400
@@ -4457,6 +5036,17 @@ is_a: CHEBI:24835 ! inorganic molecular entity
 is_a: CHEBI:25741 ! oxide
 
 [Term]
+id: CHEBI:24837
+name: inorganic peroxide
+namespace: chebi_ontology
+def: "Compounds of structure ROOR' in which R and R' are inorganic groups." []
+subset: 3_STAR
+synonym: "inorganic peroxide" EXACT [ChEBI]
+synonym: "inorganic peroxides" RELATED [ChEBI]
+is_a: CHEBI:24836 ! inorganic oxide
+is_a: CHEBI:25940 ! peroxides
+
+[Term]
 id: CHEBI:24839
 name: inorganic salt
 namespace: chebi_ontology
@@ -4465,6 +5055,26 @@ synonym: "anorganisches Salz" RELATED [ChEBI]
 synonym: "inorganic salts" RELATED [ChEBI]
 is_a: CHEBI:24835 ! inorganic molecular entity
 is_a: CHEBI:24866 ! salt
+
+[Term]
+id: CHEBI:24848
+name: inositol
+namespace: chebi_ontology
+def: "Any cyclohexane-1,2,3,4,5,6-hexol." []
+subset: 3_STAR
+synonym: "1,2,3,4,5,6-cyclohexanehexol" RELATED [ChEBI]
+synonym: "inositol" EXACT [IUBMB]
+synonym: "inositols" EXACT IUPAC_NAME [IUPAC]
+synonym: "inositols" RELATED [ChEBI]
+is_a: CHEBI:23451 ! cyclitol
+is_a: CHEBI:37206 ! hexol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H12O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H12O6/c7-1-2(8)4(10)6(12)5(11)3(1)9/h1-12H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CDAISMWEOUEBRE-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "180.15588" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "180.06339" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC1C(O)C(O)C(O)C(O)C1O" xsd:string
 
 [Term]
 id: CHEBI:24852
@@ -4577,6 +5187,17 @@ synonym: "Ionen" RELATED [ChEBI]
 synonym: "iones" RELATED [ChEBI]
 synonym: "ions" RELATED [ChEBI]
 is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:24873
+name: iron molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "iron compounds" RELATED [ChEBI]
+synonym: "iron molecular entities" RELATED [ChEBI]
+synonym: "iron molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33744 ! iron group molecular entity
+relationship: has_part CHEBI:18248 ! iron atom
 
 [Term]
 id: CHEBI:24913
@@ -4790,6 +5411,17 @@ synonym: "a metal cation" RELATED [UniProt]
 synonym: "metal cations" RELATED [ChEBI]
 is_a: CHEBI:23906 ! monoatomic cation
 is_a: CHEBI:36915 ! inorganic cation
+
+[Term]
+id: CHEBI:25216
+name: metalloporphyrin
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "metalloporphyrins" RELATED [ChEBI]
+synonym: "metaloporphyrins" RELATED [ChEBI]
+is_a: CHEBI:26214 ! porphyrins
+is_a: CHEBI:33240 ! coordination entity
+is_a: CHEBI:33909 ! metallotetrapyrrole
 
 [Term]
 id: CHEBI:25223
@@ -5099,6 +5731,19 @@ is_a: CHEBI:61120 ! nucleobase-containing molecular entity
 relationship: has_functional_parent CHEBI:33838 ! nucleoside
 
 [Term]
+id: CHEBI:25676
+name: oligopeptide
+namespace: chebi_ontology
+alt_id: CHEBI:7755
+def: "A peptide containing a relatively small number of amino acids." []
+subset: 3_STAR
+synonym: "Oligopeptid" RELATED [ChEBI]
+synonym: "oligopeptides" EXACT IUPAC_NAME [IUPAC]
+synonym: "oligopeptido" RELATED [ChEBI]
+xref: Wikipedia:Oligopeptide
+is_a: CHEBI:16670 ! peptide
+
+[Term]
 id: CHEBI:25693
 name: organic heteromonocyclic compound
 namespace: chebi_ontology
@@ -5204,6 +5849,15 @@ synonym: "organophosphorus compound" EXACT [ChEBI]
 synonym: "organophosphorus compounds" RELATED [ChEBI]
 is_a: CHEBI:26082 ! phosphorus molecular entity
 is_a: CHEBI:33285 ! heteroorganic entity
+
+[Term]
+id: CHEBI:25728
+name: osmolyte
+namespace: chebi_ontology
+def: "A solute used by a cell under water stress to maintain cell volume." []
+subset: 3_STAR
+synonym: "osmolytes" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
 
 [Term]
 id: CHEBI:25741
@@ -5324,6 +5978,21 @@ synonym: "pentoses" RELATED [ChEBI]
 is_a: CHEBI:35381 ! monosaccharide
 
 [Term]
+id: CHEBI:25940
+name: peroxides
+namespace: chebi_ontology
+def: "Compounds of structure ROOR'." []
+subset: 3_STAR
+synonym: "a peroxide" RELATED [UniProt]
+is_a: CHEBI:25741 ! oxide
+relationship: has_part CHEBI:29369 ! peroxy group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O2R2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "31.999" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.98983" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*]OO[*]" xsd:string
+
+[Term]
 id: CHEBI:25944
 name: pesticide
 namespace: chebi_ontology
@@ -5353,6 +6022,26 @@ subset: 3_STAR
 synonym: "phosphates" EXACT IUPAC_NAME [IUPAC]
 synonym: "phosphates" RELATED [ChEBI]
 is_a: CHEBI:26079 ! phosphoric acid derivative
+
+[Term]
+id: CHEBI:26034
+name: phosphatidylinositol 3-phosphate
+namespace: chebi_ontology
+def: "A phosphatidylinositol monophosphate carrying the phosphate group at the 3-position." []
+subset: 3_STAR
+synonym: "phosphatidylinositol 3-phosphates" RELATED [ChEBI]
+synonym: "PI(3)P" RELATED [ChEBI]
+synonym: "PtdIns3P" RELATED [ChEBI]
+xref: PMID:18927492 "Europe PMC"
+is_a: CHEBI:26036 ! phosphatidylinositol monophosphate
+
+[Term]
+id: CHEBI:26036
+name: phosphatidylinositol monophosphate
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "phosphatidylinositol monophosphates" RELATED [ChEBI]
+is_a: CHEBI:28765 ! phosphatidylinositol phosphate
 
 [Term]
 id: CHEBI:26078
@@ -5472,6 +6161,26 @@ synonym: "polyketides" RELATED [ChEBI]
 is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
+id: CHEBI:26191
+name: polyol
+namespace: chebi_ontology
+def: "A compound that contains two or more hydroxy groups." []
+subset: 3_STAR
+synonym: "polyols" RELATED [ChEBI]
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:26214
+name: porphyrins
+namespace: chebi_ontology
+def: "Natural pigments containing a fundamental skeleton of four pyrrole nuclei united through the alpha-positions by four methine groups to form a macrocyclic structure." []
+subset: 3_STAR
+synonym: "porphyrins" EXACT IUPAC_NAME [IUPAC]
+xref: Wikipedia:Porphyrin
+is_a: CHEBI:36309 ! cyclic tetrapyrrole
+relationship: has_role CHEBI:23357 ! cofactor
+
+[Term]
 id: CHEBI:26216
 name: potassium atom
 namespace: chebi_ontology
@@ -5505,6 +6214,17 @@ namespace: chebi_ontology
 def: "A ketone that is propane carrying at least one oxo substituent." []
 subset: 3_STAR
 is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:26348
+name: prosthetic group
+namespace: chebi_ontology
+def: "A tightly bound, specific nonpolypeptide unit in a protein determining and involved in its biological activity." []
+subset: 3_STAR
+synonym: "groupe prosthetique" RELATED [IUPAC]
+synonym: "prosthetic group" EXACT IUPAC_NAME [IUPAC]
+synonym: "prosthetic groups" RELATED [ChEBI]
+is_a: CHEBI:23357 ! cofactor
 
 [Term]
 id: CHEBI:26385
@@ -5733,6 +6453,19 @@ xref: PMID:20237329 "Europe PMC"
 is_a: CHEBI:35366 ! fatty acid
 
 [Term]
+id: CHEBI:26650
+name: serine family amino acid
+namespace: chebi_ontology
+def: "An L-alpha-amino acid which is biosynthesised from 3-phosphoglycerate (i.e. serine, glycine, cysteine and homocysteine). A closed class." []
+subset: 3_STAR
+synonym: "3-phosphoglycerate family amino acid" RELATED [ChEBI]
+synonym: "3-phosphoglycerate family amino acids" RELATED [ChEBI]
+synonym: "serine family amino acids" RELATED [ChEBI]
+xref: PMID:20709681 "Europe PMC"
+is_a: CHEBI:15705 ! L-alpha-amino acid
+is_a: CHEBI:83813 ! proteinogenic amino acid
+
+[Term]
 id: CHEBI:26666
 name: short-chain fatty acid
 namespace: chebi_ontology
@@ -5926,6 +6659,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.97207"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[S]" xsd:string
 
 [Term]
+id: CHEBI:26834
+name: sulfur-containing amino acid
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "sulfur-containing amino acids" RELATED [ChEBI]
+is_a: CHEBI:33576 ! sulfur-containing carboxylic acid
+is_a: CHEBI:33709 ! amino acid
+relationship: is_conjugate_acid_of CHEBI:63470 ! sulfur-containing amino-acid anion
+
+[Term]
 id: CHEBI:26835
 name: sulfur molecular entity
 namespace: chebi_ontology
@@ -5980,6 +6723,17 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "tetrahydropyridines" RELATED [ChEBI]
 is_a: CHEBI:26421 ! pyridines
+
+[Term]
+id: CHEBI:26932
+name: tetrapyrrole
+namespace: chebi_ontology
+def: "A natural pigment containing four pyrrole rings joined by one-carbon units linking position 2 of one pyrrole ring to position 5 of the next." []
+subset: 3_STAR
+synonym: "tetrapyrrole" EXACT IUPAC_NAME [IUPAC]
+synonym: "tetrapyrroles" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33833 ! heteroarene
+is_a: CHEBI:38077 ! polypyrrole
 
 [Term]
 id: CHEBI:26952
@@ -6063,6 +6817,15 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "trimethylxanthines" RELATED [ChEBI]
 is_a: CHEBI:25348 ! methylxanthine
+
+[Term]
+id: CHEBI:27136
+name: triol
+namespace: chebi_ontology
+def: "A chemical compound containing three hydroxy groups." []
+subset: 3_STAR
+synonym: "triols" RELATED [ChEBI]
+is_a: CHEBI:26191 ! polyol
 
 [Term]
 id: CHEBI:27162
@@ -6539,6 +7302,23 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.00581"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC#N" xsd:string
 
 [Term]
+id: CHEBI:28087
+name: glycogen
+namespace: chebi_ontology
+alt_id: CHEBI:24379
+alt_id: CHEBI:5466
+def: "A polydisperse, highly branched glucan composed of chains of D-glucopyranose residues in alpha(1->4) glycosidic linkage, joined together by alpha(1->6) glycosidic linkages. A small number of alpha(1->3) glycosidic linkages and some cumulative alpha(1->6) links also may occur. The branches in glycogen typically contain 8 to 12 glucose residues." []
+subset: 3_STAR
+synonym: "animal starch" RELATED [ChemIDplus]
+synonym: "Glycogen" EXACT [KEGG_COMPOUND]
+synonym: "liver starch" RELATED [ChemIDplus]
+xref: CAS:9005-79-2 "KEGG COMPOUND"
+xref: KEGG:C00182
+is_a: CHEBI:24384 ! glycogens
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+
+[Term]
 id: CHEBI:28112
 name: nickel atom
 namespace: chebi_ontology
@@ -6758,6 +7538,20 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "62.92960"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cu]" xsd:string
 
 [Term]
+id: CHEBI:28765
+name: phosphatidylinositol phosphate
+namespace: chebi_ontology
+alt_id: CHEBI:26037
+alt_id: CHEBI:26038
+alt_id: CHEBI:8135
+def: "Any member of the phosphoinositide family of compounds, of which seven occur naturally." []
+subset: 3_STAR
+synonym: "phosphatidylinositol phosphates" RELATED [ChEBI]
+xref: PMID:16441841 "Europe PMC"
+xref: PMID:2538726 "Europe PMC"
+is_a: CHEBI:18179 ! phosphoinositide
+
+[Term]
 id: CHEBI:28790
 name: serotonin
 namespace: chebi_ontology
@@ -6836,6 +7630,28 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.00950" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C([*])=O" xsd:string
+
+[Term]
+id: CHEBI:28874
+name: phosphatidylinositol
+namespace: chebi_ontology
+alt_id: CHEBI:18877
+alt_id: CHEBI:494
+def: "Any glycerophosphoinositol having one phosphatidyl group esterified to one of the hydroxy groups of inositol." []
+subset: 3_STAR
+synonym: "phosphatidylinositols" RELATED [ChEBI]
+synonym: "PI" RELATED [ChEBI]
+synonym: "PtdIns" RELATED [ChEBI]
+xref: DrugBank:DB02144
+xref: PMID:15634688 "Europe PMC"
+xref: PMID:15967713 "Europe PMC"
+xref: PMID:17417879 "Europe PMC"
+xref: PMID:18189424 "Europe PMC"
+xref: PMID:19456874 "Europe PMC"
+xref: PMID:23015060 "Europe PMC"
+xref: PMID:23118092 "Europe PMC"
+xref: Wikipedia:Phosphatidylinositol
+is_a: CHEBI:36315 ! glycerophosphoinositol
 
 [Term]
 id: CHEBI:28938
@@ -7005,6 +7821,31 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "22.98922"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+]" xsd:string
 
 [Term]
+id: CHEBI:29192
+name: hydrogenperoxide(1-)
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "[HO2](-)" RELATED [ChEBI]
+synonym: "dioxidanide" EXACT IUPAC_NAME [IUPAC]
+synonym: "HO2(-)" RELATED [IUPAC]
+synonym: "HOO anion" RELATED [NIST_Chemistry_WebBook]
+synonym: "HOO(-)" RELATED [ChEBI]
+synonym: "hydrogen(peroxide)(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogendioxide(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogenperoxide(1-)" EXACT [IUPAC]
+xref: CAS:14691-59-9 "NIST Chemistry WebBook"
+xref: Gmelin:507 "Gmelin"
+is_a: CHEBI:33693 ! oxygen hydride
+relationship: is_conjugate_base_of CHEBI:16240 ! hydrogen peroxide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HO2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2O2/c1-2/h1-2H/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MHAJPDPJQMAIIY-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.00674" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.99820" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]O[O-]" xsd:string
+
+[Term]
 id: CHEBI:29195
 name: cyanate
 namespace: chebi_ontology
@@ -7157,6 +7998,36 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "20.00623"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "F[H]" xsd:string
 
 [Term]
+id: CHEBI:29256
+name: thiol
+namespace: chebi_ontology
+alt_id: CHEBI:13443
+alt_id: CHEBI:13696
+alt_id: CHEBI:17366
+alt_id: CHEBI:26969
+alt_id: CHEBI:8766
+alt_id: CHEBI:9556
+def: "An organosulfur compound in which a thiol group, -SH, is attached to a carbon atom of any aliphatic or aromatic moiety." []
+subset: 3_STAR
+synonym: "a thiol" RELATED [UniProt]
+synonym: "Mercaptan" RELATED [KEGG_COMPOUND]
+synonym: "mercaptans" RELATED [ChEBI]
+synonym: "Merkaptan" RELATED [ChEBI]
+synonym: "RSH" RELATED [IUPAC]
+synonym: "Thiol" EXACT [KEGG_COMPOUND]
+synonym: "thiols" EXACT IUPAC_NAME [IUPAC]
+synonym: "thiols" RELATED [ChEBI]
+xref: KEGG:C00145
+xref: Wikipedia:Thiol
+is_a: CHEBI:33261 ! organosulfur compound
+relationship: has_part CHEBI:29917 ! thiol group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HSR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.97990" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "S[*]" xsd:string
+
+[Term]
 id: CHEBI:29337
 name: azanide
 namespace: chebi_ontology
@@ -7236,6 +8107,19 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "PZPOWPOFQLSNJO-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "14.02658" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "14.01675" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C--][H]" xsd:string
+
+[Term]
+id: CHEBI:29369
+name: peroxy group
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "-OO-" RELATED [IUPAC]
+synonym: "peroxy" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33246 ! inorganic group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "31.99880" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.98983" xsd:string
 
 [Term]
 id: CHEBI:29438
@@ -7364,6 +8248,32 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "C25H38N4O16" xsd:s
 property_value: http://purl.obolibrary.org/obo/chebi/mass "650.587" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "650.22828" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@](O)(C[C@H]1O[C@@H](OC2O[C@H]([*]O)[C@@H](O)[C@H](O)[C@H]2NC(C)=O)[C@H](NC([*])=O)[C@@H](O)[C@H]1O)[C@@]1([H])O[C@H]([C@H](O)[C@@H]1O)n1ccc(=O)[nH]c1=O" xsd:string
+
+[Term]
+id: CHEBI:29917
+name: thiol group
+namespace: chebi_ontology
+alt_id: CHEBI:26821
+alt_id: CHEBI:29916
+subset: 3_STAR
+synonym: "-SH" RELATED [IUPAC]
+synonym: "HS-" RELATED [IUPAC]
+synonym: "mercapto group" RELATED [ChEBI]
+synonym: "Mercaptogruppe" RELATED [ChEBI]
+synonym: "Merkaptogruppe" RELATED [ChEBI]
+synonym: "sulfanyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulfhydryl group" RELATED [ChEBI]
+synonym: "Sulfhydrylgruppe" RELATED [ChEBI]
+synonym: "sulphydryl group" RELATED [ChEBI]
+synonym: "thiol" EXACT IUPAC_NAME [IUPAC]
+synonym: "thiol group" EXACT [UniProt]
+synonym: "Thiolgruppe" RELATED [ChEBI]
+is_a: CHEBI:33246 ! inorganic group
+relationship: is_substituent_group_from CHEBI:16136 ! hydrogen sulfide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HS" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07394" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.97990" xsd:string
 
 [Term]
 id: CHEBI:29919
@@ -7596,6 +8506,33 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QWTDNUCVQCZILF-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "72.14878" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "72.09390" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCC(C)C" xsd:string
+
+[Term]
+id: CHEBI:30413
+name: heme
+namespace: chebi_ontology
+alt_id: CHEBI:14386
+alt_id: CHEBI:24491
+def: "A heme is any tetrapyrrolic chelate of iron." []
+subset: 3_STAR
+synonym: "Haem" RELATED [ChEBI]
+synonym: "haem" RELATED [ChEBI]
+synonym: "haem" RELATED [IUPAC]
+synonym: "haeme" RELATED [IUPAC]
+synonym: "hem" RELATED [IUPAC]
+synonym: "heme" EXACT [IUPAC]
+synonym: "heme" EXACT [UniProt]
+synonym: "heme" EXACT IUPAC_NAME [IUPAC]
+synonym: "hemes" EXACT IUPAC_NAME [IUPAC]
+synonym: "hemos" RELATED [IUPAC]
+xref: COMe:MOL000025
+xref: DrugBank:DB03014
+xref: KEGG:C00032
+is_a: CHEBI:25216 ! metalloporphyrin
+is_a: CHEBI:33892 ! iron coordination entity
+is_a: CHEBI:33909 ! metallotetrapyrrole
+relationship: has_role CHEBI:25212 ! metabolite
+relationship: has_role CHEBI:26348 ! prosthetic group
 
 [Term]
 id: CHEBI:30488
@@ -8053,6 +8990,229 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "53.00323"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cl-].[H][N+]([H])([H])[H]" xsd:string
 
 [Term]
+id: CHEBI:32442
+name: L-cysteinate(1-)
+namespace: chebi_ontology
+def: "The L-enantiomer of cysteinate(1-)." []
+subset: 3_STAR
+synonym: "(2R)-2-amino-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "(2R)-2-amino-3-sulfanylpropanoate" RELATED [IUPAC]
+synonym: "hydrogen L-cysteinate" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-cysteinate(1-)" EXACT [JCBN]
+synonym: "L-cysteine anion" RELATED [NIST_Chemistry_WebBook]
+synonym: "L-cysteine monoanion" RELATED [JCBN]
+xref: Beilstein:4128886 "Beilstein"
+xref: Gmelin:325857 "Gmelin"
+xref: Reaxys:4128886 "Reaxys"
+is_a: CHEBI:32456 ! cysteinate(1-)
+is_a: CHEBI:59814 ! L-alpha-amino acid anion
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_acid_of CHEBI:32443 ! L-cysteinate(2-)
+relationship: is_conjugate_base_of CHEBI:17561 ! L-cysteine
+relationship: is_conjugate_base_of CHEBI:35235 ! L-cysteine zwitterion
+relationship: is_enantiomer_of CHEBI:32449 ! D-cysteinate(1-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H6NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-1/t2-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-REOHCLBHSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "120.15128" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "120.01247" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](CS)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32443
+name: L-cysteinate(2-)
+namespace: chebi_ontology
+def: "The L-enantiomer of cysteinate(2-)." []
+subset: 3_STAR
+synonym: "(2R)-2-amino-3-sulfidopropanoate" RELATED [IUPAC]
+synonym: "L-cysteinate" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-cysteinate(2-)" EXACT [JCBN]
+synonym: "L-cysteine dianion" RELATED [JCBN]
+xref: Beilstein:5921923 "Beilstein"
+xref: Gmelin:325856 "Gmelin"
+xref: Reaxys:5921923 "Reaxys"
+is_a: CHEBI:32457 ! cysteinate(2-)
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_base_of CHEBI:32442 ! L-cysteinate(1-)
+relationship: is_enantiomer_of CHEBI:32450 ! D-cysteinate(2-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H5NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-2/t2-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-REOHCLBHSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "119.14334" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "119.00520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](C[S-])C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32445
+name: L-cysteinium
+namespace: chebi_ontology
+def: "The L-enantiomer of cysteinium." []
+subset: 3_STAR
+synonym: "(1R)-1-carboxy-2-mercaptoethanaminium" RELATED [ChEBI]
+synonym: "(1R)-1-carboxy-2-sulfanylethanaminium" RELATED [IUPAC]
+synonym: "L-cysteine cation" RELATED [JCBN]
+synonym: "L-cysteinium" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-cysteinium(1+)" RELATED [ChEBI]
+xref: Gmelin:325860 "Gmelin"
+is_a: CHEBI:32458 ! cysteinium
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_acid_of CHEBI:17561 ! L-cysteine
+relationship: is_conjugate_acid_of CHEBI:35235 ! L-cysteine zwitterion
+relationship: is_enantiomer_of CHEBI:32451 ! D-cysteinium
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H8NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p+1/t2-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-REOHCLBHSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "122.16716" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "122.02703" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H](CS)C(O)=O" xsd:string
+
+[Term]
+id: CHEBI:32449
+name: D-cysteinate(1-)
+namespace: chebi_ontology
+def: "The D-enantiomer of cysteinate(1-)." []
+subset: 3_STAR
+synonym: "(2S)-2-amino-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "(2S)-2-amino-3-sulfanylpropanoate" RELATED [IUPAC]
+synonym: "D-cysteinate(1-)" EXACT [JCBN]
+synonym: "D-cysteine monoanion" RELATED [JCBN]
+synonym: "hydrogen D-cysteinate" EXACT IUPAC_NAME [IUPAC]
+xref: Gmelin:1006156 "Gmelin"
+is_a: CHEBI:32456 ! cysteinate(1-)
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_acid_of CHEBI:32450 ! D-cysteinate(2-)
+relationship: is_conjugate_base_of CHEBI:16375 ! D-cysteine
+relationship: is_conjugate_base_of CHEBI:35236 ! D-cysteine zwitterion
+relationship: is_enantiomer_of CHEBI:32442 ! L-cysteinate(1-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H6NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-1/t2-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UWTATZPHSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "120.15128" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "120.01247" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@H](CS)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32450
+name: D-cysteinate(2-)
+namespace: chebi_ontology
+def: "The D-enantiomer of cysteinate(2-)." []
+subset: 3_STAR
+synonym: "(2S)-2-amino-3-sulfidopropanoate" RELATED [IUPAC]
+synonym: "D-cysteinate" EXACT IUPAC_NAME [IUPAC]
+synonym: "D-cysteinate(2-)" EXACT [JCBN]
+synonym: "D-cysteine dianion" RELATED [JCBN]
+xref: Gmelin:1342792 "Gmelin"
+is_a: CHEBI:32457 ! cysteinate(2-)
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_base_of CHEBI:32449 ! D-cysteinate(1-)
+relationship: is_enantiomer_of CHEBI:32443 ! L-cysteinate(2-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H5NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-2/t2-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UWTATZPHSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "119.14334" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "119.00520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@H](C[S-])C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32451
+name: D-cysteinium
+namespace: chebi_ontology
+def: "The D-enantiomer of cysteinium." []
+subset: 3_STAR
+synonym: "(1S)-1-carboxy-2-mercaptoethanaminium" RELATED [ChEBI]
+synonym: "(1S)-1-carboxy-2-sulfanylethanaminium" RELATED [IUPAC]
+synonym: "D-cysteine cation" RELATED [JCBN]
+synonym: "D-cysteinium" EXACT IUPAC_NAME [IUPAC]
+xref: Gmelin:363237 "Gmelin"
+is_a: CHEBI:32458 ! cysteinium
+relationship: has_role CHEBI:78675 ! fundamental metabolite
+relationship: is_conjugate_acid_of CHEBI:16375 ! D-cysteine
+relationship: is_conjugate_acid_of CHEBI:35236 ! D-cysteine zwitterion
+relationship: is_enantiomer_of CHEBI:32445 ! L-cysteinium
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H8NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p+1/t2-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UWTATZPHSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "122.16716" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "122.02703" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@H](CS)C(O)=O" xsd:string
+
+[Term]
+id: CHEBI:32456
+name: cysteinate(1-)
+namespace: chebi_ontology
+def: "A sulfur-containing amino-acid anion that is the conjugate base of cysteine, obtained by deprotonation of the carboxy group." []
+subset: 3_STAR
+synonym: "2-amino-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "2-amino-3-sulfanylpropanoate" RELATED [IUPAC]
+synonym: "cys(-)" RELATED [IUPAC]
+synonym: "cysteinate(1-)" EXACT [JCBN]
+synonym: "cysteine monoanion" RELATED [JCBN]
+synonym: "hydrogen cysteinate" EXACT IUPAC_NAME [IUPAC]
+xref: Beilstein:4128885 "Beilstein"
+xref: Gmelin:363235 "Gmelin"
+xref: Reaxys:4128885 "Reaxys"
+is_a: CHEBI:33558 ! alpha-amino-acid anion
+is_a: CHEBI:63470 ! sulfur-containing amino-acid anion
+relationship: is_conjugate_acid_of CHEBI:32457 ! cysteinate(2-)
+relationship: is_conjugate_base_of CHEBI:15356 ! cysteine
+relationship: is_conjugate_base_of CHEBI:35237 ! cysteine zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H6NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "120.15128" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "120.01247" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "NC(CS)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32457
+name: cysteinate(2-)
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "2-amino-3-sulfidopropanoate" RELATED [IUPAC]
+synonym: "cysteinate" EXACT IUPAC_NAME [IUPAC]
+synonym: "cysteinate(2-)" EXACT [JCBN]
+synonym: "cysteine dianion" RELATED [JCBN]
+xref: Gmelin:49990 "Gmelin"
+is_a: CHEBI:33558 ! alpha-amino-acid anion
+relationship: is_conjugate_base_of CHEBI:32456 ! cysteinate(1-)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H5NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UHFFFAOYSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "119.14334" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "119.00520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "NC(C[S-])C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:32458
+name: cysteinium
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "1-carboxy-2-mercaptoethanaminium" RELATED [ChEBI]
+synonym: "1-carboxy-2-sulfanylethanaminium" EXACT IUPAC_NAME [IUPAC]
+synonym: "cysteine cation" RELATED [JCBN]
+synonym: "cysteinium" EXACT [JCBN]
+synonym: "H2cys(+)" RELATED [IUPAC]
+xref: Gmelin:325859 "Gmelin"
+is_a: CHEBI:33719 ! alpha-amino-acid cation
+relationship: is_conjugate_acid_of CHEBI:15356 ! cysteine
+relationship: is_conjugate_acid_of CHEBI:35237 ! cysteine zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H8NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/p+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UHFFFAOYSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "122.16716" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "122.02703" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+]C(CS)C(O)=O" xsd:string
+
+[Term]
 id: CHEBI:32563
 name: lysinate
 namespace: chebi_ontology
@@ -8331,6 +9491,17 @@ subset: 3_STAR
 synonym: "atomic entity" RELATED [ChEBI]
 synonym: "monoatomic entities" RELATED [ChEBI]
 is_a: CHEBI:33259 ! elemental molecular entity
+
+[Term]
+id: CHEBI:33240
+name: coordination entity
+namespace: chebi_ontology
+def: "An assembly consisting of a central atom (usually metallic) to which is attached a surrounding array of other groups of atoms (ligands)." []
+subset: 3_STAR
+synonym: "coordination compounds" RELATED [ChEBI]
+synonym: "coordination entities" EXACT IUPAC_NAME [IUPAC]
+synonym: "coordination entity" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:37577 ! heteroatomic molecular entity
 
 [Term]
 id: CHEBI:33241
@@ -9287,6 +10458,18 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "44.99765"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC([*])=O" xsd:string
 
 [Term]
+id: CHEBI:33576
+name: sulfur-containing carboxylic acid
+namespace: chebi_ontology
+def: "Any carboxylic acid having a sulfur substituent." []
+subset: 3_STAR
+synonym: "S-containing carboxylic acid" RELATED [ChEBI]
+synonym: "S-containing carboxylic acids" RELATED [ChEBI]
+synonym: "sulfur-containing carboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:33261 ! organosulfur compound
+is_a: CHEBI:33575 ! carboxylic acid
+
+[Term]
 id: CHEBI:33579
 name: main group molecular entity
 namespace: chebi_ontology
@@ -9549,6 +10732,16 @@ is_a: CHEBI:33608 ! hydrogen molecular entity
 is_a: CHEBI:37577 ! heteroatomic molecular entity
 
 [Term]
+id: CHEBI:33693
+name: oxygen hydride
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "hydrides of oxygen" RELATED [ChEBI]
+synonym: "oxygen hydride" EXACT [ChEBI]
+synonym: "oxygen hydrides" RELATED [ChEBI]
+is_a: CHEBI:36902 ! chalcogen hydride
+
+[Term]
 id: CHEBI:33694
 name: biomacromolecule
 namespace: chebi_ontology
@@ -9719,6 +10912,17 @@ synonym: "alpha-amino acid cations" RELATED [ChEBI]
 synonym: "alpha-amino-acid cation" EXACT [ChEBI]
 synonym: "alpha-amino-acid cations" RELATED [ChEBI]
 is_a: CHEBI:33703 ! amino-acid cation
+
+[Term]
+id: CHEBI:33744
+name: iron group molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "iron group molecular entities" RELATED [ChEBI]
+synonym: "iron group molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33497 ! transition element molecular entity
+is_a: CHEBI:33676 ! d-block molecular entity
+relationship: has_part CHEBI:33356 ! iron group element atom
 
 [Term]
 id: CHEBI:33745
@@ -9926,6 +11130,28 @@ is_a: CHEBI:33659 ! organic aromatic compound
 is_a: CHEBI:50047 ! organic amino compound
 
 [Term]
+id: CHEBI:33861
+name: transition element coordination entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "transition element coordination entities" RELATED [ChEBI]
+synonym: "transition metal coordination compounds" RELATED [ChEBI]
+synonym: "transition metal coordination entities" RELATED [ChEBI]
+is_a: CHEBI:33240 ! coordination entity
+is_a: CHEBI:33497 ! transition element molecular entity
+
+[Term]
+id: CHEBI:33892
+name: iron coordination entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "iron coordination compounds" RELATED [ChEBI]
+synonym: "iron coordination entities" RELATED [ChEBI]
+synonym: "iron coordination entity" EXACT [ChEBI]
+is_a: CHEBI:24873 ! iron molecular entity
+is_a: CHEBI:33861 ! transition element coordination entity
+
+[Term]
 id: CHEBI:33893
 name: reagent
 namespace: chebi_ontology
@@ -9936,6 +11162,16 @@ synonym: "reactivo" RELATED [IUPAC]
 synonym: "reagent" EXACT IUPAC_NAME [IUPAC]
 synonym: "reagents" RELATED [ChEBI]
 is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33909
+name: metallotetrapyrrole
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "metal-tetrapyrrole" RELATED [ChEBI]
+synonym: "metal-tetrapyrrole complex" RELATED [ChEBI]
+synonym: "metallotetrapyrroles" RELATED [ChEBI]
+is_a: CHEBI:36309 ! cyclic tetrapyrrole
 
 [Term]
 id: CHEBI:33916
@@ -10179,6 +11415,74 @@ def: "A fuel such as coal, oil and natural gas which has formed over many years 
 subset: 3_STAR
 synonym: "fossil fuel" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:33292 ! fuel
+
+[Term]
+id: CHEBI:35235
+name: L-cysteine zwitterion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "(2R)-2-ammonio-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "(2R)-2-ammonio-3-sulfanylpropanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-cysteine" RELATED [UniProt]
+synonym: "L-cysteine zwitterion" EXACT [IUPAC]
+xref: Gmelin:49993 "Gmelin"
+is_a: CHEBI:35237 ! cysteine zwitterion
+relationship: is_conjugate_acid_of CHEBI:32442 ! L-cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32445 ! L-cysteinium
+relationship: is_enantiomer_of CHEBI:35236 ! D-cysteine zwitterion
+relationship: is_tautomer_of CHEBI:17561 ! L-cysteine
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-REOHCLBHSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H](CS)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:35236
+name: D-cysteine zwitterion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "(2S)-2-ammonio-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "(2S)-2-ammonio-3-sulfanylpropanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "D-cysteine" RELATED [UniProt]
+synonym: "D-cysteine zwitterion" EXACT [IUPAC]
+xref: Gmelin:2352354 "Gmelin"
+is_a: CHEBI:35237 ! cysteine zwitterion
+relationship: is_conjugate_acid_of CHEBI:32449 ! D-cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32451 ! D-cysteinium
+relationship: is_enantiomer_of CHEBI:35235 ! L-cysteine zwitterion
+relationship: is_tautomer_of CHEBI:16375 ! D-cysteine
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UWTATZPHSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@H](CS)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:35237
+name: cysteine zwitterion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "(+)H3N-CH(CH2SH)-COO(-)" RELATED [ChEBI]
+synonym: "2-ammonio-3-mercaptopropanoate" RELATED [ChEBI]
+synonym: "2-ammonio-3-sulfanylpropanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "cysteine zwitterion" EXACT [IUPAC]
+xref: Gmelin:49992 "Gmelin"
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_conjugate_acid_of CHEBI:32456 ! cysteinate(1-)
+relationship: is_conjugate_base_of CHEBI:32458 ! cysteinium
+relationship: is_tautomer_of CHEBI:15356 ! cysteine
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7NO2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XUJNEKJLAYXESH-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "121.15922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "121.01975" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+]C(CS)C([O-])=O" xsd:string
 
 [Term]
 id: CHEBI:35238
@@ -11175,6 +12479,17 @@ synonym: "thio acid" RELATED [ChEBI]
 is_a: CHEBI:33307 ! thiocarboxylic acid
 
 [Term]
+id: CHEBI:35741
+name: glycerolipid
+namespace: chebi_ontology
+def: "Any member of the group of lipids containing a common glycerol backbone to which at least one fatty acid-derived group is attached." []
+subset: 3_STAR
+synonym: "glycerolipids" RELATED [ChEBI]
+xref: PMID:18606873 "Europe PMC"
+is_a: CHEBI:18059 ! lipid
+relationship: has_functional_parent CHEBI:17754 ! glycerol
+
+[Term]
 id: CHEBI:35757
 name: monocarboxylic acid anion
 namespace: chebi_ontology
@@ -11345,6 +12660,31 @@ synonym: "inorganic chloride salts" RELATED [ChEBI]
 synonym: "inorganic chlorides" RELATED [ChEBI]
 is_a: CHEBI:23114 ! chloride salt
 is_a: CHEBI:24839 ! inorganic salt
+
+[Term]
+id: CHEBI:36309
+name: cyclic tetrapyrrole
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "cyclic tetrapyrroles" RELATED [ChEBI]
+synonym: "macrocyclic tetrapyrrole" RELATED [ChEBI]
+synonym: "macrocyclic tetrapyrroles" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:26932 ! tetrapyrrole
+is_a: CHEBI:47882 ! cyclic polypyrrole
+
+[Term]
+id: CHEBI:36315
+name: glycerophosphoinositol
+namespace: chebi_ontology
+alt_id: CHEBI:26040
+alt_id: CHEBI:35770
+def: "Any glycerophospholipid having the polar alcohol inositol esterified to the phosphate group at the sn-3 position of the glycerol backbone." []
+subset: 3_STAR
+synonym: "glycerophosphoinositols" RELATED [ChEBI]
+synonym: "GPI" RELATED [ChEBI]
+xref: PMID:14706866 "Europe PMC"
+is_a: CHEBI:37739 ! glycerophospholipid
+relationship: has_functional_parent CHEBI:24848 ! inositol
 
 [Term]
 id: CHEBI:36338
@@ -11983,6 +13323,33 @@ is_a: CHEBI:24062 ! fluorine molecular entity
 is_a: CHEBI:36684 ! organohalogen compound
 
 [Term]
+id: CHEBI:37163
+name: glucan
+namespace: chebi_ontology
+alt_id: CHEBI:24255
+alt_id: CHEBI:5392
+def: "A polysaccharide composed of glucose residues." []
+subset: 3_STAR
+synonym: "Glucan" EXACT [KEGG_COMPOUND]
+synonym: "glucan" EXACT IUPAC_NAME [IUPAC]
+synonym: "glucans" RELATED [ChEBI]
+xref: CAS:9037-91-6 "ChemIDplus"
+xref: KEGG:C01379
+is_a: CHEBI:37164 ! homopolysaccharide
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H22O11(C6H10O5)n" xsd:string
+
+[Term]
+id: CHEBI:37164
+name: homopolysaccharide
+namespace: chebi_ontology
+def: "Glycans composed of a single type of monosaccharide residue. They are named by replacing the ending '-ose' of the sugar by '-an'." []
+subset: 3_STAR
+synonym: "homoglycan" RELATED [IUPAC]
+synonym: "homopolysaccharide" EXACT IUPAC_NAME [IUPAC]
+synonym: "homopolysaccharides" RELATED [ChEBI]
+is_a: CHEBI:18154 ! polysaccharide
+
+[Term]
 id: CHEBI:37175
 name: organic hydride
 namespace: chebi_ontology
@@ -11999,6 +13366,16 @@ synonym: "mononuclear hydride" RELATED [ChEBI]
 synonym: "mononuclear hydrides" RELATED [IUPAC]
 synonym: "mononuclear parent hydrides" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:33692 ! hydrides
+
+[Term]
+id: CHEBI:37206
+name: hexol
+namespace: chebi_ontology
+def: "A polyol that contains 6 hydroxy groups." []
+subset: 3_STAR
+synonym: "hexol" EXACT IUPAC_NAME [IUPAC]
+synonym: "hexols" RELATED [ChEBI]
+is_a: CHEBI:26191 ! polyol
 
 [Term]
 id: CHEBI:37246
@@ -12300,6 +13677,23 @@ is_a: CHEBI:26079 ! phosphoric acid derivative
 is_a: CHEBI:35701 ! ester
 
 [Term]
+id: CHEBI:37739
+name: glycerophospholipid
+namespace: chebi_ontology
+alt_id: CHEBI:24362
+alt_id: CHEBI:5456
+def: "Any glycerolipid having a phosphate group ester-linked to a terminal carbon of the glycerol backbone." []
+subset: 3_STAR
+synonym: "glycerophospholipids" RELATED [ChEBI]
+synonym: "phosphatide" RELATED [ChEBI]
+synonym: "phosphatides" RELATED [ChEBI]
+synonym: "phosphoglyceride" RELATED [ChEBI]
+synonym: "phosphoglycerides" RELATED [ChEBI]
+xref: PMID:17393491 "Europe PMC"
+is_a: CHEBI:16247 ! phospholipid
+is_a: CHEBI:35741 ! glycerolipid
+
+[Term]
 id: CHEBI:37749
 name: halogen oxide
 namespace: chebi_ontology
@@ -12487,6 +13881,18 @@ def: "A drug used for the treatment or prevention of cardiac arrhythmias. Anti-a
 subset: 3_STAR
 synonym: "antiarrhythmic agent" RELATED [ChEBI]
 is_a: CHEBI:35554 ! cardiovascular drug
+
+[Term]
+id: CHEBI:38077
+name: polypyrrole
+namespace: chebi_ontology
+def: "A compound composed of two or more pyrrole units." []
+subset: 3_STAR
+synonym: "poly(pyrrole)s" RELATED [ChEBI]
+synonym: "polypyrroles" RELATED [ChEBI]
+synonym: "PPys" RELATED [ChEBI]
+xref: Beilstein:8538310 "Beilstein"
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
 [Term]
 id: CHEBI:38092
@@ -14206,6 +15612,16 @@ synonym: "Indikator" RELATED [ChEBI]
 is_a: CHEBI:33232 ! application
 
 [Term]
+id: CHEBI:47882
+name: cyclic polypyrrole
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "cyclic polypyrroles" RELATED [ChEBI]
+synonym: "macrocyclic polypyrroles" EXACT IUPAC_NAME [IUPAC]
+synonym: "polypyrrole macrocycles" RELATED [ChEBI]
+is_a: CHEBI:38077 ! polypyrrole
+
+[Term]
 id: CHEBI:47901
 name: alkanesulfonic acid
 namespace: chebi_ontology
@@ -14257,6 +15673,24 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "JPGQOUSTVILISH-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "184.49210" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "183.97143" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "FC(F)OC(F)(F)C(F)Cl" xsd:string
+
+[Term]
+id: CHEBI:47923
+name: tripeptide
+namespace: chebi_ontology
+alt_id: CHEBI:27138
+alt_id: CHEBI:9742
+def: "Any molecule that contains three amino-acid residues connected by peptide linkages." []
+subset: 3_STAR
+synonym: "Tripeptide" EXACT [KEGG_COMPOUND]
+synonym: "tripeptides" RELATED [ChEBI]
+xref: KEGG:C00316
+is_a: CHEBI:25676 ! oligopeptide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H8N3O4R3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "186.146" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "186.05148" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(=O)(NC(C(NC(C(=O)O)*)=O)*)C(N)*" xsd:string
 
 [Term]
 id: CHEBI:47958
@@ -15051,6 +16485,21 @@ synonym: "proteinogenic amino-acid side-chain" RELATED [ChEBI]
 synonym: "proteinogenic amino-acid side-chain groups" RELATED [ChEBI]
 synonym: "proteinogenic amino-acid side-chains" RELATED [ChEBI]
 is_a: CHEBI:33249 ! organyl group
+
+[Term]
+id: CHEBI:50326
+name: sulfanylmethyl group
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "-CH2-SH" RELATED [IUPAC]
+synonym: "cysteine side-chain" RELATED [ChEBI]
+synonym: "HS-CH2-" RELATED [IUPAC]
+synonym: "sulfanylmethyl" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:50325 ! proteinogenic amino-acid side-chain group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "CH3S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "47.10052" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "46.99555" xsd:string
 
 [Term]
 id: CHEBI:50339
@@ -16230,6 +17679,31 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "161.10732
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+]CCc1c[nH]c2ccccc12" xsd:string
 
 [Term]
+id: CHEBI:57925
+name: glutathionate(1-)
+namespace: chebi_ontology
+def: "A peptide anion obtained by deprotonation of both carboxy groups and protonation of the glutamyl amino group of glutathione; major species at pH 7.3." []
+subset: 3_STAR
+synonym: "glutathionate" RELATED [ChEBI]
+synonym: "glutathionate anion" RELATED [ChEBI]
+synonym: "glutathionate ion" RELATED [ChEBI]
+synonym: "glutathione" RELATED [UniProt]
+xref: PMID:4200890 "Europe PMC"
+xref: PMID:4745654 "Europe PMC"
+is_a: CHEBI:60334 ! peptide anion
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: is_conjugate_base_of CHEBI:16856 ! glutathione
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H16N3O6S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H17N3O6S/c11-5(10(18)19)1-2-7(14)13-6(4-20)9(17)12-3-8(15)16/h5-6,20H,1-4,11H2,(H,12,17)(H,13,14)(H,15,16)(H,18,19)/p-1/t5-,6-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSXRVCMGQZWBV-WDSKDSINSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "306.317" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "306.07653" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H](CCC(=O)N[C@@H](CS)C(=O)NCC(=O)[O-])C(=O)[O-]" xsd:string
+
+[Term]
 id: CHEBI:58001
 name: primary aliphatic ammonium ion
 namespace: chebi_ontology
@@ -16647,6 +18121,53 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "163.12297
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[NH+]1CCC[C@H]1c1cccnc1" xsd:string
 
 [Term]
+id: CHEBI:59814
+name: L-alpha-amino acid anion
+namespace: chebi_ontology
+def: "Conjugate base of an L-alpha-amino acid arising from deprotonation of the C-1 carboxy group." []
+subset: 3_STAR
+synonym: "L-alpha-amino carboxylate" RELATED [ChEBI]
+is_a: CHEBI:33558 ! alpha-amino-acid anion
+relationship: is_conjugate_base_of CHEBI:15705 ! L-alpha-amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](N)C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:59869
+name: L-alpha-amino acid zwitterion
+namespace: chebi_ontology
+def: "Zwitterionic form of an L-alpha-amino acid having an anionic carboxy group and a protonated amino group." []
+subset: 3_STAR
+synonym: "an L-alpha-amino acid" RELATED [UniProt]
+synonym: "L-alpha-amino acid zwitterions" RELATED [ChEBI]
+is_a: CHEBI:78608 ! alpha-amino acid zwitterion
+relationship: is_tautomer_of CHEBI:15705 ! L-alpha-amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H]([*])C([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:59871
+name: D-alpha-amino acid zwitterion
+namespace: chebi_ontology
+def: "Zwitterionic form of a D-alpha-amino acid having an anionic carboxy group and a protonated amino group." []
+subset: 3_STAR
+synonym: "a D-alpha-amino acid" RELATED [UniProt]
+synonym: "D-alpha-amino acid zwitterions" RELATED [ChEBI]
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_tautomer_of CHEBI:16733 ! D-alpha-amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@H]([*])C([O-])=O" xsd:string
+
+[Term]
 id: CHEBI:59888
 name: gamma-aminobutyric acid zwitterion
 namespace: chebi_ontology
@@ -16800,6 +18321,15 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "133.05614
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=NO)C(C)(C)SC" xsd:string
 
 [Term]
+id: CHEBI:60334
+name: peptide anion
+namespace: chebi_ontology
+def: "An anion formed by deprotonation of at least one peptide carboxy group." []
+subset: 3_STAR
+synonym: "peptide anions" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+
+[Term]
 id: CHEBI:60466
 name: peptide zwitterion
 namespace: chebi_ontology
@@ -16901,6 +18431,22 @@ def: "Any substance that interacts with tubulin to inhibit or promote polymerisa
 subset: 3_STAR
 synonym: "tubulin modulators" RELATED [ChEBI]
 is_a: CHEBI:52210 ! pharmacological role
+
+[Term]
+id: CHEBI:60895
+name: D-alpha-amino acid anion
+namespace: chebi_ontology
+def: "Any alpha-amino acid anion in which the parent amino acid has D-configuration." []
+subset: 3_STAR
+synonym: "D-alpha-amino acid anions" RELATED [ChEBI]
+synonym: "D-alpha-amino carboxylate" RELATED [ChEBI]
+is_a: CHEBI:33558 ! alpha-amino-acid anion
+relationship: is_conjugate_base_of CHEBI:16733 ! D-alpha-amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](N)C([O-])=O" xsd:string
 
 [Term]
 id: CHEBI:60911
@@ -17076,6 +18622,18 @@ synonym: "signalling molecules" RELATED [ChEBI]
 is_a: CHEBI:33280 ! molecular messenger
 
 [Term]
+id: CHEBI:62643
+name: anionic phospholipid
+namespace: chebi_ontology
+def: "Any organophosphate oxoanion that is a negatively charged phospholipid, e.g. phosphatidylserine(1-), phosphatidate(2-), phosphatidylglycerol(1-)." []
+subset: 3_STAR
+synonym: "anionic phospholipids" RELATED [ChEBI]
+synonym: "phospholipid anion" RELATED [ChEBI]
+synonym: "phospholipid anions" RELATED [ChEBI]
+is_a: CHEBI:58945 ! organophosphate oxoanion
+relationship: is_conjugate_base_of CHEBI:16247 ! phospholipid
+
+[Term]
 id: CHEBI:63046
 name: emulsifier
 namespace: chebi_ontology
@@ -17094,6 +18652,23 @@ def: "A carbohydrate derivative arising formally from the elimination of water f
 subset: 3_STAR
 synonym: "glycosyl compounds" RELATED [ChEBI]
 is_a: CHEBI:63299 ! carbohydrate derivative
+
+[Term]
+id: CHEBI:63248
+name: oxidising agent
+namespace: chebi_ontology
+def: "A substance that removes electrons from another reactant in a redox reaction." []
+subset: 3_STAR
+synonym: "oxidant" RELATED [ChEBI]
+synonym: "oxidants" RELATED [ChEBI]
+synonym: "oxidiser" RELATED [ChEBI]
+synonym: "oxidisers" RELATED [ChEBI]
+synonym: "oxidising agents" RELATED [ChEBI]
+synonym: "oxidizer" RELATED [ChEBI]
+synonym: "oxidizers" RELATED [ChEBI]
+synonym: "oxidizing agent" RELATED [ChEBI]
+synonym: "oxidizing agents" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
 
 [Term]
 id: CHEBI:63299
@@ -17158,6 +18733,31 @@ subset: 3_STAR
 synonym: "pentose derivatives" RELATED [ChEBI]
 is_a: CHEBI:63367 ! monosaccharide derivative
 relationship: has_functional_parent CHEBI:25901 ! pentose
+
+[Term]
+id: CHEBI:63470
+name: sulfur-containing amino-acid anion
+namespace: chebi_ontology
+def: "A sulfur-containing amino acid whose alpha-carboxylic acid group is ionized (not protonated)." []
+subset: 3_STAR
+synonym: "sulfur-containing amino-acid anions" RELATED [ChEBI]
+is_a: CHEBI:37022 ! amino-acid anion
+relationship: is_conjugate_base_of CHEBI:26834 ! sulfur-containing amino acid
+
+[Term]
+id: CHEBI:63490
+name: explosive
+namespace: chebi_ontology
+def: "A substance capable of undergoing rapid and highly exothermic decomposition." []
+subset: 3_STAR
+synonym: "explosive compound" RELATED [ChEBI]
+synonym: "explosive compounds" RELATED [ChEBI]
+synonym: "explosive material" RELATED [ChEBI]
+synonym: "explosives" RELATED [ChEBI]
+synonym: "explosives chemical" RELATED [ChEBI]
+synonym: "explosives chemicals" RELATED [ChEBI]
+xref: Wikipedia:Explosive_material
+is_a: CHEBI:51086 ! chemical role
 
 [Term]
 id: CHEBI:63510
@@ -17768,6 +19368,17 @@ synonym: "organic acids" RELATED [ChEBI]
 is_a: CHEBI:50860 ! organic molecular entity
 
 [Term]
+id: CHEBI:64857
+name: cosmetic
+namespace: chebi_ontology
+def: "The role played by a substance in enhancing the appearance or odour of the human body; a name given to the substance itself or to a component of it." []
+subset: 3_STAR
+synonym: "cosmetic component" RELATED [ChEBI]
+synonym: "cosmetics" RELATED [ChEBI]
+xref: Wikipedia:Cosmetics
+is_a: CHEBI:33232 ! application
+
+[Term]
 id: CHEBI:64909
 name: poison
 namespace: chebi_ontology
@@ -17835,6 +19446,19 @@ synonym: "antimicrobial preservative" RELATED [ChEBI]
 synonym: "antimicrobial preservatives" RELATED [ChEBI]
 is_a: CHEBI:33281 ! antimicrobial agent
 is_a: CHEBI:65255 ! food preservative
+
+[Term]
+id: CHEBI:65259
+name: GABA antagonist
+namespace: chebi_ontology
+def: "A compound that inhibits the action of gamma-aminobutyric acid." []
+subset: 3_STAR
+synonym: "GABA antagonists" RELATED [ChEBI]
+synonym: "gamma-aminobutyric acid receptor antagonist" RELATED [ChEBI]
+synonym: "gamma-aminobutyric acid receptor antagonists" RELATED [ChEBI]
+xref: Wikipedia:GABA_antagonist
+is_a: CHEBI:48706 ! antagonist
+is_a: CHEBI:51374 ! GABA agent
 
 [Term]
 id: CHEBI:65296
@@ -18350,6 +19974,39 @@ synonym: "phosphorus-containing group transferase inhibitors" RELATED [ChEBI]
 is_a: CHEBI:71300 ! EC 2.* (transferase) inhibitor
 
 [Term]
+id: CHEBI:76710
+name: EC 4.* (lyase) inhibitor
+namespace: chebi_ontology
+def: "An enzyme inhibitor which interferes with the action of a lyase (EC 4.*.*.*). Lyases are enzymes cleaving C-C, C-O, C-N and other bonds by other means than by hydrolysis or oxidation." []
+subset: 3_STAR
+synonym: "EC 4.* (lyase) inhibitors" RELATED [ChEBI]
+synonym: "EC 4.* inhibitor" RELATED [ChEBI]
+synonym: "EC 4.* inhibitors" RELATED [ChEBI]
+synonym: "EC 4.*.*.* inhibitor" RELATED [ChEBI]
+synonym: "EC 4.*.*.* inhibitors" RELATED [ChEBI]
+synonym: "lyase (EC 4.*) inhibitor" RELATED [ChEBI]
+synonym: "lyase (EC 4.*) inhibitorS" RELATED [ChEBI]
+synonym: "lyase inhibitor" RELATED [ChEBI]
+synonym: "lyase inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Lyase
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
+id: CHEBI:76713
+name: EC 4.3.* (C-N lyase) inhibitor
+namespace: chebi_ontology
+def: "A lyase inhibitor which inhibits the action of a C-N lyase (EC 4.3.*.*)." []
+subset: 3_STAR
+synonym: "C-N lyase (EC 4.3.*) inhibitor" RELATED [ChEBI]
+synonym: "C-N lyase (EC 4.3.*) inhibitors" RELATED [ChEBI]
+synonym: "C-N lyase inhibitor" RELATED [ChEBI]
+synonym: "C-N lyase inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.* (C-N lyase) inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.* inhibitor" RELATED [ChEBI]
+synonym: "EC 4.3.* inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76710 ! EC 4.* (lyase) inhibitor
+
+[Term]
 id: CHEBI:76725
 name: EC 1.* (oxidoreductase) inhibitor
 namespace: chebi_ontology
@@ -18574,6 +20231,23 @@ synonym: "EC 2.7.8.* inhibitors" RELATED [ChEBI]
 is_a: CHEBI:76668 ! EC 2.7.* (P-containing group transferase) inhibitor
 
 [Term]
+id: CHEBI:76832
+name: EC 4.3.1.* (ammonia-lyase) inhibitor
+namespace: chebi_ontology
+def: "An EC 4.3.* (C-N lyase) inhibitor that interferes with the action of any ammonia-lyase (EC 4.3.1.*)." []
+subset: 3_STAR
+synonym: "ammonia-lyase (EC 4.3.1.*) inhibitor" RELATED [ChEBI]
+synonym: "ammonia-lyase (EC 4.3.1.*) inhibitors" RELATED [ChEBI]
+synonym: "ammonia-lyase inhibitor" RELATED [ChEBI]
+synonym: "ammonia-lyase inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.1.* (ammonia-lyase) inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.1.* (ammonia-lyases) inhibitor" RELATED [ChEBI]
+synonym: "EC 4.3.1.* (ammonia-lyases) inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 4.3.1.* inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76713 ! EC 4.3.* (C-N lyase) inhibitor
+
+[Term]
 id: CHEBI:76834
 name: EC 2.5.* (non-methyl-alkyl or aryl transferase) inhibitor
 namespace: chebi_ontology
@@ -18645,6 +20319,16 @@ def: "Any eukaryotic metabolite produced during a metabolic reaction in fungi, t
 subset: 3_STAR
 synonym: "fungal metabolites" RELATED [ChEBI]
 is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: CHEBI:76967
+name: human xenobiotic metabolite
+namespace: chebi_ontology
+def: "Any human metabolite produced by metabolism of a xenobiotic compound in humans." []
+subset: 3_STAR
+synonym: "human xenobiotic metabolites" RELATED [ChEBI]
+is_a: CHEBI:76206 ! xenobiotic metabolite
+is_a: CHEBI:77746 ! human metabolite
 
 [Term]
 id: CHEBI:76969
@@ -18825,6 +20509,32 @@ def: "Any protective agent that is able to prevent damage to the heart." []
 subset: 3_STAR
 synonym: "cardioprotective agents" RELATED [ChEBI]
 is_a: CHEBI:50267 ! protective agent
+
+[Term]
+id: CHEBI:77703
+name: EC 4.3.1.3 (histidine ammonia-lyase) inhibitor
+namespace: chebi_ontology
+def: "An EC 4.3.1.* (ammonia-lyase) inhibitor that interferes with the action of histidine ammonia-lyase (EC 4.3.1.3)." []
+subset: 3_STAR
+synonym: "EC 4.3.1.3 (histidine ammonia-lyase) inhibitors" RELATED [ChEBI]
+synonym: "EC 4.3.1.3 inhibitor" RELATED [ChEBI]
+synonym: "EC 4.3.1.3 inhibitors" RELATED [ChEBI]
+synonym: "histidase inhibitor" RELATED [ChEBI]
+synonym: "histidase inhibitors" RELATED [ChEBI]
+synonym: "histidinase inhibitor" RELATED [ChEBI]
+synonym: "histidinase inhibitors" RELATED [ChEBI]
+synonym: "histidine alpha-deaminase inhibitor" RELATED [ChEBI]
+synonym: "histidine alpha-deaminase inhibitors" RELATED [ChEBI]
+synonym: "histidine ammonia-lyase (EC 4.3.1.3) inhibitor" RELATED [ChEBI]
+synonym: "histidine ammonia-lyase (EC 4.3.1.3) inhibitors" RELATED [ChEBI]
+synonym: "histidine ammonia-lyase inhibitor" RELATED [ChEBI]
+synonym: "histidine ammonia-lyase inhibitors" RELATED [ChEBI]
+synonym: "L-histidine ammonia-lyase (urocanate-forming) inhibitor" RELATED [ChEBI]
+synonym: "L-histidine ammonia-lyase (urocanate-forming) inhibitors" RELATED [ChEBI]
+synonym: "L-histidine ammonia-lyase inhibitor" RELATED [ChEBI]
+synonym: "L-histidine ammonia-lyase inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Histidine_ammonia-lyase
+is_a: CHEBI:76832 ! EC 4.3.1.* (ammonia-lyase) inhibitor
 
 [Term]
 id: CHEBI:77746
@@ -19229,6 +20939,35 @@ is_a: CHEBI:37143 ! organofluorine compound
 relationship: has_part CHEBI:50127 ! trifluoromethyl group
 
 [Term]
+id: CHEBI:83811
+name: proteinogenic amino acid derivative
+namespace: chebi_ontology
+def: "Any derivative of a proteinogenic amino acid resulting from reaction at an amino group, carboxy group, or a side-chain functional group, or from the replacement of any hydrogen by a heteroatom." []
+subset: 3_STAR
+synonym: "canonical amino acid derivative" RELATED [ChEBI]
+synonym: "canonical amino acid derivatives" RELATED [ChEBI]
+synonym: "canonical amino-acid derivative" RELATED [ChEBI]
+synonym: "canonical amino-acid derivatives" RELATED [ChEBI]
+synonym: "proteinogenic amino acid derivatives" RELATED [ChEBI]
+synonym: "proteinogenic amino-acid derivative" RELATED [ChEBI]
+synonym: "proteinogenic amino-acid derivatives" RELATED [ChEBI]
+is_a: CHEBI:83821 ! amino acid derivative
+relationship: has_functional_parent CHEBI:83813 ! proteinogenic amino acid
+
+[Term]
+id: CHEBI:83813
+name: proteinogenic amino acid
+namespace: chebi_ontology
+def: "Any of the 23 alpha-amino acids that are precursors to proteins, and are incorporated into proteins during translation. The group includes the 20 amino acids encoded by the nuclear genes of eukaryotes together with selenocysteine, pyrrolysine, and N-formylmethionine. Apart from glycine, which is non-chiral, all have L configuration." []
+subset: 3_STAR
+synonym: "canonical amino acid" RELATED [ChEBI]
+synonym: "canonical amino acids" RELATED [ChEBI]
+synonym: "proteinogenic amino acids" RELATED [ChEBI]
+xref: Wikipedia:Proteinogenic_amino_acid
+is_a: CHEBI:33575 ! carboxylic acid
+is_a: CHEBI:35352 ! organonitrogen compound
+
+[Term]
 id: CHEBI:83820
 name: non-proteinogenic amino acid
 namespace: chebi_ontology
@@ -19247,6 +20986,40 @@ synonym: "non-proteinogenic amino-acid" RELATED [ChEBI]
 synonym: "non-proteinogenic amino-acids" RELATED [ChEBI]
 xref: Wikipedia:Non-proteinogenic_amino_acids
 is_a: CHEBI:33709 ! amino acid
+
+[Term]
+id: CHEBI:83821
+name: amino acid derivative
+namespace: chebi_ontology
+alt_id: CHEBI:25359
+def: "Any derivative of an amino acid resulting from reaction at an amino group, carboxy group, side-chain functional group, or from the replacement of any hydrogen by a heteroatom. The definition normally excludes peptides containing amino acid residues." []
+subset: 3_STAR
+synonym: "amino acid derivatives" RELATED [ChEBI]
+synonym: "modified amino acids" RELATED [ChEBI]
+is_a: CHEBI:35352 ! organonitrogen compound
+
+[Term]
+id: CHEBI:83824
+name: L-cysteine derivative
+namespace: chebi_ontology
+def: "A proteinogenic amino acid derivative resulting from the formal reaction of L-cysteine at the amino group, carboxy group, or thiol group, or from the replacement of any hydrogen of L-cysteine by a heteroatom." []
+subset: 3_STAR
+synonym: "L-cysteine derivatives" RELATED [ChEBI]
+is_a: CHEBI:23509 ! cysteine derivative
+is_a: CHEBI:83811 ! proteinogenic amino acid derivative
+relationship: has_functional_parent CHEBI:17561 ! L-cysteine
+
+[Term]
+id: CHEBI:83925
+name: non-proteinogenic alpha-amino acid
+namespace: chebi_ontology
+def: "Any  alpha-amino acid which is not a member of the group of 23 proteinogenic amino acids." []
+subset: 3_STAR
+synonym: "non-proteinogenic alpha-amino acids" RELATED [ChEBI]
+synonym: "non-proteinogenic alpha-amino-acid" RELATED [ChEBI]
+synonym: "non-proteinogenic alpha-amino-acids" RELATED [ChEBI]
+is_a: CHEBI:33704 ! alpha-amino acid
+is_a: CHEBI:83820 ! non-proteinogenic amino acid
 
 [Term]
 id: CHEBI:83970
@@ -19296,6 +21069,32 @@ def: "Any eukaryotic metabolite produced during a metabolic reaction in algae in
 subset: 3_STAR
 synonym: "algal metabolites" RELATED [ChEBI]
 is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: CHEBI:85046
+name: skin lightening agent
+namespace: chebi_ontology
+def: "Any cosmetic used to lighten the colour of skin by reducing the concentration of melanin." []
+subset: 3_STAR
+synonym: "melanogenesis inhibitor" RELATED [ChEBI]
+synonym: "melanogenesis inhibitors" RELATED [ChEBI]
+synonym: "skin bleaching agent" RELATED [ChEBI]
+synonym: "skin bleaching agents" RELATED [ChEBI]
+synonym: "skin depigmenting agent" RELATED [ChEBI]
+synonym: "skin depigmenting agents" RELATED [ChEBI]
+synonym: "skin lightening agents" RELATED [ChEBI]
+synonym: "skin whitening agent" RELATED [ChEBI]
+synonym: "skin whitening agents" RELATED [ChEBI]
+xref: PMID:21265866 "Europe PMC"
+xref: PMID:22132817 "Europe PMC"
+xref: PMID:22314516 "Europe PMC"
+xref: PMID:23891889 "Europe PMC"
+xref: PMID:23974587 "Europe PMC"
+xref: PMID:25535470 "Europe PMC"
+xref: PMID:25574195 "Europe PMC"
+xref: PMID:25643794 "Europe PMC"
+xref: Wikipedia:Skin_whitening
+is_a: CHEBI:64857 ! cosmetic
 
 [Term]
 id: CHEBI:85234

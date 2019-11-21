@@ -15,6 +15,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000033>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000051>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000052>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000070>))
@@ -46,6 +47,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAn
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMolecularFunction.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalMorphologyOfAnatomicalEntity.yaml>))
@@ -139,6 +141,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> "abnormalBiologicalProcessInLocation"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> "abnormal 'biological process' in 'independent continuant'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcessInLocation.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0008150> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/BFO_0000004>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml> (abnormal chemical concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml> "An abnormal concentration of chemical."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml> "abnormalConcentrationOfChemicalEntity"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml> "abnormal chemical concentration"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalConcentrationOfChemicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_24431>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalDevelopmentOfAnatomicalEntity.yaml> (abnormal development of 'anatomical entity')
 
