@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-19/wbphenotype-base.owl
+data-version: wbphenotype/releases/2019-11-21/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
-remark: C elegans Phenotype Ontology
 ontology: wbphenotype/wbphenotype-base
-property_value: property-value "http://purl.org/dc/elements/1.1/license http://creativecommons.org/licenses/by/4.0/" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Ontology about C elegans phenotypes" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/ xsd:string
 
 [Term]
 id: PATO:0000956
@@ -11152,7 +11153,7 @@ is_a: WBPhenotype:0000050 ! embryonic lethal
 
 [Term]
 id: WBPhenotype:0001537
-name: mRNA turnover variant
+name: mRNA surveillance variant
 def: "Any variation in the ability of cells to monitor the quality of their mRNAs and degrade any transcripts that are poorly or incompletely translated compared to control." [WB:WBPaper00004926]
 synonym: "mRNA turnover abnormal" NARROW []
 is_a: WBPhenotype:0000028 ! RNA processing variant
