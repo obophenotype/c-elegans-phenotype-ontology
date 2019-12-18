@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-21/imports/chebi_import.owl
+data-version: wbphenotype/releases/2019-12-18/imports/chebi_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 2_STAR "Annotated by 3rd party"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
@@ -818,7 +818,6 @@ xref: DrugBank:DB02296
 xref: Gmelin:49460 "Gmelin"
 xref: HMDB:HMDB0006007
 xref: KEGG:C07328
-xref: PDBeChem:IP3
 xref: PMID:23043843 "Europe PMC"
 xref: PMID:23698045 "Europe PMC"
 xref: PMID:24487533 "Europe PMC"
@@ -1227,7 +1226,6 @@ xref: KEGG:C01438
 xref: MetaCyc:CH4
 xref: Patent:FR994032
 xref: Patent:US2583090
-xref: PDBeChem:CH3
 xref: PMID:17791569 "Europe PMC"
 xref: PMID:23104415 "Europe PMC"
 xref: PMID:23353606 "Europe PMC"
@@ -1419,7 +1417,6 @@ xref: MetaCyc:ETOH
 xref: MolBase:858
 xref: MolBase:859
 xref: PDBeChem:EOH
-xref: PDBeChem:OHE
 xref: PMID:11046114 "Europe PMC"
 xref: PMID:11090978 "Europe PMC"
 xref: PMID:11198720 "Europe PMC"
@@ -2431,7 +2428,7 @@ namespace: chebi_ontology
 alt_id: CHEBI:11191
 alt_id: CHEBI:25655
 alt_id: CHEBI:571
-def: "Octopamine is a biogenic phenylethanolamine, which has been found to act as a neurotransmitter, neurohormone or neuromodulator in invertebrates." []
+def: "A member of the class of phenylethanolamines that is phenol which is substituted at the para- position by a 2-amino-1-hydroxyethyl group. A biogenic phenylethanolamine which has been found to act as a neurotransmitter, neurohormone or neuromodulator in invertebrates." []
 subset: 3_STAR
 synonym: "1-(4-Hydroxyphenyl)-2-aminoethanol" RELATED [KEGG_COMPOUND]
 synonym: "1-(p-hydroxyphenyl)-2-aminoethanol" RELATED [ChemIDplus]
@@ -2558,7 +2555,7 @@ name: sulfite
 namespace: chebi_ontology
 alt_id: CHEBI:15139
 alt_id: CHEBI:45548
-def: "Sulfite is an inorganic anion, which is the conjugate base of hydrogen sulfite." []
+def: "A sulfur oxoanion that is the conjugate base of hydrogen sulfite (H2SO3)." []
 subset: 3_STAR
 synonym: "[SO3](2-)" RELATED [IUPAC]
 synonym: "SO3" RELATED [ChEBI]
@@ -14833,8 +14830,7 @@ synonym: "HYDROXY GROUP" EXACT [PDBeChem]
 synonym: "hydroxy group" EXACT [UniProt]
 synonym: "hydroxyl" RELATED [ChEBI]
 synonym: "hydroxyl group" RELATED [ChEBI]
-synonym: "oxidanyl" EXACT IUPAC_NAME [IUPAC]
-xref: PDBeChem:HYD
+xref: PDBeChem:OH
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HO" xsd:string
@@ -14910,8 +14906,8 @@ synonym: "INORGANIC PHOSPHATE GROUP" RELATED [PDBeChem]
 synonym: "phosphate" RELATED [UniProt]
 xref: Gmelin:1998 "Gmelin"
 xref: MolBase:1628
-xref: PDBeChem:IPS
 xref: PDBeChem:PI
+xref: PDBeChem:PO4
 is_a: CHEBI:35780 ! phosphate ion
 is_a: CHEBI:79388 ! divalent inorganic anion
 relationship: has_role CHEBI:23357 ! cofactor
@@ -15126,7 +15122,7 @@ subset: 3_STAR
 synonym: "=O" RELATED [IUPAC]
 synonym: "oxo" EXACT IUPAC_NAME [IUPAC]
 synonym: "OXO GROUP" EXACT [PDBeChem]
-xref: PDBeChem:OXO
+xref: PDBeChem:O
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O" xsd:string
@@ -15244,7 +15240,7 @@ synonym: "-COOH" RELATED [IUPAC]
 synonym: "carboxy" EXACT IUPAC_NAME [IUPAC]
 synonym: "CARBOXY GROUP" EXACT [PDBeChem]
 synonym: "carboxyl group" RELATED [ChEBI]
-xref: PDBeChem:CBX
+xref: PDBeChem:FMT
 is_a: CHEBI:33249 ! organyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHO2" xsd:string
@@ -20849,7 +20845,6 @@ def: "Any unsaturated fatty acid anion with one double or triple bond in the fat
 subset: 3_STAR
 synonym: "monounsaturated fatty acid anions" RELATED [ChEBI]
 is_a: CHEBI:2580 ! unsaturated fatty acid anion
-is_a: CHEBI:50860 ! organic molecular entity
 relationship: is_conjugate_base_of CHEBI:25413 ! monounsaturated fatty acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string

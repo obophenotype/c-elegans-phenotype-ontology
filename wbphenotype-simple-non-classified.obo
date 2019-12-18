@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-11-21/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2019-12-18/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple-non-classified
@@ -5092,7 +5092,6 @@ name: epithelial development variant
 def: "Any variation in the progression of the epithelia over time, from its formation to its mature state compared to control. This process involves autonomously generated changes in epidermal cell shape and position, and interactions with internal tissues, including the developing nervous system and body wall muscles to affect epidermal enclosure, cell intercalation, and epidermal elongation." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "epidermal morphogenesis variant" RELATED []
 synonym: "epithelial development abnormal" NARROW []
-synonym: "hypodermal development abnormal" RELATED []
 is_a: WBPhenotype:0000619 ! epithelial system development variant
 
 [Term]
@@ -5357,7 +5356,7 @@ is_a: WBPhenotype:0000734 ! hypodermal cell physiology variant
 id: WBPhenotype:0000736
 name: autophagy variant
 def: "Animals exhibit variations in the process by which their cells digest parts of their own cytoplasm, compared to control." [GO:0006914, WB:WBPerson712]
-synonym: "autophagy abnormal" RELATED []
+synonym: "autophagy abnormal" EXACT []
 is_a: WBPhenotype:0000585 ! cell homeostasis metabolism variant
 
 [Term]
@@ -11886,8 +11885,8 @@ id: WBPhenotype:0001643
 name: excess hypodermal cells
 def: "Embryos generate an excess number of hypodermal cells compared to control." [WB:WBPerson2021]
 synonym: "Skn" BROAD []
-is_a: WBPhenotype:0000701 ! epithelial development variant
 is_a: WBPhenotype:0002175 ! cell number increased
+is_a: WBPhenotype:0002569 ! hypodermis development variant
 
 [Term]
 id: WBPhenotype:0001644
@@ -13574,8 +13573,8 @@ is_a: WBPhenotype:0001129 ! cleavage furrow defective early emb
 id: WBPhenotype:0001887
 name: excess seam cells
 def: "Animals execute supernumerary cell divisions during the development of the lateral, alae-producing epithelial cells, resulting in a larger number of these cells than control animals." [WB:WBPaper00032974, WB:WBPerson2987]
-is_a: WBPhenotype:0000701 ! epithelial development variant
 is_a: WBPhenotype:0002175 ! cell number increased
+is_a: WBPhenotype:0002569 ! hypodermis development variant
 
 [Term]
 id: WBPhenotype:0001888
@@ -13697,13 +13696,13 @@ is_a: WBPhenotype:0000640 ! egg laying variant
 id: WBPhenotype:0001906
 name: hypodermal cell elongation defective
 def: "During epidermal morphogenesis, hypodermal cells do not properly undergo the characteristic cell shape changes necessary for the embryo to elongate." [WB:WBPaper00003991, WB:WBPerson712]
-is_a: WBPhenotype:0000701 ! epithelial development variant
+is_a: WBPhenotype:0002569 ! hypodermis development variant
 
 [Term]
 id: WBPhenotype:0001907
 name: dorsal intercalation defective
 def: "Animals exhibit defects in the generation of the dorsal epithelial sheet, which entails distinct cell shape changes and movements to affect the interdigitation of two rows of dorsal cells resulting in a single row of cells across the dorsal midline." [WB:WBPaper00003991, WB:WBPerson712]
-is_a: WBPhenotype:0000701 ! epithelial development variant
+is_a: WBPhenotype:0002569 ! hypodermis development variant
 
 [Term]
 id: WBPhenotype:0001908
@@ -13810,8 +13809,8 @@ is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 id: WBPhenotype:0001923
 name: fewer seam cells
 def: "The population of the lateral, alae-producing epithelial cells (seam cells) is reduced compared to control animals." [WB:WBPaper00034768]
-is_a: WBPhenotype:0000701 ! epithelial development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002569 ! hypodermis development variant
 
 [Term]
 id: WBPhenotype:0001924
@@ -17880,6 +17879,40 @@ def: "Animals exhibit variations in their recalled and repeated responses to sti
 synonym: "long-term associative memory abnormal" EXACT []
 synonym: "long-term associative memory variant" EXACT []
 is_a: WBPhenotype:0002564 ! associative memory phenotype
+
+[Term]
+id: WBPhenotype:0002569
+name: hypodermis development variant
+def: "Any variation in the progression of the hypodermis over time, from its formation to its mature state compared to control." [WB:WBPerson2987]
+synonym: "hypodermal development abnormal" EXACT []
+synonym: "hypodermal development variant" EXACT []
+synonym: "hypodermis development abnormal" EXACT []
+is_a: WBPhenotype:0000701 ! epithelial development variant
+
+[Term]
+id: WBPhenotype:0002570
+name: embryonic arrest during gastrulation
+def: "Cessation of development during the gastrulation stage of embryonic development. In C. elegans, gastrulation occurs 100-290 minutes after first cleavage at 20 degrees Centigrade when the embryo develops from 28 cells to 421 cells (during the proliferating embryo life stage)." [WB:WBPerson2987, WB:WBPerson6609]
+is_a: WBPhenotype:0000867 ! embryonic arrest
+
+[Term]
+id: WBPhenotype:0002571
+name: anterior enclosure defective
+def: "Embryos exhibit a failure to enclose the anterior embryo region with hypodermis during the comma to early elongation stage of embryonic development." [WB:WBPerson2987, WB:WBPerson6609]
+is_a: WBPhenotype:0001566 ! ventral enclosure variant
+
+[Term]
+id: WBPhenotype:0002572
+name: mitophagy abnormal
+def: "Animals exhibit variations in mitophagy, the selective autophagy process in which a mitochondrion is degraded by macroautophagy, compared to control." [WB:WBPaper00056229, WB:WBPerson27070, WB:WBPerson2987]
+synonym: "mitophagy variant" EXACT []
+is_a: WBPhenotype:0000736 ! autophagy variant
+
+[Term]
+id: WBPhenotype:0002573
+name: mitophagy reduced
+def: "Animals exhibit reduced levels of mitophagy, the selective autophagy process in which a mitochondrion is degraded by macroautophagy, compared to control." [WB:WBPaper00056229, WB:WBPerson27070, WB:WBPerson2987]
+is_a: WBPhenotype:0002572 ! mitophagy abnormal
 
 [Term]
 id: WBPhenotype:0004001
