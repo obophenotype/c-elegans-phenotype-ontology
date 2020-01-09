@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-12-18/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2020-01-09/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple-non-classified
@@ -1012,13 +1012,13 @@ is_a: WBPhenotype:0000123 ! enzyme expression level reduced
 id: WBPhenotype:0000134
 name: gene expression level reduced
 def: "Animals exhibit a decrease in the intensity of expression of a gene product compared to that observed in control animals." [WB:WBPerson2021]
-is_a: WBPhenotype:0000717 ! gene expression variant
+is_a: WBPhenotype:0002575 ! gene expression level abnormal
 
 [Term]
 id: WBPhenotype:0000135
 name: gene expression level high
 def: "Animals exhibit an increase in the intensity of expression of a gene product compared to that observed in control animals." [WB:WBPerson2021]
-is_a: WBPhenotype:0000717 ! gene expression variant
+is_a: WBPhenotype:0002575 ! gene expression level abnormal
 
 [Term]
 id: WBPhenotype:0000136
@@ -5210,7 +5210,7 @@ is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 [Term]
 id: WBPhenotype:0000717
 name: gene expression variant
-def: "Variations in the processes that convert a gene's coding sequence into a mature gene product or products (proteins or RNA), compared to control." [GO:0010467, WB:WBPerson2021]
+def: "Variations in the processes that convert a gene's sequence into a mature gene product or products (proteins or RNA), compared to control." [GO:0010467, WB:WBPerson2021]
 subset: phenotype_slim_wb
 synonym: "gene expression abnormal" NARROW []
 is_a: WBPhenotype:0000027 ! organism metabolism processing variant
@@ -7014,6 +7014,7 @@ id: WBPhenotype:0000961
 name: pattern of transgene expression variant
 def: "Any variation in the cellular or subcellular pattern of expression of a gene product produced by exogenous DNA that has been introduced into the organism compared to its expression in control animals." [WB:WBPerson557]
 synonym: "pattern of transgene expression abnormal" NARROW []
+is_a: WBPhenotype:0000111 ! pattern of gene expression variant
 is_a: WBPhenotype:0000306 ! transgene expression variant
 
 [Term]
@@ -7022,6 +7023,7 @@ name: level of transgene expression variant
 def: "Any variation in the measured expression of a gene product produced by exogenous DNA that has been introduced into the organism compared to its expression in control animals." [WB:WBPerson557]
 synonym: "level of transgene expression abnormal" NARROW []
 is_a: WBPhenotype:0000306 ! transgene expression variant
+is_a: WBPhenotype:0002575 ! gene expression level abnormal
 
 [Term]
 id: WBPhenotype:0000963
@@ -9581,7 +9583,7 @@ id: WBPhenotype:0001316
 name: evoked postsynaptic current variant
 def: "Variations in the synaptic currents that are elicited by firing an action potential in a population of axons, compared to control." [pmid:14735116, WB:WBPerson2021]
 synonym: "evoked postsynaptic current abnormal" NARROW []
-is_a: WBPhenotype:0001315 ! electrophysiology phenotype
+is_a: WBPhenotype:0002014 ! current measurement variant
 
 [Term]
 id: WBPhenotype:0001317
@@ -9594,7 +9596,7 @@ id: WBPhenotype:0001318
 name: endogenous synaptic events variant
 def: "Any variation in the currents observed in the absence of presynaptic action potentials and that are elicited by fusion of a single endogenous vesicle of transmitter compared to control." [pmid:14735116, WB:WBPerson2021]
 synonym: "endogenous synaptic events abnormal" NARROW []
-is_a: WBPhenotype:0001315 ! electrophysiology phenotype
+is_a: WBPhenotype:0002014 ! current measurement variant
 
 [Term]
 id: WBPhenotype:0001319
@@ -17913,6 +17915,80 @@ id: WBPhenotype:0002573
 name: mitophagy reduced
 def: "Animals exhibit reduced levels of mitophagy, the selective autophagy process in which a mitochondrion is degraded by macroautophagy, compared to control." [WB:WBPaper00056229, WB:WBPerson27070, WB:WBPerson2987]
 is_a: WBPhenotype:0002572 ! mitophagy abnormal
+
+[Term]
+id: WBPhenotype:0002574
+name: gene expression level variation abnormal
+def: "Animals exhibit abnormal amounts of variation in gene expression level between individual animals, compared to control." [WB:WBPaper00050756, WB:WBPerson2987, WB:WBPerson5662]
+is_a: WBPhenotype:0000717 ! gene expression variant
+
+[Term]
+id: WBPhenotype:0002575
+name: gene expression level abnormal
+def: "Animals exhibit abnormal gene expression levels, compared to control." [WB:WBPerson2987]
+is_a: WBPhenotype:0000717 ! gene expression variant
+
+[Term]
+id: WBPhenotype:0002576
+name: gene expression level variation reduced
+def: "Animals exhibit reduced amounts of variation in gene expression level between individual animals, compared to control." [WB:WBPaper00050756, WB:WBPerson2987, WB:WBPerson5662]
+is_a: WBPhenotype:0002574 ! gene expression level variation abnormal
+
+[Term]
+id: WBPhenotype:0002577
+name: basement membrane composition phenotype
+def: "Animals exhibit variations in the composition of basement membranes, compared to control animals." [WB:WBPaper00057139, WB:WBPerson2987, WB:WBPerson32869]
+synonym: "basement membrane composition abnormal" EXACT []
+synonym: "basement membrane composition variant" EXACT []
+is_a: WBPhenotype:0001210 ! pericellular component physiology phenotype
+
+[Term]
+id: WBPhenotype:0002578
+name: basement membrane laminin level phenotype
+def: "Animals exhibit variations in the amount of laminin in basement membranes, compared to control animals." [WB:WBPaper00057139, WB:WBPerson2987, WB:WBPerson32869]
+synonym: "basement membrane laminin level abnormal" EXACT []
+synonym: "basement membrane laminin level variant" EXACT []
+is_a: WBPhenotype:0002577 ! basement membrane composition phenotype
+
+[Term]
+id: WBPhenotype:0002579
+name: basement membrane type IV collagen level phenotype
+def: "Animals exhibit variations in the amount of type IV collagen in basement membranes, compared to control animals." [WB:WBPaper00057139, WB:WBPerson2987, WB:WBPerson32869]
+synonym: "basement membrane type IV collagen level abnormal" EXACT []
+synonym: "basement membrane type IV collagen level variant" EXACT []
+is_a: WBPhenotype:0002577 ! basement membrane composition phenotype
+
+[Term]
+id: WBPhenotype:0002580
+name: cell position variability phenotype
+def: "One or more cells exhibit changes in the variability of cell position, compared to controls." [WB:WBPaper00056010, WB:WBPerson13958, WB:WBPerson2987]
+synonym: "cell position variability abnormal" EXACT []
+synonym: "cell position variability variant" EXACT []
+is_a: WBPhenotype:0000533 ! cell morphology variant
+
+[Term]
+id: WBPhenotype:0002581
+name: cell position variability increased
+def: "One or more cells exhibit increases in the variability of cell position, compared to controls." [WB:WBPaper00056010, WB:WBPerson13958, WB:WBPerson2987]
+is_a: WBPhenotype:0002580 ! cell position variability phenotype
+
+[Term]
+id: WBPhenotype:0002582
+name: miniature inhibitory post-synaptic current phenotype
+def: "Animals exhibit variations in miniature inhibitory post-synaptic currents (mIPSC), compared to controls." [WB:WBPaper00048837, WB:WBPerson18607, WB:WBPerson2987]
+synonym: "miniature inhibitory post-synaptic current abnormal" EXACT []
+synonym: "miniature inhibitory post-synaptic current variant" EXACT []
+synonym: "mIPSC abnormal" EXACT []
+synonym: "mIPSC phenotype" EXACT []
+synonym: "mIPSC variant" EXACT []
+is_a: WBPhenotype:0002014 ! current measurement variant
+
+[Term]
+id: WBPhenotype:0002583
+name: miniature inhibitory post-synaptic current amplitude increased
+def: "Animals exhibit increased amplitude of miniature inhibitory post-synaptic currents (mIPSC), compared to controls." [WB:WBPaper00048837, WB:WBPerson18607, WB:WBPerson2987]
+synonym: "mIPSC amplitude increased" EXACT []
+is_a: WBPhenotype:0002582 ! miniature inhibitory post-synaptic current phenotype
 
 [Term]
 id: WBPhenotype:0004001
