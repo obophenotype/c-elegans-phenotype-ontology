@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2019-12-18/imports/go_import.owl
+data-version: wbphenotype/releases/2020-01-09/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
 subsetdef: goslim_aspergillus "Aspergillus GO slim"
 subsetdef: goslim_candida "Candida GO slim"
 subsetdef: goslim_chembl "ChEMBL protein targets summary"
-subsetdef: goslim_drosophila ""
+subsetdef: goslim_drosophila "Drosophila GO slim"
 subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
 subsetdef: goslim_generic "Generic GO slim"
 subsetdef: goslim_metagenomics "Metagenomics GO slim"
@@ -10134,8 +10134,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of oxidative stress, a state often resulting from exposure to high levels of reactive oxygen species, e.g. superoxide anions, hydrogen peroxide (H2O2), and hydroxyl radicals." [GOC:mah]
 synonym: "adaptive response to oxidative stress" NARROW [GOC:add, GOC:vk]
 is_a: GO:0006979 ! response to oxidative stress
-is_a: GO:0033554 ! cellular response to stress
-is_a: GO:0070887 ! cellular response to chemical stimulus
+is_a: GO:0062197 ! cellular response to chemical stress
 
 [Term]
 id: GO:0034606
@@ -17191,11 +17190,6 @@ id: GO:0051271
 name: negative regulation of cellular component movement
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the movement of a cellular component." [GOC:ai, GOC:dph, GOC:jl]
-synonym: "down regulation of cell motility" EXACT []
-synonym: "down-regulation of cell motility" EXACT []
-synonym: "downregulation of cell motility" EXACT []
-synonym: "inhibition of cell motility" NARROW []
-synonym: "negative regulation of cell movement" RELATED []
 synonym: "negative regulation of cellular component motion" EXACT [GOC:mah]
 is_a: GO:0048523 ! negative regulation of cellular process
 is_a: GO:0051270 ! regulation of cellular component movement
@@ -17208,13 +17202,7 @@ id: GO:0051272
 name: positive regulation of cellular component movement
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the movement of a cellular component." [GOC:ai, GOC:dph, GOC:jl]
-synonym: "activation of cell motility" NARROW []
-synonym: "positive regulation of cell movement" RELATED []
 synonym: "positive regulation of cellular component motion" EXACT [GOC:mah]
-synonym: "stimulation of cell motility" NARROW []
-synonym: "up regulation of cell motility" EXACT []
-synonym: "up-regulation of cell motility" EXACT []
-synonym: "upregulation of cell motility" EXACT []
 is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051270 ! regulation of cellular component movement
 intersection_of: GO:0008150 ! biological_process
@@ -19428,6 +19416,16 @@ created_by: dph
 creation_date: 2019-05-30T16:45:04Z
 
 [Term]
+id: GO:0062197
+name: cellular response to chemical stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus indicating the organism is under stress." [PMID:26653712]
+is_a: GO:0033554 ! cellular response to stress
+is_a: GO:0070887 ! cellular response to chemical stimulus
+created_by: dph
+creation_date: 2019-12-10T14:42:03Z
+
+[Term]
 id: GO:0065003
 name: protein-containing complex assembly
 namespace: biological_process
@@ -19897,7 +19895,7 @@ def: "Any process that results in a change in state or activity of a cell (in te
 synonym: "cellular osmotic response" EXACT [GOC:mah]
 synonym: "cellular osmotic stress response" EXACT [GOC:mah]
 is_a: GO:0006970 ! response to osmotic stress
-is_a: GO:0033554 ! cellular response to stress
+is_a: GO:0062197 ! cellular response to chemical stress
 is_a: GO:0071214 ! cellular response to abiotic stimulus
 created_by: midori
 creation_date: 2009-12-18T11:45:33Z
