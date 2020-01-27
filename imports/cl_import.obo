@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-01-09/imports/cl_import.owl
+data-version: wbphenotype/releases/2020-01-27/imports/cl_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -381,8 +381,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -34530,7 +34530,7 @@ name: actively participates in
 def: "x actively participates in y if and only if x participates in y and x realizes some active role" []
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 inverse_of: RO:0002218 ! obsolete has active participant
 
 [Typedef]
@@ -36355,7 +36355,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: involved_in
