@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-01-09/imports/wbbt_import.owl
+data-version: wbphenotype/releases/2020-01-27/imports/wbbt_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: wbphenotype/imports/wbbt_import
@@ -2584,6 +2584,21 @@ is_a: RO:0002170 ! connected to
 is_a: RO:0002177 ! attached to part of
 
 [Typedef]
+id: RO:0002375
+name: in branching relationship with
+def: "A relationship that holds between two material entities in a system of connected structures, where the branching relationship holds based on properties of the connecting network." []
+property_value: http://xmlns.com/foaf/0.1/page https://github.com/obophenotype/uberon/issues/170 xsd:anyURI
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving branching relationships" xsd:string
+property_value: IAO:0000232 "This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (plant branches and roots, leaf veins, animal veins, arteries, nerves)" xsd:string
+property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/branching_part_of.png
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: part_of ! part_of
+is_a: RO:0002323 ! mereotopologically related to
+
+[Typedef]
 id: RO:0002384
 name: has developmental potential involving
 def: "x has developmental potential involving y iff x is capable of a developmental process with output y. y may be the successor of x, or may be a different structure in the vicinity (as for example in the case of developmental induction)." []
@@ -2597,14 +2612,6 @@ is_a: RO:0002324 ! developmentally related to
 id: RO:0002385
 name: has potential to developmentally contribute to
 def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-is_a: RO:0002384 ! has developmental potential involving
-
-[Typedef]
-id: RO:0002386
-name: has potential to developmentally induce
-def: "x has potential to developmentally induce y iff x developmentally induces y or x is capable of developmentally inducing y" []
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: RO:0002384 ! has developmental potential involving
