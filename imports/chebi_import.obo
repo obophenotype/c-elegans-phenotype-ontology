@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-01-27/imports/chebi_import.owl
+data-version: wbphenotype/releases/2020-02-14/imports/chebi_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 2_STAR "Annotated by 3rd party"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
@@ -339,6 +339,26 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "CNO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "42.017" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "41.99799" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(*)(=N[O-])*" xsd:string
+
+[Term]
+id: CHEBI:145798
+name: ouabain(1-)
+namespace: chebi_ontology
+def: "Conjugate base of ouabain; major species at pH 7.3." []
+subset: 2_STAR
+synonym: "ouabain" RELATED [UniProt]
+is_a: CHEBI:19129 ! 11alpha-hydroxy steroid
+is_a: CHEBI:36862 ! 14beta-hydroxy steroid
+is_a: CHEBI:38092 ! cardenolide glycoside
+is_a: CHEBI:38195 ! 5beta-hydroxy steroid
+relationship: is_conjugate_base_of CHEBI:472805 ! ouabain
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C29H43O12" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C29H43O12/c1-13-22(34)23(35)24(36)25(40-13)41-15-8-19(32)28(12-30)21-17(3-5-27(28,37)9-15)29(38)6-4-16(14-7-20(33)39-11-14)26(29,2)10-18(21)31/h7,11,13,15-19,21-25,30-32,34-38H,3-6,8-10,12H2,1-2H3/q-1/t13-,15-,16+,17+,18+,19+,21+,22-,23+,24+,25-,26+,27-,28+,29-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MPLJNVZJPLASQC-HBYQJFLCSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "583.652" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "583.27600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O1[C@H]([C@@H]([C@H]([C@H]([C@@H]1O[C@H]2C[C@H]([C@]3([C@@](C2)(CC[C@]4([C@]5(CC[C@@H]([C@]5(C[C@H]([C@]34[H])O)C)C=6[CH-]OC(C6)=O)O)[H])O)CO)O)O)O)O)C" xsd:string
 
 [Term]
 id: CHEBI:15138
@@ -2206,7 +2226,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H17N3O6S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H17N3O6S/c11-5(10(18)19)1-2-7(14)13-6(4-20)9(17)12-3-8(15)16/h5-6,20H,1-4,11H2,(H,12,17)(H,13,14)(H,15,16)(H,18,19)/t5-,6-/m0/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSXRVCMGQZWBV-WDSKDSINSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "307.325" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "307.320" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "307.08381" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "N[C@@H](CCC(=O)N[C@@H](CS)C(=O)NCC(=O)O)C(=O)O" xsd:string
 
@@ -4354,8 +4374,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -13876,6 +13896,7 @@ name: anti-arrhythmia drug
 namespace: chebi_ontology
 def: "A drug used for the treatment or prevention of cardiac arrhythmias. Anti-arrhythmia drugs may affect the polarisation-repolarisation phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibres." []
 subset: 3_STAR
+synonym: "anti-arrhythmia agent" RELATED [ChEBI]
 synonym: "antiarrhythmic agent" RELATED [ChEBI]
 is_a: CHEBI:35554 ! cardiovascular drug
 
@@ -15293,6 +15314,8 @@ synonym: "D-ribose" RELATED [UniProt]
 synonym: "ribose" RELATED [ChemIDplus]
 xref: Beilstein:1904878 "Beilstein"
 xref: CAS:50-69-1 "KEGG COMPOUND"
+xref: CAS:613-83-2 "ChemIDplus"
+xref: GlyTouCan:G31080DL
 xref: Gmelin:364108 "Gmelin"
 xref: KEGG:C00121
 xref: Patent:US2152662
@@ -15410,6 +15433,7 @@ relationship: has_role CHEBI:63510 ! EC 3.6.3.9 (Na(+)/K(+)-transporting ATPase)
 relationship: has_role CHEBI:76924 ! plant metabolite
 relationship: has_role CHEBI:77023 ! EC 2.3.3.1 [citrate (Si)-synthase] inhibitor
 relationship: has_role CHEBI:77024 ! EC 3.1.3.41 (4-nitrophenylphosphatase) inhibitor
+relationship: is_conjugate_acid_of CHEBI:145798 ! ouabain(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C29H44O12" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C29H44O12/c1-13-22(34)23(35)24(36)25(40-13)41-15-8-19(32)28(12-30)21-17(3-5-27(28,37)9-15)29(38)6-4-16(14-7-20(33)39-11-14)26(29,2)10-18(21)31/h7,13,15-19,21-25,30-32,34-38H,3-6,8-12H2,1-2H3/t13-,15-,16+,17+,18+,19+,21+,22-,23+,24+,25-,26+,27-,28+,29-/m0/s1" xsd:string
@@ -17695,7 +17719,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C10H16N3O6S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C10H17N3O6S/c11-5(10(18)19)1-2-7(14)13-6(4-20)9(17)12-3-8(15)16/h5-6,20H,1-4,11H2,(H,12,17)(H,13,14)(H,15,16)(H,18,19)/p-1/t5-,6-/m0/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSXRVCMGQZWBV-WDSKDSINSA-M" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "306.317" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "306.310" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "306.07653" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[NH3+][C@@H](CCC(=O)N[C@@H](CS)C(=O)NCC(=O)[O-])C(=O)[O-]" xsd:string
 

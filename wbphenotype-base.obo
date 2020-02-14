@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-01-27/wbphenotype-base.owl
+data-version: wbphenotype/releases/2020-02-14/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -6805,16 +6805,16 @@ is_a: WBPhenotype:0000531 ! organism development variant
 
 [Term]
 id: WBPhenotype:0000931
-name: bis phenol A response variant
-def: "Animals exhibit variations in their response to bis phenol A compared to that observed in control animals." [WB:WBPerson557]
-synonym: "bis phenol A response abnormal" NARROW []
+name: bisphenol A response variant
+def: "Animals exhibit variations in their response to bisphenol A compared to that observed in control animals." [WB:WBPerson557]
+synonym: "bisphenol A response abnormal" NARROW []
 is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0000932
-name: bis phenol A hypersensitive
-def: "Animals respond to bis phenol A at a lower concentration or a shorter exposure time compared to control animals." [WB:WBPerson557]
-is_a: WBPhenotype:0000931 ! bis phenol A response variant
+name: bisphenol A hypersensitive
+def: "Animals respond to bisphenol A at a lower concentration or a shorter exposure time compared to control animals." [WB:WBPerson557]
+is_a: WBPhenotype:0000931 ! bisphenol A response variant
 
 [Term]
 id: WBPhenotype:0000933
@@ -17992,6 +17992,12 @@ name: miniature inhibitory post-synaptic current amplitude increased
 def: "Animals exhibit increased amplitude of miniature inhibitory post-synaptic currents (mIPSC), compared to controls." [WB:WBPaper00048837, WB:WBPerson18607, WB:WBPerson2987]
 synonym: "mIPSC amplitude increased" EXACT []
 is_a: WBPhenotype:0002582 ! miniature inhibitory post-synaptic current phenotype
+
+[Term]
+id: WBPhenotype:0002584
+name: bisphenol A resistant
+def: "Animals survive longer, or do not respond to the same degree as control animals under similar conditions of bisphenol A exposure." [WB:WBPaper00024241, WB:WBPerson557]
+is_a: WBPhenotype:0000931 ! bisphenol A response variant
 
 [Term]
 id: WBPhenotype:0004001
