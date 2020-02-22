@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Makefile for wbphenotype
 # Generated using ontology-starter-kit
-# ODK Version: v1.2.19
+# ODK Version: v1.2.22
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -18,7 +18,6 @@ SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 CATALOG=                    catalog-v001.xml
 ROBOT=                      robot --catalog $(CATALOG)
 RELEASEDIR=                 ../..
-PATTERNDIR=                 ../patterns
 REPORTDIR=                  reports
 TMPDIR=                     tmp
 SPARQLDIR =                 ../sparql
@@ -26,10 +25,11 @@ REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
-ODK_VERSION =               v1.2.19
+ODK_VERSION =               v1.2.22
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
+PATTERNDIR=                 ../patterns
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
 PATTERN_TESTER=              simple_pattern_tester.py
 DOSDPT=                      dosdp-tools
@@ -99,20 +99,6 @@ SUBSET_ROOTS = $(patsubst %, subsets/%, $(SUBSETS))
 SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n).$(f)))
 
 all_subsets: $(SUBSET_FILES)
-
-## -- dosdp pattern targets --
-##
-
-
-PATTERNS = 
-
-PATTERN_ROOTS = $(patsubst %, $(PATTERNDIR)/%, $(PATTERNS))
-PATTERN_FILES = $(foreach n,$(PATTERN_ROOTS), $(n).owl)
-
-all_patterns: $(PATTERN_FILES)
-
-## -- dosdp pattern targets --
-##
 
 OBO_REPORT = $(SRC)-obo-report
 REPORTS = $(OBO_REPORT)
@@ -213,12 +199,13 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 
 
 
-
 # base: OTHER sources of interest, such as definitions owl
 $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) remove --input $< --select imports --trim false \
 		merge $(patsubst %, -i %, $(OTHER_SRC)) \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+		annotate --annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
+		--ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
+		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
@@ -252,6 +239,7 @@ $(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(SIMPLESEED)
 		relax \
 		filter --term-file $(SIMPLESEED) --select "annotations ontology anonymous self" --trim true --signature true \
 		reduce -r ELK \
+		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 # foo-simple-non-classified (edit->relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest") <- aka the HPO use case, no reason.
 # Should this be the non-classified ontology with the drop foreign axiom filter?
@@ -487,11 +475,12 @@ pattern_clean:
 pattern_schema_checks: update_patterns
 	@if [ $(PAT) = true ]; then $(PATTERN_TESTER) $(PATTERNDIR)/dosdp-patterns/; fi
 
-
 #This command is a workaround for the absence of -N and -i in wget of alpine (the one ODK depend on now). It downloads all patterns specified in external.txt
 update_patterns: .FORCE
-	wget -i $(PATTERNDIR)/dosdp-patterns/external.txt --backups=1 -P $(PATTERNDIR)/dosdp-patterns
-	rm $(PATTERNDIR)/dosdp-patterns/*.yaml.1
+	@if [ $(PAT) = true ]; then rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1 || true; fi
+	@if [ $(PAT) = true ]; then wget -i $(PATTERNDIR)/dosdp-patterns/external.txt --backups=1 -P $(PATTERNDIR)/dosdp-patterns; fi
+	@if [ $(PAT) = true ]; then rm -f $(PATTERNDIR)/dosdp-patterns/*.yaml.1 || true; fi
+
 
 $(PATTERNDIR)/pattern.owl: pattern_schema_checks update_patterns
 	@if [ $(PAT) = true ]; then $(DOSDPT) prototype --obo-prefixes --template=$(PATTERNDIR)/dosdp-patterns --outfile=$@; fi
@@ -504,11 +493,12 @@ pattern_term_lists_default := $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.txt
 
 
 # Generating the individual pattern modules and merging them into definitions.owl
-$(PATTERNDIR)/definitions.owl: prepare_patterns update_patterns $(individual_patterns_default)  
+$(PATTERNDIR)/definitions.owl: prepare_patterns update_patterns dosdp_patterns_default  
 	@if [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $(individual_patterns_default))   annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl -o definitions.ofn && mv definitions.ofn $@; fi
 
-$(PATTERNDIR)/data/default/%.ofn: $(PATTERNDIR)/data/default/%.tsv $(PATTERNDIR)/dosdp-patterns/%.yaml $(SRC) all_imports .FORCE
-	@if [ $(PAT) = true ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@; fi
+individual_patterns_names_default := $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
+dosdp_patterns_default: $(SRC) all_imports .FORCE
+	@if [ $(PAT) = true ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(individual_patterns_names_default)" --ontology=$< --obo-prefixes=true --restrict-axioms-to=logical --outfile=$(PATTERNDIR)/data/default; fi
 
 
 
@@ -526,8 +516,8 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 
 .PHONY: prepare_patterns
 prepare_patterns:
-	touch $(pattern_term_lists_default)   &&\
-  touch $(individual_patterns_default)  
+	@if [ $(PAT) = true ]; then touch $(pattern_term_lists_default)  ; fi
+	@if [ $(PAT) = true ]; then touch $(individual_patterns_default)  ; fi
 
 
 
@@ -537,5 +527,8 @@ prepare_patterns:
 
 
 
+
+update_repo:
+	sh ../scripts/update_repo.sh
 
 include wbphenotype.Makefile
