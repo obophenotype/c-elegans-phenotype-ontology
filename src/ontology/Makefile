@@ -35,7 +35,11 @@ PATTERN_TESTER=              simple_pattern_tester.py
 DOSDPT=                      dosdp-tools
 PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern.owl
 
-
+# seed.txt contains all referenced entities
+IMPORTSEED=seed.txt
+SRCMERGED=tmp/merged-$(SRC)
+SIMPLESEED=simple_seed.txt
+PRESEED=tmp/pre_seed.txt
 
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
@@ -75,17 +79,11 @@ all_main: $(MAIN_FILES)
 IMPORTS =  go wbbt wbls ro chebi pato cl iao bfo
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
-IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
+IMPORT_FILES = $(IMPORT_OWL_FILES)
+
 
 all_imports: $(IMPORT_FILES)
-
-all_imports_owl: $(foreach n,$(IMPORT_ROOTS), $(n).owl)
-
-all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
-
-all_imports_json: $(foreach n,$(IMPORT_ROOTS), $(n).json)
-
 
 ## -- subset targets --
 ##
@@ -127,7 +125,6 @@ show_assets:
 
 KEEPRELATIONS=keeprelations.txt
 ONTOLOGYTERMS=ontologyterms.txt
-SIMPLESEED=simple_seed.txt
 
 # This should be executed by the release manager whenever time comes to make a release.
 # It will ensure that all assets/files are fresh, and will copy to release folder
@@ -135,6 +132,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+  rm -f $(MAIN_FILES) $(SRCMERGED) &&\
   echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 prepare_initial_release: prepare_release
@@ -188,6 +186,7 @@ OTHER_SRC = $(PATTERNDIR)/definitions.owl  components/wbphenotype-equivalent-axi
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
+	touch $(ONTOLOGYTERMS) && \
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/wbphenotype_terms.sparql $@
 
 
@@ -219,18 +218,6 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 # drop every axiom: filter --term-file keep_terms.txt --trim true
 #	remove --select imports --trim false \
 
-SRCMERGED=merged-$(SRC)
-
-$(SRCMERGED): $(SRC)
-	$(ROBOT) remove --input $< --select imports --trim true \
-		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
-
-$(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
-	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
-	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
-	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
-
 $(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(SIMPLESEED)
 	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
 		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
@@ -258,18 +245,30 @@ $(ONT)-simple-non-classified.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
 
-# seed.txt contains all referenced entities
+$(SRCMERGED): $(SRC)
+	$(ROBOT) remove --input $< --select imports --trim true \
+		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
+
+$(PRESEED): $(SRCMERGED)
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+	cat $@.tmp | sort | uniq >  $@
+
+$(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
+	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
+	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
+	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
 
 
-seed.txt: $(SRC) prepare_patterns $(PATTERNDIR)/all_pattern_terms.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
-	cat $@.tmp $(PATTERNDIR)/all_pattern_terms.txt | sort | uniq >  $@; fi
+# Ugly hack which should be replaced by the dynamic import revision pipeline
+$(IMPORTSEED): $(PRESEED) prepare_patterns $(PATTERNDIR)/all_pattern_terms.txt 
+	@if [ $(IMP) = true ]; then cat $(PRESEED) $(PATTERNDIR)/all_pattern_terms.txt | sort | uniq > $@; fi
 
 
 # Generate terms.txt for each import.  (Assume OBO-style Possibly hacky step?)
 # Should be able to drop this if robot can just take a big messy list of terms as input.
 
-imports/%_terms_combined.txt: seed.txt imports/%_terms.txt
+imports/%_terms_combined.txt: $(IMPORTSEED) imports/%_terms.txt
 	@if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
 
 # -- Generate Import Modules --
@@ -297,7 +296,6 @@ imports/%_import.json: imports/%_import.owl
 components/%: .FORCE
 	touch $@
 .PRECIOUS: components/%
-
 
 
 
@@ -456,9 +454,6 @@ all_reports_onestep: $(SRC)
 IM=build-$(ONT)
 build-docker:
 	docker build -t $(ONT) .
-
-
-
 # ----------------------------------------
 # Patterns (experimental)
 # ----------------------------------------
@@ -498,7 +493,7 @@ $(PATTERNDIR)/definitions.owl: prepare_patterns update_patterns dosdp_patterns_d
 
 individual_patterns_names_default := $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
 dosdp_patterns_default: $(SRC) all_imports .FORCE
-	@if [ $(PAT) = true ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(individual_patterns_names_default)" --ontology=$< --obo-prefixes=true --restrict-axioms-to=logical --outfile=$(PATTERNDIR)/data/default; fi
+	@if [ $(PAT) = true ] && [ "${individual_patterns_names_default}" ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(individual_patterns_names_default)" --ontology=$< --obo-prefixes=true --restrict-axioms-to=logical --outfile=$(PATTERNDIR)/data/default; fi
 
 
 
@@ -516,11 +511,8 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 
 .PHONY: prepare_patterns
 prepare_patterns:
-	@if [ $(PAT) = true ]; then touch $(pattern_term_lists_default)  ; fi
-	@if [ $(PAT) = true ]; then touch $(individual_patterns_default)  ; fi
-
-
-
+	@if [ $(PAT) = true ]; then touch $(PATTERNDIR)/data $(pattern_term_lists_default)  ; fi
+	@if [ $(PAT) = true ]; then touch $(PATTERNDIR)/data $(individual_patterns_default)  ; fi
 
 
 
