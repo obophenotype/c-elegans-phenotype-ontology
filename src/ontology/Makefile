@@ -171,7 +171,7 @@ $(ONT).owl: $(ONT)-full.owl
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT).json: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 # ----------------------------------------
 # Initiating Step: Reason over source
@@ -246,15 +246,15 @@ $(ONT)-simple-non-classified.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
 # These live in the imports/ folder
 
 $(SRCMERGED): $(SRC)
-	$(ROBOT) remove --input $< --select imports --trim true \
+	$(ROBOT) remove --input $< --select imports --trim false \
 		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
 
 $(PRESEED): $(SRCMERGED)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 
 $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
+	$(ROBOT) query -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
 	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
