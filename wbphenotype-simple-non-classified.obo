@@ -1,9 +1,9 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-03-09/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2020-03-31/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple-non-classified
-property_value: http://purl.org/dc/elements/1.1/description "Ontology about C elegans phenotypes" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/ xsd:string
 property_value: IAO:0000700 WBPhenotype:0000886
@@ -14721,6 +14721,7 @@ id: WBPhenotype:0002065
 name: basement membrane remodeling variant
 def: "Animals display variations in the manner in which the basement membrane (a thin, dense, sheet-like structure built on a network of polymeric laminin and type IV collagen) is remodeled, compared to control animals." [WB:WBPaper00038447, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0000200 ! pericellular component development variant
+is_a: WBPhenotype:0002588 ! basement membrane phenotype
 
 [Term]
 id: WBPhenotype:0002066
@@ -17939,7 +17940,7 @@ name: basement membrane composition phenotype
 def: "Animals exhibit variations in the composition of basement membranes, compared to control animals." [WB:WBPaper00057139, WB:WBPerson2987, WB:WBPerson32869]
 synonym: "basement membrane composition abnormal" EXACT []
 synonym: "basement membrane composition variant" EXACT []
-is_a: WBPhenotype:0001210 ! pericellular component physiology phenotype
+is_a: WBPhenotype:0002588 ! basement membrane phenotype
 
 [Term]
 id: WBPhenotype:0002578
@@ -17994,6 +17995,31 @@ id: WBPhenotype:0002584
 name: bisphenol A resistant
 def: "Animals survive longer, or do not respond to the same degree as control animals under similar conditions of bisphenol A exposure." [WB:WBPaper00024241, WB:WBPerson557]
 is_a: WBPhenotype:0000931 ! bisphenol A response variant
+
+[Term]
+id: WBPhenotype:0002585
+name: predatory behavior abnormal
+def: "(Pristionchus pacificus) Animals exhibit abnormal predatory behavior, compared to controls." [WB:WBPaper00053031, WB:WBPerson2987, WB:WBPerson38478]
+is_a: WBPhenotype:0000525 ! organism behavior variant
+
+[Term]
+id: WBPhenotype:0002586
+name: reduced predatory feeding behavior
+def: "(Pristionchus pacificus) Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls." [WB:WBPaper00053031, WB:WBPerson2987, WB:WBPerson38478]
+is_a: WBPhenotype:0002585 ! predatory behavior abnormal
+
+[Term]
+id: WBPhenotype:0002587
+name: Pluronic gel burrowing impaired
+def: "Animals are impaired in their burrowing ability compared to control animals in a Pluronic gel-based burrowing assay." [WB:WBPaper00058750, WB:WBPerson2987, WB:WBPerson43910]
+is_a: WBPhenotype:0002559 ! burrowing abnormal
+
+[Term]
+id: WBPhenotype:0002588
+name: basement membrane phenotype
+def: "Animals exhibit variations or abnormalities in the structure, integrity, function, or quality of basement membranes, compared to controls." [WB:WBPaper00037647]
+synonym: "basement membrane abnormal" EXACT []
+is_a: WBPhenotype:0001210 ! pericellular component physiology phenotype
 
 [Term]
 id: WBPhenotype:0004001
