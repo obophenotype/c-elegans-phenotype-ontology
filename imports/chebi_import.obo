@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-02-14/imports/chebi_import.owl
+data-version: wbphenotype/releases/2020-04-06/imports/chebi_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 2_STAR "Annotated by 3rd party"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
@@ -155,13 +155,13 @@ is_a: CHEBI:33250 ! atom
 id: CHEBI:137982
 name: tertiary ammonium ion
 namespace: chebi_ontology
-def: "An organic cation obtained by protonation of any tertiary amine." []
+def: "An organic cation obtained by protonation of the amino group of any tertiary amino compound." []
 subset: 3_STAR
 synonym: "a tertiary amine" RELATED [UniProt]
 synonym: "tertiary amine(1+)" RELATED [ChEBI]
 synonym: "tertiary ammonium ions" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-relationship: is_conjugate_acid_of CHEBI:32876 ! tertiary amine
+relationship: is_conjugate_acid_of CHEBI:50996 ! tertiary amino compound
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HNR3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "15.015" xsd:string
@@ -359,6 +359,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MPLJNVZJPLASQC-HB
 property_value: http://purl.obolibrary.org/obo/chebi/mass "583.652" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "583.27600" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "O1[C@H]([C@@H]([C@H]([C@H]([C@@H]1O[C@H]2C[C@H]([C@]3([C@@](C2)(CC[C@]4([C@]5(CC[C@@H]([C@]5(C[C@H]([C@]34[H])O)C)C=6[CH-]OC(C6)=O)O)[H])O)CO)O)O)O)O)C" xsd:string
+
+[Term]
+id: CHEBI:146270
+name: oneirogen
+namespace: chebi_ontology
+def: "Any substance that produces or enhances dream-like states of consciousness." []
+subset: 3_STAR
+synonym: "oneirogens" RELATED [ChEBI]
+xref: Wikipedia:Oneirogen
+is_a: CHEBI:35471 ! psychotropic drug
 
 [Term]
 id: CHEBI:15138
@@ -4356,6 +4366,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CH2NO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.03272" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "44.01364" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*C(N)=O" xsd:string
 
 [Term]
 id: CHEBI:23014
@@ -4374,13 +4385,14 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "28.01010" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "27.99491" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=C(*)*" xsd:string
 
 [Term]
 id: CHEBI:23114
@@ -7198,7 +7210,6 @@ relationship: has_role CHEBI:35337 ! central nervous system stimulant
 relationship: has_role CHEBI:35471 ! psychotropic drug
 relationship: has_role CHEBI:35498 ! diuretic
 relationship: has_role CHEBI:35703 ! xenobiotic
-relationship: has_role CHEBI:38809 ! ryanodine receptor modulator
 relationship: has_role CHEBI:50218 ! EC 3.1.4.* (phosphoric diester hydrolase) inhibitor
 relationship: has_role CHEBI:50925 ! EC 2.7.11.1 (non-specific serine/threonine protein kinase) inhibitor
 relationship: has_role CHEBI:53121 ! adenosine A2A receptor antagonist
@@ -8137,6 +8148,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "31.99880" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.98983" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O(O*)*" xsd:string
 
 [Term]
 id: CHEBI:29438
@@ -8289,8 +8301,9 @@ is_a: CHEBI:33246 ! inorganic group
 relationship: is_substituent_group_from CHEBI:16136 ! hydrogen sulfide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HS" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07394" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.074" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.97990" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*S[H]" xsd:string
 
 [Term]
 id: CHEBI:29919
@@ -8335,6 +8348,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HO3S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "81.07214" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.96464" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "S(=O)(O)(*)=O" xsd:string
 
 [Term]
 id: CHEBI:30052
@@ -9307,7 +9321,6 @@ synonym: "tertiary amines" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C02196
 is_a: CHEBI:32952 ! amine
 is_a: CHEBI:50996 ! tertiary amino compound
-relationship: is_conjugate_base_of CHEBI:137982 ! tertiary ammonium ion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "NR3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "14.00670" xsd:string
@@ -14809,6 +14822,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "29.01804" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "29.00274" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(*)=O" xsd:string
 
 [Term]
 id: CHEBI:4290
@@ -14857,6 +14871,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HO" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "17.00734" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "17.00274" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*O[H]" xsd:string
 
 [Term]
 id: CHEBI:43254
@@ -15149,6 +15164,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "15.99940" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "15.99491" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O=*" xsd:string
 
 [Term]
 id: CHEBI:46640
@@ -15267,6 +15283,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHO2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "45.01744" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "44.99765" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*C(=O)O" xsd:string
 
 [Term]
 id: CHEBI:46997
@@ -16279,6 +16296,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CF3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "69.00591" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "68.99521" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(F)(*)(F)F" xsd:string
 
 [Term]
 id: CHEBI:50177
@@ -16520,6 +16538,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CH3S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "47.10052" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "46.99555" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "SC*" xsd:string
 
 [Term]
 id: CHEBI:50339
@@ -16534,6 +16553,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C4H10N" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "72.12894" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "72.08132" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "NCCCC*" xsd:string
 
 [Term]
 id: CHEBI:50344
@@ -17000,6 +17020,7 @@ def: "A compound formally derived from ammonia by replacing three hydrogen atoms
 subset: 3_STAR
 synonym: "tertiary amino compounds" RELATED [ChEBI]
 is_a: CHEBI:50047 ! organic amino compound
+relationship: is_conjugate_base_of CHEBI:137982 ! tertiary ammonium ion
 
 [Term]
 id: CHEBI:51026
@@ -19511,6 +19532,9 @@ synonym: "RyR agonist" RELATED [ChEBI]
 synonym: "RyR agonists" RELATED [ChEBI]
 synonym: "RyRs activator" RELATED [ChEBI]
 synonym: "RyRs agonist" RELATED [ChEBI]
+xref: PMID:30679133 "Europe PMC"
+xref: PMID:30684528 "Europe PMC"
+xref: PMID:31840405 "Europe PMC"
 xref: PMID:8597061 "Europe PMC"
 xref: Wikipedia:Ryanodine_receptor
 is_a: CHEBI:38809 ! ryanodine receptor modulator
@@ -19626,6 +19650,7 @@ xref: Wikipedia:Muscimol
 is_a: CHEBI:22315 ! alkaloid
 is_a: CHEBI:50994 ! primary amino compound
 is_a: CHEBI:55373 ! isoxazoles
+relationship: has_role CHEBI:146270 ! oneirogen
 relationship: has_role CHEBI:35471 ! psychotropic drug
 relationship: has_role CHEBI:51373 ! GABA agonist
 relationship: has_role CHEBI:76946 ! fungal metabolite
@@ -19744,6 +19769,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8N" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "110.09230" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "110.00307" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1(=C(C(=C2C(=C1*)N(C(=C2*)*)*)*)*)*" xsd:string
 
 [Term]
 id: CHEBI:73541

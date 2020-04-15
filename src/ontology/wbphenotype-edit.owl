@@ -19,7 +19,8 @@ Import(<http://purl.obolibrary.org/obo/wbphenotype/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/wbphenotype/imports/wbbt_import.owl>)
 Import(<http://purl.obolibrary.org/obo/wbphenotype/imports/wbls_import.owl>)
 Import(<http://purl.obolibrary.org/obo/wbphenotype/patterns/definitions.owl>)
-Annotation(<http://purl.org/dc/elements/1.1/description> "Ontology about C elegans phenotypes"^^xsd:string)
+Annotation(<http://purl.obolibrary.org/obo/IAO_0000700> <http://purl.obolibrary.org/obo/WBPhenotype_0000886>)
+Annotation(<http://purl.org/dc/elements/1.1/description> "Ontology about C. elegans and other nematode phenotypes"^^xsd:string)
 Annotation(<http://purl.org/dc/elements/1.1/title> "C elegans Phenotype Ontology"^^xsd:string)
 Annotation(<http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"^^xsd:string)
 Annotation(<http://www.geneontology.org/formats/oboInOwl#default-namespace> "C_elegans_phenotype_ontology"^^xsd:string)
@@ -2607,6 +2608,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002581>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002582>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002583>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002584>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002585>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002586>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002587>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002588>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002589>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -2646,6 +2652,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0010003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0010004>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000231>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/wbphenotype#phenotype_slim_wb>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/wbphenotype#property-value>))
@@ -21576,6 +21583,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002065> "WBPhenotype:0002065"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002065> "basement membrane remodeling variant"^^xsd:string)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002065> <http://purl.obolibrary.org/obo/WBPhenotype_0000200>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002065> <http://purl.obolibrary.org/obo/WBPhenotype_0002588>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002066> (basement membrane gap expansion variant)
 
@@ -25817,7 +25825,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002577> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002577> "WBPhenotype:0002577"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002577> "basement membrane composition phenotype"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002577> <http://purl.obolibrary.org/obo/WBPhenotype_0001210>)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002577> <http://purl.obolibrary.org/obo/WBPhenotype_0002588>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002578> (basement membrane laminin level phenotype)
 
@@ -25886,6 +25894,47 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002584> "WBPhenotype:0002584"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002584> "bisphenol A resistant"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002584> <http://purl.obolibrary.org/obo/WBPhenotype_0000931>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002585> (predatory behavior abnormal)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00053031"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson38478"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002585> "(Pristionchus pacificus) Animals exhibit abnormal predatory behavior, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002585> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002585> "WBPhenotype:0002585"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002585> "predatory behavior abnormal"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002585> <http://purl.obolibrary.org/obo/WBPhenotype_0000525>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002586> (reduced predatory feeding behavior)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00053031"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson38478"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002586> "(Pristionchus pacificus) Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002586> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002586> "WBPhenotype:0002586"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002586> "reduced predatory feeding behavior"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002586> <http://purl.obolibrary.org/obo/WBPhenotype_0002585>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002587> (Pluronic gel burrowing impaired)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00058750"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson43910"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002587> "Animals are impaired in their burrowing ability compared to control animals in a Pluronic gel-based burrowing assay."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002587> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002587> "WBPhenotype:0002587"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002587> "Pluronic gel burrowing impaired"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002587> <http://purl.obolibrary.org/obo/WBPhenotype_0002559>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002588> (basement membrane phenotype)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00037647"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002588> "Animals exhibit variations or abnormalities in the structure, integrity, function, or quality of basement membranes, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002588> "basement membrane abnormal"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002588> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002588> "WBPhenotype:0002588"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002588> "basement membrane phenotype"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002588> <http://purl.obolibrary.org/obo/WBPhenotype_0001210>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002589> (neuron degeneration reduced)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson58"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002589> "Animals exhibit a reduction in neuron degeneration, compared to control animals."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002589> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002589> "WBPhenotype:0002589"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002589> "neuron degeneration reduced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002589> <http://purl.obolibrary.org/obo/WBPhenotype_0000636>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
