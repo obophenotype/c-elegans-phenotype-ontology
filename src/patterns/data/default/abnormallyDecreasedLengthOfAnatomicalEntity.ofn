@@ -1,0 +1,52 @@
+Prefix(:=<urn:unnamed:ontology#ont33#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont33>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005930>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030425>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000574>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000263>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000324>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0000574>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002519>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002591>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0005775>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBbt_0007833>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000263> (<http://purl.obolibrary.org/obo/WBPhenotype_0000263>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000263> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0005930>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000324> (<http://purl.obolibrary.org/obo/WBPhenotype_0000324>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000324> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0007833>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0000574> (<http://purl.obolibrary.org/obo/WBPhenotype_0000574>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/WBbt_0005775>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002519> (<http://purl.obolibrary.org/obo/WBPhenotype_0002519>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002519> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030424>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002591> (<http://purl.obolibrary.org/obo/WBPhenotype_0002591>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/WBPhenotype_0002591> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000574> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0030425>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+
+)
