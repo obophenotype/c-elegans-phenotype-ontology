@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-04-27/wbphenotype-base.owl
+data-version: wbphenotype/releases/2020-06-11/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -4511,6 +4511,7 @@ subset: phenotype_slim_wb
 synonym: "habituation abnormal" NARROW []
 synonym: "non associative learning" RELATED []
 is_a: WBPhenotype:0000525 ! organism behavior variant
+is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
 [Term]
 id: WBPhenotype:0000627
@@ -18050,6 +18051,18 @@ id: WBPhenotype:0002592
 name: organism response to gravitational force abnormal
 def: "Animals exhibit variations in their response to changes in gravitational force, compared to control animals." [WB:WBPaper00030928, WB:WBPerson2987]
 is_a: WBPhenotype:0000067 ! organism stress response variant
+
+[Term]
+id: WBPhenotype:0002593
+name: short term plate tap habituation variant
+def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+is_a: WBPhenotype:0002469 ! plate tap habituation variant
+
+[Term]
+id: WBPhenotype:0002594
+name: long term plate tap habituation variant
+def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term memory is memory that lasts for hours to days after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+is_a: WBPhenotype:0002469 ! plate tap habituation variant
 
 [Term]
 id: WBPhenotype:0004001
