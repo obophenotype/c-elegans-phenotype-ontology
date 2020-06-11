@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-04-27/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2020-06-11/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
@@ -3322,7 +3322,7 @@ def: "Animals exhibit variations in their response to paraquat compared to that 
 synonym: "methyl viologen response abnormal" RELATED []
 synonym: "paraquat response abnormal" NARROW []
 is_a: WBPhenotype:0000459 ! pesticide response variant
-is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
@@ -4582,6 +4582,7 @@ subset: phenotype_slim_wb
 synonym: "habituation abnormal" NARROW []
 synonym: "non associative learning" RELATED []
 is_a: WBPhenotype:0000525 ! organism behavior variant
+is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
 [Term]
 id: WBPhenotype:0000627
@@ -13000,7 +13001,7 @@ id: WBPhenotype:0001764
 name: carbon dioxide response variant
 def: "Animals exhibit variations in their response to carbon dioxide compared to control." [WB:WBPerson712]
 synonym: "carbon dioxide response abnormal" NARROW []
-is_a: WBPhenotype:0000627 ! anesthetic response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0001765
@@ -13613,7 +13614,6 @@ id: WBPhenotype:0001854
 name: benomyl response variant
 def: "Animals exhibit variations in their response to the microtubule-depolymerizing drug benomyl, compared to that observed in control animals." [WB:WBPaper00035150, WB:WBPerson2021]
 is_a: WBPhenotype:0000631 ! drug response variant
-is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
 
 [Term]
 id: WBPhenotype:0001855
@@ -18329,6 +18329,18 @@ id: WBPhenotype:0002592
 name: organism response to gravitational force abnormal
 def: "Animals exhibit variations in their response to changes in gravitational force, compared to control animals." [WB:WBPaper00030928, WB:WBPerson2987]
 is_a: WBPhenotype:0000067 ! organism stress response variant
+
+[Term]
+id: WBPhenotype:0002593
+name: short term plate tap habituation variant
+def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+is_a: WBPhenotype:0002469 ! plate tap habituation variant
+
+[Term]
+id: WBPhenotype:0002594
+name: long term plate tap habituation variant
+def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term memory is memory that lasts for hours to days after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+is_a: WBPhenotype:0002469 ! plate tap habituation variant
 
 [Term]
 id: WBPhenotype:0004001
