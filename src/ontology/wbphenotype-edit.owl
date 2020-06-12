@@ -2618,6 +2618,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002591>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002592>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002593>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002594>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002595>))
+Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0002596>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/WBPhenotype_0004003>))
@@ -24616,7 +24618,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002431> <http://purl.obo
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002432> (EGF-induced sleep variant)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00050011"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002432> "Animals do not respond with sleeping behavior induced through the EGF pathway. The EGF-induced sleep pathway is thought to represent a distinctmolecular pathway from developmentally linked sleep. The EGF-induced sleep state occurs in two contexts: by overexpressing the EGF ortholog (LIN-3C), or by EGF signaling after stress (such as temperature elevation) in wildtype animals."^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00050011"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson712"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002432> "Animals do not respond with sleeping behavior induced through the EGF pathway. The EGF-induced sleep pathway is thought to represent a distinct molecular pathway from developmentally linked sleep. The EGF-induced sleep state occurs in two contexts: by overexpressing the EGF ortholog (LIN-3C), or by EGF signaling after stress (such as temperature elevation) in wildtype animals."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002432> "C_elegans_phenotype_ontology"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/WBPhenotype_0002432> "stressed-induced sleep variant"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002432> "WBPhenotype:0002432"^^xsd:string)
@@ -25981,6 +25983,22 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002594> "WBPhenotype:0002594"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002594> "long term plate tap habituation variant"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002594> <http://purl.obolibrary.org/obo/WBPhenotype_0002469>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002595> (sleep deprivation-induced brood size reduction enhanced)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00052970"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002595> "The reduction in brood size caused by sleep deprivation is enhanced, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002595> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002595> "WBPhenotype:0002595"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002595> "sleep deprivation-induced brood size reduction enhanced"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002595> <http://purl.obolibrary.org/obo/WBPhenotype_0000154>)
+
+# Class: <http://purl.obolibrary.org/obo/WBPhenotype_0002596> (sleep deprivation-induced brood size reduction suppressed)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPaper00052970"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "WB:WBPerson2987"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/WBPhenotype_0002596> "The reduction in brood size caused by sleep deprivation is suppressed, compared to controls."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/WBPhenotype_0002596> "C_elegans_phenotype_ontology"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/WBPhenotype_0002596> "WBPhenotype:0002596"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/WBPhenotype_0002596> "sleep deprivation-induced brood size reduction suppressed"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/WBPhenotype_0002596> <http://purl.obolibrary.org/obo/WBPhenotype_0000154>)
 
 # Class: <http://purl.obolibrary.org/obo/WBPhenotype_0004001> (hermaphrodite mating variant)
 
