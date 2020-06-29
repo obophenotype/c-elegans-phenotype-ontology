@@ -7601,6 +7601,43 @@
       "type" : "CLASS",
       "lbl" : "swimming induced paralysis"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002598",
+      "meta" : {
+        "definition" : {
+          "val" : "Variations in the aversion of animals to substances sensed by gustation (taste) previously associated with an aversive stimuli during a gustation training protocol, compared to control. For example, C. elegans animals can be trained to associate the taste of a substance (e.g. sodium chloride, normally an attractant) to an aversive stimuli (e.g. starvation) so that trained worms will avoid the substance in the absence of the aversive stimuli. Animals with this phenotype will not exhibit the same aversion to the substance as compared to control animals.",
+          "xrefs" : [ "WB:WBPaper00059641", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "gustatory aversive learning abnormal"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002599",
+      "meta" : {
+        "definition" : {
+          "val" : "Any variation in the decrease in a behavioral response to a repeated stimulus compared to control, over the long term. Long-term memory is memory that lasts for hours to days after the learning (training) event(s).",
+          "xrefs" : [ "WB:WBPaper00041586", "WB:WBPerson2987" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "long-term habituation variant",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "long-term habituation abnormal",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "long-term habituation phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0001268",
       "meta" : {
         "definition" : {
@@ -7703,7 +7740,7 @@
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002594",
       "meta" : {
         "definition" : {
-          "val" : "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term memory is memory that lasts for hours to days after the learning (training) event(s).",
+          "val" : "Any variation in the decrease in a behavioral response to a repeated plate tap stimulus compared to control, over the long term. Long-term memory is memory that lasts for hours to days after the learning (training) event(s).",
           "xrefs" : [ "WB:WBPaper00006159", "WB:WBPerson2987" ]
         },
         "basicPropertyValues" : [ {
@@ -7845,6 +7882,20 @@
       "type" : "CLASS",
       "lbl" : "genetic pathway activation variant"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002597",
+      "meta" : {
+        "definition" : {
+          "val" : "Variations in the behavioral plasticity induced by the integration of two sensory signals (one of which is gustation (taste)) compared to control. For example, C. elegans animals can be trained to associate the taste of a substance (e.g. sodium chloride, normally an attractant) to an aversive stimuli (e.g. starvation) so that trained worms will avoid the substance in the absence of the aversive stimuli. Animals with this phenotype have an abnormal response to the trained stimuli compared to controls.",
+          "xrefs" : [ "WB:WBPaper00059641", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "gustatory learning abnormal"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002113",
       "meta" : {
         "definition" : {
@@ -7951,7 +8002,7 @@
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002593",
       "meta" : {
         "definition" : {
-          "val" : "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s).",
+          "val" : "Any variation in the decrease in a behavioral response to a repeated plate tap stimulus compared to control, over the short term. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s).",
           "xrefs" : [ "WB:WBPaper00006159", "WB:WBPerson2987" ]
         },
         "basicPropertyValues" : [ {
@@ -8473,6 +8524,23 @@
       },
       "type" : "CLASS",
       "lbl" : "amphid channel cilia morphology variant"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
+      "meta" : {
+        "definition" : {
+          "val" : "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Nicolas Matentzoglu"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "has ontology root term"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has ontology root term"
     }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0000399",
       "meta" : {
@@ -11660,10 +11728,13 @@
       "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
       "meta" : {
         "definition" : {
-          "val" : "Add as annotation triples in the granting ontology",
+          "val" : "Use on obsolete terms, relating the term to another term that can be used as a substitute",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Add as annotation triples in the granting ontology"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Person:Alan Ruttenberg"
         }, {
@@ -24477,12 +24548,12 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/wbphenotype#phenotype_slim_wb" ],
         "synonyms" : [ {
-          "pred" : "hasNarrowSynonym",
-          "val" : "habituation abnormal",
+          "pred" : "hasRelatedSynonym",
+          "val" : "non associative learning variant",
           "xrefs" : [ ]
         }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "non associative learning",
+          "pred" : "hasNarrowSynonym",
+          "val" : "habituation abnormal",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -24649,7 +24720,7 @@
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
       "meta" : {
         "definition" : {
-          "val" : "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
+          "val" : "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -24661,12 +24732,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "2012-04-05: \nBarry Smith\n\nThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.\n\nCan you fix to something like:\n\nA statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.\n\nAlan Ruttenberg\n\nYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. \n\nOn the specifics of the proposed definition:\n\nWe don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. \n\nPersonally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. \n\nWe also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  "
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "definition"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "textual definition"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000122"
@@ -40557,16 +40622,6 @@
       "type" : "CLASS",
       "lbl" : "sexual maturation defective"
     }, {
-      "id" : "http://www.w3.org/2000/01/rdf-schema#label",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "label"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "label"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0001767",
       "meta" : {
         "definition" : {
@@ -40961,6 +41016,20 @@
       "type" : "CLASS",
       "lbl" : "head muscle contraction variant"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002602",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit a decrease in the rate at which spontaneous backward locomotion is initiated compared to control.",
+          "xrefs" : [ "WB:WBPaper00049647", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "reduced frequency of spontaneous reversal initiation"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0001756",
       "meta" : {
         "definition" : {
@@ -41139,6 +41208,29 @@
       "type" : "CLASS",
       "lbl" : "antibody staining increased"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002600",
+      "meta" : {
+        "definition" : {
+          "val" : "Any variation in the decrease in a behavioral response to a repeated stimulus compared to control, over the short term. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s).",
+          "xrefs" : [ "WB:WBPaper00041586", "WB:WBPerson2987" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "short-term habituation abnormal",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "short-term habituation variant",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "short-term habituation phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0000425",
       "meta" : {
         "definition" : {
@@ -41199,6 +41291,29 @@
       },
       "type" : "CLASS",
       "lbl" : "antibody staining variant"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002601",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit variations in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s).",
+          "xrefs" : [ "WB:WBPaper00041586", "WB:WBPerson2987" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "short-term associative memory variant",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "short-term associative memory abnormal",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "short-term associative memory phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0001750",
       "meta" : {
@@ -47090,13 +47205,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001118"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000931",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000523"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000923",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000603"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000931",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000523"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001488",
       "pred" : "is_a",
@@ -47134,13 +47249,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001449"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001414",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001663",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001620"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001414",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001979",
       "pred" : "is_a",
@@ -47342,13 +47457,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001355"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000549",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001002"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001890",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001889"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000549",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002337",
       "pred" : "is_a",
@@ -47482,13 +47597,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001138"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001466",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000265"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001357",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001355"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001466",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000265"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001509",
       "pred" : "is_a",
@@ -47581,6 +47696,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000705",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000529"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002600",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000626"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001341",
       "pred" : "is_a",
@@ -47742,21 +47861,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001512"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002377",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001827"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000461",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000460"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000446",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002377",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002041"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001827"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001791",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000207"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000446",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002041"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000385",
       "pred" : "is_a",
@@ -47770,13 +47889,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002323"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000532"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002553",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002551"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000532"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002565",
       "pred" : "is_a",
@@ -47926,13 +48045,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000463"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000964",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001377",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001256"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000964",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002045",
       "pred" : "is_a",
@@ -48062,13 +48181,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002227"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001646",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000707"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001561",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001557"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001646",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000707"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000238",
       "pred" : "is_a",
@@ -48098,13 +48217,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001951",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001355"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002473",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002283"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001951",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001355"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001670",
       "pred" : "is_a",
@@ -48234,13 +48353,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001125",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001005",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002320"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001125",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001455",
       "pred" : "is_a",
@@ -48270,13 +48389,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001129"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001368",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002551"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001246",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001243"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001368",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002551"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001026",
       "pred" : "is_a",
@@ -48334,13 +48453,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002175"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001508",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000165"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001016",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001508",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002310",
       "pred" : "is_a",
@@ -48362,13 +48481,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000265"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001338",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001595",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001593"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001338",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001170",
       "pred" : "is_a",
@@ -48502,13 +48621,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002574"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001525",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000709"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001521",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000749"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001525",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000709"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000182",
       "pred" : "is_a",
@@ -48686,13 +48805,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000961"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002189",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001675"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002207",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000399"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002189",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001675"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000741",
       "pred" : "is_a",
@@ -48714,10 +48833,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000586",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000524"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000565",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002297"
@@ -48725,6 +48840,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001269",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001268"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000586",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000524"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000455",
       "pred" : "is_a",
@@ -48754,13 +48873,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001726"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001494",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000195"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001376",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001375"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001494",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000195"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001486",
       "pred" : "is_a",
@@ -48770,29 +48889,29 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001414"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001039",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000926",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001015"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000924"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000936",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000824"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000926",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001039",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000924"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001015"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000583",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001727"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001134",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001133"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001122",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001134",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001133"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001594",
       "pred" : "is_a",
@@ -48822,13 +48941,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002551"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000635",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001434"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001865",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001382"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000635",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001434"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002520",
       "pred" : "is_a",
@@ -49014,6 +49133,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001911"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002598",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002597"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002504",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002172"
@@ -49050,13 +49173,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001739"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002270",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000463"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000032",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002270",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000463"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000618",
       "pred" : "is_a",
@@ -49158,13 +49281,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000421"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001036",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001037"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001136",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000037"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001036",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001037"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001021",
       "pred" : "is_a",
@@ -49222,13 +49345,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002558"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001428",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000710"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000818",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000819"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001428",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000710"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000480",
       "pred" : "is_a",
@@ -49350,13 +49473,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001255",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001248"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002453",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002446"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001255",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001248"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002344",
       "pred" : "is_a",
@@ -49466,13 +49589,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000202"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002488",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002487"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002404",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000533"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002488",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002487"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001839",
       "pred" : "is_a",
@@ -49698,13 +49821,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000529"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000196",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002108"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000363",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000438"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000196",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002108"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000691",
       "pred" : "is_a",
@@ -49886,13 +50009,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002108"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001797",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001946"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002355",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001013"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001797",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001946"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000643",
       "pred" : "is_a",
@@ -49966,13 +50089,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000631"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002075",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000258"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002424",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000464"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002075",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000258"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000389",
       "pred" : "is_a",
@@ -50258,13 +50381,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000306"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001115"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001222",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000228"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001115"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001132",
       "pred" : "is_a",
@@ -50345,10 +50468,6 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000044",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001100"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000031",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002249",
       "pred" : "is_a",
@@ -50498,13 +50617,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002407"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000615",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002089"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002220",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002217"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000615",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002089"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001208",
       "pred" : "is_a",
@@ -50534,13 +50653,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000812"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001166",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001164"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001275",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000074"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001166",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001164"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000203",
       "pred" : "is_a",
@@ -50566,13 +50685,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000644"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001096",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000695"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000637",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000308"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000695"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000793",
       "pred" : "is_a",
@@ -50622,13 +50741,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000305"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002141",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001835"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001599",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002141",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001835"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001318",
       "pred" : "is_a",
@@ -50690,13 +50809,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000613"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000922",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000921"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000532",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002557"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000922",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000921"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000586",
       "pred" : "is_a",
@@ -50730,13 +50849,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002121"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000855",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000528"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000843",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000855",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000528"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001583",
       "pred" : "is_a",
@@ -50766,10 +50885,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001382"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002013",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002012"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002267",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002266"
@@ -50777,6 +50892,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000976",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000515"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002012"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001526",
       "pred" : "is_a",
@@ -50838,13 +50957,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001272"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002167",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002078"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002222",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001395"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002167",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002078"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001591",
       "pred" : "is_a",
@@ -50878,13 +50997,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001224"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002338",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000231"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002328",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0004022"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002338",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000231"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002065",
       "pred" : "is_a",
@@ -50902,13 +51021,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000293"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001671",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002089"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001035",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001138"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001671",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002089"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001912",
       "pred" : "is_a",
@@ -50937,6 +51056,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001702",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0004017"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002594",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002599"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000167",
       "pred" : "is_a",
@@ -51010,13 +51133,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001454"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000922",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000930"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000994",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000210"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000922",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000930"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000988",
       "pred" : "is_a",
@@ -51026,13 +51149,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001164"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001368",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001662"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000826",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000825"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001368",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001662"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001197",
       "pred" : "is_a",
@@ -51470,13 +51593,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000006"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001216",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000775"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001164",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001162"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000775"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002592",
       "pred" : "is_a",
@@ -51606,13 +51729,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001006"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002187",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000414"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002144",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002142"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002187",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000414"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000836",
       "pred" : "is_a",
@@ -51930,21 +52053,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001024",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002555"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002020",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000612"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002522",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001024",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000751"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002555"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002595",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000154"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002522",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000751"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002022",
       "pred" : "is_a",
@@ -52106,13 +52229,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000519"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002058",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000631"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000063",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000062"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000631"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000293",
       "pred" : "is_a",
@@ -52142,13 +52265,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000616"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000184",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000182"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000338",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000073"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000184",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000182"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001926",
       "pred" : "is_a",
@@ -52226,13 +52349,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000530"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000180",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001398"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000180",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001398"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002561",
       "pred" : "is_a",
@@ -52250,13 +52373,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000168"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002140",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000654",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001684"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000982",
       "pred" : "is_a",
@@ -52330,6 +52453,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001290"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000862",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000545"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002538",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000978"
@@ -52337,10 +52464,6 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000572",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000816"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000862",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000545"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002481",
       "pred" : "is_a",
@@ -52354,25 +52477,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000786"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002182",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000577"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002185",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000414"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002182",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000577"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000472",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000749"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000834",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000824"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002446",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001897"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000834",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000824"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000462",
       "pred" : "is_a",
@@ -52434,13 +52557,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002047"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001545",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000934"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001040",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001049"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001545",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000934"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001848",
       "pred" : "is_a",
@@ -52450,13 +52573,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000662"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000955",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000875",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001743"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000955",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000984",
       "pred" : "is_a",
@@ -52470,13 +52593,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000531"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001271",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001013"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001285",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001271",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001013"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004017",
       "pred" : "is_a",
@@ -52534,13 +52657,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001100"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001899",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001064",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001066"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001899",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000016",
       "pred" : "is_a",
@@ -52690,13 +52813,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000179"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001161",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001160"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001167",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001100"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001161",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001160"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000250",
       "pred" : "is_a",
@@ -52770,25 +52893,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000725"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002152",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000730"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000823",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000812"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002152",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000730"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001479",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001847"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001143",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002413"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001486",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001644"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001143",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002413"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001538",
       "pred" : "is_a",
@@ -52834,13 +52957,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000463"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004005",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001604",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002126",
       "pred" : "is_a",
@@ -52946,6 +53069,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001827"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002601",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002564"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000291",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000395"
@@ -52982,13 +53109,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000743"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001295",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000072"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001184",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001182"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001295",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000072"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001990",
       "pred" : "is_a",
@@ -53014,13 +53141,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001918"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000973",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000742"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002362",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001382"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000973",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000742"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001192",
       "pred" : "is_a",
@@ -53062,13 +53189,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000594"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000083",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001019"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001303",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002493"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000083",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001019"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001408",
       "pred" : "is_a",
@@ -53078,17 +53205,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001250",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001176",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000262"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001135"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001162",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001142"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001176",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001250",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001135"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000262"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000591",
       "pred" : "is_a",
@@ -53098,17 +53225,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001293"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002285",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000953",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002284"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000873",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001743"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000953",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002285",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002284"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001391",
       "pred" : "is_a",
@@ -53214,17 +53341,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000648"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000952",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001310",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000604"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001500",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001467"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001310",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000952",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000604"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000943"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001820",
       "pred" : "is_a",
@@ -53402,13 +53529,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001192"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002353",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000134"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002165",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002353",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000134"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000656",
       "pred" : "is_a",
@@ -53418,13 +53545,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0004017"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002037",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001028"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000494",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000779"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002037",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001028"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000070",
       "pred" : "is_a",
@@ -53594,21 +53721,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000146"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000517",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000519"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000468",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001009"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000978",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000517",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001197"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000519"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001570",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000781"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000978",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001197"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002041",
       "pred" : "is_a",
@@ -53802,13 +53929,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000135"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000451",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002282",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000736"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000451",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000663",
       "pred" : "is_a",
@@ -53818,21 +53945,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000056"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002540",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001983"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000204",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001476"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000547",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002540",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000577"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001983"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002090",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001323"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000547",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000577"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000526",
       "pred" : "is_a",
@@ -53922,13 +54049,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002263",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001282"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002136",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002552"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002263",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001282"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000659",
       "pred" : "is_a",
@@ -54130,13 +54257,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000073"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000277",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000290",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000395"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000277",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000526",
       "pred" : "is_a",
@@ -54194,13 +54321,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001183"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000253",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001701"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000989",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001190"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000253",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001701"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001954",
       "pred" : "is_a",
@@ -54346,13 +54473,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000645"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000854",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000853"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000620",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000530"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000854",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000853"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000510",
       "pred" : "is_a",
@@ -54490,21 +54617,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001940"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001073",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001072"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001480",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000336"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001838",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001073",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000717"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001072"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001744",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001657"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001838",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000717"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001641",
       "pred" : "is_a",
@@ -54602,13 +54729,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001965"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000084",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000056"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002495",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002556"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000084",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004029",
       "pred" : "is_a",
@@ -54693,6 +54820,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000293",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000598"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002597",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001780"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000512",
       "pred" : "is_a",
@@ -54814,13 +54945,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000764"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000860",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000622"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001597",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002174"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000860",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000622"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001669",
       "pred" : "is_a",
@@ -54874,6 +55005,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001335"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000672",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000102"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000866",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000823"
@@ -54881,10 +55016,6 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001068",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000024"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000672",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000102"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001082",
       "pred" : "is_a",
@@ -55102,13 +55233,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000867"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000031",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000438"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000695",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002553"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000438"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001710",
       "pred" : "is_a",
@@ -55462,13 +55593,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000076"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000425",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000424"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002009",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001644"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000425",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000424"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002016",
       "pred" : "is_a",
@@ -55478,13 +55609,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000125"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002085",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002083"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000764",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000763"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002083"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000752",
       "pred" : "is_a",
@@ -55694,17 +55825,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001739"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001725",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001593",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000876"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002063"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001648",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001646"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001593",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001725",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002063"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000876"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001761",
       "pred" : "is_a",
@@ -55726,13 +55857,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002049"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002311",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001702"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001856",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000631"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002311",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001702"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001760",
       "pred" : "is_a",
@@ -55838,13 +55969,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000725"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002181",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000621"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001762",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001422"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002181",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000621"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000364",
       "pred" : "is_a",
@@ -55854,13 +55985,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001315"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002243",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001606",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001918"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002243",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001696"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000197",
       "pred" : "is_a",
@@ -55890,6 +56021,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000076"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000676"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000214",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000010"
@@ -55905,6 +56040,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001782",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002424"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002593",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002600"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002109",
       "pred" : "is_a",
@@ -56054,13 +56193,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001440"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001325",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001005"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001355",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000605"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001325",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001005"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001632",
       "pred" : "is_a",
@@ -56098,13 +56237,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002132"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001047"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002396",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000038"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001047"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000722",
       "pred" : "is_a",
@@ -56234,13 +56373,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000520"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002517",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002516"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000793",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000581"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002517",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002516"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001056",
       "pred" : "is_a",
@@ -56310,13 +56449,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000011"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001140",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000594"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001129",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001078"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000594"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001982",
       "pred" : "is_a",
@@ -56734,13 +56873,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000743"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001314",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000282"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001004",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000634"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001314",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000282"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000557",
       "pred" : "is_a",
@@ -56794,13 +56933,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000749"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000700",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002553"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001437",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001452"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000700",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002553"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001339",
       "pred" : "is_a",
@@ -56878,13 +57017,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002563",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000612"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002585",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002563",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000612"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001517",
       "pred" : "is_a",
@@ -57078,21 +57217,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000604"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002256",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000591"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000548",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000611"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000351",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002256",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000050"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000591"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000566",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000565"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000351",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000050"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000106",
       "pred" : "is_a",
@@ -57182,6 +57321,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001894"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002602",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001506"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001435",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001460"
@@ -57250,13 +57393,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002308"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001463",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001053"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001426",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001423"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001463",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001053"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001397",
       "pred" : "is_a",
@@ -57346,13 +57489,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002345",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000643"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002223",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001863"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002345",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000643"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001795",
       "pred" : "is_a",
@@ -57494,13 +57637,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001471"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000230",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000073"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000153",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000611"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000230",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000073"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000489",
       "pred" : "is_a",
@@ -57542,13 +57685,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001739"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001054",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000567",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000565"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000286",
       "pred" : "is_a",
@@ -57582,13 +57725,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000439"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000523",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000496",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000523",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001217",
       "pred" : "is_a",
@@ -57677,6 +57820,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001398",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002089"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002599",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000626"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001264",
       "pred" : "is_a",
@@ -57994,13 +58141,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000416"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000507",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002070",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000507",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000362",
       "pred" : "is_a",
@@ -58014,6 +58161,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001598"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000685",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000676"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001231",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000853"
@@ -58026,25 +58177,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001024"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000661",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000659"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001109",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001107"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000661",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000659"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000431",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000429"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001578",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000011"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001435",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001578",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001559",
       "pred" : "is_a",
@@ -58286,13 +58437,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002175"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000283",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000624"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000292",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000534"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000283",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000624"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001520",
       "pred" : "is_a",
@@ -58466,13 +58617,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001213"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001326",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001324"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001356",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001024"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001326",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001324"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001338",
       "pred" : "is_a",
@@ -58518,13 +58669,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000525"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002395",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000243"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002379",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002395",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000243"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002154",
       "pred" : "is_a",
@@ -58574,13 +58725,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001540"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001881",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001880"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001995",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000740"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001881",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001880"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002057",
       "pred" : "is_a",
@@ -58658,13 +58809,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001440"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000035",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000934"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000046",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000824"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000035",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000934"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000062",
       "pred" : "is_a",
@@ -58954,13 +59105,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001300"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002179",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001324"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000759",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002414"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002179",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001324"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000485",
       "pred" : "is_a",
@@ -58974,13 +59125,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000045"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001554",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001545"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001585",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001235"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001554",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001545"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002007",
       "pred" : "is_a",
@@ -59002,13 +59153,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000015"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001714",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002311"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001805",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001401"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001714",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002311"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001436",
       "pred" : "is_a",
@@ -59026,13 +59177,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002012"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000582"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002558",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002551"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000582"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001857",
       "pred" : "is_a",
@@ -59066,13 +59217,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000531"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000788",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000971"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000036",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000934"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000788",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000971"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000146",
       "pred" : "is_a",
@@ -59142,13 +59293,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000222"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001934",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001314"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001681",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002414"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001934",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001314"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000135",
       "pred" : "is_a",
@@ -59214,13 +59365,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000161",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000749"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000174",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000619"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000161",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000749"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001326",
       "pred" : "is_a",
@@ -59306,13 +59457,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000120"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001296",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001588",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001345"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001296",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000863",
       "pred" : "is_a",
@@ -59478,13 +59629,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002174"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000189",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000703"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000257",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000255"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000189",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000703"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002411",
       "pred" : "is_a",
@@ -59502,13 +59653,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000067"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000327",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000747"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000229",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001727"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000327",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000747"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001862",
       "pred" : "is_a",
@@ -59518,21 +59669,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001918"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002532",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002531"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002446",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001006"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002412",
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002532",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002410"
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002531"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000419",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000058"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002412",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002410"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000229",
       "pred" : "is_a",
@@ -59726,13 +59877,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001441"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001212",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001211"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000906",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002108"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001212",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001211"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001597",
       "pred" : "is_a",
@@ -59778,13 +59929,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000072"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001882",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000773"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001552",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001545"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001882",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000773"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001401",
       "pred" : "is_a",
@@ -59862,13 +60013,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000354"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000240",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000173"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000234",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000233"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000240",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000173"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001891",
       "pred" : "is_a",
@@ -59882,13 +60033,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000067",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000077",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000638"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000738"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002161",
       "pred" : "is_a",
@@ -60006,13 +60157,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002552"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000913",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000600"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000902",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000710"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000913",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000600"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000882",
       "pred" : "is_a",
@@ -60022,13 +60173,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001078"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001293",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000576"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001087",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001438"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001293",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000576"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000561",
       "pred" : "is_a",
@@ -60062,13 +60213,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001115"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001352",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001283"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001061",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001438"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001352",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001283"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0001104",
       "pred" : "is_a",
@@ -60113,7 +60264,7 @@
         "pred" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
         "val" : "chris-grove"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2020-06-12/wbphenotype-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2020-06-28/wbphenotype-simple.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

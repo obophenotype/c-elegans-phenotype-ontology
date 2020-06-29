@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2020-06-12
+data-version: releases/2020-06-28
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
@@ -236,9 +236,9 @@ id: WBPhenotype:0000031
 name: slow growth
 def: "Any variation that causes a reduction in growth rate compared to control." [WB:cab, WB:WBPaper00004402, WB:WBPaper00004403, WB:WBPaper00004651, WB:WBPaper00004769, WB:WBPaper00005654, WB:WBPaper00006395, WB:WBPaper00024497, WB:WBPerson557]
 synonym: "Gro" BROAD []
-is_a: WBPhenotype:0000030 ! growth variant
 is_a: WBPhenotype:0000043 ! general pace of development variant
 is_a: WBPhenotype:0000438 ! retarded heterochronic variations
+is_a: WBPhenotype:0000676 ! growth rate variant
 
 [Term]
 id: WBPhenotype:0000032
@@ -4580,7 +4580,7 @@ name: habituation variant
 def: "Any variation in the decrease in a behavioral response to a repeated stimulus compared to control." [GO:0046959, WB:cab]
 subset: phenotype_slim_wb
 synonym: "habituation abnormal" NARROW []
-synonym: "non associative learning" RELATED []
+synonym: "non associative learning variant" RELATED []
 is_a: WBPhenotype:0000525 ! organism behavior variant
 is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
@@ -5046,6 +5046,7 @@ id: WBPhenotype:0000685
 name: larval growth slow
 def: "Any variation that causes a reduction in growth rate during larval stages compared to control." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000438 ! retarded heterochronic variations
+is_a: WBPhenotype:0000676 ! growth rate variant
 is_a: WBPhenotype:0001016 ! larval growth variant
 
 [Term]
@@ -18333,14 +18334,16 @@ is_a: WBPhenotype:0000067 ! organism stress response variant
 [Term]
 id: WBPhenotype:0002593
 name: short term plate tap habituation variant
-def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+def: "Any variation in the decrease in a behavioral response to a repeated plate tap stimulus compared to control, over the short term. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
 is_a: WBPhenotype:0002469 ! plate tap habituation variant
+is_a: WBPhenotype:0002600 ! short-term habituation phenotype
 
 [Term]
 id: WBPhenotype:0002594
 name: long term plate tap habituation variant
-def: "Animals exhibit variations in their recalled and repeated responses to plate taps they are exposed to during learning and memory paradigms over the long term, compared to controls. Long-term memory is memory that lasts for hours to days after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
+def: "Any variation in the decrease in a behavioral response to a repeated plate tap stimulus compared to control, over the long term. Long-term memory is memory that lasts for hours to days after the learning (training) event(s)." [WB:WBPaper00006159, WB:WBPerson2987]
 is_a: WBPhenotype:0002469 ! plate tap habituation variant
+is_a: WBPhenotype:0002599 ! long-term habituation phenotype
 
 [Term]
 id: WBPhenotype:0002595
@@ -18353,6 +18356,48 @@ id: WBPhenotype:0002596
 name: sleep deprivation-induced brood size reduction suppressed
 def: "The reduction in brood size caused by sleep deprivation is suppressed, compared to controls." [WB:WBPaper00052970, WB:WBPerson2987]
 is_a: WBPhenotype:0000154 ! reduced brood size
+
+[Term]
+id: WBPhenotype:0002597
+name: gustatory learning abnormal
+def: "Variations in the behavioral plasticity induced by the integration of two sensory signals (one of which is gustation (taste)) compared to control. For example, C. elegans animals can be trained to associate the taste of a substance (e.g. sodium chloride, normally an attractant) to an aversive stimuli (e.g. starvation) so that trained worms will avoid the substance in the absence of the aversive stimuli. Animals with this phenotype have an abnormal response to the trained stimuli compared to controls." [WB:WBPaper00059641, WB:WBPerson2987]
+is_a: WBPhenotype:0001780 ! associative learning variant
+
+[Term]
+id: WBPhenotype:0002598
+name: gustatory aversive learning abnormal
+def: "Variations in the aversion of animals to substances sensed by gustation (taste) previously associated with an aversive stimuli during a gustation training protocol, compared to control. For example, C. elegans animals can be trained to associate the taste of a substance (e.g. sodium chloride, normally an attractant) to an aversive stimuli (e.g. starvation) so that trained worms will avoid the substance in the absence of the aversive stimuli. Animals with this phenotype will not exhibit the same aversion to the substance as compared to control animals." [WB:WBPaper00059641, WB:WBPerson2987]
+is_a: WBPhenotype:0002597 ! gustatory learning abnormal
+
+[Term]
+id: WBPhenotype:0002599
+name: long-term habituation phenotype
+def: "Any variation in the decrease in a behavioral response to a repeated stimulus compared to control, over the long term. Long-term memory is memory that lasts for hours to days after the learning (training) event(s)." [WB:WBPaper00041586, WB:WBPerson2987]
+synonym: "long-term habituation abnormal" EXACT []
+synonym: "long-term habituation variant" EXACT []
+is_a: WBPhenotype:0000626 ! habituation variant
+
+[Term]
+id: WBPhenotype:0002600
+name: short-term habituation phenotype
+def: "Any variation in the decrease in a behavioral response to a repeated stimulus compared to control, over the short term. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00041586, WB:WBPerson2987]
+synonym: "short-term habituation abnormal" EXACT []
+synonym: "short-term habituation variant" EXACT []
+is_a: WBPhenotype:0000626 ! habituation variant
+
+[Term]
+id: WBPhenotype:0002601
+name: short-term associative memory phenotype
+def: "Animals exhibit variations in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms over the short term, compared to controls. Short-term memory is memory that lasts for minutes to hours after the learning (training) event(s)." [WB:WBPaper00041586, WB:WBPerson2987]
+synonym: "short-term associative memory abnormal" EXACT []
+synonym: "short-term associative memory variant" EXACT []
+is_a: WBPhenotype:0002564 ! associative memory phenotype
+
+[Term]
+id: WBPhenotype:0002602
+name: reduced frequency of spontaneous reversal initiation
+def: "Animals exhibit a decrease in the rate at which spontaneous backward locomotion is initiated compared to control." [WB:WBPaper00049647, WB:WBPerson2987]
+is_a: WBPhenotype:0001506 ! spontaneous reversal rate variant
 
 [Term]
 id: WBPhenotype:0004001
