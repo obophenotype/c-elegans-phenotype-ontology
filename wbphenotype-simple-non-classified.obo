@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-06-28/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2020-07-23/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple-non-classified
@@ -18114,6 +18114,24 @@ id: WBPhenotype:0002602
 name: reduced frequency of spontaneous reversal initiation
 def: "Animals exhibit a decrease in the rate at which spontaneous backward locomotion is initiated compared to control." [WB:WBPaper00049647, WB:WBPerson2987]
 is_a: WBPhenotype:0001506 ! spontaneous reversal rate variant
+
+[Term]
+id: WBPhenotype:0002603
+name: protein toxicity response abnormal
+def: "Animals exhibit an abnormal response to toxic proteins, either via exposure in the environment or expressed within the organism, compared to controls." [WB:WBPaper00059748, WB:WBPerson2987]
+is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
+
+[Term]
+id: WBPhenotype:0002604
+name: dipeptide repeat protein toxicity abnormal
+def: "Animals exhibit an abnormal response to toxic dipeptide repeat proteins, either via exposure in the environment or expressed within the organism, compared to controls." [WB:WBPaper00059748, WB:WBPerson2987]
+is_a: WBPhenotype:0002603 ! protein toxicity response abnormal
+
+[Term]
+id: WBPhenotype:0002605
+name: dipeptide repeat protein toxicity suppressed
+def: "Normally toxic dipeptide repeat proteins appear to be less toxic to animals, compared to control animals." [WB:WBPaper00059748, WB:WBPerson2987]
+is_a: WBPhenotype:0002604 ! dipeptide repeat protein toxicity abnormal
 
 [Term]
 id: WBPhenotype:0004001
