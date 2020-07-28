@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2020-07-23
+data-version: releases/2020-07-28
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
@@ -3015,7 +3015,7 @@ id: WBPhenotype:0000415
 name: necrotic cell death variant
 def: "Animals exhibit variations in the cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents, compared to control." [GO:0070265, WB:WBPerson712]
 synonym: "necrotic cell death abnormal" NARROW []
-is_a: WBPhenotype:0001173 ! non apoptotic cell death variant
+is_a: WBPhenotype:0000729 ! cell death variant
 
 [Term]
 id: WBPhenotype:0000416
@@ -16170,8 +16170,8 @@ is_a: WBPhenotype:0000113 ! RNA expression variant
 
 [Term]
 id: WBPhenotype:0002254
-name: 3 prime target RNA uridylation reduced
-def: "3' uridylation of mRNA targeted for silencing does not occur at the same rate or extent of targeted mRNA in control animals." [WB:WBPaper00046393, WB:WBPerson712]
+name: three prime (3') target RNA uridylation reduced
+def: "Three-prime (3') uridylation of mRNA targeted for silencing does not occur at the same rate or extent of targeted mRNA in control animals." [WB:WBPaper00046393, WB:WBPerson712]
 is_a: WBPhenotype:0000028 ! RNA processing variant
 
 [Term]
@@ -16964,7 +16964,7 @@ is_a: WBPhenotype:0002098 ! cell component localization variant
 [Term]
 id: WBPhenotype:0002380
 name: neuron degeneration enhanced
-def: "Neurons undergo a dramatic decrease in cell volume, collapse of the vacuoles and processes, and complete disintegration of the plasma membrane and most organelles at a faster rate or greater extent than those under conditions that elicit this response in control animals.\n" [WB:WBPaper00045008, WB:WBPerson298, WB:WBPerson557]
+def: "Neurons undergo a dramatic decrease in cell volume, collapse of the vacuoles and processes, and complete disintegration of the plasma membrane and most organelles at a faster rate or greater extent than those under conditions that elicit this response in control animals." [WB:WBPaper00045008, WB:WBPerson298, WB:WBPerson557]
 synonym: "increased neurodegeneration" RELATED []
 is_a: WBPhenotype:0000636 ! neuron degeneration variant
 
@@ -17101,7 +17101,7 @@ is_a: WBPhenotype:0000138 ! lipid composition variant
 [Term]
 id: WBPhenotype:0002402
 name: cell position defective
-def: "a cell (or group of cells) is not found in the correct body position compared the placement in control animals." [WB:WBPerson557]
+def: "A cell (or group of cells) is not found in the correct body position compared the placement in control animals." [WB:WBPerson557]
 synonym: "cell position abnormal" EXACT []
 is_a: WBPhenotype:0000533 ! cell morphology variant
 
@@ -18416,6 +18416,12 @@ id: WBPhenotype:0002605
 name: dipeptide repeat protein toxicity suppressed
 def: "Normally toxic dipeptide repeat proteins appear to be less toxic to animals, compared to control animals." [WB:WBPaper00059748, WB:WBPerson2987]
 is_a: WBPhenotype:0002604 ! dipeptide repeat protein toxicity abnormal
+
+[Term]
+id: WBPhenotype:0002606
+name: necrotic cell death decreased
+def: "Animals exhibit reduced necrotic cell death, compared to controls." [WB:WBPaper00028466, WB:WBPaper00059770, WB:WBPerson2987]
+is_a: WBPhenotype:0000415 ! necrotic cell death variant
 
 [Term]
 id: WBPhenotype:0004001
