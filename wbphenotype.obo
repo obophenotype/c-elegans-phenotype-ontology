@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2020-07-28
+data-version: releases/2020-08-03
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
@@ -11568,7 +11568,8 @@ is_a: WBPhenotype:0000749 ! embryonic development variant
 id: WBPhenotype:0001567
 name: nuclei enlarged
 def: "Nuclei of specific cells are larger compared to control animals." [WB:WBPerson557]
-is_a: WBPhenotype:0001028 ! nuclear appearance variant
+synonym: "nuclear size increased" EXACT []
+is_a: WBPhenotype:0002607 ! nuclear size abnormal
 
 [Term]
 id: WBPhenotype:0001568
@@ -13192,7 +13193,8 @@ is_a: WBPhenotype:0000207 ! defecation cycle variant
 id: WBPhenotype:0001792
 name: nuclei small
 def: "Nuclei of specific cells are smaller compared to control animals." [WB:WBPerson557]
-is_a: WBPhenotype:0001028 ! nuclear appearance variant
+synonym: "nuclear size decreased" EXACT []
+is_a: WBPhenotype:0002607 ! nuclear size abnormal
 
 [Term]
 id: WBPhenotype:0001793
@@ -18422,6 +18424,31 @@ id: WBPhenotype:0002606
 name: necrotic cell death decreased
 def: "Animals exhibit reduced necrotic cell death, compared to controls." [WB:WBPaper00028466, WB:WBPaper00059770, WB:WBPerson2987]
 is_a: WBPhenotype:0000415 ! necrotic cell death variant
+
+[Term]
+id: WBPhenotype:0002607
+name: nuclear size abnormal
+def: "One or more cellular nuclei exhibit an abnormal size, compared to controls." [WB:WBPaper00042522, WB:WBPerson2987]
+synonym: "nuclear size phenotype" EXACT []
+synonym: "nuclear size variant" EXACT []
+is_a: WBPhenotype:0001028 ! nuclear appearance variant
+
+[Term]
+id: WBPhenotype:0002608
+name: humpback
+def: "A body elongation defect in which embryos develop abnormally bulged dorsal surfaces." [PMID:9531567, WB:WBPaper00003046]
+synonym: "Hmp" EXACT []
+is_a: WBPhenotype:0000242 ! body elongation defective
+is_a: WBPhenotype:0001136 ! embryonic morphology variant
+property_value: isDefinedBy "\"After standard ethylmethane sulfonate mutagenesis, we screened directly for mutant embryos that are defective in body elongation. We isolated 13 recessive, zygotic-lethal mutants that, in addition to failing to elongate properly, show abnormally bulged dorsal surfaces (Fig. 1B). We call this novel phenotype Hmp (humpback); this phenotype contrasts with previously described elongation-defective Pat mutants that display bulges at variable positions (Williams and Waterston, 1994).\"" xsd:string {xref="PMID:9531567"}
+
+[Term]
+id: WBPhenotype:0002609
+name: hammerhead
+def: "An anterior enclosure defect in which the anterior portion of the embryo, unenclosed by the hypodermis, bulges to form a hammerhead shape." [PMID:9531567, WB:WBPaper00003046, WB:WBPerson2987]
+synonym: "Hmr" EXACT [PMID:9531567]
+is_a: WBPhenotype:0002571 ! anterior enclosure defective
+property_value: isDefinedBy "\"However, in the remaining hmr-1 mutants the hypodermis fails to fully enclose the embryo. We call this phenotype Hmr (hammerhead; see Fig. 1F).\"" xsd:string {xref="PMID:9531567"}
 
 [Term]
 id: WBPhenotype:0004001
