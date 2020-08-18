@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-08-03/wbphenotype-base.owl
+data-version: wbphenotype/releases/2020-08-18/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -18171,6 +18171,12 @@ def: "An anterior enclosure defect in which the anterior portion of the embryo, 
 synonym: "Hmr" EXACT [PMID:9531567]
 is_a: WBPhenotype:0002571 ! anterior enclosure defective
 property_value: isDefinedBy "\"However, in the remaining hmr-1 mutants the hypodermis fails to fully enclose the embryo. We call this phenotype Hmr (hammerhead; see Fig. 1F).\"" xsd:string {xref="PMID:9531567"}
+
+[Term]
+id: WBPhenotype:0002610
+name: ectopic apoptosis
+def: "Apoptosis occurs in cells or cell types that do not undergo apoptosis in controls." [PMID:24115648, WB:WBPaper00044285, WB:WBPerson2987]
+is_a: WBPhenotype:0000730 ! apoptosis variant
 
 [Term]
 id: WBPhenotype:0004001
