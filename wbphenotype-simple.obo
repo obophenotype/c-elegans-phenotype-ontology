@@ -1,14 +1,15 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2020-09-21/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2020-12-15/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple
-property_value: dc-description "Ontology about C. elegans and other nematode phenotypes" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
+property_value: owl:versionInfo "2020-12-15" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -5750,6 +5751,7 @@ name: gametogenesis variant
 def: "Any variation in the processes that govern the generation and maintenance of gametes compared to control." [GO:0007276, WB:WBPerson2021]
 synonym: "gametogenesis abnormal" NARROW []
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0000624 ! reproductive system development variant
 
 [Term]
 id: WBPhenotype:0000775
@@ -6042,6 +6044,8 @@ name: marginal cell development variant
 def: "Any variation in the progression of a marginal cell over time, from initial commitment of the cell to a specific fate, to the fully functional differentiated cell compared to control. A marginal cell is a pharyngeal cell that connects the basement membrane to the apices of the triangle-shaped pharyngeal lumen." [WB:WBPerson2021]
 synonym: "marginal cell development abnormal" NARROW []
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0000619 ! epithelial system development variant
+is_a: WBPhenotype:0000707 ! pharyngeal development variant
 
 [Term]
 id: WBPhenotype:0000815
@@ -6049,6 +6053,7 @@ name: muscle cell development variant
 def: "Any variation in the progression of a muscle cell over time, from initial commitment of the cell to a specific fate, to the fully functional differentiated cell compared to control." [WB:WBPerson2021]
 synonym: "muscle cell development abnormal" NARROW []
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0000622 ! muscle system development variant
 
 [Term]
 id: WBPhenotype:0000816
@@ -6056,6 +6061,7 @@ name: neuron development variant
 def: "Variations in the progression of a neuron over time, from initial commitment of the cell to a specific fate, to the fully functional differentiated cell compared to control." [GO:0048666, WB:WBPerson2021]
 synonym: "neuron development abnormal" NARROW []
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0000623 ! nervous system development variant
 
 [Term]
 id: WBPhenotype:0000817
@@ -6063,6 +6069,7 @@ name: uterine vulval cell development variant
 def: "Variations in the progression of the epithelial cells that form the interface between the uterus and the vulva (likely via a multilayered set of flaps) over time from an initial condition to a later condition compared to control animals (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "uterine vulval cell development abnormal" NARROW []
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0000624 ! reproductive system development variant
 
 [Term]
 id: WBPhenotype:0000818
@@ -6709,6 +6716,7 @@ id: WBPhenotype:0000904
 name: muscle cell morphology variant
 def: "Any variation in the morphological appearance of muscle cells compared to control animals." [WB:cab]
 synonym: "muscle cell morphology abnormal" NARROW []
+is_a: WBPhenotype:0000603 ! muscle system morphology variant
 is_a: WBPhenotype:0002108 ! cell type morphology variant
 
 [Term]
@@ -6862,7 +6870,6 @@ id: WBPhenotype:0000923
 name: nonstriated muscle morphology variant
 def: "Any variation in the morphological appearance of the nonstriated muscle compared to control animals." [WB:WBPerson557]
 synonym: "nonstriated muscle morphology abnormal" NARROW []
-is_a: WBPhenotype:0000603 ! muscle system morphology variant
 is_a: WBPhenotype:0000904 ! muscle cell morphology variant
 
 [Term]
@@ -6870,7 +6877,6 @@ id: WBPhenotype:0000924
 name: striated muscle morphology variant
 def: "Any variation in the morphological appearance of the striated muscle compared to control animals." [WB:WBPerson557]
 synonym: "striated muscle morphology abnormal" NARROW []
-is_a: WBPhenotype:0000603 ! muscle system morphology variant
 is_a: WBPhenotype:0000904 ! muscle cell morphology variant
 
 [Term]
@@ -8483,6 +8489,7 @@ name: neuron migration variant
 def: "Any variation in the normal orderly movement of neurons from one site to another compared to control." [WB:WBPerson2021]
 synonym: "neuron migration abnormal" NARROW []
 is_a: WBPhenotype:0000594 ! cell migration variant
+is_a: WBPhenotype:0000816 ! neuron development variant
 
 [Term]
 id: WBPhenotype:0001141
@@ -9953,6 +9960,7 @@ id: WBPhenotype:0001345
 name: cytoskeleton organization biogenesis variant
 def: "Animals exhibit variations in the form, structure, composition or arrangement of any of the various filamentous elements that form the internal framework of cells, compared to control. The various elements of the cytoskeleton not only serve in the maintenance of cellular shape but also have roles in other cellular functions, including cellular movement, cell division, endocytosis, and movement of organelles." [GO:0005856, WB:WBPerson2021, WB:WBPerson557]
 synonym: "cytoskeleton organization biogenesis abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 
 [Term]
@@ -11146,6 +11154,7 @@ name: neuronal cell fate specification variant
 def: "Any variation in the processes that govern acquisition of neuronal cell fates compared to control." [WB:WBPerson2021]
 synonym: "neuronal cell fate specification abnormal" NARROW []
 is_a: WBPhenotype:0000216 ! cell fate specification variant
+is_a: WBPhenotype:0000816 ! neuron development variant
 
 [Term]
 id: WBPhenotype:0001511
@@ -11713,7 +11722,6 @@ def: "Animals exhibit variations in the formation and/or arrangement of actin, a
 comment: Possible XP.
 synonym: "actin organization biogenesis abnormal" NARROW []
 synonym: "actin organization biogenesis variant" EXACT []
-is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0001345 ! cytoskeleton organization biogenesis variant
 
 [Term]
@@ -11722,7 +11730,6 @@ name: microtubule organization biogenesis variant
 def: "Animals exhibit variations in the form, structure, composition or arrangement of a robust macromolecular array, composed primarily of tubulin, which forms long extended cytoskeletal elements compared to control (Wormatlas)." [GO:0000226, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 synonym: "microtubule organization biogenesis abnormal" NARROW []
-is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0001345 ! cytoskeleton organization biogenesis variant
 
 [Term]
@@ -15892,6 +15899,7 @@ is_a: WBPhenotype:0000424 ! antibody staining variant
 id: WBPhenotype:0002209
 name: hook development variant
 def: "Any variation in the development of the structure that lies on the ventral surface just anterior and central to the base of the spicule openings (small lump on the gubernaculum of the male tail) and contains a sensory structure called the hook sensillum, compared to control. In C. elegans the hook is necessary for proper male mating." [WB:WBPaper00003428, WB:WBPerson2987]
+is_a: WBPhenotype:0000624 ! reproductive system development variant
 is_a: WBPhenotype:0001297 ! male tail development variant
 
 [Term]
@@ -17797,6 +17805,7 @@ is_a: WBPhenotype:0002508 ! extra neuron
 id: WBPhenotype:0002510
 name: fewer neurons
 def: "Animals exhibit fewer neurons compared to control animals." [WB:WBPaper00053165, WB:WBPerson2987, WB:WBPerson3252]
+is_a: WBPhenotype:0000623 ! nervous system development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
 
 [Term]
@@ -18480,6 +18489,12 @@ synonym: "meiotic cytoplasmic streaming variant" EXACT []
 is_a: WBPhenotype:0002612 ! cytoplasmic streaming phenotype
 
 [Term]
+id: WBPhenotype:0002614
+name: derepression of heterchromatic gene silencing
+def: "Genes normally silenced within heterochromatin are abnoramally de-repressed and exhibit expression, unlike controls." [PMID:32251399, WB:WBPaper00059527, WB:WBPerson2439, WB:WBPerson2987]
+is_a: WBPhenotype:0000135 ! gene expression level high
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -18795,21 +18810,12 @@ property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
 
 [Typedef]
-id: dc-description
-name: description
-namespace: uberon
-xref: http://purl.org/dc/elements/1.1/description
-is_metadata_tag: true
-
-[Typedef]
 id: has_part
 name: has part
 name: has_part
 namespace: chebi_ontology
 namespace: external
-namespace: protein
 namespace: quality
-namespace: uberon
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 xref: BFO:0000051
@@ -18845,9 +18851,7 @@ id: part_of
 name: part of
 name: part_of
 namespace: external
-namespace: protein
 namespace: quality
-namespace: uberon
 namespace: worm_anatomy
 namespace: worm_development
 def: "a core relation that holds between a part and its whole" []
