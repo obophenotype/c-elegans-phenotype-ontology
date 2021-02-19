@@ -11,6 +11,7 @@ ERROR	duplicate_definition	organism	definition	Anatomical structure that is an i
 ERROR	duplicate_definition	muscle of iris	definition	.
 ERROR	duplicate_definition	early pharyngeal endoderm	definition	.
 ERROR	duplicate_definition	layer of sclera	definition	.
+ERROR	duplicate_definition	transitively anteriorly connected to	definition	.
 ERROR	duplicate_label	towards	rdfs:label	towards
 ERROR	duplicate_label	towards	rdfs:label	towards
 ERROR	duplicate_label	sterile	rdfs:label	sterile
@@ -156,6 +157,10 @@ ERROR	multiple_labels	has developmental contribution from	rdfs:label	has develop
 ERROR	multiple_labels	has developmental contribution from	rdfs:label	has developmental contribution from@en
 ERROR	multiple_labels	developmentally contributes to	rdfs:label	developmentally contributes to@en
 ERROR	multiple_labels	developmentally contributes to	rdfs:label	developmentally_contributes_to
+ERROR	multiple_labels	functionally related to	rdfs:label	functionally related to
+ERROR	multiple_labels	functionally related to	rdfs:label	functionally related to@en
+ERROR	multiple_labels	part of structure that is capable of	rdfs:label	part of structure that is capable of
+ERROR	multiple_labels	part of structure that is capable of	rdfs:label	part of structure that is capable of@en
 ERROR	multiple_labels	has potential to developmentally contribute to	rdfs:label	has potential to developmentally contribute to
 ERROR	multiple_labels	has potential to developmentally contribute to	rdfs:label	has potential to developmentally contribute to@en
 ERROR	multiple_labels	has potential to develop into	rdfs:label	has potential to develop into
@@ -179,6 +184,7 @@ WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	<(iff (
 WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	<(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] >
 WARN	annotation_whitespace	definition	editor note	<2012-04-05: Barry SmithThe official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions' is terrible.Can you fix to something like:A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.Alan RuttenbergYour proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. On the specifics of the proposed definition:We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with. @en>
 WARN	annotation_whitespace	contained in	editor note	<Intended meaning:domain: material entityrange: spatial region or site (immaterial continuant) @en>
+WARN	annotation_whitespace	spatially disjoint from	editor note	There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. @en
 WARN	annotation_whitespace	capable_of	definition	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
 WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
 WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
@@ -522,6 +528,8 @@ WARN	missing_definition	organic divalent group	definition
 WARN	missing_definition	organic univalent group	definition	
 WARN	missing_definition	organic polycyclic compound	definition	
 WARN	missing_definition	organic tricyclic compound	definition	
+WARN	missing_definition	biophysical role	definition	
+WARN	missing_definition	physiological role	definition	
 WARN	missing_definition	quinolinium ion	definition	
 WARN	missing_definition	isoflurane	definition	
 WARN	missing_definition	Trimethadione	definition	
@@ -546,6 +554,7 @@ WARN	missing_definition	kinase activity	definition
 WARN	missing_definition	transferase activity, transferring phosphorus-containing groups	definition	
 WARN	missing_definition	cell part	definition	
 WARN	missing_definition	editor note	definition	
+WARN	missing_definition	root	definition	
 WARN	missing_definition	cellular organisms	definition	
 WARN	missing_definition	Eukaryota	definition	
 WARN	missing_definition	Opisthokonta	definition	
@@ -569,6 +578,7 @@ WARN	missing_definition	immediately precedes	definition
 WARN	missing_definition	happens during	definition	
 WARN	missing_definition	ends_during	definition	
 WARN	missing_definition	continuous_with	definition	
+WARN	missing_definition	attaches_to_part_of	definition	
 WARN	missing_definition	drains	definition	
 WARN	missing_definition	temporally related to	definition	
 WARN	missing_definition	starts with	definition	
@@ -585,13 +595,18 @@ WARN	missing_definition	branching_part_of	definition
 WARN	missing_definition	immediately causally downstream of	definition	
 WARN	missing_definition	contributes to morphology of	definition	
 WARN	missing_definition	phosphorylates	definition	
+WARN	missing_definition	helper property (not for use in curation)	definition	
+WARN	missing_definition	is kinase activity	definition	
 WARN	missing_definition	existence starts and ends during	definition	
 WARN	missing_definition	transformation of	definition	
 WARN	missing_definition	immediate transformation of	definition	
 WARN	missing_definition	existence starts during or after	definition	
 WARN	missing_definition	existence ends during or before	definition	
+WARN	missing_definition	depends on	definition	
 WARN	missing_definition	causal relation between entities	definition	
 WARN	missing_definition	causally influenced by	definition	
+WARN	missing_definition	interaction relation helper property	definition	
+WARN	missing_definition	molecular interaction relation helper property	definition	
 WARN	missing_definition	has branching part	definition	
 WARN	missing_definition	luminal space of	definition	
 WARN	missing_definition	skeleton of	definition	
@@ -696,6 +711,7 @@ WARN	missing_definition	channels_from	definition
 WARN	missing_definition	channels_into	definition	
 WARN	missing_definition	protects	definition	
 WARN	missing_definition	subdivision of	definition	
+WARN	missing_definition	transitively_connected to	definition	
 WARN	missing_definition	description	definition	
 WARN	missing_definition	title	definition	
 WARN	missing_definition	license	definition	
@@ -917,6 +933,7 @@ INFO	lowercase_definition	acts upstream of	definition	c acts upstream of p if an
 INFO	lowercase_definition	acts upstream of or within	definition	c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.
 INFO	lowercase_definition	results in developmental progression of	definition	p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
 INFO	lowercase_definition	inheres in part of	definition	q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w.
+INFO	lowercase_definition	part of structure that is capable of	definition	this relation holds between c and p when c is part of some c', and c' is capable of p.
 INFO	lowercase_definition	involved in	definition	c involved_in p if and only if c enables some process p', and p' is part of p
 INFO	lowercase_definition	enabled by	definition	inverse of enables
 INFO	lowercase_definition	regulated by	definition	inverse of regulates
@@ -1107,74 +1124,14 @@ INFO	lowercase_definition	increased_in_magnitude_relative_to	definition	q1 incre
 INFO	lowercase_definition	reciprocal_of	definition	<q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.>
 INFO	lowercase_definition	anteriorly connected to	definition	x anteriorly_connected_to y iff the anterior part of x is connected to y. i.e. x connected_to y and x posterior_to y.
 INFO	lowercase_definition	conduit for	definition	x is a conduit for y iff y passes through the lumen of x.
+INFO	lowercase_definition	indirectly_supplies	definition	a indirectly_supplies s iff a has a branch and the branch supplies or indirectly supplies s
 INFO	lowercase_definition	posteriorly connected to	definition	x posteriorly_connected_to y iff the posterior part of x is connected to y. i.e. x connected_to y and x anterior_to y.
+INFO	lowercase_definition	transitively anteriorly connected to	definition	.
 INFO	missing_superclass	entity	rdfs:subClassOf	
-INFO	missing_superclass	electron	rdfs:subClassOf	
-INFO	missing_superclass	bleaching agent	rdfs:subClassOf	
-INFO	missing_superclass	antioxidant	rdfs:subClassOf	
-INFO	missing_superclass	cofactor	rdfs:subClassOf	
-INFO	missing_superclass	drug	rdfs:subClassOf	
-INFO	missing_superclass	metabolite	rdfs:subClassOf	
-INFO	missing_superclass	osmolyte	rdfs:subClassOf	
-INFO	missing_superclass	pesticide	rdfs:subClassOf	
-INFO	missing_superclass	detergent	rdfs:subClassOf	
-INFO	missing_superclass	nucleon	rdfs:subClassOf	
-INFO	missing_superclass	molecular messenger	rdfs:subClassOf	
-INFO	missing_superclass	antimicrobial agent	rdfs:subClassOf	
-INFO	missing_superclass	agrochemical	rdfs:subClassOf	
-INFO	missing_superclass	fuel	rdfs:subClassOf	
-INFO	missing_superclass	antimetabolite	rdfs:subClassOf	
-INFO	missing_superclass	xenobiotic	rdfs:subClassOf	
-INFO	missing_superclass	EC 2.7.7.6 (RNA polymerase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.1.1.8 (cholinesterase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.1.1.7 (acetylcholinesterase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	calcium channel modulator	rdfs:subClassOf	
-INFO	missing_superclass	Bronsted acid	rdfs:subClassOf	
-INFO	missing_superclass	Bronsted base	rdfs:subClassOf	
-INFO	missing_superclass	Lewis base	rdfs:subClassOf	
-INFO	missing_superclass	solvent	rdfs:subClassOf	
-INFO	missing_superclass	protein synthesis inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	antagonist	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.6.3.10 (H(+)/K(+)-exchanging ATPase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	ion transport inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.1.4.* (phosphoric diester hydrolase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	genotoxin	rdfs:subClassOf	
-INFO	missing_superclass	carcinogenic agent	rdfs:subClassOf	
-INFO	missing_superclass	allergen	rdfs:subClassOf	
-INFO	missing_superclass	teratogenic agent	rdfs:subClassOf	
-INFO	missing_superclass	neurotoxin	rdfs:subClassOf	
-INFO	missing_superclass	EC 2.7.11.1 (non-specific serine/threonine protein kinase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	mitogen	rdfs:subClassOf	
-INFO	missing_superclass	epitope	rdfs:subClassOf	
-INFO	missing_superclass	biomarker	rdfs:subClassOf	
-INFO	missing_superclass	DNA synthesis inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	adjuvant	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.5.1.98 (histone deacetylase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	oxidising agent	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.1.3.1 (alkaline phosphatase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	explosive	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.6.3.9 (Na(+)/K(+)-transporting ATPase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	protein kinase C agonist	rdfs:subClassOf	
-INFO	missing_superclass	EC 2.7.8.15 (UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	antimitotic	rdfs:subClassOf	
-INFO	missing_superclass	anti-inflammatory agent	rdfs:subClassOf	
-INFO	missing_superclass	apoptosis inducer	rdfs:subClassOf	
-INFO	missing_superclass	EC 1.17.4.1 (ribonucleoside-diphosphate reductase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	greenhouse gas	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.4.21.26 (prolyl oligopeptidase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 2.5.1.18 (glutathione transferase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 2.3.3.1 [citrate (Si)-synthase] inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.1.3.41 (4-nitrophenylphosphatase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 4.3.1.3 (histidine ammonia-lyase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	EC 3.5.1.4 (amidase) inhibitor	rdfs:subClassOf	
-INFO	missing_superclass	food component	rdfs:subClassOf	
-INFO	missing_superclass	environmental contaminant	rdfs:subClassOf	
-INFO	missing_superclass	refrigerant	rdfs:subClassOf	
-INFO	missing_superclass	flame retardant	rdfs:subClassOf	
-INFO	missing_superclass	skin lightening agent	rdfs:subClassOf	
-INFO	missing_superclass	autophagy inhibitor	rdfs:subClassOf	
+INFO	missing_superclass	subatomic particle	rdfs:subClassOf	
+INFO	missing_superclass	role	rdfs:subClassOf	
 INFO	missing_superclass	cellular_component	rdfs:subClassOf	
-INFO	missing_superclass	cellular organisms	rdfs:subClassOf	
+INFO	missing_superclass	root	rdfs:subClassOf	
 INFO	missing_superclass	processual entity	rdfs:subClassOf	
 INFO	missing_superclass	anatomical entity	rdfs:subClassOf	
 INFO	missing_superclass	nematode phenotype	rdfs:subClassOf	
