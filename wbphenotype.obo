@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2021-02-08
+data-version: releases/2021-02-18
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-02-08" xsd:string
+property_value: owl:versionInfo "2021-02-18" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -10317,6 +10317,7 @@ id: WBPhenotype:0001395
 name: body vacuole
 def: "Vacuoles accumulate in the body. A vacuole is a closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material." [GO:0005776, WB:WBPerson557]
 is_a: WBPhenotype:0000072 ! body morphology variant
+is_a: WBPhenotype:0002615 ! abnormal accumulation of vacuoles
 
 [Term]
 id: WBPhenotype:0001396
@@ -10552,6 +10553,7 @@ id: WBPhenotype:0001428
 name: intestinal vacuole
 def: "Vacuoles accumulate in the intestine." [WB:WBPaper00004718, WB:WBPaper00031894, WB:WBPerson712]
 is_a: WBPhenotype:0000710 ! intestinal morphology variant
+is_a: WBPhenotype:0002615 ! abnormal accumulation of vacuoles
 
 [Term]
 id: WBPhenotype:0001429
@@ -15979,6 +15981,7 @@ id: WBPhenotype:0002221
 name: pharyngeal vacuole
 def: "The pharynx contains cavities, possibly indicative of inappropriate cell death." [WB:WBPaper00004381, WB:WBPerson2987]
 is_a: WBPhenotype:0001363 ! head cavity
+is_a: WBPhenotype:0002615 ! abnormal accumulation of vacuoles
 
 [Term]
 id: WBPhenotype:0002222
@@ -18497,6 +18500,12 @@ id: WBPhenotype:0002614
 name: derepression of heterchromatic gene silencing
 def: "Genes normally silenced within heterochromatin are abnoramally de-repressed and exhibit expression, unlike controls." [PMID:32251399, WB:WBPaper00059527, WB:WBPerson2439, WB:WBPerson2987]
 is_a: WBPhenotype:0000135 ! gene expression level high
+
+[Term]
+id: WBPhenotype:0002615
+name: abnormal accumulation of vacuoles
+def: "Animals accumulate vacuoles in an abnormal manner in cells, tissues, and/or organs of the animal." [WB:WBPaper00041673, WB:WBPerson2987]
+is_a: WBPhenotype:0000535 ! organism morphology variant
 
 [Term]
 id: WBPhenotype:0004001
