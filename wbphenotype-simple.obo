@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-02-18/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2021-03-01/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-02-18" xsd:string
+property_value: owl:versionInfo "2021-03-01" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -18506,6 +18506,20 @@ id: WBPhenotype:0002615
 name: abnormal accumulation of vacuoles
 def: "Animals accumulate vacuoles in an abnormal manner in cells, tissues, and/or organs of the animal." [WB:WBPaper00041673, WB:WBPerson2987]
 is_a: WBPhenotype:0000535 ! organism morphology variant
+
+[Term]
+id: WBPhenotype:0002616
+name: cellular calcium level abnormal
+def: "Cells exhibit an abnormal intracellular level (amount) of calcium, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
+synonym: "cellular calcium level phenotype" EXACT []
+synonym: "cellular calcium level variant" EXACT []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
+
+[Term]
+id: WBPhenotype:0002617
+name: cytosolic calcium levels increased
+def: "Cells exhibit a higher level of calcium in the cytosol, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
+is_a: WBPhenotype:0002616 ! cellular calcium level abnormal
 
 [Term]
 id: WBPhenotype:0004001
