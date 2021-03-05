@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-03-01/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2021-03-05/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-03-01" xsd:string
+property_value: owl:versionInfo "2021-03-05" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -1392,12 +1392,14 @@ id: WBPhenotype:0000182
 name: apoptosis reduced
 def: "Any perturbation that causes a decrease in the frequency of cell death by apoptosis compared to control animals." [GO:0043065, WB:WBPerson2021]
 is_a: WBPhenotype:0000730 ! apoptosis variant
+is_a: WBPhenotype:0002620 ! cell death decreased
 
 [Term]
 id: WBPhenotype:0000183
 name: apoptosis increased
 def: "Any perturbation that causes an elevation in the frequency of cell death by apoptosis compared to control animals." [GO:0043066, WB:WBPerson2021]
 is_a: WBPhenotype:0000730 ! apoptosis variant
+is_a: WBPhenotype:0002619 ! cell death increased
 
 [Term]
 id: WBPhenotype:0000184
@@ -10330,6 +10332,7 @@ id: WBPhenotype:0001397
 name: necrotic cell death increased
 def: "Animals exhibit an increase in the cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents, compared to control." [GO:0070265, WB:WBPerson712]
 is_a: WBPhenotype:0000415 ! necrotic cell death variant
+is_a: WBPhenotype:0002619 ! cell death increased
 
 [Term]
 id: WBPhenotype:0001398
@@ -18440,6 +18443,7 @@ id: WBPhenotype:0002606
 name: necrotic cell death decreased
 def: "Animals exhibit reduced necrotic cell death, compared to controls." [WB:WBPaper00028466, WB:WBPaper00059770, WB:WBPerson2987]
 is_a: WBPhenotype:0000415 ! necrotic cell death variant
+is_a: WBPhenotype:0002620 ! cell death decreased
 
 [Term]
 id: WBPhenotype:0002607
@@ -18526,6 +18530,18 @@ id: WBPhenotype:0002618
 name: cytosolic calcium levels decreased
 def: "Cells exhibit a lower level of calcium in the cytosol, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
 is_a: WBPhenotype:0002616 ! cellular calcium level abnormal
+
+[Term]
+id: WBPhenotype:0002619
+name: cell death increased
+def: "Animals exhibit increased occurrence of cell death, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
+is_a: WBPhenotype:0000729 ! cell death variant
+
+[Term]
+id: WBPhenotype:0002620
+name: cell death decreased
+def: "Animals exhibit decreased occurrence of cell death, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
+is_a: WBPhenotype:0000729 ! cell death variant
 
 [Term]
 id: WBPhenotype:0004001

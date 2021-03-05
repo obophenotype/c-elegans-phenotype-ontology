@@ -6289,6 +6289,16 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001268"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000729",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002619"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000729",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002620"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000730",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000182"
@@ -15075,11 +15085,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-03-01"
+            "val": "2021-03-05"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-03-01/wbphenotype-simple-non-classified.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-03-05/wbphenotype-simple-non-classified.json",
         "xrefs": []
       },
       "nodes": [
@@ -80449,6 +80459,46 @@
             ],
             "definition": {
               "val": "Cells exhibit a lower level of calcium in the cytosol, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00041673",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002619",
+          "lbl": "cell death increased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit increased occurrence of cell death, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00041673",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002620",
+          "lbl": "cell death decreased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit decreased occurrence of cell death, compared to controls.",
               "xrefs": [
                 "WB:WBPaper00041673",
                 "WB:WBPerson2987"
