@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-03-05/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2021-03-10/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-03-05" xsd:string
+property_value: owl:versionInfo "2021-03-10" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -6458,7 +6458,6 @@ is_a: WBPhenotype:0000644 ! paralyzed
 id: WBPhenotype:0000869
 name: obsolete mitochondria morphology variant muscle
 def: "OBSOLETE." [WB:WBPerson557]
-synonym: "mitochondria morphology abnormal" NARROW []
 is_obsolete: true
 consider: WBPhenotype:0001401
 
@@ -6466,7 +6465,6 @@ consider: WBPhenotype:0001401
 id: WBPhenotype:0000870
 name: obsolete mitochondria morphology variant epithelial
 def: "OBSOLETE." [WB:WBPerson557]
-synonym: "mitochondria morphology abnormal" NARROW []
 is_obsolete: true
 consider: WBPhenotype:0001401
 
@@ -10361,8 +10359,6 @@ id: WBPhenotype:0001401
 name: mitochondria morphology variant
 def: "The morphological appearance of mitochondria is varied compared to control animals." [WB:cab]
 synonym: "mitochondria morphology abnormal" EXACT []
-synonym: "mitochondria morphology variant epithelial" NARROW []
-synonym: "mitochondria morphology variant muscle" NARROW []
 is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
@@ -17489,6 +17485,7 @@ name: hyperinduction of antimicrobial peptide expression after infection
 def: "Animals exhibit hyperinduction of expression of an antimicrobial peptide after an infection, compared to control animals." [WB:WBPaper00049531, WB:WBPerson168, WB:WBPerson2987]
 synonym: "Hipi" EXACT []
 is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
+is_a: WBPhenotype:0002539 ! antimicrobial gene expression increased
 
 [Term]
 id: WBPhenotype:0002460
@@ -17496,6 +17493,7 @@ name: no induction of antimicrobial peptide expression after infection
 def: "Animals exhibit no induction of expression of an antimicrobial peptide after an infection, unlike control animals." [WB:WBPaper00038424, WB:WBPaper00040946, WB:WBPaper00049531, WB:WBPerson168, WB:WBPerson2987]
 synonym: "Nipi" EXACT []
 is_a: WBPhenotype:0001800 ! pathogen induced antimicrobial gene expression variant
+is_a: WBPhenotype:0002621 ! antimicrobial gene expression reduced
 
 [Term]
 id: WBPhenotype:0002461
@@ -18542,6 +18540,12 @@ id: WBPhenotype:0002620
 name: cell death decreased
 def: "Animals exhibit decreased occurrence of cell death, compared to controls." [WB:WBPaper00041673, WB:WBPerson2987]
 is_a: WBPhenotype:0000729 ! cell death variant
+
+[Term]
+id: WBPhenotype:0002621
+name: antimicrobial gene expression reduced
+def: "Animals exhibit a decrease in the expression of one or more known, endogenous, antimicrobial genes, compared to controls." [WB:WBPaper00053771, WB:WBPerson2987]
+is_a: WBPhenotype:0002534 ! antimicrobial gene expression variant
 
 [Term]
 id: WBPhenotype:0004001
