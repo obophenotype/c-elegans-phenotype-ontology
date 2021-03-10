@@ -14524,6 +14524,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002539"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002534",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002621"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002535",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002211"
@@ -14537,6 +14542,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002536",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002537"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002539",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002459"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002545",
@@ -14849,6 +14859,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002618"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002621",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002460"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002043"
@@ -15094,11 +15109,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-03-05"
+            "val": "2021-03-10"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-03-05/wbphenotype-base.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-03-10/wbphenotype-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -38151,14 +38166,7 @@
                 "WB:WBPerson557"
               ]
             },
-            "deprecated": true,
-            "synonyms": [
-              {
-                "pred": "hasNarrowSynonym",
-                "val": "mitochondria morphology abnormal",
-                "xrefs": []
-              }
-            ]
+            "deprecated": true
           },
           "type": "CLASS"
         },
@@ -38182,14 +38190,7 @@
                 "WB:WBPerson557"
               ]
             },
-            "deprecated": true,
-            "synonyms": [
-              {
-                "pred": "hasNarrowSynonym",
-                "val": "mitochondria morphology abnormal",
-                "xrefs": []
-              }
-            ]
+            "deprecated": true
           },
           "type": "CLASS"
         },
@@ -52059,16 +52060,6 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "mitochondria morphology abnormal",
-                "xrefs": []
-              },
-              {
-                "pred": "hasNarrowSynonym",
-                "val": "mitochondria morphology variant epithelial",
-                "xrefs": []
-              },
-              {
-                "pred": "hasNarrowSynonym",
-                "val": "mitochondria morphology variant muscle",
                 "xrefs": []
               }
             ]
@@ -80510,6 +80501,26 @@
               "val": "Animals exhibit decreased occurrence of cell death, compared to controls.",
               "xrefs": [
                 "WB:WBPaper00041673",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002621",
+          "lbl": "antimicrobial gene expression reduced",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit a decrease in the expression of one or more known, endogenous, antimicrobial genes, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00053771",
                 "WB:WBPerson2987"
               ]
             }
