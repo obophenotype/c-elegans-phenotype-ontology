@@ -10449,6 +10449,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002005"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001346",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002622"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001348",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001674"
@@ -12487,6 +12492,16 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001835",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002141"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001840",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002622"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001840",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002623"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001847",
@@ -14864,6 +14879,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002460"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002621",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002623"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002043"
@@ -15109,11 +15129,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-04-09"
+            "val": "2021-05-05"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-04-09/wbphenotype-base.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-05-05/wbphenotype-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -80524,6 +80544,62 @@
                 "WB:WBPerson2987"
               ]
             }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002622",
+          "lbl": "decreased recruitment of actin upon wounding",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit decreased recruitment of actin to a site of injury, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00059214",
+                "WB:WBPerson2987",
+                "WB:WBPerson499"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "decreased recruitment of actin upon injury",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002623",
+          "lbl": "no induction of antimicrobial peptide expression after injury",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit no induction of expression of an antimicrobial peptide after an injury, unlike control animals.",
+              "xrefs": [
+                "WB:WBPaper00059214",
+                "WB:WBPerson2987",
+                "WB:WBPerson499"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "no induction of antimicrobial peptide expression after wounding",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },

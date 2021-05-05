@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-04-09/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2021-05-05/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-04-09" xsd:string
+property_value: owl:versionInfo "2021-05-05" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -18546,6 +18546,22 @@ id: WBPhenotype:0002621
 name: antimicrobial gene expression reduced
 def: "Animals exhibit a decrease in the expression of one or more known, endogenous, antimicrobial genes, compared to controls." [WB:WBPaper00053771, WB:WBPerson2987]
 is_a: WBPhenotype:0002534 ! antimicrobial gene expression variant
+
+[Term]
+id: WBPhenotype:0002622
+name: decreased recruitment of actin upon wounding
+def: "Animals exhibit decreased recruitment of actin to a site of injury, compared to controls." [WB:WBPaper00059214, WB:WBPerson2987, WB:WBPerson499]
+synonym: "decreased recruitment of actin upon injury" EXACT []
+is_a: WBPhenotype:0001346 ! actin cytoskeleton dynamics phenotype
+is_a: WBPhenotype:0001840 ! response to injury variant
+
+[Term]
+id: WBPhenotype:0002623
+name: no induction of antimicrobial peptide expression after injury
+def: "Animals exhibit no induction of expression of an antimicrobial peptide after an injury, unlike control animals." [WB:WBPaper00059214, WB:WBPerson2987, WB:WBPerson499]
+synonym: "no induction of antimicrobial peptide expression after wounding" EXACT []
+is_a: WBPhenotype:0001840 ! response to injury variant
+is_a: WBPhenotype:0002621 ! antimicrobial gene expression reduced
 
 [Term]
 id: WBPhenotype:0004001
