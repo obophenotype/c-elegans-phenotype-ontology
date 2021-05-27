@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-05-06/wbphenotype-simple-non-classified.owl
+data-version: wbphenotype/releases/2021-05-27/wbphenotype-simple-non-classified.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-simple-non-classified
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. e
 property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-05-06" xsd:string
+property_value: owl:versionInfo "2021-05-27" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -663,8 +663,8 @@ is_a: WBPhenotype:0000754 ! L4 larval development variant
 
 [Term]
 id: WBPhenotype:0000085
-name: swollen intestine
-def: "The intestinal lumen is expanded and can often be shown to be filled with bacteria." [WB:WBPaper00026641, WB:WBPerson712]
+name: swollen intestinal lumen
+def: "The intestinal lumen is expanded and can often be shown to be filled with bacteria. This swelling is distinct from distension of the entire intestine (intestinal edema)." [WB:WBPaper00026641, WB:WBPerson712]
 is_a: WBPhenotype:0000710 ! intestinal morphology variant
 
 [Term]
@@ -18273,6 +18273,60 @@ def: "Animals exhibit no induction of expression of an antimicrobial peptide aft
 synonym: "no induction of antimicrobial peptide expression after wounding" EXACT []
 is_a: WBPhenotype:0001840 ! response to injury variant
 is_a: WBPhenotype:0002621 ! antimicrobial gene expression reduced
+
+[Term]
+id: WBPhenotype:0002624
+name: EdU incorporation reduced
+def: "Cells display reduced incorporation of the thymidine analogue 5-Ethynyl-2'-deoxyuridine (EdU), suggesting reduced cell proliferation. Incorporation of EdU is an indication of active DNA synthesis and thus an indication of cells proceeding through the cell cycle." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+is_a: WBPhenotype:0000173 ! cell proliferation reduced
+
+[Term]
+id: WBPhenotype:0002625
+name: head degeneration
+def: "Animals exhibit visible, structural degeneration of the head, unlike control animals." [WB:WBPerson2987, WB:WBPerson36183] {comment="PMID:32973031"}
+is_a: WBPhenotype:0000532 ! body region morphology variant
+
+[Term]
+id: WBPhenotype:0002626
+name: attachment to substrate abnormal
+def: "Animals exhibit an abnormal attachment (or lack thereof) to a substrate, compared to controls. For some parasitic worms, attachment to host tissue surfaces, like endothelium, is a necessary behavior for their life cycle." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+is_a: WBPhenotype:0000576 ! organism physiology phenotype
+
+[Term]
+id: WBPhenotype:0002627
+name: in vitro attachment to substrate abnormal
+def: "Animals exhibit an abnormal attachment (or lack thereof) to a substrate in vitro, compared to controls." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+is_a: WBPhenotype:0002626 ! attachment to substrate abnormal
+
+[Term]
+id: WBPhenotype:0002628
+name: in vitro attachment to substrate reduced
+def: "Animals exhibit a reduced attachment to a substrate in vitro, compared to controls." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+is_a: WBPhenotype:0002627 ! in vitro attachment to substrate abnormal
+
+[Term]
+id: WBPhenotype:0002629
+name: intestinal edema
+def: "Animals exhibit edema (swelling) of the intestine, compared to control animals. This swelling is distinct from distension of the intestinal lumen (swollen intestinal lumen)." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+synonym: "intestinal oedema" EXACT []
+synonym: "swollen intestine" EXACT []
+is_a: WBPhenotype:0000710 ! intestinal morphology variant
+
+[Term]
+id: WBPhenotype:0002630
+name: epithelial system degeneration
+def: "Animals exhibit degeneration of the epithelial system (skin, integument or tegument), compared to control animals." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+synonym: "integument degeneration" EXACT []
+synonym: "tegument degeneration" EXACT []
+is_a: WBPhenotype:0000600 ! epithelial system morphology variant
+
+[Term]
+id: WBPhenotype:0002631
+name: tissue edema
+def: "Animals exhibit edema (swelling) of one or more tissues, compared to control animals." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
+synonym: "tissue oedema" EXACT []
+synonym: "tissue swelling" EXACT []
+is_a: WBPhenotype:0002556 ! tissue phenotype
 
 [Term]
 id: WBPhenotype:0004001
