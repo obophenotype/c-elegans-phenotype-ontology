@@ -3344,6 +3344,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000912"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000520",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002631"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000521",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000278"
@@ -4982,6 +4987,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000619",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000814"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000619",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002635"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000620",
@@ -10494,6 +10504,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002542"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001348",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002632"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001349",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001350"
@@ -11332,6 +11347,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001480",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000337"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001485",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002634"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001495",
@@ -12384,6 +12404,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002202"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001748",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002633"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001757",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001758"
@@ -13142,6 +13167,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002046",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002242"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002046",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002637"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002047",
@@ -14584,6 +14614,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002459"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002542",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002636"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002545",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000402"
@@ -15160,11 +15195,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-05-27"
+            "val": "2021-06-01"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-05-27/wbphenotype-simple-non-classified.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-06-01/wbphenotype-simple-non-classified.json",
         "xrefs": []
       },
       "nodes": [
@@ -54344,12 +54379,12 @@
             },
             "synonyms": [
               {
-                "pred": "hasNarrowSynonym",
+                "pred": "hasExactSynonym",
                 "val": "ER stress response abnormal",
                 "xrefs": []
               },
               {
-                "pred": "hasRelatedSynonym",
+                "pred": "hasExactSynonym",
                 "val": "endoplasmic reticulum stress response abnormal",
                 "xrefs": []
               }
@@ -80834,6 +80869,149 @@
                 "xrefs": []
               }
             ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002632",
+          "lbl": "chromatin accessibility abnormal",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit cells with an abnormal degree of chromatin accessibility, compared to controls, detected using techniques such as ATAC-seq (Assay for Transposase-Accessible Chromatin using sequencing).",
+              "xrefs": [
+                "WB:WBPaper00061371",
+                "WB:WBPerson2987",
+                "WB:WBPerson712"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "chromatin accessibility phenotype",
+                "xrefs": []
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "chromatin accessibility variant",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002633",
+          "lbl": "pharynx ingressed",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit a pharynx that recedes into the animal's interior such that the animal cannot feed.",
+              "xrefs": [
+                "WB:WBPaper00055692",
+                "WB:WBPerson2987",
+                "WB:WBPerson43879"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "Pin",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002634",
+          "lbl": "ER stress resistant",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit a resistance to endoplasmic reticulum (ER) stressors such as an accumulation of unfolded proteins or the presence of chemicals that induce ER stress, such as dithiothreitol (DDT) or tunicamycin, compared to controls. This may mean that animals fare better than controls in terms of survival or some metric of health when exposed to an inducer of ER stress.",
+              "xrefs": [
+                "WB:WBPaper00050013",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002635",
+          "lbl": "epidermal shedding",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals shed fragments of epidermis into the surrounding environment, unlike controls. In embryos, these fragments can be seen in the extra-embryonic space.",
+              "xrefs": [
+                "WB:WBPaper00052963",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002636",
+          "lbl": "detachment of chromatin from nuclear periphery",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "One or more cells of the animal exhibit chromatin that has become detached from the nuclear periphery, unlike controls.",
+              "xrefs": [
+                "WB:WBPaper00048885",
+                "WB:WBPerson14737",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002637",
+          "lbl": "iron levels decreased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals (or cells of the animal) exhibit reduced levels of iron in the body (or cells) compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00055104",
+                "WB:WBPerson2987",
+                "WB:WBPerson35689"
+              ]
+            }
           },
           "type": "CLASS"
         },

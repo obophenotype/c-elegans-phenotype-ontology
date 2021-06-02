@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-05-27/wbphenotype-base.owl
+data-version: wbphenotype/releases/2021-06-01/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -9,7 +9,7 @@ property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontol
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-05-27" xsd:string
+property_value: owl:versionInfo "2021-06-01" xsd:string
 
 [Term]
 id: PATO:0000956
@@ -10789,8 +10789,8 @@ is_a: WBPhenotype:0001441 ! aqueous positive chemotaxis defective
 id: WBPhenotype:0001485
 name: ER stress response variant
 def: "Animals exhibit variations in their response to the presence of unfolded proteins in the endoplasmic reticulum (ER) or to other ER-related stressors compared to control." [GO:0030968]
-synonym: "endoplasmic reticulum stress response abnormal" RELATED []
-synonym: "ER stress response abnormal" NARROW []
+synonym: "endoplasmic reticulum stress response abnormal" EXACT []
+synonym: "ER stress response abnormal" EXACT []
 is_a: WBPhenotype:0000142 ! cell stress response variant
 
 [Term]
@@ -18332,7 +18332,47 @@ name: tissue edema
 def: "Animals exhibit edema (swelling) of one or more tissues, compared to control animals." [PMID:32973031, WB:WBPerson2987, WB:WBPerson36183]
 synonym: "tissue oedema" EXACT []
 synonym: "tissue swelling" EXACT []
+is_a: WBPhenotype:0000520 ! morphology phenotype
 is_a: WBPhenotype:0002556 ! tissue phenotype
+
+[Term]
+id: WBPhenotype:0002632
+name: chromatin accessibility abnormal
+def: "Animals exhibit cells with an abnormal degree of chromatin accessibility, compared to controls, detected using techniques such as ATAC-seq (Assay for Transposase-Accessible Chromatin using sequencing)." [WB:WBPaper00061371, WB:WBPerson2987, WB:WBPerson712]
+synonym: "chromatin accessibility phenotype" EXACT []
+synonym: "chromatin accessibility variant" EXACT []
+is_a: WBPhenotype:0001348 ! chromosome morphology variant
+
+[Term]
+id: WBPhenotype:0002633
+name: pharynx ingressed
+def: "Animals exhibit a pharynx that recedes into the animal's interior such that the animal cannot feed." [WB:WBPaper00055692, WB:WBPerson2987, WB:WBPerson43879]
+synonym: "Pin" EXACT []
+is_a: WBPhenotype:0001748 ! pharynx unattached
+
+[Term]
+id: WBPhenotype:0002634
+name: ER stress resistant
+def: "Animals exhibit a resistance to endoplasmic reticulum (ER) stressors such as an accumulation of unfolded proteins or the presence of chemicals that induce ER stress, such as dithiothreitol (DDT) or tunicamycin, compared to controls. This may mean that animals fare better than controls in terms of survival or some metric of health when exposed to an inducer of ER stress." [WB:WBPaper00050013, WB:WBPerson2987]
+is_a: WBPhenotype:0001485 ! ER stress response variant
+
+[Term]
+id: WBPhenotype:0002635
+name: epidermal shedding
+def: "Animals shed fragments of epidermis into the surrounding environment, unlike controls. In embryos, these fragments can be seen in the extra-embryonic space." [WB:WBPaper00052963, WB:WBPerson2987]
+is_a: WBPhenotype:0000619 ! epithelial system development variant
+
+[Term]
+id: WBPhenotype:0002636
+name: detachment of chromatin from nuclear periphery
+def: "One or more cells of the animal exhibit chromatin that has become detached from the nuclear periphery, unlike controls." [WB:WBPaper00048885, WB:WBPerson14737, WB:WBPerson2987]
+is_a: WBPhenotype:0002542 ! intranuclear chromatin localization variant
+
+[Term]
+id: WBPhenotype:0002637
+name: iron levels decreased
+def: "Animals (or cells of the animal) exhibit reduced levels of iron in the body (or cells) compared to controls." [WB:WBPaper00055104, WB:WBPerson2987, WB:WBPerson35689]
+is_a: WBPhenotype:0002046 ! iron homeostasis variant
 
 [Term]
 id: WBPhenotype:0004001
