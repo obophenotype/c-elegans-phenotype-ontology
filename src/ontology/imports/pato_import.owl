@@ -8,6 +8,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://purl.obolibrary.org/obo/uberon/core#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -18,9 +19,9 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/imports/pato_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2021-06-01/imports/pato_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-05-26/pato.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-01</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2021-07-06/imports/pato_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-06-15/pato.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -202,6 +203,36 @@
     <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000003 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000003"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000007 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000007"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000008 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBPROP_0000012 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UBPROP_0000012"/>
     
 
 
@@ -445,6 +476,38 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/uberon/core#efo_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/uberon/core#efo_slim">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/uberon/core#pheno_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/uberon/core#pheno_slim">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/uberon/core#uberon_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/uberon/core#uberon_slim">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/uberon/core#upper_level -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/uberon/core#upper_level">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -509,9 +572,27 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#date_retrieved -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date_retrieved"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#external_class -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#external_class"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#external_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#external_ontology"/>
     
 
 
@@ -579,6 +660,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
@@ -593,9 +680,27 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#notes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#notes"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ontology"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#source -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#source"/>
     
 
 
@@ -614,6 +719,12 @@
     <!-- http://www.w3.org/2002/07/owl#deprecated -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depicted_by -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depicted_by"/>
     
 
 
@@ -662,6 +773,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
@@ -699,6 +811,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_part</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
@@ -731,14 +844,34 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000062"/>
         </owl:propertyChainAxiom>
         <obo:IAO_0000111 xml:lang="en">preceded by</obo:IAO_0000111>
+        <obo:IAO_0000115>X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) &lt;= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">is preceded by</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">preceded_by</obo:IAO_0000118>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:preceded_by</dc:source>
+        <oboInOwl:hasDbXref>BFO:0000062</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>is preceded by</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>takes place after</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>preceded_by</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <oboInOwl:shorthand>preceded_by</oboInOwl:shorthand>
         <rdfs:label xml:lang="en">preceded by</rdfs:label>
+        <rdfs:label>preceded_by</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>is preceded by</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SIO:000249</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>takes place after</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Allen:precedes</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -755,7 +888,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         </owl:propertyChainAxiom>
         <obo:IAO_0000111 xml:lang="en">precedes</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) &lt;= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BFO:0000063</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>precedes</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <oboInOwl:shorthand>precedes</oboInOwl:shorthand>
+        <rdfs:label>precedes</rdfs:label>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -831,6 +969,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <oboInOwl:hasDbXref>RO:0000053</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>bearer_of</oboInOwl:id>
+        <oboInOwl:shorthand>bearer_of</oboInOwl:shorthand>
+        <rdfs:label>bearer of</rdfs:label>
         <rdfs:label xml:lang="en">bearer of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -871,6 +1014,18 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002002 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002002">
+        <oboInOwl:hasDbXref>RO:0002002</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_boundary</oboInOwl:id>
+        <oboInOwl:shorthand>has_boundary</oboInOwl:shorthand>
+        <rdfs:label>has boundary</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1037,11 +1192,35 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002087">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+        <obo:IAO_0000115>X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)</obo:IAO_0000115>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>starts_at_end_of</obo:IAO_0000118>
+        <obo:UBPROP_0000001>A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251].</obo:UBPROP_0000001>
+        <oboInOwl:hasDbXref>RO:0002087</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>directly preceded by</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>is directly preceded by</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>is immediately preceded by</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>starts_at_end_of</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>immediately_preceded_by</oboInOwl:id>
+        <oboInOwl:shorthand>immediately_preceded_by</oboInOwl:shorthand>
         <rdfs:comment xml:lang="en">X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
         <rdfs:label xml:lang="en">immediately preceded by</rdfs:label>
+        <rdfs:label>immediately_preceded_by</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/SIO_000251"/>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/UBPROP_0000001"/>
+        <owl:annotatedTarget>A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251].</owl:annotatedTarget>
+        <oboInOwl:source>SIO:000251</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>is immediately preceded by</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SIO:000251</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -1110,7 +1289,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000116>The definition of &apos;has component&apos; is still under discussion. The challenge is in providing a definition that does not imply transitivity.</obo:IAO_0000116>
         <obo:IAO_0000232 xml:lang="en">For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like &apos;has part exactly 5 digit, you would instead use has_component exactly 5 digit.</obo:IAO_0000232>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <oboInOwl:hasDbXref>RO:0002180</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_component</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <oboInOwl:shorthand>has_component</oboInOwl:shorthand>
+        <rdfs:label>has component</rdfs:label>
         <rdfs:label xml:lang="en">has component</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Componency"/>
     </owl:ObjectProperty>
@@ -1255,6 +1439,79 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.</rdfs:comment>
         <rdfs:label xml:lang="en">temporally related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002223 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002223">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002224"/>
+        <obo:IAO_0000115>Relation between occurrents, shares a start boundary with.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>RO:0002223</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>starts</oboInOwl:id>
+        <oboInOwl:shorthand>starts</oboInOwl:shorthand>
+        <rdfs:label>starts</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002223"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Relation between occurrents, shares a start boundary with.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:hasDbXref>Allen:starts</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002224 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002224">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <oboInOwl:hasDbXref>RO:0002224</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>starts_with</oboInOwl:id>
+        <oboInOwl:shorthand>starts_with</oboInOwl:shorthand>
+        <rdfs:label>starts with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002229 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002229">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <obo:IAO_0000115>Relation between occurrents, shares an end boundary with.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>RO:0002229</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>finishes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ends</oboInOwl:id>
+        <oboInOwl:shorthand>ends</oboInOwl:shorthand>
+        <rdfs:label>ends</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002229"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Relation between occurrents, shares an end boundary with.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <oboInOwl:hasDbXref>Allen:starts</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:finishes</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002230 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002230">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <oboInOwl:hasDbXref>RO:0002230</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ends_with</oboInOwl:id>
+        <oboInOwl:shorthand>ends_with</oboInOwl:shorthand>
+        <rdfs:label>ends with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1921,6 +2178,54 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002564"/>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <rdfs:label>is kinase activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002496 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002496">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002496"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002496"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002496"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000062"/>
+        </owl:propertyChainAxiom>
+        <oboInOwl:hasDbXref>RO:0002496</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>existence_starts_during_or_after</oboInOwl:id>
+        <oboInOwl:shorthand>existence_starts_during_or_after</oboInOwl:shorthand>
+        <rdfs:label>existence starts during or after</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002497 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002497">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002497"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002497"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002497"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000063"/>
+        </owl:propertyChainAxiom>
+        <oboInOwl:hasDbXref>RO:0002497</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>existence_ends_during_or_before</oboInOwl:id>
+        <oboInOwl:shorthand>existence_ends_during_or_before</oboInOwl:shorthand>
+        <rdfs:label>existence ends during or before</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2600,6 +2905,16 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CL_0000540 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000540">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cl.owl"/>
+        <rdfs:label xml:lang="en">neuron</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0003674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
@@ -2645,7 +2960,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -2682,7 +2997,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
@@ -2739,7 +3054,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedTarget>horsetail nucleus</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:al</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:15030757</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2775,7 +3090,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005635"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The double lipid bilayer enclosing the nucleus and separating its contents from the rest of the cytoplasm; includes the intermembrane space, a gap of width 20-40 nm (also called the perinuclear space).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198547684</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2807,7 +3122,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198547684</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2845,7 +3160,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. Cells contain one or several vacuoles, that may have different functions from each other. Vacuoles have a diverse array of functions. They can act as a storage organelle for nutrients or waste products, as a degradative compartment, as a cost-effective way of increasing cell size, and as a homeostatic regulator controlling both turgor pressure and pH of the cytosol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2949,8 +3264,8 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cilia</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198547684</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:16824949</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:17009929</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20144998</oboInOwl:hasDbXref>
@@ -2995,7 +3310,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815316194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0815316194</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3033,7 +3348,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3103,7 +3418,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedTarget>A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815316194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0815316194</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3244,7 +3559,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Either of the lipid bilayers that surround the nucleus and form the nuclear envelope; excludes the intermembrane space.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pz</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pz</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3276,7 +3591,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pz</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pz</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3295,7 +3610,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pz</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pz</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3330,7 +3645,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032838"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3837,7 +4152,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0120025"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A prolongation or process extending from a cell and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6200,7 +6515,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000694"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a process which starts earlier than the natural start time or the reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATO:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9889,7 +10204,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002247"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s having or lacking of substances produced by living organisms that have a color resulting from selective color absorption.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Biological_pigment</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Biological_pigment</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10504,6 +10819,1186 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000000">
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <obo:IAO_0000115>An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000000</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>processual entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>span:ProcessualEntity</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002496"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002497"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism&apos;s own genome.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://dbpedia.org/ontology/AnatomicalStructure"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/362889002"/>
+        <oboInOwl:hasDbXref>AAO:0010825</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EMAPA:0</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00007001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:305751</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:67135</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GAID:781</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:0003000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:D000825</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0000037</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001823</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0001759</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:0003000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFA:0000037</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>biological structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>connected biological structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000061</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>anatomical structure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism&apos;s own genome.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>connected biological structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002496"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Anatomical structure that performs a specific function or group of functions [WP].</obo:IAO_0000115>
+        <obo:UBPROP_0000001>Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions.</obo:UBPROP_0000001>
+        <obo:UBPROP_0000012>CARO v1 does not include a generic &apos;organ&apos; class, only simple and compound organ. CARO v2 may include organ, see https://github.com/obophenotype/caro/issues/4</obo:UBPROP_0000012>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Organ_(anatomy)"/>
+        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0178784"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/272625005"/>
+        <oboInOwl:hasDbXref>BIRNLEX:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0020004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0000634</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EMAPA:35949</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ENVO:01000162</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:67498</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:0003001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C13018</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OpenCyc:Mx4rv5XMb5wpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OpenCyc:Mx4rwP3iWpwpEbGdrcN5Y29ycA</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0178784</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0003760</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>anatomical unit</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>body organ</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>element</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000062</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>organ</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Anatomical structure that performs a specific function or group of functions [WP].</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Organ_(anatomy)"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/UBPROP_0000001"/>
+        <owl:annotatedTarget>Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions.</owl:annotatedTarget>
+        <oboInOwl:source>GO:0048513</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0178784</owl:annotatedTarget>
+        <oboInOwl:source>ncithesaurus:Organ</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>element</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The stage of development at which the animal is fully formed, including immaturity and maturity. Includes both sexually immature stage, and adult stage.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>adult stage</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>BTO:0001043</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0001272</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00005369</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000041</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XtroDO:0000084</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>fully formed animal stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>juvenile-adult stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000066</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <rdfs:label>fully formed stage</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/566</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000066"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The stage of development at which the animal is fully formed, including immaturity and maturity. Includes both sexually immature stage, and adult stage.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000066"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+        <obo:IAO_0000115>A life cycle stage that starts with fertilization and ends with the fully formed embryo.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/296280003"/>
+        <oboInOwl:hasDbXref>BilaDO:0000002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EV:0300001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00005289</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:72652</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000022</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000092</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000102</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000012</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>embryonic stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>embryogenesis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000068</oboInOwl:id>
+        <rdfs:label>embryo stage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A life cycle stage that starts with fertilization and ends with the fully formed embryo.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002229"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000104"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>End of the life of an organism.</obo:IAO_0000115>
+        <obo:UBPROP_0000012>ncit:Death is an outcome</obo:UBPROP_0000012>
+        <oboInOwl:hasDbXref>XAO:0000437</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XtroDO:0000085</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>death</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000071</oboInOwl:id>
+        <rdfs:label>death stage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>End of the life of an organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>XAO:0000437</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/UBPROP_0000012"/>
+        <owl:annotatedTarget>ncit:Death is an outcome</owl:annotatedTarget>
+        <oboInOwl:external_ontology>ncit</oboInOwl:external_ontology>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>stage succeeding embryo, including mature structure</obo:IAO_0000115>
+        <obo:UBPROP_0000008>In birds, the postnatal stage begins when the beak penetrates the shell (i.e., external pipping) (Brown et al. 1997)</obo:UBPROP_0000008>
+        <oboInOwl:hasDbXref>BilaDO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000014</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000024</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000022</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000093</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000103</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>postembryonic stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>post-hatching stage</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>postembryonic</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000092</oboInOwl:id>
+        <rdfs:label>post-embryonic stage</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/344</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>stage succeeding embryo, including mature structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002224"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002230"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000071"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An entire span of an organism&apos;s life, commencing with the zygote stage and ending in the death of the organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FBdv:00000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ncithesaurus:Life</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>entire life cycle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>entire lifespan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>life</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>lifespan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000104</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>life cycle</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/532</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000104"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An entire span of an organism&apos;s life, commencing with the zygote stage and ending in the death of the organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000104"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A spatiotemporal region encompassing some part of the life cycle of an organism.</obo:IAO_0000115>
+        <obo:IAO_0000116>this class represents a proper part of the life cycle of an organism. The class &apos;life cycle&apos; should not be placed here</obo:IAO_0000116>
+        <obo:UBPROP_0000012>the WBls class &apos;all stages&apos; belongs here as it is the superclass of other WBls stages</obo:UBPROP_0000012>
+        <obo:UBPROP_0000012>we map the ZFS unknown stage here as it is logically equivalent to saying *some* life cycle stage</obo:UBPROP_0000012>
+        <oboInOwl:hasDbXref>BILS:0000105</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0000399</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00007012</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:24120</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OlatDv:0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PdumDv:0000090</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0100000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ncithesaurus:Developmental_Stage</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>developmental stage</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>stage</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000105</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>life cycle stage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A spatiotemporal region encompassing some part of the life cycle of an organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002223"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000104"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A stage at which the organism is a single cell produced by means of sexual reproduction.</obo:IAO_0000115>
+        <obo:UBPROP_0000003>As in all metazoans, eumetazoan development begins with a fertilized egg, or zygote.[well established][VHOG]</obo:UBPROP_0000003>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Zygote"/>
+        <oboInOwl:hasDbXref>BILS:0000106</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0001322</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA:27</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00005288</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C12601</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PdumDv:0000100</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0000745</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>1-cell stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fertilized egg stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>one cell stage</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>fertilized egg stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>one-cell stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>zygote</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>zygotum</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000106</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <rdfs:label>zygote stage</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EMAPA_16033"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stage at which the organism is a single cell produced by means of sexual reproduction.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Zygote"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/UBPROP_0000003"/>
+        <owl:annotatedTarget>As in all metazoans, eumetazoan development begins with a fertilized egg, or zygote.[well established][VHOG]</owl:annotatedTarget>
+        <oboInOwl:date_retrieved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-09-17</oboInOwl:date_retrieved>
+        <oboInOwl:external_class>VHOG:0000745</oboInOwl:external_class>
+        <oboInOwl:ontology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHOG</oboInOwl:ontology>
+        <oboInOwl:source rdf:resource="http://bgee.unil.ch/"/>
+        <oboInOwl:source>ISBN:978-0030259821 Ruppert EE, Fox RS, Barnes RD, Invertebrate zoology: a functional evolutionary approach (2003) p.107</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>fertilized egg stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0000854</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>one-cell stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>VHOG:0000745</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>zygote</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>VHOG:0000745</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>zygotum</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Zygote"/>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#LATIN"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000106"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The first few specialized divisions of an activated animal egg; Stage consisting of division of cells in the early embryo. The zygotes of many species undergo rapid cell cycles with no significant growth, producing a cluster of cells the same size as the original zygote. The different cells derived from cleavage are called blastomeres and form a compact mass called the morula. Cleavage ends with the formation of the blastula.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Cleavage_(embryo)"/>
+        <oboInOwl:hasDbXref>BILS:0000107</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0001290</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00000054</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MESH:A16.254.270</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000020</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PdumDv:0000200</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0000046</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000107</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <rdfs:label>cleavage stage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000107"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The first few specialized divisions of an activated animal egg; Stage consisting of division of cells in the early embryo. The zygotes of many species undergo rapid cell cycles with no significant growth, producing a cluster of cells the same size as the original zygote. The different cells derived from cleavage are called blastomeres and form a compact mass called the morula. Cleavage ends with the formation of the blastula.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Cleavage_(embryo)"/>
+        <oboInOwl:hasDbXref>GO:0040016</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000107"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence.</obo:IAO_0000115>
+        <obo:IAO_0000116>consider adding a preceding stage &apos;morula stage&apos; as part of cleavage</obo:IAO_0000116>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Blastula"/>
+        <oboInOwl:hasDbXref>BILS:0000108</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0001282</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000021</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OpenCyc:Mx4rEetFnKP2EdqAAAACs4vPlg</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0000045</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000108</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <rdfs:label>blastula stage</rdfs:label>
+        <foaf:depicted_by rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://upload.wikimedia.org/wikipedia/commons/c/c6/Blastulation.png</foaf:depicted_by>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000108"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Blastula"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A stage defined by complex and coordinated series of cellular movements that occurs at the end of cleavage during embryonic development of most animals. The details of gastrulation vary from species to species, but usually result in the formation of the three primary germ layers, ectoderm, mesoderm and endoderm.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BILS:0000109</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0001296</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBdv:00005317</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000013</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000019</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBls:0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFS:0000047</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>blastocystis trilaminaris stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trilaminar blastocyst stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trilaminar blastoderm stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trilaminar disk stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trilaminar germ stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trilaminar stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000109</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <rdfs:label>gastrula stage</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000108"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <oboInOwl:source>BILS</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stage defined by complex and coordinated series of cellular movements that occurs at the end of cleavage during embryonic development of most animals. The details of gastrulation vary from species to species, but usually result in the formation of the three primary germ layers, ectoderm, mesoderm and endoderm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007369</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>blastocystis trilaminaris stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trilaminar blastocyst stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trilaminar blastoderm stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trilaminar disk stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trilaminar germ stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trilaminar stage</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000109"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Staged defined by the formation of a tube from the flat layer of ectodermal cells known as the neural plate. This will give rise to the central nervous system.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>BILS:0000110</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000012</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000017</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:1000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000110</oboInOwl:id>
+        <rdfs:label>neurula stage</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/343</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000110"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Staged defined by the formation of a tube from the flat layer of ectodermal cells known as the neural plate. This will give rise to the central nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0001841</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000105"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000110"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A stage at which the ectoderm, endoderm, and mesoderm develop into the internal organs of the organism.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Organogenesis"/>
+        <oboInOwl:hasDbXref>BILS:0000111</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BilaDO:0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HsapDv:0000015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MmusDv:0000018</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OGES:000032</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>segmentation stage</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000111</oboInOwl:id>
+        <rdfs:label>organogenesis stage</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/issues/533</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stage at which the ectoderm, endoderm, and mesoderm develop into the internal organs of the organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Organogenesis"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <obo:IAO_0000115>Anatomical entity that has mass.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>AAO:0010264</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00007016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:67165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000006</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0001836</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001826</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0001721</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000465</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>material anatomical entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Anatomical entity that has mass.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0001-9114-8737"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000466 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000466">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <obo:IAO_0000115>Anatomical entity that has no mass.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>AAO:0010265</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00007015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:67112</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0001835</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001827</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0001727</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>immaterial physical anatomical entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0000466</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>immaterial anatomical entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000466"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Anatomical entity that has no mass.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0001-9114-8737"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000466"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>immaterial physical anatomical entity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FMA:67112</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000467 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000467">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002496"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000111"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Multicellular, connected anatomical structure that has multiple organs as parts and whose parts work together to achieve some shared function.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>system</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Organ_system"/>
+        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C0460002"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/278195005"/>
+        <oboInOwl:hasDbXref>AAO:0000007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BIRNLEX:14</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BSA:0000049</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CALOHA:TS-2088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA:392</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EMAPA:16103</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EV:0100000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00004856</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:7149</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C12919</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OpenCyc:Mx4rCWM0QCtDEdyAAADggVbxzQ</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0001439</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001831</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C0460002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0001725</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0005746</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0005763</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:0003002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFA:0001439</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>galen:AnatomicalSystem</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>body system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>connected anatomical system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>organ system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>anatomical systems</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000467</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>anatomical system</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EHDAA2_0001330"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Multicellular, connected anatomical structure that has multiple organs as parts and whose parts work together to achieve some shared function.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0000011</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>system</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0048731</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C0460002</owl:annotatedTarget>
+        <oboInOwl:source>ncithesaurus:Organ_System</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>body system</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BIRNLEX:14</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>connected anatomical system</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0000011</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>anatomical systems</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ZFA:0001439</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/uberon/core#PLURAL"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0000468 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000468">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <obo:IAO_0000115>Anatomical structure that is an individual member of a species and consists of more than one cell.</obo:IAO_0000115>
+        <obo:IAO_0000116>TODO - split body and mc organism? body continues after death stage</obo:IAO_0000116>
+        <obo:UBPROP_0000007>organismal</obo:UBPROP_0000007>
+        <oboInOwl:hasBroadSynonym>organism</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Multi-cellular_organism"/>
+        <oboInOwl:hasDbXref rdf:resource="http://www.snomedbrowser.com/Codes/Details/243928005"/>
+        <oboInOwl:hasDbXref>AAO:0010026</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000191</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000012</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BIRNLEX:18</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BSA:0000038</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BTO:0000042</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000012</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EFO:0002906</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003103</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0003191</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA:1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EMAPA:25765</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EV:0100016</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:256135</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000012</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C13041</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TADS:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0001094</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001832</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0000671</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0007833</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:0003004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFA:0001094</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>galen:Organism</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ncithesaurus:Whole_Organism</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>multi-cellular organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>animal</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>Koerper</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>body</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>whole body</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>whole organism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:0000468</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#efo_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#pheno_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#uberon_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>multicellular organism</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Anatomical structure that is an individual member of a species and consists of more than one cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://en.wikipedia.org/wiki/Multi-cellular_organism"/>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0001-9114-8737"/>
+        <oboInOwl:hasDbXref>CARO:0000012</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>organism</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FBbt:00000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VHOG:0000671</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0007833</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>multi-cellular organism</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0000012</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>animal</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0000042</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Koerper</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0001489</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>body</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>AEO:0000103</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BIRNLEX:18</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:256135</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C13041</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>whole body</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>BTO:0001489</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000468"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>whole organism</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FBbt:00000001</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0001062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001062">
+        <obo:IAO_0000115>Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C1515976"/>
+        <oboInOwl:hasDbXref>AAO:0010841</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>AEO:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BILA:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BIRNLEX:6</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2:0002229</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:10000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt_root:00000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:62955</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>HAO:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C12219</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TAO:0100000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGMA:0001822</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C1515976</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WBbt:0000100</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>XAO:0000000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ZFA:0100000</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0001062</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>anatomical entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0001-9114-8737"/>
+        <oboInOwl:hasDbXref>FMA:62955</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C1515976</owl:annotatedTarget>
+        <oboInOwl:source>ncithesaurus:Anatomic_Structure_System_or_Substance</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0006984 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0006984">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010199"/>
+        <obo:IAO_0000115>A two dimensional anatomical structure that is the boundary between an anatomical structure and an anatomical substance, an anatomical space or the organism&apos;s environment. Examples include the surface of your skin, the surface of the lining of your gut; the surface of the endothelium of you aorta that is in contact with blood.n</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="http://linkedlifedata.com/resource/umls/id/C1515977"/>
+        <oboInOwl:hasDbXref>BILA:0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:0001002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EHDAA2_RETIRED:0003192</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FMA:24137</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCIT:C34022</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UMLS:C1515977</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0006984</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:comment>Old definition: &apos;Non-material anatomical entity of two dimensions, that is demarcated by anatomical lines or points on the external or internal surfaces of anatomical structures.&apos; Note, in the new definition, the space referred to is not necessarily an anatomical space. It may be the outside of an organism.</rdfs:comment>
+        <rdfs:label>anatomical surface</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010199"/>
+        <oboInOwl:notes>via morphological boundary in CARO</oboInOwl:notes>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A two dimensional anatomical structure that is the boundary between an anatomical structure and an anatomical substance, an anatomical space or the organism&apos;s environment. Examples include the surface of your skin, the surface of the lining of your gut; the surface of the endothelium of you aorta that is in contact with blood.n</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0001002</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006984"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>UMLS:C1515977</owl:annotatedTarget>
+        <oboInOwl:source>ncithesaurus:Anatomic_Surface</oboInOwl:source>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0010000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <obo:IAO_0000115>An anatomical structure that has more than one cell as a part.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>CARO:0010000</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FBbt:00100313</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>multicellular structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0010000</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:label>multicellular anatomical structure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An anatomical structure that has more than one cell as a part.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0010000</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>multicellular structure</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FBbt:00100313</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0010199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000466"/>
+        <obo:IAO_0000115>An anatomical boundary that corresponds to some physical discontinuity.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>CARO:0001004</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>UBERON:0010199</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
+        <rdfs:comment>One might argue that all boundaries are actually fiat in the sense that there must be some fiat element at a fine enough scale of granularity. This ontology choses to ignore this issue as below the level of granularity relevant to anatomy. (DOS121102)</rdfs:comment>
+        <rdfs:label>bona-fide anatomical boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010199"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000466"/>
+        <oboInOwl:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO</oboInOwl:source>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010199"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An anatomical boundary that corresponds to some physical discontinuity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>CARO:0001004</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -10641,6 +12136,24 @@ For example, A and B may be gene products and binding of B by A positively regul
         </owl:equivalentClass>
     </owl:Class>
     <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+            </owl:Restriction>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000104"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0000000"/>
             <owl:Restriction>
@@ -10702,6 +12215,16 @@ For example, A and B may be gene products and binding of B by A positively regul
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000068"/>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000092"/>
+            </owl:Restriction>
+        </owl:disjointWith>
     </owl:Restriction>
     
 
@@ -10775,238 +12298,9 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#w"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#w"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002018"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#w"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MF(X)-directly_regulates-&gt;MF(Y)-enabled_by-&gt;GP(Z) =&gt; MF(Y)-has_input-&gt;GP(Y) e.g. if &apos;protein kinase activity&apos;(X) directly_regulates &apos;protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infer input from direct reg</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#z"/>
-                        <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-                                <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
-                                <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-                                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-                                                <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
-                        <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:comment>GP(X)-enables-&gt;MF(Y)-has_part-&gt;MF(Z) =&gt; GP(X) enables MF(Z),
-e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase coupled transporter activity&apos; has_part &apos;ATPase activity&apos; then GP(X) enables &apos;ATPase activity&apos;</rdfs:comment>
-        <rdfs:label>enabling an MF enables its parts</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GP(X)-enables-&gt;MF(Y)-part_of-&gt;BP(Z) =&gt; GP(X) involved_in BP(Z) e.g. if X enables &apos;protein kinase activity&apos; and Y &apos;part of&apos; &apos;signal tranduction&apos; then X involved in &apos;signal transduction&apos;</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">involved in BP</rdfs:label>
+        <rdfs:comment>GP(X)-enables-&gt;MF(Y)-part_of-&gt;BP(Z) =&gt; GP(X) involved_in BP(Z) e.g. if X enables &apos;protein kinase activity&apos; and Y &apos;part of&apos; &apos;signal tranduction&apos; then X involved in &apos;signal transduction&apos;</rdfs:comment>
+        <rdfs:label>involved in BP</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -11724,6 +13018,235 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002018"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#w"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>MF(X)-directly_regulates-&gt;MF(Y)-enabled_by-&gt;GP(Z) =&gt; MF(Y)-has_input-&gt;GP(Y) e.g. if &apos;protein kinase activity&apos;(X) directly_regulates &apos;protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z</rdfs:comment>
+        <rdfs:label>infer input from direct reg</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
+                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#z"/>
+                        <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
+                                <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
+                                <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+                                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+                                                <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#y"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <swrl:argument1 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#x"/>
+                        <swrl:argument2 rdf:resource="http://purl.obolibrary.org/obo/ro.owl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>GP(X)-enables-&gt;MF(Y)-has_part-&gt;MF(Z) =&gt; GP(X) enables MF(Z),
+e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase coupled transporter activity&apos; has_part &apos;ATPase activity&apos; then GP(X) enables &apos;ATPase activity&apos;</rdfs:comment>
+        <rdfs:label>enabling an MF enables its parts</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
                         <swrl:argument1 rdf:resource="urn:swrl#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl#z"/>
                     </rdf:Description>

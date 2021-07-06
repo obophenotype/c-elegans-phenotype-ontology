@@ -60,6 +60,10 @@ ERROR	multiple_definitions	cellular_component	definition	<A location, relative t
 ERROR	multiple_definitions	cellular_component	definition	The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together.
 ERROR	multiple_definitions	protein-containing complex	definition	A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together.
 ERROR	multiple_definitions	protein-containing complex	definition	Any macromolecular complex composed of two or more polypeptide subunits, which may or may not be identical. Protein complexes may have other associated non-protein prosthetic groups, such as nucleotides, metal ions or carbohydrate groups.
+ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
+ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
+ERROR	multiple_definitions	bearer of	definition	Inverse of characteristic_of@en
+ERROR	multiple_definitions	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
 ERROR	multiple_definitions	only in taxon	definition	<S only_in_taxon T iff: S SubClassOf in_taxon only T>
 ERROR	multiple_definitions	only in taxon	definition	<U only_in_taxon T: U is a feature found in only in organisms of species of taxon T. The feature cannot be found in an organism of any species outside of (not subsumed by) that taxon. Down-propagates in U hierarchy, up-propagates in T hierarchy (species taxonomy). Implies applicable_to_taxon.>
 ERROR	multiple_definitions	only in taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
@@ -67,6 +71,8 @@ ERROR	multiple_definitions	connected to	definition	<Binary relationship: x conne
 ERROR	multiple_definitions	connected to	definition	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
 ERROR	multiple_definitions	adjacent_to	definition	x adjacent to y if and only if x and y share a boundary.
 ERROR	multiple_definitions	adjacent_to	definition	<x adjacent_to y iff: x and y share a boundary>
+ERROR	multiple_definitions	inheres in part of	definition	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
+ERROR	multiple_definitions	inheres in part of	definition	q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w.
 ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y
 ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y@en
 ERROR	multiple_definitions	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y
@@ -111,11 +117,18 @@ ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term@e
 ERROR	multiple_labels	has ontology root term	rdfs:label	preferred_root
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by@en
+ERROR	multiple_labels	inheres in	rdfs:label	characteristic of@en
+ERROR	multiple_labels	inheres in	rdfs:label	inheres in@en
 ERROR	multiple_labels	bearer of	rdfs:label	bearer of
 ERROR	multiple_labels	bearer of	rdfs:label	bearer of@en
+ERROR	multiple_labels	bearer of	rdfs:label	has characteristic@en
 ERROR	multiple_labels	participates in	rdfs:label	participates in
 ERROR	multiple_labels	participates in	rdfs:label	participates in@en
 ERROR	multiple_labels	participates in	rdfs:label	participates_in
+ERROR	multiple_labels	has quality	rdfs:label	has quality@en
+ERROR	multiple_labels	has quality	rdfs:label	has_quality
+ERROR	multiple_labels	has role	rdfs:label	has role
+ERROR	multiple_labels	has role	rdfs:label	has role@en
 ERROR	multiple_labels	location_of	rdfs:label	location of@en
 ERROR	multiple_labels	location_of	rdfs:label	location_of
 ERROR	multiple_labels	contains	rdfs:label	contains
@@ -153,6 +166,8 @@ ERROR	multiple_labels	has developmental contribution from	rdfs:label	has develop
 ERROR	multiple_labels	has developmental contribution from	rdfs:label	has developmental contribution from@en
 ERROR	multiple_labels	developmentally contributes to	rdfs:label	developmentally contributes to@en
 ERROR	multiple_labels	developmentally contributes to	rdfs:label	developmentally_contributes_to
+ERROR	multiple_labels	inheres in part of	rdfs:label	characteristic of part of@en
+ERROR	multiple_labels	inheres in part of	rdfs:label	inheres in part of@en
 ERROR	multiple_labels	functionally related to	rdfs:label	functionally related to
 ERROR	multiple_labels	functionally related to	rdfs:label	functionally related to@en
 ERROR	multiple_labels	part of structure that is capable of	rdfs:label	part of structure that is capable of
@@ -185,7 +200,9 @@ WARN	annotation_whitespace	capable_of	definition	A relation between a material e
 WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
 WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
 WARN	missing_definition	spatial region	definition	
+WARN	missing_definition	disposition	definition	
 WARN	missing_definition	object	definition	
+WARN	missing_definition	function	definition	
 WARN	missing_definition	immaterial entity	definition	
 WARN	missing_definition	anatomical entity	definition	
 WARN	missing_definition	connected anatomical structure	definition	
@@ -558,10 +575,23 @@ WARN	missing_definition	transferase activity, transferring phosphorus-containing
 WARN	missing_definition	cell part	definition	
 WARN	missing_definition	editor note	definition	
 WARN	missing_definition	root	definition	
+WARN	missing_definition	Chromadorea	definition	
+WARN	missing_definition	Ecdysozoa	definition	
 WARN	missing_definition	cellular organisms	definition	
+WARN	missing_definition	Rhabditina	definition	
+WARN	missing_definition	Rhabditomorpha	definition	
 WARN	missing_definition	Eukaryota	definition	
 WARN	missing_definition	Opisthokonta	definition	
 WARN	missing_definition	Metazoa	definition	
+WARN	missing_definition	Bilateria	definition	
+WARN	missing_definition	Protostomia	definition	
+WARN	missing_definition	Rhabditoidea	definition	
+WARN	missing_definition	Peloderinae	definition	
+WARN	missing_definition	Eumetazoa	definition	
+WARN	missing_definition	Nematoda	definition	
+WARN	missing_definition	Rhabditida	definition	
+WARN	missing_definition	Caenorhabditis	definition	
+WARN	missing_definition	Rhabditidae	definition	
 WARN	missing_definition	organism	definition	
 WARN	missing_definition	qualitative	definition	
 WARN	missing_definition	growth rate	definition	
@@ -569,7 +599,6 @@ WARN	missing_definition	semi-fertile	definition
 WARN	missing_definition	magnitude	definition	
 WARN	missing_definition	increased magnitude	definition	
 WARN	missing_definition	physical quality of a process	definition	
-WARN	missing_definition	has role	definition	
 WARN	missing_definition	contained in	definition	
 WARN	missing_definition	contains	definition	
 WARN	missing_definition	has boundary	definition	
@@ -863,6 +892,8 @@ WARN	duplicate_scoped_synonym	protein-containing complex	has_exact_synonym	prote
 WARN	duplicate_scoped_synonym	protein-containing complex	has_narrow_synonym	protein-protein complex
 WARN	duplicate_scoped_synonym	Eukaryota	has_exact_synonym	eukaryotes
 WARN	duplicate_scoped_synonym	Eukaryota	has_related_synonym	eukaryotes
+WARN	duplicate_scoped_synonym	Nematoda	has_exact_synonym	nematodes
+WARN	duplicate_scoped_synonym	Nematoda	has_related_synonym	nematodes
 WARN	duplicate_scoped_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
 WARN	duplicate_scoped_synonym	immediately preceded by	has_exact_synonym	starts_at_end_of
 WARN	duplicate_scoped_synonym	zygote stage	has_exact_synonym	fertilized egg stage
@@ -909,10 +940,19 @@ INFO	lowercase_definition	posterior_to	definition	x posterior_to y iff x is furt
 INFO	lowercase_definition	ventral_to	definition	x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that bisects an organism from back (e.g. spinal column) to front (e.g. belly).
 INFO	lowercase_definition	lipid	definition	'Lipids' is a loosely defined term for substances of biological origin that are soluble in nonpolar solvents. They consist of saponifiable lipids, such as glycerides (fats and oils) and phospholipids, as well as nonsaponifiable lipids, principally steroids.
 INFO	lowercase_definition	catecholamine	definition	4-(2-Aminoethyl)pyrocatechol [4-(2-aminoethyl)benzene-1,2-diol] and derivatives formed by substitution.
+INFO	lowercase_definition	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
 INFO	lowercase_definition	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
 INFO	lowercase_definition	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
 INFO	lowercase_definition	participates in	definition	a relation between a continuant and a process, in which the continuant is somehow involved in the process@en
 INFO	lowercase_definition	has participant	definition	a relation between a process and a continuant, in which the continuant is somehow involved in the process@en
+INFO	lowercase_definition	function of	definition	a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	quality of	definition	a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	role of	definition	a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	has function	definition	a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	has quality	definition	a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	has role	definition	a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	has disposition	definition	a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	disposition of	definition	inverse of has disposition
 INFO	lowercase_definition	location_of	definition	a relation between two independent continuants, the location and the target, in which the target is entirely within the location@en
 INFO	lowercase_definition	located in	definition	a relation between two independent continuants, the target and the location, in which the target is entirely within the location@en
 INFO	lowercase_definition	has component process	definition	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
@@ -937,6 +977,7 @@ INFO	lowercase_definition	developmentally_induced_by	definition	<t1 developmenta
 INFO	lowercase_definition	acts upstream of	definition	c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes.
 INFO	lowercase_definition	acts upstream of or within	definition	c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.
 INFO	lowercase_definition	results in developmental progression of	definition	p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
+INFO	lowercase_definition	inheres in part of	definition	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
 INFO	lowercase_definition	inheres in part of	definition	q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w.
 INFO	lowercase_definition	part of structure that is capable of	definition	this relation holds between c and p when c is part of some c', and c' is capable of p.
 INFO	lowercase_definition	involved in	definition	c involved_in p if and only if c enables some process p', and p' is part of p

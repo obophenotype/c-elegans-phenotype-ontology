@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-06-01/wbphenotype-base.owl
+data-version: wbphenotype/releases/2021-07-06/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -9,7 +9,7 @@ property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontol
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-06-01" xsd:string
+property_value: owl:versionInfo "2021-07-06" xsd:string
 
 [Term]
 id: PATO:0000956
@@ -18373,6 +18373,12 @@ id: WBPhenotype:0002637
 name: iron levels decreased
 def: "Animals (or cells of the animal) exhibit reduced levels of iron in the body (or cells) compared to controls." [WB:WBPaper00055104, WB:WBPerson2987, WB:WBPerson35689]
 is_a: WBPhenotype:0002046 ! iron homeostasis variant
+
+[Term]
+id: WBPhenotype:0002638
+name: increased susceptibility to oomycete infection
+def: "Animals are more prone to infection, sickness and/or death caused by oomycete pathogens compared to control animals." [WB:WBPaper00060871, WB:WBPerson2987, WB:WBPerson53483]
+is_a: WBPhenotype:0001013 ! pathogen susceptibility increased
 
 [Term]
 id: WBPhenotype:0004001

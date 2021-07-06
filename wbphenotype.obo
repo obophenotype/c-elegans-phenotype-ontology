@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2021-06-01
+data-version: releases/2021-07-06
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-06-01" xsd:string
+property_value: owl:versionInfo "2021-07-06" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -18661,6 +18661,12 @@ def: "Animals (or cells of the animal) exhibit reduced levels of iron in the bod
 is_a: WBPhenotype:0002046 ! iron homeostasis variant
 
 [Term]
+id: WBPhenotype:0002638
+name: increased susceptibility to oomycete infection
+def: "Animals are more prone to infection, sickness and/or death caused by oomycete pathogens compared to control animals." [WB:WBPaper00060871, WB:WBPerson2987, WB:WBPerson53483]
+is_a: WBPhenotype:0001013 ! pathogen susceptibility increased
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -18936,25 +18942,36 @@ is_a: WBPhenotype:0000730 ! apoptosis variant
 
 [Typedef]
 id: RO:0000052
+name: characteristic of
 name: inheres in
+def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
 def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
+comment: Note that this relation was previously called "inheres in", but was changed to be called "characteristic of" because BFO2 uses "inheres in" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.
 property_value: IAO:0000111 "inheres in" xsd:string
 property_value: IAO:0000112 "this fragility inheres in this vase" xsd:string
+property_value: IAO:0000112 "this fragility is a characteristic of this vase" xsd:string
 property_value: IAO:0000112 "this red color inheres in this apple" xsd:string
+property_value: IAO:0000112 "this red color is a characteristic of this apple" xsd:string
 property_value: IAO:0000116 "A dependent inheres in its bearer at all times for which the dependent exists." xsd:string
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
+is_functional: true
 is_a: RO:0002314 ! inheres in part of
 
 [Typedef]
 id: RO:0002314
+name: characteristic of part of
 name: inheres in part of
+def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
 def: "q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w." []
+property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
 property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of inheres in part of" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso "defining-property-chains-involving-reflexivity"
+property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
 holds_over_chain: RO:0000052 part_of
 transitive_over: part_of ! part_of
 
@@ -19017,6 +19034,7 @@ property_value: IAO:0000112 "my body has part my brain (continuant parthood, two
 property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
 property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
 property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
@@ -19063,6 +19081,7 @@ property_value: IAO:0000112 "my brain is part of my body (continuant parthood, t
 property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
 property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
 property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
 property_value: IAO:0000118 "part_of" xsd:string
