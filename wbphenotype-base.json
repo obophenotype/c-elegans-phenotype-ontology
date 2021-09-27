@@ -2581,6 +2581,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000315",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002644"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000315",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0004026"
         },
         {
@@ -3427,6 +3432,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000523",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002399"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000523",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002642"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000524",
@@ -4312,6 +4322,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000577",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002603"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000577",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002639"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000578",
@@ -9741,7 +9756,7 @@
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001211",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001212"
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002640"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001213",
@@ -14964,6 +14979,21 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002628"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002640",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001212"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002640",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002641"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002642",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002643"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002043"
@@ -15209,11 +15239,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-07-06"
+            "val": "2021-09-27"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-07-06/wbphenotype-base.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-09-27/wbphenotype-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -47529,7 +47559,7 @@
               }
             ],
             "definition": {
-              "val": "The physical strength or function of the cuticle is varies from that observed for control animals.",
+              "val": "The physical strength or function of the cuticle varies from that observed for control animals.",
               "xrefs": [
                 "WB:WBPerson712"
               ]
@@ -81047,6 +81077,144 @@
                 "WB:WBPerson53483"
               ]
             }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002639",
+          "lbl": "microbiome composition abnormal",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit specific or general variations in the composition of the microbiome at a body site compared to controls.",
+              "xrefs": [
+                "WB:WBPerson10314",
+                "WB:WBPerson2987"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "microbiome composition variant",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002640",
+          "lbl": "cuticle integrity decreased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "The physical strength or integrity of the cuticle is decreased compared to that observed for control animals.",
+              "xrefs": [
+                "WB:WBPaper00061220",
+                "WB:WBPerson2987"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002641",
+          "lbl": "cuticle permeability increased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "The cuticle of animals becomes more permeable to dyes or stains, such as Hoechst 33258, or other substances compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00061220",
+                "WB:WBPerson2987",
+                "WB:WBPerson3900"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002642",
+          "lbl": "chemical accumulation abnormal",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exposed to an exogenous chemical exhibit an abnormal accumulation of this chemical in the body of the animals, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00061220",
+                "WB:WBPerson2987",
+                "WB:WBPerson3900"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002643",
+          "lbl": "chemical accumulation increased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exposed to an exogenous chemical exhibit an abnormal increase in accumulation of this chemical in the body of the animals, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00061220",
+                "WB:WBPerson2987",
+                "WB:WBPerson3900"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002644",
+          "lbl": "precipice response variant",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals do not respond to the edge or gap in the medium surface they were supported on in the same manner as controls. In Mitchell et al., the precipice response was defined to be that within 2 seconds of the nose moving off the edge of the agar chunk, the worm begins a reversal that completes at least one full sine wave.",
+              "xrefs": [
+                "WB:WBPaper00061677",
+                "WB:WBPerson2987",
+                "WB:WBPerson712"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "precipice response abnormal",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
