@@ -1714,6 +1714,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002512"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000146",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002645"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000147",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0000148"
@@ -16444,6 +16449,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002643"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0002645",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002646"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002043"
@@ -16680,11 +16690,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-09-27"
+            "val": "2021-10-25"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-09-27/wbphenotype-simple.json",
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2021-10-25/wbphenotype-simple.json",
         "xrefs": []
       },
       "nodes": [
@@ -46647,7 +46657,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/WBPhenotype_0001105",
-          "lbl": "P0 spindle position defective early emb",
+          "lbl": "P0 spindle position abnormal",
           "meta": {
             "basicPropertyValues": [
               {
@@ -46670,7 +46680,7 @@
               },
               {
                 "pred": "hasNarrowSynonym",
-                "val": "P0 spindle position abnormal",
+                "val": "P0 spindle position phenotype",
                 "xrefs": []
               }
             ]
@@ -83291,6 +83301,65 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "precipice response abnormal",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002645",
+          "lbl": "thermorecovery abnormal",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "comments": [
+              "Exposure of wild type worms to a 6 h heat shock at 33°C led to a 20% decrease in worms with normal movement after a 48 h recovery at 20°C."
+            ],
+            "definition": {
+              "val": "Animals exhibit an abnormal recovery from heat stress, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00060029",
+                "WB:WBPerson14884",
+                "WB:WBPerson2987"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "heat stress recovery abnormal",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002646",
+          "lbl": "thermorecovery reduced",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit reduced recovery from heat stress compared to controls. Reduced recovery may be indicated, for example, by a decrease in normal movement, such as uncoordinated or jerky movement or paralysis, compared to controls.",
+              "xrefs": [
+                "WB:WBPaper00060029",
+                "WB:WBPerson14884",
+                "WB:WBPerson2987"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "heat stress recovery reduced",
                 "xrefs": []
               }
             ]
