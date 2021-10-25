@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2021-09-27
+data-version: releases/2021-10-25
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-09-27" xsd:string
+property_value: owl:versionInfo "2021-10-25" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -8221,10 +8221,10 @@ is_a: WBPhenotype:0001103 ! spindle absent early emb
 
 [Term]
 id: WBPhenotype:0001105
-name: P0 spindle position defective early emb
+name: P0 spindle position abnormal
 def: "Altered P0 spindle placement causes either a symmetric first division, a division in which P1 is larger than AB, or a division in which the asymmetry is exaggerated such that AB is much larger than normal." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
-synonym: "P0 spindle position abnormal" NARROW []
+synonym: "P0 spindle position phenotype" NARROW []
 is_a: WBPhenotype:0000762 ! spindle position defective early emb
 
 [Term]
@@ -18703,6 +18703,21 @@ name: precipice response variant
 def: "Animals do not respond to the edge or gap in the medium surface they were supported on in the same manner as controls. In Mitchell et al., the precipice response was defined to be that within 2 seconds of the nose moving off the edge of the agar chunk, the worm begins a reversal that completes at least one full sine wave." [WB:WBPaper00061677, WB:WBPerson2987, WB:WBPerson712]
 synonym: "precipice response abnormal" EXACT []
 is_a: WBPhenotype:0000315 ! mechanosensation variant
+
+[Term]
+id: WBPhenotype:0002645
+name: thermorecovery abnormal
+def: "Animals exhibit an abnormal recovery from heat stress, compared to controls." [WB:WBPaper00060029, WB:WBPerson14884, WB:WBPerson2987]
+comment: Exposure of wild type worms to a 6 h heat shock at 33°C led to a 20% decrease in worms with normal movement after a 48 h recovery at 20°C. {xref="WB:WBPaper00060029"}
+synonym: "heat stress recovery abnormal" EXACT []
+is_a: WBPhenotype:0000146 ! organism temperature response variant
+
+[Term]
+id: WBPhenotype:0002646
+name: thermorecovery reduced
+def: "Animals exhibit reduced recovery from heat stress compared to controls. Reduced recovery may be indicated, for example, by a decrease in normal movement, such as uncoordinated or jerky movement or paralysis, compared to controls." [WB:WBPaper00060029, WB:WBPerson14884, WB:WBPerson2987]
+synonym: "heat stress recovery reduced" EXACT []
+is_a: WBPhenotype:0002645 ! thermorecovery abnormal
 
 [Term]
 id: WBPhenotype:0004001
