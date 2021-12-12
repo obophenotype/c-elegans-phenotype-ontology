@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-10-25/wbphenotype-base.owl
+data-version: wbphenotype/releases/2021-12-12/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -9,7 +9,7 @@ property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontol
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-10-25" xsd:string
+property_value: owl:versionInfo "2021-12-12" xsd:string
 
 [Term]
 id: PATO:0000956
@@ -16839,6 +16839,7 @@ id: WBPhenotype:0002400
 name: glucose intolerant
 def: "Animals do not live or live poorly in the presence of glucose concentrations that normally do not have an effect on control animals." [WB:WBPaper00049467, WB:WBPerson712]
 is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0001072 ! response to food variant
 
 [Term]
 id: WBPhenotype:0002401
@@ -18432,6 +18433,97 @@ name: thermorecovery reduced
 def: "Animals exhibit reduced recovery from heat stress compared to controls. Reduced recovery may be indicated, for example, by a decrease in normal movement, such as uncoordinated or jerky movement or paralysis, compared to controls." [WB:WBPaper00060029, WB:WBPerson14884, WB:WBPerson2987]
 synonym: "heat stress recovery reduced" EXACT []
 is_a: WBPhenotype:0002645 ! thermorecovery abnormal
+
+[Term]
+id: WBPhenotype:0002647
+name: dendrite morphology variant
+def: "Animals display variations in the structure, organization of components, or spatial pattern of the neuronal extensions that carry afferent (incoming) action potentials towards the cell body, compared to that observed in control animals." [WB:WBPaper00043988, WB:WBPerson2987, WB:WBPerson557]
+is_a: WBPhenotype:0001398 ! neurite morphology variant
+
+[Term]
+id: WBPhenotype:0002648
+name: dendrite branching variant
+def: "Animals display variations in the number or pattern of neuronal extensions that carry afferent (incoming) action potentials towards the cell body, compared to that observed in control animals." [WB:WBPaper00043988, WB:WBPerson2987, WB:WBPerson557]
+is_a: WBPhenotype:0002647 ! dendrite morphology variant
+
+[Term]
+id: WBPhenotype:0002649
+name: egg laying response to chemical abnormal
+def: "Characteristic response to chemicals with respect to egg-laying behavior varies compared to control." [WB:WBPaper00060230, WB:WBPerson2987, WB:WBPerson712]
+is_a: WBPhenotype:0000523 ! chemical response variant
+
+[Term]
+id: WBPhenotype:0002650
+name: egg laying response to pathogen lipopolysaccharide variant
+def: "Characteristic response to extracted lipopolysaccharide from pathogens with respect to egg-laying behavior varies compared to control conditions." [WB:WBPaper00060230, WB:WBPerson2987, WB:WBPerson712]
+is_a: WBPhenotype:0002649 ! egg laying response to chemical abnormal
+
+[Term]
+id: WBPhenotype:0002651
+name: exopher production phenotype
+def: "Cells exhibit an abnormal production of exophers, large (approximately four microns in diameter) membrane-bound extracellular vesicles that are released by budding out of cells into the extracellular space, compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+synonym: "exopher production abnormal" EXACT []
+synonym: "exopher-genesis abnormal" EXACT []
+synonym: "exopher-genesis phenotype" EXACT []
+is_a: WBPhenotype:0000258 ! cell secretion variant
+
+[Term]
+id: WBPhenotype:0002652
+name: exopher production increased
+def: "Cells exhibit a increase in production of exophers compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+is_a: WBPhenotype:0002651 ! exopher production phenotype
+
+[Term]
+id: WBPhenotype:0002653
+name: exopher production decreased
+def: "Cells exhibit a decrease in production of exophers compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+is_a: WBPhenotype:0002651 ! exopher production phenotype
+
+[Term]
+id: WBPhenotype:0002654
+name: exopher production in muscle phenotype
+def: "Muscle cells exhibit an abnormal production of exophers compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
+is_a: WBPhenotype:0002651 ! exopher production phenotype
+
+[Term]
+id: WBPhenotype:0002655
+name: exopher production in muscle decreased
+def: "Muscle cells exhibit a decrease in production of exophers compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+is_a: WBPhenotype:0002653 ! exopher production decreased
+is_a: WBPhenotype:0002654 ! exopher production in muscle phenotype
+
+[Term]
+id: WBPhenotype:0002656
+name: exopher production in muscle increased
+def: "Muscle cells exhibit an increase in production of exophers compared to controls." [WB:WBPaper00061698, WB:WBPerson23531, WB:WBPerson2987]
+is_a: WBPhenotype:0002652 ! exopher production increased
+is_a: WBPhenotype:0002654 ! exopher production in muscle phenotype
+
+[Term]
+id: WBPhenotype:0002657
+name: dietary saturated fatty acid intolerant
+def: "Animals exhibit intolerance (e.g. lethality or significant growth defect) when exposed to saturated fatty acids via the diet, compared to controls." [WB:WBPaper00060877, WB:WBPerson2987, WB:WBPerson488]
+is_a: WBPhenotype:0001072 ! response to food variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
+
+[Term]
+id: WBPhenotype:0002658
+name: muscle strength phenotype
+def: "Animals exhibit variations in muscle strength, as measured by a strength determining assay, compared to controls." [WB:WBPaper00061159, WB:WBPerson1754, WB:WBPerson2987]
+is_a: WBPhenotype:0000611 ! muscle system physiology variant
+
+[Term]
+id: WBPhenotype:0002659
+name: muscle strength decreased
+def: "Animals exhibit a decrease in muscle strength, as measured by a strength determining assay, compared to controls." [WB:WBPaper00061159, WB:WBPerson1754, WB:WBPerson2987]
+is_a: WBPhenotype:0002658 ! muscle strength phenotype
+
+[Term]
+id: WBPhenotype:0002660
+name: germline stem cell depletion
+def: "Animals exhibit a depletion of germline stem cells, compared to controls." [WB:WBPaper00044909, WB:WBPerson2987, WB:WBPerson5747]
+is_a: WBPhenotype:0000684 ! fewer germ cells
 
 [Term]
 id: WBPhenotype:0004001
