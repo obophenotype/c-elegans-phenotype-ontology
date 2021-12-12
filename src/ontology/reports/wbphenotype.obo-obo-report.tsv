@@ -1,12 +1,10 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	multiple_definitions	has_part	definition	<Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.>
-ERROR	multiple_definitions	has_part	definition	a core relation that holds between a whole and its part
 ERROR	multiple_definitions	characteristic of	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.
 ERROR	multiple_definitions	characteristic of	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part_of
-ERROR	multiple_labels	has_part	rdfs:label	has part
-ERROR	multiple_labels	has_part	rdfs:label	has_part
+ERROR	multiple_labels	has part	rdfs:label	has part
+ERROR	multiple_labels	has part	rdfs:label	has_part
 ERROR	multiple_labels	characteristic of	rdfs:label	characteristic of
 ERROR	multiple_labels	characteristic of	rdfs:label	inheres in
 WARN	missing_definition	definition	definition	
@@ -26,14 +24,17 @@ WARN	missing_definition	has_obo_namespace	definition
 WARN	missing_definition	has_related_synonym	definition	
 WARN	missing_definition	in_subset	definition	
 WARN	missing_definition	shorthand	definition	
+WARN	duplicate_label_synonym	part_of	IAO:0000118	part_of
+WARN	duplicate_label_synonym	has part	IAO:0000118	has_part
+WARN	duplicate_label_synonym	exaggerated body bends	has_exact_synonym	exaggerated body bends
 INFO	lowercase_definition	part_of	definition	a core relation that holds between a part and its whole
-INFO	lowercase_definition	has_part	definition	a core relation that holds between a whole and its part
+INFO	lowercase_definition	has part	definition	a core relation that holds between a whole and its part
 INFO	lowercase_definition	occurs in	definition	b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t
 INFO	lowercase_definition	characteristic of	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.
 INFO	lowercase_definition	characteristic of	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence
+INFO	lowercase_definition	results in developmental progression of	definition	p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
 INFO	lowercase_definition	characteristic of part of	definition	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
 INFO	lowercase_definition	towards	definition	q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2
 INFO	lowercase_definition	predatory behavior abnormal	definition	(Pristionchus pacificus) Animals exhibit abnormal predatory behavior, compared to controls.
 INFO	lowercase_definition	reduced predatory feeding behavior	definition	(Pristionchus pacificus) Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls.
-INFO	lowercase_definition	results in developmental progression of	definition	p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
 INFO	missing_superclass	nematode phenotype	rdfs:subClassOf	
