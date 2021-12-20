@@ -1,4 +1,148 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	duplicate_label	uterus	rdfs:label	uterus
+ERROR	duplicate_label	uterus	rdfs:label	uterus
+ERROR	duplicate_label	towards	rdfs:label	towards
+ERROR	duplicate_label	towards	rdfs:label	towards
+ERROR	duplicate_label	tail	rdfs:label	tail
+ERROR	duplicate_label	tail	rdfs:label	tail
+ERROR	duplicate_label	sterile	rdfs:label	sterile
+ERROR	duplicate_label	sterile	rdfs:label	sterile
+ERROR	duplicate_label	spermatocyte	rdfs:label	spermatocyte
+ERROR	duplicate_label	spermatocyte	rdfs:label	spermatocyte
+ERROR	duplicate_label	spermatid	rdfs:label	spermatid
+ERROR	duplicate_label	spermatid	rdfs:label	spermatid
+ERROR	duplicate_label	sperm	rdfs:label	sperm
+ERROR	duplicate_label	sperm	rdfs:label	sperm
+ERROR	duplicate_label	somatic nervous system	rdfs:label	somatic nervous system
+ERROR	duplicate_label	somatic nervous system	rdfs:label	somatic nervous system
+ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
+ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
+ERROR	duplicate_label	seminal vesicle	rdfs:label	seminal vesicle
+ERROR	duplicate_label	seminal vesicle	rdfs:label	seminal vesicle
+ERROR	duplicate_label	secondary spermatocyte	rdfs:label	secondary spermatocyte
+ERROR	duplicate_label	secondary spermatocyte	rdfs:label	secondary spermatocyte
+ERROR	duplicate_label	reproductive system	rdfs:label	reproductive system
+ERROR	duplicate_label	reproductive system	rdfs:label	reproductive system
+ERROR	duplicate_label	rectum	rdfs:label	rectum
+ERROR	duplicate_label	rectum	rdfs:label	rectum
+ERROR	duplicate_label	protein	rdfs:label	protein
+ERROR	duplicate_label	protein	rdfs:label	protein
+ERROR	duplicate_label	proctodeum	rdfs:label	proctodeum
+ERROR	duplicate_label	proctodeum	rdfs:label	proctodeum
+ERROR	duplicate_label	primary spermatocyte	rdfs:label	primary spermatocyte
+ERROR	duplicate_label	primary spermatocyte	rdfs:label	primary spermatocyte
+ERROR	duplicate_label	pharynx	rdfs:label	pharynx
+ERROR	duplicate_label	pharynx	rdfs:label	pharynx
+ERROR	duplicate_label	organ	rdfs:label	organ
+ERROR	duplicate_label	organ	rdfs:label	organ
+ERROR	duplicate_label	oocyte	rdfs:label	oocyte
+ERROR	duplicate_label	oocyte	rdfs:label	oocyte
+ERROR	duplicate_label	neuron	rdfs:label	neuron
+ERROR	duplicate_label	neuron	rdfs:label	neuron
+ERROR	duplicate_label	nervous system	rdfs:label	nervous system
+ERROR	duplicate_label	nervous system	rdfs:label	nervous system
+ERROR	duplicate_label	muscle cell	rdfs:label	muscle cell
+ERROR	duplicate_label	muscle cell	rdfs:label	muscle cell
+ERROR	duplicate_label	motor neuron	rdfs:label	motor neuron
+ERROR	duplicate_label	motor neuron	rdfs:label	motor neuron
+ERROR	duplicate_label	male	rdfs:label	male
+ERROR	duplicate_label	male	rdfs:label	male
+ERROR	duplicate_label	intestine	rdfs:label	intestine
+ERROR	duplicate_label	intestine	rdfs:label	intestine
+ERROR	duplicate_label	hypodermis	rdfs:label	hypodermis
+ERROR	duplicate_label	hypodermis	rdfs:label	hypodermis
+ERROR	duplicate_label	hermaphrodite gonad	rdfs:label	hermaphrodite gonad
+ERROR	duplicate_label	hermaphrodite gonad	rdfs:label	hermaphrodite gonad
+ERROR	duplicate_label	hermaphrodite	rdfs:label	hermaphrodite
+ERROR	duplicate_label	hermaphrodite	rdfs:label	hermaphrodite
+ERROR	duplicate_label	head	rdfs:label	head
+ERROR	duplicate_label	head	rdfs:label	head
+ERROR	duplicate_label	gonad	rdfs:label	gonad
+ERROR	duplicate_label	gonad	rdfs:label	gonad
+ERROR	duplicate_label	germ cell	rdfs:label	germ cell
+ERROR	duplicate_label	germ cell	rdfs:label	germ cell
+ERROR	duplicate_label	ganglion	rdfs:label	ganglion
+ERROR	duplicate_label	ganglion	rdfs:label	ganglion
+ERROR	duplicate_label	epithelial cell	rdfs:label	epithelial cell
+ERROR	duplicate_label	epithelial cell	rdfs:label	epithelial cell
+ERROR	duplicate_label	digestive tract	rdfs:label	digestive tract
+ERROR	duplicate_label	digestive tract	rdfs:label	digestive tract
+ERROR	duplicate_label	cloaca	rdfs:label	cloaca
+ERROR	duplicate_label	cloaca	rdfs:label	cloaca
+ERROR	duplicate_label	cholinergic neuron	rdfs:label	cholinergic neuron
+ERROR	duplicate_label	cholinergic neuron	rdfs:label	cholinergic neuron
+ERROR	duplicate_label	blistered	rdfs:label	blistered
+ERROR	duplicate_label	blistered	rdfs:label	blistered
+ERROR	duplicate_label	anus	rdfs:label	anus
+ERROR	duplicate_label	anus	rdfs:label	anus
+ERROR	multiple_definitions	independent continuant	definition	A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.@en
+ERROR	multiple_definitions	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+ERROR	multiple_definitions	specifically dependent continuant	definition	A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.@en
+ERROR	multiple_definitions	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+ERROR	multiple_definitions	generically dependent continuant	definition	A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.@en
+ERROR	multiple_definitions	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
+ERROR	multiple_definitions	preceded_by	definition	X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X).
+ERROR	multiple_definitions	preceded_by	definition	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
+ERROR	multiple_definitions	mesenchymal stem cell of abdominal adipose tissue	definition	Any mesenchymal stem cell of adipose that is part of a abdomen.
+ERROR	multiple_definitions	mesenchymal stem cell of abdominal adipose tissue	definition	Any mesenchymal stem cell of adipose tissue that is part of an abdomen.
+ERROR	multiple_definitions	gene expression	definition	The process in which a gene's sequence is converted into a mature gene product (protein or RNA). This includes the production of an RNA transcript and its processing, translation and maturation for protein-coding genes.
+ERROR	multiple_definitions	gene expression	definition	The process in which a gene's sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA or circRNA (for protein-coding genes) and the translation of that mRNA or circRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form.
+ERROR	multiple_definitions	regulation of gene expression	definition	Any process that modulates the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product (protein or RNA).
+ERROR	multiple_definitions	regulation of gene expression	definition	Any process that modulates the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA or circRNA (for protein-coding genes) and the translation of that mRNA or circRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form.
+ERROR	multiple_definitions	positive regulation of gene expression	definition	Any process that increases the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product (protein or RNA).
+ERROR	multiple_definitions	positive regulation of gene expression	definition	Any process that increases the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA or circRNA (for protein-coding genes) and the translation of that mRNA or circRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form.
+ERROR	multiple_definitions	negative regulation of gene expression	definition	Any process that decreases the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product (protein or RNA).
+ERROR	multiple_definitions	negative regulation of gene expression	definition	Any process that decreases the frequency, rate or extent of gene expression. Gene expression is the process in which a gene's coding sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA or circRNA (for protein-coding genes) and the translation of that mRNA or circRNA into protein. Protein maturation is included when required to form an active form of a product from an inactive precursor form.
+ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
+ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
+ERROR	multiple_definitions	bearer of	definition	Inverse of characteristic_of@en
+ERROR	multiple_definitions	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
+ERROR	multiple_definitions	only in taxon	definition	S only_in_taxon T iff: S SubClassOf in_taxon only T.
+ERROR	multiple_definitions	only in taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
+ERROR	multiple_definitions	connected to	definition	Binary relationship: x connected_to y if and only if there exists some z such that z connects x and y in a ternary connected_to(x,y,z) relationship.
+ERROR	multiple_definitions	connected to	definition	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
+ERROR	multiple_definitions	connects	definition	Binary relationship: z connects x if and only if there exists some y such that z connects x and y in a ternary connected_to(x,y,z) relationship.
+ERROR	multiple_definitions	connects	definition	c connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system.
+ERROR	multiple_definitions	supplies	definition	Relation between an arterial structure and another structure, where the arterial structure acts as a conduit channeling fluid, substance or energy.
+ERROR	multiple_definitions	supplies	definition	relation between an artery and the structure is supplies with blood.
+ERROR	multiple_definitions	surrounded by	definition	x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x
+ERROR	multiple_definitions	surrounded by	definition	x surrounded_by y iff: x is adjacent to y and for every region r adjacent to x, r overlaps y.
+ERROR	multiple_definitions	adjacent_to	definition	x adjacent to y if and only if x and y share a boundary.
+ERROR	multiple_definitions	adjacent_to	definition	x adjacent_to y iff: x and y share a boundary.
+ERROR	multiple_definitions	surrounds	definition	inverse of surrounded by
+ERROR	multiple_definitions	surrounds	definition	inverse of surrounded_by.
+ERROR	multiple_definitions	starts	definition	Relation between occurrents, shares a start boundary with.
+ERROR	multiple_definitions	starts	definition	inverse of starts with
+ERROR	multiple_definitions	ends	definition	Relation between occurrents, shares an end boundary with.
+ERROR	multiple_definitions	ends	definition	inverse of ends with
+ERROR	multiple_definitions	developmentally_induced_by	definition	t1 developmentally_induced_by t2 if there is a process of organ induction (GO:0001759) with t1 and t2 as interacting participants. t2 causes t1 to change its fate from a precursor tissue type T to T', where T' develops_from T.
+ERROR	multiple_definitions	developmentally_induced_by	definition	t1 induced_by t2 if there is a process of developmental induction (GO:0031128) with t1 and t2 as interacting participants. t2 causes t1 to change its fate from a precursor anatomical structure type T to T', where T' develops_from T
+ERROR	multiple_definitions	has_muscle_insertion	definition	m has_muscle_insertion s iff m is attaches_to s, and it is the case that when m contracts, s moves. Insertions are usually connections of muscle via tendon to bone.
+ERROR	multiple_definitions	has_muscle_insertion	definition	m has_muscle_insertion s iff m is attaches_to s, and it is the case that when m contracts, s moves. Insertions are usually connections of muscle via tendon to bone.@en
+ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y@en
+ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y.
+ERROR	multiple_definitions	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y@en
+ERROR	multiple_definitions	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y.
+ERROR	multiple_definitions	has potential to directly develop into	definition	x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y@en
+ERROR	multiple_definitions	has potential to directly develop into	definition	x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y.
+ERROR	multiple_definitions	composed primarily of	definition	x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y.
+ERROR	multiple_definitions	composed primarily of	definition	x composed_primarily_of y iff: more than half of the mass of x is made from parts of y.
+ERROR	multiple_definitions	existence starts during	definition	Relation between continuant c and occurrent s, such that every instance of c comes into existing during some s.
+ERROR	multiple_definitions	existence starts during	definition	x existence starts during y if and only if the time point at which x starts is after or equivalent to the time point at which y starts and before or equivalent to the time point at which y ends. Formally: x existence starts during y iff α(x) >= α(y) & α(x) <= ω(y).
+ERROR	multiple_definitions	existence starts with	definition	Relation between continuant and occurrent, such that c comes into existence at the start of p.
+ERROR	multiple_definitions	existence starts with	definition	x starts ends with y if and only if the time point at which x starts is equivalent to the time point at which y starts. Formally: x existence starts with y iff α(x) = α(y).
+ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
+ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
+ERROR	multiple_definitions	existence ends with	definition	Relation between continuant and occurrent, such that c ceases to exist at the end of p.
+ERROR	multiple_definitions	existence ends with	definition	x existence ends with y if and only if the time point at which x ends is equivalent to the time point at which y ends. Formally: x existence ends with y iff ω(x) = ω(y).
+ERROR	multiple_definitions	has skeleton	definition	A relation between a segment or subdivision of an organism and the maximal subdivision of material entities that provides structural support for that segment or subdivision.
+ERROR	multiple_definitions	has skeleton	definition	A relation between a subdivision of an organism and the single subdivision of skeleton that provides structural support for that subdivision.
+ERROR	multiple_equivalent_class_definitions	vacuolar transport	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	midbrain-hindbrain boundary	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	mouth-foregut junction	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	communicating artery	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	presumptive paraxial mesoderm	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	nucleus of midbrain tegmentum	owl:equivalentClass	blank node
 ERROR	duplicate_definition	B cell	definition	Rectal cell, postembryonic blast cell in male
 ERROR	duplicate_definition	U cell	definition	Rectal cell, postembryonic blast cell in male
 ERROR	duplicate_definition	male organism	definition	Gonochoristic organism that can produce male gametes.
@@ -42,6 +186,12 @@ ERROR	multiple_labels	cell	rdfs:label	cell
 ERROR	multiple_labels	cell	rdfs:label	cell@en
 ERROR	multiple_labels	neuron	rdfs:label	neuron
 ERROR	multiple_labels	neuron	rdfs:label	neuron@en
+ERROR	multiple_labels	supporting cell	rdfs:label	supporting cell
+ERROR	multiple_labels	supporting cell	rdfs:label	supportive cell
+ERROR	multiple_labels	mesenchymal stem cell of adipose	rdfs:label	mesenchymal stem cell of adipose
+ERROR	multiple_labels	mesenchymal stem cell of adipose	rdfs:label	mesenchymal stem cell of adipose tissue
+ERROR	multiple_labels	mesenchymal stem cell of abdominal adipose tissue	rdfs:label	mesenchymal stem cell of abdominal adipose
+ERROR	multiple_labels	mesenchymal stem cell of abdominal adipose tissue	rdfs:label	mesenchymal stem cell of abdominal adipose tissue
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus@en
 ERROR	multiple_labels	axon	rdfs:label	axon
@@ -52,6 +202,8 @@ ERROR	multiple_labels	cell projection	rdfs:label	cell projection
 ERROR	multiple_labels	cell projection	rdfs:label	cell projection@en
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection@en
+ERROR	multiple_labels	protein-containing complex subunit organization	rdfs:label	protein-containing complex organization
+ERROR	multiple_labels	protein-containing complex subunit organization	rdfs:label	protein-containing complex subunit organization
 ERROR	multiple_labels	synapse	rdfs:label	synapse
 ERROR	multiple_labels	synapse	rdfs:label	synapse@en
 ERROR	multiple_labels	definition	rdfs:label	definition
@@ -99,12 +251,12 @@ ERROR	multiple_labels	overlaps	rdfs:label	overlaps
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps@en
 ERROR	multiple_labels	innervates	rdfs:label	innervates
 ERROR	multiple_labels	innervates	rdfs:label	innervates@en
-ERROR	multiple_labels	continuous with	rdfs:label	continuous with@en
-ERROR	multiple_labels	continuous with	rdfs:label	continuous_with
+ERROR	multiple_labels	continuous_with	rdfs:label	continuous with@en
+ERROR	multiple_labels	continuous_with	rdfs:label	continuous_with
 ERROR	multiple_labels	homologous_to	rdfs:label	homologous_to
 ERROR	multiple_labels	homologous_to	rdfs:label	shares ancestor with
-ERROR	multiple_labels	only_in_taxon	rdfs:label	only in taxon
-ERROR	multiple_labels	only_in_taxon	rdfs:label	only_in_taxon
+ERROR	multiple_labels	only in taxon	rdfs:label	only in taxon
+ERROR	multiple_labels	only in taxon	rdfs:label	only_in_taxon
 ERROR	multiple_labels	connected to	rdfs:label	connected to
 ERROR	multiple_labels	connected to	rdfs:label	connected to@en
 ERROR	multiple_labels	connects	rdfs:label	connects
@@ -251,141 +403,50 @@ ERROR	multiple_labels	acts on population of	rdfs:label	acts on population of
 ERROR	multiple_labels	acts on population of	rdfs:label	acts on population of@en
 ERROR	multiple_labels	results in fusion of	rdfs:label	results in fusion of
 ERROR	multiple_labels	results in fusion of	rdfs:label	results in fusion of@en
-ERROR	multiple_equivalent_class_definitions	vacuolar transport	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	midbrain-hindbrain boundary	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	mouth-foregut junction	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	communicating artery	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	presumptive paraxial mesoderm	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	nucleus of midbrain tegmentum	owl:equivalentClass	blank node
-ERROR	multiple_definitions	independent continuant	definition	A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.@en
-ERROR	multiple_definitions	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
-ERROR	multiple_definitions	specifically dependent continuant	definition	A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.@en
-ERROR	multiple_definitions	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
-ERROR	multiple_definitions	generically dependent continuant	definition	A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.@en
-ERROR	multiple_definitions	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
-ERROR	multiple_definitions	preceded_by	definition	X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X).
-ERROR	multiple_definitions	preceded_by	definition	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
-ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
-ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
-ERROR	multiple_definitions	bearer of	definition	Inverse of characteristic_of@en
-ERROR	multiple_definitions	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
-ERROR	multiple_definitions	only_in_taxon	definition	S only_in_taxon T iff: S SubClassOf in_taxon only T.
-ERROR	multiple_definitions	only_in_taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
-ERROR	multiple_definitions	connected to	definition	Binary relationship: x connected_to y if and only if there exists some z such that z connects x and y in a ternary connected_to(x,y,z) relationship.
-ERROR	multiple_definitions	connected to	definition	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
-ERROR	multiple_definitions	connects	definition	Binary relationship: z connects x if and only if there exists some y such that z connects x and y in a ternary connected_to(x,y,z) relationship.
-ERROR	multiple_definitions	connects	definition	c connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system.
-ERROR	multiple_definitions	supplies	definition	Relation between an arterial structure and another structure, where the arterial structure acts as a conduit channeling fluid, substance or energy.
-ERROR	multiple_definitions	supplies	definition	relation between an artery and the structure is supplies with blood.
-ERROR	multiple_definitions	surrounded by	definition	x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x
-ERROR	multiple_definitions	surrounded by	definition	x surrounded_by y iff: x is adjacent to y and for every region r adjacent to x, r overlaps y.
-ERROR	multiple_definitions	adjacent_to	definition	x adjacent to y if and only if x and y share a boundary.
-ERROR	multiple_definitions	adjacent_to	definition	x adjacent_to y iff: x and y share a boundary.
-ERROR	multiple_definitions	surrounds	definition	inverse of surrounded by
-ERROR	multiple_definitions	surrounds	definition	inverse of surrounded_by.
-ERROR	multiple_definitions	starts	definition	Relation between occurrents, shares a start boundary with.
-ERROR	multiple_definitions	starts	definition	inverse of starts with
-ERROR	multiple_definitions	ends	definition	Relation between occurrents, shares an end boundary with.
-ERROR	multiple_definitions	ends	definition	inverse of ends with
-ERROR	multiple_definitions	developmentally_induced_by	definition	t1 developmentally_induced_by t2 if there is a process of organ induction (GO:0001759) with t1 and t2 as interacting participants. t2 causes t1 to change its fate from a precursor tissue type T to T', where T' develops_from T.
-ERROR	multiple_definitions	developmentally_induced_by	definition	t1 induced_by t2 if there is a process of developmental induction (GO:0031128) with t1 and t2 as interacting participants. t2 causes t1 to change its fate from a precursor anatomical structure type T to T', where T' develops_from T
-ERROR	multiple_definitions	has_muscle_insertion	definition	m has_muscle_insertion s iff m is attaches_to s, and it is the case that when m contracts, s moves. Insertions are usually connections of muscle via tendon to bone.
-ERROR	multiple_definitions	has_muscle_insertion	definition	m has_muscle_insertion s iff m is attaches_to s, and it is the case that when m contracts, s moves. Insertions are usually connections of muscle via tendon to bone.@en
-ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y@en
-ERROR	multiple_definitions	has potential to developmentally contribute to	definition	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y.
-ERROR	multiple_definitions	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y@en
-ERROR	multiple_definitions	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y.
-ERROR	multiple_definitions	has potential to directly develop into	definition	x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y@en
-ERROR	multiple_definitions	has potential to directly develop into	definition	x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y.
-ERROR	multiple_definitions	composed primarily of	definition	x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y.
-ERROR	multiple_definitions	composed primarily of	definition	x composed_primarily_of y iff: more than half of the mass of x is made from parts of y.
-ERROR	multiple_definitions	existence starts during	definition	Relation between continuant c and occurrent s, such that every instance of c comes into existing during some s.
-ERROR	multiple_definitions	existence starts during	definition	x existence starts during y if and only if the time point at which x starts is after or equivalent to the time point at which y starts and before or equivalent to the time point at which y ends. Formally: x existence starts during y iff α(x) >= α(y) & α(x) <= ω(y).
-ERROR	multiple_definitions	existence starts with	definition	Relation between continuant and occurrent, such that c comes into existence at the start of p.
-ERROR	multiple_definitions	existence starts with	definition	x starts ends with y if and only if the time point at which x starts is equivalent to the time point at which y starts. Formally: x existence starts with y iff α(x) = α(y).
-ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
-ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
-ERROR	multiple_definitions	existence ends with	definition	Relation between continuant and occurrent, such that c ceases to exist at the end of p.
-ERROR	multiple_definitions	existence ends with	definition	x existence ends with y if and only if the time point at which x ends is equivalent to the time point at which y ends. Formally: x existence ends with y iff ω(x) = ω(y).
-ERROR	multiple_definitions	has skeleton	definition	A relation between a segment or subdivision of an organism and the maximal subdivision of material entities that provides structural support for that segment or subdivision.
-ERROR	multiple_definitions	has skeleton	definition	A relation between a subdivision of an organism and the single subdivision of skeleton that provides structural support for that subdivision.
-ERROR	duplicate_label	uterus	rdfs:label	uterus
-ERROR	duplicate_label	uterus	rdfs:label	uterus
-ERROR	duplicate_label	towards	rdfs:label	towards
-ERROR	duplicate_label	towards	rdfs:label	towards
-ERROR	duplicate_label	tail	rdfs:label	tail
-ERROR	duplicate_label	tail	rdfs:label	tail
-ERROR	duplicate_label	sterile	rdfs:label	sterile
-ERROR	duplicate_label	sterile	rdfs:label	sterile
-ERROR	duplicate_label	spermatocyte	rdfs:label	spermatocyte
-ERROR	duplicate_label	spermatocyte	rdfs:label	spermatocyte
-ERROR	duplicate_label	spermatid	rdfs:label	spermatid
-ERROR	duplicate_label	spermatid	rdfs:label	spermatid
-ERROR	duplicate_label	sperm	rdfs:label	sperm
-ERROR	duplicate_label	sperm	rdfs:label	sperm
-ERROR	duplicate_label	somatic nervous system	rdfs:label	somatic nervous system
-ERROR	duplicate_label	somatic nervous system	rdfs:label	somatic nervous system
-ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
-ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
-ERROR	duplicate_label	seminal vesicle	rdfs:label	seminal vesicle
-ERROR	duplicate_label	seminal vesicle	rdfs:label	seminal vesicle
-ERROR	duplicate_label	secondary spermatocyte	rdfs:label	secondary spermatocyte
-ERROR	duplicate_label	secondary spermatocyte	rdfs:label	secondary spermatocyte
-ERROR	duplicate_label	reproductive system	rdfs:label	reproductive system
-ERROR	duplicate_label	reproductive system	rdfs:label	reproductive system
-ERROR	duplicate_label	rectum	rdfs:label	rectum
-ERROR	duplicate_label	rectum	rdfs:label	rectum
-ERROR	duplicate_label	protein	rdfs:label	protein
-ERROR	duplicate_label	protein	rdfs:label	protein
-ERROR	duplicate_label	proctodeum	rdfs:label	proctodeum
-ERROR	duplicate_label	proctodeum	rdfs:label	proctodeum
-ERROR	duplicate_label	primary spermatocyte	rdfs:label	primary spermatocyte
-ERROR	duplicate_label	primary spermatocyte	rdfs:label	primary spermatocyte
-ERROR	duplicate_label	pharynx	rdfs:label	pharynx
-ERROR	duplicate_label	pharynx	rdfs:label	pharynx
-ERROR	duplicate_label	organ	rdfs:label	organ
-ERROR	duplicate_label	organ	rdfs:label	organ
-ERROR	duplicate_label	oocyte	rdfs:label	oocyte
-ERROR	duplicate_label	oocyte	rdfs:label	oocyte
-ERROR	duplicate_label	neuron	rdfs:label	neuron
-ERROR	duplicate_label	neuron	rdfs:label	neuron
-ERROR	duplicate_label	nervous system	rdfs:label	nervous system
-ERROR	duplicate_label	nervous system	rdfs:label	nervous system
-ERROR	duplicate_label	muscle cell	rdfs:label	muscle cell
-ERROR	duplicate_label	muscle cell	rdfs:label	muscle cell
-ERROR	duplicate_label	motor neuron	rdfs:label	motor neuron
-ERROR	duplicate_label	motor neuron	rdfs:label	motor neuron
-ERROR	duplicate_label	male	rdfs:label	male
-ERROR	duplicate_label	male	rdfs:label	male
-ERROR	duplicate_label	intestine	rdfs:label	intestine
-ERROR	duplicate_label	intestine	rdfs:label	intestine
-ERROR	duplicate_label	hypodermis	rdfs:label	hypodermis
-ERROR	duplicate_label	hypodermis	rdfs:label	hypodermis
-ERROR	duplicate_label	hermaphrodite gonad	rdfs:label	hermaphrodite gonad
-ERROR	duplicate_label	hermaphrodite gonad	rdfs:label	hermaphrodite gonad
-ERROR	duplicate_label	hermaphrodite	rdfs:label	hermaphrodite
-ERROR	duplicate_label	hermaphrodite	rdfs:label	hermaphrodite
-ERROR	duplicate_label	head	rdfs:label	head
-ERROR	duplicate_label	head	rdfs:label	head
-ERROR	duplicate_label	gonad	rdfs:label	gonad
-ERROR	duplicate_label	gonad	rdfs:label	gonad
-ERROR	duplicate_label	germ cell	rdfs:label	germ cell
-ERROR	duplicate_label	germ cell	rdfs:label	germ cell
-ERROR	duplicate_label	ganglion	rdfs:label	ganglion
-ERROR	duplicate_label	ganglion	rdfs:label	ganglion
-ERROR	duplicate_label	epithelial cell	rdfs:label	epithelial cell
-ERROR	duplicate_label	epithelial cell	rdfs:label	epithelial cell
-ERROR	duplicate_label	digestive tract	rdfs:label	digestive tract
-ERROR	duplicate_label	digestive tract	rdfs:label	digestive tract
-ERROR	duplicate_label	cloaca	rdfs:label	cloaca
-ERROR	duplicate_label	cloaca	rdfs:label	cloaca
-ERROR	duplicate_label	cholinergic neuron	rdfs:label	cholinergic neuron
-ERROR	duplicate_label	cholinergic neuron	rdfs:label	cholinergic neuron
-ERROR	duplicate_label	blistered	rdfs:label	blistered
-ERROR	duplicate_label	blistered	rdfs:label	blistered
-ERROR	duplicate_label	anus	rdfs:label	anus
-ERROR	duplicate_label	anus	rdfs:label	anus
-ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0042493
+WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] 
+WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] 
+WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] 
+WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] 
+WARN	annotation_whitespace	occurrent	IAO:0000602	(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] 
+WARN	annotation_whitespace	occurrent	IAO:0000602	(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] 
+WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] 
+WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] 
+WARN	annotation_whitespace	independent continuant	IAO:0000602	(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] 
+WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
+WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
+WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
+WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
+WARN	annotation_whitespace	definition	editor note	"2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  @en"
+WARN	annotation_whitespace	contained in	editor note	"Intended meaning:
+domain: material entity
+range: spatial region or site (immaterial continuant)
+        @en"
+WARN	annotation_whitespace	spatially disjoint from	editor note	There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. @en
+WARN	annotation_whitespace	capable of	definition	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
+WARN	annotation_whitespace	developmentally_induced_by	IAO:0000119	 Developmental Biology, Gilbert, 8th edition, figure 6.5(F)
+WARN	annotation_whitespace	results in maturation of	IAO:0000112	 an annotation of gene X to cell maturation with results_in_maturation_of CL:0000057 (fibroblast) means that the fibroblast is mature at the end of the process
+WARN	annotation_whitespace	results in transport along	definition	Holds between p and l when p is a transportation or localization process and the outcome of this process is to move c from one location to another, and the route taken by c follows a path that is aligned_with l 
+WARN	equivalent_pair	role	owl:equivalentClass	role
+WARN	equivalent_pair	protein	owl:equivalentClass	protein
 WARN	missing_definition	spatial region	definition	
 WARN	missing_definition	disposition	definition	
 WARN	missing_definition	function	definition	
@@ -1111,12 +1172,6 @@ WARN	missing_definition	has_obo_format_version	definition
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	has_related_synonym	definition	
 WARN	missing_definition	in_subset	definition	
-WARN	multiple_equivalent_classes	vacuolar transport	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	midbrain-hindbrain boundary	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	mouth-foregut junction	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	communicating artery	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	presumptive paraxial mesoderm	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	nucleus of midbrain tegmentum	owl:equivalentClass	blank node
 WARN	duplicate_scoped_synonym	L-alpha-amino acid	has_exact_synonym	L-alpha-amino acids
 WARN	duplicate_scoped_synonym	L-alpha-amino acid	has_related_synonym	L-alpha-amino acids
 WARN	duplicate_scoped_synonym	D-alpha-amino acid	has_exact_synonym	D-alpha-amino acids
@@ -1353,80 +1408,6 @@ WARN	duplicate_scoped_synonym	ciliary processes	has_exact_synonym	processus cili
 WARN	duplicate_scoped_synonym	ciliary processes	has_related_synonym	processus ciliares
 WARN	duplicate_scoped_synonym	internal urethral orifice	has_exact_synonym	internal urethral ostium
 WARN	duplicate_scoped_synonym	internal urethral orifice	has_related_synonym	internal urethral ostium
-WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] 
-WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] 
-WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] 
-WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] 
-WARN	annotation_whitespace	occurrent	IAO:0000602	(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] 
-WARN	annotation_whitespace	occurrent	IAO:0000602	(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] 
-WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] 
-WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] 
-WARN	annotation_whitespace	independent continuant	IAO:0000602	(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] 
-WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
-WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
-WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
-WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
-WARN	annotation_whitespace	definition	editor note	"2012-04-05: 
-Barry Smith
-
-The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
-
-Can you fix to something like:
-
-A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
-
-Alan Ruttenberg
-
-Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
-
-On the specifics of the proposed definition:
-
-We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
-
-Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
-
-We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  @en"
-WARN	annotation_whitespace	contained in	editor note	"Intended meaning:
-domain: material entity
-range: spatial region or site (immaterial continuant)
-        @en"
-WARN	annotation_whitespace	spatially disjoint from	editor note	There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. @en
-WARN	annotation_whitespace	capable of	definition	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
-WARN	annotation_whitespace	developmentally_induced_by	IAO:0000119	 Developmental Biology, Gilbert, 8th edition, figure 6.5(F)
-WARN	annotation_whitespace	results in maturation of	IAO:0000112	 an annotation of gene X to cell maturation with results_in_maturation_of CL:0000057 (fibroblast) means that the fibroblast is mature at the end of the process
-WARN	annotation_whitespace	results in transport along	definition	Holds between p and l when p is a transportation or localization process and the outcome of this process is to move c from one location to another, and the route taken by c follows a path that is aligned_with l 
-WARN	missing_synonymtype_declaration	obo:caloha-reqs-vetted#PLURAL	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:chebi#BRAND_NAME	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:chebi#INN	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:chebi#IUPAC_NAME	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:cl#PLURAL	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:go#syngo_official_label	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:go#systematic_synonym	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#blast_name	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#common_name	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#genbank_common_name	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#in_part	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#scientific_name	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:ncbitaxon#synonym	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:pr#Gene-based	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:pr#PRO-short-label	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#ABBREVIATION	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#DEPRECATED	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#DUBIOUS	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#HUMAN_PREFERRED	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#INCONSISTENT	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#LATIN	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#PENDING_REVIEW	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#PLURAL	rdfs:subPropertyOf	
-WARN	missing_synonymtype_declaration	obo:uberon/core#SENSU	rdfs:subPropertyOf	
-WARN	equivalent_pair	role	owl:equivalentClass	role
-WARN	equivalent_pair	protein	owl:equivalentClass	protein
-WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	Mus
-WARN	duplicate_exact_synonym	Mus <subgenus>	has_exact_synonym	Mus
-WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	mouse
-WARN	duplicate_exact_synonym	Mus musculus	has_exact_synonym	mouse
-WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
-WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
 WARN	duplicate_label_synonym	electron	has_exact_synonym	electron
 WARN	duplicate_label_synonym	3-(1-methylpyrrolidin-2-yl)pyridine	has_exact_synonym	3-(1-methylpyrrolidin-2-yl)pyridine
 WARN	duplicate_label_synonym	carbamate	has_exact_synonym	carbamate
@@ -1796,9 +1777,12 @@ WARN	duplicate_label_synonym	tunicamycin A1	has_exact_synonym	tunicamycin A1
 WARN	duplicate_label_synonym	flour treatment agent	has_exact_synonym	flour treatment agent
 WARN	duplicate_label_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole	has_exact_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
 WARN	duplicate_label_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine	has_exact_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine
+WARN	duplicate_label_synonym	supporting cell	has_exact_synonym	supportive cell
 WARN	duplicate_label_synonym	striated muscle cell	has_exact_synonym	striated muscle cell
+WARN	duplicate_label_synonym	mesenchymal stem cell of adipose	has_exact_synonym	mesenchymal stem cell of adipose
 WARN	duplicate_label_synonym	non-striated muscle cell	has_exact_synonym	non-striated muscle cell
 WARN	duplicate_label_synonym	myocyte of sinoatrial node	has_exact_synonym	myocyte of sinoatrial node
+WARN	duplicate_label_synonym	mesenchymal stem cell of abdominal adipose tissue	has_exact_synonym	mesenchymal stem cell of abdominal adipose
 WARN	duplicate_label_synonym	nucleus	has_exact_synonym	nucleus
 WARN	duplicate_label_synonym	variant	has_exact_synonym	variant
 WARN	duplicate_label_synonym	protruding	has_exact_synonym	protruding
@@ -1925,6 +1909,44 @@ WARN	duplicate_label_synonym	male gonad	has_exact_synonym	male gonad
 WARN	duplicate_label_synonym	sensillum	has_exact_synonym	sensillum
 WARN	duplicate_label_synonym	syncytium	has_exact_synonym	syncytium
 WARN	duplicate_label_synonym	sex organ	has_exact_synonym	sex organ
+WARN	multiple_equivalent_classes	vacuolar transport	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	midbrain-hindbrain boundary	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	mouth-foregut junction	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	communicating artery	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	presumptive paraxial mesoderm	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	nucleus of midbrain tegmentum	owl:equivalentClass	blank node
+WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	Mus
+WARN	duplicate_exact_synonym	Mus <subgenus>	has_exact_synonym	Mus
+WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	mouse
+WARN	duplicate_exact_synonym	Mus musculus	has_exact_synonym	mouse
+WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
+WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
+WARN	duplicate_exact_synonym	cellular protein-containing complex assembly	has_exact_synonym	cellular protein complex assembly
+WARN	duplicate_exact_synonym	protein-containing complex assembly	has_exact_synonym	cellular protein complex assembly
+WARN	missing_synonymtype_declaration	obo:caloha-reqs-vetted#PLURAL	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:chebi#BRAND_NAME	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:chebi#INN	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:chebi#IUPAC_NAME	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:cl#PLURAL	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:go#syngo_official_label	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:go#systematic_synonym	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#blast_name	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#common_name	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#genbank_common_name	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#in_part	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#scientific_name	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:ncbitaxon#synonym	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:pr#Gene-based	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:pr#PRO-short-label	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#ABBREVIATION	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#DEPRECATED	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#DUBIOUS	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#HUMAN_PREFERRED	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#INCONSISTENT	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#LATIN	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#PENDING_REVIEW	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#PLURAL	rdfs:subPropertyOf	
+WARN	missing_synonymtype_declaration	obo:uberon/core#SENSU	rdfs:subPropertyOf	
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
 INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
@@ -1962,7 +1984,7 @@ INFO	lowercase_definition	has 2D boundary	definition	a relation between a materi
 INFO	lowercase_definition	has component process	definition	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
 INFO	lowercase_definition	overlaps	definition	x overlaps y if and only if there exists some z such that x has part z and z part of y
 INFO	lowercase_definition	homologous_to	definition	two individual entities d1 and d2 stand in a shares_ancestor_with relation if and only if there exists some a such that d1 derived_by_descent_from a and d2 derived_by_descent_from a.
-INFO	lowercase_definition	only_in_taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
+INFO	lowercase_definition	only in taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
 INFO	lowercase_definition	in taxon	definition	x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed.
 INFO	lowercase_definition	connected to	definition	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
 INFO	lowercase_definition	connects	definition	c connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system.

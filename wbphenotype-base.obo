@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-12-12/wbphenotype-base.owl
+data-version: wbphenotype/releases/2021-12-20/wbphenotype-base.owl
 saved-by: chris-grove
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
@@ -9,7 +9,7 @@ property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontol
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-12-12" xsd:string
+property_value: owl:versionInfo "2021-12-20" xsd:string
 
 [Term]
 id: PATO:0000956
@@ -2595,7 +2595,7 @@ is_a: WBPhenotype:0000631 ! drug response variant
 [Term]
 id: WBPhenotype:0000360
 name: cytoplasmic streaming defective
-def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell is impaired." [GO:0099636, PMID:28288129, WB:WBPaper00050908, WB:WBPerson2021, WB:WBPerson557]
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell is impaired." [GO:0099636, WB:WBPaper00050908, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 is_a: WBPhenotype:0002612 ! cytoplasmic streaming phenotype
 
@@ -10118,7 +10118,7 @@ is_a: WBPhenotype:0001326 ! cell gamma ray response variant
 [Term]
 id: WBPhenotype:0001392
 name: cell cycle arrest
-def: "Cells of the animals cease during one of its replicative phases (G1, S, G2, M)." [GO:0007050, WB:WBPerson557, WB:WBPerson712]
+def: "Cells of the animals cease during one of its replicative phases (G1, S, G2, M)." [GO:0051726, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0001995 ! cell cycle progression variant
 
 [Term]
@@ -10947,7 +10947,7 @@ is_a: WBPhenotype:0001505 ! spontaneous reversal variant
 [Term]
 id: WBPhenotype:0001507
 name: Bacillus thuringiensis toxin resistant
-def: "Animals fail to be affected by toxins produced by Bacillus thuringiensis (Bt toxins) in the same manner as control animals." [GO:0042493, WB:WBPaper00004264, WB:WBPaper00004776, WB:WBPerson557]
+def: "Animals fail to be affected by toxins produced by Bacillus thuringiensis (Bt toxins) in the same manner as control animals." [GO:0009410, WB:WBPaper00004264, WB:WBPaper00004776, WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
 
 [Term]
@@ -17642,7 +17642,7 @@ is_a: WBPhenotype:0002525 ! diet response variant
 [Term]
 id: WBPhenotype:0002527
 name: dauer larva physiology variant
-def: "Animals in the dauer larval stage exhibit variations in their physiology (any biological process including but not limited to development, behavior, or metabolism) compared to controls." [ISBN:978-087969433-3, WB:WBPerson2987]
+def: "Animals in the dauer larval stage exhibit variations in their physiology (any biological process including but not limited to development, behavior, or metabolism) compared to controls." [WB:WBPaper00004052, WB:WBPerson2987]
 is_a: WBPhenotype:0001293 ! larval physiology phenotype
 
 [Term]
@@ -18172,37 +18172,37 @@ is_a: WBPhenotype:0001028 ! nuclear appearance variant
 [Term]
 id: WBPhenotype:0002608
 name: humpback
-def: "A body elongation defect in which embryos develop abnormally bulged dorsal surfaces." [PMID:9531567, WB:WBPaper00003046]
+def: "A body elongation defect in which embryos develop abnormally bulged dorsal surfaces." [WB:WBPaper00003046]
+comment: "After standard ethylmethane sulfonate mutagenesis, we screened directly for mutant embryos that are defective in body elongation. We isolated 13 recessive, zygotic-lethal mutants that, in addition to failing to elongate properly, show abnormally bulged dorsal surfaces (Fig. 1B). We call this novel phenotype Hmp (humpback); this phenotype contrasts with previously described elongation-defective Pat mutants that display bulges at variable positions (Williams and Waterston, 1994)." {xref="WB:WBPaper00003046"}
 synonym: "Hmp" EXACT []
 is_a: WBPhenotype:0000242 ! body elongation defective
 is_a: WBPhenotype:0001136 ! embryonic morphology variant
-property_value: isDefinedBy "\"After standard ethylmethane sulfonate mutagenesis, we screened directly for mutant embryos that are defective in body elongation. We isolated 13 recessive, zygotic-lethal mutants that, in addition to failing to elongate properly, show abnormally bulged dorsal surfaces (Fig. 1B). We call this novel phenotype Hmp (humpback); this phenotype contrasts with previously described elongation-defective Pat mutants that display bulges at variable positions (Williams and Waterston, 1994).\"" xsd:string {xref="PMID:9531567"}
 
 [Term]
 id: WBPhenotype:0002609
 name: hammerhead
-def: "An anterior enclosure defect in which the anterior portion of the embryo, unenclosed by the hypodermis, bulges to form a hammerhead shape." [PMID:9531567, WB:WBPaper00003046, WB:WBPerson2987]
-synonym: "Hmr" EXACT [PMID:9531567]
+def: "An anterior enclosure defect in which the anterior portion of the embryo, unenclosed by the hypodermis, bulges to form a hammerhead shape." [WB:WBPaper00003046, WB:WBPerson2987]
+comment: "However, in the remaining hmr-1 mutants the hypodermis fails to fully enclose the embryo. We call this phenotype Hmr (hammerhead; see Fig. 1F)." {xref="WB:WBPaper00003046"}
+synonym: "Hmr" EXACT [WB:WBPaper00003046]
 is_a: WBPhenotype:0002571 ! anterior enclosure defective
-property_value: isDefinedBy "\"However, in the remaining hmr-1 mutants the hypodermis fails to fully enclose the embryo. We call this phenotype Hmr (hammerhead; see Fig. 1F).\"" xsd:string {xref="PMID:9531567"}
 
 [Term]
 id: WBPhenotype:0002610
 name: ectopic apoptosis
-def: "Apoptosis occurs in cells or cell types that do not undergo apoptosis in controls." [PMID:24115648, WB:WBPaper00044285, WB:WBPerson2987]
+def: "Apoptosis occurs in cells or cell types that do not undergo apoptosis in controls." [WB:WBPaper00044285, WB:WBPerson2987]
 is_a: WBPhenotype:0000730 ! apoptosis variant
 
 [Term]
 id: WBPhenotype:0002611
 name: meiotic cytoplasmic streaming defective
-def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell undergoing meiosis is impaired." [PMID:28288129, WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell undergoing meiosis is impaired." [WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
 is_a: WBPhenotype:0000360 ! cytoplasmic streaming defective
 is_a: WBPhenotype:0002613 ! meiotic cytoplasmic streaming phenotype
 
 [Term]
 id: WBPhenotype:0002612
 name: cytoplasmic streaming phenotype
-def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell is abnormal compared to control." [GO:0099636, PMID:28288129, WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell is abnormal compared to control." [GO:0099636, WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
 synonym: "cytoplasmic streaming abnormal" EXACT []
 synonym: "cytoplasmic streaming variant" EXACT []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
@@ -18210,7 +18210,7 @@ is_a: WBPhenotype:0000536 ! cell physiology phenotype
 [Term]
 id: WBPhenotype:0002613
 name: meiotic cytoplasmic streaming phenotype
-def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell undergoing meiosis is abnormal compared to control." [PMID:28288129, WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of, or within the cytoplasm of a cell undergoing meiosis is abnormal compared to control." [WB:WBPaper00050908, WB:WBPerson2987, WB:WBPerson3569]
 synonym: "meiotic cytoplasmic streaming abnormal" EXACT []
 synonym: "meiotic cytoplasmic streaming variant" EXACT []
 is_a: WBPhenotype:0002612 ! cytoplasmic streaming phenotype
@@ -18218,7 +18218,7 @@ is_a: WBPhenotype:0002612 ! cytoplasmic streaming phenotype
 [Term]
 id: WBPhenotype:0002614
 name: derepression of heterchromatic gene silencing
-def: "Genes normally silenced within heterochromatin are abnoramally de-repressed and exhibit expression, unlike controls." [PMID:32251399, WB:WBPaper00059527, WB:WBPerson2439, WB:WBPerson2987]
+def: "Genes normally silenced within heterochromatin are abnoramally de-repressed and exhibit expression, unlike controls." [WB:WBPaper00059527, WB:WBPerson2439, WB:WBPerson2987]
 is_a: WBPhenotype:0000135 ! gene expression level high
 
 [Term]
