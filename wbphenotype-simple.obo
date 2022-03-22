@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2021-12-20/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2022-03-22/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2021-12-20" xsd:string
+property_value: owl:versionInfo "2022-03-22" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -3152,7 +3152,6 @@ name: DNA synthesis variant
 def: "Variations in the processes involving the production of new DNA strands compared to control." [GO:0006260, WB:WBPerson2021]
 synonym: "DNA synthesis abnormal" NARROW []
 is_a: WBPhenotype:0000732 ! DNA metabolism variant
-is_a: WBPhenotype:0001696 ! biosynthesis variant
 
 [Term]
 id: WBPhenotype:0000434
@@ -10085,8 +10084,7 @@ id: WBPhenotype:0001361
 name: chromosome condensation variant
 def: "Any variation in the progressive compaction of dispersed interphase chromatin into threadlike chromosomes prior to mitotic or meiotic nuclear division, or during apoptosis, in eukaryotic cells compared to control." [GO:0030261, WB:WBPerson2021, WB:WBPerson557]
 synonym: "chromosome condensation abnormal" NARROW []
-is_a: WBPhenotype:0001743 ! mitosis variant
-is_a: WBPhenotype:0002012 ! meiotic chromosome organization variant
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 
 [Term]
 id: WBPhenotype:0001362
@@ -14965,8 +14963,7 @@ is_a: WBPhenotype:0002058 ! pore forming toxin response variant
 id: WBPhenotype:0002061
 name: chromosome decondensation variant
 def: "Any variation in the progressive decompaction of chromatin that changes chromosome structure from the condensed form to a relaxed disperse form." [GO:0051312, WB:WBPerson2987, WB:WBPerson557]
-is_a: WBPhenotype:0001743 ! mitosis variant
-is_a: WBPhenotype:0002012 ! meiotic chromosome organization variant
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 
 [Term]
 id: WBPhenotype:0002062
