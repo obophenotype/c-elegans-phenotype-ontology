@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2022-03-22
+data-version: releases/2022-06-21
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -12,8 +12,8 @@ ontology: wbphenotype
 property_value: dc-description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
-property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2022-03-22" xsd:string
+property_value: has_ontology_root_term WBPhenotype:0000886
+property_value: owl:versionInfo "2022-06-21" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -2815,6 +2815,7 @@ name: axon guidance variant
 def: "Variations in the cue-directed extension of an axon towards a specific target site compared to control. (Axon guidance often depends on a combination of attractive and repulsive cues)." [GO:0048846, WB:WBPerson2021]
 synonym: "axon guidance abnormal" NARROW []
 synonym: "axon pathfinding abnormal" RELATED []
+is_a: WBPhenotype:0000944 ! neurite development variant
 is_a: WBPhenotype:0001224 ! axon outgrowth variant
 
 [Term]
@@ -7557,7 +7558,6 @@ name: developmental growth variant
 def: "Variations in the processes that regulate the change (increase) in size or mass of an integrated living unit (a cell, tissue, organ or organism) during any development stages compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "developmental growth abnormal" NARROW []
 is_a: WBPhenotype:0000030 ! growth variant
-is_a: WBPhenotype:0000518 ! development phenotype
 
 [Term]
 id: WBPhenotype:0001016
@@ -19152,6 +19152,17 @@ xref: http://purl.org/dc/terms/license
 is_metadata_tag: true
 
 [Typedef]
+id: has_ontology_root_term
+name: has ontology root term
+name: preferred_root
+namespace: uberon
+def: "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root." []
+xref: IAO:0000700
+property_value: IAO:0000111 "has ontology root term" xsd:string
+property_value: IAO:0000117 "Nicolas Matentzoglu" xsd:string
+is_metadata_tag: true
+
+[Typedef]
 id: has_part
 name: has part
 name: has_part
@@ -19181,6 +19192,7 @@ is_transitive: true
 id: occurs_in
 name: occurs in
 namespace: external
+namespace: gene_ontology
 def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
 comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
