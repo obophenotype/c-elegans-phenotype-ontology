@@ -215,6 +215,9 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
+ERROR	multiple_equivalent_class_definitions	regulation of cellular amine metabolic process	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	negative regulation of amine metabolic process	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	positive regulation of amine metabolic process	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -244,14 +247,38 @@ ERROR	multiple_labels	endometrial microvascular endothelial cells	rdfs:label	end
 ERROR	multiple_labels	endometrial microvascular endothelial cells	rdfs:label	endometrial microvascular endothelial cells
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus@en
+ERROR	multiple_labels	biogenic amine metabolic process	rdfs:label	biogenic amine metabolic process
+ERROR	multiple_labels	biogenic amine metabolic process	rdfs:label	cellular biogenic amine metabolic process
 ERROR	multiple_labels	axon	rdfs:label	axon
 ERROR	multiple_labels	axon	rdfs:label	axon@en
 ERROR	multiple_labels	dendrite	rdfs:label	dendrite
 ERROR	multiple_labels	dendrite	rdfs:label	dendrite@en
+ERROR	multiple_labels	regulation of cellular amine metabolic process	rdfs:label	regulation of amine metabolic process
+ERROR	multiple_labels	regulation of cellular amine metabolic process	rdfs:label	regulation of cellular amine metabolic process
+ERROR	multiple_labels	negative regulation of amine metabolic process	rdfs:label	negative regulation of amine metabolic process
+ERROR	multiple_labels	negative regulation of amine metabolic process	rdfs:label	negative regulation of cellular amine metabolic process
+ERROR	multiple_labels	positive regulation of amine metabolic process	rdfs:label	positive regulation of amine metabolic process
+ERROR	multiple_labels	positive regulation of amine metabolic process	rdfs:label	positive regulation of cellular amine metabolic process
+ERROR	multiple_labels	regulation of cellular amine catabolic process	rdfs:label	regulation of amine catabolic process
+ERROR	multiple_labels	regulation of cellular amine catabolic process	rdfs:label	regulation of cellular amine catabolic process
+ERROR	multiple_labels	negative regulation of cellular amine catabolic process	rdfs:label	negative regulation of amine catabolic process
+ERROR	multiple_labels	negative regulation of cellular amine catabolic process	rdfs:label	negative regulation of cellular amine catabolic process
+ERROR	multiple_labels	positive regulation of cellular amine catabolic process	rdfs:label	positive regulation of amine catabolic process
+ERROR	multiple_labels	positive regulation of cellular amine catabolic process	rdfs:label	positive regulation of cellular amine catabolic process
+ERROR	multiple_labels	regulation of amide metabolic process	rdfs:label	regulation of amide metabolic process
+ERROR	multiple_labels	regulation of amide metabolic process	rdfs:label	regulation of cellular amide metabolic process
+ERROR	multiple_labels	negative regulation of amide metabolic process	rdfs:label	negative regulation of amide metabolic process
+ERROR	multiple_labels	negative regulation of amide metabolic process	rdfs:label	negative regulation of cellular amide metabolic process
+ERROR	multiple_labels	positive regulation of cellular amide metabolic process	rdfs:label	positive regulation of amide metabolic process
+ERROR	multiple_labels	positive regulation of cellular amide metabolic process	rdfs:label	positive regulation of cellular amide metabolic process
+ERROR	multiple_labels	cellular biogenic amine biosynthetic process	rdfs:label	biogenic amine biosynthetic process
+ERROR	multiple_labels	cellular biogenic amine biosynthetic process	rdfs:label	cellular biogenic amine biosynthetic process
 ERROR	multiple_labels	cell projection	rdfs:label	cell projection
 ERROR	multiple_labels	cell projection	rdfs:label	cell projection@en
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection@en
+ERROR	multiple_labels	cellular amide metabolic process	rdfs:label	amide metabolic process
+ERROR	multiple_labels	cellular amide metabolic process	rdfs:label	cellular amide metabolic process
 ERROR	multiple_labels	synapse	rdfs:label	synapse
 ERROR	multiple_labels	synapse	rdfs:label	synapse@en
 ERROR	multiple_labels	definition	rdfs:label	definition
@@ -492,6 +519,8 @@ WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	Mus
 WARN	duplicate_exact_synonym	Mus <subgenus>	has_exact_synonym	Mus
 WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	mouse
 WARN	duplicate_exact_synonym	Mus musculus	has_exact_synonym	mouse
+WARN	duplicate_exact_synonym	microtubule cytoskeleton organization	has_exact_synonym	microtubule dynamics
+WARN	duplicate_exact_synonym	microtubule polymerization or depolymerization	has_exact_synonym	microtubule dynamics
 WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
 WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
 WARN	duplicate_label_synonym	organism substance	has_exact_synonym	organism substance
@@ -559,6 +588,7 @@ WARN	duplicate_label_synonym	glycosaminoglycan	has_exact_synonym	glycosaminoglyc
 WARN	duplicate_label_synonym	cyclohexanol	has_exact_synonym	cyclohexanol
 WARN	duplicate_label_synonym	hydrogen halide	has_exact_synonym	hydrogen halide
 WARN	duplicate_label_synonym	alkane	has_exact_synonym	alkane
+WARN	duplicate_label_synonym	methylcarbamate	has_exact_synonym	methylcarbamate
 WARN	duplicate_label_synonym	5beta-cholane	has_exact_synonym	5beta-cholane
 WARN	duplicate_label_synonym	2-aminopurines	has_exact_synonym	2-aminopurines
 WARN	duplicate_label_synonym	6-aminopurines	has_exact_synonym	6-aminopurines
@@ -603,6 +633,7 @@ WARN	duplicate_label_synonym	methanesulfonate	has_exact_synonym	methanesulfonate
 WARN	duplicate_label_synonym	methyl methanesulfonate	has_exact_synonym	methyl methanesulfonate
 WARN	duplicate_label_synonym	molecule	has_exact_synonym	molecule
 WARN	duplicate_label_synonym	monocarboxylic acid	has_exact_synonym	monocarboxylic acid
+WARN	duplicate_label_synonym	aldicarb	has_exact_synonym	aldicarb
 WARN	duplicate_label_synonym	ether	has_exact_synonym	ether
 WARN	duplicate_label_synonym	organic phosphate	has_exact_synonym	organic phosphate
 WARN	duplicate_label_synonym	organophosphorus compound	has_exact_synonym	organophosphorus compound
@@ -868,8 +899,10 @@ WARN	duplicate_label_synonym	avermectin	has_exact_synonym	avermectin
 WARN	duplicate_label_synonym	macrocycle	has_exact_synonym	macrocycle
 WARN	duplicate_label_synonym	quinolinium ion	has_exact_synonym	quinolinium ion
 WARN	duplicate_label_synonym	isoxazoles	has_exact_synonym	isoxazoles
+WARN	duplicate_label_synonym	methyl isocyanate	has_exact_synonym	methyl isocyanate
 WARN	duplicate_label_synonym	(8xi)-cinchonan	has_exact_synonym	(8xi)-cinchonan
 WARN	duplicate_label_synonym	(8S)-cinchonan	has_exact_synonym	(8S)-cinchonan
+WARN	duplicate_label_synonym	2-methyl-2-(methylsulfanyl)propanal oxime	has_exact_synonym	2-methyl-2-(methylsulfanyl)propanal oxime
 WARN	duplicate_label_synonym	tunicamycin A1	has_exact_synonym	tunicamycin A1
 WARN	duplicate_label_synonym	flour treatment agent	has_exact_synonym	flour treatment agent
 WARN	duplicate_label_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole	has_exact_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
@@ -878,6 +911,18 @@ WARN	duplicate_label_synonym	striated muscle cell	has_exact_synonym	striated mus
 WARN	duplicate_label_synonym	non-striated muscle cell	has_exact_synonym	non-striated muscle cell
 WARN	duplicate_label_synonym	myocyte of sinoatrial node	has_exact_synonym	myocyte of sinoatrial node
 WARN	duplicate_label_synonym	nucleus	has_exact_synonym	nucleus
+WARN	duplicate_label_synonym	biogenic amine metabolic process	has_exact_synonym	cellular biogenic amine metabolic process
+WARN	duplicate_label_synonym	regulation of cellular amine metabolic process	has_exact_synonym	regulation of cellular amine metabolic process
+WARN	duplicate_label_synonym	negative regulation of amine metabolic process	has_exact_synonym	negative regulation of cellular amine metabolic process
+WARN	duplicate_label_synonym	positive regulation of amine metabolic process	has_exact_synonym	positive regulation of cellular amine metabolic process
+WARN	duplicate_label_synonym	regulation of cellular amine catabolic process	has_exact_synonym	regulation of cellular amine catabolic process
+WARN	duplicate_label_synonym	negative regulation of cellular amine catabolic process	has_exact_synonym	negative regulation of cellular amine catabolic process
+WARN	duplicate_label_synonym	regulation of amide metabolic process	has_exact_synonym	regulation of cellular amide metabolic process
+WARN	duplicate_label_synonym	negative regulation of amide metabolic process	has_exact_synonym	negative regulation of cellular amide metabolic process
+WARN	duplicate_label_synonym	positive regulation of cellular amide metabolic process	has_exact_synonym	positive regulation of cellular amide metabolic process
+WARN	duplicate_label_synonym	cellular biogenic amine biosynthetic process	has_exact_synonym	cellular biogenic amine biosynthetic process
+WARN	duplicate_label_synonym	cellular amide metabolic process	has_exact_synonym	cellular amide metabolic process
+WARN	duplicate_label_synonym	cellular amine metabolic process	has_exact_synonym	cellular amine metabolic process
 WARN	duplicate_label_synonym	variant	has_exact_synonym	variant
 WARN	duplicate_label_synonym	protruding	has_exact_synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
@@ -1871,7 +1916,7 @@ WARN	missing_definition	ends after	definition
 WARN	missing_definition	immediately preceded by	definition	
 WARN	missing_definition	immediately_precedes	definition	
 WARN	missing_definition	happens during	definition	
-WARN	missing_definition	ends_during	definition	
+WARN	missing_definition	ends during	definition	
 WARN	missing_definition	temporally related to	definition	
 WARN	missing_definition	part of developmental precursor of	definition	
 WARN	missing_definition	results in formation of	definition	
@@ -2124,6 +2169,9 @@ WARN	missing_definition	has_obo_format_version	definition
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	has_related_synonym	definition	
 WARN	missing_definition	in_subset	definition	
+WARN	multiple_equivalent_classes	regulation of cellular amine metabolic process	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	negative regulation of amine metabolic process	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	positive regulation of amine metabolic process	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
 INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
