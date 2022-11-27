@@ -175,8 +175,6 @@ ERROR	multiple_definitions	independent continuant	definition	A continuant that i
 ERROR	multiple_definitions	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 ERROR	multiple_definitions	specifically dependent continuant	definition	A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.@en
 ERROR	multiple_definitions	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
-ERROR	multiple_definitions	generically dependent continuant	definition	A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.@en
-ERROR	multiple_definitions	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid.
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.
 ERROR	multiple_definitions	gamma-aminobutyric acid	definition	A gamma-amino acid that is butanoic acid with the amino substituent located at C-4.
@@ -201,29 +199,58 @@ ERROR	multiple_definitions	fatty acid	definition	Any aliphatic monocarboxylic ac
 ERROR	multiple_definitions	fatty acid	definition	Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax. Natural fatty acids commonly have a chain of 4 to 28 carbons (usually unbranched and even-numbered), which may be saturated or unsaturated. By extension, the term is sometimes used to embrace all acyclic aliphatic carboxylic acids.
 ERROR	multiple_definitions	straight-chain saturated fatty acid	definition	Any saturated fatty acid lacking a carbon side-chain.
 ERROR	multiple_definitions	straight-chain saturated fatty acid	definition	Any saturated fatty acid lacking a side-chain.
+ERROR	multiple_definitions	microtubule-based movement	definition	A microtubule-based process that results in the movement of organelles, other microtubules, or other cellular components.  Examples include motor-driven movement along microtubules and movement driven by polymerization or depolymerization of microtubules.
+ERROR	multiple_definitions	microtubule-based movement	definition	A microtubule-based process that results in the movement of organelles, other microtubules, or other cellular components. Examples include motor-driven movement along microtubules and movement driven by polymerization or depolymerization of microtubules.
+ERROR	multiple_definitions	cell-cell signaling	definition	Any process that mediates the transfer of information from one cell to another. This process includes signal transduction in the receiving cell and, where applicable, release of a ligand and any processes that actively facilitate its transport and presentation to the receiving cell.  Examples include signaling via soluble ligands, via cell adhesion molecules and via gap junctions.
+ERROR	multiple_definitions	cell-cell signaling	definition	Any process that mediates the transfer of information from one cell to another. This process includes signal transduction in the receiving cell and, where applicable, release of a ligand and any processes that actively facilitate its transport and presentation to the receiving cell. Examples include signaling via soluble ligands, via cell adhesion molecules and via gap junctions.
+ERROR	multiple_definitions	synapse assembly	definition	The aggregation, arrangement and bonding together of a set of components to form a synapse.  This process ends when the synapse is mature (functional).
+ERROR	multiple_definitions	synapse assembly	definition	The aggregation, arrangement and bonding together of a set of components to form a synapse. This process ends when the synapse is mature (functional).
+ERROR	multiple_definitions	cellular oxygen homeostasis	definition	A homeostatic process involved in the maintenance of an internal steady state of oxygen within a cell.
+ERROR	multiple_definitions	cellular oxygen homeostasis	definition	A homeostatic process involved in the maintenance of an internal steady state of oxygen within an organism or cell.
+ERROR	multiple_definitions	surfactant homeostasis	definition	Any process involved in the maintenance of a steady-state level of a surface-active agent that maintains the surface tension of a liquid.
+ERROR	multiple_definitions	surfactant homeostasis	definition	Any process involved in the maintenance of a steady-state level of the surface-active lipoprotein mixture which coats the alveoli.
+ERROR	multiple_definitions	amino acid homeostasis	definition	Any process involved in the maintenance of an internal steady state of amino acid within a cell.
+ERROR	multiple_definitions	amino acid homeostasis	definition	Any process involved in the maintenance of an internal steady state of amino acid within an organism or cell.
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
-ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
-ERROR	multiple_definitions	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
-ERROR	multiple_definitions	bearer of	definition	Inverse of characteristic_of@en
-ERROR	multiple_definitions	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.@en
 ERROR	multiple_definitions	innervates	definition	"Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input.
 T innervates some R
 Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
+ERROR	multiple_definitions	regulates	definition	p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q.
+ERROR	multiple_definitions	regulates	definition	process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2.
+ERROR	multiple_definitions	negatively regulates	definition	Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2.
+ERROR	multiple_definitions	negatively regulates	definition	p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q.
+ERROR	multiple_definitions	positively regulates	definition	Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2.
+ERROR	multiple_definitions	positively regulates	definition	p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q.
+ERROR	multiple_definitions	causally related to	definition	This relation groups causal relations between material entities and causal relations between processes
+ERROR	multiple_definitions	causally related to	definition	relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause.
+ERROR	multiple_definitions	causally upstream of	definition	p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain
+ERROR	multiple_definitions	causally upstream of	definition	p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q.
+ERROR	multiple_definitions	immediately causally upstream of	definition	p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q.
+ERROR	multiple_definitions	immediately causally upstream of	definition	p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q.
+ERROR	multiple_definitions	causally upstream of or within	definition	p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q.
+ERROR	multiple_definitions	causally upstream of or within	definition	p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
-ERROR	multiple_equivalent_class_definitions	regulation of cellular amine metabolic process	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	negative regulation of amine metabolic process	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	positive regulation of amine metabolic process	owl:equivalentClass	blank node
+ERROR	multiple_definitions	causal relation between processes	definition	p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q.
+ERROR	multiple_definitions	causal relation between processes	definition	p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q.
+ERROR	multiple_definitions	directly regulates	definition	Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2.
+ERROR	multiple_definitions	directly regulates	definition	p directly regulates q iff p is immediately causally upstream of q and p regulates q.
+ERROR	multiple_definitions	directly positively regulates	definition	Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2.
+ERROR	multiple_definitions	directly positively regulates	definition	p directly positively regulates q iff p is immediately causally upstream of q, and p positively regulates q.
+ERROR	multiple_definitions	directly negatively regulates	definition	Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2.
+ERROR	multiple_definitions	directly negatively regulates	definition	p directly negatively regulates q iff p is immediately causally upstream of q, and p negatively regulates q.
+ERROR	multiple_equivalent_class_definitions	cellular oxygen homeostasis	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	amino acid homeostasis	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
-ERROR	multiple_labels	has_part	rdfs:label	has part
-ERROR	multiple_labels	has_part	rdfs:label	has part@en
-ERROR	multiple_labels	has_part	rdfs:label	has_part
+ERROR	multiple_labels	has part	rdfs:label	has part
+ERROR	multiple_labels	has part	rdfs:label	has part@en
+ERROR	multiple_labels	has part	rdfs:label	has_part
 ERROR	multiple_labels	preceded_by	rdfs:label	preceded by
 ERROR	multiple_labels	preceded_by	rdfs:label	preceded by@en
 ERROR	multiple_labels	preceded_by	rdfs:label	preceded_by
@@ -243,44 +270,26 @@ ERROR	multiple_labels	cell	rdfs:label	cell
 ERROR	multiple_labels	cell	rdfs:label	cell@en
 ERROR	multiple_labels	neuron	rdfs:label	neuron
 ERROR	multiple_labels	neuron	rdfs:label	neuron@en
-ERROR	multiple_labels	endometrial microvascular endothelial cells	rdfs:label	endometrial microvascular endothelial cell
-ERROR	multiple_labels	endometrial microvascular endothelial cells	rdfs:label	endometrial microvascular endothelial cells
+ERROR	multiple_labels	results in distribution of	rdfs:label	results in distribution of
+ERROR	multiple_labels	results in distribution of	rdfs:label	results_in_distribution_of
+ERROR	multiple_labels	results in fission of	rdfs:label	results in fission of
+ERROR	multiple_labels	results in fission of	rdfs:label	results_in_fission_of
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus
 ERROR	multiple_labels	nucleus	rdfs:label	nucleus@en
-ERROR	multiple_labels	biogenic amine metabolic process	rdfs:label	biogenic amine metabolic process
-ERROR	multiple_labels	biogenic amine metabolic process	rdfs:label	cellular biogenic amine metabolic process
 ERROR	multiple_labels	axon	rdfs:label	axon
 ERROR	multiple_labels	axon	rdfs:label	axon@en
 ERROR	multiple_labels	dendrite	rdfs:label	dendrite
 ERROR	multiple_labels	dendrite	rdfs:label	dendrite@en
-ERROR	multiple_labels	regulation of cellular amine metabolic process	rdfs:label	regulation of amine metabolic process
-ERROR	multiple_labels	regulation of cellular amine metabolic process	rdfs:label	regulation of cellular amine metabolic process
-ERROR	multiple_labels	negative regulation of amine metabolic process	rdfs:label	negative regulation of amine metabolic process
-ERROR	multiple_labels	negative regulation of amine metabolic process	rdfs:label	negative regulation of cellular amine metabolic process
-ERROR	multiple_labels	positive regulation of amine metabolic process	rdfs:label	positive regulation of amine metabolic process
-ERROR	multiple_labels	positive regulation of amine metabolic process	rdfs:label	positive regulation of cellular amine metabolic process
-ERROR	multiple_labels	regulation of cellular amine catabolic process	rdfs:label	regulation of amine catabolic process
-ERROR	multiple_labels	regulation of cellular amine catabolic process	rdfs:label	regulation of cellular amine catabolic process
-ERROR	multiple_labels	negative regulation of cellular amine catabolic process	rdfs:label	negative regulation of amine catabolic process
-ERROR	multiple_labels	negative regulation of cellular amine catabolic process	rdfs:label	negative regulation of cellular amine catabolic process
-ERROR	multiple_labels	positive regulation of cellular amine catabolic process	rdfs:label	positive regulation of amine catabolic process
-ERROR	multiple_labels	positive regulation of cellular amine catabolic process	rdfs:label	positive regulation of cellular amine catabolic process
-ERROR	multiple_labels	regulation of amide metabolic process	rdfs:label	regulation of amide metabolic process
-ERROR	multiple_labels	regulation of amide metabolic process	rdfs:label	regulation of cellular amide metabolic process
-ERROR	multiple_labels	negative regulation of amide metabolic process	rdfs:label	negative regulation of amide metabolic process
-ERROR	multiple_labels	negative regulation of amide metabolic process	rdfs:label	negative regulation of cellular amide metabolic process
-ERROR	multiple_labels	positive regulation of cellular amide metabolic process	rdfs:label	positive regulation of amide metabolic process
-ERROR	multiple_labels	positive regulation of cellular amide metabolic process	rdfs:label	positive regulation of cellular amide metabolic process
-ERROR	multiple_labels	cellular biogenic amine biosynthetic process	rdfs:label	biogenic amine biosynthetic process
-ERROR	multiple_labels	cellular biogenic amine biosynthetic process	rdfs:label	cellular biogenic amine biosynthetic process
+ERROR	multiple_labels	cellular oxygen homeostasis	rdfs:label	cellular oxygen homeostasis
+ERROR	multiple_labels	cellular oxygen homeostasis	rdfs:label	oxygen homeostasis
 ERROR	multiple_labels	cell projection	rdfs:label	cell projection
 ERROR	multiple_labels	cell projection	rdfs:label	cell projection@en
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection
 ERROR	multiple_labels	neuron projection	rdfs:label	neuron projection@en
-ERROR	multiple_labels	cellular amide metabolic process	rdfs:label	amide metabolic process
-ERROR	multiple_labels	cellular amide metabolic process	rdfs:label	cellular amide metabolic process
 ERROR	multiple_labels	synapse	rdfs:label	synapse
 ERROR	multiple_labels	synapse	rdfs:label	synapse@en
+ERROR	multiple_labels	amino acid homeostasis	rdfs:label	amino acid homeostasis
+ERROR	multiple_labels	amino acid homeostasis	rdfs:label	cellular amino acid homeostasis
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
@@ -288,14 +297,10 @@ ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term@e
 ERROR	multiple_labels	has ontology root term	rdfs:label	preferred_root
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by@en
-ERROR	multiple_labels	inheres in	rdfs:label	characteristic of@en
-ERROR	multiple_labels	inheres in	rdfs:label	inheres in@en
 ERROR	multiple_labels	bearer of	rdfs:label	bearer of
-ERROR	multiple_labels	bearer of	rdfs:label	bearer of@en
 ERROR	multiple_labels	bearer of	rdfs:label	has characteristic@en
 ERROR	multiple_labels	participates in	rdfs:label	participates in
 ERROR	multiple_labels	participates in	rdfs:label	participates in@en
-ERROR	multiple_labels	participates in	rdfs:label	participates_in
 ERROR	multiple_labels	has participant	rdfs:label	has participant
 ERROR	multiple_labels	has participant	rdfs:label	has participant@en
 ERROR	multiple_labels	has quality	rdfs:label	has quality
@@ -321,10 +326,9 @@ ERROR	multiple_labels	simultaneous with	rdfs:label	simultaneous with
 ERROR	multiple_labels	simultaneous with	rdfs:label	simultaneous with@en
 ERROR	multiple_labels	immediately preceded by	rdfs:label	immediately preceded by
 ERROR	multiple_labels	immediately preceded by	rdfs:label	immediately preceded by@en
-ERROR	multiple_labels	immediately preceded by	rdfs:label	immediately_preceded_by
 ERROR	multiple_labels	immediately preceded by	rdfs:label	starts_at_end_of
-ERROR	multiple_labels	immediately_precedes	rdfs:label	immediately precedes@en
-ERROR	multiple_labels	immediately_precedes	rdfs:label	immediately_precedes
+ERROR	multiple_labels	immediately precedes	rdfs:label	immediately precedes
+ERROR	multiple_labels	immediately precedes	rdfs:label	immediately precedes@en
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps@en
 ERROR	multiple_labels	innervates	rdfs:label	innervates
@@ -454,10 +458,6 @@ ERROR	multiple_labels	causally upstream of	rdfs:label	causally upstream of
 ERROR	multiple_labels	causally upstream of	rdfs:label	causally upstream of@en
 ERROR	multiple_labels	immediately causally upstream of	rdfs:label	immediately causally upstream of
 ERROR	multiple_labels	immediately causally upstream of	rdfs:label	immediately causally upstream of@en
-ERROR	multiple_labels	results in assembly of	rdfs:label	results in assembly of
-ERROR	multiple_labels	results in assembly of	rdfs:label	results_in_assembly_of
-ERROR	multiple_labels	results in disassembly of	rdfs:label	results in disassembly of
-ERROR	multiple_labels	results in disassembly of	rdfs:label	results_in_disassembly_of
 ERROR	multiple_labels	produces	rdfs:label	produces
 ERROR	multiple_labels	produces	rdfs:label	produces@en
 ERROR	multiple_labels	produced by	rdfs:label	produced by
@@ -466,6 +466,14 @@ ERROR	multiple_labels	acts on population of	rdfs:label	acts on population of
 ERROR	multiple_labels	acts on population of	rdfs:label	acts on population of@en
 ERROR	multiple_labels	results in fusion of	rdfs:label	results in fusion of
 ERROR	multiple_labels	results in fusion of	rdfs:label	results in fusion of@en
+ERROR	multiple_labels	has_broad_synonym	rdfs:label	has broad synonym@en
+ERROR	multiple_labels	has_broad_synonym	rdfs:label	has_broad_synonym
+ERROR	multiple_labels	has exact synonym	rdfs:label	has exact synonym@en
+ERROR	multiple_labels	has exact synonym	rdfs:label	has_exact_synonym
+ERROR	multiple_labels	has narrow synonym	rdfs:label	has narrow synonym@en
+ERROR	multiple_labels	has narrow synonym	rdfs:label	has_narrow_synonym
+ERROR	multiple_labels	has_related_synonym	rdfs:label	has related synonym@en
+ERROR	multiple_labels	has_related_synonym	rdfs:label	has_related_synonym
 WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] 
 WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] 
 WARN	annotation_whitespace	continuant	IAO:0000602	(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] 
@@ -475,10 +483,16 @@ WARN	annotation_whitespace	occurrent	IAO:0000602	(forall (x) (iff (Occurrent x) 
 WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] 
 WARN	annotation_whitespace	independent continuant	IAO:0000602	(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] 
 WARN	annotation_whitespace	independent continuant	IAO:0000602	(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] 
+WARN	annotation_whitespace	disposition	IAO:0000602	(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] 
+WARN	annotation_whitespace	disposition	IAO:0000602	(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] 
+WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] 
+WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
 WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
+WARN	annotation_whitespace	role	IAO:0000602	(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] 
 WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
+WARN	annotation_whitespace	function	IAO:0000602	(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] 
 WARN	annotation_whitespace	extraembryonic structure	rdfs:comment	"MH: define as not part of embryo, or will not develop into embryo? MH: changed def to exclude cells so this class could be included in gross anatomical part. DOS: Changed to something that I think works for both vertebrates and invertebrates and that keeps the restriction to multicellular structures.  Old def: \""Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue that will not contribute to the embryo.\"".  One remaining question - perhaps zygote is too restrictive given that some organisms have parthenogenesis e.g. aphids?
 "
 WARN	annotation_whitespace	gross anatomical part	definition	Anatomical structure that is part of a multicellular organism and is at the gross anatomical level, e.g. above the level of a cell.  Included are portions of organism substances such as blood, multi-cell-part structures such as axon tracts, acellular anatomical structures such as hair, and organism subdivisions such as head. Excluded is the whole organism and more granular parts of the organism, such as atoms, molecules, macromolecular complexes and cells. 
@@ -503,7 +517,7 @@ We don't have definitions of 'meaning' or 'expression' or 'property'. For 'refer
 Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
 
 We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  @en"
-WARN	annotation_whitespace	physical object quality	has_exact_synonym	multiply inhering quality of a physical entity 
+WARN	annotation_whitespace	physical object quality	has exact synonym	multiply inhering quality of a physical entity 
 WARN	annotation_whitespace	contained in	editor note	"Intended meaning:
 domain: material entity
 range: spatial region or site (immaterial continuant)
@@ -513,814 +527,797 @@ WARN	annotation_whitespace	capable of	definition	A relation between a material e
 WARN	annotation_whitespace	developmentally induced by	IAO:0000119	 Developmental Biology, Gilbert, 8th edition, figure 6.5(F)
 WARN	annotation_whitespace	results in maturation of	IAO:0000112	 an annotation of gene X to cell maturation with results_in_maturation_of CL:0000057 (fibroblast) means that the fibroblast is mature at the end of the process
 WARN	annotation_whitespace	results in transport along	definition	Holds between p and l when p is a transportation or localization process and the outcome of this process is to move c from one location to another, and the route taken by c follows a path that is aligned_with l 
-WARN	duplicate_exact_synonym	organism substance	has_exact_synonym	portion of organism substance
-WARN	duplicate_exact_synonym	organism substance	has_exact_synonym	portion of organism substance
-WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	Mus
-WARN	duplicate_exact_synonym	Mus <subgenus>	has_exact_synonym	Mus
-WARN	duplicate_exact_synonym	Mus <genus>	has_exact_synonym	mouse
-WARN	duplicate_exact_synonym	Mus musculus	has_exact_synonym	mouse
-WARN	duplicate_exact_synonym	microtubule cytoskeleton organization	has_exact_synonym	microtubule dynamics
-WARN	duplicate_exact_synonym	microtubule polymerization or depolymerization	has_exact_synonym	microtubule dynamics
-WARN	duplicate_exact_synonym	copper atom	has_exact_synonym	copper
-WARN	duplicate_exact_synonym	copper(0)	has_exact_synonym	copper
-WARN	duplicate_label_synonym	organism substance	has_exact_synonym	organism substance
-WARN	duplicate_label_synonym	anatomical boundary	has_exact_synonym	anatomical boundary
-WARN	duplicate_label_synonym	multi-cell-part structure	has_exact_synonym	multi-cell-part structure
-WARN	duplicate_label_synonym	electron	has_exact_synonym	electron
-WARN	duplicate_label_synonym	3-(1-methylpyrrolidin-2-yl)pyridine	has_exact_synonym	3-(1-methylpyrrolidin-2-yl)pyridine
-WARN	duplicate_label_synonym	carbamate	has_exact_synonym	carbamate
-WARN	duplicate_label_synonym	oxime anion	has_exact_synonym	oxime anion
-WARN	duplicate_label_synonym	anticoronaviral agent	has_exact_synonym	anticoronaviral agent
-WARN	duplicate_label_synonym	sulfide(2-)	has_exact_synonym	sulfide(2-)
-WARN	duplicate_label_synonym	xanthine	has_exact_synonym	xanthine
-WARN	duplicate_label_synonym	acetone	has_exact_synonym	acetone
-WARN	duplicate_label_synonym	acetylcholine	has_exact_synonym	acetylcholine
-WARN	duplicate_label_synonym	cysteine	has_exact_synonym	cysteine
-WARN	duplicate_label_synonym	acetic acid	has_exact_synonym	acetic acid
-WARN	duplicate_label_synonym	water	has_exact_synonym	water
-WARN	duplicate_label_synonym	dioxygen	has_exact_synonym	dioxygen
-WARN	duplicate_label_synonym	ATP	has_exact_synonym	ATP
-WARN	duplicate_label_synonym	L-alpha-amino acid	has_exact_synonym	L-alpha-amino acid
-WARN	duplicate_label_synonym	formate	has_exact_synonym	formate
-WARN	duplicate_label_synonym	isoamylol	has_exact_synonym	isoamylol
-WARN	duplicate_label_synonym	quinine	has_exact_synonym	quinine
-WARN	duplicate_label_synonym	bromide	has_exact_synonym	bromide
-WARN	duplicate_label_synonym	cyclopentanol	has_exact_synonym	cyclopentanol
-WARN	duplicate_label_synonym	ammonia	has_exact_synonym	ammonia
-WARN	duplicate_label_synonym	hydrogen sulfide	has_exact_synonym	hydrogen sulfide
-WARN	duplicate_label_synonym	methane	has_exact_synonym	methane
-WARN	duplicate_label_synonym	sulfate	has_exact_synonym	sulfate
-WARN	duplicate_label_synonym	urea	has_exact_synonym	urea
-WARN	duplicate_label_synonym	hydroxide	has_exact_synonym	hydroxide
-WARN	duplicate_label_synonym	guanine	has_exact_synonym	guanine
-WARN	duplicate_label_synonym	ethanol	has_exact_synonym	ethanol
-WARN	duplicate_label_synonym	hydrogen peroxide	has_exact_synonym	hydrogen peroxide
-WARN	duplicate_label_synonym	adenosine	has_exact_synonym	adenosine
-WARN	duplicate_label_synonym	D-cysteine	has_exact_synonym	D-cysteine
-WARN	duplicate_label_synonym	iodide	has_exact_synonym	iodide
-WARN	duplicate_label_synonym	carbon dioxide	has_exact_synonym	carbon dioxide
-WARN	duplicate_label_synonym	ethanethioic S-acid	has_exact_synonym	ethanethioic S-acid
-WARN	duplicate_label_synonym	butane-2,3-dione	has_exact_synonym	butane-2,3-dione
-WARN	duplicate_label_synonym	carbohydrate	has_exact_synonym	carbohydrate
-WARN	duplicate_label_synonym	adenine	has_exact_synonym	adenine
-WARN	duplicate_label_synonym	D-alpha-amino acid	has_exact_synonym	D-alpha-amino acid
-WARN	duplicate_label_synonym	gamma-aminobutyric acid	has_exact_synonym	gamma-aminobutyric acid
-WARN	duplicate_label_synonym	D-ribose	has_exact_synonym	D-ribose
-WARN	duplicate_label_synonym	fluoride	has_exact_synonym	fluoride
-WARN	duplicate_label_synonym	hexanoate	has_exact_synonym	hexanoate
-WARN	duplicate_label_synonym	glucose	has_exact_synonym	glucose
-WARN	duplicate_label_synonym	7H-purine	has_exact_synonym	7H-purine
-WARN	duplicate_label_synonym	sulfite	has_exact_synonym	sulfite
-WARN	duplicate_label_synonym	aldehyde	has_exact_synonym	aldehyde
-WARN	duplicate_label_synonym	alditol	has_exact_synonym	alditol
-WARN	duplicate_label_synonym	hydrogencarbonate	has_exact_synonym	hydrogencarbonate
-WARN	duplicate_label_synonym	L-cysteine	has_exact_synonym	L-cysteine
-WARN	duplicate_label_synonym	uracil	has_exact_synonym	uracil
-WARN	duplicate_label_synonym	octane	has_exact_synonym	octane
-WARN	duplicate_label_synonym	(S)-nicotine	has_exact_synonym	(S)-nicotine
-WARN	duplicate_label_synonym	glycerol	has_exact_synonym	glycerol
-WARN	duplicate_label_synonym	methanol	has_exact_synonym	methanol
-WARN	duplicate_label_synonym	hydrogen chloride	has_exact_synonym	hydrogen chloride
-WARN	duplicate_label_synonym	butyrate	has_exact_synonym	butyrate
-WARN	duplicate_label_synonym	chloride	has_exact_synonym	chloride
-WARN	duplicate_label_synonym	lipid	has_exact_synonym	lipid
-WARN	duplicate_label_synonym	glycosaminoglycan	has_exact_synonym	glycosaminoglycan
-WARN	duplicate_label_synonym	cyclohexanol	has_exact_synonym	cyclohexanol
-WARN	duplicate_label_synonym	hydrogen halide	has_exact_synonym	hydrogen halide
-WARN	duplicate_label_synonym	alkane	has_exact_synonym	alkane
-WARN	duplicate_label_synonym	methylcarbamate	has_exact_synonym	methylcarbamate
-WARN	duplicate_label_synonym	5beta-cholane	has_exact_synonym	5beta-cholane
-WARN	duplicate_label_synonym	2-aminopurines	has_exact_synonym	2-aminopurines
-WARN	duplicate_label_synonym	6-aminopurines	has_exact_synonym	6-aminopurines
-WARN	duplicate_label_synonym	acyl group	has_exact_synonym	acyl group
-WARN	duplicate_label_synonym	aldoxime	has_exact_synonym	aldoxime
-WARN	duplicate_label_synonym	alkyl group	has_exact_synonym	alkyl group
-WARN	duplicate_label_synonym	anion	has_exact_synonym	anion
-WARN	duplicate_label_synonym	arsenic molecular entity	has_exact_synonym	arsenic molecular entity
-WARN	duplicate_label_synonym	base	has_exact_synonym	base
-WARN	duplicate_label_synonym	bromine molecular entity	has_exact_synonym	bromine molecular entity
-WARN	duplicate_label_synonym	calcium molecular entity	has_exact_synonym	calcium molecular entity
-WARN	duplicate_label_synonym	carbonyl group	has_exact_synonym	carbonyl group
-WARN	duplicate_label_synonym	cofactor	has_exact_synonym	cofactor
-WARN	duplicate_label_synonym	molecular entity	has_exact_synonym	molecular entity
-WARN	duplicate_label_synonym	copper molecular entity	has_exact_synonym	copper molecular entity
-WARN	duplicate_label_synonym	cysteine derivative	has_exact_synonym	cysteine derivative
-WARN	duplicate_label_synonym	enzyme inhibitor	has_exact_synonym	enzyme inhibitor
-WARN	duplicate_label_synonym	fatty alcohol	has_exact_synonym	fatty alcohol
-WARN	duplicate_label_synonym	fluorine molecular entity	has_exact_synonym	fluorine molecular entity
-WARN	duplicate_label_synonym	fluoroalkane	has_exact_synonym	fluoroalkane
-WARN	duplicate_label_synonym	chemical entity	has_exact_synonym	chemical entity
-WARN	duplicate_label_synonym	group	has_exact_synonym	group
-WARN	duplicate_label_synonym	halogen molecular entity	has_exact_synonym	halogen molecular entity
-WARN	duplicate_label_synonym	halogen	has_exact_synonym	halogen
-WARN	duplicate_label_synonym	heterodetic cyclic peptide	has_exact_synonym	heterodetic cyclic peptide
-WARN	duplicate_label_synonym	hydrocarbon	has_exact_synonym	hydrocarbon
-WARN	duplicate_label_synonym	hypochlorous acid	has_exact_synonym	hypochlorous acid
-WARN	duplicate_label_synonym	imide	has_exact_synonym	imide
-WARN	duplicate_label_synonym	oxoacid	has_exact_synonym	oxoacid
-WARN	duplicate_label_synonym	inorganic peroxide	has_exact_synonym	inorganic peroxide
-WARN	duplicate_label_synonym	inositol	has_exact_synonym	inositol
-WARN	duplicate_label_synonym	iodine molecular entity	has_exact_synonym	iodine molecular entity
-WARN	duplicate_label_synonym	salt	has_exact_synonym	salt
-WARN	duplicate_label_synonym	ion	has_exact_synonym	ion
-WARN	duplicate_label_synonym	iron molecular entity	has_exact_synonym	iron molecular entity
-WARN	duplicate_label_synonym	isoprenoid	has_exact_synonym	isoprenoid
-WARN	duplicate_label_synonym	lactone	has_exact_synonym	lactone
-WARN	duplicate_label_synonym	lysine	has_exact_synonym	lysine
-WARN	duplicate_label_synonym	macrolide	has_exact_synonym	macrolide
-WARN	duplicate_label_synonym	metabolite	has_exact_synonym	metabolite
-WARN	duplicate_label_synonym	methanesulfonate	has_exact_synonym	methanesulfonate
-WARN	duplicate_label_synonym	methyl methanesulfonate	has_exact_synonym	methyl methanesulfonate
-WARN	duplicate_label_synonym	molecule	has_exact_synonym	molecule
-WARN	duplicate_label_synonym	monocarboxylic acid	has_exact_synonym	monocarboxylic acid
-WARN	duplicate_label_synonym	aldicarb	has_exact_synonym	aldicarb
-WARN	duplicate_label_synonym	ether	has_exact_synonym	ether
-WARN	duplicate_label_synonym	organic phosphate	has_exact_synonym	organic phosphate
-WARN	duplicate_label_synonym	organophosphorus compound	has_exact_synonym	organophosphorus compound
-WARN	duplicate_label_synonym	oxide	has_exact_synonym	oxide
-WARN	duplicate_label_synonym	oxime	has_exact_synonym	oxime
-WARN	duplicate_label_synonym	oxygen molecular entity	has_exact_synonym	oxygen molecular entity
-WARN	duplicate_label_synonym	pentenoic acid	has_exact_synonym	pentenoic acid
-WARN	duplicate_label_synonym	aldopentose phosphate	has_exact_synonym	aldopentose phosphate
-WARN	duplicate_label_synonym	pentose	has_exact_synonym	pentose
-WARN	duplicate_label_synonym	pesticide	has_exact_synonym	pesticide
-WARN	duplicate_label_synonym	phosphate	has_exact_synonym	phosphate
-WARN	duplicate_label_synonym	phosphoric acid	has_exact_synonym	phosphoric acid
-WARN	duplicate_label_synonym	polar amino acid	has_exact_synonym	polar amino acid
-WARN	duplicate_label_synonym	polyketide	has_exact_synonym	polyketide
-WARN	duplicate_label_synonym	porphyrins	has_exact_synonym	porphyrins
-WARN	duplicate_label_synonym	prosthetic group	has_exact_synonym	prosthetic group
-WARN	duplicate_label_synonym	purine nucleobase	has_exact_synonym	purine nucleobase
-WARN	duplicate_label_synonym	purine nucleoside	has_exact_synonym	purine nucleoside
-WARN	duplicate_label_synonym	pyrimidine nucleobase	has_exact_synonym	pyrimidine nucleobase
-WARN	duplicate_label_synonym	rhamnoside	has_exact_synonym	rhamnoside
-WARN	duplicate_label_synonym	ribose phosphate	has_exact_synonym	ribose phosphate
-WARN	duplicate_label_synonym	saturated fatty acid	has_exact_synonym	saturated fatty acid
-WARN	duplicate_label_synonym	sodium chloride	has_exact_synonym	sodium chloride
-WARN	duplicate_label_synonym	sulfates	has_exact_synonym	sulfates
-WARN	duplicate_label_synonym	sulfur molecular entity	has_exact_synonym	sulfur molecular entity
-WARN	duplicate_label_synonym	sulfuric acid	has_exact_synonym	sulfuric acid
-WARN	duplicate_label_synonym	tertiary alcohol	has_exact_synonym	tertiary alcohol
-WARN	duplicate_label_synonym	tetrapyrrole	has_exact_synonym	tetrapyrrole
-WARN	duplicate_label_synonym	toxin	has_exact_synonym	toxin
-WARN	duplicate_label_synonym	zwitterion	has_exact_synonym	zwitterion
-WARN	duplicate_label_synonym	methanesulfonic acid	has_exact_synonym	methanesulfonic acid
-WARN	duplicate_label_synonym	caffeine	has_exact_synonym	caffeine
-WARN	duplicate_label_synonym	detergent	has_exact_synonym	detergent
-WARN	duplicate_label_synonym	galactose	has_exact_synonym	galactose
-WARN	duplicate_label_synonym	carbamic acid	has_exact_synonym	carbamic acid
-WARN	duplicate_label_synonym	ammonium	has_exact_synonym	ammonium
-WARN	duplicate_label_synonym	dicarboxylic acid dianion	has_exact_synonym	dicarboxylic acid dianion
-WARN	duplicate_label_synonym	carbonic acid	has_exact_synonym	carbonic acid
-WARN	duplicate_label_synonym	sodium(1+)	has_exact_synonym	sodium(1+)
-WARN	duplicate_label_synonym	calcium(2+)	has_exact_synonym	calcium(2+)
-WARN	duplicate_label_synonym	hydrogenperoxide(1-)	has_exact_synonym	hydrogenperoxide(1-)
-WARN	duplicate_label_synonym	cyanate	has_exact_synonym	cyanate
-WARN	duplicate_label_synonym	isocyanic acid	has_exact_synonym	isocyanic acid
-WARN	duplicate_label_synonym	sulfonic acid	has_exact_synonym	sulfonic acid
-WARN	duplicate_label_synonym	hypochlorite	has_exact_synonym	hypochlorite
-WARN	duplicate_label_synonym	hydrogen fluoride	has_exact_synonym	hydrogen fluoride
-WARN	duplicate_label_synonym	thiol	has_exact_synonym	thiol
-WARN	duplicate_label_synonym	azanide	has_exact_synonym	azanide
-WARN	duplicate_label_synonym	hydridonitrate(2-)	has_exact_synonym	hydridonitrate(2-)
-WARN	duplicate_label_synonym	methanediide	has_exact_synonym	methanediide
-WARN	duplicate_label_synonym	oxonium	has_exact_synonym	oxonium
-WARN	duplicate_label_synonym	methanide	has_exact_synonym	methanide
-WARN	duplicate_label_synonym	hydridodioxygen(1+)	has_exact_synonym	hydridodioxygen(1+)
-WARN	duplicate_label_synonym	thiol group	has_exact_synonym	thiol group
-WARN	duplicate_label_synonym	hydrosulfide	has_exact_synonym	hydrosulfide
-WARN	duplicate_label_synonym	copper(0)	has_exact_synonym	copper(0)
-WARN	duplicate_label_synonym	acetate	has_exact_synonym	acetate
-WARN	duplicate_label_synonym	zinc(0)	has_exact_synonym	zinc(0)
-WARN	duplicate_label_synonym	photon	has_exact_synonym	photon
-WARN	duplicate_label_synonym	antimonite	has_exact_synonym	antimonite
-WARN	duplicate_label_synonym	thioacetate	has_exact_synonym	thioacetate
-WARN	duplicate_label_synonym	isopentane	has_exact_synonym	isopentane
-WARN	duplicate_label_synonym	heme	has_exact_synonym	heme
-WARN	duplicate_label_synonym	sulfonium	has_exact_synonym	sulfonium
-WARN	duplicate_label_synonym	formic acid	has_exact_synonym	formic acid
-WARN	duplicate_label_synonym	butyric acid	has_exact_synonym	butyric acid
-WARN	duplicate_label_synonym	hexanoic acid	has_exact_synonym	hexanoic acid
-WARN	duplicate_label_synonym	pyrazine	has_exact_synonym	pyrazine
-WARN	duplicate_label_synonym	4,4'-bipyridine	has_exact_synonym	4,4'-bipyridine
-WARN	duplicate_label_synonym	ammonium chloride	has_exact_synonym	ammonium chloride
-WARN	duplicate_label_synonym	L-cysteinate(1-)	has_exact_synonym	L-cysteinate(1-)
-WARN	duplicate_label_synonym	L-cysteinate(2-)	has_exact_synonym	L-cysteinate(2-)
-WARN	duplicate_label_synonym	L-cysteinium	has_exact_synonym	L-cysteinium
-WARN	duplicate_label_synonym	D-cysteinate(1-)	has_exact_synonym	D-cysteinate(1-)
-WARN	duplicate_label_synonym	D-cysteinate(2-)	has_exact_synonym	D-cysteinate(2-)
-WARN	duplicate_label_synonym	D-cysteinium	has_exact_synonym	D-cysteinium
-WARN	duplicate_label_synonym	cysteinate(1-)	has_exact_synonym	cysteinate(1-)
-WARN	duplicate_label_synonym	cysteinate(2-)	has_exact_synonym	cysteinate(2-)
-WARN	duplicate_label_synonym	cysteinium	has_exact_synonym	cysteinium
-WARN	duplicate_label_synonym	lysinate	has_exact_synonym	lysinate
-WARN	duplicate_label_synonym	lysinium(1+)	has_exact_synonym	lysinium(1+)
-WARN	duplicate_label_synonym	lysinium(2+)	has_exact_synonym	lysinium(2+)
-WARN	duplicate_label_synonym	sodium acetate	has_exact_synonym	sodium acetate
-WARN	duplicate_label_synonym	amide	has_exact_synonym	amide
-WARN	duplicate_label_synonym	fluoranthene	has_exact_synonym	fluoranthene
-WARN	duplicate_label_synonym	bisphenol A	has_exact_synonym	bisphenol A
-WARN	duplicate_label_synonym	coordination entity	has_exact_synonym	coordination entity
-WARN	duplicate_label_synonym	hydrocarbyl group	has_exact_synonym	hydrocarbyl group
-WARN	duplicate_label_synonym	organyl group	has_exact_synonym	organyl group
-WARN	duplicate_label_synonym	atom	has_exact_synonym	atom
-WARN	duplicate_label_synonym	nucleon	has_exact_synonym	nucleon
-WARN	duplicate_label_synonym	primary amide	has_exact_synonym	primary amide
-WARN	duplicate_label_synonym	secondary amide	has_exact_synonym	secondary amide
-WARN	duplicate_label_synonym	organosulfur compound	has_exact_synonym	organosulfur compound
-WARN	duplicate_label_synonym	alkaline earth molecular entity	has_exact_synonym	alkaline earth molecular entity
-WARN	duplicate_label_synonym	pnictogen molecular entity	has_exact_synonym	pnictogen molecular entity
-WARN	duplicate_label_synonym	chalcogen	has_exact_synonym	chalcogen
-WARN	duplicate_label_synonym	chalcogen molecular entity	has_exact_synonym	chalcogen molecular entity
-WARN	duplicate_label_synonym	thiocarboxylic acid	has_exact_synonym	thiocarboxylic acid
-WARN	duplicate_label_synonym	carboxylic ester	has_exact_synonym	carboxylic ester
-WARN	duplicate_label_synonym	hydracid	has_exact_synonym	hydracid
-WARN	duplicate_label_synonym	sulfur oxoacid derivative	has_exact_synonym	sulfur oxoacid derivative
-WARN	duplicate_label_synonym	halogen oxoacid	has_exact_synonym	halogen oxoacid
-WARN	duplicate_label_synonym	chlorine oxoacid	has_exact_synonym	chlorine oxoacid
-WARN	duplicate_label_synonym	elemental halogen	has_exact_synonym	elemental halogen
-WARN	duplicate_label_synonym	chlorine oxoanion	has_exact_synonym	chlorine oxoanion
-WARN	duplicate_label_synonym	halogen oxoanion	has_exact_synonym	halogen oxoanion
-WARN	duplicate_label_synonym	phospho sugar	has_exact_synonym	phospho sugar
-WARN	duplicate_label_synonym	phosphorus oxoacid	has_exact_synonym	phosphorus oxoacid
-WARN	duplicate_label_synonym	pnictogen oxoanion	has_exact_synonym	pnictogen oxoanion
-WARN	duplicate_label_synonym	phosphorus oxoanion	has_exact_synonym	phosphorus oxoanion
-WARN	duplicate_label_synonym	sulfur oxoanion	has_exact_synonym	sulfur oxoanion
-WARN	duplicate_label_synonym	chalcogen oxoacid	has_exact_synonym	chalcogen oxoacid
-WARN	duplicate_label_synonym	chalcogen oxoanion	has_exact_synonym	chalcogen oxoanion
-WARN	duplicate_label_synonym	sulfur hydride	has_exact_synonym	sulfur hydride
-WARN	duplicate_label_synonym	sulfonic acid derivative	has_exact_synonym	sulfonic acid derivative
-WARN	duplicate_label_synonym	alpha-amino-acid anion	has_exact_synonym	alpha-amino-acid anion
-WARN	duplicate_label_synonym	carboxylic acid	has_exact_synonym	carboxylic acid
-WARN	duplicate_label_synonym	carbon group molecular entity	has_exact_synonym	carbon group molecular entity
-WARN	duplicate_label_synonym	homocyclic compound	has_exact_synonym	homocyclic compound
-WARN	duplicate_label_synonym	carbocyclic compound	has_exact_synonym	carbocyclic compound
-WARN	duplicate_label_synonym	spiro compound	has_exact_synonym	spiro compound
-WARN	duplicate_label_synonym	arene	has_exact_synonym	arene
-WARN	duplicate_label_synonym	cyclic hydrocarbon	has_exact_synonym	cyclic hydrocarbon
-WARN	duplicate_label_synonym	polycyclic hydrocarbon	has_exact_synonym	polycyclic hydrocarbon
-WARN	duplicate_label_synonym	heteromonocyclic compound	has_exact_synonym	heteromonocyclic compound
-WARN	duplicate_label_synonym	s-block molecular entity	has_exact_synonym	s-block molecular entity
-WARN	duplicate_label_synonym	d-block molecular entity	has_exact_synonym	d-block molecular entity
-WARN	duplicate_label_synonym	oxygen hydride	has_exact_synonym	oxygen hydride
-WARN	duplicate_label_synonym	ribonucleic acid	has_exact_synonym	ribonucleic acid
-WARN	duplicate_label_synonym	messenger RNA	has_exact_synonym	messenger RNA
-WARN	duplicate_label_synonym	amino-acid cation	has_exact_synonym	amino-acid cation
-WARN	duplicate_label_synonym	alpha-amino acid	has_exact_synonym	alpha-amino acid
-WARN	duplicate_label_synonym	gamma-amino acid	has_exact_synonym	gamma-amino acid
-WARN	duplicate_label_synonym	amino-acid residue	has_exact_synonym	amino-acid residue
-WARN	duplicate_label_synonym	alpha-amino-acid cation	has_exact_synonym	alpha-amino-acid cation
-WARN	duplicate_label_synonym	carbohydrate acid	has_exact_synonym	carbohydrate acid
-WARN	duplicate_label_synonym	carbohydrate acid anion	has_exact_synonym	carbohydrate acid anion
-WARN	duplicate_label_synonym	iron group molecular entity	has_exact_synonym	iron group molecular entity
-WARN	duplicate_label_synonym	copper group molecular entity	has_exact_synonym	copper group molecular entity
-WARN	duplicate_label_synonym	macromolecule	has_exact_synonym	macromolecule
-WARN	duplicate_label_synonym	phenols	has_exact_synonym	phenols
-WARN	duplicate_label_synonym	arenecarbaldehyde	has_exact_synonym	arenecarbaldehyde
-WARN	duplicate_label_synonym	iron coordination entity	has_exact_synonym	iron coordination entity
-WARN	duplicate_label_synonym	reagent	has_exact_synonym	reagent
-WARN	duplicate_label_synonym	aldopentose	has_exact_synonym	aldopentose
-WARN	duplicate_label_synonym	aldohexose	has_exact_synonym	aldohexose
-WARN	duplicate_label_synonym	ribose	has_exact_synonym	ribose
-WARN	duplicate_label_synonym	silver molecular entity	has_exact_synonym	silver molecular entity
-WARN	duplicate_label_synonym	azane	has_exact_synonym	azane
-WARN	duplicate_label_synonym	terpene	has_exact_synonym	terpene
-WARN	duplicate_label_synonym	surfactant	has_exact_synonym	surfactant
-WARN	duplicate_label_synonym	antimetabolite	has_exact_synonym	antimetabolite
-WARN	duplicate_label_synonym	inhibitor	has_exact_synonym	inhibitor
-WARN	duplicate_label_synonym	catalyst	has_exact_synonym	catalyst
-WARN	duplicate_label_synonym	fossil fuel	has_exact_synonym	fossil fuel
-WARN	duplicate_label_synonym	L-cysteine zwitterion	has_exact_synonym	L-cysteine zwitterion
-WARN	duplicate_label_synonym	D-cysteine zwitterion	has_exact_synonym	D-cysteine zwitterion
-WARN	duplicate_label_synonym	cysteine zwitterion	has_exact_synonym	cysteine zwitterion
-WARN	duplicate_label_synonym	amino acid zwitterion	has_exact_synonym	amino acid zwitterion
-WARN	duplicate_label_synonym	quaternary ammonium ion	has_exact_synonym	quaternary ammonium ion
-WARN	duplicate_label_synonym	quaternary ammonium salt	has_exact_synonym	quaternary ammonium salt
-WARN	duplicate_label_synonym	acylcholine	has_exact_synonym	acylcholine
-WARN	duplicate_label_synonym	deoxy hexoside	has_exact_synonym	deoxy hexoside
-WARN	duplicate_label_synonym	central nervous system stimulant	has_exact_synonym	central nervous system stimulant
-WARN	duplicate_label_synonym	oxoanion	has_exact_synonym	oxoanion
-WARN	duplicate_label_synonym	cholane	has_exact_synonym	cholane
-WARN	duplicate_label_synonym	bipyridine	has_exact_synonym	bipyridine
-WARN	duplicate_label_synonym	purine	has_exact_synonym	purine
-WARN	duplicate_label_synonym	1H-purine	has_exact_synonym	1H-purine
-WARN	duplicate_label_synonym	3H-purine	has_exact_synonym	3H-purine
-WARN	duplicate_label_synonym	9H-purine	has_exact_synonym	9H-purine
-WARN	duplicate_label_synonym	carbon oxoanion	has_exact_synonym	carbon oxoanion
-WARN	duplicate_label_synonym	aryl sulfide	has_exact_synonym	aryl sulfide
-WARN	duplicate_label_synonym	dicarboxylic acid anion	has_exact_synonym	dicarboxylic acid anion
-WARN	duplicate_label_synonym	xenobiotic	has_exact_synonym	xenobiotic
-WARN	duplicate_label_synonym	monothiocarboxylic acid	has_exact_synonym	monothiocarboxylic acid
-WARN	duplicate_label_synonym	arsenic oxoanion	has_exact_synonym	arsenic oxoanion
-WARN	duplicate_label_synonym	oxazole	has_exact_synonym	oxazole
-WARN	duplicate_label_synonym	pnictogen hydride	has_exact_synonym	pnictogen hydride
-WARN	duplicate_label_synonym	pent-2-enoic acid	has_exact_synonym	pent-2-enoic acid
-WARN	duplicate_label_synonym	5beta-cholanic acid	has_exact_synonym	5beta-cholanic acid
-WARN	duplicate_label_synonym	fermion	has_exact_synonym	fermion
-WARN	duplicate_label_synonym	boson	has_exact_synonym	boson
-WARN	duplicate_label_synonym	nuclear particle	has_exact_synonym	nuclear particle
-WARN	duplicate_label_synonym	phosphorus oxoacid derivative	has_exact_synonym	phosphorus oxoacid derivative
-WARN	duplicate_label_synonym	emetan	has_exact_synonym	emetan
-WARN	duplicate_label_synonym	organochlorine compound	has_exact_synonym	organochlorine compound
-WARN	duplicate_label_synonym	heterotricyclic compound	has_exact_synonym	heterotricyclic compound
-WARN	duplicate_label_synonym	aminoquinoline	has_exact_synonym	aminoquinoline
-WARN	duplicate_label_synonym	(trifluoromethyl)benzene	has_exact_synonym	(trifluoromethyl)benzene
-WARN	duplicate_label_synonym	ring assembly	has_exact_synonym	ring assembly
-WARN	duplicate_label_synonym	chalcogen hydride	has_exact_synonym	chalcogen hydride
-WARN	duplicate_label_synonym	cation	has_exact_synonym	cation
-WARN	duplicate_label_synonym	antimony molecular entity	has_exact_synonym	antimony molecular entity
-WARN	duplicate_label_synonym	antimony oxoanion	has_exact_synonym	antimony oxoanion
-WARN	duplicate_label_synonym	chalcocarbonic acid	has_exact_synonym	chalcocarbonic acid
-WARN	duplicate_label_synonym	organochalcogen compound	has_exact_synonym	organochalcogen compound
-WARN	duplicate_label_synonym	organooxygen compound	has_exact_synonym	organooxygen compound
-WARN	duplicate_label_synonym	amino-acid anion	has_exact_synonym	amino-acid anion
-WARN	duplicate_label_synonym	organobromine compound	has_exact_synonym	organobromine compound
-WARN	duplicate_label_synonym	organofluorine compound	has_exact_synonym	organofluorine compound
-WARN	duplicate_label_synonym	glucan	has_exact_synonym	glucan
-WARN	duplicate_label_synonym	homopolysaccharide	has_exact_synonym	homopolysaccharide
-WARN	duplicate_label_synonym	hexol	has_exact_synonym	hexol
-WARN	duplicate_label_synonym	tigliane	has_exact_synonym	tigliane
-WARN	duplicate_label_synonym	acid	has_exact_synonym	acid
-WARN	duplicate_label_synonym	phorbol ester	has_exact_synonym	phorbol ester
-WARN	duplicate_label_synonym	halogen oxide	has_exact_synonym	halogen oxide
-WARN	duplicate_label_synonym	sulfuric acid derivative	has_exact_synonym	sulfuric acid derivative
-WARN	duplicate_label_synonym	octanol	has_exact_synonym	octanol
-WARN	duplicate_label_synonym	organic sodium salt	has_exact_synonym	organic sodium salt
-WARN	duplicate_label_synonym	carboxylic acid dianion	has_exact_synonym	carboxylic acid dianion
-WARN	duplicate_label_synonym	fluorocarbon	has_exact_synonym	fluorocarbon
-WARN	duplicate_label_synonym	tetrafluoromethane	has_exact_synonym	tetrafluoromethane
-WARN	duplicate_label_synonym	anaesthetic	has_exact_synonym	anaesthetic
-WARN	duplicate_label_synonym	general anaesthetic	has_exact_synonym	general anaesthetic
-WARN	duplicate_label_synonym	calcium cation	has_exact_synonym	calcium cation
-WARN	duplicate_label_synonym	calcium ion	has_exact_synonym	calcium ion
-WARN	duplicate_label_synonym	Bronsted acid	has_exact_synonym	Bronsted acid
-WARN	duplicate_label_synonym	Bronsted base	has_exact_synonym	Bronsted base
-WARN	duplicate_label_synonym	Lewis base	has_exact_synonym	Lewis base
-WARN	duplicate_label_synonym	halomethane	has_exact_synonym	halomethane
-WARN	duplicate_label_synonym	straight-chain saturated fatty acid	has_exact_synonym	straight-chain saturated fatty acid
-WARN	duplicate_label_synonym	dihydrogenphosphate	has_exact_synonym	dihydrogenphosphate
-WARN	duplicate_label_synonym	methoxyethane	has_exact_synonym	methoxyethane
-WARN	duplicate_label_synonym	cyproheptadine	has_exact_synonym	cyproheptadine
-WARN	duplicate_label_synonym	fluoroform	has_exact_synonym	fluoroform
-WARN	duplicate_label_synonym	carbonate	has_exact_synonym	carbonate
-WARN	duplicate_label_synonym	1,1-dimethyl-4-phenylpiperazinium iodide	has_exact_synonym	1,1-dimethyl-4-phenylpiperazinium iodide
-WARN	duplicate_label_synonym	hydroxy group	has_exact_synonym	hydroxy group
-WARN	duplicate_label_synonym	hydrogen iodide	has_exact_synonym	hydrogen iodide
-WARN	duplicate_label_synonym	hydrogenphosphate	has_exact_synonym	hydrogenphosphate
-WARN	duplicate_label_synonym	butan-1-amine	has_exact_synonym	butan-1-amine
-WARN	duplicate_label_synonym	hydroxyurea	has_exact_synonym	hydroxyurea
-WARN	duplicate_label_synonym	methylcarbamic acid	has_exact_synonym	methylcarbamic acid
-WARN	duplicate_label_synonym	hydrogensulfate	has_exact_synonym	hydrogensulfate
-WARN	duplicate_label_synonym	5-fluorouracil	has_exact_synonym	5-fluorouracil
-WARN	duplicate_label_synonym	ethanethioic O-acid	has_exact_synonym	ethanethioic O-acid
-WARN	duplicate_label_synonym	L-ribose	has_exact_synonym	L-ribose
-WARN	duplicate_label_synonym	ribofuranose	has_exact_synonym	ribofuranose
-WARN	duplicate_label_synonym	D-ribofuranose	has_exact_synonym	D-ribofuranose
-WARN	duplicate_label_synonym	hydrogen bromide	has_exact_synonym	hydrogen bromide
-WARN	duplicate_label_synonym	ammonium salt	has_exact_synonym	ammonium salt
-WARN	duplicate_label_synonym	5H-dibenzo[b,f]azepine	has_exact_synonym	5H-dibenzo[b,f]azepine
-WARN	duplicate_label_synonym	dibenzoazepine	has_exact_synonym	dibenzoazepine
-WARN	duplicate_label_synonym	polar solvent	has_exact_synonym	polar solvent
-WARN	duplicate_label_synonym	protophilic solvent	has_exact_synonym	protophilic solvent
-WARN	duplicate_label_synonym	amphiprotic solvent	has_exact_synonym	amphiprotic solvent
-WARN	duplicate_label_synonym	carbamimidic acid	has_exact_synonym	carbamimidic acid
-WARN	duplicate_label_synonym	imidic acid	has_exact_synonym	imidic acid
-WARN	duplicate_label_synonym	carboximidic acid	has_exact_synonym	carboximidic acid
-WARN	duplicate_label_synonym	agonist	has_exact_synonym	agonist
-WARN	duplicate_label_synonym	antagonist	has_exact_synonym	antagonist
-WARN	duplicate_label_synonym	sulfurous acid	has_exact_synonym	sulfurous acid
-WARN	duplicate_label_synonym	antimonous acid	has_exact_synonym	antimonous acid
-WARN	duplicate_label_synonym	antimony coordination entity	has_exact_synonym	antimony coordination entity
-WARN	duplicate_label_synonym	fluoronium	has_exact_synonym	fluoronium
-WARN	duplicate_label_synonym	chloronium	has_exact_synonym	chloronium
-WARN	duplicate_label_synonym	bromonium	has_exact_synonym	bromonium
-WARN	duplicate_label_synonym	iodonium	has_exact_synonym	iodonium
-WARN	duplicate_label_synonym	avermectin	has_exact_synonym	avermectin
-WARN	duplicate_label_synonym	macrocycle	has_exact_synonym	macrocycle
-WARN	duplicate_label_synonym	quinolinium ion	has_exact_synonym	quinolinium ion
-WARN	duplicate_label_synonym	isoxazoles	has_exact_synonym	isoxazoles
-WARN	duplicate_label_synonym	methyl isocyanate	has_exact_synonym	methyl isocyanate
-WARN	duplicate_label_synonym	(8xi)-cinchonan	has_exact_synonym	(8xi)-cinchonan
-WARN	duplicate_label_synonym	(8S)-cinchonan	has_exact_synonym	(8S)-cinchonan
-WARN	duplicate_label_synonym	2-methyl-2-(methylsulfanyl)propanal oxime	has_exact_synonym	2-methyl-2-(methylsulfanyl)propanal oxime
-WARN	duplicate_label_synonym	tunicamycin A1	has_exact_synonym	tunicamycin A1
-WARN	duplicate_label_synonym	flour treatment agent	has_exact_synonym	flour treatment agent
-WARN	duplicate_label_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole	has_exact_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
-WARN	duplicate_label_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine	has_exact_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine
-WARN	duplicate_label_synonym	striated muscle cell	has_exact_synonym	striated muscle cell
-WARN	duplicate_label_synonym	non-striated muscle cell	has_exact_synonym	non-striated muscle cell
-WARN	duplicate_label_synonym	myocyte of sinoatrial node	has_exact_synonym	myocyte of sinoatrial node
-WARN	duplicate_label_synonym	nucleus	has_exact_synonym	nucleus
-WARN	duplicate_label_synonym	biogenic amine metabolic process	has_exact_synonym	cellular biogenic amine metabolic process
-WARN	duplicate_label_synonym	regulation of cellular amine metabolic process	has_exact_synonym	regulation of cellular amine metabolic process
-WARN	duplicate_label_synonym	negative regulation of amine metabolic process	has_exact_synonym	negative regulation of cellular amine metabolic process
-WARN	duplicate_label_synonym	positive regulation of amine metabolic process	has_exact_synonym	positive regulation of cellular amine metabolic process
-WARN	duplicate_label_synonym	regulation of cellular amine catabolic process	has_exact_synonym	regulation of cellular amine catabolic process
-WARN	duplicate_label_synonym	negative regulation of cellular amine catabolic process	has_exact_synonym	negative regulation of cellular amine catabolic process
-WARN	duplicate_label_synonym	regulation of amide metabolic process	has_exact_synonym	regulation of cellular amide metabolic process
-WARN	duplicate_label_synonym	negative regulation of amide metabolic process	has_exact_synonym	negative regulation of cellular amide metabolic process
-WARN	duplicate_label_synonym	positive regulation of cellular amide metabolic process	has_exact_synonym	positive regulation of cellular amide metabolic process
-WARN	duplicate_label_synonym	cellular biogenic amine biosynthetic process	has_exact_synonym	cellular biogenic amine biosynthetic process
-WARN	duplicate_label_synonym	cellular amide metabolic process	has_exact_synonym	cellular amide metabolic process
-WARN	duplicate_label_synonym	cellular amine metabolic process	has_exact_synonym	cellular amine metabolic process
-WARN	duplicate_label_synonym	variant	has_exact_synonym	variant
-WARN	duplicate_label_synonym	protruding	has_exact_synonym	protruding
+WARN	duplicate_exact_synonym	organism substance	has exact synonym	portion of organism substance
+WARN	duplicate_exact_synonym	organism substance	has exact synonym	portion of organism substance
+WARN	duplicate_exact_synonym	Mus <genus>	has exact synonym	Mus
+WARN	duplicate_exact_synonym	Mus <subgenus>	has exact synonym	Mus
+WARN	duplicate_exact_synonym	Mus <genus>	has exact synonym	mouse
+WARN	duplicate_exact_synonym	Mus musculus	has exact synonym	mouse
+WARN	duplicate_exact_synonym	copper atom	has exact synonym	copper
+WARN	duplicate_exact_synonym	copper(0)	has exact synonym	copper
+WARN	duplicate_label_synonym	organism substance	has exact synonym	organism substance
+WARN	duplicate_label_synonym	anatomical boundary	has exact synonym	anatomical boundary
+WARN	duplicate_label_synonym	multi-cell-part structure	has exact synonym	multi-cell-part structure
+WARN	duplicate_label_synonym	electron	has exact synonym	electron
+WARN	duplicate_label_synonym	3-(1-methylpyrrolidin-2-yl)pyridine	has exact synonym	3-(1-methylpyrrolidin-2-yl)pyridine
+WARN	duplicate_label_synonym	carbamate	has exact synonym	carbamate
+WARN	duplicate_label_synonym	oxime anion	has exact synonym	oxime anion
+WARN	duplicate_label_synonym	anticoronaviral agent	has exact synonym	anticoronaviral agent
+WARN	duplicate_label_synonym	sulfide(2-)	has exact synonym	sulfide(2-)
+WARN	duplicate_label_synonym	xanthine	has exact synonym	xanthine
+WARN	duplicate_label_synonym	acetone	has exact synonym	acetone
+WARN	duplicate_label_synonym	acetylcholine	has exact synonym	acetylcholine
+WARN	duplicate_label_synonym	cysteine	has exact synonym	cysteine
+WARN	duplicate_label_synonym	acetic acid	has exact synonym	acetic acid
+WARN	duplicate_label_synonym	water	has exact synonym	water
+WARN	duplicate_label_synonym	dioxygen	has exact synonym	dioxygen
+WARN	duplicate_label_synonym	ATP	has exact synonym	ATP
+WARN	duplicate_label_synonym	L-alpha-amino acid	has exact synonym	L-alpha-amino acid
+WARN	duplicate_label_synonym	formate	has exact synonym	formate
+WARN	duplicate_label_synonym	isoamylol	has exact synonym	isoamylol
+WARN	duplicate_label_synonym	quinine	has exact synonym	quinine
+WARN	duplicate_label_synonym	bromide	has exact synonym	bromide
+WARN	duplicate_label_synonym	cyclopentanol	has exact synonym	cyclopentanol
+WARN	duplicate_label_synonym	ammonia	has exact synonym	ammonia
+WARN	duplicate_label_synonym	hydrogen sulfide	has exact synonym	hydrogen sulfide
+WARN	duplicate_label_synonym	methane	has exact synonym	methane
+WARN	duplicate_label_synonym	sulfate	has exact synonym	sulfate
+WARN	duplicate_label_synonym	urea	has exact synonym	urea
+WARN	duplicate_label_synonym	hydroxide	has exact synonym	hydroxide
+WARN	duplicate_label_synonym	guanine	has exact synonym	guanine
+WARN	duplicate_label_synonym	ethanol	has exact synonym	ethanol
+WARN	duplicate_label_synonym	hydrogen peroxide	has exact synonym	hydrogen peroxide
+WARN	duplicate_label_synonym	adenosine	has exact synonym	adenosine
+WARN	duplicate_label_synonym	D-cysteine	has exact synonym	D-cysteine
+WARN	duplicate_label_synonym	iodide	has exact synonym	iodide
+WARN	duplicate_label_synonym	carbon dioxide	has exact synonym	carbon dioxide
+WARN	duplicate_label_synonym	ethanethioic S-acid	has exact synonym	ethanethioic S-acid
+WARN	duplicate_label_synonym	butane-2,3-dione	has exact synonym	butane-2,3-dione
+WARN	duplicate_label_synonym	carbohydrate	has exact synonym	carbohydrate
+WARN	duplicate_label_synonym	adenine	has exact synonym	adenine
+WARN	duplicate_label_synonym	D-alpha-amino acid	has exact synonym	D-alpha-amino acid
+WARN	duplicate_label_synonym	gamma-aminobutyric acid	has exact synonym	gamma-aminobutyric acid
+WARN	duplicate_label_synonym	D-ribose	has exact synonym	D-ribose
+WARN	duplicate_label_synonym	fluoride	has exact synonym	fluoride
+WARN	duplicate_label_synonym	hexanoate	has exact synonym	hexanoate
+WARN	duplicate_label_synonym	glucose	has exact synonym	glucose
+WARN	duplicate_label_synonym	7H-purine	has exact synonym	7H-purine
+WARN	duplicate_label_synonym	sulfite	has exact synonym	sulfite
+WARN	duplicate_label_synonym	aldehyde	has exact synonym	aldehyde
+WARN	duplicate_label_synonym	alditol	has exact synonym	alditol
+WARN	duplicate_label_synonym	hydrogencarbonate	has exact synonym	hydrogencarbonate
+WARN	duplicate_label_synonym	L-cysteine	has exact synonym	L-cysteine
+WARN	duplicate_label_synonym	uracil	has exact synonym	uracil
+WARN	duplicate_label_synonym	octane	has exact synonym	octane
+WARN	duplicate_label_synonym	(S)-nicotine	has exact synonym	(S)-nicotine
+WARN	duplicate_label_synonym	glycerol	has exact synonym	glycerol
+WARN	duplicate_label_synonym	methanol	has exact synonym	methanol
+WARN	duplicate_label_synonym	hydrogen chloride	has exact synonym	hydrogen chloride
+WARN	duplicate_label_synonym	butyrate	has exact synonym	butyrate
+WARN	duplicate_label_synonym	chloride	has exact synonym	chloride
+WARN	duplicate_label_synonym	lipid	has exact synonym	lipid
+WARN	duplicate_label_synonym	glycosaminoglycan	has exact synonym	glycosaminoglycan
+WARN	duplicate_label_synonym	cyclohexanol	has exact synonym	cyclohexanol
+WARN	duplicate_label_synonym	hydrogen halide	has exact synonym	hydrogen halide
+WARN	duplicate_label_synonym	alkane	has exact synonym	alkane
+WARN	duplicate_label_synonym	methylcarbamate	has exact synonym	methylcarbamate
+WARN	duplicate_label_synonym	5beta-cholane	has exact synonym	5beta-cholane
+WARN	duplicate_label_synonym	2-aminopurines	has exact synonym	2-aminopurines
+WARN	duplicate_label_synonym	6-aminopurines	has exact synonym	6-aminopurines
+WARN	duplicate_label_synonym	acyl group	has exact synonym	acyl group
+WARN	duplicate_label_synonym	aldoxime	has exact synonym	aldoxime
+WARN	duplicate_label_synonym	alkyl group	has exact synonym	alkyl group
+WARN	duplicate_label_synonym	anion	has exact synonym	anion
+WARN	duplicate_label_synonym	arsenic molecular entity	has exact synonym	arsenic molecular entity
+WARN	duplicate_label_synonym	base	has exact synonym	base
+WARN	duplicate_label_synonym	bromine molecular entity	has exact synonym	bromine molecular entity
+WARN	duplicate_label_synonym	calcium molecular entity	has exact synonym	calcium molecular entity
+WARN	duplicate_label_synonym	carbonyl group	has exact synonym	carbonyl group
+WARN	duplicate_label_synonym	cofactor	has exact synonym	cofactor
+WARN	duplicate_label_synonym	molecular entity	has exact synonym	molecular entity
+WARN	duplicate_label_synonym	copper molecular entity	has exact synonym	copper molecular entity
+WARN	duplicate_label_synonym	cysteine derivative	has exact synonym	cysteine derivative
+WARN	duplicate_label_synonym	enzyme inhibitor	has exact synonym	enzyme inhibitor
+WARN	duplicate_label_synonym	fatty alcohol	has exact synonym	fatty alcohol
+WARN	duplicate_label_synonym	fluorine molecular entity	has exact synonym	fluorine molecular entity
+WARN	duplicate_label_synonym	fluoroalkane	has exact synonym	fluoroalkane
+WARN	duplicate_label_synonym	chemical entity	has exact synonym	chemical entity
+WARN	duplicate_label_synonym	group	has exact synonym	group
+WARN	duplicate_label_synonym	halogen molecular entity	has exact synonym	halogen molecular entity
+WARN	duplicate_label_synonym	halogen	has exact synonym	halogen
+WARN	duplicate_label_synonym	heterodetic cyclic peptide	has exact synonym	heterodetic cyclic peptide
+WARN	duplicate_label_synonym	hydrocarbon	has exact synonym	hydrocarbon
+WARN	duplicate_label_synonym	hypochlorous acid	has exact synonym	hypochlorous acid
+WARN	duplicate_label_synonym	imide	has exact synonym	imide
+WARN	duplicate_label_synonym	oxoacid	has exact synonym	oxoacid
+WARN	duplicate_label_synonym	inorganic peroxide	has exact synonym	inorganic peroxide
+WARN	duplicate_label_synonym	inositol	has exact synonym	inositol
+WARN	duplicate_label_synonym	iodine molecular entity	has exact synonym	iodine molecular entity
+WARN	duplicate_label_synonym	salt	has exact synonym	salt
+WARN	duplicate_label_synonym	ion	has exact synonym	ion
+WARN	duplicate_label_synonym	iron molecular entity	has exact synonym	iron molecular entity
+WARN	duplicate_label_synonym	isoprenoid	has exact synonym	isoprenoid
+WARN	duplicate_label_synonym	lactone	has exact synonym	lactone
+WARN	duplicate_label_synonym	lysine	has exact synonym	lysine
+WARN	duplicate_label_synonym	macrolide	has exact synonym	macrolide
+WARN	duplicate_label_synonym	metabolite	has exact synonym	metabolite
+WARN	duplicate_label_synonym	methanesulfonate	has exact synonym	methanesulfonate
+WARN	duplicate_label_synonym	methyl methanesulfonate	has exact synonym	methyl methanesulfonate
+WARN	duplicate_label_synonym	molecule	has exact synonym	molecule
+WARN	duplicate_label_synonym	monocarboxylic acid	has exact synonym	monocarboxylic acid
+WARN	duplicate_label_synonym	aldicarb	has exact synonym	aldicarb
+WARN	duplicate_label_synonym	ether	has exact synonym	ether
+WARN	duplicate_label_synonym	organic phosphate	has exact synonym	organic phosphate
+WARN	duplicate_label_synonym	organophosphorus compound	has exact synonym	organophosphorus compound
+WARN	duplicate_label_synonym	oxide	has exact synonym	oxide
+WARN	duplicate_label_synonym	oxime	has exact synonym	oxime
+WARN	duplicate_label_synonym	oxygen molecular entity	has exact synonym	oxygen molecular entity
+WARN	duplicate_label_synonym	pentenoic acid	has exact synonym	pentenoic acid
+WARN	duplicate_label_synonym	aldopentose phosphate	has exact synonym	aldopentose phosphate
+WARN	duplicate_label_synonym	pentose	has exact synonym	pentose
+WARN	duplicate_label_synonym	pesticide	has exact synonym	pesticide
+WARN	duplicate_label_synonym	phosphate	has exact synonym	phosphate
+WARN	duplicate_label_synonym	phosphoric acid	has exact synonym	phosphoric acid
+WARN	duplicate_label_synonym	polar amino acid	has exact synonym	polar amino acid
+WARN	duplicate_label_synonym	polyketide	has exact synonym	polyketide
+WARN	duplicate_label_synonym	porphyrins	has exact synonym	porphyrins
+WARN	duplicate_label_synonym	prosthetic group	has exact synonym	prosthetic group
+WARN	duplicate_label_synonym	purine nucleobase	has exact synonym	purine nucleobase
+WARN	duplicate_label_synonym	purine nucleoside	has exact synonym	purine nucleoside
+WARN	duplicate_label_synonym	pyrimidine nucleobase	has exact synonym	pyrimidine nucleobase
+WARN	duplicate_label_synonym	rhamnoside	has exact synonym	rhamnoside
+WARN	duplicate_label_synonym	ribose phosphate	has exact synonym	ribose phosphate
+WARN	duplicate_label_synonym	saturated fatty acid	has exact synonym	saturated fatty acid
+WARN	duplicate_label_synonym	sodium chloride	has exact synonym	sodium chloride
+WARN	duplicate_label_synonym	sulfates	has exact synonym	sulfates
+WARN	duplicate_label_synonym	sulfur molecular entity	has exact synonym	sulfur molecular entity
+WARN	duplicate_label_synonym	sulfuric acid	has exact synonym	sulfuric acid
+WARN	duplicate_label_synonym	tertiary alcohol	has exact synonym	tertiary alcohol
+WARN	duplicate_label_synonym	tetrapyrrole	has exact synonym	tetrapyrrole
+WARN	duplicate_label_synonym	toxin	has exact synonym	toxin
+WARN	duplicate_label_synonym	zwitterion	has exact synonym	zwitterion
+WARN	duplicate_label_synonym	methanesulfonic acid	has exact synonym	methanesulfonic acid
+WARN	duplicate_label_synonym	caffeine	has exact synonym	caffeine
+WARN	duplicate_label_synonym	detergent	has exact synonym	detergent
+WARN	duplicate_label_synonym	galactose	has exact synonym	galactose
+WARN	duplicate_label_synonym	carbamic acid	has exact synonym	carbamic acid
+WARN	duplicate_label_synonym	ammonium	has exact synonym	ammonium
+WARN	duplicate_label_synonym	dicarboxylic acid dianion	has exact synonym	dicarboxylic acid dianion
+WARN	duplicate_label_synonym	carbonic acid	has exact synonym	carbonic acid
+WARN	duplicate_label_synonym	sodium(1+)	has exact synonym	sodium(1+)
+WARN	duplicate_label_synonym	calcium(2+)	has exact synonym	calcium(2+)
+WARN	duplicate_label_synonym	hydrogenperoxide(1-)	has exact synonym	hydrogenperoxide(1-)
+WARN	duplicate_label_synonym	cyanate	has exact synonym	cyanate
+WARN	duplicate_label_synonym	isocyanic acid	has exact synonym	isocyanic acid
+WARN	duplicate_label_synonym	sulfonic acid	has exact synonym	sulfonic acid
+WARN	duplicate_label_synonym	hypochlorite	has exact synonym	hypochlorite
+WARN	duplicate_label_synonym	hydrogen fluoride	has exact synonym	hydrogen fluoride
+WARN	duplicate_label_synonym	thiol	has exact synonym	thiol
+WARN	duplicate_label_synonym	azanide	has exact synonym	azanide
+WARN	duplicate_label_synonym	hydridonitrate(2-)	has exact synonym	hydridonitrate(2-)
+WARN	duplicate_label_synonym	methanediide	has exact synonym	methanediide
+WARN	duplicate_label_synonym	oxonium	has exact synonym	oxonium
+WARN	duplicate_label_synonym	methanide	has exact synonym	methanide
+WARN	duplicate_label_synonym	hydridodioxygen(1+)	has exact synonym	hydridodioxygen(1+)
+WARN	duplicate_label_synonym	thiol group	has exact synonym	thiol group
+WARN	duplicate_label_synonym	hydrosulfide	has exact synonym	hydrosulfide
+WARN	duplicate_label_synonym	copper(0)	has exact synonym	copper(0)
+WARN	duplicate_label_synonym	acetate	has exact synonym	acetate
+WARN	duplicate_label_synonym	zinc(0)	has exact synonym	zinc(0)
+WARN	duplicate_label_synonym	photon	has exact synonym	photon
+WARN	duplicate_label_synonym	antimonite	has exact synonym	antimonite
+WARN	duplicate_label_synonym	thioacetate	has exact synonym	thioacetate
+WARN	duplicate_label_synonym	isopentane	has exact synonym	isopentane
+WARN	duplicate_label_synonym	heme	has exact synonym	heme
+WARN	duplicate_label_synonym	sulfonium	has exact synonym	sulfonium
+WARN	duplicate_label_synonym	formic acid	has exact synonym	formic acid
+WARN	duplicate_label_synonym	butyric acid	has exact synonym	butyric acid
+WARN	duplicate_label_synonym	hexanoic acid	has exact synonym	hexanoic acid
+WARN	duplicate_label_synonym	pyrazine	has exact synonym	pyrazine
+WARN	duplicate_label_synonym	4,4'-bipyridine	has exact synonym	4,4'-bipyridine
+WARN	duplicate_label_synonym	ammonium chloride	has exact synonym	ammonium chloride
+WARN	duplicate_label_synonym	L-cysteinate(1-)	has exact synonym	L-cysteinate(1-)
+WARN	duplicate_label_synonym	L-cysteinate(2-)	has exact synonym	L-cysteinate(2-)
+WARN	duplicate_label_synonym	L-cysteinium	has exact synonym	L-cysteinium
+WARN	duplicate_label_synonym	D-cysteinate(1-)	has exact synonym	D-cysteinate(1-)
+WARN	duplicate_label_synonym	D-cysteinate(2-)	has exact synonym	D-cysteinate(2-)
+WARN	duplicate_label_synonym	D-cysteinium	has exact synonym	D-cysteinium
+WARN	duplicate_label_synonym	cysteinate(1-)	has exact synonym	cysteinate(1-)
+WARN	duplicate_label_synonym	cysteinate(2-)	has exact synonym	cysteinate(2-)
+WARN	duplicate_label_synonym	cysteinium	has exact synonym	cysteinium
+WARN	duplicate_label_synonym	lysinate	has exact synonym	lysinate
+WARN	duplicate_label_synonym	lysinium(1+)	has exact synonym	lysinium(1+)
+WARN	duplicate_label_synonym	lysinium(2+)	has exact synonym	lysinium(2+)
+WARN	duplicate_label_synonym	sodium acetate	has exact synonym	sodium acetate
+WARN	duplicate_label_synonym	amide	has exact synonym	amide
+WARN	duplicate_label_synonym	fluoranthene	has exact synonym	fluoranthene
+WARN	duplicate_label_synonym	bisphenol A	has exact synonym	bisphenol A
+WARN	duplicate_label_synonym	coordination entity	has exact synonym	coordination entity
+WARN	duplicate_label_synonym	hydrocarbyl group	has exact synonym	hydrocarbyl group
+WARN	duplicate_label_synonym	organyl group	has exact synonym	organyl group
+WARN	duplicate_label_synonym	atom	has exact synonym	atom
+WARN	duplicate_label_synonym	nucleon	has exact synonym	nucleon
+WARN	duplicate_label_synonym	primary amide	has exact synonym	primary amide
+WARN	duplicate_label_synonym	secondary amide	has exact synonym	secondary amide
+WARN	duplicate_label_synonym	organosulfur compound	has exact synonym	organosulfur compound
+WARN	duplicate_label_synonym	alkaline earth molecular entity	has exact synonym	alkaline earth molecular entity
+WARN	duplicate_label_synonym	pnictogen molecular entity	has exact synonym	pnictogen molecular entity
+WARN	duplicate_label_synonym	chalcogen	has exact synonym	chalcogen
+WARN	duplicate_label_synonym	chalcogen molecular entity	has exact synonym	chalcogen molecular entity
+WARN	duplicate_label_synonym	thiocarboxylic acid	has exact synonym	thiocarboxylic acid
+WARN	duplicate_label_synonym	carboxylic ester	has exact synonym	carboxylic ester
+WARN	duplicate_label_synonym	hydracid	has exact synonym	hydracid
+WARN	duplicate_label_synonym	sulfur oxoacid derivative	has exact synonym	sulfur oxoacid derivative
+WARN	duplicate_label_synonym	halogen oxoacid	has exact synonym	halogen oxoacid
+WARN	duplicate_label_synonym	chlorine oxoacid	has exact synonym	chlorine oxoacid
+WARN	duplicate_label_synonym	elemental halogen	has exact synonym	elemental halogen
+WARN	duplicate_label_synonym	chlorine oxoanion	has exact synonym	chlorine oxoanion
+WARN	duplicate_label_synonym	halogen oxoanion	has exact synonym	halogen oxoanion
+WARN	duplicate_label_synonym	phospho sugar	has exact synonym	phospho sugar
+WARN	duplicate_label_synonym	phosphorus oxoacid	has exact synonym	phosphorus oxoacid
+WARN	duplicate_label_synonym	pnictogen oxoanion	has exact synonym	pnictogen oxoanion
+WARN	duplicate_label_synonym	phosphorus oxoanion	has exact synonym	phosphorus oxoanion
+WARN	duplicate_label_synonym	sulfur oxoanion	has exact synonym	sulfur oxoanion
+WARN	duplicate_label_synonym	chalcogen oxoacid	has exact synonym	chalcogen oxoacid
+WARN	duplicate_label_synonym	chalcogen oxoanion	has exact synonym	chalcogen oxoanion
+WARN	duplicate_label_synonym	sulfur hydride	has exact synonym	sulfur hydride
+WARN	duplicate_label_synonym	sulfonic acid derivative	has exact synonym	sulfonic acid derivative
+WARN	duplicate_label_synonym	alpha-amino-acid anion	has exact synonym	alpha-amino-acid anion
+WARN	duplicate_label_synonym	carboxylic acid	has exact synonym	carboxylic acid
+WARN	duplicate_label_synonym	carbon group molecular entity	has exact synonym	carbon group molecular entity
+WARN	duplicate_label_synonym	homocyclic compound	has exact synonym	homocyclic compound
+WARN	duplicate_label_synonym	carbocyclic compound	has exact synonym	carbocyclic compound
+WARN	duplicate_label_synonym	spiro compound	has exact synonym	spiro compound
+WARN	duplicate_label_synonym	arene	has exact synonym	arene
+WARN	duplicate_label_synonym	cyclic hydrocarbon	has exact synonym	cyclic hydrocarbon
+WARN	duplicate_label_synonym	polycyclic hydrocarbon	has exact synonym	polycyclic hydrocarbon
+WARN	duplicate_label_synonym	heteromonocyclic compound	has exact synonym	heteromonocyclic compound
+WARN	duplicate_label_synonym	s-block molecular entity	has exact synonym	s-block molecular entity
+WARN	duplicate_label_synonym	d-block molecular entity	has exact synonym	d-block molecular entity
+WARN	duplicate_label_synonym	oxygen hydride	has exact synonym	oxygen hydride
+WARN	duplicate_label_synonym	ribonucleic acid	has exact synonym	ribonucleic acid
+WARN	duplicate_label_synonym	messenger RNA	has exact synonym	messenger RNA
+WARN	duplicate_label_synonym	amino-acid cation	has exact synonym	amino-acid cation
+WARN	duplicate_label_synonym	alpha-amino acid	has exact synonym	alpha-amino acid
+WARN	duplicate_label_synonym	gamma-amino acid	has exact synonym	gamma-amino acid
+WARN	duplicate_label_synonym	amino-acid residue	has exact synonym	amino-acid residue
+WARN	duplicate_label_synonym	alpha-amino-acid cation	has exact synonym	alpha-amino-acid cation
+WARN	duplicate_label_synonym	carbohydrate acid	has exact synonym	carbohydrate acid
+WARN	duplicate_label_synonym	carbohydrate acid anion	has exact synonym	carbohydrate acid anion
+WARN	duplicate_label_synonym	iron group molecular entity	has exact synonym	iron group molecular entity
+WARN	duplicate_label_synonym	copper group molecular entity	has exact synonym	copper group molecular entity
+WARN	duplicate_label_synonym	macromolecule	has exact synonym	macromolecule
+WARN	duplicate_label_synonym	phenols	has exact synonym	phenols
+WARN	duplicate_label_synonym	arenecarbaldehyde	has exact synonym	arenecarbaldehyde
+WARN	duplicate_label_synonym	iron coordination entity	has exact synonym	iron coordination entity
+WARN	duplicate_label_synonym	reagent	has exact synonym	reagent
+WARN	duplicate_label_synonym	aldopentose	has exact synonym	aldopentose
+WARN	duplicate_label_synonym	aldohexose	has exact synonym	aldohexose
+WARN	duplicate_label_synonym	ribose	has exact synonym	ribose
+WARN	duplicate_label_synonym	silver molecular entity	has exact synonym	silver molecular entity
+WARN	duplicate_label_synonym	azane	has exact synonym	azane
+WARN	duplicate_label_synonym	terpene	has exact synonym	terpene
+WARN	duplicate_label_synonym	surfactant	has exact synonym	surfactant
+WARN	duplicate_label_synonym	antimetabolite	has exact synonym	antimetabolite
+WARN	duplicate_label_synonym	inhibitor	has exact synonym	inhibitor
+WARN	duplicate_label_synonym	catalyst	has exact synonym	catalyst
+WARN	duplicate_label_synonym	fossil fuel	has exact synonym	fossil fuel
+WARN	duplicate_label_synonym	L-cysteine zwitterion	has exact synonym	L-cysteine zwitterion
+WARN	duplicate_label_synonym	D-cysteine zwitterion	has exact synonym	D-cysteine zwitterion
+WARN	duplicate_label_synonym	cysteine zwitterion	has exact synonym	cysteine zwitterion
+WARN	duplicate_label_synonym	amino acid zwitterion	has exact synonym	amino acid zwitterion
+WARN	duplicate_label_synonym	quaternary ammonium ion	has exact synonym	quaternary ammonium ion
+WARN	duplicate_label_synonym	quaternary ammonium salt	has exact synonym	quaternary ammonium salt
+WARN	duplicate_label_synonym	acylcholine	has exact synonym	acylcholine
+WARN	duplicate_label_synonym	deoxy hexoside	has exact synonym	deoxy hexoside
+WARN	duplicate_label_synonym	central nervous system stimulant	has exact synonym	central nervous system stimulant
+WARN	duplicate_label_synonym	oxoanion	has exact synonym	oxoanion
+WARN	duplicate_label_synonym	cholane	has exact synonym	cholane
+WARN	duplicate_label_synonym	bipyridine	has exact synonym	bipyridine
+WARN	duplicate_label_synonym	purine	has exact synonym	purine
+WARN	duplicate_label_synonym	1H-purine	has exact synonym	1H-purine
+WARN	duplicate_label_synonym	3H-purine	has exact synonym	3H-purine
+WARN	duplicate_label_synonym	9H-purine	has exact synonym	9H-purine
+WARN	duplicate_label_synonym	carbon oxoanion	has exact synonym	carbon oxoanion
+WARN	duplicate_label_synonym	aryl sulfide	has exact synonym	aryl sulfide
+WARN	duplicate_label_synonym	dicarboxylic acid anion	has exact synonym	dicarboxylic acid anion
+WARN	duplicate_label_synonym	xenobiotic	has exact synonym	xenobiotic
+WARN	duplicate_label_synonym	monothiocarboxylic acid	has exact synonym	monothiocarboxylic acid
+WARN	duplicate_label_synonym	arsenic oxoanion	has exact synonym	arsenic oxoanion
+WARN	duplicate_label_synonym	oxazole	has exact synonym	oxazole
+WARN	duplicate_label_synonym	pnictogen hydride	has exact synonym	pnictogen hydride
+WARN	duplicate_label_synonym	pent-2-enoic acid	has exact synonym	pent-2-enoic acid
+WARN	duplicate_label_synonym	5beta-cholanic acid	has exact synonym	5beta-cholanic acid
+WARN	duplicate_label_synonym	fermion	has exact synonym	fermion
+WARN	duplicate_label_synonym	boson	has exact synonym	boson
+WARN	duplicate_label_synonym	nuclear particle	has exact synonym	nuclear particle
+WARN	duplicate_label_synonym	phosphorus oxoacid derivative	has exact synonym	phosphorus oxoacid derivative
+WARN	duplicate_label_synonym	emetan	has exact synonym	emetan
+WARN	duplicate_label_synonym	organochlorine compound	has exact synonym	organochlorine compound
+WARN	duplicate_label_synonym	heterotricyclic compound	has exact synonym	heterotricyclic compound
+WARN	duplicate_label_synonym	aminoquinoline	has exact synonym	aminoquinoline
+WARN	duplicate_label_synonym	(trifluoromethyl)benzene	has exact synonym	(trifluoromethyl)benzene
+WARN	duplicate_label_synonym	ring assembly	has exact synonym	ring assembly
+WARN	duplicate_label_synonym	chalcogen hydride	has exact synonym	chalcogen hydride
+WARN	duplicate_label_synonym	cation	has exact synonym	cation
+WARN	duplicate_label_synonym	antimony molecular entity	has exact synonym	antimony molecular entity
+WARN	duplicate_label_synonym	antimony oxoanion	has exact synonym	antimony oxoanion
+WARN	duplicate_label_synonym	chalcocarbonic acid	has exact synonym	chalcocarbonic acid
+WARN	duplicate_label_synonym	organochalcogen compound	has exact synonym	organochalcogen compound
+WARN	duplicate_label_synonym	organooxygen compound	has exact synonym	organooxygen compound
+WARN	duplicate_label_synonym	amino-acid anion	has exact synonym	amino-acid anion
+WARN	duplicate_label_synonym	organobromine compound	has exact synonym	organobromine compound
+WARN	duplicate_label_synonym	organofluorine compound	has exact synonym	organofluorine compound
+WARN	duplicate_label_synonym	glucan	has exact synonym	glucan
+WARN	duplicate_label_synonym	homopolysaccharide	has exact synonym	homopolysaccharide
+WARN	duplicate_label_synonym	hexol	has exact synonym	hexol
+WARN	duplicate_label_synonym	tigliane	has exact synonym	tigliane
+WARN	duplicate_label_synonym	acid	has exact synonym	acid
+WARN	duplicate_label_synonym	phorbol ester	has exact synonym	phorbol ester
+WARN	duplicate_label_synonym	halogen oxide	has exact synonym	halogen oxide
+WARN	duplicate_label_synonym	sulfuric acid derivative	has exact synonym	sulfuric acid derivative
+WARN	duplicate_label_synonym	octanol	has exact synonym	octanol
+WARN	duplicate_label_synonym	organic sodium salt	has exact synonym	organic sodium salt
+WARN	duplicate_label_synonym	carboxylic acid dianion	has exact synonym	carboxylic acid dianion
+WARN	duplicate_label_synonym	fluorocarbon	has exact synonym	fluorocarbon
+WARN	duplicate_label_synonym	tetrafluoromethane	has exact synonym	tetrafluoromethane
+WARN	duplicate_label_synonym	anaesthetic	has exact synonym	anaesthetic
+WARN	duplicate_label_synonym	general anaesthetic	has exact synonym	general anaesthetic
+WARN	duplicate_label_synonym	calcium cation	has exact synonym	calcium cation
+WARN	duplicate_label_synonym	calcium ion	has exact synonym	calcium ion
+WARN	duplicate_label_synonym	Bronsted acid	has exact synonym	Bronsted acid
+WARN	duplicate_label_synonym	Bronsted base	has exact synonym	Bronsted base
+WARN	duplicate_label_synonym	Lewis base	has exact synonym	Lewis base
+WARN	duplicate_label_synonym	halomethane	has exact synonym	halomethane
+WARN	duplicate_label_synonym	straight-chain saturated fatty acid	has exact synonym	straight-chain saturated fatty acid
+WARN	duplicate_label_synonym	dihydrogenphosphate	has exact synonym	dihydrogenphosphate
+WARN	duplicate_label_synonym	methoxyethane	has exact synonym	methoxyethane
+WARN	duplicate_label_synonym	cyproheptadine	has exact synonym	cyproheptadine
+WARN	duplicate_label_synonym	fluoroform	has exact synonym	fluoroform
+WARN	duplicate_label_synonym	carbonate	has exact synonym	carbonate
+WARN	duplicate_label_synonym	1,1-dimethyl-4-phenylpiperazinium iodide	has exact synonym	1,1-dimethyl-4-phenylpiperazinium iodide
+WARN	duplicate_label_synonym	hydroxy group	has exact synonym	hydroxy group
+WARN	duplicate_label_synonym	hydrogen iodide	has exact synonym	hydrogen iodide
+WARN	duplicate_label_synonym	hydrogenphosphate	has exact synonym	hydrogenphosphate
+WARN	duplicate_label_synonym	butan-1-amine	has exact synonym	butan-1-amine
+WARN	duplicate_label_synonym	hydroxyurea	has exact synonym	hydroxyurea
+WARN	duplicate_label_synonym	methylcarbamic acid	has exact synonym	methylcarbamic acid
+WARN	duplicate_label_synonym	hydrogensulfate	has exact synonym	hydrogensulfate
+WARN	duplicate_label_synonym	5-fluorouracil	has exact synonym	5-fluorouracil
+WARN	duplicate_label_synonym	ethanethioic O-acid	has exact synonym	ethanethioic O-acid
+WARN	duplicate_label_synonym	L-ribose	has exact synonym	L-ribose
+WARN	duplicate_label_synonym	ribofuranose	has exact synonym	ribofuranose
+WARN	duplicate_label_synonym	D-ribofuranose	has exact synonym	D-ribofuranose
+WARN	duplicate_label_synonym	hydrogen bromide	has exact synonym	hydrogen bromide
+WARN	duplicate_label_synonym	ammonium salt	has exact synonym	ammonium salt
+WARN	duplicate_label_synonym	5H-dibenzo[b,f]azepine	has exact synonym	5H-dibenzo[b,f]azepine
+WARN	duplicate_label_synonym	dibenzoazepine	has exact synonym	dibenzoazepine
+WARN	duplicate_label_synonym	polar solvent	has exact synonym	polar solvent
+WARN	duplicate_label_synonym	protophilic solvent	has exact synonym	protophilic solvent
+WARN	duplicate_label_synonym	amphiprotic solvent	has exact synonym	amphiprotic solvent
+WARN	duplicate_label_synonym	carbamimidic acid	has exact synonym	carbamimidic acid
+WARN	duplicate_label_synonym	imidic acid	has exact synonym	imidic acid
+WARN	duplicate_label_synonym	carboximidic acid	has exact synonym	carboximidic acid
+WARN	duplicate_label_synonym	agonist	has exact synonym	agonist
+WARN	duplicate_label_synonym	antagonist	has exact synonym	antagonist
+WARN	duplicate_label_synonym	sulfurous acid	has exact synonym	sulfurous acid
+WARN	duplicate_label_synonym	antimonous acid	has exact synonym	antimonous acid
+WARN	duplicate_label_synonym	antimony coordination entity	has exact synonym	antimony coordination entity
+WARN	duplicate_label_synonym	fluoronium	has exact synonym	fluoronium
+WARN	duplicate_label_synonym	chloronium	has exact synonym	chloronium
+WARN	duplicate_label_synonym	bromonium	has exact synonym	bromonium
+WARN	duplicate_label_synonym	iodonium	has exact synonym	iodonium
+WARN	duplicate_label_synonym	avermectin	has exact synonym	avermectin
+WARN	duplicate_label_synonym	macrocycle	has exact synonym	macrocycle
+WARN	duplicate_label_synonym	quinolinium ion	has exact synonym	quinolinium ion
+WARN	duplicate_label_synonym	isoxazoles	has exact synonym	isoxazoles
+WARN	duplicate_label_synonym	methyl isocyanate	has exact synonym	methyl isocyanate
+WARN	duplicate_label_synonym	(8xi)-cinchonan	has exact synonym	(8xi)-cinchonan
+WARN	duplicate_label_synonym	(8S)-cinchonan	has exact synonym	(8S)-cinchonan
+WARN	duplicate_label_synonym	2-methyl-2-(methylsulfanyl)propanal oxime	has exact synonym	2-methyl-2-(methylsulfanyl)propanal oxime
+WARN	duplicate_label_synonym	tunicamycin A1	has exact synonym	tunicamycin A1
+WARN	duplicate_label_synonym	flour treatment agent	has exact synonym	flour treatment agent
+WARN	duplicate_label_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole	has exact synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
+WARN	duplicate_label_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine	has exact synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine
+WARN	duplicate_label_synonym	striated muscle cell	has exact synonym	striated muscle cell
+WARN	duplicate_label_synonym	non-striated muscle cell	has exact synonym	non-striated muscle cell
+WARN	duplicate_label_synonym	myocyte of sinoatrial node	has exact synonym	myocyte of sinoatrial node
+WARN	duplicate_label_synonym	nucleus	has exact synonym	nucleus
+WARN	duplicate_label_synonym	cellular oxygen homeostasis	has exact synonym	oxygen homeostasis
+WARN	duplicate_label_synonym	amino acid homeostasis	has exact synonym	amino acid homeostasis
+WARN	duplicate_label_synonym	variant	has exact synonym	variant
+WARN	duplicate_label_synonym	protruding	has exact synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
 WARN	duplicate_label_synonym	connected to	IAO:0000118	connected to
 WARN	duplicate_label_synonym	produces	IAO:0000118	produces
-WARN	duplicate_label_synonym	sympathetic nervous system	has_exact_synonym	sympathetic nervous system
-WARN	duplicate_label_synonym	endocrine pancreas	has_exact_synonym	endocrine pancreas
-WARN	duplicate_label_synonym	exocrine pancreas	has_exact_synonym	exocrine pancreas
-WARN	duplicate_label_synonym	anal canal	has_exact_synonym	anal canal
-WARN	duplicate_label_synonym	colonic mucosa	has_exact_synonym	colonic mucosa
-WARN	duplicate_label_synonym	late embryo	has_exact_synonym	late embryo
-WARN	duplicate_label_synonym	organism substance	has_exact_synonym	organism substance
-WARN	duplicate_label_synonym	simple columnar epithelium	has_exact_synonym	simple columnar epithelium
-WARN	duplicate_label_synonym	endocrine system	has_exact_synonym	endocrine system
-WARN	duplicate_label_synonym	mammalian vulva	has_exact_synonym	mammalian vulva
-WARN	duplicate_label_synonym	respiratory system	has_exact_synonym	respiratory system
-WARN	duplicate_label_synonym	musculature	has_exact_synonym	musculature
-WARN	duplicate_label_synonym	posterior vena cava	has_exact_synonym	posterior vena cava
-WARN	duplicate_label_synonym	cranial ganglion	has_exact_synonym	cranial ganglion
-WARN	duplicate_label_synonym	uvea	has_exact_synonym	uvea
-WARN	duplicate_label_synonym	cortex	has_exact_synonym	cortex
-WARN	duplicate_label_synonym	rhombomere	has_exact_synonym	rhombomere
-WARN	duplicate_label_synonym	terminal bronchiole epithelium	has_exact_synonym	terminal bronchiole epithelium
-WARN	duplicate_label_synonym	submucosa of esophagus	has_exact_synonym	submucosa of esophagus
-WARN	duplicate_label_synonym	gray matter	has_exact_synonym	gray matter
-WARN	duplicate_label_synonym	right cardiac atrium	has_exact_synonym	right cardiac atrium
-WARN	duplicate_label_synonym	left cardiac atrium	has_exact_synonym	left cardiac atrium
-WARN	duplicate_label_synonym	appendicular skeleton	has_exact_synonym	appendicular skeleton
-WARN	duplicate_label_synonym	small intestine	has_exact_synonym	small intestine
-WARN	duplicate_label_synonym	artery smooth muscle tissue	has_exact_synonym	artery smooth muscle tissue
-WARN	duplicate_label_synonym	gray matter of spinal cord	has_exact_synonym	gray matter of spinal cord
-WARN	duplicate_label_synonym	sinoatrial node	has_exact_synonym	sinoatrial node
-WARN	duplicate_label_synonym	cardiac Purkinje fiber	has_exact_synonym	cardiac Purkinje fiber
-WARN	duplicate_label_synonym	cartilage tissue	has_exact_synonym	cartilage tissue
-WARN	duplicate_label_synonym	endometrial gland	has_exact_synonym	endometrial gland
-WARN	duplicate_label_synonym	esophagus mucosa	has_exact_synonym	esophagus mucosa
-WARN	duplicate_label_synonym	iris epithelium	has_exact_synonym	iris epithelium
-WARN	duplicate_label_synonym	cervical spinal cord	has_exact_synonym	cervical spinal cord
-WARN	duplicate_label_synonym	trigeminal nucleus	has_exact_synonym	trigeminal nucleus
-WARN	duplicate_label_synonym	thoracic spinal cord	has_exact_synonym	thoracic spinal cord
-WARN	duplicate_label_synonym	chorionic mesenchyme	has_exact_synonym	chorionic mesenchyme
-WARN	duplicate_label_synonym	skeletal muscle tissue of eye	has_exact_synonym	skeletal muscle tissue of eye
-WARN	duplicate_label_synonym	cardiac muscle tissue of interventricular septum	has_exact_synonym	cardiac muscle tissue of interventricular septum
-WARN	duplicate_label_synonym	skeletal muscle tissue of pharynx	has_exact_synonym	skeletal muscle tissue of pharynx
-WARN	duplicate_label_synonym	gland of digestive tract	has_exact_synonym	gland of digestive tract
-WARN	duplicate_label_synonym	facial bone	has_exact_synonym	facial bone
-WARN	duplicate_label_synonym	mouth mucosa	has_exact_synonym	mouth mucosa
-WARN	duplicate_label_synonym	mesencephalic neural crest	has_exact_synonym	mesencephalic neural crest
-WARN	duplicate_label_synonym	skeletal muscle tissue of trunk	has_exact_synonym	skeletal muscle tissue of trunk
-WARN	duplicate_label_synonym	reproductive gland	has_exact_synonym	reproductive gland
-WARN	duplicate_label_synonym	germinal neuroepithelium	has_exact_synonym	germinal neuroepithelium
-WARN	duplicate_label_synonym	biliary ductule	has_exact_synonym	biliary ductule
-WARN	duplicate_label_synonym	primary heart field	has_exact_synonym	primary heart field
-WARN	duplicate_label_synonym	cardiac vein	has_exact_synonym	cardiac vein
-WARN	duplicate_label_synonym	internal genitalia	has_exact_synonym	internal genitalia
-WARN	duplicate_label_synonym	external genitalia	has_exact_synonym	external genitalia
-WARN	duplicate_label_synonym	kidney pelvis smooth muscle	has_exact_synonym	kidney pelvis smooth muscle
-WARN	duplicate_label_synonym	paired limb/fin bud	has_exact_synonym	paired limb/fin bud
-WARN	duplicate_label_synonym	pharyngeal arch artery	has_exact_synonym	pharyngeal arch artery
-WARN	duplicate_label_synonym	anterior limiting lamina of cornea	has_exact_synonym	anterior limiting lamina of cornea
-WARN	duplicate_label_synonym	epididymis epithelium	has_exact_synonym	epididymis epithelium
-WARN	duplicate_label_synonym	raphe nuclei	has_exact_synonym	raphe nuclei
-WARN	duplicate_label_synonym	pelvic appendage	has_exact_synonym	pelvic appendage
-WARN	duplicate_label_synonym	neuromere	has_exact_synonym	neuromere
-WARN	duplicate_label_synonym	gland of anal canal	has_exact_synonym	gland of anal canal
-WARN	duplicate_label_synonym	urethra skeletal muscle tissue	has_exact_synonym	urethra skeletal muscle tissue
-WARN	duplicate_label_synonym	urogenital fold	has_exact_synonym	urogenital fold
-WARN	duplicate_label_synonym	parenchyma of central nervous system	has_exact_synonym	parenchyma of central nervous system
-WARN	duplicate_label_synonym	renal cortex artery	has_exact_synonym	renal cortex artery
-WARN	duplicate_label_synonym	gonadal ridge	has_exact_synonym	gonadal ridge
-WARN	duplicate_label_synonym	cervical region	has_exact_synonym	cervical region
-WARN	duplicate_label_synonym	primitive heart tube	has_exact_synonym	primitive heart tube
-WARN	duplicate_label_synonym	paired limb/fin field	has_exact_synonym	paired limb/fin field
-WARN	duplicate_label_synonym	undifferentiated genital tubercle	has_exact_synonym	undifferentiated genital tubercle
-WARN	duplicate_label_synonym	female urethral meatus	has_exact_synonym	female urethral meatus
-WARN	duplicate_label_synonym	muscle layer of oviduct	has_exact_synonym	muscle layer of oviduct
-WARN	duplicate_label_synonym	adventitia of ductus deferens	has_exact_synonym	adventitia of ductus deferens
-WARN	duplicate_label_synonym	muscular coat of ureter	has_exact_synonym	muscular coat of ureter
-WARN	duplicate_label_synonym	head mesenchyme from mesoderm	has_exact_synonym	head mesenchyme from mesoderm
-WARN	duplicate_label_synonym	lumen of digestive tract	has_exact_synonym	lumen of digestive tract
-WARN	duplicate_label_synonym	ovary stroma	has_exact_synonym	ovary stroma
-WARN	duplicate_label_synonym	pancreatic lobule	has_exact_synonym	pancreatic lobule
-WARN	duplicate_label_synonym	anatomical junction	has_exact_synonym	anatomical junction
-WARN	duplicate_label_synonym	pelvic girdle skeleton	has_exact_synonym	pelvic girdle skeleton
-WARN	duplicate_label_synonym	ciliary processes	has_exact_synonym	ciliary processes
-WARN	duplicate_label_synonym	primitive mesonephric nephron	has_exact_synonym	primitive mesonephric nephron
-WARN	duplicate_label_synonym	primitive metanephric nephron	has_exact_synonym	primitive metanephric nephron
-WARN	duplicate_label_synonym	facial skeleton	has_exact_synonym	facial skeleton
-WARN	duplicate_label_synonym	bronchial lumen	has_exact_synonym	bronchial lumen
-WARN	duplicate_label_synonym	urethral meatus	has_exact_synonym	urethral meatus
-WARN	duplicate_label_synonym	muscle layer of urinary bladder	has_exact_synonym	muscle layer of urinary bladder
-WARN	duplicate_label_synonym	hematopoietic tissue	has_exact_synonym	hematopoietic tissue
-WARN	duplicate_label_synonym	subdivision of oviduct	has_exact_synonym	subdivision of oviduct
-WARN	duplicate_label_synonym	foramen of skull	has_exact_synonym	foramen of skull
-WARN	duplicate_label_synonym	arterial blood	has_exact_synonym	arterial blood
-WARN	duplicate_label_synonym	venous blood	has_exact_synonym	venous blood
-WARN	duplicate_label_synonym	thoracic skeleton	has_exact_synonym	thoracic skeleton
-WARN	duplicate_label_synonym	thoracic spinal cord ventral horn	has_exact_synonym	thoracic spinal cord ventral horn
-WARN	duplicate_label_synonym	cervical spinal cord gray matter	has_exact_synonym	cervical spinal cord gray matter
-WARN	duplicate_label_synonym	cervical spinal cord ventral horn	has_exact_synonym	cervical spinal cord ventral horn
-WARN	duplicate_label_synonym	thoracic spinal cord gray matter	has_exact_synonym	thoracic spinal cord gray matter
-WARN	duplicate_label_synonym	ureteral valve	has_exact_synonym	ureteral valve
-WARN	duplicate_label_synonym	anal canal epithelium	has_exact_synonym	anal canal epithelium
-WARN	duplicate_label_synonym	abdominal viscera	has_exact_synonym	abdominal viscera
-WARN	duplicate_label_synonym	lung field	has_exact_synonym	lung field
-WARN	duplicate_label_synonym	long	has_exact_synonym	long
-WARN	duplicate_label_synonym	short	has_exact_synonym	short
-WARN	duplicate_label_synonym	fat	has_exact_synonym	fat
-WARN	duplicate_label_synonym	hyperactive	has_exact_synonym	hyperactive
-WARN	duplicate_label_synonym	exaggerated body bends	has_exact_synonym	exaggerated body bends
-WARN	duplicate_label_synonym	clear	has_exact_synonym	clear
-WARN	duplicate_label_synonym	pale	has_exact_synonym	pale
-WARN	duplicate_label_synonym	buccal cavity	has_exact_synonym	buccal cavity
-WARN	duplicate_label_synonym	body ganglion	has_exact_synonym	body ganglion
-WARN	duplicate_label_synonym	muscular system	has_exact_synonym	muscular system
-WARN	duplicate_label_synonym	striated muscle	has_exact_synonym	striated muscle
-WARN	duplicate_label_synonym	non-striated muscle	has_exact_synonym	non-striated muscle
-WARN	duplicate_label_synonym	smooth muscle	has_exact_synonym	smooth muscle
-WARN	duplicate_label_synonym	rectal epithelium	has_exact_synonym	rectal epithelium
-WARN	duplicate_label_synonym	vulva	has_exact_synonym	vulva
-WARN	duplicate_label_synonym	head muscle	has_exact_synonym	head muscle
-WARN	duplicate_label_synonym	blast cell	has_exact_synonym	blast cell
-WARN	duplicate_label_synonym	male gonad	has_exact_synonym	male gonad
-WARN	duplicate_label_synonym	sensillum	has_exact_synonym	sensillum
-WARN	duplicate_label_synonym	syncytium	has_exact_synonym	syncytium
-WARN	duplicate_label_synonym	sex organ	has_exact_synonym	sex organ
-WARN	duplicate_label_synonym	G cell	has_exact_synonym	G cell
-WARN	duplicate_scoped_synonym	L-alpha-amino acid	has_exact_synonym	L-alpha-amino acids
+WARN	duplicate_label_synonym	sympathetic nervous system	has exact synonym	sympathetic nervous system
+WARN	duplicate_label_synonym	endocrine pancreas	has exact synonym	endocrine pancreas
+WARN	duplicate_label_synonym	exocrine pancreas	has exact synonym	exocrine pancreas
+WARN	duplicate_label_synonym	anal canal	has exact synonym	anal canal
+WARN	duplicate_label_synonym	colonic mucosa	has exact synonym	colonic mucosa
+WARN	duplicate_label_synonym	late embryo	has exact synonym	late embryo
+WARN	duplicate_label_synonym	organism substance	has exact synonym	organism substance
+WARN	duplicate_label_synonym	simple columnar epithelium	has exact synonym	simple columnar epithelium
+WARN	duplicate_label_synonym	endocrine system	has exact synonym	endocrine system
+WARN	duplicate_label_synonym	mammalian vulva	has exact synonym	mammalian vulva
+WARN	duplicate_label_synonym	respiratory system	has exact synonym	respiratory system
+WARN	duplicate_label_synonym	musculature	has exact synonym	musculature
+WARN	duplicate_label_synonym	posterior vena cava	has exact synonym	posterior vena cava
+WARN	duplicate_label_synonym	cranial ganglion	has exact synonym	cranial ganglion
+WARN	duplicate_label_synonym	uvea	has exact synonym	uvea
+WARN	duplicate_label_synonym	cortex	has exact synonym	cortex
+WARN	duplicate_label_synonym	rhombomere	has exact synonym	rhombomere
+WARN	duplicate_label_synonym	terminal bronchiole epithelium	has exact synonym	terminal bronchiole epithelium
+WARN	duplicate_label_synonym	submucosa of esophagus	has exact synonym	submucosa of esophagus
+WARN	duplicate_label_synonym	gray matter	has exact synonym	gray matter
+WARN	duplicate_label_synonym	right cardiac atrium	has exact synonym	right cardiac atrium
+WARN	duplicate_label_synonym	left cardiac atrium	has exact synonym	left cardiac atrium
+WARN	duplicate_label_synonym	appendicular skeleton	has exact synonym	appendicular skeleton
+WARN	duplicate_label_synonym	small intestine	has exact synonym	small intestine
+WARN	duplicate_label_synonym	artery smooth muscle tissue	has exact synonym	artery smooth muscle tissue
+WARN	duplicate_label_synonym	gray matter of spinal cord	has exact synonym	gray matter of spinal cord
+WARN	duplicate_label_synonym	sinoatrial node	has exact synonym	sinoatrial node
+WARN	duplicate_label_synonym	cardiac Purkinje fiber	has exact synonym	cardiac Purkinje fiber
+WARN	duplicate_label_synonym	cartilage tissue	has exact synonym	cartilage tissue
+WARN	duplicate_label_synonym	endometrial gland	has exact synonym	endometrial gland
+WARN	duplicate_label_synonym	esophagus mucosa	has exact synonym	esophagus mucosa
+WARN	duplicate_label_synonym	iris epithelium	has exact synonym	iris epithelium
+WARN	duplicate_label_synonym	cervical spinal cord	has exact synonym	cervical spinal cord
+WARN	duplicate_label_synonym	trigeminal nucleus	has exact synonym	trigeminal nucleus
+WARN	duplicate_label_synonym	thoracic spinal cord	has exact synonym	thoracic spinal cord
+WARN	duplicate_label_synonym	chorionic mesenchyme	has exact synonym	chorionic mesenchyme
+WARN	duplicate_label_synonym	skeletal muscle tissue of eye	has exact synonym	skeletal muscle tissue of eye
+WARN	duplicate_label_synonym	cardiac muscle tissue of interventricular septum	has exact synonym	cardiac muscle tissue of interventricular septum
+WARN	duplicate_label_synonym	skeletal muscle tissue of pharynx	has exact synonym	skeletal muscle tissue of pharynx
+WARN	duplicate_label_synonym	gland of digestive tract	has exact synonym	gland of digestive tract
+WARN	duplicate_label_synonym	facial bone	has exact synonym	facial bone
+WARN	duplicate_label_synonym	mouth mucosa	has exact synonym	mouth mucosa
+WARN	duplicate_label_synonym	mesencephalic neural crest	has exact synonym	mesencephalic neural crest
+WARN	duplicate_label_synonym	skeletal muscle tissue of trunk	has exact synonym	skeletal muscle tissue of trunk
+WARN	duplicate_label_synonym	reproductive gland	has exact synonym	reproductive gland
+WARN	duplicate_label_synonym	germinal neuroepithelium	has exact synonym	germinal neuroepithelium
+WARN	duplicate_label_synonym	biliary ductule	has exact synonym	biliary ductule
+WARN	duplicate_label_synonym	primary heart field	has exact synonym	primary heart field
+WARN	duplicate_label_synonym	cardiac vein	has exact synonym	cardiac vein
+WARN	duplicate_label_synonym	internal genitalia	has exact synonym	internal genitalia
+WARN	duplicate_label_synonym	external genitalia	has exact synonym	external genitalia
+WARN	duplicate_label_synonym	kidney pelvis smooth muscle	has exact synonym	kidney pelvis smooth muscle
+WARN	duplicate_label_synonym	paired limb/fin bud	has exact synonym	paired limb/fin bud
+WARN	duplicate_label_synonym	pharyngeal arch artery	has exact synonym	pharyngeal arch artery
+WARN	duplicate_label_synonym	anterior limiting lamina of cornea	has exact synonym	anterior limiting lamina of cornea
+WARN	duplicate_label_synonym	epididymis epithelium	has exact synonym	epididymis epithelium
+WARN	duplicate_label_synonym	raphe nuclei	has exact synonym	raphe nuclei
+WARN	duplicate_label_synonym	pelvic appendage	has exact synonym	pelvic appendage
+WARN	duplicate_label_synonym	neuromere	has exact synonym	neuromere
+WARN	duplicate_label_synonym	gland of anal canal	has exact synonym	gland of anal canal
+WARN	duplicate_label_synonym	urethra skeletal muscle tissue	has exact synonym	urethra skeletal muscle tissue
+WARN	duplicate_label_synonym	urogenital fold	has exact synonym	urogenital fold
+WARN	duplicate_label_synonym	parenchyma of central nervous system	has exact synonym	parenchyma of central nervous system
+WARN	duplicate_label_synonym	renal cortex artery	has exact synonym	renal cortex artery
+WARN	duplicate_label_synonym	gonadal ridge	has exact synonym	gonadal ridge
+WARN	duplicate_label_synonym	cervical region	has exact synonym	cervical region
+WARN	duplicate_label_synonym	primitive heart tube	has exact synonym	primitive heart tube
+WARN	duplicate_label_synonym	paired limb/fin field	has exact synonym	paired limb/fin field
+WARN	duplicate_label_synonym	undifferentiated genital tubercle	has exact synonym	undifferentiated genital tubercle
+WARN	duplicate_label_synonym	female urethral meatus	has exact synonym	female urethral meatus
+WARN	duplicate_label_synonym	muscle layer of oviduct	has exact synonym	muscle layer of oviduct
+WARN	duplicate_label_synonym	adventitia of ductus deferens	has exact synonym	adventitia of ductus deferens
+WARN	duplicate_label_synonym	muscular coat of ureter	has exact synonym	muscular coat of ureter
+WARN	duplicate_label_synonym	head mesenchyme from mesoderm	has exact synonym	head mesenchyme from mesoderm
+WARN	duplicate_label_synonym	lumen of digestive tract	has exact synonym	lumen of digestive tract
+WARN	duplicate_label_synonym	ovary stroma	has exact synonym	ovary stroma
+WARN	duplicate_label_synonym	pancreatic lobule	has exact synonym	pancreatic lobule
+WARN	duplicate_label_synonym	anatomical junction	has exact synonym	anatomical junction
+WARN	duplicate_label_synonym	pelvic girdle skeleton	has exact synonym	pelvic girdle skeleton
+WARN	duplicate_label_synonym	ciliary processes	has exact synonym	ciliary processes
+WARN	duplicate_label_synonym	primitive mesonephric nephron	has exact synonym	primitive mesonephric nephron
+WARN	duplicate_label_synonym	primitive metanephric nephron	has exact synonym	primitive metanephric nephron
+WARN	duplicate_label_synonym	facial skeleton	has exact synonym	facial skeleton
+WARN	duplicate_label_synonym	bronchial lumen	has exact synonym	bronchial lumen
+WARN	duplicate_label_synonym	urethral meatus	has exact synonym	urethral meatus
+WARN	duplicate_label_synonym	muscle layer of urinary bladder	has exact synonym	muscle layer of urinary bladder
+WARN	duplicate_label_synonym	hematopoietic tissue	has exact synonym	hematopoietic tissue
+WARN	duplicate_label_synonym	subdivision of oviduct	has exact synonym	subdivision of oviduct
+WARN	duplicate_label_synonym	foramen of skull	has exact synonym	foramen of skull
+WARN	duplicate_label_synonym	arterial blood	has exact synonym	arterial blood
+WARN	duplicate_label_synonym	venous blood	has exact synonym	venous blood
+WARN	duplicate_label_synonym	thoracic skeleton	has exact synonym	thoracic skeleton
+WARN	duplicate_label_synonym	thoracic spinal cord ventral horn	has exact synonym	thoracic spinal cord ventral horn
+WARN	duplicate_label_synonym	cervical spinal cord gray matter	has exact synonym	cervical spinal cord gray matter
+WARN	duplicate_label_synonym	cervical spinal cord ventral horn	has exact synonym	cervical spinal cord ventral horn
+WARN	duplicate_label_synonym	thoracic spinal cord gray matter	has exact synonym	thoracic spinal cord gray matter
+WARN	duplicate_label_synonym	ureteral valve	has exact synonym	ureteral valve
+WARN	duplicate_label_synonym	anal canal epithelium	has exact synonym	anal canal epithelium
+WARN	duplicate_label_synonym	abdominal viscera	has exact synonym	abdominal viscera
+WARN	duplicate_label_synonym	lung field	has exact synonym	lung field
+WARN	duplicate_label_synonym	long	has exact synonym	long
+WARN	duplicate_label_synonym	short	has exact synonym	short
+WARN	duplicate_label_synonym	fat	has exact synonym	fat
+WARN	duplicate_label_synonym	hyperactive	has exact synonym	hyperactive
+WARN	duplicate_label_synonym	clear	has exact synonym	clear
+WARN	duplicate_label_synonym	pale	has exact synonym	pale
+WARN	duplicate_label_synonym	buccal cavity	has exact synonym	buccal cavity
+WARN	duplicate_label_synonym	body ganglion	has exact synonym	body ganglion
+WARN	duplicate_label_synonym	muscular system	has exact synonym	muscular system
+WARN	duplicate_label_synonym	striated muscle	has exact synonym	striated muscle
+WARN	duplicate_label_synonym	non-striated muscle	has exact synonym	non-striated muscle
+WARN	duplicate_label_synonym	smooth muscle	has exact synonym	smooth muscle
+WARN	duplicate_label_synonym	rectal epithelium	has exact synonym	rectal epithelium
+WARN	duplicate_label_synonym	vulva	has exact synonym	vulva
+WARN	duplicate_label_synonym	head muscle	has exact synonym	head muscle
+WARN	duplicate_label_synonym	blast cell	has exact synonym	blast cell
+WARN	duplicate_label_synonym	male gonad	has exact synonym	male gonad
+WARN	duplicate_label_synonym	sensillum	has exact synonym	sensillum
+WARN	duplicate_label_synonym	syncytium	has exact synonym	syncytium
+WARN	duplicate_label_synonym	sex organ	has exact synonym	sex organ
+WARN	duplicate_label_synonym	G cell	has exact synonym	G cell
+WARN	duplicate_scoped_synonym	L-alpha-amino acid	has exact synonym	L-alpha-amino acids
 WARN	duplicate_scoped_synonym	L-alpha-amino acid	has_related_synonym	L-alpha-amino acids
-WARN	duplicate_scoped_synonym	D-alpha-amino acid	has_exact_synonym	D-alpha-amino acids
+WARN	duplicate_scoped_synonym	D-alpha-amino acid	has exact synonym	D-alpha-amino acids
 WARN	duplicate_scoped_synonym	D-alpha-amino acid	has_related_synonym	D-alpha-amino acids
-WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has_exact_synonym	4-aminobutanoic acid
+WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has exact synonym	4-aminobutanoic acid
 WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has_related_synonym	4-aminobutanoic acid
-WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has_exact_synonym	deoxyribonucleic acids
+WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has exact synonym	deoxyribonucleic acids
 WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has_related_synonym	deoxyribonucleic acids
-WARN	duplicate_scoped_synonym	ketone	has_exact_synonym	ketones
+WARN	duplicate_scoped_synonym	ketone	has exact synonym	ketones
 WARN	duplicate_scoped_synonym	ketone	has_related_synonym	ketones
-WARN	duplicate_scoped_synonym	aldehyde	has_exact_synonym	aldehydes
+WARN	duplicate_scoped_synonym	aldehyde	has exact synonym	aldehydes
 WARN	duplicate_scoped_synonym	aldehyde	has_related_synonym	aldehydes
-WARN	duplicate_scoped_synonym	glycerol	has_exact_synonym	glycerol
+WARN	duplicate_scoped_synonym	glycerol	has exact synonym	glycerol
 WARN	duplicate_scoped_synonym	glycerol	has_related_synonym	glycerol
-WARN	duplicate_scoped_synonym	butyrate	has_exact_synonym	butanoate
+WARN	duplicate_scoped_synonym	butyrate	has exact synonym	butanoate
 WARN	duplicate_scoped_synonym	butyrate	has_related_synonym	butanoate
-WARN	duplicate_scoped_synonym	hydrogen halide	has_exact_synonym	hydrogen halides
+WARN	duplicate_scoped_synonym	hydrogen halide	has exact synonym	hydrogen halides
 WARN	duplicate_scoped_synonym	hydrogen halide	has_related_synonym	hydrogen halides
-WARN	duplicate_scoped_synonym	iron atom	has_exact_synonym	iron
+WARN	duplicate_scoped_synonym	iron atom	has exact synonym	iron
 WARN	duplicate_scoped_synonym	iron atom	has_related_synonym	iron
-WARN	duplicate_scoped_synonym	manganese atom	has_exact_synonym	manganese
+WARN	duplicate_scoped_synonym	manganese atom	has exact synonym	manganese
 WARN	duplicate_scoped_synonym	manganese atom	has_related_synonym	manganese
-WARN	duplicate_scoped_synonym	aldoxime	has_exact_synonym	aldoximes
+WARN	duplicate_scoped_synonym	aldoxime	has exact synonym	aldoximes
 WARN	duplicate_scoped_synonym	aldoxime	has_related_synonym	aldoximes
-WARN	duplicate_scoped_synonym	bromine atom	has_exact_synonym	bromine
+WARN	duplicate_scoped_synonym	bromine atom	has exact synonym	bromine
 WARN	duplicate_scoped_synonym	bromine atom	has_related_synonym	bromine
-WARN	duplicate_scoped_synonym	cadmium atom	has_exact_synonym	cadmium
+WARN	duplicate_scoped_synonym	cadmium atom	has exact synonym	cadmium
 WARN	duplicate_scoped_synonym	cadmium atom	has_related_synonym	cadmium
-WARN	duplicate_scoped_synonym	calcium atom	has_exact_synonym	calcium
+WARN	duplicate_scoped_synonym	calcium atom	has exact synonym	calcium
 WARN	duplicate_scoped_synonym	calcium atom	has_related_synonym	calcium
-WARN	duplicate_scoped_synonym	chlorine atom	has_exact_synonym	chlorine
+WARN	duplicate_scoped_synonym	chlorine atom	has exact synonym	chlorine
 WARN	duplicate_scoped_synonym	chlorine atom	has_related_synonym	chlorine
-WARN	duplicate_scoped_synonym	fluorine atom	has_exact_synonym	fluorine
+WARN	duplicate_scoped_synonym	fluorine atom	has exact synonym	fluorine
 WARN	duplicate_scoped_synonym	fluorine atom	has_related_synonym	fluorine
-WARN	duplicate_scoped_synonym	glycoside	has_exact_synonym	glycosides
+WARN	duplicate_scoped_synonym	glycoside	has exact synonym	glycosides
 WARN	duplicate_scoped_synonym	glycoside	has_related_synonym	glycosides
-WARN	duplicate_scoped_synonym	inositol	has_exact_synonym	inositols
+WARN	duplicate_scoped_synonym	inositol	has exact synonym	inositols
 WARN	duplicate_scoped_synonym	inositol	has_related_synonym	inositols
-WARN	duplicate_scoped_synonym	iodine atom	has_exact_synonym	iodine
+WARN	duplicate_scoped_synonym	iodine atom	has exact synonym	iodine
 WARN	duplicate_scoped_synonym	iodine atom	has_related_synonym	iodine
-WARN	duplicate_scoped_synonym	isoprenoid	has_exact_synonym	isoprenoids
+WARN	duplicate_scoped_synonym	isoprenoid	has exact synonym	isoprenoids
 WARN	duplicate_scoped_synonym	isoprenoid	has_related_synonym	isoprenoids
-WARN	duplicate_scoped_synonym	lead atom	has_exact_synonym	lead
+WARN	duplicate_scoped_synonym	lead atom	has exact synonym	lead
 WARN	duplicate_scoped_synonym	lead atom	has_related_synonym	lead
-WARN	duplicate_scoped_synonym	macrolide	has_exact_synonym	macrolides
+WARN	duplicate_scoped_synonym	macrolide	has exact synonym	macrolides
 WARN	duplicate_scoped_synonym	macrolide	has_related_synonym	macrolides
-WARN	duplicate_scoped_synonym	magnesium atom	has_exact_synonym	magnesium
+WARN	duplicate_scoped_synonym	magnesium atom	has exact synonym	magnesium
 WARN	duplicate_scoped_synonym	magnesium atom	has_related_synonym	magnesium
-WARN	duplicate_scoped_synonym	mercury atom	has_exact_synonym	mercury
+WARN	duplicate_scoped_synonym	mercury atom	has exact synonym	mercury
 WARN	duplicate_scoped_synonym	mercury atom	has_related_synonym	mercury
-WARN	duplicate_scoped_synonym	nitrogen atom	has_exact_synonym	nitrogen
+WARN	duplicate_scoped_synonym	nitrogen atom	has exact synonym	nitrogen
 WARN	duplicate_scoped_synonym	nitrogen atom	has_related_synonym	nitrogen
-WARN	duplicate_scoped_synonym	nonmetal atom	has_exact_synonym	nonmetal
+WARN	duplicate_scoped_synonym	nonmetal atom	has exact synonym	nonmetal
 WARN	duplicate_scoped_synonym	nonmetal atom	has_related_synonym	nonmetal
-WARN	duplicate_scoped_synonym	ether	has_exact_synonym	ethers
+WARN	duplicate_scoped_synonym	ether	has exact synonym	ethers
 WARN	duplicate_scoped_synonym	ether	has_related_synonym	ethers
-WARN	duplicate_scoped_synonym	oxime	has_exact_synonym	oximes
+WARN	duplicate_scoped_synonym	oxime	has exact synonym	oximes
 WARN	duplicate_scoped_synonym	oxime	has_related_synonym	oximes
-WARN	duplicate_scoped_synonym	oxygen atom	has_exact_synonym	oxygen
+WARN	duplicate_scoped_synonym	oxygen atom	has exact synonym	oxygen
 WARN	duplicate_scoped_synonym	oxygen atom	has_related_synonym	oxygen
-WARN	duplicate_scoped_synonym	phosphate	has_exact_synonym	phosphates
+WARN	duplicate_scoped_synonym	phosphate	has exact synonym	phosphates
 WARN	duplicate_scoped_synonym	phosphate	has_related_synonym	phosphates
-WARN	duplicate_scoped_synonym	potassium atom	has_exact_synonym	potassium
+WARN	duplicate_scoped_synonym	potassium atom	has exact synonym	potassium
 WARN	duplicate_scoped_synonym	potassium atom	has_related_synonym	potassium
-WARN	duplicate_scoped_synonym	sodium atom	has_exact_synonym	sodium
+WARN	duplicate_scoped_synonym	sodium atom	has exact synonym	sodium
 WARN	duplicate_scoped_synonym	sodium atom	has_related_synonym	sodium
-WARN	duplicate_scoped_synonym	sulfur atom	has_exact_synonym	sulfur
+WARN	duplicate_scoped_synonym	sulfur atom	has exact synonym	sulfur
 WARN	duplicate_scoped_synonym	sulfur atom	has_related_synonym	sulfur
-WARN	duplicate_scoped_synonym	transition element atom	has_exact_synonym	transition element
+WARN	duplicate_scoped_synonym	transition element atom	has exact synonym	transition element
 WARN	duplicate_scoped_synonym	transition element atom	has_related_synonym	transition element
-WARN	duplicate_scoped_synonym	zinc atom	has_exact_synonym	zinc
+WARN	duplicate_scoped_synonym	zinc atom	has exact synonym	zinc
 WARN	duplicate_scoped_synonym	zinc atom	has_related_synonym	zinc
-WARN	duplicate_scoped_synonym	arsenic atom	has_exact_synonym	arsenic
+WARN	duplicate_scoped_synonym	arsenic atom	has exact synonym	arsenic
 WARN	duplicate_scoped_synonym	arsenic atom	has_related_synonym	arsenic
-WARN	duplicate_scoped_synonym	carbon atom	has_exact_synonym	carbon
+WARN	duplicate_scoped_synonym	carbon atom	has exact synonym	carbon
 WARN	duplicate_scoped_synonym	carbon atom	has_related_synonym	carbon
-WARN	duplicate_scoped_synonym	cobalt atom	has_exact_synonym	cobalt
+WARN	duplicate_scoped_synonym	cobalt atom	has exact synonym	cobalt
 WARN	duplicate_scoped_synonym	cobalt atom	has_related_synonym	cobalt
-WARN	duplicate_scoped_synonym	nickel atom	has_exact_synonym	nickel
+WARN	duplicate_scoped_synonym	nickel atom	has exact synonym	nickel
 WARN	duplicate_scoped_synonym	nickel atom	has_related_synonym	nickel
-WARN	duplicate_scoped_synonym	phosphorus atom	has_exact_synonym	phosphorus
+WARN	duplicate_scoped_synonym	phosphorus atom	has exact synonym	phosphorus
 WARN	duplicate_scoped_synonym	phosphorus atom	has_related_synonym	phosphorus
-WARN	duplicate_scoped_synonym	copper atom	has_exact_synonym	copper
+WARN	duplicate_scoped_synonym	copper atom	has exact synonym	copper
 WARN	duplicate_scoped_synonym	copper atom	has_related_synonym	copper
-WARN	duplicate_scoped_synonym	thiol	has_exact_synonym	thiols
+WARN	duplicate_scoped_synonym	thiol	has exact synonym	thiols
 WARN	duplicate_scoped_synonym	thiol	has_related_synonym	thiols
-WARN	duplicate_scoped_synonym	lithium atom	has_exact_synonym	lithium
+WARN	duplicate_scoped_synonym	lithium atom	has exact synonym	lithium
 WARN	duplicate_scoped_synonym	lithium atom	has_related_synonym	lithium
-WARN	duplicate_scoped_synonym	silver atom	has_exact_synonym	silver
+WARN	duplicate_scoped_synonym	silver atom	has exact synonym	silver
 WARN	duplicate_scoped_synonym	silver atom	has_related_synonym	silver
-WARN	duplicate_scoped_synonym	antimony atom	has_exact_synonym	antimony
+WARN	duplicate_scoped_synonym	antimony atom	has exact synonym	antimony
 WARN	duplicate_scoped_synonym	antimony atom	has_related_synonym	antimony
-WARN	duplicate_scoped_synonym	thiocarboxylic acid	has_exact_synonym	thiocarboxylic acids
+WARN	duplicate_scoped_synonym	thiocarboxylic acid	has exact synonym	thiocarboxylic acids
 WARN	duplicate_scoped_synonym	thiocarboxylic acid	has_related_synonym	thiocarboxylic acids
-WARN	duplicate_scoped_synonym	catecholamine	has_exact_synonym	catecholamines
+WARN	duplicate_scoped_synonym	catecholamine	has exact synonym	catecholamines
 WARN	duplicate_scoped_synonym	catecholamine	has_related_synonym	catecholamines
-WARN	duplicate_scoped_synonym	ribonucleic acid	has_exact_synonym	ribonucleic acids
+WARN	duplicate_scoped_synonym	ribonucleic acid	has exact synonym	ribonucleic acids
 WARN	duplicate_scoped_synonym	ribonucleic acid	has_related_synonym	ribonucleic acids
-WARN	duplicate_scoped_synonym	nucleoside	has_exact_synonym	nucleosides
+WARN	duplicate_scoped_synonym	nucleoside	has exact synonym	nucleosides
 WARN	duplicate_scoped_synonym	nucleoside	has_related_synonym	nucleosides
-WARN	duplicate_scoped_synonym	terpene	has_exact_synonym	terpenes
+WARN	duplicate_scoped_synonym	terpene	has exact synonym	terpenes
 WARN	duplicate_scoped_synonym	terpene	has_related_synonym	terpenes
-WARN	duplicate_scoped_synonym	diterpene	has_exact_synonym	diterpenes
+WARN	duplicate_scoped_synonym	diterpene	has exact synonym	diterpenes
 WARN	duplicate_scoped_synonym	diterpene	has_related_synonym	diterpenes
-WARN	duplicate_scoped_synonym	fatty acid	has_exact_synonym	fatty acids
+WARN	duplicate_scoped_synonym	fatty acid	has exact synonym	fatty acids
 WARN	duplicate_scoped_synonym	fatty acid	has_related_synonym	fatty acids
-WARN	duplicate_scoped_synonym	monothiocarboxylic acid	has_exact_synonym	monothiocarboxylic acids
+WARN	duplicate_scoped_synonym	monothiocarboxylic acid	has exact synonym	monothiocarboxylic acids
 WARN	duplicate_scoped_synonym	monothiocarboxylic acid	has_related_synonym	monothiocarboxylic acids
-WARN	duplicate_scoped_synonym	heterotricyclic compound	has_exact_synonym	heterotricyclic compounds
+WARN	duplicate_scoped_synonym	heterotricyclic compound	has exact synonym	heterotricyclic compounds
 WARN	duplicate_scoped_synonym	heterotricyclic compound	has_related_synonym	heterotricyclic compounds
-WARN	duplicate_scoped_synonym	chalcocarbonic acid	has_exact_synonym	chalcocarbonic acids
+WARN	duplicate_scoped_synonym	chalcocarbonic acid	has exact synonym	chalcocarbonic acids
 WARN	duplicate_scoped_synonym	chalcocarbonic acid	has_related_synonym	chalcocarbonic acids
-WARN	duplicate_scoped_synonym	carboxamide	has_exact_synonym	carboxamides
+WARN	duplicate_scoped_synonym	carboxamide	has exact synonym	carboxamides
 WARN	duplicate_scoped_synonym	carboxamide	has_related_synonym	carboxamides
-WARN	duplicate_scoped_synonym	fluorocarbon	has_exact_synonym	fluorocarbons
+WARN	duplicate_scoped_synonym	fluorocarbon	has exact synonym	fluorocarbons
 WARN	duplicate_scoped_synonym	fluorocarbon	has_related_synonym	fluorocarbons
-WARN	duplicate_scoped_synonym	cyproheptadine	has_exact_synonym	cyproheptadine
+WARN	duplicate_scoped_synonym	cyproheptadine	has exact synonym	cyproheptadine
 WARN	duplicate_scoped_synonym	cyproheptadine	has_related_synonym	cyproheptadine
-WARN	duplicate_scoped_synonym	imidic acid	has_exact_synonym	imidic acids
+WARN	duplicate_scoped_synonym	imidic acid	has exact synonym	imidic acids
 WARN	duplicate_scoped_synonym	imidic acid	has_related_synonym	imidic acids
-WARN	duplicate_scoped_synonym	carboximidic acid	has_exact_synonym	carboximidic acids
+WARN	duplicate_scoped_synonym	carboximidic acid	has exact synonym	carboximidic acids
 WARN	duplicate_scoped_synonym	carboximidic acid	has_related_synonym	carboximidic acids
-WARN	duplicate_scoped_synonym	isourea	has_exact_synonym	isoureas
+WARN	duplicate_scoped_synonym	isourea	has exact synonym	isoureas
 WARN	duplicate_scoped_synonym	isourea	has_related_synonym	isoureas
-WARN	duplicate_scoped_synonym	hydrogen atom	has_exact_synonym	hydrogen
+WARN	duplicate_scoped_synonym	hydrogen atom	has exact synonym	hydrogen
 WARN	duplicate_scoped_synonym	hydrogen atom	has_related_synonym	hydrogen
-WARN	duplicate_scoped_synonym	onium cation	has_exact_synonym	onium cations
+WARN	duplicate_scoped_synonym	onium cation	has exact synonym	onium cations
 WARN	duplicate_scoped_synonym	onium cation	has_related_synonym	onium cations
-WARN	duplicate_scoped_synonym	halothane	has_exact_synonym	2-bromo-2-chloro-1,1,1-trifluoroethane
+WARN	duplicate_scoped_synonym	halothane	has exact synonym	2-bromo-2-chloro-1,1,1-trifluoroethane
 WARN	duplicate_scoped_synonym	halothane	has_related_synonym	2-bromo-2-chloro-1,1,1-trifluoroethane
-WARN	duplicate_scoped_synonym	methyl isocyanate	has_exact_synonym	isocyanatomethane
+WARN	duplicate_scoped_synonym	methyl isocyanate	has exact synonym	isocyanatomethane
 WARN	duplicate_scoped_synonym	methyl isocyanate	has_related_synonym	isocyanatomethane
-WARN	duplicate_scoped_synonym	leukocyte	has_exact_synonym	immune cell
-WARN	duplicate_scoped_synonym	leukocyte	has_related_synonym	immune cell
-WARN	duplicate_scoped_synonym	Eukaryota	has_exact_synonym	eukaryotes
+WARN	duplicate_scoped_synonym	Eukaryota	has exact synonym	eukaryotes
 WARN	duplicate_scoped_synonym	Eukaryota	has_related_synonym	eukaryotes
-WARN	duplicate_scoped_synonym	Embryophyta	has_exact_synonym	land plants
+WARN	duplicate_scoped_synonym	Embryophyta	has exact synonym	land plants
 WARN	duplicate_scoped_synonym	Embryophyta	has_related_synonym	land plants
-WARN	duplicate_scoped_synonym	Viridiplantae	has_exact_synonym	green plants
+WARN	duplicate_scoped_synonym	Viridiplantae	has exact synonym	green plants
 WARN	duplicate_scoped_synonym	Viridiplantae	has_related_synonym	green plants
-WARN	duplicate_scoped_synonym	Magnoliopsida	has_exact_synonym	flowering plants
+WARN	duplicate_scoped_synonym	Magnoliopsida	has exact synonym	flowering plants
 WARN	duplicate_scoped_synonym	Magnoliopsida	has_related_synonym	flowering plants
-WARN	duplicate_scoped_synonym	Mammalia	has_exact_synonym	mammals
+WARN	duplicate_scoped_synonym	Mammalia	has exact synonym	mammals
 WARN	duplicate_scoped_synonym	Mammalia	has_related_synonym	mammals
-WARN	duplicate_scoped_synonym	Tracheophyta	has_exact_synonym	vascular plants
+WARN	duplicate_scoped_synonym	Tracheophyta	has exact synonym	vascular plants
 WARN	duplicate_scoped_synonym	Tracheophyta	has_related_synonym	vascular plants
-WARN	duplicate_scoped_synonym	Spermatophyta	has_exact_synonym	seed plants
+WARN	duplicate_scoped_synonym	Spermatophyta	has exact synonym	seed plants
 WARN	duplicate_scoped_synonym	Spermatophyta	has_related_synonym	seed plants
-WARN	duplicate_scoped_synonym	Nematoda	has_exact_synonym	nematodes
+WARN	duplicate_scoped_synonym	Nematoda	has exact synonym	nematodes
 WARN	duplicate_scoped_synonym	Nematoda	has_related_synonym	nematodes
-WARN	duplicate_scoped_synonym	Arthropoda	has_exact_synonym	arthropods
+WARN	duplicate_scoped_synonym	Arthropoda	has exact synonym	arthropods
 WARN	duplicate_scoped_synonym	Arthropoda	has_related_synonym	arthropods
-WARN	duplicate_scoped_synonym	Chordata	has_exact_synonym	chordates
+WARN	duplicate_scoped_synonym	Chordata	has exact synonym	chordates
 WARN	duplicate_scoped_synonym	Chordata	has_related_synonym	chordates
-WARN	duplicate_scoped_synonym	Vertebrata <vertebrates>	has_exact_synonym	vertebrates
+WARN	duplicate_scoped_synonym	Vertebrata <vertebrates>	has exact synonym	vertebrates
 WARN	duplicate_scoped_synonym	Vertebrata <vertebrates>	has_related_synonym	vertebrates
-WARN	duplicate_scoped_synonym	Aves	has_exact_synonym	birds
+WARN	duplicate_scoped_synonym	Aves	has exact synonym	birds
 WARN	duplicate_scoped_synonym	Aves	has_related_synonym	birds
-WARN	duplicate_scoped_synonym	Eutheria	has_exact_synonym	placentals
+WARN	duplicate_scoped_synonym	Eutheria	has exact synonym	placentals
 WARN	duplicate_scoped_synonym	Eutheria	has_related_synonym	placentals
 WARN	duplicate_scoped_synonym	saccular	IAO:0000118	sacular
-WARN	duplicate_scoped_synonym	saccular	has_exact_synonym	sacular
-WARN	duplicate_scoped_synonym	sympathetic nervous system	has_exact_synonym	pars sympathica divisionis autonomici systematis nervosi
+WARN	duplicate_scoped_synonym	saccular	has exact synonym	sacular
+WARN	duplicate_scoped_synonym	sympathetic nervous system	has exact synonym	pars sympathica divisionis autonomici systematis nervosi
 WARN	duplicate_scoped_synonym	sympathetic nervous system	has_related_synonym	pars sympathica divisionis autonomici systematis nervosi
-WARN	duplicate_scoped_synonym	zygote stage	has_exact_synonym	fertilized egg stage
+WARN	duplicate_scoped_synonym	zygote stage	has exact synonym	fertilized egg stage
 WARN	duplicate_scoped_synonym	zygote stage	has_related_synonym	fertilized egg stage
-WARN	duplicate_scoped_synonym	respiratory tube	has_exact_synonym	segment of tracheobronchial tree
-WARN	duplicate_scoped_synonym	respiratory tube	has_narrow_synonym	segment of tracheobronchial tree
-WARN	duplicate_scoped_synonym	mammalian vulva	has_exact_synonym	pudendum femininum
+WARN	duplicate_scoped_synonym	respiratory tube	has exact synonym	segment of tracheobronchial tree
+WARN	duplicate_scoped_synonym	respiratory tube	has narrow synonym	segment of tracheobronchial tree
+WARN	duplicate_scoped_synonym	mammalian vulva	has exact synonym	pudendum femininum
 WARN	duplicate_scoped_synonym	mammalian vulva	has_related_synonym	pudendum femininum
-WARN	duplicate_scoped_synonym	ejaculatory duct	has_exact_synonym	ductus ejaculatorii
+WARN	duplicate_scoped_synonym	ejaculatory duct	has exact synonym	ductus ejaculatorii
 WARN	duplicate_scoped_synonym	ejaculatory duct	has_related_synonym	ductus ejaculatorii
-WARN	duplicate_scoped_synonym	respiratory system	has_exact_synonym	apparatus respiratorius
+WARN	duplicate_scoped_synonym	respiratory system	has exact synonym	apparatus respiratorius
 WARN	duplicate_scoped_synonym	respiratory system	has_related_synonym	apparatus respiratorius
-WARN	duplicate_scoped_synonym	sensory system	has_exact_synonym	organa sensuum
+WARN	duplicate_scoped_synonym	sensory system	has exact synonym	organa sensuum
 WARN	duplicate_scoped_synonym	sensory system	has_related_synonym	organa sensuum
-WARN	duplicate_scoped_synonym	intestinal villus	has_exact_synonym	villi intestinales
+WARN	duplicate_scoped_synonym	intestinal villus	has exact synonym	villi intestinales
 WARN	duplicate_scoped_synonym	intestinal villus	has_related_synonym	villi intestinales
-WARN	duplicate_scoped_synonym	wall of intestine	has_exact_synonym	bowel wall
+WARN	duplicate_scoped_synonym	wall of intestine	has exact synonym	bowel wall
 WARN	duplicate_scoped_synonym	wall of intestine	has_related_synonym	bowel wall
-WARN	duplicate_scoped_synonym	portal triad	has_exact_synonym	trias hepatica
+WARN	duplicate_scoped_synonym	portal triad	has exact synonym	trias hepatica
 WARN	duplicate_scoped_synonym	portal triad	has_related_synonym	trias hepatica
-WARN	duplicate_scoped_synonym	seminiferous tubule of testis	has_exact_synonym	tubuli seminiferi
+WARN	duplicate_scoped_synonym	seminiferous tubule of testis	has exact synonym	tubuli seminiferi
 WARN	duplicate_scoped_synonym	seminiferous tubule of testis	has_related_synonym	tubuli seminiferi
-WARN	duplicate_scoped_synonym	pectoral girdle region	has_exact_synonym	cingulum membri superioris
-WARN	duplicate_scoped_synonym	pectoral girdle region	has_narrow_synonym	cingulum membri superioris
-WARN	duplicate_scoped_synonym	ascending aorta	has_exact_synonym	pars ascendens aortae
+WARN	duplicate_scoped_synonym	pectoral girdle region	has exact synonym	cingulum membri superioris
+WARN	duplicate_scoped_synonym	pectoral girdle region	has narrow synonym	cingulum membri superioris
+WARN	duplicate_scoped_synonym	ascending aorta	has exact synonym	pars ascendens aortae
 WARN	duplicate_scoped_synonym	ascending aorta	has_related_synonym	pars ascendens aortae
-WARN	duplicate_scoped_synonym	descending aorta	has_exact_synonym	pars descendens aortae
+WARN	duplicate_scoped_synonym	descending aorta	has exact synonym	pars descendens aortae
 WARN	duplicate_scoped_synonym	descending aorta	has_related_synonym	pars descendens aortae
-WARN	duplicate_scoped_synonym	abdominal aorta	has_exact_synonym	abdominal part of aorta
-WARN	duplicate_scoped_synonym	abdominal aorta	has_exact_synonym	pars abdominalis aortae
+WARN	duplicate_scoped_synonym	abdominal aorta	has exact synonym	abdominal part of aorta
+WARN	duplicate_scoped_synonym	abdominal aorta	has exact synonym	pars abdominalis aortae
 WARN	duplicate_scoped_synonym	abdominal aorta	has_related_synonym	abdominal part of aorta
 WARN	duplicate_scoped_synonym	abdominal aorta	has_related_synonym	pars abdominalis aortae
-WARN	duplicate_scoped_synonym	brachiocephalic artery	has_exact_synonym	truncus brachiocephalicus
+WARN	duplicate_scoped_synonym	brachiocephalic artery	has exact synonym	truncus brachiocephalicus
 WARN	duplicate_scoped_synonym	brachiocephalic artery	has_related_synonym	truncus brachiocephalicus
-WARN	duplicate_scoped_synonym	subclavian artery	has_exact_synonym	arteria subclavia
+WARN	duplicate_scoped_synonym	subclavian artery	has exact synonym	arteria subclavia
 WARN	duplicate_scoped_synonym	subclavian artery	has_related_synonym	arteria subclavia
-WARN	duplicate_scoped_synonym	dilatator pupillae	has_exact_synonym	dilator pupillae muscle
-WARN	duplicate_scoped_synonym	dilatator pupillae	has_exact_synonym	musculus dilatator pupillae
+WARN	duplicate_scoped_synonym	dilatator pupillae	has exact synonym	dilator pupillae muscle
+WARN	duplicate_scoped_synonym	dilatator pupillae	has exact synonym	musculus dilatator pupillae
 WARN	duplicate_scoped_synonym	dilatator pupillae	has_related_synonym	dilator pupillae muscle
 WARN	duplicate_scoped_synonym	dilatator pupillae	has_related_synonym	musculus dilatator pupillae
-WARN	duplicate_scoped_synonym	trigeminal nerve	has_exact_synonym	nervus trigeminus
+WARN	duplicate_scoped_synonym	trigeminal nerve	has exact synonym	nervus trigeminus
 WARN	duplicate_scoped_synonym	trigeminal nerve	has_related_synonym	nervus trigeminus
-WARN	duplicate_scoped_synonym	optic choroid	has_exact_synonym	choroidea
+WARN	duplicate_scoped_synonym	optic choroid	has exact synonym	choroidea
 WARN	duplicate_scoped_synonym	optic choroid	has_related_synonym	choroidea
-WARN	duplicate_scoped_synonym	vestibulo-auditory system	has_exact_synonym	vestibuloauditory system
+WARN	duplicate_scoped_synonym	vestibulo-auditory system	has exact synonym	vestibuloauditory system
 WARN	duplicate_scoped_synonym	vestibulo-auditory system	has_related_synonym	vestibuloauditory system
-WARN	duplicate_scoped_synonym	umbilical cord	has_exact_synonym	funiculus umbilicalis
+WARN	duplicate_scoped_synonym	umbilical cord	has exact synonym	funiculus umbilicalis
 WARN	duplicate_scoped_synonym	umbilical cord	has_related_synonym	funiculus umbilicalis
-WARN	duplicate_scoped_synonym	sinoatrial node	has_exact_synonym	nodus sinuatrialis
+WARN	duplicate_scoped_synonym	sinoatrial node	has exact synonym	nodus sinuatrialis
 WARN	duplicate_scoped_synonym	sinoatrial node	has_related_synonym	nodus sinuatrialis
-WARN	duplicate_scoped_synonym	atrioventricular node	has_exact_synonym	nodus atrioventricularis
+WARN	duplicate_scoped_synonym	atrioventricular node	has exact synonym	nodus atrioventricularis
 WARN	duplicate_scoped_synonym	atrioventricular node	has_related_synonym	nodus atrioventricularis
-WARN	duplicate_scoped_synonym	endocrine gland	has_exact_synonym	ductless gland
+WARN	duplicate_scoped_synonym	endocrine gland	has exact synonym	ductless gland
 WARN	duplicate_scoped_synonym	endocrine gland	has_related_synonym	ductless gland
-WARN	duplicate_scoped_synonym	autonomic nervous system	has_exact_synonym	divisio autonomica systematis nervosi peripherici
+WARN	duplicate_scoped_synonym	autonomic nervous system	has exact synonym	divisio autonomica systematis nervosi peripherici
 WARN	duplicate_scoped_synonym	autonomic nervous system	has_related_synonym	divisio autonomica systematis nervosi peripherici
-WARN	duplicate_scoped_synonym	endometrial gland	has_exact_synonym	glandulae uterinae
+WARN	duplicate_scoped_synonym	endometrial gland	has exact synonym	glandulae uterinae
 WARN	duplicate_scoped_synonym	endometrial gland	has_related_synonym	glandulae uterinae
-WARN	duplicate_scoped_synonym	esophagus mucosa	has_exact_synonym	tunica mucosa oesophagi
+WARN	duplicate_scoped_synonym	esophagus mucosa	has exact synonym	tunica mucosa oesophagi
 WARN	duplicate_scoped_synonym	esophagus mucosa	has_related_synonym	tunica mucosa oesophagi
-WARN	duplicate_scoped_synonym	pontine tegmentum	has_exact_synonym	tegmentum pontis
+WARN	duplicate_scoped_synonym	pontine tegmentum	has exact synonym	tegmentum pontis
 WARN	duplicate_scoped_synonym	pontine tegmentum	has_related_synonym	tegmentum pontis
-WARN	duplicate_scoped_synonym	pelvic appendage bud ectoderm	has_exact_synonym	hindlimb ectoderm
-WARN	duplicate_scoped_synonym	pelvic appendage bud ectoderm	has_narrow_synonym	hindlimb ectoderm
-WARN	duplicate_scoped_synonym	abdominal wall	has_exact_synonym	paries abdominalis
+WARN	duplicate_scoped_synonym	pelvic appendage bud ectoderm	has exact synonym	hindlimb ectoderm
+WARN	duplicate_scoped_synonym	pelvic appendage bud ectoderm	has narrow synonym	hindlimb ectoderm
+WARN	duplicate_scoped_synonym	abdominal wall	has exact synonym	paries abdominalis
 WARN	duplicate_scoped_synonym	abdominal wall	has_related_synonym	paries abdominalis
-WARN	duplicate_scoped_synonym	brachiocephalic vein	has_exact_synonym	innominate vein
+WARN	duplicate_scoped_synonym	brachiocephalic vein	has exact synonym	innominate vein
 WARN	duplicate_scoped_synonym	brachiocephalic vein	has_related_synonym	innominate vein
-WARN	duplicate_scoped_synonym	mouth mucosa	has_exact_synonym	tunica mucosa oris
+WARN	duplicate_scoped_synonym	mouth mucosa	has exact synonym	tunica mucosa oris
 WARN	duplicate_scoped_synonym	mouth mucosa	has_related_synonym	tunica mucosa oris
-WARN	duplicate_scoped_synonym	biliary ductule	has_exact_synonym	biliary ductule
+WARN	duplicate_scoped_synonym	biliary ductule	has exact synonym	biliary ductule
 WARN	duplicate_scoped_synonym	biliary ductule	has_related_synonym	biliary ductule
-WARN	duplicate_scoped_synonym	cardiac vein	has_exact_synonym	coronary vein
+WARN	duplicate_scoped_synonym	cardiac vein	has exact synonym	coronary vein
 WARN	duplicate_scoped_synonym	cardiac vein	has_related_synonym	coronary vein
-WARN	duplicate_scoped_synonym	pharyngeal arch artery	has_exact_synonym	branchial aortic arches
-WARN	duplicate_scoped_synonym	pharyngeal arch artery	has_exact_synonym	pharyngeal arch artery
+WARN	duplicate_scoped_synonym	pharyngeal arch artery	has exact synonym	branchial aortic arches
+WARN	duplicate_scoped_synonym	pharyngeal arch artery	has exact synonym	pharyngeal arch artery
 WARN	duplicate_scoped_synonym	pharyngeal arch artery	has_related_synonym	branchial aortic arches
 WARN	duplicate_scoped_synonym	pharyngeal arch artery	has_related_synonym	pharyngeal arch artery
-WARN	duplicate_scoped_synonym	interventricular septum membranous part	has_exact_synonym	membranous interventricular septum
+WARN	duplicate_scoped_synonym	interventricular septum membranous part	has exact synonym	membranous interventricular septum
 WARN	duplicate_scoped_synonym	interventricular septum membranous part	has_related_synonym	membranous interventricular septum
-WARN	duplicate_scoped_synonym	interventricular septum muscular part	has_exact_synonym	muscular interventricular septum
+WARN	duplicate_scoped_synonym	interventricular septum muscular part	has exact synonym	muscular interventricular septum
 WARN	duplicate_scoped_synonym	interventricular septum muscular part	has_related_synonym	muscular interventricular septum
-WARN	duplicate_scoped_synonym	raphe nuclei	has_exact_synonym	nuclei raphes
+WARN	duplicate_scoped_synonym	raphe nuclei	has exact synonym	nuclei raphes
 WARN	duplicate_scoped_synonym	raphe nuclei	has_related_synonym	nuclei raphes
-WARN	duplicate_scoped_synonym	duct of seminal vesicle	has_exact_synonym	ductus excretorius glandulae vesiculosae
+WARN	duplicate_scoped_synonym	duct of seminal vesicle	has exact synonym	ductus excretorius glandulae vesiculosae
 WARN	duplicate_scoped_synonym	duct of seminal vesicle	has_related_synonym	ductus excretorius glandulae vesiculosae
-WARN	duplicate_scoped_synonym	outflow part of right ventricle	has_exact_synonym	pulmonary conus
+WARN	duplicate_scoped_synonym	outflow part of right ventricle	has exact synonym	pulmonary conus
 WARN	duplicate_scoped_synonym	outflow part of right ventricle	has_related_synonym	pulmonary conus
-WARN	duplicate_scoped_synonym	muscular coat	has_exact_synonym	tunica muscularis
+WARN	duplicate_scoped_synonym	muscular coat	has exact synonym	tunica muscularis
 WARN	duplicate_scoped_synonym	muscular coat	has_related_synonym	tunica muscularis
-WARN	duplicate_scoped_synonym	corneo-scleral junction	has_exact_synonym	limbus corneae
+WARN	duplicate_scoped_synonym	corneo-scleral junction	has exact synonym	limbus corneae
 WARN	duplicate_scoped_synonym	corneo-scleral junction	has_related_synonym	limbus corneae
-WARN	duplicate_scoped_synonym	craniocervical region musculature	has_exact_synonym	head or neck muscle
+WARN	duplicate_scoped_synonym	craniocervical region musculature	has exact synonym	head or neck muscle
 WARN	duplicate_scoped_synonym	craniocervical region musculature	has_related_synonym	head or neck muscle
-WARN	duplicate_scoped_synonym	pyloric canal	has_exact_synonym	canalis pyloricus
+WARN	duplicate_scoped_synonym	pyloric canal	has exact synonym	canalis pyloricus
 WARN	duplicate_scoped_synonym	pyloric canal	has_related_synonym	canalis pyloricus
-WARN	duplicate_scoped_synonym	interlobar artery	has_exact_synonym	arteriae interlobares renis
+WARN	duplicate_scoped_synonym	interlobar artery	has exact synonym	arteriae interlobares renis
 WARN	duplicate_scoped_synonym	interlobar artery	has_related_synonym	arteriae interlobares renis
-WARN	duplicate_scoped_synonym	interlobar vein	has_exact_synonym	venae interlobares renis
+WARN	duplicate_scoped_synonym	interlobar vein	has exact synonym	venae interlobares renis
 WARN	duplicate_scoped_synonym	interlobar vein	has_related_synonym	venae interlobares renis
-WARN	duplicate_scoped_synonym	ciliary processes	has_exact_synonym	processus ciliares
+WARN	duplicate_scoped_synonym	ciliary processes	has exact synonym	processus ciliares
 WARN	duplicate_scoped_synonym	ciliary processes	has_related_synonym	processus ciliares
-WARN	duplicate_scoped_synonym	internal urethral orifice	has_exact_synonym	internal urethral ostium
+WARN	duplicate_scoped_synonym	internal urethral orifice	has exact synonym	internal urethral ostium
 WARN	duplicate_scoped_synonym	internal urethral orifice	has_related_synonym	internal urethral ostium
 WARN	equivalent_pair	role	owl:equivalentClass	role
 WARN	equivalent_pair	protein	owl:equivalentClass	protein
 WARN	missing_definition	spatial region	definition	
-WARN	missing_definition	disposition	definition	
-WARN	missing_definition	function	definition	
 WARN	missing_definition	immaterial entity	definition	
 WARN	missing_definition	anterior to	definition	
 WARN	missing_definition	distal to	definition	
@@ -1789,8 +1786,8 @@ WARN	missing_definition	urethra cell	definition
 WARN	missing_definition	kidney collecting duct principal cell	definition	
 WARN	missing_definition	lung endothelial cell	definition	
 WARN	missing_definition	pulmonary artery endothelial cell	definition	
-WARN	missing_definition	results_in_distribution_of	definition	
-WARN	missing_definition	results_in_fission_of	definition	
+WARN	missing_definition	results in distribution of	definition	
+WARN	missing_definition	results in fission of	definition	
 WARN	missing_definition	editor note	definition	
 WARN	missing_definition	root	definition	
 WARN	missing_definition	Muridae	definition	
@@ -1914,16 +1911,13 @@ WARN	missing_definition	before or simultaneous with	definition
 WARN	missing_definition	simultaneous with	definition	
 WARN	missing_definition	ends after	definition	
 WARN	missing_definition	immediately preceded by	definition	
-WARN	missing_definition	immediately_precedes	definition	
+WARN	missing_definition	immediately precedes	definition	
 WARN	missing_definition	happens during	definition	
 WARN	missing_definition	ends during	definition	
 WARN	missing_definition	temporally related to	definition	
 WARN	missing_definition	part of developmental precursor of	definition	
 WARN	missing_definition	results in formation of	definition	
-WARN	missing_definition	causally upstream of, positive effect	definition	
-WARN	missing_definition	causally upstream of, negative effect	definition	
 WARN	missing_definition	confers advantage in	definition	
-WARN	missing_definition	enables	definition	
 WARN	missing_definition	results in growth of	definition	
 WARN	missing_definition	results in transport to from or in	definition	
 WARN	missing_definition	formed as result of	definition	
@@ -2005,8 +1999,6 @@ WARN	missing_definition	aortic system	definition
 WARN	missing_definition	germ layer / neural crest	definition	
 WARN	missing_definition	pancreas dorsal primordium	definition	
 WARN	missing_definition	pancreas ventral primordium	definition	
-WARN	missing_definition	T cell domain	definition	
-WARN	missing_definition	lymphocyte domain	definition	
 WARN	missing_definition	nephron progenitor	definition	
 WARN	missing_definition	primary subdivision of cranial skeletal system	definition	
 WARN	missing_definition	intra-ocular muscle	definition	
@@ -2161,31 +2153,26 @@ WARN	missing_definition	license	definition
 WARN	missing_definition	subset_property	definition	
 WARN	missing_definition	consider	definition	
 WARN	missing_definition	has_alternative_id	definition	
-WARN	missing_definition	has_broad_synonym	definition	
 WARN	missing_definition	database_cross_reference	definition	
-WARN	missing_definition	has_exact_synonym	definition	
-WARN	missing_definition	has_narrow_synonym	definition	
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
-WARN	missing_definition	has_related_synonym	definition	
 WARN	missing_definition	in_subset	definition	
-WARN	multiple_equivalent_classes	regulation of cellular amine metabolic process	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	negative regulation of amine metabolic process	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	positive regulation of amine metabolic process	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	cellular oxygen homeostasis	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	amino acid homeostasis	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
 INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+INFO	lowercase_definition	role	IAO:0000600	b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])@en
 INFO	lowercase_definition	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 INFO	lowercase_definition	part_of	definition	a core relation that holds between a part and its whole@en
-INFO	lowercase_definition	has_part	definition	a core relation that holds between a whole and its part@en
+INFO	lowercase_definition	has part	definition	a core relation that holds between a whole and its part@en
 INFO	lowercase_definition	preceded_by	definition	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
 INFO	lowercase_definition	precedes	definition	x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
 INFO	lowercase_definition	occurs in	definition	b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
 INFO	lowercase_definition	contains process	definition	[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
 INFO	lowercase_definition	lipid	definition	'Lipids' is a loosely defined term for substances of biological origin that are soluble in nonpolar solvents. They consist of saponifiable lipids, such as glycerides (fats and oils) and phospholipids, as well as nonsaponifiable lipids, principally steroids.
-INFO	lowercase_definition	inheres in	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
-INFO	lowercase_definition	inheres in	definition	a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence@en
-INFO	lowercase_definition	bearer of	definition	a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence@en
+INFO	lowercase_definition	characteristic of	definition	a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.@en
 INFO	lowercase_definition	participates in	definition	a relation between a continuant and a process, in which the continuant is somehow involved in the process@en
 INFO	lowercase_definition	has participant	definition	a relation between a process and a continuant, in which the continuant is somehow involved in the process@en
 INFO	lowercase_definition	function of	definition	a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence@en
@@ -2212,7 +2199,10 @@ INFO	lowercase_definition	has component	definition	w 'has component' p if w 'has
 INFO	lowercase_definition	develops from	definition	x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y
 INFO	lowercase_definition	develops into	definition	inverse of develops from
 INFO	lowercase_definition	directly develops into	definition	inverse of directly develops from
+INFO	lowercase_definition	regulates	definition	p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q.
 INFO	lowercase_definition	regulates	definition	process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2.
+INFO	lowercase_definition	negatively regulates	definition	p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q.
+INFO	lowercase_definition	positively regulates	definition	p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q.
 INFO	lowercase_definition	capable of part of	definition	c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p.
 INFO	lowercase_definition	surrounded by	definition	x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x
 INFO	lowercase_definition	adjacent to	definition	x adjacent to y if and only if x and y share a boundary.
@@ -2235,7 +2225,10 @@ INFO	lowercase_definition	acts upstream of or within	definition	c acts upstream 
 INFO	lowercase_definition	developmentally replaces	definition	x developmentally replaces y if and only if there is some developmental process that causes x to move or to cease to exist, and for the site that was occupied by x to become occupied by y, where y either comes into existence in this site or moves to this site from somewhere else
 INFO	lowercase_definition	results in developmental progression of	definition	p results in the developmental progression of s iff p is a developmental process and s is an anatomical structure and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
 INFO	lowercase_definition	results in development of	definition	p 'results in development of' c if and only if p is a developmental process and p results in the state of c changing from its initial state as a primordium or anlage through its mature state and to its final state.
+INFO	lowercase_definition	causally upstream of, positive effect	definition	p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q.
+INFO	lowercase_definition	causally upstream of, negative effect	definition	p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q.
 INFO	lowercase_definition	characteristic of part of	definition	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
+INFO	lowercase_definition	enables	definition	c enables p iff c is capable of p and c acts to execute p.
 INFO	lowercase_definition	part of structure that is capable of	definition	this relation holds between c and p when c is part of some c', and c' is capable of p.
 INFO	lowercase_definition	involved in	definition	c involved_in p if and only if c enables some process p', and p' is part of p
 INFO	lowercase_definition	regulates levels of	definition	p regulates levels of c if p regulates some amount (PATO:0000070) of c
@@ -2259,9 +2252,15 @@ INFO	lowercase_definition	has potential to developmentally induce	definition	x h
 INFO	lowercase_definition	has potential to develop into	definition	x has the potential to develop into y iff x develops into y or if x is capable of developing into y@en
 INFO	lowercase_definition	has potential to directly develop into	definition	x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y@en
 INFO	lowercase_definition	causally downstream of	definition	inverse of upstream of
+INFO	lowercase_definition	indirectly positively regulates	definition	p indirectly positively regulates q iff p is indirectly causally upstream of q and p positively regulates q.
+INFO	lowercase_definition	indirectly negatively regulates	definition	p indirectly negatively regulates q iff p is indirectly causally upstream of q and p negatively regulates q.
+INFO	lowercase_definition	causally related to	definition	relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause.
 INFO	lowercase_definition	causally upstream of	definition	p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain
+INFO	lowercase_definition	causally upstream of	definition	p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q.
 INFO	lowercase_definition	immediately causally upstream of	definition	p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q.
+INFO	lowercase_definition	immediately causally upstream of	definition	p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q.
 INFO	lowercase_definition	causally upstream of or within	definition	p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q.
+INFO	lowercase_definition	causally upstream of or within	definition	p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q.
 INFO	lowercase_definition	causally downstream of or within	definition	inverse of causally upstream of or within
 INFO	lowercase_definition	involved in regulation of	definition	c involved in regulation of p if c is involved in some p' and p' regulates some p
 INFO	lowercase_definition	involved in positive regulation of	definition	c involved in regulation of p if c is involved in some p' and p' positively regulates some p
@@ -2282,15 +2281,19 @@ INFO	lowercase_definition	immediate transformation of	definition	x immediate tra
 INFO	lowercase_definition	existence starts during or after	definition	x existence starts during or after y if and only if the time point at which x starts is after or equivalent to the time point at which y starts. Formally: x existence starts during or after y iff α (x) >= α (y).
 INFO	lowercase_definition	existence ends during or before	definition	x existence ends during or before y if and only if the time point at which x ends is before or equivalent to the time point at which y ends.
 INFO	lowercase_definition	causal relation between processes	definition	p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q.
+INFO	lowercase_definition	causal relation between processes	definition	p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q.
 INFO	lowercase_definition	towards	definition	q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2
 INFO	lowercase_definition	has muscle antagonist	definition	m1 has_muscle_antagonist m2 iff m1 has_muscle_insertion s, m2 has_muscle_insection s, m1 acts in opposition to m2, and m2 is responsible for returning the structure to its initial position.
 INFO	lowercase_definition	has branching part	definition	inverse of branching part of
 INFO	lowercase_definition	lumen of	definition	x lumen_of y iff x is the space or substance that is part of y and does not cross any of the inner membranes or boundaries of y that is maximal with respect to the volume of the convex hull.
 INFO	lowercase_definition	luminal space of	definition	s is luminal space of x iff s is lumen_of x and s is an immaterial entity
 INFO	lowercase_definition	skeleton of	definition	inverse of has skeleton
+INFO	lowercase_definition	directly regulates	definition	p directly regulates q iff p is immediately causally upstream of q and p regulates q.
 INFO	lowercase_definition	has part structure that is capable of	definition	s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p
 INFO	lowercase_definition	results in breakdown of	definition	p results in breakdown of c if and only if the execution of p leads to c no longer being present at the end of p
 INFO	lowercase_definition	results in organization of	definition	p results in organization of c iff p results in the assembly, arrangement of constituent parts, or disassembly of c
+INFO	lowercase_definition	directly positively regulates	definition	p directly positively regulates q iff p is immediately causally upstream of q, and p positively regulates q.
+INFO	lowercase_definition	directly negatively regulates	definition	p directly negatively regulates q iff p is immediately causally upstream of q, and p negatively regulates q.
 INFO	lowercase_definition	produces	definition	a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.
 INFO	lowercase_definition	produced by	definition	a produced_by b iff some process that occurs_in b has_output a.
 INFO	lowercase_definition	has primary input or output	definition	p 'has primary input ot output' c iff either (a) p 'has primary input' c or (b) p 'has primary output' c.
@@ -2299,6 +2302,8 @@ INFO	lowercase_definition	has primary input	definition	p has primary input c if 
 INFO	lowercase_definition	acts upstream of, positive effect	definition	c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive
 INFO	lowercase_definition	acts upstream of, negative effect	definition	c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative
 INFO	lowercase_definition	acts on population of	definition	p acts on population of c iff c' is a collection, has members of type c, and p has participant c
+INFO	lowercase_definition	indirectly causally upstream of	definition	p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q.
+INFO	lowercase_definition	indirectly regulates	definition	p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q.
 INFO	lowercase_definition	different in magnitude relative to	definition	q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
 INFO	lowercase_definition	increased in magnitude relative to	definition	q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
 INFO	lowercase_definition	decreased in magnitude relative to	definition	q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
@@ -2315,8 +2320,6 @@ INFO	lowercase_definition	early pharyngeal endoderm	definition	.
 INFO	lowercase_definition	layer of sclera	definition	.
 INFO	lowercase_definition	metanephros induced blastemal cells	definition	.
 INFO	lowercase_definition	differentiated genital tubercle	definition	.
-INFO	lowercase_definition	predatory behavior abnormal	definition	(Pristionchus pacificus) Animals exhibit abnormal predatory behavior, compared to controls.
-INFO	lowercase_definition	reduced predatory feeding behavior	definition	(Pristionchus pacificus) Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls.
 INFO	lowercase_definition	Lineage	definition	pedigree of nuclei, lineal descent from P0, the founder.
 INFO	lowercase_definition	epithelial cell	definition	cell of epithelium, the layer of cells that cover the external surface of an organism as well as forming an inner lining between the tissues and organs of that organism and the external environment. In C. elegans epithelial cells include epithelium of the alimentary tract, intestinal cells, hypodermis, interfacial cells and somatic gonad cells.
 INFO	lowercase_definition	marginal cell	definition	a type of pharyngeal cell that connects basement membrane to the apices of triangle-shaped pharyngeal lumen.

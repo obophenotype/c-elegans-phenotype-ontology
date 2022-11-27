@@ -16767,10 +16767,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-10-21"
+            "val": "2022-11-27"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2022-10-21/wbphenotype-simple.json"
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2022-11-27/wbphenotype-simple.json"
       },
       "nodes": [
         {
@@ -16801,10 +16801,6 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
                 "val": "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
-                "val": "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
@@ -16928,10 +16924,6 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
                 "val": "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
-                "val": "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
@@ -17173,7 +17165,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/RO_0000052",
-          "lbl": "inheres in",
+          "lbl": "characteristic of",
           "meta": {
             "basicPropertyValues": [
               {
@@ -17182,23 +17174,11 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000112",
-                "val": "this fragility inheres in this vase"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000112",
                 "val": "this fragility is a characteristic of this vase"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000112",
-                "val": "this red color inheres in this apple"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000112",
                 "val": "this red color is a characteristic of this apple"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
-                "val": "A dependent inheres in its bearer at all times for which the dependent exists."
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -17213,7 +17193,7 @@
               "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing."
             ],
             "definition": {
-              "val": "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence"
+              "val": "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."
             }
           },
           "type": "PROPERTY"
@@ -34115,10 +34095,6 @@
               ]
             },
             "synonyms": [
-              {
-                "pred": "hasExactSynonym",
-                "val": "exaggerated body bends"
-              },
               {
                 "pred": "hasRelatedSynonym",
                 "val": "loopy"
@@ -80025,7 +80001,7 @@
               }
             ],
             "definition": {
-              "val": "(Pristionchus pacificus) Animals exhibit abnormal predatory behavior, compared to controls.",
+              "val": "Pristionchus pacificus: Animals exhibit abnormal predatory behavior, compared to controls.",
               "xrefs": [
                 "WB:WBPaper00053031",
                 "WB:WBPerson2987",
@@ -80046,7 +80022,7 @@
               }
             ],
             "definition": {
-              "val": "(Pristionchus pacificus) Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls.",
+              "val": "Pristionchus pacificus: Animals exhibit reduced predatory feeding behavior, indicated by reduced predation success, compared to controls.",
               "xrefs": [
                 "WB:WBPaper00053031",
                 "WB:WBPerson2987",
@@ -82812,6 +82788,102 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
+          "lbl": "has_broad_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/18"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/18"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property which has a more general meaning than the preferred name/primary label."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+          "lbl": "has_exact_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/20"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/20"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property which has the exact same meaning than the preferred name/primary label."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
+          "lbl": "has_narrow_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/19"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/19"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property which has a more specific meaning than the preferred name/primary label."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+          "lbl": "has_related_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property that has been used synonymously with the primary term name, but the usage is not strictly correct."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
           "lbl": "subset_property",
           "type": "PROPERTY"
@@ -82827,23 +82899,8 @@
           "type": "PROPERTY"
         },
         {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
-          "lbl": "has_broad_synonym",
-          "type": "PROPERTY"
-        },
-        {
           "id": "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
           "lbl": "database_cross_reference",
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
-          "lbl": "has_exact_synonym",
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
-          "lbl": "has_narrow_synonym",
           "type": "PROPERTY"
         },
         {
@@ -82854,11 +82911,6 @@
         {
           "id": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "lbl": "has_obo_namespace",
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
-          "lbl": "has_related_synonym",
           "type": "PROPERTY"
         },
         {
