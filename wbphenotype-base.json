@@ -1508,6 +1508,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002614"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000135",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002661"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000138",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002349"
@@ -4351,6 +4356,11 @@
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000577",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002639"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000577",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002663"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0000578",
@@ -11838,6 +11848,11 @@
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0001595"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001593",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002662"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/WBPhenotype_0001597",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/WBPhenotype_0002215"
@@ -15331,10 +15346,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2023-01-03"
+            "val": "2023-02-05"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2023-01-03/wbphenotype-base.json"
+        "version": "http://purl.obolibrary.org/obo/wbphenotype/releases/2023-02-05/wbphenotype-base.json"
       },
       "nodes": [
         {
@@ -79741,6 +79756,69 @@
                 "WB:WBPaper00044909",
                 "WB:WBPerson2987",
                 "WB:WBPerson5747"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002661",
+          "lbl": "constitutive expression of innate immune response genes",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Genes, whose expression is typically induced by an innate immune response, are actively expressed under conditions which would not normally induce an innate immune response gene expression program.",
+              "xrefs": [
+                "WB:WBPaper00064532",
+                "WB:WBPerson2987",
+                "WB:WBPerson38719"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002662",
+          "lbl": "transgene silencing increased",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Animals exhibit an increase in the homology-dependent transcriptional level silencing of the expression of exogenous DNA that has been introduced into the organism, compared to control.",
+              "xrefs": [
+                "WB:WBPaper00064532",
+                "WB:WBPerson2987",
+                "WB:WBPerson38719"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/WBPhenotype_0002663",
+          "lbl": "intracellular lipid surveillance response abnormal",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "C_elegans_phenotype_ontology"
+              }
+            ],
+            "definition": {
+              "val": "Cells of the animal exhibit variations in the intracellular lipid surveillance response, responsible for responding to and addressing lipid depletion inside of cells, compared to control.",
+              "xrefs": [
+                "WB:WBPaper00064071",
+                "WB:WBPerson2987",
+                "WB:WBPerson58409"
               ]
             }
           },
