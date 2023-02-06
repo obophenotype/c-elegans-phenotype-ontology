@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2023-01-03/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2023-02-05/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: has_ontology_root_term WBPhenotype:0000886
-property_value: owl:versionInfo "2023-01-03" xsd:string
+property_value: owl:versionInfo "2023-02-05" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -18806,6 +18806,24 @@ id: WBPhenotype:0002660
 name: germline stem cell depletion
 def: "Animals exhibit a depletion of germline stem cells, compared to controls." [WB:WBPaper00044909, WB:WBPerson2987, WB:WBPerson5747]
 is_a: WBPhenotype:0000684 ! fewer germ cells
+
+[Term]
+id: WBPhenotype:0002661
+name: constitutive expression of innate immune response genes
+def: "Genes, whose expression is typically induced by an innate immune response, are actively expressed under conditions which would not normally induce an innate immune response gene expression program." [WB:WBPaper00064532, WB:WBPerson2987, WB:WBPerson38719]
+is_a: WBPhenotype:0000135 ! gene expression level high
+
+[Term]
+id: WBPhenotype:0002662
+name: transgene silencing increased
+def: "Animals exhibit an increase in the homology-dependent transcriptional level silencing of the expression of exogenous DNA that has been introduced into the organism, compared to control." [WB:WBPaper00064532, WB:WBPerson2987, WB:WBPerson38719]
+is_a: WBPhenotype:0001593 ! transgene silencing variant
+
+[Term]
+id: WBPhenotype:0002663
+name: intracellular lipid surveillance response abnormal
+def: "Cells of the animal exhibit variations in the intracellular lipid surveillance response, responsible for responding to and addressing lipid depletion inside of cells, compared to control." [WB:WBPaper00064071, WB:WBPerson2987, WB:WBPerson58409]
+is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 
 [Term]
 id: WBPhenotype:0004001
