@@ -1,7 +1,10 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete aging
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete animal organ senescence
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0016246
+ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete water homeostasis
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0034613
+ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete response to benomyl
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete response to tunicamycin
 ERROR	duplicate_definition	B cell	definition	Rectal cell, postembryonic blast cell in male
 ERROR	duplicate_definition	U cell	definition	Rectal cell, postembryonic blast cell in male
@@ -53,6 +56,8 @@ ERROR	duplicate_label	spermatid	rdfs:label	spermatid
 ERROR	duplicate_label	spermatid	rdfs:label	spermatid
 ERROR	duplicate_label	sperm	rdfs:label	sperm
 ERROR	duplicate_label	sperm	rdfs:label	sperm
+ERROR	duplicate_label	serotonergic neuron	rdfs:label	serotonergic neuron
+ERROR	duplicate_label	serotonergic neuron	rdfs:label	serotonergic neuron
 ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
 ERROR	duplicate_label	sensory neuron	rdfs:label	sensory neuron
 ERROR	duplicate_label	seminal vesicle	rdfs:label	seminal vesicle
@@ -77,6 +82,8 @@ ERROR	duplicate_label	organism substance	rdfs:label	organism substance
 ERROR	duplicate_label	organism substance	rdfs:label	organism substance
 ERROR	duplicate_label	organism subdivision	rdfs:label	organism subdivision
 ERROR	duplicate_label	organism subdivision	rdfs:label	organism subdivision
+ERROR	duplicate_label	organism	rdfs:label	organism
+ERROR	duplicate_label	organism	rdfs:label	organism
 ERROR	duplicate_label	organ	rdfs:label	organ
 ERROR	duplicate_label	organ	rdfs:label	organ
 ERROR	duplicate_label	oocyte	rdfs:label	oocyte
@@ -99,6 +106,10 @@ ERROR	duplicate_label	material anatomical entity	rdfs:label	material anatomical 
 ERROR	duplicate_label	material anatomical entity	rdfs:label	material anatomical entity
 ERROR	duplicate_label	male	rdfs:label	male
 ERROR	duplicate_label	male	rdfs:label	male
+ERROR	duplicate_label	lacks_plasma_membrane_part	rdfs:label	lacks_plasma_membrane_part
+ERROR	duplicate_label	lacks_plasma_membrane_part	rdfs:label	lacks_plasma_membrane_part
+ERROR	duplicate_label	lacks_part	rdfs:label	lacks_part
+ERROR	duplicate_label	lacks_part	rdfs:label	lacks_part
 ERROR	duplicate_label	intestine	rdfs:label	intestine
 ERROR	duplicate_label	intestine	rdfs:label	intestine
 ERROR	duplicate_label	immaterial anatomical entity	rdfs:label	immaterial anatomical entity
@@ -150,7 +161,6 @@ ERROR	missing_label	obo:chebi#IUPAC_NAME	rdfs:label
 ERROR	missing_label	obo:cl#PLURAL	rdfs:label	
 ERROR	missing_label	obo:cl#abbreviation	rdfs:label	
 ERROR	missing_label	obo:fbbt#FORMULA	rdfs:label	
-ERROR	missing_label	obo:fbbt#INN	rdfs:label	
 ERROR	missing_label	obo:fbbt#IUPAC_NAME	rdfs:label	
 ERROR	missing_label	obo:fbbt#InChI	rdfs:label	
 ERROR	missing_label	obo:fbbt#InChIKey	rdfs:label	
@@ -181,28 +191,28 @@ ERROR	multiple_definitions	specifically dependent continuant	definition	A contin
 ERROR	multiple_definitions	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid.
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.
-ERROR	multiple_definitions	gamma-aminobutyric acid	definition	A gamma-amino acid that is butanoic acid with the amino substituent located at C-4.
-ERROR	multiple_definitions	gamma-aminobutyric acid	definition	An amino fatty acid composed of butanoic acid with the amino substituent at C-4.
-ERROR	multiple_definitions	short-chain fatty acid	definition	An aliphatic monocarboxylic acid with a chain length of less than C6.
-ERROR	multiple_definitions	short-chain fatty acid	definition	An aliphatic monocarboxylic acid with a chain length of less than C6. If any non-hydrocarbon substituent is present, the compound is not normally regarded as a short-chain fatty acid.
-ERROR	multiple_definitions	serotonin	definition	A primary amino compound that is the 5-hydroxy derivative of tryptamine.
-ERROR	multiple_definitions	serotonin	definition	The 5-hydroxy derivative of tryptamine.
-ERROR	multiple_definitions	carboxylic ester	definition	An ester of a carboxylic acid, R(1)C(=O)OR(2), where R(1) = H or organyl and R(2) = organyl.
-ERROR	multiple_definitions	carboxylic ester	definition	An ester of a carboxylic acid.
-ERROR	multiple_definitions	carboxylic acid	definition	A carbon oxoacid acid carrying at least one -C(=O)OH group and having the structure RC(=O)OH, where R is any any monovalent functional group. Carboxylic acids are the most common type of organic acid.
-ERROR	multiple_definitions	carboxylic acid	definition	An oxoacid acid carrying at least one -C(=O)OH group and having the structure RC(=O)OH, where R is any any monovalent functional group. Carboxylic acids are the most common type of organic acid.
-ERROR	multiple_definitions	p-block molecular entity	definition	A main group molecular entity that contains one or more atoms of a p-block element.
-ERROR	multiple_definitions	p-block molecular entity	definition	A p-block molecular entity is a molecular entity containing one or more atoms of a p-block element.
 ERROR	multiple_definitions	phenols	definition	Compounds having one or more hydroxy groups attached to a benzene or other arene ring.
 ERROR	multiple_definitions	phenols	definition	Organic aromatic compounds having one or more hydroxy groups attached to a benzene or other arene ring.
-ERROR	multiple_definitions	quaternary ammonium ion	definition	A derivative of ammonium, NH4(+), in which all four of the hydrogens bonded to nitrogen have been replaced with univalent (usually hydrocarbyl) groups.
-ERROR	multiple_definitions	quaternary ammonium ion	definition	A derivative of ammonium, NH4(+), in which all four of the hydrogens bonded to nitrogen have been replaced with univalent (usually organyl) groups.
-ERROR	multiple_definitions	ammonium ion derivative	definition	A derivative of ammonium, NH4(+), in which one (or more) of the hydrogens bonded to the nitrogen have been replaced with univalent organyl groups. The substituting carbon of the organyl group must not itself be directly attached to a heteroatom (thereby excluding protonated amides, hemiaminals, etc).
-ERROR	multiple_definitions	ammonium ion derivative	definition	Ammonium, NH4(+), and derivatives formed by substitution by univalent groups.
-ERROR	multiple_definitions	fatty acid	definition	Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax.
-ERROR	multiple_definitions	fatty acid	definition	Any aliphatic monocarboxylic acid derived from or contained in esterified form in an animal or vegetable fat, oil or wax. Natural fatty acids commonly have a chain of 4 to 28 carbons (usually unbranched and even-numbered), which may be saturated or unsaturated. By extension, the term is sometimes used to embrace all acyclic aliphatic carboxylic acids.
-ERROR	multiple_definitions	straight-chain saturated fatty acid	definition	Any saturated fatty acid lacking a carbon side-chain.
-ERROR	multiple_definitions	straight-chain saturated fatty acid	definition	Any saturated fatty acid lacking a side-chain.
+ERROR	multiple_definitions	megakaryocyte	definition	A giant cell 50 to 100 micron in diameter, with a greatly lobulated nucleus, found in the bone marrow; mature blood platelets are released from its cytoplasm.
+ERROR	multiple_definitions	megakaryocyte	definition	A large hematopoietic cell (50 to 100 micron) with a lobated nucleus. Once mature, this cell undergoes multiple rounds of endomitosis and cytoplasmic restructuring to allow platelet formation and release.
+ERROR	multiple_definitions	visceral muscle cell	definition	A muscle cell that is part of some visceral muscle
+ERROR	multiple_definitions	visceral muscle cell	definition	A muscle cell that is part of some visceral muscle.
+ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.
+ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.
+ERROR	multiple_definitions	biological_process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
+ERROR	multiple_definitions	biological_process	definition	A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
+ERROR	multiple_definitions	cell migration	definition	The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues.
+ERROR	multiple_definitions	cell migration	definition	The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues. Cell migration is a central process in the development and maintenance of multicellular organisms.
+ERROR	multiple_definitions	cell differentiation	definition	The cellular developmental process in which a relatively unspecialized cell, e.g. embryonic or regenerative cell, acquires specialized structural and/or functional features that characterize a specific cell. Differentiation includes the processes involved in commitment of a cell to a specific fate and its subsequent development to the mature state.
+ERROR	multiple_definitions	cell differentiation	definition	The process in which relatively unspecialized cells, e.g. embryonic or regenerative cells, acquire specialized structural and/or functional features that characterize the cells, tissues, or organs of the mature organism or some other relatively stable phase of the organism's life history. Differentiation includes the processes involved in commitment of a cell to a specific fate and its subsequent development to the mature state.
+ERROR	multiple_definitions	cell fate commitment	definition	The cellular developmental process by which a cell establishes the intrinsic character of a cell or tissue region irreversibly committing it to a particular fate.
+ERROR	multiple_definitions	cell fate commitment	definition	The commitment of cells to specific cell fates and their capacity to differentiate into particular kinds of cells. Positional information is established through protein signals that emanate from a localized source within a cell (the initial one-cell zygote) or within a developmental field.
+ERROR	multiple_definitions	cell development	definition	The cellular developmental process in which a specific cell progresses from an immature to a mature state. Cell development start once cell commitment has taken place.
+ERROR	multiple_definitions	cell development	definition	The process whose specific outcome is the progression of the cell over time, from its formation to the mature structure. Cell development does not include the steps involved in committing a cell to a specific fate.
+ERROR	multiple_definitions	cell maturation	definition	A developmental process, independent of morphogenetic (shape) change, that is required for a cell to attain its fully functional state.
+ERROR	multiple_definitions	cell maturation	definition	The cellular developmental process, independent of morphogenetic (shape) change, that is required for a specific cell to attain its fully functional state.
+ERROR	multiple_definitions	cell periphery	definition	The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.
+ERROR	multiple_definitions	cell periphery	definition	The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures.
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.
@@ -213,6 +223,20 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
+ERROR	multiple_definitions	lens of camera-type eye	definition	A transparent and refractive lens located posterior to the iris. The lens of camera-type eye refracts light to be focused on the retina.
+ERROR	multiple_definitions	lens of camera-type eye	definition	Transparent part of camera-type eye that helps to refract light to be focused on the retina.
+ERROR	multiple_equivalent_class_definitions	hematopoietic stem cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	endocrine cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	erythrocyte	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	proerythroblast	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	megakaryocyte progenitor cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	reticulocyte	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	erythroblast	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	hematopoietic multipotent progenitor cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	hematopoietic oligopotent progenitor cell, lineage-negative	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	erythroid progenitor cell, mammalian	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	nongranular leukocyte	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	enzyme regulator activity	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -228,14 +252,14 @@ ERROR	multiple_labels	occurs in	rdfs:label	occurs in
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in@en
 ERROR	multiple_labels	contains process	rdfs:label	contains process
 ERROR	multiple_labels	contains process	rdfs:label	contains process@en
-ERROR	multiple_labels	anatomical entity	rdfs:label	anatomical entity
-ERROR	multiple_labels	anatomical entity	rdfs:label	anatomical entity@en
 ERROR	multiple_labels	results in distribution of	rdfs:label	results in distribution of
 ERROR	multiple_labels	results in distribution of	rdfs:label	results_in_distribution_of
 ERROR	multiple_labels	results in fission of	rdfs:label	results in fission of
 ERROR	multiple_labels	results in fission of	rdfs:label	results_in_fission_of
-ERROR	multiple_labels	nucleus	rdfs:label	nucleus
-ERROR	multiple_labels	nucleus	rdfs:label	nucleus@en
+ERROR	multiple_labels	ribonucleoprotein complex assembly	rdfs:label	protein-RNA complex assembly
+ERROR	multiple_labels	ribonucleoprotein complex assembly	rdfs:label	ribonucleoprotein complex assembly
+ERROR	multiple_labels	protein-RNA complex organization	rdfs:label	protein-RNA complex organization
+ERROR	multiple_labels	protein-RNA complex organization	rdfs:label	ribonucleoprotein complex subunit organization
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
@@ -495,7 +519,6 @@ WARN	duplicate_label_synonym	acetone	has exact synonym	acetone
 WARN	duplicate_label_synonym	acetylcholine	has exact synonym	acetylcholine
 WARN	duplicate_label_synonym	cysteine	has exact synonym	cysteine
 WARN	duplicate_label_synonym	acetic acid	has exact synonym	acetic acid
-WARN	duplicate_label_synonym	water	has exact synonym	water
 WARN	duplicate_label_synonym	dioxygen	has exact synonym	dioxygen
 WARN	duplicate_label_synonym	ATP	has exact synonym	ATP
 WARN	duplicate_label_synonym	L-alpha-amino acid	has exact synonym	L-alpha-amino acid
@@ -509,7 +532,6 @@ WARN	duplicate_label_synonym	hydrogen sulfide	has exact synonym	hydrogen sulfide
 WARN	duplicate_label_synonym	methane	has exact synonym	methane
 WARN	duplicate_label_synonym	sulfate	has exact synonym	sulfate
 WARN	duplicate_label_synonym	urea	has exact synonym	urea
-WARN	duplicate_label_synonym	hydroxide	has exact synonym	hydroxide
 WARN	duplicate_label_synonym	guanine	has exact synonym	guanine
 WARN	duplicate_label_synonym	ethanol	has exact synonym	ethanol
 WARN	duplicate_label_synonym	hydrogen peroxide	has exact synonym	hydrogen peroxide
@@ -590,7 +612,6 @@ WARN	duplicate_label_synonym	metabolite	has exact synonym	metabolite
 WARN	duplicate_label_synonym	methanesulfonate	has exact synonym	methanesulfonate
 WARN	duplicate_label_synonym	methyl methanesulfonate	has exact synonym	methyl methanesulfonate
 WARN	duplicate_label_synonym	molecule	has exact synonym	molecule
-WARN	duplicate_label_synonym	monocarboxylic acid	has exact synonym	monocarboxylic acid
 WARN	duplicate_label_synonym	aldicarb	has exact synonym	aldicarb
 WARN	duplicate_label_synonym	ether	has exact synonym	ether
 WARN	duplicate_label_synonym	organic phosphate	has exact synonym	organic phosphate
@@ -642,7 +663,6 @@ WARN	duplicate_label_synonym	thiol	has exact synonym	thiol
 WARN	duplicate_label_synonym	azanide	has exact synonym	azanide
 WARN	duplicate_label_synonym	hydridonitrate(2-)	has exact synonym	hydridonitrate(2-)
 WARN	duplicate_label_synonym	methanediide	has exact synonym	methanediide
-WARN	duplicate_label_synonym	oxonium	has exact synonym	oxonium
 WARN	duplicate_label_synonym	methanide	has exact synonym	methanide
 WARN	duplicate_label_synonym	hydridodioxygen(1+)	has exact synonym	hydridodioxygen(1+)
 WARN	duplicate_label_synonym	thiol group	has exact synonym	thiol group
@@ -691,7 +711,6 @@ WARN	duplicate_label_synonym	pnictogen molecular entity	has exact synonym	pnicto
 WARN	duplicate_label_synonym	chalcogen	has exact synonym	chalcogen
 WARN	duplicate_label_synonym	chalcogen molecular entity	has exact synonym	chalcogen molecular entity
 WARN	duplicate_label_synonym	thiocarboxylic acid	has exact synonym	thiocarboxylic acid
-WARN	duplicate_label_synonym	carboxylic ester	has exact synonym	carboxylic ester
 WARN	duplicate_label_synonym	hydracid	has exact synonym	hydracid
 WARN	duplicate_label_synonym	sulfur oxoacid derivative	has exact synonym	sulfur oxoacid derivative
 WARN	duplicate_label_synonym	halogen oxoacid	has exact synonym	halogen oxoacid
@@ -754,7 +773,6 @@ WARN	duplicate_label_synonym	cysteine zwitterion	has exact synonym	cysteine zwit
 WARN	duplicate_label_synonym	amino acid zwitterion	has exact synonym	amino acid zwitterion
 WARN	duplicate_label_synonym	quaternary ammonium ion	has exact synonym	quaternary ammonium ion
 WARN	duplicate_label_synonym	quaternary ammonium salt	has exact synonym	quaternary ammonium salt
-WARN	duplicate_label_synonym	acylcholine	has exact synonym	acylcholine
 WARN	duplicate_label_synonym	deoxy hexoside	has exact synonym	deoxy hexoside
 WARN	duplicate_label_synonym	central nervous system stimulant	has exact synonym	central nervous system stimulant
 WARN	duplicate_label_synonym	oxoanion	has exact synonym	oxoanion
@@ -869,6 +887,9 @@ WARN	duplicate_label_synonym	striated muscle cell	has exact synonym	striated mus
 WARN	duplicate_label_synonym	non-striated muscle cell	has exact synonym	non-striated muscle cell
 WARN	duplicate_label_synonym	myocyte of sinoatrial node	has exact synonym	myocyte of sinoatrial node
 WARN	duplicate_label_synonym	nucleus	has exact synonym	nucleus
+WARN	duplicate_label_synonym	ribonucleoprotein complex assembly	has exact synonym	protein-RNA complex assembly
+WARN	duplicate_label_synonym	ribonucleoprotein complex assembly	has exact synonym	ribonucleoprotein complex assembly
+WARN	duplicate_label_synonym	protein-RNA complex organization	has exact synonym	ribonucleoprotein complex subunit organization
 WARN	duplicate_label_synonym	variant	has exact synonym	variant
 WARN	duplicate_label_synonym	protruding	has exact synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
@@ -1001,8 +1022,6 @@ WARN	duplicate_scoped_synonym	D-alpha-amino acid	has exact synonym	D-alpha-amino
 WARN	duplicate_scoped_synonym	D-alpha-amino acid	has_related_synonym	D-alpha-amino acids
 WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has exact synonym	4-aminobutanoic acid
 WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has_related_synonym	4-aminobutanoic acid
-WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has exact synonym	deoxyribonucleic acids
-WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has_related_synonym	deoxyribonucleic acids
 WARN	duplicate_scoped_synonym	ketone	has exact synonym	ketones
 WARN	duplicate_scoped_synonym	ketone	has_related_synonym	ketones
 WARN	duplicate_scoped_synonym	aldehyde	has exact synonym	aldehydes
@@ -1282,7 +1301,6 @@ WARN	missing_definition	distalmost part of	definition
 WARN	missing_definition	carbamate	definition	
 WARN	missing_definition	dioxygen	definition	
 WARN	missing_definition	bromide	definition	
-WARN	missing_definition	hydroxide	definition	
 WARN	missing_definition	iodide	definition	
 WARN	missing_definition	noradrenaline(1+)	definition	
 WARN	missing_definition	D-alpha-amino acid	definition	
@@ -1398,7 +1416,6 @@ WARN	missing_definition	hypochlorite	definition
 WARN	missing_definition	azanide	definition	
 WARN	missing_definition	methanediide	definition	
 WARN	missing_definition	peroxy group	definition	
-WARN	missing_definition	oxonium	definition	
 WARN	missing_definition	methanide	definition	
 WARN	missing_definition	avermectin B1a	definition	
 WARN	missing_definition	avermectin B1b	definition	
@@ -1474,7 +1491,6 @@ WARN	missing_definition	iron group molecular entity	definition
 WARN	missing_definition	copper group molecular entity	definition	
 WARN	missing_definition	canonical nucleoside residue	definition	
 WARN	missing_definition	canonical ribonucleoside residue	definition	
-WARN	missing_definition	canonical deoxyribonucleoside residue	definition	
 WARN	missing_definition	benzenoid aromatic compound	definition	
 WARN	missing_definition	transition element coordination entity	definition	
 WARN	missing_definition	iron coordination entity	definition	
@@ -1625,7 +1641,6 @@ WARN	missing_definition	antimonous acid	definition
 WARN	missing_definition	antimony coordination entity	definition	
 WARN	missing_definition	trifluoromethyl group	definition	
 WARN	missing_definition	canonical nucleotide residue	definition	
-WARN	missing_definition	canonical deoxyribonucleotide residue	definition	
 WARN	missing_definition	canonical ribonucleotide residue	definition	
 WARN	missing_definition	onium compound	definition	
 WARN	missing_definition	fluoronium	definition	
@@ -1647,7 +1662,6 @@ WARN	missing_definition	organic polycyclic compound	definition
 WARN	missing_definition	organic tricyclic compound	definition	
 WARN	missing_definition	biophysical role	definition	
 WARN	missing_definition	physiological role	definition	
-WARN	missing_definition	inorganic hydroxy compound	definition	
 WARN	missing_definition	quinolinium ion	definition	
 WARN	missing_definition	isoflurane	definition	
 WARN	missing_definition	neuronal receptor cell	definition	
@@ -1728,6 +1742,8 @@ WARN	missing_definition	urethra cell	definition
 WARN	missing_definition	kidney collecting duct principal cell	definition	
 WARN	missing_definition	lung endothelial cell	definition	
 WARN	missing_definition	pulmonary artery endothelial cell	definition	
+WARN	missing_definition	lacks_part	definition	
+WARN	missing_definition	lacks_plasma_membrane_part	definition	
 WARN	missing_definition	results in distribution of	definition	
 WARN	missing_definition	results in fission of	definition	
 WARN	missing_definition	editor note	definition	
@@ -2056,7 +2072,6 @@ WARN	missing_definition	obo:cl#abbreviation	definition
 WARN	missing_definition	lacks_part	definition	
 WARN	missing_definition	lacks_plasma_membrane_part	definition	
 WARN	missing_definition	obo:fbbt#FORMULA	definition	
-WARN	missing_definition	obo:fbbt#INN	definition	
 WARN	missing_definition	obo:fbbt#IUPAC_NAME	definition	
 WARN	missing_definition	obo:fbbt#InChI	definition	
 WARN	missing_definition	obo:fbbt#InChIKey	definition	
@@ -2097,6 +2112,18 @@ WARN	missing_definition	database_cross_reference	definition
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	in_subset	definition	
+WARN	multiple_equivalent_classes	hematopoietic stem cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	endocrine cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	erythrocyte	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	proerythroblast	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	megakaryocyte progenitor cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	reticulocyte	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	erythroblast	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	hematopoietic multipotent progenitor cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	hematopoietic oligopotent progenitor cell, lineage-negative	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	erythroid progenitor cell, mammalian	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	nongranular leukocyte	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	enzyme regulator activity	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
