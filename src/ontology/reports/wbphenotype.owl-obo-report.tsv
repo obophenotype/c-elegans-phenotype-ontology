@@ -1,4 +1,5 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete germ line stem cell (sensu Nematoda and Protostomia)
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete aging
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete animal organ senescence
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0016246
@@ -106,10 +107,6 @@ ERROR	duplicate_label	material anatomical entity	rdfs:label	material anatomical 
 ERROR	duplicate_label	material anatomical entity	rdfs:label	material anatomical entity
 ERROR	duplicate_label	male	rdfs:label	male
 ERROR	duplicate_label	male	rdfs:label	male
-ERROR	duplicate_label	lacks_plasma_membrane_part	rdfs:label	lacks_plasma_membrane_part
-ERROR	duplicate_label	lacks_plasma_membrane_part	rdfs:label	lacks_plasma_membrane_part
-ERROR	duplicate_label	lacks_part	rdfs:label	lacks_part
-ERROR	duplicate_label	lacks_part	rdfs:label	lacks_part
 ERROR	duplicate_label	intestine	rdfs:label	intestine
 ERROR	duplicate_label	intestine	rdfs:label	intestine
 ERROR	duplicate_label	immaterial anatomical entity	rdfs:label	immaterial anatomical entity
@@ -193,50 +190,26 @@ ERROR	multiple_definitions	peptide	definition	Amide derived from two or more ami
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.
 ERROR	multiple_definitions	phenols	definition	Compounds having one or more hydroxy groups attached to a benzene or other arene ring.
 ERROR	multiple_definitions	phenols	definition	Organic aromatic compounds having one or more hydroxy groups attached to a benzene or other arene ring.
-ERROR	multiple_definitions	megakaryocyte	definition	A giant cell 50 to 100 micron in diameter, with a greatly lobulated nucleus, found in the bone marrow; mature blood platelets are released from its cytoplasm.
-ERROR	multiple_definitions	megakaryocyte	definition	A large hematopoietic cell (50 to 100 micron) with a lobated nucleus. Once mature, this cell undergoes multiple rounds of endomitosis and cytoplasmic restructuring to allow platelet formation and release.
-ERROR	multiple_definitions	visceral muscle cell	definition	A muscle cell that is part of some visceral muscle
-ERROR	multiple_definitions	visceral muscle cell	definition	A muscle cell that is part of some visceral muscle.
 ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.
 ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.
 ERROR	multiple_definitions	biological_process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
 ERROR	multiple_definitions	biological_process	definition	A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
-ERROR	multiple_definitions	cell migration	definition	The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues.
-ERROR	multiple_definitions	cell migration	definition	The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues. Cell migration is a central process in the development and maintenance of multicellular organisms.
-ERROR	multiple_definitions	cell differentiation	definition	The cellular developmental process in which a relatively unspecialized cell, e.g. embryonic or regenerative cell, acquires specialized structural and/or functional features that characterize a specific cell. Differentiation includes the processes involved in commitment of a cell to a specific fate and its subsequent development to the mature state.
-ERROR	multiple_definitions	cell differentiation	definition	The process in which relatively unspecialized cells, e.g. embryonic or regenerative cells, acquire specialized structural and/or functional features that characterize the cells, tissues, or organs of the mature organism or some other relatively stable phase of the organism's life history. Differentiation includes the processes involved in commitment of a cell to a specific fate and its subsequent development to the mature state.
-ERROR	multiple_definitions	cell fate commitment	definition	The cellular developmental process by which a cell establishes the intrinsic character of a cell or tissue region irreversibly committing it to a particular fate.
-ERROR	multiple_definitions	cell fate commitment	definition	The commitment of cells to specific cell fates and their capacity to differentiate into particular kinds of cells. Positional information is established through protein signals that emanate from a localized source within a cell (the initial one-cell zygote) or within a developmental field.
-ERROR	multiple_definitions	cell development	definition	The cellular developmental process in which a specific cell progresses from an immature to a mature state. Cell development start once cell commitment has taken place.
-ERROR	multiple_definitions	cell development	definition	The process whose specific outcome is the progression of the cell over time, from its formation to the mature structure. Cell development does not include the steps involved in committing a cell to a specific fate.
-ERROR	multiple_definitions	cell maturation	definition	A developmental process, independent of morphogenetic (shape) change, that is required for a cell to attain its fully functional state.
-ERROR	multiple_definitions	cell maturation	definition	The cellular developmental process, independent of morphogenetic (shape) change, that is required for a specific cell to attain its fully functional state.
-ERROR	multiple_definitions	cell periphery	definition	The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.
-ERROR	multiple_definitions	cell periphery	definition	The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures.
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.@en
+ERROR	multiple_definitions	synapsed by	definition	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. @en
+ERROR	multiple_definitions	synapsed by	definition	Relation between an anatomical structure and a neuron that chemically synapses to it.
+ERROR	multiple_definitions	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+        @en"
+ERROR	multiple_definitions	synapsed to	definition	Relation between a neuron and an anatomical structure that it chemically synapses to.
 ERROR	multiple_definitions	innervates	definition	"Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input.
 T innervates some R
 Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
-ERROR	multiple_definitions	lens of camera-type eye	definition	A transparent and refractive lens located posterior to the iris. The lens of camera-type eye refracts light to be focused on the retina.
-ERROR	multiple_definitions	lens of camera-type eye	definition	Transparent part of camera-type eye that helps to refract light to be focused on the retina.
-ERROR	multiple_equivalent_class_definitions	hematopoietic stem cell	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	endocrine cell	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	erythrocyte	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	proerythroblast	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	megakaryocyte progenitor cell	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	reticulocyte	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	erythroblast	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	hematopoietic multipotent progenitor cell	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	hematopoietic oligopotent progenitor cell, lineage-negative	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	erythroid progenitor cell, mammalian	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	nongranular leukocyte	owl:equivalentClass	blank node
-ERROR	multiple_equivalent_class_definitions	enzyme regulator activity	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	import into cell	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -256,10 +229,6 @@ ERROR	multiple_labels	results in distribution of	rdfs:label	results in distribut
 ERROR	multiple_labels	results in distribution of	rdfs:label	results_in_distribution_of
 ERROR	multiple_labels	results in fission of	rdfs:label	results in fission of
 ERROR	multiple_labels	results in fission of	rdfs:label	results_in_fission_of
-ERROR	multiple_labels	ribonucleoprotein complex assembly	rdfs:label	protein-RNA complex assembly
-ERROR	multiple_labels	ribonucleoprotein complex assembly	rdfs:label	ribonucleoprotein complex assembly
-ERROR	multiple_labels	protein-RNA complex organization	rdfs:label	protein-RNA complex organization
-ERROR	multiple_labels	protein-RNA complex organization	rdfs:label	ribonucleoprotein complex subunit organization
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
@@ -299,6 +268,8 @@ ERROR	multiple_labels	immediately preceded by	rdfs:label	immediately preceded by
 ERROR	multiple_labels	immediately preceded by	rdfs:label	starts_at_end_of
 ERROR	multiple_labels	immediately precedes	rdfs:label	immediately precedes
 ERROR	multiple_labels	immediately precedes	rdfs:label	immediately precedes@en
+ERROR	multiple_labels	synapsed by	rdfs:label	synapsed by
+ERROR	multiple_labels	synapsed by	rdfs:label	synapsed by@en
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps@en
 ERROR	multiple_labels	innervates	rdfs:label	innervates
@@ -491,6 +462,9 @@ WARN	annotation_whitespace	physical object quality	has exact synonym	multiply in
 WARN	annotation_whitespace	contained in	editor note	"Intended meaning:
 domain: material entity
 range: spatial region or site (immaterial continuant)
+        @en"
+WARN	annotation_whitespace	synapsed by	definition	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. @en
+WARN	annotation_whitespace	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
         @en"
 WARN	annotation_whitespace	spatially disjoint from	editor note	There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. @en
 WARN	annotation_whitespace	capable of	definition	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
@@ -887,9 +861,6 @@ WARN	duplicate_label_synonym	striated muscle cell	has exact synonym	striated mus
 WARN	duplicate_label_synonym	non-striated muscle cell	has exact synonym	non-striated muscle cell
 WARN	duplicate_label_synonym	myocyte of sinoatrial node	has exact synonym	myocyte of sinoatrial node
 WARN	duplicate_label_synonym	nucleus	has exact synonym	nucleus
-WARN	duplicate_label_synonym	ribonucleoprotein complex assembly	has exact synonym	protein-RNA complex assembly
-WARN	duplicate_label_synonym	ribonucleoprotein complex assembly	has exact synonym	ribonucleoprotein complex assembly
-WARN	duplicate_label_synonym	protein-RNA complex organization	has exact synonym	ribonucleoprotein complex subunit organization
 WARN	duplicate_label_synonym	variant	has exact synonym	variant
 WARN	duplicate_label_synonym	protruding	has exact synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
@@ -1022,6 +993,8 @@ WARN	duplicate_scoped_synonym	D-alpha-amino acid	has exact synonym	D-alpha-amino
 WARN	duplicate_scoped_synonym	D-alpha-amino acid	has_related_synonym	D-alpha-amino acids
 WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has exact synonym	4-aminobutanoic acid
 WARN	duplicate_scoped_synonym	gamma-aminobutyric acid	has_related_synonym	4-aminobutanoic acid
+WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has exact synonym	deoxyribonucleic acids
+WARN	duplicate_scoped_synonym	deoxyribonucleic acid	has_related_synonym	deoxyribonucleic acids
 WARN	duplicate_scoped_synonym	ketone	has exact synonym	ketones
 WARN	duplicate_scoped_synonym	ketone	has_related_synonym	ketones
 WARN	duplicate_scoped_synonym	aldehyde	has exact synonym	aldehydes
@@ -1491,6 +1464,7 @@ WARN	missing_definition	iron group molecular entity	definition
 WARN	missing_definition	copper group molecular entity	definition	
 WARN	missing_definition	canonical nucleoside residue	definition	
 WARN	missing_definition	canonical ribonucleoside residue	definition	
+WARN	missing_definition	canonical deoxyribonucleoside residue	definition	
 WARN	missing_definition	benzenoid aromatic compound	definition	
 WARN	missing_definition	transition element coordination entity	definition	
 WARN	missing_definition	iron coordination entity	definition	
@@ -1641,6 +1615,7 @@ WARN	missing_definition	antimonous acid	definition
 WARN	missing_definition	antimony coordination entity	definition	
 WARN	missing_definition	trifluoromethyl group	definition	
 WARN	missing_definition	canonical nucleotide residue	definition	
+WARN	missing_definition	canonical deoxyribonucleotide residue	definition	
 WARN	missing_definition	canonical ribonucleotide residue	definition	
 WARN	missing_definition	onium compound	definition	
 WARN	missing_definition	fluoronium	definition	
@@ -1665,13 +1640,10 @@ WARN	missing_definition	physiological role	definition
 WARN	missing_definition	quinolinium ion	definition	
 WARN	missing_definition	isoflurane	definition	
 WARN	missing_definition	neuronal receptor cell	definition	
-WARN	missing_definition	germ line stem cell	definition	
-WARN	missing_definition	female germ line stem cell	definition	
 WARN	missing_definition	neural crest derived neuron	definition	
 WARN	missing_definition	branched duct epithelial cell	definition	
 WARN	missing_definition	non-branched duct epithelial cell	definition	
 WARN	missing_definition	squamous epithelial cell	definition	
-WARN	missing_definition	germ line stem cell (sensu Nematoda and Protostomia)	definition	
 WARN	missing_definition	neuron associated cell	definition	
 WARN	missing_definition	CNS neuron (sensu Vertebrata)	definition	
 WARN	missing_definition	visual pigment cell	definition	
@@ -1883,6 +1855,8 @@ WARN	missing_definition	immediately causally downstream of	definition
 WARN	missing_definition	phosphorylates	definition	
 WARN	missing_definition	helper property (not for use in curation)	definition	
 WARN	missing_definition	is kinase activity	definition	
+WARN	missing_definition	receives input from	definition	
+WARN	missing_definition	sends output to	definition	
 WARN	missing_definition	relation between physical entity and a process or stage	definition	
 WARN	missing_definition	depends on	definition	
 WARN	missing_definition	causal relation between entities	definition	
@@ -2069,8 +2043,6 @@ WARN	missing_definition	is substituent group from	definition
 WARN	missing_definition	is tautomer of	definition	
 WARN	missing_definition	obo:cl#PLURAL	definition	
 WARN	missing_definition	obo:cl#abbreviation	definition	
-WARN	missing_definition	lacks_part	definition	
-WARN	missing_definition	lacks_plasma_membrane_part	definition	
 WARN	missing_definition	obo:fbbt#FORMULA	definition	
 WARN	missing_definition	obo:fbbt#IUPAC_NAME	definition	
 WARN	missing_definition	obo:fbbt#InChI	definition	
@@ -2112,18 +2084,7 @@ WARN	missing_definition	database_cross_reference	definition
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	in_subset	definition	
-WARN	multiple_equivalent_classes	hematopoietic stem cell	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	endocrine cell	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	erythrocyte	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	proerythroblast	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	megakaryocyte progenitor cell	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	reticulocyte	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	erythroblast	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	hematopoietic multipotent progenitor cell	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	hematopoietic oligopotent progenitor cell, lineage-negative	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	erythroid progenitor cell, mammalian	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	nongranular leukocyte	owl:equivalentClass	blank node
-WARN	multiple_equivalent_classes	enzyme regulator activity	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	import into cell	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
@@ -2153,6 +2114,8 @@ INFO	lowercase_definition	located in	definition	a relation between two independe
 INFO	lowercase_definition	boundary_of	definition	a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity@en
 INFO	lowercase_definition	has_boundary	definition	a relation between a material entity and a 2D immaterial entity (the boundary), in which the boundary delimits the material entity@en
 INFO	lowercase_definition	has component process	definition	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
+INFO	lowercase_definition	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+        @en"
 INFO	lowercase_definition	overlaps	definition	x overlaps y if and only if there exists some z such that x has part z and z part of y
 INFO	lowercase_definition	shares ancestor with	definition	two individual entities d1 and d2 stand in a shares_ancestor_with relation if and only if there exists some a such that d1 derived_by_descent_from a and d2 derived_by_descent_from a.
 INFO	lowercase_definition	only in taxon	definition	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
@@ -2245,6 +2208,7 @@ INFO	lowercase_definition	causal relation between processes	definition	p is caus
 INFO	lowercase_definition	towards	definition	q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2
 INFO	lowercase_definition	has muscle antagonist	definition	m1 has_muscle_antagonist m2 iff m1 has_muscle_insertion s, m2 has_muscle_insection s, m1 acts in opposition to m2, and m2 is responsible for returning the structure to its initial position.
 INFO	lowercase_definition	has branching part	definition	inverse of branching part of
+INFO	lowercase_definition	conduit for	definition	x is a conduit for y iff y overlaps through the lumen_of of x, and y has parts on either side of the lumen of x.
 INFO	lowercase_definition	lumen of	definition	x lumen_of y iff x is the space or substance that is part of y and does not cross any of the inner membranes or boundaries of y that is maximal with respect to the volume of the convex hull.
 INFO	lowercase_definition	luminal space of	definition	s is luminal space of x iff s is lumen_of x and s is an immaterial entity
 INFO	lowercase_definition	skeleton of	definition	inverse of has skeleton
@@ -2389,7 +2353,6 @@ INFO	lowercase_definition	male genital	definition	antomical structure of the mal
 INFO	lowercase_definition	mechanosensory neuron	definition	neuron that senses and responds to mechanical stimuli, such as touch.
 INFO	lowercase_definition	uterine epithelial cell	definition	cell of the epithelia of uterus.
 INFO	lowercase_definition	anteriorly connected to	definition	x anteriorly_connected_to y iff the anterior part of x is connected to y. i.e. x connected_to y and x posterior_to y.
-INFO	lowercase_definition	conduit for	definition	x is a conduit for y iff y passes through the lumen of x.
 INFO	lowercase_definition	distally connected to	definition	x distally_connected_to y iff the distal part of x is connected to y. i.e. x connected_to y and x proximal_to y.
 INFO	lowercase_definition	indirectly_supplies	definition	a indirectly_supplies s iff a has a branch and the branch supplies or indirectly supplies s.
 INFO	lowercase_definition	posteriorly connected to	definition	x posteriorly_connected_to y iff the posterior part of x is connected to y. i.e. x connected_to y and x anterior_to y.
