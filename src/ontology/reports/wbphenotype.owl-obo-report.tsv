@@ -5,6 +5,7 @@ ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete animal o
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0016246
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete water homeostasis
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0034613
+ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete necrotic cell death
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete response to benomyl
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete response to tunicamycin
 ERROR	duplicate_definition	B cell	definition	Rectal cell, postembryonic blast cell in male
@@ -184,16 +185,24 @@ ERROR	missing_label	obo:uberon/core#PLURAL	rdfs:label
 ERROR	missing_label	obo:uberon/core#SENSU	rdfs:label	
 ERROR	multiple_definitions	independent continuant	definition	A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.@en
 ERROR	multiple_definitions	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+ERROR	multiple_definitions	process	definition	An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.@en
+ERROR	multiple_definitions	process	definition	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
 ERROR	multiple_definitions	specifically dependent continuant	definition	A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.@en
 ERROR	multiple_definitions	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid.
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.
 ERROR	multiple_definitions	phenols	definition	Compounds having one or more hydroxy groups attached to a benzene or other arene ring.
 ERROR	multiple_definitions	phenols	definition	Organic aromatic compounds having one or more hydroxy groups attached to a benzene or other arene ring.
+ERROR	multiple_definitions	club cell	definition	A non-mucous, epithelial secretory cell that is part of the tracheobronchial tree. A club cell has short microvilli but no cilia. A club cell is able to multiply and differentiate into ciliated cells to regenerate the bronchiolar epithelium and it also protects the tracheobronchial epithelium.
+ERROR	multiple_definitions	club cell	definition	Epithelial progenitor cell of the lung. Club cells are dome-shaped with short microvilli but no cilia. They function to protect the bronchiolar epithelium. Club cells also multiply and differentiate into ciliated cells to regenerate the bronchiolar epithelium.
+ERROR	multiple_definitions	choroidal cell of the eye	definition	A cell of the choroid of the eye.
+ERROR	multiple_definitions	choroidal cell of the eye	definition	A structural cell that is part of optic choroid.
 ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.
 ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.
 ERROR	multiple_definitions	biological_process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
 ERROR	multiple_definitions	biological_process	definition	A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
+ERROR	multiple_definitions	secretory granule maturation	definition	Steps required to transform an immature secretory vesicle into a mature secretory vesicle. Typically proceeds through homotypic membrane fusion and membrane remodeling.
+ERROR	multiple_definitions	secretory granule maturation	definition	Steps required to transform an immature secretory vesicle into a mature secretory vesicle. Typically proceeds through homotypic membrane fusion and membrane remodelling.
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.
@@ -209,7 +218,6 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
-ERROR	multiple_equivalent_class_definitions	import into cell	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -1666,7 +1674,6 @@ WARN	missing_definition	extraembryonic cell	definition
 WARN	missing_definition	blastemal cell	definition	
 WARN	missing_definition	tracheoblast	definition	
 WARN	missing_definition	ganglion interneuron	definition	
-WARN	missing_definition	CNS interneuron	definition	
 WARN	missing_definition	male gamete	definition	
 WARN	missing_definition	endopolyploid cell	definition	
 WARN	missing_definition	carbohydrate secreting cell	definition	
@@ -2084,8 +2091,8 @@ WARN	missing_definition	database_cross_reference	definition
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	in_subset	definition	
-WARN	multiple_equivalent_classes	import into cell	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+INFO	lowercase_definition	process	definition	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
 INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
@@ -2366,7 +2373,6 @@ INFO	missing_superclass	subatomic particle	rdfs:subClassOf
 INFO	missing_superclass	regulation of body fluid levels	rdfs:subClassOf	
 INFO	missing_superclass	cellular response to toxic substance	rdfs:subClassOf	
 INFO	missing_superclass	processual entity	rdfs:subClassOf	
-INFO	missing_superclass	anatomical entity	rdfs:subClassOf	
 INFO	missing_superclass	nematode phenotype	rdfs:subClassOf	
 INFO	missing_superclass	C. elegans anatomical entity	rdfs:subClassOf	
 INFO	missing_superclass	worm life stage	rdfs:subClassOf	
