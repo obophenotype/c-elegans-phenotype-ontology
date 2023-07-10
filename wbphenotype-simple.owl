@@ -13,14 +13,14 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:wbphenotype="http://purl.obolibrary.org/obo/wbphenotype#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2023-05-18/wbphenotype-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2023-07-10/wbphenotype-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000886"/>
         <dc:description>Ontology about C. elegans and other nematode phenotypes</dc:description>
         <dc:title>C elegans Phenotype Ontology</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <oboInOwl:default-namespace>C_elegans_phenotype_ontology</oboInOwl:default-namespace>
         <oboInOwl:saved-by>chris-grove</oboInOwl:saved-by>
-        <owl:versionInfo>2023-05-18</owl:versionInfo>
+        <owl:versionInfo>2023-07-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -508,6 +508,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</rdfs:seeAlso>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
     
@@ -575,6 +576,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">occurs in</rdfs:label>
         <rdfs:label>occurs in</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Occurs_in</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -28812,7 +28814,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0001397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000415"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002619"/>
         <obo:IAO_0000115>Animals exhibit an increase in the cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents, compared to control.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBPhenotype:0001397</oboInOwl:id>
@@ -52905,7 +52906,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0002606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000415"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002620"/>
         <obo:IAO_0000115>Animals exhibit reduced necrotic cell death, compared to controls.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>WBPhenotype:0002606</oboInOwl:id>

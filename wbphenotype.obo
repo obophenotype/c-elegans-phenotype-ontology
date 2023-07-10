@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2023-05-18
+data-version: releases/2023-07-10
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: dc-description "Ontology about C. elegans and other nematode phe
 property_value: dc-title "C elegans Phenotype Ontology" xsd:string
 property_value: dcterms-license http://creativecommons.org/licenses/by/4.0/
 property_value: has_ontology_root_term WBPhenotype:0000886
-property_value: owl:versionInfo "2023-05-18" xsd:string
+property_value: owl:versionInfo "2023-07-10" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -10329,7 +10329,6 @@ id: WBPhenotype:0001397
 name: necrotic cell death increased
 def: "Animals exhibit an increase in the cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents, compared to control." [GO:0070265, WB:WBPerson712]
 is_a: WBPhenotype:0000415 ! necrotic cell death variant
-is_a: WBPhenotype:0002619 ! cell death increased
 
 [Term]
 id: WBPhenotype:0001398
@@ -18440,7 +18439,6 @@ id: WBPhenotype:0002606
 name: necrotic cell death decreased
 def: "Animals exhibit reduced necrotic cell death, compared to controls." [WB:WBPaper00028466, WB:WBPaper00059770, WB:WBPerson2987]
 is_a: WBPhenotype:0000415 ! necrotic cell death variant
-is_a: WBPhenotype:0002620 ! cell death decreased
 
 [Term]
 id: WBPhenotype:0002607
@@ -19214,6 +19212,7 @@ property_value: IAO:0000118 "occurs_in" xsd:string
 property_value: IAO:0000118 "unfolds in" xsd:string
 property_value: IAO:0000118 "unfolds_in" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+property_value: seeAlso "https://wiki.geneontology.org/Occurs_in" xsd:anyURI
 holds_over_chain: part_of occurs_in
 transitive_over: part_of ! part_of
 
@@ -19251,6 +19250,7 @@ property_value: RO:0040042 BFO:0000031
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
 is_transitive: true
 inverse_of: has_part ! has part
 
