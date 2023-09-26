@@ -1,4 +1,30 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	multi fate stem cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	duct epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	columnar/cuboidal epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	epithelial cell of pancreas
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	sensory epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	glandular epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	hepatocyte
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	muscle cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	cell of skeletal muscle
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	extraembryonic cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	animal cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	muscle precursor cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	somatic stem cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	hematopoietic cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	endo-epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	ecto-epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	meso-epithelial cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	vertebrate lens cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	neural cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	connective tissue cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	cardiocyte
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	embryonic blood vessel endothelial progenitor cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	mesenchymal cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	mural cell
+ERROR	deprecated_class_reference	somatic cell	rdfs:subClassOf	epithelial cell of gallbladder
+ERROR	deprecated_class_reference	somatic cell	owl:disjointWith	germ line cell
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete germ line stem cell (sensu Nematoda and Protostomia)
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete aging
 ERROR	deprecated_class_reference	blank node	owl:someValuesFrom	obsolete animal organ senescence
@@ -33,8 +59,6 @@ ERROR	duplicate_definition	anatomical boundary	definition	A non-material anatomi
 ERROR	duplicate_definition	non-material anatomical boundary	definition	A non-material anatomical entity of two dimensions. Anatomical boundaries are contiguous structures.
 ERROR	duplicate_definition	extraembryonic structure	definition	A multicellular anatomical structure that is associated with an embryo and derived from the zygote from which it develops, but which does not contribute to the embryo proper or to structures that are part of the same organism after embryogenesis.
 ERROR	duplicate_definition	extraembryonic structure	definition	A multicellular anatomical structure that is associated with an embryo and derived from the zygote from which it develops, but which does not contribute to the embryo proper or to structures that are part of the same organism after embryogenesis.
-ERROR	duplicate_definition	neuron projection bundle	definition	A fasciculated bundle of neuron projections (GO:0043005), largely or completely lacking synapses.
-ERROR	duplicate_definition	neuron projection bundle	definition	A fasciculated bundle of neuron projections (GO:0043005), largely or completely lacking synapses.
 ERROR	duplicate_definition	muscle of iris	definition	.
 ERROR	duplicate_definition	gastric juice	definition	.
 ERROR	duplicate_definition	salivatory nucleus	definition	.
@@ -90,8 +114,6 @@ ERROR	duplicate_label	organ	rdfs:label	organ
 ERROR	duplicate_label	organ	rdfs:label	organ
 ERROR	duplicate_label	oocyte	rdfs:label	oocyte
 ERROR	duplicate_label	oocyte	rdfs:label	oocyte
-ERROR	duplicate_label	neuron projection bundle	rdfs:label	neuron projection bundle
-ERROR	duplicate_label	neuron projection bundle	rdfs:label	neuron projection bundle
 ERROR	duplicate_label	neuron	rdfs:label	neuron
 ERROR	duplicate_label	neuron	rdfs:label	neuron
 ERROR	duplicate_label	nervous system	rdfs:label	nervous system
@@ -152,6 +174,7 @@ ERROR	duplicate_label	anatomical entity	rdfs:label	anatomical entity
 ERROR	duplicate_label	anatomical entity	rdfs:label	anatomical entity
 ERROR	duplicate_label	acellular anatomical structure	rdfs:label	acellular anatomical structure
 ERROR	duplicate_label	acellular anatomical structure	rdfs:label	acellular anatomical structure
+ERROR	missing_label	OMO:0003004	rdfs:label	
 ERROR	missing_label	obo:caloha-reqs-vetted#PLURAL	rdfs:label	
 ERROR	missing_label	obo:chebi#BRAND_NAME	rdfs:label	
 ERROR	missing_label	obo:chebi#INN	rdfs:label	
@@ -193,18 +216,21 @@ ERROR	multiple_definitions	peptide	definition	Amide derived from two or more ami
 ERROR	multiple_definitions	peptide	definition	Amide derived from two or more amino carboxylic acid molecules (the same or different) by formation of a covalent bond from the carbonyl carbon of one to the nitrogen atom of another with formal loss of water. The term is usually applied to structures formed from alpha-amino acids, but it includes those derived from any amino carboxylic acid. X = OH, OR, NH2, NHR, etc.
 ERROR	multiple_definitions	phenols	definition	Compounds having one or more hydroxy groups attached to a benzene or other arene ring.
 ERROR	multiple_definitions	phenols	definition	Organic aromatic compounds having one or more hydroxy groups attached to a benzene or other arene ring.
-ERROR	multiple_definitions	club cell	definition	A non-mucous, epithelial secretory cell that is part of the tracheobronchial tree. A club cell has short microvilli but no cilia. A club cell is able to multiply and differentiate into ciliated cells to regenerate the bronchiolar epithelium and it also protects the tracheobronchial epithelium.
-ERROR	multiple_definitions	club cell	definition	Epithelial progenitor cell of the lung. Club cells are dome-shaped with short microvilli but no cilia. They function to protect the bronchiolar epithelium. Club cells also multiply and differentiate into ciliated cells to regenerate the bronchiolar epithelium.
 ERROR	multiple_definitions	choroidal cell of the eye	definition	A cell of the choroid of the eye.
 ERROR	multiple_definitions	choroidal cell of the eye	definition	A structural cell that is part of optic choroid.
-ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.
-ERROR	multiple_definitions	molecular_function	definition	A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.
-ERROR	multiple_definitions	biological_process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
-ERROR	multiple_definitions	biological_process	definition	A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
+ERROR	multiple_definitions	polyploid cell	definition	A cell that contains more than two haploid sets of chromosomes.
+ERROR	multiple_definitions	polyploid cell	definition	A cell whose nucleus, or nuclei, each contain more than two haploid genomes.
+ERROR	multiple_definitions	gene expression	definition	The process in which a gene's sequence is converted into a mature gene product (protein or RNA). This includes the production of an RNA transcript and its processing, as well as translation and maturation for protein-coding genes.
+ERROR	multiple_definitions	gene expression	definition	The process in which a gene's sequence is converted into a mature gene product (protein or RNA). This includes the production of an RNA transcript and its processing, translation and maturation for protein-coding genes.
 ERROR	multiple_definitions	secretory granule maturation	definition	Steps required to transform an immature secretory vesicle into a mature secretory vesicle. Typically proceeds through homotypic membrane fusion and membrane remodeling.
 ERROR	multiple_definitions	secretory granule maturation	definition	Steps required to transform an immature secretory vesicle into a mature secretory vesicle. Typically proceeds through homotypic membrane fusion and membrane remodelling.
+ERROR	multiple_definitions	glial cell-neuron signaling	definition	Cell-cell signaling that mediates the transfer of information from a glial cell to a neuron. This signaling has been shown to be mediated by various molecules, depending on which glial cells release them, and in which tissues the signaling occurs, e.g. microglial cell-derived nerve growth factor (NGF) in the retina, or microglial cell-derived superoxide ions in the cerebellum.
+ERROR	multiple_definitions	glial cell-neuron signaling	definition	Cell-cell signaling that mediates the transfer of information from a glial cell to a neuron. This signaling has been shown to be mediated by various molecules, depending on which glial cells release them, and in which tissues the signalling occurs, e.g. microglial cell-derived nerve growth factor (NGF) in the retina, or microglial cell-derived superoxide ions in the cerebellum.
+ERROR	multiple_definitions	neuron-glial cell signaling	definition	Cell-cell signaling that mediates the transfer of information from a neuron to a glial cell. This signaling has been shown to be mediated by various molecules released by different types of neurons, e.g. glutamate, gamma-amino butyric acid (GABA), noradrenaline, acetylcholine, dopamine and adenosine.
+ERROR	multiple_definitions	neuron-glial cell signaling	definition	Cell-cell signaling that mediates the transfer of information from a neuron to a glial cell. This signalling has been shown to be mediated by various molecules released by different types of neurons, e.g. glutamate, gamma-amino butyric acid (GABA), noradrenaline, acetylcholine, dopamine and adenosine.
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
 ERROR	multiple_definitions	quality	definition	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
+ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and a material anatomical entity that its soma is part of.@en
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.
 ERROR	multiple_definitions	has soma location	definition	Relation between a neuron and an anatomical structure that its soma is part of.@en
 ERROR	multiple_definitions	synapsed by	definition	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. @en
@@ -218,6 +244,38 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
 ERROR	multiple_definitions	innervates	definition	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_definitions	existence ends during	definition	Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely.
 ERROR	multiple_definitions	existence ends during	definition	x existence ends during y if and only if the time point at which x ends is before or equivalent to the time point at which y ends and after or equivalent to the point at which y starts. Formally: x existence ends during y iff ω(x) <= ω(y) and ω(x) >= α(y).
+ERROR	multiple_equivalent_class_definitions	stem cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	single fate stem cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	multi fate stem cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	ciliated cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	circulating cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	secretory cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	endocrine cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	cell of skeletal muscle	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	motile cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	anucleate cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	single nucleate cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	binucleate cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	multinucleate cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	eukaryotic cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	Eumycetozoan cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	oxygen accumulating cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	extraembryonic cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	haploid cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	fungal cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	bone cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	nucleate cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	neural cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	connective tissue cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	cardiocyte	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	His-Purkinje system cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	precursor cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	inner cell mass cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	cardiac septum cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	brain vascular cell	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	positive regulation of cell morphogenesis involved in differentiation	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	negative regulation of cell morphogenesis	owl:equivalentClass	blank node
+ERROR	multiple_equivalent_class_definitions	RNA biosynthetic process	owl:equivalentClass	blank node
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -237,8 +295,16 @@ ERROR	multiple_labels	results in distribution of	rdfs:label	results in distribut
 ERROR	multiple_labels	results in distribution of	rdfs:label	results_in_distribution_of
 ERROR	multiple_labels	results in fission of	rdfs:label	results in fission of
 ERROR	multiple_labels	results in fission of	rdfs:label	results_in_fission_of
+ERROR	multiple_labels	positive regulation of cell morphogenesis involved in differentiation	rdfs:label	positive regulation of cell morphogenesis
+ERROR	multiple_labels	positive regulation of cell morphogenesis involved in differentiation	rdfs:label	positive regulation of cell morphogenesis involved in differentiation
+ERROR	multiple_labels	negative regulation of cell morphogenesis	rdfs:label	negative regulation of cell morphogenesis
+ERROR	multiple_labels	negative regulation of cell morphogenesis	rdfs:label	negative regulation of cell morphogenesis involved in differentiation
+ERROR	multiple_labels	trans-synaptic signalling via exosome	rdfs:label	trans-synaptic signaling via exosome
+ERROR	multiple_labels	trans-synaptic signalling via exosome	rdfs:label	trans-synaptic signalling via exosome
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
+ERROR	multiple_labels	editor note	rdfs:label	editor note
+ERROR	multiple_labels	editor note	rdfs:label	editor note@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	preferred_root
@@ -802,7 +868,6 @@ WARN	duplicate_label_synonym	acid	has exact synonym	acid
 WARN	duplicate_label_synonym	phorbol ester	has exact synonym	phorbol ester
 WARN	duplicate_label_synonym	halogen oxide	has exact synonym	halogen oxide
 WARN	duplicate_label_synonym	sulfuric acid derivative	has exact synonym	sulfuric acid derivative
-WARN	duplicate_label_synonym	octanol	has exact synonym	octanol
 WARN	duplicate_label_synonym	organic sodium salt	has exact synonym	organic sodium salt
 WARN	duplicate_label_synonym	carboxylic acid dianion	has exact synonym	carboxylic acid dianion
 WARN	duplicate_label_synonym	fluorocarbon	has exact synonym	fluorocarbon
@@ -869,6 +934,7 @@ WARN	duplicate_label_synonym	striated muscle cell	has exact synonym	striated mus
 WARN	duplicate_label_synonym	non-striated muscle cell	has exact synonym	non-striated muscle cell
 WARN	duplicate_label_synonym	myocyte of sinoatrial node	has exact synonym	myocyte of sinoatrial node
 WARN	duplicate_label_synonym	nucleus	has exact synonym	nucleus
+WARN	duplicate_label_synonym	trans-synaptic signalling via exosome	has exact synonym	trans-synaptic signalling via exosome
 WARN	duplicate_label_synonym	variant	has exact synonym	variant
 WARN	duplicate_label_synonym	protruding	has exact synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
@@ -1127,6 +1193,20 @@ WARN	duplicate_scoped_synonym	halothane	has exact synonym	2-bromo-2-chloro-1,1,1
 WARN	duplicate_scoped_synonym	halothane	has_related_synonym	2-bromo-2-chloro-1,1,1-trifluoroethane
 WARN	duplicate_scoped_synonym	methyl isocyanate	has exact synonym	isocyanatomethane
 WARN	duplicate_scoped_synonym	methyl isocyanate	has_related_synonym	isocyanatomethane
+WARN	duplicate_scoped_synonym	hematopoietic stem cell	has exact synonym	HSC
+WARN	duplicate_scoped_synonym	hematopoietic stem cell	has_related_synonym	HSC
+WARN	duplicate_scoped_synonym	common myeloid progenitor	has exact synonym	CMP
+WARN	duplicate_scoped_synonym	common myeloid progenitor	has_related_synonym	CMP
+WARN	duplicate_scoped_synonym	mesenchymal stem cell	has narrow synonym	BMSC
+WARN	duplicate_scoped_synonym	mesenchymal stem cell	has_related_synonym	BMSC
+WARN	duplicate_scoped_synonym	enucleate erythrocyte	has_broad_synonym	RBC
+WARN	duplicate_scoped_synonym	enucleate erythrocyte	has_related_synonym	RBC
+WARN	duplicate_scoped_synonym	retinal ganglion cell	has exact synonym	RGC
+WARN	duplicate_scoped_synonym	retinal ganglion cell	has_related_synonym	RGC
+WARN	duplicate_scoped_synonym	hepatic stem cell	has exact synonym	HpSC
+WARN	duplicate_scoped_synonym	hepatic stem cell	has_related_synonym	HpSC
+WARN	duplicate_scoped_synonym	cardioblast	has exact synonym	CPC
+WARN	duplicate_scoped_synonym	cardioblast	has_related_synonym	CPC
 WARN	duplicate_scoped_synonym	Eukaryota	has exact synonym	eukaryotes
 WARN	duplicate_scoped_synonym	Eukaryota	has_related_synonym	eukaryotes
 WARN	duplicate_scoped_synonym	Embryophyta	has exact synonym	land plants
@@ -1697,7 +1777,6 @@ WARN	missing_definition	cardiac myoblast	definition
 WARN	missing_definition	pronephric nephron tubule epithelial cell	definition	
 WARN	missing_definition	metanephric nephron tubule epithelial cell	definition	
 WARN	missing_definition	stomach neuroendocrine cell	definition	
-WARN	missing_definition	lung neuroendocrine cell	definition	
 WARN	missing_definition	lung ciliated cell	definition	
 WARN	missing_definition	lung secretory cell	definition	
 WARN	missing_definition	trophectodermal cell	definition	
@@ -1725,7 +1804,6 @@ WARN	missing_definition	lacks_part	definition
 WARN	missing_definition	lacks_plasma_membrane_part	definition	
 WARN	missing_definition	results in distribution of	definition	
 WARN	missing_definition	results in fission of	definition	
-WARN	missing_definition	editor note	definition	
 WARN	missing_definition	root	definition	
 WARN	missing_definition	Muridae	definition	
 WARN	missing_definition	Mus <genus>	definition	
@@ -1834,6 +1912,7 @@ WARN	missing_definition	Panarthropoda	definition
 WARN	missing_definition	Craniata <chordates>	definition	
 WARN	missing_definition	Eutheria	definition	
 WARN	missing_definition	Rodentia	definition	
+WARN	missing_definition	OMO:0003004	definition	
 WARN	missing_definition	qualitative	definition	
 WARN	missing_definition	semi-fertile	definition	
 WARN	missing_definition	magnitude	definition	
@@ -1845,7 +1924,6 @@ WARN	missing_definition	innervated_by	definition
 WARN	missing_definition	has component activity	definition	
 WARN	missing_definition	directly regulated by	definition	
 WARN	missing_definition	before or simultaneous with	definition	
-WARN	missing_definition	simultaneous with	definition	
 WARN	missing_definition	ends after	definition	
 WARN	missing_definition	immediately preceded by	definition	
 WARN	missing_definition	immediately precedes	definition	
@@ -1877,6 +1955,7 @@ WARN	missing_definition	acts upstream of or within, negative effect	definition
 WARN	missing_definition	causally upstream of or within, negative effect	definition	
 WARN	missing_definition	causally upstream of or within, positive effect	definition	
 WARN	missing_definition	results in fusion of	definition	
+WARN	missing_definition	chemosensory organ	definition	
 WARN	missing_definition	sexually immature stage	definition	
 WARN	missing_definition	anterior region of body	definition	
 WARN	missing_definition	posterior region of body	definition	
@@ -1899,6 +1978,7 @@ WARN	missing_definition	extrahepatic part of hepatic duct	definition
 WARN	missing_definition	left dorsal aorta	definition	
 WARN	missing_definition	right dorsal aorta	definition	
 WARN	missing_definition	connecting stalk mesoderm	definition	
+WARN	missing_definition	chemosensory system	definition	
 WARN	missing_definition	embryonic uterus	definition	
 WARN	missing_definition	spinal cord segment	definition	
 WARN	missing_definition	pre-muscle condensation	definition	
@@ -2091,6 +2171,39 @@ WARN	missing_definition	database_cross_reference	definition
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
 WARN	missing_definition	in_subset	definition	
+WARN	missing_obsolete_label	somatic cell	rdfs:label	somatic cell
+WARN	multiple_equivalent_classes	stem cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	single fate stem cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	multi fate stem cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	ciliated cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	circulating cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	secretory cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	endocrine cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	cell of skeletal muscle	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	motile cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	anucleate cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	single nucleate cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	binucleate cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	multinucleate cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	eukaryotic cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	Eumycetozoan cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	oxygen accumulating cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	extraembryonic cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	haploid cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	fungal cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	bone cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	nucleate cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	neural cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	connective tissue cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	cardiocyte	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	His-Purkinje system cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	precursor cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	inner cell mass cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	cardiac septum cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	brain vascular cell	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	positive regulation of cell morphogenesis involved in differentiation	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	negative regulation of cell morphogenesis	owl:equivalentClass	blank node
+WARN	multiple_equivalent_classes	RNA biosynthetic process	owl:equivalentClass	blank node
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	process	definition	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
@@ -2121,6 +2234,7 @@ INFO	lowercase_definition	located in	definition	a relation between two independe
 INFO	lowercase_definition	boundary_of	definition	a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity@en
 INFO	lowercase_definition	has_boundary	definition	a relation between a material entity and a 2D immaterial entity (the boundary), in which the boundary delimits the material entity@en
 INFO	lowercase_definition	has component process	definition	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
+INFO	lowercase_definition	simultaneous with	definition	x simultaneous with y iff ω(x) = ω(y) and ω(α ) = ω(α), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point and '=' indicates the same instance in time.
 INFO	lowercase_definition	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
         @en"
 INFO	lowercase_definition	overlaps	definition	x overlaps y if and only if there exists some z such that x has part z and z part of y
