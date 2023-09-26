@@ -13,14 +13,14 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:wbphenotype="http://purl.obolibrary.org/obo/wbphenotype#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2023-07-10/wbphenotype-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2023-09-26/wbphenotype-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000886"/>
         <dc:description>Ontology about C. elegans and other nematode phenotypes</dc:description>
         <dc:title>C elegans Phenotype Ontology</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <oboInOwl:default-namespace>C_elegans_phenotype_ontology</oboInOwl:default-namespace>
         <oboInOwl:saved-by>chris-grove</oboInOwl:saved-by>
-        <owl:versionInfo>2023-07-10</owl:versionInfo>
+        <owl:versionInfo>2023-09-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -144,8 +144,10 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115 xml:lang="en">Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Nicolas Matentzoglu</obo:IAO_0000117>
         <oboInOwl:hasDbXref>IAO:0000700</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_ontology_root_term</oboInOwl:id>
+        <oboInOwl:is_class_level rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_class_level>
         <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
         <oboInOwl:shorthand>has_ontology_root_term</oboInOwl:shorthand>
         <rdfs:label xml:lang="en">has ontology root term</rdfs:label>
@@ -411,6 +413,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
         <rdfs:label>in_subset</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_class_level -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_class_level"/>
     
 
 
@@ -3208,7 +3216,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0000121">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000112"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0001644"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0001696"/>
         <obo:IAO_0000115>Variations in the chemical reactions and pathways resulting in the formation of a protein, compared to control.</obo:IAO_0000115>
         <oboInOwl:hasNarrowSynonym>translation abnormal</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
@@ -15154,7 +15161,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/WBPhenotype_0000717 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0000717">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0001696"/>
         <obo:IAO_0000115>Variations in the processes that convert a gene&apos;s sequence into a mature gene product or products (proteins or RNA), compared to control.</obo:IAO_0000115>
         <oboInOwl:hasNarrowSynonym>gene expression abnormal</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
@@ -19705,6 +19712,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/WBPhenotype_0000944 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0000944">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000171"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000816"/>
         <obo:IAO_0000115>Variations in the progression of a neuronal extension (such as axons or dendrites) over time, from its formation to the mature structure compared to control.</obo:IAO_0000115>
         <oboInOwl:hasNarrowSynonym>neurite development abnormal</oboInOwl:hasNarrowSynonym>
