@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2024-01-16
+data-version: releases/2024-04-09
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -13,7 +13,7 @@ property_value: has_ontology_root_term WBPhenotype:0000886
 property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2024-01-16" xsd:string
+property_value: owl:versionInfo "2024-04-09" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -18822,6 +18822,26 @@ def: "Cells of the animal exhibit variations in the intracellular lipid surveill
 is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 
 [Term]
+id: WBPhenotype:0002664
+name: RNA subcellular localization variant
+def: "Any variation in the placement of RNA within in a cell or cellular compartment compared to control." [WB:WBPerson2987]
+synonym: "RNA localization abnormal" EXACT []
+synonym: "RNA subcellular localization abnormal" EXACT []
+is_a: WBPhenotype:0000113 ! RNA expression variant
+
+[Term]
+id: WBPhenotype:0002665
+name: RNA condensate variant
+def: "Any variation in the properties of an RNA condensate within a cell or cellular compartment compared to control." [WB:WBPaper00065975, WB:WBPerson10419, WB:WBPerson2987]
+is_a: WBPhenotype:0002664 ! RNA subcellular localization variant
+
+[Term]
+id: WBPhenotype:0002666
+name: abnormal dissolution of RNA condensate
+def: "An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control." [WB:WBPaper00065975, WB:WBPerson10419, WB:WBPerson2987]
+is_a: WBPhenotype:0002665 ! RNA condensate variant
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -19150,7 +19170,6 @@ property_value: IAO:0000232 "This relation is intended to be used in combination
 [Typedef]
 id: has_ontology_root_term
 name: has ontology root term
-name: preferred_root
 namespace: external
 def: "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root." []
 xref: IAO:0000700

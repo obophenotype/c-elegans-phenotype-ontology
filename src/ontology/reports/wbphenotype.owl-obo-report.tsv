@@ -36,6 +36,14 @@ ERROR	missing_label	obo:chebi#BRAND_NAME	rdfs:label
 ERROR	missing_label	obo:chebi#INN	rdfs:label	
 ERROR	missing_label	obo:chebi#IUPAC_NAME	rdfs:label	
 ERROR	missing_label	obo:go#systematic_synonym	rdfs:label	
+ERROR	multiple_definitions	cell	definition	A material entity of anatomical origin (part of or deriving from an organism) that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.
+ERROR	multiple_definitions	cell	definition	A material entity that has a plasma membrane and results from cellular division.
+ERROR	multiple_definitions	biological process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
+ERROR	multiple_definitions	biological process	definition	A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.
+ERROR	multiple_labels	realizable entity	rdfs:label	realizable@en
+ERROR	multiple_labels	realizable entity	rdfs:label	realizable entity@en
+ERROR	multiple_labels	characteristic	rdfs:label	characteristic@en
+ERROR	multiple_labels	characteristic	rdfs:label	specifically dependent continuant@en
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -46,13 +54,24 @@ ERROR	multiple_labels	preceded_by	rdfs:label	preceded by@en
 ERROR	multiple_labels	preceded_by	rdfs:label	preceded_by
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in@en
+ERROR	multiple_labels	cell	rdfs:label	cell
+ERROR	multiple_labels	cell	rdfs:label	cell@en
+ERROR	multiple_labels	molecular_function	rdfs:label	gene product or complex activity@en
+ERROR	multiple_labels	molecular_function	rdfs:label	molecular_function
+ERROR	multiple_labels	cell nucleus	rdfs:label	cell nucleus@en
+ERROR	multiple_labels	cell nucleus	rdfs:label	nucleus
+ERROR	multiple_labels	biological process	rdfs:label	biological process@en
+ERROR	multiple_labels	biological process	rdfs:label	biological_process
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term@en
-ERROR	multiple_labels	has ontology root term	rdfs:label	preferred_root
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by
 ERROR	multiple_labels	term replaced by	rdfs:label	term replaced by@en
+ERROR	multiple_labels	has characteristic	rdfs:label	has characteristic
+ERROR	multiple_labels	has characteristic	rdfs:label	has characteristic@en
+ERROR	multiple_labels	has participant	rdfs:label	has participant
+ERROR	multiple_labels	has participant	rdfs:label	has participant@en
 ERROR	multiple_labels	has role	rdfs:label	has role
 ERROR	multiple_labels	has role	rdfs:label	has role@en
 ERROR	multiple_labels	immediately preceded by	rdfs:label	immediately preceded by@en
@@ -65,6 +84,8 @@ ERROR	multiple_labels	negatively regulates	rdfs:label	negatively regulates
 ERROR	multiple_labels	negatively regulates	rdfs:label	negatively regulates@en
 ERROR	multiple_labels	positively regulates	rdfs:label	positively regulates
 ERROR	multiple_labels	positively regulates	rdfs:label	positively regulates@en
+ERROR	multiple_labels	enabled by	rdfs:label	enabled by
+ERROR	multiple_labels	enabled by	rdfs:label	enabled by@en
 ERROR	multiple_labels	has_broad_synonym	rdfs:label	has broad synonym@en
 ERROR	multiple_labels	has_broad_synonym	rdfs:label	has_broad_synonym
 ERROR	multiple_labels	has exact synonym	rdfs:label	has exact synonym@en
@@ -88,7 +109,7 @@ WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x t) (if (Real
 WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
-WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
+WARN	annotation_whitespace	characteristic	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
 WARN	annotation_whitespace	role	IAO:0000602	(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] 
 WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
 WARN	annotation_whitespace	function	IAO:0000602	(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] 
@@ -468,7 +489,7 @@ WARN	duplicate_label_synonym	tunicamycin A1	has exact synonym	tunicamycin A1
 WARN	duplicate_label_synonym	flour treatment agent	has exact synonym	flour treatment agent
 WARN	duplicate_label_synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole	has exact synonym	6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
 WARN	duplicate_label_synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine	has exact synonym	N-methyl-3-phenyl-3-[4-(trifluoromethyl)phenoxy]propan-1-amine
-WARN	duplicate_label_synonym	nucleus	has exact synonym	nucleus
+WARN	duplicate_label_synonym	cell nucleus	has exact synonym	nucleus
 WARN	duplicate_label_synonym	variant	has exact synonym	variant
 WARN	duplicate_label_synonym	protruding	has exact synonym	protruding
 WARN	duplicate_label_synonym	immediately preceded by	IAO:0000118	starts_at_end_of
@@ -802,7 +823,6 @@ WARN	missing_definition	elemental calcium	definition
 WARN	missing_definition	L-cysteine zwitterion	definition	
 WARN	missing_definition	D-cysteine zwitterion	definition	
 WARN	missing_definition	cysteine zwitterion	definition	
-WARN	missing_definition	fused compound	definition	
 WARN	missing_definition	homopolycyclic compound	definition	
 WARN	missing_definition	ortho- and peri-fused polycyclic arene	definition	
 WARN	missing_definition	deoxy hexoside	definition	
@@ -953,6 +973,7 @@ WARN	missing_definition	quinolinium ion	definition
 WARN	missing_definition	isoflurane	definition	
 WARN	missing_definition	squamous epithelial cell	definition	
 WARN	missing_definition	protein secreting cell	definition	
+WARN	missing_definition	eukaryotic cell	definition	
 WARN	missing_definition	sheath cell	definition	
 WARN	missing_definition	lung ciliated cell	definition	
 WARN	missing_definition	lung secretory cell	definition	
@@ -1012,12 +1033,13 @@ WARN	missing_definition	has_alternative_id	definition
 WARN	missing_definition	database_cross_reference	definition	
 WARN	missing_definition	has_obo_format_version	definition	
 WARN	missing_definition	has_obo_namespace	definition	
+WARN	missing_definition	id	definition	
 WARN	missing_definition	in_subset	definition	
 INFO	lowercase_definition	independent continuant	definition	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
 INFO	lowercase_definition	process	definition	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
-INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+INFO	lowercase_definition	characteristic	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
 INFO	lowercase_definition	role	IAO:0000600	b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])@en
 INFO	lowercase_definition	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 INFO	lowercase_definition	part_of	definition	a core relation that holds between a part and its whole@en
@@ -1204,9 +1226,7 @@ INFO	missing_superclass	entity	rdfs:subClassOf
 INFO	missing_superclass	chemical entity	rdfs:subClassOf	
 INFO	missing_superclass	subatomic particle	rdfs:subClassOf	
 INFO	missing_superclass	role	rdfs:subClassOf	
-INFO	missing_superclass	molecular_function	rdfs:subClassOf	
 INFO	missing_superclass	cellular_component	rdfs:subClassOf	
-INFO	missing_superclass	biological_process	rdfs:subClassOf	
 INFO	missing_superclass	nematode phenotype	rdfs:subClassOf	
 INFO	missing_superclass	C. elegans anatomical entity	rdfs:subClassOf	
 INFO	missing_superclass	worm life stage	rdfs:subClassOf	

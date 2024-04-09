@@ -12,14 +12,14 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:wbphenotype="http://purl.obolibrary.org/obo/wbphenotype#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-simple-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2024-01-16/wbphenotype-simple-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2024-04-09/wbphenotype-simple-non-classified.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000886"/>
         <dc:description>Ontology about C. elegans and other nematode phenotypes</dc:description>
         <dc:title>C elegans Phenotype Ontology</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <oboInOwl:default-namespace>C_elegans_phenotype_ontology</oboInOwl:default-namespace>
         <oboInOwl:saved-by>chris-grove</oboInOwl:saved-by>
-        <owl:versionInfo>2024-01-16</owl:versionInfo>
+        <owl:versionInfo>2024-04-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -53460,6 +53460,66 @@
         <oboInOwl:hasDbXref>WB:WBPaper00064071</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WB:WBPerson2987</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WB:WBPerson58409</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBPhenotype_0002664 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0002664">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000113"/>
+        <obo:IAO_0000115>Any variation in the placement of RNA within in a cell or cellular compartment compared to control.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>RNA localization abnormal</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>RNA subcellular localization abnormal</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBPhenotype:0002664</oboInOwl:id>
+        <rdfs:label xml:lang="en">RNA subcellular localization variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002664"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any variation in the placement of RNA within in a cell or cellular compartment compared to control.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>WB:WBPerson2987</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBPhenotype_0002665 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0002665">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002664"/>
+        <obo:IAO_0000115>Any variation in the properties of an RNA condensate within a cell or cellular compartment compared to control.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBPhenotype:0002665</oboInOwl:id>
+        <rdfs:label xml:lang="en">RNA condensate variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002665"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any variation in the properties of an RNA condensate within a cell or cellular compartment compared to control.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>WB:WBPaper00065975</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WB:WBPerson10419</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WB:WBPerson2987</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/WBPhenotype_0002666 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/WBPhenotype_0002666">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002665"/>
+        <obo:IAO_0000115>An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>C_elegans_phenotype_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>WBPhenotype:0002666</oboInOwl:id>
+        <rdfs:label xml:lang="en">abnormal dissolution of RNA condensate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0002666"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>WB:WBPaper00065975</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WB:WBPerson10419</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WB:WBPerson2987</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
