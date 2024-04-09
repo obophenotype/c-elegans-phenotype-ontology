@@ -22,9 +22,9 @@
         "val" : "chris-grove"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-01-16"
+        "val" : "2024-04-09"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-01-16/wbphenotype-simple-non-classified.json"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-04-09/wbphenotype-simple-non-classified.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
@@ -44851,6 +44851,55 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002664",
+      "lbl" : "RNA subcellular localization variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any variation in the placement of RNA within in a cell or cellular compartment compared to control.",
+          "xrefs" : [ "WB:WBPerson2987" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "RNA localization abnormal"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "RNA subcellular localization abnormal"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002665",
+      "lbl" : "RNA condensate variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any variation in the properties of an RNA condensate within a cell or cellular compartment compared to control.",
+          "xrefs" : [ "WB:WBPaper00065975", "WB:WBPerson10419", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002666",
+      "lbl" : "abnormal dissolution of RNA condensate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control.",
+          "xrefs" : [ "WB:WBPaper00065975", "WB:WBPerson10419", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "lbl" : "hermaphrodite mating variant",
       "type" : "CLASS",
@@ -57650,6 +57699,18 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002663",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000577"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002664",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000113"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002665",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002664"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002666",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002665"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "pred" : "is_a",

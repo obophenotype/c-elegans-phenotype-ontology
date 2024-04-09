@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/wbphenotype/imports/cl_import.owl>
-<http://purl.obolibrary.org/obo/wbphenotype/releases/2024-01-16/imports/cl_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/cl/releases/2024-01-04/cl-base.owl>)
-Annotation(owl:versionInfo "2024-01-16")
+<http://purl.obolibrary.org/obo/wbphenotype/releases/2024-04-09/imports/cl_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/cl/releases/2024-04-05/cl-base.owl>)
+Annotation(owl:versionInfo "2024-04-09")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000007>))
@@ -30,6 +30,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000154>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000211>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000219>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000228>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000255>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000300>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000365>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000393>))
@@ -42,12 +43,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000618>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000670>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000675>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0001061>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002242>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002319>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002321>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002371>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0010017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0011115>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CL_0017505>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_1000271>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_1000272>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_4030034>))
@@ -71,13 +72,15 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0022414>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030154>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030424>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0030425>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031012>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032940>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0044237>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0043226>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0045087>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048477>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0048870>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051321>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_2759>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_6237>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
@@ -87,11 +90,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001375>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001603>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001604>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001908>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002505>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000050567>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000061>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000115>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000483>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000922>))
-Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002048>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0004802>))
@@ -110,6 +114,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000233>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0002175>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/cl#cellxgene_subset>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ubprop#_upper_level>))
@@ -133,25 +138,14 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#is_inferred>))
-Declaration(AnnotationProperty(rdfs:comment))
-Declaration(AnnotationProperty(rdfs:label))
-Declaration(AnnotationProperty(owl:deprecated))
 Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/depiction>))
 ############################
 #   Annotation Properties
 ############################
 
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
+# Annotation Property: <http://purl.obolibrary.org/obo/cl#cellxgene_subset> (<http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
-
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000700> (preferred_root)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000700> "preferred_root")
-
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by")
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/cl#cellxgene_subset> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
 # Annotation Property: <http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim> (<http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim>)
 
@@ -164,42 +158,6 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/uberon/core#human_refere
 # Annotation Property: <http://purl.obolibrary.org/obo/ubprop#_upper_level> (<http://purl.obolibrary.org/obo/ubprop#_upper_level>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ubprop#_upper_level> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> (subset_property)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> "subset_property")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#consider> (consider)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#consider> "consider")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> (has_alternative_id)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> "has_alternative_id")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> (has_broad_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> (has_exact_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "has_exact_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> (has_narrow_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> "has_narrow_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> (has_related_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "has_related_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#inSubset> (in_subset)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#inSubset> "in_subset")
 
 
 
@@ -220,11 +178,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000000> "VHOG:0001533")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000000> "WBbt:0004017")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000000> "XAO:0003012")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000000> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000000> <http://purl.obolibrary.org/obo/ubprop#_upper_level>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0000000> "The definition of cell is intended to represent all cells, and thus a cell is defined as a material entity and not an anatomical structure, which implies that it is part of an organism (or the entirety of one).")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000000> "cell")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000000> <http://purl.obolibrary.org/obo/UBERON_0000061>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_131567>))
+DisjointClasses(<http://purl.obolibrary.org/obo/CL_0000000> <http://purl.obolibrary.org/obo/GO_0031012>)
+DisjointClasses(<http://purl.obolibrary.org/obo/CL_0000000> <http://purl.obolibrary.org/obo/GO_0043226>)
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000007> (early embryonic cell (metazoa))
 
@@ -238,9 +199,11 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000021> "MA:0000388")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000021> "VHOG:0001530")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000021> "ncithesaurus:Egg")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000021> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000021> "female germ cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000021> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000586> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048477>)))
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000021> <http://purl.obolibrary.org/obo/CL_0000586>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048477>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000023> (oocyte)
 
@@ -252,8 +215,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000023> "MESH:D009865")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000023> "WBbt:0006797")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CL_0000023> "oogonium")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000023> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000023> "oocyte")
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000023> <http://purl.obolibrary.org/obo/CL_0000021>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000023> <http://purl.obolibrary.org/obo/CL_0000255>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> <http://purl.obolibrary.org/obo/GO_0007143>))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000023> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 
@@ -261,10 +226,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000023> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0721662544") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000024> "An undifferentiated germ cell that proliferates rapidly and gives rise to oocytes.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000024> "FMA:83673")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000024> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000024> "oogonial cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0000278>)))
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000024> <http://purl.obolibrary.org/obo/CL_0000021>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000024> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CL_0000670>))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000024> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0000278>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000025> (egg cell)
 
@@ -298,8 +265,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000039> ObjectSomeValuesFrom(<htt
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000064> "A cell that has a filiform extrusion of the cell surface.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000064> "VHOG:0001532")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000064> "XAO:0000031")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000064> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000064> "ciliated cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000064> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000064> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000064> <http://purl.obolibrary.org/obo/PR_000050567>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000064> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000066> (epithelial cell)
 
@@ -312,6 +283,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000066> "FMA:66768")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000066> "WBbt:0003672")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000066> "epitheliocyte")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000066> "epithelial cell")
@@ -323,13 +295,17 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000066> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000067> "An epithelial cell that has a cilia.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000067> "FMA:70605")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000067> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000067> "ciliated epithelial cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000067> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000067> <http://purl.obolibrary.org/obo/CL_0000064>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000067> <http://purl.obolibrary.org/obo/CL_0000066>)
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000075> (columnar/cuboidal epithelial cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GO:0002065") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-5208-3432") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000075> "A columnar/cuboidal epithelial cell is a cell usually found in a two dimensional sheet with a free surface. Columnar/cuboidal epithelial cells take on the shape of a column or cube.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002175> <http://purl.obolibrary.org/obo/CL_0000075> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000075> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000075> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000075> "columnar/cuboidal epithelial cell")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000075> <http://purl.obolibrary.org/obo/CL_0000066>)
@@ -337,6 +313,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000075> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/CL_0000076> (squamous epithelial cell)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000076> "CALOHA:TS-1249")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000076> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000076> "squamous epithelial cell")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000076> <http://purl.obolibrary.org/obo/CL_0000066>)
 
@@ -345,13 +322,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000076> <http://purl.obolibrary.o
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-5208-3432") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000082> "An epithelial cell of the lung.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000082> "BTO:0004299")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000082> "lung epithelial cell")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000082> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000082> "epithelial cell of lung")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000082> <http://purl.obolibrary.org/obo/CL_0000066>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000082> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000115>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000086> (obsolete germ line stem cell (sensu Nematoda and Protostomia))
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/CL_0000086> "https://github.com/obophenotype/cell-ontology/issues/1935")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/CL_0000086> <https://github.com/obophenotype/cell-ontology/issues/1935>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/CL_0000086> <http://purl.obolibrary.org/obo/CL_0000014>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0000086> "Obsoleted as there is no need for a term specific for nematods and protostomes.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000086> "obsolete germ line stem cell (sensu Nematoda and Protostomia)")
@@ -362,13 +341,18 @@ AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/CL_0000086> "
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0721662544") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000151> "A cell that specializes in controlled release of one or more substances.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000151> "BTO:0003659")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000151> "FMA:86916")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000151> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000151> "secretory cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000151> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0032940>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000151> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000151> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0032940>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000154> (protein secreting cell)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000154> "protein secreting cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000154> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000151> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0009306>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000154> <http://purl.obolibrary.org/obo/CL_0000151>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000154> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0009306>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000211> (electrically active cell)
 
@@ -381,6 +365,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000211> <http://purl.obolibrary.o
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FB:ma") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000219> "A cell that moves by its own activities.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000219> "motile cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000219> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048870>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000219> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000219> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048870>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000228> (multinucleate cell)
 
@@ -392,6 +378,17 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000228> "syncytium")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000228> "multinucleate cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000228> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000228> <http://purl.obolibrary.org/obo/CL_0002242>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>))
+
+# Class: <http://purl.obolibrary.org/obo/CL_0000255> (eukaryotic cell)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000255> "MESH:D005057")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000255> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000255> "eukaryotic cell")
+EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000255> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_2759>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000255> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000255> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000300> (gamete)
 
@@ -403,7 +400,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CL_0000300> "haploid germ cell")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000300> "gamete")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000300> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000586> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001375>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0009566>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000300> <http://purl.obolibrary.org/obo/CL_0000413>)
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000300> <http://purl.obolibrary.org/obo/CL_0000586>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000300> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0009566>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000365> (animal zygote)
 
@@ -415,7 +414,9 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000365> "animal zygote")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000365> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0010017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_33208>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000365> <http://purl.obolibrary.org/obo/CL_0000007>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000365> <http://purl.obolibrary.org/obo/CL_0000255>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000365> <http://purl.obolibrary.org/obo/CL_0010017>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000365> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_33208>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000393> (electrically responsive cell)
 
@@ -445,6 +446,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000411> ObjectSomeValuesFrom(<htt
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FB:ma") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000413> "A cell whose nucleus contains a single haploid genome.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000413> "haploid cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000413> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001375>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000413> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000413> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001375>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000540> (neuron)
 
@@ -457,6 +460,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000540> "VHOG:0001483")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000540> "WBbt:0003679")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000540> "nerve cell")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0000540> "These cells are also reportedly CD4-negative and CD200-positive. They are also capable of producing CD40L and IFN-gamma.")
@@ -474,6 +478,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000586> "NCIT:C12597")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000586> "VHOG:0001534")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000586> "WBbt:0006796")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000586> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000586> "germ cell")
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000586> <http://purl.obolibrary.org/obo/CL_0000039>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000586> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002216> <http://purl.obolibrary.org/obo/GO_0009566>))
@@ -489,10 +494,12 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000670> "FMA:70567")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000670> "gonocyte")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000670> "primitive germ cell")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000670> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000670> "primordial germ cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000670> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000039> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000922>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048870>)))
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000670> <http://purl.obolibrary.org/obo/CL_0000039>)
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000670> <http://purl.obolibrary.org/obo/CL_0000219>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0000670> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000922>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000675> (female gamete)
 
@@ -507,10 +514,23 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0001061> <https://orcid.org/0000-0001-9990-8331>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/CL_0001061> "2017-01-30T18:53:32Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0001061> "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C12913")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0001061> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0001061> "https://github.com/obophenotype/cell-ontology/issues/448")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0001061> "abnormal cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0001061> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000460>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0001061> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0001061> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000460>))
+
+# Class: <http://purl.obolibrary.org/obo/CL_0002242> (nucleate cell)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0002242> "A cell containing at least one nucleus.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0002242> <https://orcid.org/0000-0003-1980-3228>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/CL_0002242> "2010-09-07T03:32:33Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002242> "FMA:67513")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0002242> "nucleate cell")
+EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0002242> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002505>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0002242> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0002242> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002505>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0002319> (neural cell)
 
@@ -519,8 +539,11 @@ AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibra
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/CL_0002319> "2010-09-15T01:34:57Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002319> "CALOHA:TS-2040")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002319> "FMA:70333")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0002319> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0002319> "neural cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0002319> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001016>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0002319> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0002319> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001016>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_0002321> (embryonic cell (metazoa))
 
@@ -536,14 +559,15 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0002321> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/CL_0002371> (obsolete somatic cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0721662544") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0002371> "OBSOLETE. A cell of an organism that does not pass on its genetic material to the organism's offspring (i.e. a non-germ line cell).")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/CL_0002371> <https://github.com/obophenotype/cell-ontology/issues/1150>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/CL_0002371> <http://purl.obolibrary.org/obo/CL_0000000>)
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0002371> <https://orcid.org/0000-0003-1980-3228>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/CL_0002371> "2010-09-24T09:44:42Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002371> "BTO:0001268")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002371> "FMA:72300")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002371> "WBbt:0008378")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0002371> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0002371> <http://purl.obolibrary.org/obo/ubprop#_upper_level>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0002371> "https://github.com/obophenotype/cell-ontology/issues/1150")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0002371> "obsolete somatic cell")
 AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/CL_0002371> "true"^^xsd:boolean)
 
@@ -558,31 +582,30 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0010017> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/CL_0011115> (precursor cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dos") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0011115> "A cell that, by division or terminal differentiation, can give rise to other cell types.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0011115> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0011115> "Work is needed on GO 'cell differentiation' before it is clear whether the equivalent class definition 'native cell' that capable_of some 'cell differentiation' works. Also, may want to consider merging this with non-terminally differentiated cell.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0011115> "precursor cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0011115> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0030154>)))
-
-# Class: <http://purl.obolibrary.org/obo/CL_0017505> (increased nucleus size)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0017505> "A nucleus size quality which is relatively high compared to the amount of cytoplasm present in the same cell.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0017505> <https://orcid.org/0000-0003-1980-3228>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/CL_0017505> "2009-12-23T10:53:24Z")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0017505> "increased nucleus size")
-EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0017505> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0005634> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000586>)))
-SubClassOf(<http://purl.obolibrary.org/obo/CL_0017505> <http://purl.obolibrary.org/obo/GO_0005634>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0011115> <http://purl.obolibrary.org/obo/CL_0000000>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_0011115> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0030154>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_1000271> (lung ciliated cell)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002175> <http://purl.obolibrary.org/obo/CL_1000271> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_1000271> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_1000271> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_1000271> "lung ciliated cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_1000271> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000064> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_1000271> <http://purl.obolibrary.org/obo/CL_4030034>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_1000271> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_1000272> (lung secretory cell)
 
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_1000272> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_1000272> "lung secretory cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_1000272> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000151> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>)))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_1000272> <http://purl.obolibrary.org/obo/CL_0000151>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_1000272> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>))
 
 # Class: <http://purl.obolibrary.org/obo/CL_4030034> (respiratory ciliated cell)
 
@@ -591,7 +614,9 @@ AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_4030034> "ciliated cell of the respiratory tract")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_4030034> "respiratory ciliated cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_4030034> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000064> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004802>)))
-SubClassOf(<http://purl.obolibrary.org/obo/CL_4030034> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001004>))
+SubClassOf(<http://purl.obolibrary.org/obo/CL_4030034> <http://purl.obolibrary.org/obo/CL_0000064>)
+SubClassOf(<http://purl.obolibrary.org/obo/CL_4030034> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0004802>))
 
 
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))
 )

@@ -1,7 +1,6 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2024-01-16/wbphenotype-base.owl
+data-version: wbphenotype/releases/2024-04-09/wbphenotype-base.owl
 saved-by: chris-grove
-subsetdef: phenotype_slim_wb "WB phenotype slim"
 default-namespace: C_elegans_phenotype_ontology
 ontology: wbphenotype/wbphenotype-base
 property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. elegans and other nematode phenotypes" xsd:string
@@ -9,11 +8,7 @@ property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontol
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2024-01-16" xsd:string
-
-[Term]
-id: PATO:0000956
-alt_id: WBPhenotype:0000311
+property_value: owl:versionInfo "2024-04-09" xsd:string
 
 [Term]
 id: WBPhenotype:0000000
@@ -132,6 +127,7 @@ def: "Animals respond to aldicarb at a lower concentration or a shorter exposure
 synonym: "Hic" BROAD []
 is_a: WBPhenotype:0000500 ! acetylcholinesterase inhibitor hypersensitive
 is_a: WBPhenotype:0000680 ! aldicarb response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000017
@@ -141,6 +137,7 @@ synonym: "Ald R" BROAD []
 synonym: "Ric" BROAD []
 is_a: WBPhenotype:0000680 ! aldicarb response variant
 is_a: WBPhenotype:0001289 ! acetylcholinesterase inhibitor resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000018
@@ -172,6 +169,7 @@ id: WBPhenotype:0000022
 name: long
 def: "Animals are longer than control animals at the same developmental stage." [WB:cab, WB:cgc31]
 synonym: "Lon" BROAD []
+is_a: WBPhenotype:0000319 ! large
 is_a: WBPhenotype:0001726 ! body length variant
 
 [Term]
@@ -179,12 +177,14 @@ id: WBPhenotype:0000023
 name: serotonin hypersensitive
 def: "Animals respond to serotonin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000024
 name: serotonin resistant
 def: "Animals fail to respond to the concentration of serotonin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000025
@@ -214,6 +214,7 @@ name: RNA processing variant
 def: "Variations in the processes involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules compared to control." [GO:0006396, WB:WBPerson2021]
 synonym: "RNA processing abnormal" NARROW []
 is_a: WBPhenotype:0000113 ! RNA expression variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0000029
@@ -273,6 +274,7 @@ synonym: "larval body morphology abnormal" NARROW []
 synonym: "larval morphology abnormal" RELATED []
 is_a: WBPhenotype:0000072 ! body morphology variant
 is_a: WBPhenotype:0000934 ! developmental morphology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000036
@@ -312,6 +314,7 @@ synonym: "life span abnormal" EXACT []
 synonym: "life span variant" EXACT []
 synonym: "longevity abnormal" RELATED []
 is_a: WBPhenotype:0000576 ! organism physiology phenotype
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000040
@@ -547,6 +550,8 @@ name: cellular oxidative stress response variant
 def: "Any variation in the state or activity of a cell (in terms of secretion, enzyme production, gene expression, etc.) in response to high levels of reactive oxygen species, compared to control." [GO:0034599, WB:WBPerson2021, WB:WBPerson557]
 synonym: "oxidative stress response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
+is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
 id: WBPhenotype:0000069
@@ -570,6 +575,7 @@ id: WBPhenotype:0000071
 name: head morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of their anterior end (which typically includes the anterior sensilla, pharynx and all muscles that are innervated by the nerve ring) compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "head morphology abnormal" NARROW []
+is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000582 ! organism segment morphology variant
 
 [Term]
@@ -578,6 +584,7 @@ name: body morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of their anatomy between the head and the tail compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 subset: phenotype_slim_wb
 synonym: "body morphology abnormal" NARROW []
+is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000582 ! organism segment morphology variant
 
 [Term]
@@ -585,6 +592,7 @@ id: WBPhenotype:0000073
 name: tail morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any portion of the most posterior region of the body compared to control. The anterior bound of the tail is not well defined though it might range from the position of the post-deirids to the opening of the anus (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "tail morphology abnormal" NARROW []
+is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000582 ! organism segment morphology variant
 
 [Term]
@@ -699,6 +707,7 @@ id: WBPhenotype:0000089
 name: alpha amanitin resistant
 def: "Animals fail to respond to the concentration of alpha amanitin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000090
@@ -714,14 +723,17 @@ name: epidermis muscle detached
 def: "The cell(s) whose principal function is to provide contractile forces, is separated from the adjacent epidermis." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "hypodermis detached from muscle" RELATED []
 is_a: WBPhenotype:0000076 ! epithelial attachment variant
-is_a: WBPhenotype:0000474 ! muscle attachment variant
+is_a: WBPhenotype:0000475 ! muscle detached
 
 [Term]
 id: WBPhenotype:0000092
 name: intestinal cell proliferation variant
 def: "Any variation in the processes that govern the expansion of intestinal cell populations compared to control." [WB:WBPerson2021]
 synonym: "intestinal cell proliferation abnormal" NARROW []
+is_a: WBPhenotype:0000171 ! cell proliferation variant
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000705 ! intestinal cell development variant
+is_a: WBPhenotype:0001093 ! intestinal physiology variant
 
 [Term]
 id: WBPhenotype:0000093
@@ -744,6 +756,7 @@ id: WBPhenotype:0000095
 name: M lineage variant
 def: "The descendants of the M precursor cell exhibit variations in developmental programs compared to their counterparts in control animals.  In C. elegans the M lineage is a postembryonic mesodermal lineage." [WB:WBPerson2021]
 synonym: "M lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000825 ! postembryonic cell lineage variant
 
 [Term]
@@ -752,12 +765,14 @@ name: cloacal development variant
 def: "Variations in the progression of the epithelial chamber that links the genital and alimentary tracts to the exterior via the anus (cloacal opening) over time compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "cloacal development abnormal" NARROW []
 is_a: WBPhenotype:0000617 ! alimentary system development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0000097
 name: AB lineage variant
 def: "The descendants of the AB blastomere exhibit variations in developmental programs compared to their counterparts in control animals." [WB:WBPaper00001584, WB:WBPerson2021]
 synonym: "AB lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000824 ! embryonic cell lineage variant
 
 [Term]
@@ -772,6 +787,7 @@ id: WBPhenotype:0000099
 name: P lineages variant
 def: "The descendants of any of the P precursor cells exhibit variations in developmental programs compared to their counterparts in control animals." [WB:WBPerson2021]
 synonym: "P lineages abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000825 ! postembryonic cell lineage variant
 
 [Term]
@@ -780,6 +796,7 @@ name: cell UV response variant
 def: "Cells exhibit variations in their response to ultraviolet radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell UV response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000143 ! organism UV response variant
 
 [Term]
 id: WBPhenotype:0000101
@@ -794,6 +811,7 @@ name: presynaptic vesicle cluster variant
 def: "Animals display variations in the organization, accumulation or distribution of transmitter-containing membrane-bound organelles (synaptic vesicles) compared to that observed in control animals." [WB:WBPaper00027305]
 synonym: "presynaptic vesicle cluster abnormal" NARROW []
 synonym: "synaptic vesicle cluster abnormal" RELATED []
+is_a: WBPhenotype:0000846 ! presynaptic region physiology variant
 is_a: WBPhenotype:0001321 ! presynaptic region morphology variant
 
 [Term]
@@ -933,6 +951,7 @@ def: "Variations in the chemical reactions and pathways resulting in the formati
 synonym: "protein synthesis abnormal" RELATED []
 synonym: "translation abnormal" NARROW []
 is_a: WBPhenotype:0000112 ! protein expression variant
+is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
 id: WBPhenotype:0000122
@@ -1074,6 +1093,7 @@ id: WBPhenotype:0000142
 name: cell stress response variant
 def: "Variations in the activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress, compared to control. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GO:0033554, WB:WBPerson2021]
 synonym: "cell stress response abnormal" NARROW []
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000585 ! cell homeostasis metabolism variant
 
 [Term]
@@ -1082,6 +1102,7 @@ name: organism UV response variant
 def: "Animals exhibit variations in their response to ultraviolet radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "organism UV response abnormal" NARROW []
 is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0001897 ! light response variant
 
 [Term]
 id: WBPhenotype:0000144
@@ -1098,6 +1119,7 @@ subset: phenotype_slim_wb
 synonym: "fertility abnormal" NARROW []
 synonym: "fertility variant" EXACT []
 is_a: WBPhenotype:0000613 ! reproductive system physiology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000146
@@ -1156,6 +1178,7 @@ def: "Initiation, strength, extent or cessation of body wall muscle activity tha
 synonym: "body wall contraction abnormal" NARROW []
 synonym: "body wall contraction variant" EXACT []
 is_a: WBPhenotype:0000596 ! body behavior variant
+is_a: WBPhenotype:0000611 ! muscle system physiology variant
 
 [Term]
 id: WBPhenotype:0000154
@@ -1214,6 +1237,7 @@ name: nuclear rotation variant
 def: "Any variation in the rotation of centrosomes and associated pronuclei in one-cell embryo, occurring as a transition between pronuclear migration and pronuclear fusion compared to control." [GO:0035047, WB:WBPerson2021, WB:WBPerson557]
 synonym: "nuclear rotation abnormal" NARROW []
 is_a: WBPhenotype:0000749 ! embryonic development variant
+is_a: WBPhenotype:0001028 ! nuclear appearance variant
 
 [Term]
 id: WBPhenotype:0000162
@@ -1269,6 +1293,8 @@ def: "Variations in the regulated release of proteins needed for alae formation 
 synonym: "alae formation variant" RELATED []
 synonym: "alae secretion abnormal" NARROW []
 is_a: WBPhenotype:0000258 ! cell secretion variant
+is_a: WBPhenotype:0000608 ! epithelial system physiology variant
+is_a: WBPhenotype:0001210 ! pericellular component physiology phenotype
 
 [Term]
 id: WBPhenotype:0000169
@@ -1333,6 +1359,7 @@ is_a: WBPhenotype:0000124 ! enzyme activity reduced
 id: WBPhenotype:0000178
 name: cell degeneration
 def: "Cells are observed to undergo a dramatic decrease in cell volume, collapse of the vacuoles, and complete disintegration of the plasma membrane and most organelles." [WB:WBPerson712]
+is_a: WBPhenotype:0000533 ! cell morphology variant
 is_a: WBPhenotype:0000729 ! cell death variant
 
 [Term]
@@ -1340,6 +1367,7 @@ id: WBPhenotype:0000179
 name: neuron degeneration
 def: "Cells specialized for receiving, conducting and transmitting impulses in the nervous system are observed to undergo a dramatic decrease in cell volume, collapse of the vacuoles and processes, and complete disintegration of the plasma membrane and most organelles." [WB:WBperson557, WB:WBPerson712]
 is_a: WBPhenotype:0000178 ! cell degeneration
+is_a: WBPhenotype:0000905 ! neuron morphology variant
 
 [Term]
 id: WBPhenotype:0000180
@@ -1360,12 +1388,14 @@ id: WBPhenotype:0000182
 name: apoptosis reduced
 def: "Any perturbation that causes a decrease in the frequency of cell death by apoptosis compared to control animals." [GO:0043065, WB:WBPerson2021]
 is_a: WBPhenotype:0000730 ! apoptosis variant
+is_a: WBPhenotype:0002620 ! cell death decreased
 
 [Term]
 id: WBPhenotype:0000183
 name: apoptosis increased
 def: "Any perturbation that causes an elevation in the frequency of cell death by apoptosis compared to control animals." [GO:0043066, WB:WBPerson2021]
 is_a: WBPhenotype:0000730 ! apoptosis variant
+is_a: WBPhenotype:0002619 ! cell death increased
 
 [Term]
 id: WBPhenotype:0000184
@@ -1387,6 +1417,7 @@ def: "Any aberrancy in the processes that influence the generation and maturatio
 synonym: "oocyte development abnormal" RELATED []
 synonym: "oocyte germ cell differentiation abnormal" EXACT []
 synonym: "oogenesis abnormal" NARROW []
+is_a: WBPhenotype:0000812 ! germ cell development variant
 is_a: WBPhenotype:0000894 ! germ cell differentiation variant
 
 [Term]
@@ -1474,6 +1505,7 @@ id: WBPhenotype:0000199
 name: male tail sensory ray development variant
 def: "Any variation in the progression of the finger-like sensory sensilla that project from the tail and embed in the male fan from its formation to the mature structure when compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male tail sensory ray development abnormal" NARROW []
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 is_a: WBPhenotype:0001008 ! male nervous system development variant
 
 [Term]
@@ -1586,6 +1618,7 @@ id: WBPhenotype:0000214
 name: alpha amanitin hypersensitive
 def: "Animals respond to alpha amanitin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000215
@@ -1593,6 +1626,7 @@ name: no germ line
 def: "Animals lack all germline progenitor cells, thereby resulting in the complete absence of a germline." [WB:WBPaper00001477, WB:WBPerson2021]
 synonym: "no germline" EXACT []
 is_a: WBPhenotype:0000812 ! germ cell development variant
+is_a: WBPhenotype:0002556 ! tissue phenotype
 
 [Term]
 id: WBPhenotype:0000216
@@ -1691,6 +1725,7 @@ synonym: "body size reduced" EXACT []
 synonym: "Sma" RELATED []
 is_a: WBPhenotype:0001726 ! body length variant
 is_a: WBPhenotype:0001727 ! body width variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000230
@@ -1792,7 +1827,7 @@ id: WBPhenotype:0000244
 name: apoptotic arrest
 def: "Cells fail to complete the form of programmed cell death characterized by rounding-up of the cell, retraction of pseudopodes, reduction of cellular volume (pyknosis), chromatin condensation, nuclear fragmentation (karyorrhexis), classically little or no ultrastructural modifications of cytoplasmic organelles, plasma membrane blebbing (but maintenance of its integrity until the final stages of the process) and engulfment by resident phagocytes." [WB:WBPerson712]
 synonym: "apoptosis block" RELATED []
-is_a: WBPhenotype:0000730 ! apoptosis variant
+is_a: WBPhenotype:0000182 ! apoptosis reduced
 
 [Term]
 id: WBPhenotype:0000245
@@ -1848,6 +1883,7 @@ id: WBPhenotype:0000252
 name: caffeine resistant
 def: "Animals fail to respond to the concentration of caffeine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000253
@@ -2032,6 +2068,7 @@ def: "Animals exhibit variations in the accumulation or expression of biochromes
 synonym: "body region pigmentation abnormal" EXACT []
 synonym: "body region pigmentation variant" EXACT []
 is_a: WBPhenotype:0000521 ! pigmentation phenotype
+is_a: WBPhenotype:0000532 ! body region morphology variant
 
 [Term]
 id: WBPhenotype:0000279
@@ -2108,6 +2145,7 @@ name: uterus morphology variant
 def: "Any variation in the form, structure or composition of the portion of the somatic gonad which encloses the fertilized eggs after their passage through the spermatheca compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "uterus morphology abnormal" NARROW []
 is_a: WBPhenotype:0001335 ! hermaphrodite reproductive system morphology variant
+is_a: WBPhenotype:0002556 ! tissue phenotype
 
 [Term]
 id: WBPhenotype:0000290
@@ -2115,6 +2153,7 @@ name: sperm absent
 def: "Animals lack fully specialized male gametes that are competent for fertilization." [WB:WBPerson2021]
 synonym: "no sperm" RELATED []
 is_a: WBPhenotype:0000395 ! no differentiated gametes
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000291
@@ -2122,6 +2161,7 @@ name: no oocytes
 def: "Hermaphrodites lack fully specialized female gametes that are competent for fertilization." [WB:WBPerson2021]
 synonym: "oocytes absent" RELATED []
 is_a: WBPhenotype:0000395 ! no differentiated gametes
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000292
@@ -2130,6 +2170,7 @@ def: "Animals exhibit variations in the accumulation or expression of biochromes
 synonym: "organ system pigmentation abnormal" EXACT []
 synonym: "organ system pigmentation variant" EXACT []
 is_a: WBPhenotype:0000521 ! pigmentation phenotype
+is_a: WBPhenotype:0000534 ! organ system morphology variant
 
 [Term]
 id: WBPhenotype:0000293
@@ -2137,6 +2178,7 @@ name: alimentary system pigmentation variant
 def: "Animals exhibit variations in the accumulation or expression of biochromes or any other substances that alter transparency/translucency of the alimentary system." [WB:WBPerson557]
 synonym: "alimentary system pigmentation abnormal" NARROW []
 is_a: WBPhenotype:0000292 ! organ system pigmentation phenotype
+is_a: WBPhenotype:0000598 ! alimentary system morphology variant
 
 [Term]
 id: WBPhenotype:0000294
@@ -2181,12 +2223,14 @@ def: "Animals exhibit variations in the quantity, structure or organization of t
 synonym: "chemosensory cell morphology abnormal" RELATED []
 synonym: "sensillum morphology abnormal" NARROW []
 is_a: WBPhenotype:0000604 ! nervous system morphology variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000300
 name: amphid sheath cell morphology variant
 def: "Animals exhibit variations in the structure or composition of the amphid sensillum cell that ensheathes the dendrite tips of channel neurons and wing cell dedritic processes, from that observed in control animals. Sheath cells in C.elegans have highly invaginated and vesiculated surfaces, which provide a specialized environment for the dendritic structures." [WB:WBPaper00000214, WB:WBPaper00000503, WB:WBPaper00000822, WB:WBPerson712]
 synonym: "amphid sheath cell morphology abnormal" NARROW []
+is_a: WBPhenotype:0000972 ! neuronal sheath cell morphology variant
 is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
 
 [Term]
@@ -2329,6 +2373,7 @@ name: large
 def: "Animals have increased girth and increased length compared to control animals at the same developmental stage." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "body size enlarged" EXACT []
 is_a: WBPhenotype:0000231 ! body size variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000320
@@ -2359,18 +2404,20 @@ is_a: WBPhenotype:0000071 ! head morphology variant
 id: WBPhenotype:0000324
 name: short
 def: "Animals exhibit a decreased body length compared to control animals of the same developmental stage." [WB:WBPerson712]
-is_a: WBPhenotype:0001726 ! body length variant
+is_a: WBPhenotype:0000229 ! small
 
 [Term]
 id: WBPhenotype:0000325
 name: arecoline hypersensitive
 def: "Animals respond to arecoline at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000326
 name: arecoline resistant
 def: "Animals fail to respond to the concentration of arecoline that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
 [Term]
@@ -2461,6 +2508,7 @@ id: WBPhenotype:0000340
 name: imipramine resistant
 def: "Animals fail to respond to the concentration of imipramine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001598 ! inhibitor of serotonin uptake variant
 
 [Term]
@@ -2468,6 +2516,7 @@ id: WBPhenotype:0000341
 name: imipramine hypersensitive
 def: "Animals respond to imipramine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000342
@@ -2569,8 +2618,8 @@ is_a: WBPhenotype:0000439 ! precocious heterochronic variations
 id: WBPhenotype:0000356
 name: spermatogenesis delayed
 def: "The progression of immature germ cells to functional sperm is retarded compared to control." [WB:WBPaper00005566, WB:WBPerson2021]
-is_a: WBPhenotype:0000438 ! retarded heterochronic variations
 is_a: WBPhenotype:0000670 ! spermatogenesis variant
+is_a: WBPhenotype:0000848 ! developmental delay
 
 [Term]
 id: WBPhenotype:0000357
@@ -2684,6 +2733,7 @@ id: WBPhenotype:0000372
 name: no polar body formation
 def: "Animals lack the two small cells produced, each during one of the two meiotic cell divisions (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000775 ! meiosis variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000373
@@ -2759,6 +2809,7 @@ name: axon guidance variant
 def: "Variations in the cue-directed extension of an axon towards a specific target site compared to control. (Axon guidance often depends on a combination of attractive and repulsive cues)." [GO:0048846, WB:WBPerson2021]
 synonym: "axon guidance abnormal" NARROW []
 synonym: "axon pathfinding abnormal" RELATED []
+is_a: WBPhenotype:0000944 ! neurite development variant
 is_a: WBPhenotype:0001224 ! axon outgrowth variant
 
 [Term]
@@ -2766,6 +2817,7 @@ id: WBPhenotype:0000385
 name: sperm excess
 def: "Animals produce an increased sperm population compared to control." [WB:WBPerson2021]
 is_a: WBPhenotype:0000670 ! spermatogenesis variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000386
@@ -2872,6 +2924,7 @@ id: WBPhenotype:0000401
 name: no uterus
 def: "Animals lack the portion of the somatic gonad which encloses the fertilized eggs after their passage through the spermatheca (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000624 ! reproductive system development variant
+is_a: WBPhenotype:0002556 ! tissue phenotype
 
 [Term]
 id: WBPhenotype:0000402
@@ -3004,6 +3057,7 @@ def: "Animals respond to levamisole at a lower concentration or a shorter exposu
 synonym: "tetramisole hypersensitive" RELATED []
 is_a: WBPhenotype:0000845 ! levamisole response variant
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000421
@@ -3012,6 +3066,7 @@ def: "Animals fail to respond to the concentration of levamisole that elicits a 
 synonym: "Lev R" BROAD []
 synonym: "tetramisole resistant" RELATED []
 is_a: WBPhenotype:0000845 ! levamisole response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
 [Term]
@@ -3051,6 +3106,7 @@ id: WBPhenotype:0000427
 name: no cuticle
 def: "Animals lack the rigid external coating which is secreted by the hypodermis, seam and some interfacial epithelial cells (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000201 ! cuticle development variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000428
@@ -3150,8 +3206,8 @@ is_a: WBPhenotype:0000073 ! tail morphology variant
 id: WBPhenotype:0000442
 name: larval development retarded
 def: "The developmental progression of a larva over time, from its formation to its mature structure is delayed compared to control. The larva is the early, immature form of an animal between hatching and adulthood." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000438 ! retarded heterochronic variations
 is_a: WBPhenotype:0000750 ! larval development variant
+is_a: WBPhenotype:0000848 ! developmental delay
 
 [Term]
 id: WBPhenotype:0000443
@@ -3269,6 +3325,7 @@ def: "Animals exhibit variations in their response to paraquat compared to that 
 synonym: "methyl viologen response abnormal" RELATED []
 synonym: "paraquat response abnormal" NARROW []
 is_a: WBPhenotype:0000459 ! pesticide response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
@@ -3276,6 +3333,7 @@ id: WBPhenotype:0000461
 name: paraquat resistant
 def: "Animals fail to respond to the concentration of paraquat that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000460 ! paraquat response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000462
@@ -3283,6 +3341,7 @@ name: paraquat hypersensitive
 def: "Animals respond to paraquat at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 synonym: "reactive oxygen species hypersensitive" BROAD [WB:WBPaper00031296]
 is_a: WBPhenotype:0000460 ! paraquat response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000463
@@ -3374,7 +3433,7 @@ is_a: WBPhenotype:0000474 ! muscle attachment variant
 id: WBPhenotype:0000476
 name: progressive muscle detachment
 def: "The connection between cell(s) whose principal function is to provide contractile forces and its neighboring cells or tissues diminishes over time." [WB:WBPerson2021, WB:WBPerson557]
-is_a: WBPhenotype:0000474 ! muscle attachment variant
+is_a: WBPhenotype:0000475 ! muscle detached
 
 [Term]
 id: WBPhenotype:0000477
@@ -3446,24 +3505,28 @@ id: WBPhenotype:0000486
 name: colchicine hypersensitive
 def: "Animals respond to colchicine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000487
 name: colchicine resistant
 def: "Animals fail to respond to the concentration of colchicine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000488
 name: chloroquine hypersensitive
 def: "Animals respond to chloroquine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000489
 name: chloroquine resistant
 def: "Animals fail to respond to the concentration of chloroquine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000490
@@ -3563,7 +3626,7 @@ id: WBPhenotype:0000503
 name: endoreduplication variant
 def: "Any variation in the multiple rounds of DNA replication that take place without chromosome condensation, segregation or cytokinesis compared to control. In C. elegans this process is normally seen in intestinal nuclei during each larval lethargus which results in adult intestinal nuclei with 32 copies (32C) of each chromosome(Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "endoreduplication abnormal" NARROW []
-is_a: WBPhenotype:0000732 ! DNA metabolism variant
+is_a: WBPhenotype:0000433 ! DNA synthesis variant
 
 [Term]
 id: WBPhenotype:0000504
@@ -3675,7 +3738,7 @@ name: behavior phenotype
 def: "Variations in the specific actions or reactions in response to external or internal stimuli compared to that observed in control animals." [GO:0007610, WB:WBPerson557]
 synonym: "behavior abnormal" EXACT []
 synonym: "behavior variant" EXACT []
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0000519 ! physiology phenotype
 
 [Term]
 id: WBPhenotype:0000518
@@ -3683,7 +3746,7 @@ name: development phenotype
 def: "Variations in the progression of an integrated living unit (a cell, tissue, organ or organism) over time from an initial condition to a later condition compared to control animals." [GO:0032502, WB:WBPerson2021]
 synonym: "development abnormal" EXACT []
 synonym: "development variant" EXACT []
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0000519 ! physiology phenotype
 
 [Term]
 id: WBPhenotype:0000519
@@ -3699,7 +3762,7 @@ name: morphology phenotype
 def: "Animals exhibit variations in the form, structure or composition of any of its parts compared to control animals." [WB:WBPerson712]
 synonym: "morphology abnormal" EXACT []
 synonym: "morphology variant" EXACT []
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0000521
@@ -3708,7 +3771,8 @@ def: "Animals exhibit variations in the accumulation or expression of biochromes
 subset: phenotype_slim_wb
 synonym: "pigmentation abnormal" EXACT []
 synonym: "pigmentation variant" EXACT []
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0000520 ! morphology phenotype
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0000522
@@ -3730,6 +3794,7 @@ name: bleach response variant
 def: "Animals exhibit variations in their response to bleach compared to that observed in control animals." [WB:WBPerson557]
 synonym: "bleach response abnormal" NARROW []
 is_a: WBPhenotype:0001379 ! organism toxic chemical response variant
+is_a: WBPhenotype:0001620 ! organism oxidative stress response variant
 
 [Term]
 id: WBPhenotype:0000525
@@ -3747,6 +3812,7 @@ subset: phenotype_slim_wb
 synonym: "cell pigmentation abnormal" EXACT []
 synonym: "cell pigmentation variant" EXACT []
 is_a: WBPhenotype:0000521 ! pigmentation phenotype
+is_a: WBPhenotype:0000533 ! cell morphology variant
 
 [Term]
 id: WBPhenotype:0000527
@@ -3795,6 +3861,7 @@ name: body region morphology variant
 def: "Animals exhibit variations in the form, structure or composition of a discrete region of their anatomy compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "body region morphology abnormal" NARROW []
 is_a: WBPhenotype:0000535 ! organism morphology variant
+is_a: WBPhenotype:0002557 ! body region phenotype
 
 [Term]
 id: WBPhenotype:0000533
@@ -3803,6 +3870,7 @@ def: "Any variation in the form or composition of the basic structural and funct
 subset: phenotype_slim_wb
 synonym: "cell morphology abnormal" NARROW []
 is_a: WBPhenotype:0000520 ! morphology phenotype
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000534
@@ -3811,6 +3879,7 @@ def: "Animals exhibit variations in the structure or organization of any compone
 subset: phenotype_slim_wb
 synonym: "organ system morphology abnormal" NARROW []
 is_a: WBPhenotype:0000520 ! morphology phenotype
+is_a: WBPhenotype:0002554 ! organ system phenotype
 
 [Term]
 id: WBPhenotype:0000535
@@ -4194,6 +4263,7 @@ id: WBPhenotype:0000586
 name: bleach hypersensitive
 def: "Animals respond to bleach at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000524 ! bleach response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000587
@@ -4245,6 +4315,7 @@ id: WBPhenotype:0000593
 name: copper hypersensitive
 def: "Animals respond to copper at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000592 ! copper response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000594
@@ -4383,7 +4454,7 @@ name: excretory system physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the secretory system to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [GO:0003008, WB:WBPerson557, WB:WBPerson712]
 subset: phenotype_slim_wb
 synonym: "excretory system physiology abnormal" NARROW []
-is_a: WBPhenotype:0000575 ! organ system physiology phenotype
+is_a: WBPhenotype:0000609 ! excretory secretory system physiology variant
 
 [Term]
 id: WBPhenotype:0000611
@@ -4423,6 +4494,7 @@ def: "Animals exhibit variations in the structure or organization of the microtu
 synonym: "cilia morphology abnormal" NARROW []
 synonym: "defective dye filling of cilia" RELATED []
 is_a: WBPhenotype:0001526 ! ciliated neuron morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0000616
@@ -4430,6 +4502,7 @@ name: synapse morphology variant
 def: "Animals display variations in the appearance of the subcellular junctional structure composed of a presynaptic terminal directly opposite the post-synaptic target and separated by a synaptic cleft." [GO:0045202, WB:WBPaper00027305, WB:WBPerson712]
 synonym: "synapse morphology abnormal" NARROW []
 is_a: WBPhenotype:0000604 ! nervous system morphology variant
+is_a: WBPhenotype:0001657 ! cell junction variant
 
 [Term]
 id: WBPhenotype:0000617
@@ -4869,6 +4942,7 @@ id: WBPhenotype:0000671
 name: resistant to copper
 def: "Animals fail to respond to the concentration of copper that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to copper to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000592 ! copper response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000672
@@ -4890,6 +4964,7 @@ id: WBPhenotype:0000674
 name: slow development
 def: "The developmental progression of an animal, from its formation to its mature structure occurs over a longer time period compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "retarded development" RELATED []
+is_a: WBPhenotype:0000043 ! general pace of development variant
 is_a: WBPhenotype:0000438 ! retarded heterochronic variations
 
 [Term]
@@ -4966,6 +5041,7 @@ synonym: "Fgc" BROAD []
 synonym: "germline underproliferation" RELATED []
 is_a: WBPhenotype:0000823 ! germline proliferation variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000685
@@ -5053,6 +5129,7 @@ name: vulva morphology variant
 def: "Animals exhibit variations in the gross structure or organization of the reproductive organ required for depositing eggs and for influencing male mating behavior compared to control." [WB:WBPerson712]
 synonym: "vulva morphology abnormal" NARROW []
 is_a: WBPhenotype:0001335 ! hermaphrodite reproductive system morphology variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000696
@@ -5077,6 +5154,7 @@ subset: phenotype_slim_wb
 synonym: "underinduced" EXACT []
 synonym: "Vul" BROAD []
 is_a: WBPhenotype:0000219 ! vulval cell induction reduced
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000699
@@ -5093,6 +5171,7 @@ def: "Multiple vulva-like protrusions are present along the ventral side of the 
 synonym: "Muv" BROAD []
 synonym: "overinduced" EXACT []
 is_a: WBPhenotype:0000218 ! vulval cell induction increased
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000701
@@ -5124,6 +5203,7 @@ name: excretory canal morphology variant
 def: "Variations in the form or composition of structures made by the processes of the excretory canal cell compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "excretory canal morphology abnormal" NARROW []
 is_a: WBPhenotype:0000916 ! excretory cell morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000705
@@ -5165,6 +5245,7 @@ name: pharyngeal morphology variant
 def: "Variations in the form or composition of the mouthparts at the anterior end of the digestive tract which contain a series of radial muscles, related neurons and epithelial cells, and several gland cells which may aid in digestion compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "pharyngeal morphology abnormal" NARROW []
 is_a: WBPhenotype:0000598 ! alimentary system morphology variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000710
@@ -5172,6 +5253,7 @@ name: intestinal morphology variant
 def: "Animals exhibit variations in the form, structure or composition of the chain of cuboidal cells which form a central lumen lined by microvilli that allow the passage of food, compared to control. Food passes from the posterior pharynx to the intestine where it is digested and then on to the rectum which processes the waste products for excretion (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "intestinal morphology abnormal" NARROW []
 is_a: WBPhenotype:0000598 ! alimentary system morphology variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0000711
@@ -5185,6 +5267,7 @@ name: germ cell ionizing radiation response variant
 def: "Germ cells exhibit variations in their response to ionizing radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "germ cell ionizing radiation response abnormal" NARROW []
 is_a: WBPhenotype:0000987 ! germ cell physiology variant
+is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000713
@@ -5207,6 +5290,7 @@ def: "Animals exhibit a greater number of embryonic muscle cells compared to con
 synonym: "Mex" BROAD [WB:WBPaper00001584]
 is_a: WBPhenotype:0000622 ! muscle system development variant
 is_a: WBPhenotype:0002175 ! cell number increased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0000716
@@ -5221,7 +5305,7 @@ name: gene expression variant
 def: "Variations in the processes that convert a gene's sequence into a mature gene product or products (proteins or RNA), compared to control." [GO:0010467, WB:WBPerson2021]
 subset: phenotype_slim_wb
 synonym: "gene expression abnormal" NARROW []
-is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0001696 ! biosynthesis variant
 
 [Term]
 id: WBPhenotype:0000718
@@ -5306,6 +5390,7 @@ name: exocytosis variant
 def: "Variations in the process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle by fusion of the vesicle with the plasma membrane of a cell, compared to control." [GO:0006887, WB:WBPerson2021]
 synonym: "exocytosis abnormal" NARROW []
 is_a: WBPhenotype:0000258 ! cell secretion variant
+is_a: WBPhenotype:0001752 ! vesicle trafficking variant
 
 [Term]
 id: WBPhenotype:0000729
@@ -5329,7 +5414,6 @@ id: WBPhenotype:0000731
 name: germ cell hypersensitive ionizing radiation
 def: "Germ cells exhibit increased sensitivity to the effects of ion producing radiation compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000712 ! germ cell ionizing radiation response variant
-is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000732
@@ -5351,7 +5435,7 @@ id: WBPhenotype:0000734
 name: hypodermal cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the hypodermal system to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "hypodermal cell physiology abnormal" NARROW []
-is_a: WBPhenotype:0000608 ! epithelial system physiology variant
+is_a: WBPhenotype:0000986 ! epithelial cell physiology variant
 
 [Term]
 id: WBPhenotype:0000735
@@ -5372,7 +5456,6 @@ id: WBPhenotype:0000737
 name: germ cell resistant ionizing radiation
 def: "Germ cells fail to respond to the dosage of ion producing radiation that elicits a response in control animals. Alternatively, germ cells require a higher dosage or a longer exposure to ion producing radiation to elicit the same response as control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000712 ! germ cell ionizing radiation response variant
-is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0000738
@@ -5402,6 +5485,7 @@ id: WBPhenotype:0000741
 name: DNA damage checkpoint variant
 def: "Mitotic cells exhibit variations in the execution of cell-cycle arrest in response to DNA damage." [WB:WBPaper00029085, WB:WBPerson2021]
 synonym: "DNA damage checkpoint abnormal" NARROW []
+is_a: WBPhenotype:0000142 ! cell stress response variant
 is_a: WBPhenotype:0000740 ! cell cycle variant
 
 [Term]
@@ -5678,6 +5762,7 @@ synonym: "germ cell meiosis abnormal" RELATED []
 synonym: "germ cell meiosis variant" RELATED []
 synonym: "Mei" RELATED []
 synonym: "meiosis abnormal" NARROW []
+is_a: WBPhenotype:0000740 ! cell cycle variant
 is_a: WBPhenotype:0000746 ! cell division variant
 is_a: WBPhenotype:0000812 ! germ cell development variant
 
@@ -5778,12 +5863,14 @@ id: WBPhenotype:0000789
 name: fluoxetine hypersensitive
 def: "Animals respond to fluoxetine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000790
 name: fluoxetine resistant
 def: "Animals fail to respond to the concentration of fluoxetine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000791
@@ -5892,6 +5979,7 @@ id: WBPhenotype:0000805
 name: tail development variant
 def: "Any variation in the process whose specific outcome is the progression of the tail over time, from its formation to the mature structure, compared to control. The tail includes the posterior region that spans from the rectum to the end." [WB:WBPerson2021]
 synonym: "tail development abnormal" NARROW []
+is_a: WBPhenotype:0000528 ! body region development variant
 is_a: WBPhenotype:0000579 ! organism segment development variant
 
 [Term]
@@ -6071,6 +6159,7 @@ id: WBPhenotype:0000829
 name: Q lineage variant
 def: "The descendants of Q L or QR cells exhibit altered developmental programs compared to their counterparts in control animals." [WB:WBPerson2021]
 synonym: "Q lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000825 ! postembryonic cell lineage variant
 
 [Term]
@@ -6078,6 +6167,7 @@ id: WBPhenotype:0000830
 name: B lineage variant
 def: "The descendants of the B cell (which divides only in the males) exhibit altered developmental programs compared to their counterparts in control animals." [WB:WBPerson2021]
 synonym: "B lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000809 ! male specific lineage variant
 
 [Term]
@@ -6092,6 +6182,7 @@ id: WBPhenotype:0000832
 name: C lineage variant
 def: "The descendants of the C blastomere exhibit altered developmental programs compared to their counterparts in control animals." [WB:WBPaper00001584, WB:WBPerson2021]
 synonym: "C lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000824 ! embryonic cell lineage variant
 
 [Term]
@@ -6106,6 +6197,7 @@ id: WBPhenotype:0000834
 name: E lineage variant
 def: "The descendants of the E blastomere exhibit altered developmental programs compared to their counterparts in control animals." [WB:WBPaper00002870, WB:WBPerson2021]
 synonym: "E lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000824 ! embryonic cell lineage variant
 
 [Term]
@@ -6259,6 +6351,7 @@ name: pseudocoelom development variant
 def: "Variations in the progression of the fluid-filled space which separates the body wall from internal organs over time from its initial formation to its mature form compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "pseudocoelom development abnormal" NARROW []
 is_a: WBPhenotype:0000200 ! pericellular component development variant
+is_a: WBPhenotype:0000528 ! body region development variant
 
 [Term]
 id: WBPhenotype:0000856
@@ -6309,6 +6402,7 @@ synonym: "muscle belly development abnormal" RELATED []
 synonym: "somatic muscle development abnormal" RELATED []
 synonym: "striated muscle development abnormal" RELATED []
 is_a: WBPhenotype:0000921 ! striated muscle development variant
+is_a: WBPhenotype:0001292 ! body wall muscle physiology variant
 
 [Term]
 id: WBPhenotype:0000862
@@ -6321,6 +6415,7 @@ id: WBPhenotype:0000863
 name: male fertility reduced
 def: "Males exhibit a reduction in the production of new individuals owing to defects in sperm competence and/or function compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000784 ! male fertility variant
+is_a: WBPhenotype:0001384 ! fertility reduced
 
 [Term]
 id: WBPhenotype:0000864
@@ -6334,6 +6429,7 @@ name: amphid sheath cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for a amphid sheath cell to carry out its normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson557]
 synonym: "amphid sheath cell physiology abnormal" NARROW []
 is_a: WBPhenotype:0000849 ! amphid physiology variant
+is_a: WBPhenotype:0000975 ! neuronal sheath cell physiology variant
 
 [Term]
 id: WBPhenotype:0000866
@@ -6387,6 +6483,7 @@ name: G1 checkpoint variant
 def: "Mitotic cells exhibit variations during the passage through a cell cycle control point late in the G1 phase of the mitotic cell cycle just before entry into S phase, compared to control cells." [GO:0007089, WB:WBPerson557, WB:WBPerson712]
 synonym: "G1 checkpoint abnormal" NARROW []
 is_a: WBPhenotype:0000741 ! DNA damage checkpoint variant
+is_a: WBPhenotype:0001743 ! mitosis variant
 
 [Term]
 id: WBPhenotype:0000874
@@ -6394,6 +6491,7 @@ name: G2 checkpoint variant
 def: "Mitotic cells exhibit variations during the passage through a cell cycle control point late in the G2 phase of the mitotic cell cycle just before entry into M phase, nuclear division, compared to control cells." [GO:0000075, WB:WBPerson557, WB:WBPerson712]
 synonym: "G2 checkpoint abnormal" NARROW []
 is_a: WBPhenotype:0000741 ! DNA damage checkpoint variant
+is_a: WBPhenotype:0001743 ! mitosis variant
 
 [Term]
 id: WBPhenotype:0000875
@@ -6401,6 +6499,7 @@ name: S phase checkpoint variant
 def: "Mitotic cells exhibit variations during the passage through a cell cycle control point late in the S phase of the mitotic cell cycle, which ensures DNA replication is complete, compared to control cells." [GO:0033314, WB:WBPerson712]
 synonym: "S phase checkpoint abnormal" NARROW []
 is_a: WBPhenotype:0000741 ! DNA damage checkpoint variant
+is_a: WBPhenotype:0001743 ! mitosis variant
 
 [Term]
 id: WBPhenotype:0000876
@@ -6465,6 +6564,7 @@ def: "Animals exhibit variations in the structure or organization of either of a
 comment: WBbt:0005671.
 synonym: "AWB morphology abnormal" NARROW []
 is_a: WBPhenotype:0000256 ! amphid neuron morphology variant
+is_a: WBPhenotype:0001526 ! ciliated neuron morphology variant
 
 [Term]
 id: WBPhenotype:0000885
@@ -6608,7 +6708,7 @@ id: WBPhenotype:0000903
 name: marginal cell morphology variant
 def: "Any variation in the morphological appearance of marginal cells compared to control animals." [WB:cab]
 synonym: "marginal cell morphology abnormal" NARROW []
-is_a: WBPhenotype:0002108 ! cell type morphology variant
+is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
 
 [Term]
 id: WBPhenotype:0000904
@@ -6640,6 +6740,7 @@ name: anus morphology variant
 def: "Any variation in the structural appearance of the caudal opening of the rectum in the tail compared to control animals." [WB:WBPerson557]
 synonym: "anus morphology abnormal" NARROW []
 is_a: WBPhenotype:0000598 ! alimentary system morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000908
@@ -6670,6 +6771,7 @@ id: WBPhenotype:0000911
 name: coelomocyte morphology variant
 def: "Any variation in the morphological appearance of coelomocytes compared to control animals." [WB:WBPerson557]
 synonym: "coelomocyte morphology abnormal" NARROW []
+is_a: WBPhenotype:0000533 ! cell morphology variant
 is_a: WBPhenotype:0000599 ! coelomic system morphology variant
 
 [Term]
@@ -6686,6 +6788,7 @@ name: basal lamina morphology variant
 def: "Any variation in the morphological appearance of the basal lamina compared to control animals." [WB:WBPerson557]
 synonym: "basal lamina morphology abnormal" NARROW []
 is_a: WBPhenotype:0000600 ! epithelial system morphology variant
+is_a: WBPhenotype:0001523 ! extracellular matrix variant
 
 [Term]
 id: WBPhenotype:0000914
@@ -6693,6 +6796,7 @@ name: excretory gland cell morphology variant
 def: "Animals exhibit variations in the form, structure or composition of a pair of large cells in the head that fuse to form a single gland whose contents are released into the excretory duct through a specialized secretory membrane, compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "excretory gland cell morphology abnormal" NARROW []
 is_a: WBPhenotype:0000601 ! excretory secretory system morphology variant
+is_a: WBPhenotype:0000901 ! gland cell morphology variant
 
 [Term]
 id: WBPhenotype:0000915
@@ -6707,6 +6811,7 @@ name: excretory cell morphology variant
 def: "Any variation in the morphological appearance of the excretory cell compared to control animals." [WB:WBPerson557]
 synonym: "excretory canal cell morphology abnormal" RELATED []
 synonym: "excretory cell morphology abnormal" NARROW []
+is_a: WBPhenotype:0000533 ! cell morphology variant
 is_a: WBPhenotype:0000601 ! excretory secretory system morphology variant
 
 [Term]
@@ -6715,6 +6820,7 @@ name: excretory duct cell morphology variant
 def: "Any variation in the morphological appearance of the excretory duct cell compared to control animals." [WB:WBPerson557]
 synonym: "excretory duct cell morphology abnormal" NARROW []
 is_a: WBPhenotype:0000601 ! excretory secretory system morphology variant
+is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
 
 [Term]
 id: WBPhenotype:0000918
@@ -6722,6 +6828,7 @@ name: excretory socket cell morphology variant
 def: "Any variation in the morphological appearance of the excretory socket cell compared to control animals." [WB:WBPerson557]
 synonym: "excretory socket cell morphology abnormal" NARROW []
 is_a: WBPhenotype:0000601 ! excretory secretory system morphology variant
+is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
 
 [Term]
 id: WBPhenotype:0000919
@@ -6746,27 +6853,30 @@ def: "Variations in the progression of muscle cells that contain fibers that are
 comment: Possible XP.
 synonym: "striated muscle development abnormal" NARROW []
 is_a: WBPhenotype:0000622 ! muscle system development variant
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 
 [Term]
 id: WBPhenotype:0000922
 name: male longitudinal muscle development variant
 def: "Any variation in the progression of somatic (striated) muscles that run longitudinally in males over time from its initial formation to its mature form compared to control. In C. elegans males have 3 additional sets of sex-specific longitudinal muscles (anterior and posterior outer, anterior and posterior inner, and caudal) that contribute to the body wall musculature (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male longitudinal muscle development abnormal" NARROW []
+is_a: WBPhenotype:0000860 ! nonstriated muscle development variant
 is_a: WBPhenotype:0000921 ! striated muscle development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0000923
 name: nonstriated muscle morphology variant
 def: "Any variation in the morphological appearance of the nonstriated muscle compared to control animals." [WB:WBPerson557]
 synonym: "nonstriated muscle morphology abnormal" NARROW []
-is_a: WBPhenotype:0000603 ! muscle system morphology variant
+is_a: WBPhenotype:0000904 ! muscle cell morphology variant
 
 [Term]
 id: WBPhenotype:0000924
 name: striated muscle morphology variant
 def: "Any variation in the morphological appearance of the striated muscle compared to control animals." [WB:WBPerson557]
 synonym: "striated muscle morphology abnormal" NARROW []
-is_a: WBPhenotype:0000603 ! muscle system morphology variant
+is_a: WBPhenotype:0000904 ! muscle cell morphology variant
 
 [Term]
 id: WBPhenotype:0000925
@@ -6788,6 +6898,7 @@ id: WBPhenotype:0000927
 name: male longitudinal muscle morphology variant
 def: "Any variation in the morphological appearance of the male longitudinal muscle compared to control animals." [WB:WBPerson557]
 synonym: "male longitudinal muscle morphology abnormal" NARROW []
+is_a: WBPhenotype:0000923 ! nonstriated muscle morphology variant
 is_a: WBPhenotype:0000924 ! striated muscle morphology variant
 
 [Term]
@@ -6824,12 +6935,14 @@ id: WBPhenotype:0000932
 name: bisphenol A hypersensitive
 def: "Animals respond to bisphenol A at a lower concentration or a shorter exposure time compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000931 ! bisphenol A response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0000933
 name: MS lineage variant
 def: "The descendants of the MS blastomere exhibit any variation in developmental programs compared to their counterparts in control animals." [WB:WBPaper00002330, WB:WBPerson2021]
 synonym: "MS lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000824 ! embryonic cell lineage variant
 
 [Term]
@@ -6845,6 +6958,7 @@ id: WBPhenotype:0000935
 name: D lineage variant
 def: "The descendants of the D blastomere exhibit any variation in developmental programs compared to their counterparts in control animals." [WB:WBPaper00002572, WB:WBPerson2021]
 synonym: "D lineage abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000824 ! embryonic cell lineage variant
 
 [Term]
@@ -6937,13 +7051,16 @@ name: cuticle morphology variant
 def: "Any variation in the appearance or structure of the rigid external coating which is secreted by the hypodermis, seam and some interfacial epithelial cells compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "cuticle morphology abnormal" NARROW []
 is_a: WBPhenotype:0000912 ! pericellular component morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000949
 name: pseudocoelom morphology variant
 def: "Any variation in the appearance of the body cavity compared to control. In C. elegans , an aberrancy in the psedocoelom can involve an accumulation of fluids or fluorescent reporters." [WB:WBPerson712]
 synonym: "pseudocoelom morphology abnormal" NARROW []
+is_a: WBPhenotype:0000532 ! body region morphology variant
 is_a: WBPhenotype:0000912 ! pericellular component morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000950
@@ -7044,12 +7161,14 @@ name: male pigmentation variant
 def: "Males exhibit variations in the accumulation or expression of biochromes or any other substances that alter transparency/translucency of the organism compared to control animals." [WB:WBPerson557]
 synonym: "male pigmentation abnormal" NARROW []
 is_a: WBPhenotype:0000527 ! organism pigmentation phenotype
+is_a: WBPhenotype:0001024 ! male morphology variant
 
 [Term]
 id: WBPhenotype:0000964
 name: DMPP resistant
 def: "Animals fail to respond to the concentration of DMPP that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000681 ! DMPP response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0000965
@@ -7078,6 +7197,7 @@ id: WBPhenotype:0000968
 name: tail spike variant
 def: "Any variation in the structure or appearance of the thin cuticle specialization found at the extreme posterior end of the tail compared to control." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000073 ! tail morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0000969
@@ -7085,6 +7205,7 @@ name: accessory cell morphology variant
 def: "Animals exhibit variations in the structure, organization or placement of the cells that support sensory neurons, compared to that observed in control animals. In C. elegans, this category collectively refers to socket cells, sheath cells, and structural cells, or their processes." [WB:WBPerson557, WB:WBPerson712]
 comment: WBbt:0005762.
 synonym: "accessory cell morphology abnormal" NARROW []
+is_a: WBPhenotype:0000533 ! cell morphology variant
 is_a: WBPhenotype:0000604 ! nervous system morphology variant
 
 [Term]
@@ -7109,6 +7230,7 @@ def: "Animals exhibit variations in the structure or composition of the glia-lik
 synonym: "neuronal sheath cell morphology abnormal" NARROW []
 synonym: "sensilium sheath cell morphology abnormal" NARROW []
 synonym: "sensilium sheath cell morphology variant" EXACT []
+is_a: WBPhenotype:0000899 ! epithelial cell morphology variant
 is_a: WBPhenotype:0000969 ! accessory cell morphology variant
 is_a: WBPhenotype:0001528 ! sensillum accessory cell morphology variant
 
@@ -7123,6 +7245,7 @@ id: WBPhenotype:0000974
 name: accessory cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required by a subset of interfacial cells to carry out its normal function or be able to perceive and respond to stimuli, compared to control. It can refer to socket cells, sheath cells and structural cells or their processes (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "accessory cell physiology abnormal" NARROW []
+is_a: WBPhenotype:0000536 ! cell physiology phenotype
 is_a: WBPhenotype:0000612 ! nervous system physiology variant
 
 [Term]
@@ -7131,6 +7254,7 @@ name: neuronal sheath cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for a neuronal sheath cell to carry out its normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson557]
 synonym: "neuronal sheath cell physiology abnormal" NARROW []
 is_a: WBPhenotype:0000974 ! accessory cell physiology variant
+is_a: WBPhenotype:0000986 ! epithelial cell physiology variant
 
 [Term]
 id: WBPhenotype:0000976
@@ -7138,6 +7262,7 @@ name: ventral cord patterning variant
 def: "Any variation in the developmental process that results in the creation of defined areas or spaces within the ventral cord to which cells respond and eventually are instructed to differentiate compared to control." [GO:0007389, WB:WBPerson2021, WB:WBPerson557]
 synonym: "ventral cord patterning abnormal" NARROW []
 is_a: WBPhenotype:0000515 ! ventral nerve cord development variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0000977
@@ -7151,6 +7276,7 @@ id: WBPhenotype:0000978
 name: spermatheca physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the spermatheca to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "spermatheca physiology abnormal" NARROW []
+is_a: WBPhenotype:0000929 ! hermaphrodite physiology variant
 is_a: WBPhenotype:0001197 ! somatic gonad physiology variant
 
 [Term]
@@ -7175,6 +7301,7 @@ synonym: "spermatocyte division abnormal" NARROW []
 synonym: "spermatocyte division variant" EXACT []
 synonym: "spermatocyte meiosis abnormal" NARROW []
 is_a: WBPhenotype:0000670 ! spermatogenesis variant
+is_a: WBPhenotype:0000987 ! germ cell physiology variant
 
 [Term]
 id: WBPhenotype:0000982
@@ -7210,6 +7337,7 @@ name: epithelial cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the epithelial cell to carry out its normal functions or activities, compared to control animals." [GO:0009987, WB:WBPerson557, WB:WBPerson712]
 synonym: "epithelial cell physiology abnormal" NARROW []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000608 ! epithelial system physiology variant
 
 [Term]
 id: WBPhenotype:0000987
@@ -7230,7 +7358,8 @@ id: WBPhenotype:0000989
 name: marginal cell physiology variant
 def: "Animals exhibit deviations at the cellular level, but not necessarily restricted to a single cell, in any physical or chemical process required for a marginal cell to carry out its normal function and activities or be able to perceive and respond to stimuli." [GO:0009987, WB:WBPerson557]
 synonym: "marginal cell physiology abnormal" NARROW []
-is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000986 ! epithelial cell physiology variant
+is_a: WBPhenotype:0001190 ! pharyngeal physiology variant
 
 [Term]
 id: WBPhenotype:0000990
@@ -7238,6 +7367,7 @@ name: muscle cell physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the muscle cell to carry out its normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [GO:0009987, WB:WBPerson557, WB:WBPerson712]
 synonym: "muscle cell physiology abnormal" NARROW []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000611 ! muscle system physiology variant
 
 [Term]
 id: WBPhenotype:0000991
@@ -7375,6 +7505,7 @@ id: WBPhenotype:0001009
 name: developmental pigmentation variant
 def: "Animals exhibit variations in the accumulation or expression of biochromes or any other substances that alter transparency/translucency of a particular developmental stage of the amimal compared to control animals." [WB:WBPerson557]
 synonym: "developmental pigmentation abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0000527 ! organism pigmentation phenotype
 
 [Term]
@@ -7397,7 +7528,7 @@ name: organism pathogen response variant
 def: "Animals exhibit variations in their response to disease causing agents, compared to control. Pathogen response includes prevention, damage control and recovery from the infection caused by the attack." [GO:0006952, WB:WBPaper00032196, WB:WBPerson2021, WB:WBPerson712]
 synonym: "bacterial load variant" NARROW []
 synonym: "organism pathogen response abnormal" NARROW []
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0000067 ! organism stress response variant
 
 [Term]
 id: WBPhenotype:0001013
@@ -7486,6 +7617,7 @@ name: male morphology variant
 def: "Animals exhibit variations in the outcome of morphogenic processes required for formation or proper placement of sex-specific structures that distinguish the animal as a male in the population, from that observed for control males." [GO:0009886, WB:WBPerson712]
 synonym: "male morphology abnormal" NARROW []
 is_a: WBPhenotype:0001023 ! sexually dimorphic morphology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0001025
@@ -7493,6 +7625,7 @@ name: hermaphrodite morphology variant
 def: "Animals exhibit variations in the outcome of morphogenic processes required for formation or proper placement of sex-specific structures that distinguish the animal as a hermaphrodite in the population, from that observed for control hermaphrodites." [GO:0009886, WB:WBPerson712]
 synonym: "hermaphrodite morphology abnormal" NARROW []
 is_a: WBPhenotype:0001023 ! sexually dimorphic morphology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0001026
@@ -7543,6 +7676,7 @@ id: WBPhenotype:0001031
 name: pronuclear migration reduced early emb
 def: "Any variation in the movement/fusion of pronuclei in the fertilized oocyte compared to control. For example, lack of male pronuclear migration, female pronuclear migration variable, sometimes multiple female pronuclei, no or small spindle." [WB:cab, WB:cgc7141]
 synonym: "Emb" BROAD []
+is_a: WBPhenotype:0000511 ! nuclear positioning variant
 is_a: WBPhenotype:0001152 ! pronuclear migration defective early emb
 
 [Term]
@@ -7630,6 +7764,7 @@ is_a: WBPhenotype:0001100 ! early embryonic lethal
 id: WBPhenotype:0001042
 name: neuron function reduced
 def: "Neurons show impaired ability in the detection, transmission, coordination or their response to information about an animal's internal and external environments." [WB:WBPerson2021, WB:WBPerson557]
+is_a: WBPhenotype:0002552 ! cell phenotype
 is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
@@ -7841,7 +7976,7 @@ id: WBPhenotype:0001072
 name: response to food variant
 def: "Any variation in the state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) in response to a food stimulus, compared to control." [GO:0032094, WB:WBPerson2021]
 synonym: "response to food abnormal" NARROW []
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0001073
@@ -7864,6 +7999,8 @@ name: vulval muscle physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the vulva muscle system to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "vulval muscle physiology abnormal" NARROW []
 is_a: WBPhenotype:0000613 ! reproductive system physiology variant
+is_a: WBPhenotype:0000929 ! hermaphrodite physiology variant
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 
 [Term]
 id: WBPhenotype:0001076
@@ -8008,6 +8145,7 @@ id: WBPhenotype:0001095
 name: organism high sodium chloride hypersensitive
 def: "Animals respond to sodium chloride at a lower concentration or a shorter exposure compared to control animals. In C. elegans, this is often assayed through generation time and progeny number." [pmid:16027367, WB:cab]
 is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001096
@@ -8316,12 +8454,14 @@ name: embryonic morphology variant
 def: "Animals exhibit variations in the form, structure or composition of any of its parts during any developmental stage ranging from zygote formation to hatching compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "embryonic morphology abnormal" NARROW []
 is_a: WBPhenotype:0000037 ! egg morphology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0001137
 name: embryos small early emb
 def: "Embryos are produced that are less than fifty percent of the size of control embryos." [WB:cab, WB:WBPaper00005599]
 synonym: "Emb" BROAD []
+is_a: WBPhenotype:0000229 ! small
 is_a: WBPhenotype:0001135 ! embryonic morphology defective early emb
 
 [Term]
@@ -8472,6 +8612,7 @@ name: pronuclear size defective early emb
 def: "Maternal or paternal pronucleus is either too small or too large." [WB:cab, WB:cgc5599]
 synonym: "Emb" BROAD []
 synonym: "pronuclear size abnormal" NARROW []
+is_a: WBPhenotype:0001026 ! nuclear morphology variation early emb
 is_a: WBPhenotype:0001159 ! pronuclear morphology defective early emb
 
 [Term]
@@ -8518,6 +8659,7 @@ name: pronuclear number defective early emb
 def: "There are more than two pronuclei in the inviable embryo." [WB:cab, WB:WBPerson1815]
 synonym: "Emb" BROAD []
 synonym: "pronuclear number abnormal" NARROW []
+is_a: WBPhenotype:0001142 ! nuclear number defective early emb
 is_a: WBPhenotype:0001151 ! pronucleus centrosomes defective early emb
 
 [Term]
@@ -8738,6 +8880,7 @@ id: WBPhenotype:0001191
 name: pharyngeal muscle physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for muscles in the pharynx to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "pharyngeal muscle physiology abnormal" NARROW []
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 is_a: WBPhenotype:0001190 ! pharyngeal physiology variant
 
 [Term]
@@ -8784,6 +8927,8 @@ id: WBPhenotype:0001198
 name: somatic sheath physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the somatic sheath system to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "somatic sheath physiology abnormal" NARROW []
+is_a: WBPhenotype:0000929 ! hermaphrodite physiology variant
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 is_a: WBPhenotype:0001197 ! somatic gonad physiology variant
 
 [Term]
@@ -8811,11 +8956,13 @@ name: nicotine hypersensitive
 def: "Animals respond to nicotine at lower concentrations or shorter exposure compared to control. Nicotine is a cholinergic agonist." [WB:cab, WB:cgc7388, WB:WBPerson557]
 is_a: WBPhenotype:0001573 ! nicotine response variant
 is_a: WBPhenotype:0001579 ! cholinergic agonist hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001203
 name: nicotine resistant
 def: "Animals fail to respond to the concentration of nicotine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:cab, WB:cgc7388, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001573 ! nicotine response variant
 is_a: WBPhenotype:0001578 ! cholinergic agonist resistant
 
@@ -8824,6 +8971,7 @@ id: WBPhenotype:0001204
 name: muscimol resistant
 def: "Animals fail to respond to the concentration of muscimol that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0002047 ! muscimol response variant
 
 [Term]
@@ -8831,6 +8979,7 @@ id: WBPhenotype:0001205
 name: muscimol hypersensitive
 def: "Animals respond to muscimol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002047 ! muscimol response variant
 
 [Term]
@@ -8977,6 +9126,7 @@ name: phasmid socket absent
 def: "Animals are missing the interfacial hypodermal cell (socket cell) of the phasmid sensillum pore." [WB:WBPaper00000938, WB:WBPaper00004350, WB:WBPaper00026656, WB:WBPerson712]
 synonym: "Psa" RELATED []
 is_a: WBPhenotype:0001527 ! amphid phasmid sensillum morphology variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001226
@@ -8996,6 +9146,7 @@ id: WBPhenotype:0001228
 name: alae absent
 def: "Animals lack the small linear ridges running along the lateral lines of the cuticle, lengthwise along the body (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000202 ! alae variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0001229
@@ -9065,6 +9216,7 @@ name: male mating latency variant
 def: "Any variation in the length of time required for a male to find a mate and initiate the search for the vulva. In C. elegans, the latency period includes the time males spend to find a hermaphrodite and pause to press its ventral side against the surface of the hermaphrodite and initiate a backing up search for the vulva." [pmid:16624900, WB:cab]
 synonym: "male mating latency abnormal" NARROW []
 is_a: WBPhenotype:0000648 ! male mating variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0001239
@@ -9301,7 +9453,7 @@ id: WBPhenotype:0001273
 name: organism heat response variant
 def: "Any variation in the state or activity of an organism (in terms of movement, gene expression, etc.) in response to heat (high temperatures above the optimal temperature for that organism), compared to control." [GO:0009408, WB:WBPerson2021]
 synonym: "organism heat response abnormal" NARROW []
-is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000146 ! organism temperature response variant
 
 [Term]
 id: WBPhenotype:0001274
@@ -9429,7 +9581,7 @@ id: WBPhenotype:0001292
 name: body wall muscle physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for cells as a collective unit of the body wall muscle system to carry out their normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson712]
 synonym: "body wall muscle physiology abnormal" NARROW []
-is_a: WBPhenotype:0000611 ! muscle system physiology variant
+is_a: WBPhenotype:0000990 ! muscle cell physiology variant
 
 [Term]
 id: WBPhenotype:0001293
@@ -9438,6 +9590,7 @@ def: "Animals exhibit variations in any physical or chemical process required fo
 synonym: "larval physiology abnormal" EXACT []
 synonym: "larval physiology variant" EXACT []
 is_a: WBPhenotype:0000576 ! organism physiology phenotype
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0001294
@@ -9457,6 +9610,7 @@ name: lannate resistant
 def: "Animals fail to respond to the concentration of lannate that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 synonym: "methomyl resistant" EXACT []
 is_a: WBPhenotype:0001289 ! acetylcholinesterase inhibitor resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001297
@@ -9485,6 +9639,7 @@ name: germ cell cytoplasmic morphology variant
 def: "Any variation in the composition or structure of the contents within a germ cell, excluding the plasma membrane and nucleus, compared to control. Germ cells include sperm, oocytes, and their precursors." [GO:0005737, WB:WBPerson2021, WB:WBPerson557]
 synonym: "germ cell cytoplasmic morphology abnormal" NARROW []
 is_a: WBPhenotype:0000900 ! germ cell morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001301
@@ -9556,6 +9711,7 @@ name: neuron positioning variant
 def: "The placement of neuronal cells, as a whole or of a specific class of neuron in the animal, deviates from that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "neuron positioning abnormal" NARROW []
 is_a: WBPhenotype:0000604 ! nervous system morphology variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001311
@@ -9569,6 +9725,7 @@ name: neuron number variant
 def: "The quantity of neuronal cells, as a whole or of a specific class of neuron in the animal deviates from that observed in control animals." [WB:WBPaper00027711, WB:WBPerson712]
 synonym: "neuron number abnormal" NARROW []
 is_a: WBPhenotype:0000604 ! nervous system morphology variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001313
@@ -9576,6 +9733,7 @@ name: uterine muscle variant
 def: "Any variation in the progression of the sex-specific muscles of the hermaphrodite, over time, whose contractions squeeze on the uterus to help move eggs towards the vulval opening compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "uterine muscle abnormal" NARROW []
 is_a: WBPhenotype:0000282 ! hermaphrodite sex muscle development variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0001314
@@ -9583,6 +9741,7 @@ name: vulval muscle variant
 def: "Any variation in the progression of the sex-specific muscles in the hermaphrodite, over time, that are specialized for egg-laying compared to control. In C. elegans the contractions of the vulval muscles open the lips of the vulva to help in expelling an egg from the uterus (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "vulval muscle abnormal" NARROW []
 is_a: WBPhenotype:0000282 ! hermaphrodite sex muscle development variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0001315
@@ -9654,6 +9813,7 @@ name: cell ionizing radiation response variant
 def: "Cells exhibit variations in their response to ionizing radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell ionizing radiation response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000686 ! organism ionizing radiation response variant
 
 [Term]
 id: WBPhenotype:0001325
@@ -9666,6 +9826,7 @@ id: WBPhenotype:0001326
 name: cell gamma ray response variant
 def: "Cells exhibit variations in their response to gamma ray radiation compared to that observed in control animals." [WB:WBPerson557]
 synonym: "cell gamma ray response abnormal" NARROW []
+is_a: WBPhenotype:0000497 ! organism gamma ray response variant
 is_a: WBPhenotype:0001324 ! cell ionizing radiation response variant
 
 [Term]
@@ -9748,6 +9909,7 @@ id: WBPhenotype:0001338
 name: phentolamine resistant
 def: "Animals fail to respond to the concentration of phentolamine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001337 ! adrenergic receptor antagonist response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001339
@@ -9796,6 +9958,7 @@ id: WBPhenotype:0001345
 name: cytoskeleton organization biogenesis variant
 def: "Animals exhibit variations in the form, structure, composition or arrangement of any of the various filamentous elements that form the internal framework of cells, compared to control. The various elements of the cytoskeleton not only serve in the maintenance of cellular shape but also have roles in other cellular functions, including cellular movement, cell division, endocytosis, and movement of organelles." [GO:0005856, WB:WBPerson2021, WB:WBPerson557]
 synonym: "cytoskeleton organization biogenesis abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 
 [Term]
@@ -9870,6 +10033,7 @@ name: gonad morphology variant
 def: "Variations in the form or composition of a specialized tissue of the reproductive tract that produces the male or female gametes compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "gonad morphology abnormal" NARROW []
 is_a: WBPhenotype:0000605 ! reproductive system morphology variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0001356
@@ -9884,12 +10048,14 @@ name: male gonad morphology variant
 def: "Variations in the form or composition of a specialized tissue of the reproductive tract that produces the male gametes compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male gonad morphology abnormal" NARROW []
 is_a: WBPhenotype:0001024 ! male morphology variant
+is_a: WBPhenotype:0001355 ! gonad morphology variant
 
 [Term]
 id: WBPhenotype:0001358
 name: male nervous system morphology variant
 def: "Male animals exhibit variations in the structure or organization of any component that is part of the complement of organ tissues that serve to detect, relay and coordinate information about an animal's internal and external environments and to initiate and integrate its effector responses and activities, compared to that in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "male nervous system morphology abnormal" NARROW []
+is_a: WBPhenotype:0000604 ! nervous system morphology variant
 is_a: WBPhenotype:0001024 ! male morphology variant
 
 [Term]
@@ -9898,6 +10064,7 @@ name: proctodeum morphology variant
 def: "Animals exhibit variations in the structure and organization of the chamber in the male tail that extends from the termination of four canals (vas deferens, gut, and left and right spicule channels) to just before the cloaca, from that observed in control animals." [WB:WBPaper00027278, WB:WBPerson712]
 synonym: "proctodeum morphology abnormal" NARROW []
 is_a: WBPhenotype:0000070 ! male tail morphology variant
+is_a: WBPhenotype:0000910 ! rectal morphology variant
 
 [Term]
 id: WBPhenotype:0001360
@@ -9951,6 +10118,8 @@ id: WBPhenotype:0001367
 name: proctodeum development variant
 def: "Any variation in the process whose specific outcome is the progression of the male proctodeum over time, from its formation to the mature structure, compared to control. The union of the vas deferens and the intestine give rise to the proctodeum which contains copulatory spicules." [WB:WBPerson2021]
 synonym: "proctodeum development abnormal" NARROW []
+is_a: WBPhenotype:0000347 ! rectal development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 is_a: WBPhenotype:0001297 ! male tail development variant
 
 [Term]
@@ -9958,6 +10127,7 @@ id: WBPhenotype:0001368
 name: spermatheca absent
 def: "Animals lack the somatic gonad structure that connects the distal gonad arm to the uterus." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0001662 ! spermatheca development variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0001369
@@ -10028,6 +10198,7 @@ def: "Any variation in the cell cycle process whereby replicated homologous chro
 comment: Possible XP.
 synonym: "mitotic chromosome segregation abnormal" NARROW []
 is_a: WBPhenotype:0000773 ! chromosome segregation variant
+is_a: WBPhenotype:0001743 ! mitosis variant
 
 [Term]
 id: WBPhenotype:0001379
@@ -10054,6 +10225,7 @@ name: protein modification variant
 def: "Variations in the covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications), compared to control. This includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification)." [GO:0006464, WB:WBPerson2021]
 synonym: "protein modification abnormal" NARROW []
 is_a: WBPhenotype:0000112 ! protein expression variant
+is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
 id: WBPhenotype:0001383
@@ -10158,6 +10330,7 @@ name: neurite morphology variant
 def: "Animals display variations in the structure, organization of components, or spatial pattern of any projection stemming from a neuronal cell, compared to that observed in control animals." [GO:0043005, WB:WBPaper00028886, WB:WBPerson712]
 synonym: "neurite morphology abnormal" NARROW []
 is_a: WBPhenotype:0000905 ! neuron morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001399
@@ -10291,6 +10464,7 @@ name: organism desiccation response variant
 def: "Any variation in the state or activity of an organism in response to extreme dryness or drought-like conditions, compared to control ." [GO:0009819, WB:WBPerson2021]
 synonym: "organism desication response abnormal" NARROW []
 is_a: WBPhenotype:0000067 ! organism stress response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0001418
@@ -10303,6 +10477,7 @@ id: WBPhenotype:0001419
 name: emetine hypersensitive
 def: "Animals respond to emetine at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001420
@@ -10316,7 +10491,7 @@ id: WBPhenotype:0001421
 name: endocytic transport variant
 def: "Animals exhibit variations in the directed movement of substances into, out of or mediated by the endosome, a membrane-bound organelle that trafficks material to different compartments of the cell or back to the plasma membrane for recycling compared to control." [GO:0016197, WB:WBPaper00031894, WB:WBPerson712]
 synonym: "endocytic transport abnormal" NARROW []
-is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0001752 ! vesicle trafficking variant
 
 [Term]
 id: WBPhenotype:0001422
@@ -10330,13 +10505,15 @@ name: coelomocyte physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the coelomocyte to carry out its normal functions or activities, compared to control animals." [GO:0009987, WB:WBPerson557, WB:WBPerson712]
 synonym: "coelomocyte physiology abnormal" NARROW []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000607 ! coelomic system physiology variant
 
 [Term]
 id: WBPhenotype:0001424
 name: oocyte physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the oocyte to carry out its normal functions or activities, compared to control animals." [GO:0009987, WB:WBPerson557, WB:WBPerson712]
 synonym: "oocyte physiology abnormal" NARROW []
-is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000929 ! hermaphrodite physiology variant
+is_a: WBPhenotype:0000987 ! germ cell physiology variant
 
 [Term]
 id: WBPhenotype:0001425
@@ -10804,6 +10981,7 @@ name: male spicule development variant
 def: "Animals exhibit variations in the development of the male elongated sclerotized structures covered by a hardened layer of cuticle in the tail (which are actively everted during copulation to fasten the male copulatory fan to the vulva) compared to control." [WB:cab, WB:WBPerson363]
 synonym: "male spicule development abnormal" NARROW []
 is_a: WBPhenotype:0000430 ! male copulatory structure development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0001488
@@ -10885,6 +11063,7 @@ name: sperm pseudopod physiology variant
 def: "Animals exhibit variations in any physical or chemical process required for the pseudopod of the sperm to carry out its normal functions or activities or be able to perceive and respond to stimuli, compared to control animals." [WB:WBPerson557]
 synonym: "sperm pseudopod physiology abnormal" NARROW []
 is_a: WBPhenotype:0000987 ! germ cell physiology variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0001499
@@ -11009,6 +11188,7 @@ name: struts variant
 def: "Animals exhibit variations in the quantity or patterning of electron-dense columnar structures that join the basal and cortical cuticle layers, from that observed in control animals." [WB:WBPaper00000465, WB:WBPerson712]
 synonym: "struts abnormal" NARROW []
 is_a: WBPhenotype:0000948 ! cuticle morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001516
@@ -11023,6 +11203,7 @@ name: annulae morphology variant
 def: "Animals exhibit variations in the circumferential pattern of ridges in the outer cortical layer of the cuticle, compared to that observed in control animals of the same developmental stage." [WB:WBPaper00000465, WB:WBPaper00031415, WB:WBPerson712]
 synonym: "annulae morphology abnormal" NARROW []
 is_a: WBPhenotype:0000948 ! cuticle morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001518
@@ -11046,6 +11227,7 @@ name: posterior neuron migration variant
 def: "Any variation in the orderly movement of neurons along the posterior axis of the animal(abolished, misdirected or incomplete) compared to control." [WB:WBPerson2021]
 synonym: "abnormal posterior neuron migration" NARROW []
 is_a: WBPhenotype:0001140 ! neuron migration variant
+is_a: WBPhenotype:0001519 ! posterior cell migration variant
 
 [Term]
 id: WBPhenotype:0001521
@@ -11065,6 +11247,7 @@ name: extracellular matrix variant
 def: "Any variation in the makeup, density or area of the ECM compared to control." [WB:WBPerson712]
 synonym: "extracellular matrix abnormal" NARROW []
 is_a: WBPhenotype:0000912 ! pericellular component morphology variant
+is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
 id: WBPhenotype:0001524
@@ -11088,6 +11271,7 @@ def: "Animals exhibit variations in the structure or organization of any one of 
 comment: WBbt:0006816.
 synonym: "ciliated neuron morphology abnormal" NARROW []
 is_a: WBPhenotype:0000299 ! sensillum morphology variant
+is_a: WBPhenotype:0000905 ! neuron morphology variant
 
 [Term]
 id: WBPhenotype:0001527
@@ -11166,7 +11350,8 @@ id: WBPhenotype:0001537
 name: mRNA surveillance variant
 def: "Any variation in the ability of cells to monitor the quality of their mRNAs and degrade any transcripts that are poorly or incompletely translated compared to control." [WB:WBPaper00004926]
 synonym: "mRNA turnover abnormal" NARROW []
-is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001283 ! organelle metabolism variant
+is_a: WBPhenotype:0001826 ! RNA degradation variant
 
 [Term]
 id: WBPhenotype:0001538
@@ -11187,6 +11372,7 @@ id: WBPhenotype:0001540
 name: dauer lifespan variant
 def: "The life span of dauer-staged animals is either longer or shorter than that observed in control dauer animals." [WB:WBPerson2021]
 synonym: "dauer lifespan abnormal" NARROW []
+is_a: WBPhenotype:0000039 ! life span phenotype
 is_a: WBPhenotype:0001547 ! dauer metabolism phenotype
 
 [Term]
@@ -11223,6 +11409,7 @@ name: dauer body morphology variant
 def: "Any variation in the overall structure or appearance of an animal progressing through an alternative larval stage in response to environmental stresses compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer body morphology abnormal" NARROW []
 is_a: WBPhenotype:0000934 ! developmental morphology variant
+is_a: WBPhenotype:0002555 ! organismal phenotype
 
 [Term]
 id: WBPhenotype:0001546
@@ -11259,12 +11446,14 @@ name: dauer buccal cavity morphology variant
 def: "Variations in the form or composition of the cuticle-lined lumenal region which lies just behind the lips at the entrance to the pharyngeal lumen in dauer stage animals compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer buccal cavity morphology abnormal" NARROW []
 is_a: WBPhenotype:0001545 ! dauer body morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0001551
 name: dauer cuticle variant
 def: "Any variation in the progression of the formation of the rigid external coating (which is secreted by the hypodermis, seam and some interfacial epithelial cells) during the dauer larva stage, compared to control animals (Wormatlas). The dauer larval stage is a developmentally arrested larval stage that is specialized for survival under harsh, or otherwise unfavorable environmental conditions." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer cuticle abnormal" NARROW []
+is_a: WBPhenotype:0000948 ! cuticle morphology variant
 is_a: WBPhenotype:0001545 ! dauer body morphology variant
 
 [Term]
@@ -11272,6 +11461,7 @@ id: WBPhenotype:0001552
 name: dauer pharynx morphology variant
 def: "Variations in the form or composition of the mouthparts at the anterior end of the digestive tract during the dauer stage, compared to control." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer pharynx morphology abnormal" NARROW []
+is_a: WBPhenotype:0000709 ! pharyngeal morphology variant
 is_a: WBPhenotype:0001545 ! dauer body morphology variant
 
 [Term]
@@ -11279,6 +11469,7 @@ id: WBPhenotype:0001553
 name: dauer excretory gland variant
 def: "Dauer stage animals exhibit variations in the form, structure or composition of a pair of large cells in the head that fuse to form a single gland whose contents are released into the excretory duct through a specialized secretory membrane, compared to control (Wormatlas)." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer excretory gland abnormal" NARROW []
+is_a: WBPhenotype:0000914 ! excretory gland cell morphology variant
 is_a: WBPhenotype:0001545 ! dauer body morphology variant
 
 [Term]
@@ -11300,6 +11491,7 @@ id: WBPhenotype:0001556
 name: dauer sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of the components of the sense organs comprised of ciliated sensory nerve endings enveloped by sheath and/or socket cells, from that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer sensillum abnormal" NARROW []
+is_a: WBPhenotype:0000299 ! sensillum morphology variant
 is_a: WBPhenotype:0001555 ! dauer sensory system morphology variant
 
 [Term]
@@ -11307,6 +11499,7 @@ id: WBPhenotype:0001557
 name: dauer labial sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of the sensilla of the mouth compared to control. In C. elegans, these sensillum are arranged in two (inner and outer) concentric rings around the mouth." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer labial sensillum abnormal" NARROW []
+is_a: WBPhenotype:0001531 ! labial sensillum morphology variant
 is_a: WBPhenotype:0001556 ! dauer sensillum variant
 
 [Term]
@@ -11314,6 +11507,7 @@ id: WBPhenotype:0001558
 name: dauer amphid sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of any component of any specialized chemosensory organs located on the head, compared to that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer amphid sensillum abnormal" NARROW []
+is_a: WBPhenotype:0000256 ! amphid neuron morphology variant
 is_a: WBPhenotype:0001556 ! dauer sensillum variant
 
 [Term]
@@ -11321,6 +11515,7 @@ id: WBPhenotype:0001559
 name: dauer deirid sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of the components of the sensilla situated laterally in the anterior (ADE) or the posterior (PDE) of the animal compared to control. In C. elegans, each of the 4 deirid sensilla (2ADE, 2 PDE) contains a pair of neurons with ciliated dendritic processes that lie in a channel formed by a socket cell and invaginated sheath cell. The cilia of the deirids terminate in the subcuticle and are not exposed to the outside; however occasionally take up FITC." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer deirid sensillum abnormal" NARROW []
+is_a: WBPhenotype:0001535 ! deirid sensillum morphology variant
 is_a: WBPhenotype:0001556 ! dauer sensillum variant
 
 [Term]
@@ -11336,6 +11531,7 @@ id: WBPhenotype:0001561
 name: dauer inner labial sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of the components of the inner labial ring compared to control. In C. elegans, the ring is composed of six sensilla, which include associated neurons IL1 & IL2." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer inner labial sensillum abnormal" NARROW []
+is_a: WBPhenotype:0001532 ! inner labial morphology variant
 is_a: WBPhenotype:0001557 ! dauer labial sensillum variant
 
 [Term]
@@ -11343,6 +11539,7 @@ id: WBPhenotype:0001562
 name: dauer outer labial sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of the components of the outer labial ring compared to control. In C. elegans, this ring consists of four sensilla (OLQ) or the two additional lateral sensilla (OLL), which are part of the labial sensillum." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer outer labial sensillum abnormal" NARROW []
+is_a: WBPhenotype:0001533 ! outer labial morphology variant
 is_a: WBPhenotype:0001557 ! dauer labial sensillum variant
 
 [Term]
@@ -11350,6 +11547,7 @@ id: WBPhenotype:0001563
 name: dauer cephalic sensillum variant
 def: "Dauer stage animals exhibit variations in the quantity, structure or organization of any component of a specialized sensory organ in the head that contains a CEP receptor neuron, compared to control. In C. elegans, cells in these organs are refractory to FITC dye uptake." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "dauer cephalic sensillum abnormal" NARROW []
+is_a: WBPhenotype:0001530 ! cephalic sensillum morphology variant
 is_a: WBPhenotype:0001556 ! dauer sensillum variant
 
 [Term]
@@ -11450,8 +11648,7 @@ id: WBPhenotype:0001577
 name: mitochondria alignment variant
 def: "Animals exhibit variations in the parallel arrangement of mitochondria within a cell compared to control." [WB:WBPaper00028954]
 synonym: "mitochondria alignment abnormal" NARROW []
-is_a: WBPhenotype:0001401 ! mitochondria morphology variant
-is_a: WBPhenotype:0002098 ! cell component localization variant
+is_a: WBPhenotype:0001576 ! mitochondria spacing variant
 
 [Term]
 id: WBPhenotype:0001578
@@ -11471,6 +11668,7 @@ name: nuclear envelope breakdown variant
 def: "Any variation in the progression of the controlled breakdown of the nuclear envelope, compared to control." [GO:0051081, WB:WBPerson2021, WB:WBPerson557]
 comment: Possible XP.
 synonym: "nuclear envelope breakdown abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0002037 ! nuclear envelope organization variant
 
 [Term]
@@ -11550,6 +11748,7 @@ id: WBPhenotype:0001591
 name: microtubule polymerization variant
 def: "Any variation that alters the characteristic addition of tubulin heterodimers to one or both ends of a microtubule compared to control." [GO:0046785]
 synonym: "microtubule polymerization abnormal" NARROW []
+is_a: WBPhenotype:0001369 ! protein interaction variant
 is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
@@ -11591,6 +11790,7 @@ name: muscle missing
 def: "Any variation that results in a fewer than control number of muscle cells." [WB:WBPaper00001423, WB:WBPaper00002946, WB:WBPerson2021]
 is_a: WBPhenotype:0000622 ! muscle system development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001598
@@ -11604,6 +11804,7 @@ id: WBPhenotype:0001599
 name: ouabain resistant
 def: "Animals fail to respond to the concentration of ouabain that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans, resistance to ouabain is often assayed via body contraction response." [WB:WBPaper00000484, WB:WBPerson2021]
 is_a: WBPhenotype:0000331 ! inhibitors of na k atpase resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001600
@@ -11622,12 +11823,14 @@ is_a: WBPhenotype:0000011 ! drug resistant
 id: WBPhenotype:0001602
 name: methiothepin resistant
 def: "Animals fail to respond to the concentration of methiothepin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
 id: WBPhenotype:0001603
 name: cyproheptadine resistant
 def: "Animals fail to respond to the concentration of cyproheptadine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
@@ -11635,6 +11838,7 @@ id: WBPhenotype:0001604
 name: mianserin resistant
 def: "Animals fail to respond to the concentration of mianserin that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00031241, WB:WBPerson721]
 synonym: "dibenzazepine resistant" RELATED []
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001601 ! biogenic amine receptor antagonist resistant
 
 [Term]
@@ -11649,6 +11853,7 @@ name: ethanol hypersensitive
 def: "Animals respond to ethanol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00002358, WB:WBPerson712]
 synonym: "alcohol sensitive" BROAD []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001607
@@ -11662,6 +11867,7 @@ name: enflurane hypersensitive
 def: "Animals respond to the anesthetic enflurane at lower concentrations or shorter exposure times than control animals." [WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001609
@@ -11669,6 +11875,7 @@ name: isoflurane hypersensitive
 def: "Animals respond to the anesthetic isoflurane at lower concentrations or shorter response times than control animals." [WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001610
@@ -11676,12 +11883,14 @@ name: diethyl ether hypersensitive
 def: "Animals respond to the anesthetic ether at lower concentrations or shorter response times than control animals." [WB:WBPaper00001063, WB:WBPaper00002037, WB:WBPerson721]
 synonym: "ether hypersensitive" RELATED []
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001611
 name: halothane hypersensitive
 def: "Animals respond to the lipid-soluble anesthetic halothane at lower concentrations or shorter response times compared to control animals." [WB:WBPaper00000958, WB:WBPaper00031286, WB:WBPerson721]
 is_a: WBPhenotype:0000008 ! anesthetic hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001612
@@ -11690,6 +11899,7 @@ def: "Animals fail to respond to the concentration of ethanol that elicits a res
 synonym: "alcohol resistant" BROAD []
 synonym: "Jud" BROAD []
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001613
@@ -11715,12 +11925,14 @@ is_a: WBPhenotype:0001614 ! anticonvulsant response variant
 id: WBPhenotype:0001616
 name: trimethadione resistant
 def: "Animals fail to respond to the concentration of trimethadione, which acts as an anticonvulsant, that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00024698, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001615 ! anticonvulsant resistant
 
 [Term]
 id: WBPhenotype:0001617
 name: ethosuximide resistant
 def: "Animals fail to respond to the concentration of ethosuximide, which acts as an anticonvulsant, that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001615 ! anticonvulsant resistant
 
 [Term]
@@ -11728,12 +11940,14 @@ id: WBPhenotype:0001618
 name: halothane resistant
 def: "Animals fail to respond to the concentration of the anesthetic halothane that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00004721, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001619
 name: isoflurane resistant
 def: "Animals fail to respond to the concentration of the volatile anesthetic isoflurane that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00004721, WB:WBPerson712]
 is_a: WBPhenotype:0000009 ! anesthetic resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001620
@@ -11813,6 +12027,7 @@ name: gut obstructed
 def: "Any variation in the developmental progression of the intestine that leads to a blockage in the alimentary canal." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "Gob" BROAD []
 is_a: WBPhenotype:0000708 ! intestinal development variant
+is_a: WBPhenotype:0000710 ! intestinal morphology variant
 
 [Term]
 id: WBPhenotype:0001631
@@ -11845,6 +12060,7 @@ name: excess pharyngeal cells
 def: "Animals contain an excess number of pharyngeal cells compared to control. In C. elegans, pharyngeal cells are derived from MS-blastomere. The overproduction of pharyngeal tissues is a result of other blastomeres adopting an MS-like fate." [WB:WBPaper00001584, WB:WBPaper00002922, WB:WBperson2021]
 is_a: WBPhenotype:0000707 ! pharyngeal development variant
 is_a: WBPhenotype:0002175 ! cell number increased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001636
@@ -11852,6 +12068,7 @@ name: excess intestinal cells
 def: "Animals contain an excess number of intestinal cells compared to control. In C. elegans, intestinal cells are derived from E-blastomere. The overproduction of intestinal tissues is a result of other blastomeres adopting an E-like fate or excess cell proliferation in the E lineage." [WB:WBPaper00001584, WB:WBPaper00002330, WB:WBperson2021]
 is_a: WBPhenotype:0000708 ! intestinal development variant
 is_a: WBPhenotype:0002175 ! cell number increased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001637
@@ -11859,6 +12076,7 @@ name: no Intestine
 def: "Embryos fail to generate cells that exhibit intestinal specification. In C. elegans, the E blastomere is the precursor of all the intestinal cells." [WB:WBPaper00002946, WB:WBperson2021]
 is_a: WBPhenotype:0000708 ! intestinal development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0001638
@@ -11926,6 +12144,7 @@ name: no pharynx
 def: "Embryos fail to generate cells that exhibit pharyngeal specification." [WB:WBPaper00001521, WB:WBPerson2021]
 synonym: "Pha" BROAD []
 is_a: WBPhenotype:0000707 ! pharyngeal development variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0001647
@@ -11947,6 +12166,7 @@ name: Fluorouracil resistant
 def: "Animals fail to respond to the concentration of Fluorouracil (5-FU) that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. Elegans Fluorouracil induces germ cell death, inhibits embryogenesis and inhibits larval growth (depending on dose) in control animals." [WB:WBPaper00031571, WB:WBPerson721]
 synonym: "5 FU resistant" EXACT []
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001650
@@ -11978,6 +12198,7 @@ is_a: WBPhenotype:0000591 ! metal response variant
 id: WBPhenotype:0001654
 name: cadmium resistant
 def: "Animals fail to respond to the concentration of cadmium that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to cadmium to elicit the response compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001653 ! cadmium response variant
 
 [Term]
@@ -11985,6 +12206,7 @@ id: WBPhenotype:0001655
 name: cadmium hypersensitive
 def: "Animals respond to cadmium at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0001653 ! cadmium response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001656
@@ -12039,6 +12261,7 @@ name: spermatheca development variant
 def: "Any variation in the progression of the somatic gonad structure that connects the distal gonad arm to the uterus over time from an initial condition to a later condition compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "spermatheca development abnormal" NARROW []
 is_a: WBPhenotype:0000399 ! somatic gonad development variant
+is_a: WBPhenotype:0000930 ! sexually dimorphic development variant
 
 [Term]
 id: WBPhenotype:0001663
@@ -12072,6 +12295,7 @@ name: methyl methanesulfonate hypersensitive
 def: "Animals respond to the chemical mutagen methyl methanesulfonate (MMS) a methanesulfonate ester and alkylating agent at a lower concentration or a shorter exposure compared to control animals. In C. elegans, increased sensitivity to MMS can be observed as a decrease in egg hatch upon acute exposure or inhibition of growth after chronic exposure compared to control animals given the same treatment." [WB:WBPaper00000565, WB:WBPerson712]
 synonym: "MMS hypersensitive" EXACT []
 is_a: WBPhenotype:0000498 ! methyl methanesulfonate response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001668
@@ -12087,6 +12311,7 @@ def: "Animals exhibit a variation in the ratio of synaptic vesicles per synapse 
 synonym: "presynaptic vesicle number abnormal" NARROW []
 synonym: "synaptic vesicle number abnormal" RELATED []
 is_a: WBPhenotype:0001321 ! presynaptic region morphology variant
+is_a: WBPhenotype:0001332 ! vesicle number variant
 
 [Term]
 id: WBPhenotype:0001670
@@ -12101,6 +12326,7 @@ id: WBPhenotype:0001671
 name: vesicle organization variant
 def: "Animals display variations in the distribution of spherical membrane-bound fluid-filled organelles, compared to that observed in control animals." [WB:WBPerson2021, WB:WBPerson557]
 synonym: "vesicle organization abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0002089 ! cell component morphology variant
 
 [Term]
@@ -12129,6 +12355,7 @@ id: WBPhenotype:0001675
 name: male gonad development variant
 def: "Males exhibit variations in the reproductive system, from its formation to the mature structure compared to control." [WB:WBPerson712]
 synonym: "male gonad development abnormal" NARROW []
+is_a: WBPhenotype:0000613 ! reproductive system physiology variant
 is_a: WBPhenotype:0000691 ! gonad development variant
 
 [Term]
@@ -12174,7 +12401,6 @@ id: WBPhenotype:0001681
 name: spindle orientation variant
 def: "The alignment of the spindle relative to other cellular structures varies from that observed in control animals." [GO:0051294, WB:WBPaper00031898, WB:WBPerson712]
 synonym: "spindle orientation abnormal" NARROW []
-is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 is_a: WBPhenotype:0002414 ! spindle variant
 
 [Term]
@@ -12455,6 +12681,7 @@ synonym: "unfolded protein response" RELATED []
 synonym: "unfolded protein response abnormal" NARROW []
 synonym: "UPR" RELATED []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
@@ -12490,6 +12717,7 @@ id: WBPhenotype:0001724
 name: tunicamycin hypersensitive
 def: "Animals respond to tunicamycin at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00030877, WB:WBPerson557]
 is_a: WBPhenotype:0000359 ! tunicamycin response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001725
@@ -12497,6 +12725,8 @@ name: cellular osmotic stress response variant
 def: "Cells exhibit variations in the response to osmotic stress compared to control. In C. elegans, exposure to stress-inducing osmotic conditions invokes cellular changes, including transcriptional up or down-regulation of genes." [WB:WBPaper00032031, WB:WBPerson712]
 synonym: "osmotic stress response abnormal" NARROW []
 is_a: WBPhenotype:0000142 ! cell stress response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
+is_a: WBPhenotype:0000876 ! organism osmotic stress response variant
 
 [Term]
 id: WBPhenotype:0001726
@@ -12622,6 +12852,7 @@ id: WBPhenotype:0001742
 name: lipid synthesis increased
 def: "The endogenous anabolism of any lipid species has been increased compared to that observed in control animals." [WB:WBPaper00032082, WB:WBPerson712]
 is_a: WBPhenotype:0000725 ! lipid metabolism variant
+is_a: WBPhenotype:0001696 ! biosynthesis variant
 
 [Term]
 id: WBPhenotype:0001743
@@ -12635,6 +12866,7 @@ id: WBPhenotype:0001744
 name: cell adhesion variant
 def: "Any variation in the attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix compared to control." [GO:0007155, WB:WBPerson557]
 synonym: "cell adhesion abnormal" NARROW []
+is_a: WBPhenotype:0000519 ! physiology phenotype
 is_a: WBPhenotype:0001657 ! cell junction variant
 
 [Term]
@@ -12671,11 +12903,13 @@ id: WBPhenotype:0001749
 name: zinc toxicity hypersensitive
 def: "The toxic response to zinc occurs at a lower concentration or a shorter exposure compared to control animals. In C. elegans hypersensitive animals exhibit delayed development or lethality at concentrations of zinc (e.g. ZnSO4), which has little or no effect on control worms." [WB:WBPaper00031911, WB:WBPerson712]
 is_a: WBPhenotype:0001747 ! zinc response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001750
 name: zinc toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of zinc that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to zinc include delayed development or lethality." [WB:WBPaper00031911, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001747 ! zinc response variant
 
 [Term]
@@ -12772,7 +13006,7 @@ id: WBPhenotype:0001764
 name: carbon dioxide response variant
 def: "Animals exhibit variations in their response to carbon dioxide compared to control." [WB:WBPerson712]
 synonym: "carbon dioxide response abnormal" NARROW []
-is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
+is_a: WBPhenotype:0000523 ! chemical response variant
 
 [Term]
 id: WBPhenotype:0001765
@@ -12880,6 +13114,7 @@ is_a: WBPhenotype:0000113 ! RNA expression variant
 id: WBPhenotype:0001780
 name: associative learning variant
 def: "Variations in the behavioral plasticity induced by the integration of two sensory signals compared to control. In C. elegans animals exhibit enhancement of butanone chemotaxis by preexposure to butanone and food." [WB:WBPaper00029060, WB:WBPerson2021]
+is_a: WBPhenotype:0000517 ! behavior phenotype
 is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
 [Term]
@@ -12920,7 +13155,6 @@ is_a: WBPhenotype:0002564 ! associative memory phenotype
 id: WBPhenotype:0001786
 name: neuronal ion channel clustering defective
 def: "Animals exhibit variations in the targeting, clustering and or maintenance of ion channels in distinct subcellular domains of the neuron compared to control animals." [GO:0045161, WB:WBPaper00031930, WB:WBPerson712]
-is_a: WBPhenotype:0000612 ! nervous system physiology variant
 is_a: WBPhenotype:0002563 ! neuron physiology phenotype
 
 [Term]
@@ -12933,7 +13167,6 @@ is_a: WBPhenotype:0001897 ! light response variant
 id: WBPhenotype:0001788
 name: resistant to mutagens
 def: "Animals survive longer than control animals after or during exposure to DNA damaging agents." [WB:WBPaper00031934, WB:WBPerson712]
-is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 is_a: WBPhenotype:0000739 ! DNA damage response variant
 
 [Term]
@@ -13267,6 +13500,7 @@ id: WBPhenotype:0001836
 name: eggshell morphology variant
 def: "Any variation in the overall structure or appearance of the protective barrier which isolates the embryo from the external environment, compared to control ." [WB:WBPaper00033072, WB:WBPerson2021]
 is_a: WBPhenotype:0000037 ! egg morphology variant
+is_a: WBPhenotype:0002558 ! extracellular component phenotype
 
 [Term]
 id: WBPhenotype:0001837
@@ -13286,6 +13520,7 @@ id: WBPhenotype:0001839
 name: phorbol ester resistant
 def: "Animals fail to respond to the concentration of phorbol esters that elicit a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. Phorbol esters such as PMA act as DAG mimetics." [WB:WBPaper00033094, WB:WBPerson2021]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0001840
@@ -13445,6 +13680,7 @@ id: WBPhenotype:0001863
 name: manganese response variant
 def: "Animals exhibit variations in their response to manganese compared to that observed in control animals." [GO:0010042, WB:WBPaper00035485, WB:WBPerson2021]
 comment: Possible XP.
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -13555,6 +13791,7 @@ name: hydroxyurea hypersensitive
 def: "Animals respond to hydroxyurea at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson2021, WB:WBPerson557]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
 is_a: WBPhenotype:0001878 ! hydroxyurea response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0001880
@@ -13701,6 +13938,7 @@ is_a: WBPhenotype:0001344 ! organelle organization biogenesis variant
 id: WBPhenotype:0001904
 name: manganese toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of manganese that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to manganese include dopamine (DA) neuron neurodegeneration." [WB:WBPaper00035259, WB:WBPerson557]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001863 ! manganese response variant
 
 [Term]
@@ -13866,6 +14104,7 @@ name: linker cell absent
 def: "The gonads of male animals do not produce the linker cell involved in guiding the developing male gonad to the sex organs in the male tail." [WB:WBPaper00033102, WB:WBPerson2987]
 is_a: WBPhenotype:0001675 ! male gonad development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0001930
@@ -14626,6 +14865,7 @@ is_a: WBPhenotype:0000631 ! drug response variant
 id: WBPhenotype:0002048
 name: abamectin resistant
 def: "Animals survive longer, or do not respond to the same degree as control animals under similar conditions of abamectin exposure." [WB:WBPaper00040740, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0002049 ! abamectin repsonse variant
 
 [Term]
@@ -14639,6 +14879,7 @@ is_a: WBPhenotype:0001852 ! antihelmintic response variant
 id: WBPhenotype:0002050
 name: abamectin sensitive
 def: "Animals are do not survive, or become paralyzed in the presence of abamectin." [WB:WBPaper00040740, WB:WBPerson557, WB:WBPerson712]
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002049 ! abamectin repsonse variant
 
 [Term]
@@ -14658,6 +14899,7 @@ id: WBPhenotype:0002053
 name: ivermectin resistant
 def: "Animals fail to respond to or exhibit an attenuated response to ivermectin under conditions that elicits a response in control animals." [WB:WBPaper00003945, WB:WBPaper00040740, WB:WBPerson712]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 is_a: WBPhenotype:0001856 ! ivermectin response variant
 
 [Term]
@@ -14665,6 +14907,7 @@ id: WBPhenotype:0002054
 name: magnesium hypersensitivity
 def: "Animals exhibit an exaggerated response to magnesium compared to control animals exposed to similar concentrations." [WB:WBPaper00036046, WB:WBPerson712]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002055
@@ -14811,6 +15054,7 @@ id: WBPhenotype:0002077
 name: dopamine resistant
 def: "Animals fail to respond to the concentration of a dopamine that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00038270, WB:WBPerson557, WB:WBPerson712]
 is_a: WBPhenotype:0000011 ! drug resistant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002078
@@ -14872,6 +15116,7 @@ id: WBPhenotype:0002087
 name: hydrogen sulfide hypersensitive
 def: "Animals respond to hydrogen sulfide at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00039977, WB:WBPerson712]
 is_a: WBPhenotype:0000010 ! drug hypersensitive
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002088
@@ -14889,7 +15134,7 @@ is_a: WBPhenotype:0000533 ! cell morphology variant
 id: WBPhenotype:0002090
 name: endosome morphology variant
 def: "Any variation in the form or composition of membrane bound organelles, known as endosomes,  that traffic material between the plasma membrane and internal compartments of the cell, compared to control." [WB:WBPaper00041129, WB:WBPerson2987]
-is_a: WBPhenotype:0002089 ! cell component morphology variant
+is_a: WBPhenotype:0001323 ! vesicle morphology variant
 
 [Term]
 id: WBPhenotype:0002091
@@ -15175,6 +15420,7 @@ name: no anchor cell
 def: "Animals are missing the anchor cell. In C. elegans the anchor cell is a key organizer of vulval patterning and morphogenesis." [WB:WBPaper00003577, WB:WBPerson2987, WB:WBPerson557]
 is_a: WBPhenotype:0000399 ! somatic gonad development variant
 is_a: WBPhenotype:0002174 ! cell number decreased
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0002137
@@ -15624,6 +15870,7 @@ id: WBPhenotype:0002205
 name: hypersensitive to galactose
 def: "Animals exhibit negative effects on growth, development, or metabolism when exposed to a galactose-rich diet, compared to control animals." [WB:WBPaper00045849, WB:WBPerson712]
 is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002206
@@ -15736,17 +15983,20 @@ id: WBPhenotype:0002223
 name: manganese hypersensitivity
 def: "Animals respond at a faster rate or to lower concentrations of manganese that that observed for control animals." [WB:WBPaper00044740, WB:WBPerson712]
 is_a: WBPhenotype:0001863 ! manganese response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002224
 name: mercury hypersensitive
 def: "Animals respond to mercury at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00004381, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002225
 name: lead hypersensitive
 def: "Animals respond to lead at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00004381, WB:WBPerson2987]
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 is_a: WBPhenotype:0002227 ! lead response variant
 
 [Term]
@@ -15754,17 +16004,20 @@ id: WBPhenotype:0002226
 name: cobalt hypersensitive
 def: "Animals respond to cobalt at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00005255, WB:WBPaper00006388, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002227
 name: lead response variant
 def: "Animals exhibit variations in their response to lead compared to that observed in control animals." [WB:WBPaper00029261, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
 id: WBPhenotype:0002228
 name: aluminum response variant
 def: "Animals exhibit variations in their response to aluminum compared to that observed in control animals." [WB:WBPaper00029261, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -15839,6 +16092,7 @@ id: WBPhenotype:0002240
 name: gut granule morphology variant
 def: "Any variation in the morphology of the different inclusions within the intestinal cytoplasm, including birefringent crystalline objects and other dark-staining endosomes compared to control. In C. elegans these contents might include glycogen granules (polysaccharide storage), rhabditin (carbohydrate storage), yolk granules (lipid and protein), and concentrated waste products (Wormatlas)." [WB:WBPaper00040622, WB:WBPerson2987]
 is_a: WBPhenotype:0000902 ! intestinal cell morphology variant
+is_a: WBPhenotype:0001323 ! vesicle morphology variant
 
 [Term]
 id: WBPhenotype:0002241
@@ -15863,6 +16117,7 @@ id: WBPhenotype:0002244
 name: arsenic hypersensitive
 def: "Animals respond to arsenic at a lower concentration or at a shorter exposure time compared to control animals." [WB:WBPaper00036020, WB:WBPerson712]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002245
@@ -15899,6 +16154,7 @@ id: WBPhenotype:0002250
 name: silver hypersensitive
 def: "Animals respond to silver at a lower concentration or a shorter exposure compared to control animals." [WB:WBPerson557]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002251
@@ -15934,6 +16190,7 @@ is_a: WBPhenotype:0000463 ! metabolic pathway variant
 id: WBPhenotype:0002256
 name: selenium response variant
 def: "Animals exhibit variations in their response to selenium compared to that observed in control animals." [WB:WBPaper00038278, WB:WBPerson2987]
+is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0000591 ! metal response variant
 
 [Term]
@@ -15941,12 +16198,14 @@ id: WBPhenotype:0002257
 name: iron hypersensitive
 def: "Animals respond to iron at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00038278, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0002258
 name: nickel toxicity resistant
 def: "Animals fail to exhibit toxicity to the concentration of nickel that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals. In C. elegans toxic responses to nickel include delayed development or lethality." [WB:WBPaper00038278, WB:WBPerson2987]
 is_a: WBPhenotype:0000591 ! metal response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002259
@@ -16520,18 +16779,21 @@ id: WBPhenotype:0002349
 name: phosphatidylinositol 3-phosphate levels reduced
 def: "The levels of phosphatidylinositol 3-phosphate (a.k.a. PtdIns3P or PI3P) are reduced compared to those of control animals" [WB:WBPaper00044390, WB:WBPerson2987]
 is_a: WBPhenotype:0000138 ! lipid composition variant
+is_a: WBPhenotype:0001183 ! fat content reduced
 
 [Term]
 id: WBPhenotype:0002350
 name: hydrogen peroxide levels increased
 def: "Animals exhibit increases in steady-state levels of hydrogen peroxide (H2O2) compared to control." [WB:WBPaper00041478, WB:WBPerson2987]
 is_a: WBPhenotype:0002003 ! hydrogen peroxide homeostasis variant
+is_a: WBPhenotype:0002238 ! increased levels of reactive oxygen species
 
 [Term]
 id: WBPhenotype:0002351
 name: hydrogen peroxide levels reduced
 def: "Animals exhibit reductions in steady-state levels of hydrogen peroxide (H2O2) compared to control." [WB:WBPaper00041478, WB:WBPerson2987]
 is_a: WBPhenotype:0002003 ! hydrogen peroxide homeostasis variant
+is_a: WBPhenotype:0002239 ! reduced levels of reactive oxygen species
 
 [Term]
 id: WBPhenotype:0002352
@@ -16613,6 +16875,7 @@ name: axonal degeneration
 def: "Spontaneous axon breaks leading to degeneration of separated segments." [WB:WBPaper00024451, WB:WBPerson2987, WB:WBPerson9270]
 synonym: "axon degeneration" EXACT []
 is_a: WBPhenotype:0000179 ! neuron degeneration
+is_a: WBPhenotype:0000180 ! axon morphology variant
 
 [Term]
 id: WBPhenotype:0002365
@@ -16755,7 +17018,6 @@ id: WBPhenotype:0002387
 name: supernumerary asters
 def: "Dividing cells exhibit additional arrays of microtubules emanating from a spindle pole that do not connect to kinetochores, compared to control." [WB:WBPaper00041071, WB:WBPerson602]
 is_a: WBPhenotype:0002419 ! spindle aster variant
-is_a: WBPhenotype:0010002 ! cell organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0002388
@@ -16926,6 +17188,7 @@ name: spindle variant
 def: "Any variation in the assembly, disassembly, arrangement, elongation or stabilization of the array of microtubules and associated molecules that forms between opposite poles of a eukaryotic cell during mitosis or meiosis and serves to move the duplicated chromosomes apart compared to control." [GO:0005819, WB:WBPerson557]
 synonym: "spindle abnormal" RELATED []
 is_a: WBPhenotype:0000746 ! cell division variant
+is_a: WBPhenotype:0001588 ! microtubule organization biogenesis variant
 
 [Term]
 id: WBPhenotype:0002415
@@ -16943,7 +17206,7 @@ is_a: WBPhenotype:0002414 ! spindle variant
 id: WBPhenotype:0002417
 name: spindle rotation variant
 def: "Any variation in the rotation of the spindle compared to control." [WB:WBPerson557]
-is_a: WBPhenotype:0002414 ! spindle variant
+is_a: WBPhenotype:0002416 ! spindle position variant
 
 [Term]
 id: WBPhenotype:0002418
@@ -16975,17 +17238,20 @@ id: WBPhenotype:0002422
 name: tunicamycin resistant
 def: "Animals respond to tunicamycin at a higher concentration or a longer exposure compared to control animals." [WB:WBPaper00036076, WB:WBPaper00037064, WB:WBPerson2987]
 is_a: WBPhenotype:0000359 ! tunicamycin response variant
+is_a: WBPhenotype:0001502 ! chemical resistant
 
 [Term]
 id: WBPhenotype:0002423
 name: hypoxia response variant
 def: "Animals exhibit variations in response to hypoxia, low oxygen conditions, compared to controls." [WB:WBPaper00037064, WB:WBPerson2987]
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000464 ! oxygen response variant
 
 [Term]
 id: WBPhenotype:0002424
 name: anoxia response variant
 def: "Animals exhibit variations in response to anoxia, trace oxygen conditions, compared to controls." [WB:WBPerson557]
+is_a: WBPhenotype:0000067 ! organism stress response variant
 is_a: WBPhenotype:0000464 ! oxygen response variant
 
 [Term]
@@ -17238,6 +17504,7 @@ id: WBPhenotype:0002463
 name: hookless
 def: "Male animals lack a copulatory hook." [WB:WBPaper00045644, WB:WBPerson557, WB:WBPerson625]
 is_a: WBPhenotype:0002209 ! hook development variant
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002464
@@ -17432,6 +17699,7 @@ id: WBPhenotype:0002493
 name: ectopic cell
 def: "Animals exhibit one or more cells of a particular type in locations not normally found in controls." [WB:WBPaper00003331, WB:WBPaper00003719, WB:WBPerson2987]
 is_a: WBPhenotype:0000529 ! cell development variant
+is_a: WBPhenotype:0002552 ! cell phenotype
 
 [Term]
 id: WBPhenotype:0002494
@@ -17444,11 +17712,13 @@ id: WBPhenotype:0002495
 name: ectopic hypodermis
 def: "Animals exhibit one or more hypodermal cells in locations not normally found in controls." [WB:WBPaper00025033, WB:WBPerson2987]
 is_a: WBPhenotype:0002493 ! ectopic cell
+is_a: WBPhenotype:0002556 ! tissue phenotype
 
 [Term]
 id: WBPhenotype:0002496
 name: ectopic neuron
 def: "Animals exhibit one or more neurons in locations not normally found in controls." [WB:WBPaper00000635, WB:WBPaper00027335, WB:WBPerson2987]
+is_a: WBPhenotype:0001310 ! neuron positioning variant
 is_a: WBPhenotype:0002493 ! ectopic cell
 
 [Term]
@@ -17462,6 +17732,7 @@ id: WBPhenotype:0002498
 name: ectopic organ
 def: "Animals exhibit one or more organs of a particular type in locations not normally found in controls." [WB:WBPaper00031604, WB:WBPerson2987]
 is_a: WBPhenotype:0000530 ! organ system development variant
+is_a: WBPhenotype:0002553 ! organ phenotype
 
 [Term]
 id: WBPhenotype:0002499
@@ -17548,6 +17819,7 @@ id: WBPhenotype:0002512
 name: thermosensory behavior variant
 def: "Variations in behavior that is dependent upon the sensation of temperature, compared to control." [GO:0040040, WB:WBPerson2987]
 synonym: "thermosensory behavior abnormal" NARROW []
+is_a: WBPhenotype:0000146 ! organism temperature response variant
 is_a: WBPhenotype:0000525 ! organism behavior variant
 
 [Term]
@@ -17703,6 +17975,7 @@ is_a: WBPhenotype:0002536 ! P granule number abnormal
 id: WBPhenotype:0002538
 name: calcium signaling in spermatheca variant
 def: "Any variation in the series of molecular signals in which the spermatheca uses calcium ions to convert an extracellular signal into a response, compared to control." [WB:WBPaper00056137, WB:WBPerson2987, WB:WBPerson30989]
+is_a: WBPhenotype:0000978 ! spermatheca physiology variant
 is_a: WBPhenotype:0002170 ! calcium mediated signaling variant
 
 [Term]
@@ -17790,43 +18063,43 @@ is_a: WBPhenotype:0000886 ! nematode phenotype
 id: WBPhenotype:0002552
 name: cell phenotype
 def: "A phenotype affecting a particular cell." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002553
 name: organ phenotype
 def: "A phenotype affecting a particular organ." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002554
 name: organ system phenotype
 def: "A phenotype affecting a particular organ system." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002555
 name: organismal phenotype
 def: "A phenotype affecting the whole organism." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002556
 name: tissue phenotype
 def: "A phenotype affecting a particular tissue." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002557
 name: body region phenotype
 def: "A phenotype affecting a particular body region." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002558
 name: extracellular component phenotype
 def: "A phenotype affecting a particular extracellular component." [WB:WBPerson2987]
-is_a: WBPhenotype:0000886 ! nematode phenotype
+is_a: WBPhenotype:0002551 ! anatomical phenotype
 
 [Term]
 id: WBPhenotype:0002559
@@ -17862,6 +18135,7 @@ def: "Animals exhibit variations in any physical or chemical process required fo
 synonym: "neuron physiology abnormal" EXACT []
 synonym: "neuron physiology variant" EXACT []
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
+is_a: WBPhenotype:0000612 ! nervous system physiology variant
 
 [Term]
 id: WBPhenotype:0002564
@@ -17869,6 +18143,7 @@ name: associative memory phenotype
 def: "Animals exhibit variations in their recalled and repeated responses to stimuli they are exposed to during learning and memory paradigms, compared to controls." [WB:WBPaper00036296, WB:WBPerson2987]
 synonym: "associative memory abnormal" EXACT []
 synonym: "associative memory variant" EXACT []
+is_a: WBPhenotype:0000517 ! behavior phenotype
 is_a: WBPhenotype:0000738 ! organism environmental stimulus response variant
 
 [Term]
@@ -18059,6 +18334,7 @@ id: WBPhenotype:0002591
 name: dendrite length reduced
 def: "One or more neurons of the animal exhibit one or more dendrites with reduced length compared to the corresponding dendrites in control animals." [WB:WBPaper00033050, WB:WBPerson2987]
 is_a: WBPhenotype:0000882 ! dendrite development variant
+is_a: WBPhenotype:0002647 ! dendrite morphology variant
 
 [Term]
 id: WBPhenotype:0002592
@@ -18288,7 +18564,7 @@ is_a: WBPhenotype:0000173 ! cell proliferation reduced
 id: WBPhenotype:0002625
 name: head degeneration
 def: "Animals exhibit visible, structural degeneration of the head, unlike control animals." [WB:WBPerson2987, WB:WBPerson36183] {comment="PMID:32973031"}
-is_a: WBPhenotype:0000532 ! body region morphology variant
+is_a: WBPhenotype:0000071 ! head morphology variant
 
 [Term]
 id: WBPhenotype:0002626
@@ -18541,6 +18817,26 @@ def: "Cells of the animal exhibit variations in the intracellular lipid surveill
 is_a: WBPhenotype:0000577 ! organism homeostasis metabolism variant
 
 [Term]
+id: WBPhenotype:0002664
+name: RNA subcellular localization variant
+def: "Any variation in the placement of RNA within in a cell or cellular compartment compared to control." [WB:WBPerson2987]
+synonym: "RNA localization abnormal" EXACT []
+synonym: "RNA subcellular localization abnormal" EXACT []
+is_a: WBPhenotype:0000113 ! RNA expression variant
+
+[Term]
+id: WBPhenotype:0002665
+name: RNA condensate variant
+def: "Any variation in the properties of an RNA condensate within a cell or cellular compartment compared to control." [WB:WBPaper00065975, WB:WBPerson10419, WB:WBPerson2987]
+is_a: WBPhenotype:0002664 ! RNA subcellular localization variant
+
+[Term]
+id: WBPhenotype:0002666
+name: abnormal dissolution of RNA condensate
+def: "An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control." [WB:WBPaper00065975, WB:WBPerson10419, WB:WBPerson2987]
+is_a: WBPhenotype:0002665 ! RNA condensate variant
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -18742,6 +19038,7 @@ name: male response to hermaphrodite variant
 def: "Any variation in the response by the male to a hermaphrodite after initial contact following mate finding compared to control. In C. elegans the male stops forward locomotion, presses the ventral side of his tail against his partner's body, and begins moving backward along the hermaphrodite. Male response behavior is initiated when sensory neurons located in the rays of his tail contact a potential mate." [GO:0034606, WB:WBPaper00002109, WB:WBPerson2021, WB:WBPerson557]
 synonym: "male response to hermaphrodite abnormal" NARROW []
 synonym: "Rsp" BROAD []
+is_a: WBPhenotype:0000648 ! male mating variant
 is_a: WBPhenotype:0004029 ! sexually dimorphic mechanosensation variant
 
 [Term]
@@ -18787,6 +19084,7 @@ name: cell growth variant
 def: "Variations in the process(es) by which a cell irreversibly increases in size over time by accretion and biosynthetic production of matter compared to control." [GO:0016049, WB:rk]
 subset: phenotype_slim_wb
 synonym: "cell growth abnormal" NARROW []
+is_a: WBPhenotype:0000030 ! growth variant
 is_a: WBPhenotype:0000536 ! cell physiology phenotype
 
 [Term]
@@ -18811,15 +19109,4 @@ def: "Variations in the process(es) that constitute cell corpse degradation with
 synonym: "cell corpse degradation abnormal" NARROW []
 xref: WB:rk
 is_a: WBPhenotype:0000730 ! apoptosis variant
-
-[Term]
-id: WBbt:0003760
-
-[Typedef]
-id: RO:0000052
-is_a: RO:0002314
-
-[Typedef]
-id: RO:0002314
-holds_over_chain: RO:0000052 BFO:0000050
 
