@@ -22,22 +22,13 @@
         "val" : "chris-grove"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-04-09"
+        "val" : "2024-06-05"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-04-09/wbphenotype-simple-non-classified.json"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-06-05/wbphenotype-simple-non-classified.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
-      "lbl" : "definition",
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0000956",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "WBPhenotype:0000311"
-        } ]
-      }
+      "id" : "http://purl.obolibrary.org/obo/UBERON_0000062",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0000000",
       "lbl" : "chromosome instability",
@@ -44900,6 +44891,162 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002667",
+      "lbl" : "sodium iodide resistant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals fail to respond to the concentration of sodium iodide that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals.",
+          "xrefs" : [ "WB:WBPaper00065304", "WB:WBPerson2495", "WB:WBPerson2987" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Sisi"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "survived-in-sodium-iodide (Sisi) phenotype"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002668",
+      "lbl" : "abnormal formation of mitochondrial stress granules (mitoSGs)",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals or cells exhibit abnormal formation of mitochondrial stress granules (mitoSGs) compared to controls. mitoSGs are ethidium bromide (EtBr)-staining granules within mitochondria.",
+          "xrefs" : [ "WB:WBPaper00065799", "WB:WBPerson124", "WB:WBPerson2987" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002669",
+      "lbl" : "diminished motivation after food deprivation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit diminished motivation after food deprivation/starvation as indicated by, for example, reduced foraging and immobility, compared to controls",
+          "xrefs" : [ "WB:WBPaper00066648", "WB:WBPerson2987", "WB:WBPerson3348" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002670",
+      "lbl" : "healthspan phenotype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit variations in healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls.",
+          "xrefs" : [ "WB:WBPaper00005490", "WB:WBPaper00066151", "WB:WBPerson2987", "WB:WBPerson683" ]
+        },
+        "comments" : [ "Healthspan, as defined by Herndon et al. (2002) Nature (WBPaper00005490): \"the adult period of unimpaired activity and function that precedes age-related decline\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002671",
+      "lbl" : "extended healthspan",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit an extension of healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls.",
+          "xrefs" : [ "WB:WBPaper00066151", "WB:WBPerson2987", "WB:WBPerson683" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002672",
+      "lbl" : "shortened healthspan",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit a shortening of healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls.",
+          "xrefs" : [ "WB:WBPaper00066151", "WB:WBPerson2987", "WB:WBPerson683" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002673",
+      "lbl" : "nucleolar vacuole phenotype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit variations in the formation, appearance or functioning of nucleolar vacuoles, compared to control animals.",
+          "xrefs" : [ "WB:WBPaper00065861", "WB:WBPerson2987", "WB:WBPerson6615" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002674",
+      "lbl" : "chil gene expression induction lacking infection",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit, in the absence of infection, induction of chil (chitinase-like) genes (e.g. chil-27), known immune response effectors in response to oomycete infection.",
+          "xrefs" : [ "WB:WBPaper00066568", "WB:WBPerson11952", "WB:WBPerson2987" ]
+        },
+        "comments" : [ "Note from author: Constitutive expression of chil-27 and several other ORR (Oomycete Recognition Response) genes." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Chili (chil induction lacking infection) phenotype"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Constitutive expression of ORR (Oomycete Recognition Response) genes"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002675",
+      "lbl" : "glycerol levels variant",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any variation in the levels of glycerol throughout the body of the animal as compared to controls.",
+          "xrefs" : [ "WB:WBPaper00065237", "WB:WBPerson2987", "WB:WBPerson56226" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002676",
+      "lbl" : "hypersensitive to allyl alcohol",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals respond to allyl alcohol at a lower concentration or a shorter exposure compared to control animals.",
+          "xrefs" : [ "WB:WBPaper00065237", "WB:WBPerson2987", "WB:WBPerson56226" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "lbl" : "hermaphrodite mating variant",
       "type" : "CLASS",
@@ -45579,45 +45726,198 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBbt_0003760",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000066",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000070",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000052",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002295",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002314",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002503",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002573",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-equivalent-axioms-subq#during",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-equivalent-axioms-subq#ends_during_or_before",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-equivalent-axioms-subq#has_quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-equivalent-axioms-subq#in_response_to",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-equivalent-axioms-subq#starts_during_or_after",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000231",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype#phenotype_slim_wb",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "WB phenotype slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/wbphenotype#property-value",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
       "lbl" : "subset_property",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#auto-generated-by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
       "lbl" : "has_alternative_id",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
       "lbl" : "has_broad_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
       "lbl" : "database_cross_reference",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
       "lbl" : "has_exact_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
       "lbl" : "has_narrow_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
       "lbl" : "has_obo_format_version",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
       "lbl" : "has_obo_namespace",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "lbl" : "has_related_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#id",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "lbl" : "in_subset",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2002/07/owl#deprecated",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000956",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "WBPhenotype:0000311"
+        } ]
+      }
     } ],
     "edges" : [ {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0000000",
@@ -57711,6 +58011,46 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002666",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002665"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002667",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001502"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002668",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002434"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002669",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000147"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002670",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000576"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002671",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002670"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002672",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002670"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002673",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000722"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002674",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0002539"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002675",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002676",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001918"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "pred" : "is_a",

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2024-04-09/wbphenotype-simple.owl
+data-version: wbphenotype/releases/2024-06-05/wbphenotype-simple.owl
 saved-by: chris-grove
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
@@ -8,12 +8,15 @@ subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: phenotype_slim_wb "WB phenotype slim"
 subsetdef: ro-eco ""
 default-namespace: C_elegans_phenotype_ontology
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
 ontology: wbphenotype/wbphenotype-simple
+property_value: dc:description "Ontology about C. elegans and other nematode phenotypes" xsd:string
+property_value: dc:title "C elegans Phenotype Ontology" xsd:string
 property_value: has_ontology_root_term WBPhenotype:0000886
-property_value: http://purl.org/dc/elements/1.1/description "Ontology about C. elegans and other nematode phenotypes" xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "C elegans Phenotype Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
-property_value: owl:versionInfo "2024-04-09" xsd:string
+property_value: owl:versionInfo "2024-06-05" xsd:string
+property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
 id: WBPhenotype:0000000
@@ -18840,6 +18843,72 @@ id: WBPhenotype:0002666
 name: abnormal dissolution of RNA condensate
 def: "An abnormal dissolution of an RNA condensate within a cell or cellular compartment compared to control." [WB:WBPaper00065975, WB:WBPerson10419, WB:WBPerson2987]
 is_a: WBPhenotype:0002665 ! RNA condensate variant
+
+[Term]
+id: WBPhenotype:0002667
+name: sodium iodide resistant
+def: "Animals fail to respond to the concentration of sodium iodide that elicits a response in control animals. Alternatively, animals require increased concentration or longer exposure to this compound to elicit the response compared to control animals." [WB:WBPaper00065304, WB:WBPerson2495, WB:WBPerson2987]
+synonym: "Sisi" BROAD []
+synonym: "survived-in-sodium-iodide (Sisi) phenotype" EXACT []
+is_a: WBPhenotype:0001502 ! chemical resistant
+
+[Term]
+id: WBPhenotype:0002668
+name: abnormal formation of mitochondrial stress granules (mitoSGs)
+def: "Animals or cells exhibit abnormal formation of mitochondrial stress granules (mitoSGs) compared to controls. mitoSGs are ethidium bromide (EtBr)-staining granules within mitochondria." [WB:WBPaper00065799, WB:WBPerson124, WB:WBPerson2987]
+is_a: WBPhenotype:0002434 ! mitochondrial stress response variant
+
+[Term]
+id: WBPhenotype:0002669
+name: diminished motivation after food deprivation
+def: "Animals exhibit diminished motivation after food deprivation/starvation as indicated by, for example, reduced foraging and immobility, compared to controls" [WB:WBPaper00066648, WB:WBPerson2987, WB:WBPerson3348]
+is_a: WBPhenotype:0000147 ! organism starvation response variant
+
+[Term]
+id: WBPhenotype:0002670
+name: healthspan phenotype
+def: "Animals exhibit variations in healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls." [WB:WBPaper00005490, WB:WBPaper00066151, WB:WBPerson2987, WB:WBPerson683]
+comment: Healthspan, as defined by Herndon et al. (2002) Nature (WBPaper00005490): "the adult period of unimpaired activity and function that precedes age-related decline"
+is_a: WBPhenotype:0000576 ! organism physiology phenotype
+
+[Term]
+id: WBPhenotype:0002671
+name: extended healthspan
+def: "Animals exhibit an extension of healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls." [WB:WBPaper00066151, WB:WBPerson2987, WB:WBPerson683]
+is_a: WBPhenotype:0002670 ! healthspan phenotype
+
+[Term]
+id: WBPhenotype:0002672
+name: shortened healthspan
+def: "Animals exhibit a shortening of healthspan, the period within which animals are or appear to be generally healthy as indicated, for example, by mobility, compared to controls." [WB:WBPaper00066151, WB:WBPerson2987, WB:WBPerson683]
+is_a: WBPhenotype:0002670 ! healthspan phenotype
+
+[Term]
+id: WBPhenotype:0002673
+name: nucleolar vacuole phenotype
+def: "Animals exhibit variations in the formation, appearance or functioning of nucleolar vacuoles, compared to control animals." [WB:WBPaper00065861, WB:WBPerson2987, WB:WBPerson6615]
+is_a: WBPhenotype:0000722 ! nucleolus variant
+
+[Term]
+id: WBPhenotype:0002674
+name: chil gene expression induction lacking infection
+def: "Animals exhibit, in the absence of infection, induction of chil (chitinase-like) genes (e.g. chil-27), known immune response effectors in response to oomycete infection." [WB:WBPaper00066568, WB:WBPerson11952, WB:WBPerson2987]
+comment: Note from author: Constitutive expression of chil-27 and several other ORR (Oomycete Recognition Response) genes. {xref="WB:WBPerson11952"}
+synonym: "Chili (chil induction lacking infection) phenotype" EXACT []
+synonym: "Constitutive expression of ORR (Oomycete Recognition Response) genes" EXACT []
+is_a: WBPhenotype:0002539 ! antimicrobial gene expression increased
+
+[Term]
+id: WBPhenotype:0002675
+name: glycerol levels variant
+def: "Any variation in the levels of glycerol throughout the body of the animal as compared to controls." [WB:WBPaper00065237, WB:WBPerson2987, WB:WBPerson56226]
+is_a: WBPhenotype:0000027 ! organism metabolism processing variant
+
+[Term]
+id: WBPhenotype:0002676
+name: hypersensitive to allyl alcohol
+def: "Animals respond to allyl alcohol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00065237, WB:WBPerson2987, WB:WBPerson56226]
+is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
 id: WBPhenotype:0004001
