@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2024-06-05/wbphenotype-base.owl
+data-version: wbphenotype/releases/2024-09-26/wbphenotype-base.owl
 saved-by: chris-grove
 default-namespace: C_elegans_phenotype_ontology
 idspace: cito http://purl.org/spar/cito/ 
@@ -11,6 +11,7 @@ idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl#
 idspace: oboInOwl1 ttp://www.geneontology.org/formats/oboInOwl# 
 idspace: protege http://protege.stanford.edu/plugins/owl/protege# 
 idspace: skos http://www.w3.org/2004/02/skos/core# 
+idspace: sssom https://w3id.org/sssom/ 
 idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
 idspace: terms http://purl.org/dc/terms/ 
 idspace: terms2 http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/ 
@@ -19,7 +20,7 @@ property_value: dc:description "Ontology about C. elegans and other nematode phe
 property_value: dc:title "C elegans Phenotype Ontology" xsd:string
 property_value: dc:type IAO:8000001
 property_value: IAO:0000700 WBPhenotype:0000886
-property_value: owl:versionInfo "2024-06-05" xsd:string
+property_value: owl:versionInfo "2024-09-26" xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
@@ -226,7 +227,6 @@ name: RNA processing variant
 def: "Variations in the processes involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules compared to control." [GO:0006396, WB:WBPerson2021]
 synonym: "RNA processing abnormal" NARROW []
 is_a: WBPhenotype:0000113 ! RNA expression variant
-is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0000029
@@ -12693,7 +12693,6 @@ synonym: "unfolded protein response" RELATED []
 synonym: "unfolded protein response abnormal" NARROW []
 synonym: "UPR" RELATED []
 is_a: WBPhenotype:0000142 ! cell stress response variant
-is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
@@ -13449,6 +13448,7 @@ id: WBPhenotype:0001826
 name: RNA degradation variant
 def: "Variations in the regulated breakdown of RNA species via the action of cellular enzymes (RNases) compared to control." [WB:WBPaper00032091, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001827
@@ -13500,6 +13500,7 @@ id: WBPhenotype:0001834
 name: mRNA splicing variant
 def: "Variations in the processes regulating the excision of intervening introns from the primary mRNA transcript, compared to control." [GO:0008380, WB:WBPaper00032287, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001835
@@ -18913,6 +18914,13 @@ id: WBPhenotype:0002676
 name: hypersensitive to allyl alcohol
 def: "Animals respond to allyl alcohol at a lower concentration or a shorter exposure compared to control animals." [WB:WBPaper00065237, WB:WBPerson2987, WB:WBPerson56226]
 is_a: WBPhenotype:0001918 ! chemical hypersensitive
+
+[Term]
+id: WBPhenotype:0002677
+name: adult-onset sterility
+def: "Animals exhibit sterility that manifests specifically during the adult life stage" [WB:WBPaper00053552, WB:WBPerson215, WB:WBPerson2987]
+comment: Comment from Caroline Goutte about allele ar179 in the context of WBPaper00053552 (PMID:29242286): GSCs [germline stem cells] are initially present, but then lost during adulthood; hermaphrodite is fertile but has low brood size and reduced reproductive span {comment="WB:WBPerson215", xref="WB:WBPaper00053552", xref="PMID:29242286"}
+is_a: WBPhenotype:0000688 ! sterile
 
 [Term]
 id: WBPhenotype:0004001

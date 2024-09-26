@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2024-06-05/wbphenotype-full.owl
+data-version: wbphenotype/releases/2024-09-26/wbphenotype-full.owl
 saved-by: chris-grove
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
@@ -13,6 +13,7 @@ subsetdef: common_anatomy ""
 subsetdef: disposition_slim ""
 subsetdef: general_cell_types_upper_slim ""
 subsetdef: gocheck_do_not_annotate ""
+subsetdef: gocheck_obsoletion_candidate ""
 subsetdef: goslim_agr ""
 subsetdef: goslim_candida ""
 subsetdef: goslim_chembl ""
@@ -69,7 +70,7 @@ ontology: wbphenotype/wbphenotype-full
 property_value: dc:description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: dc:title "C elegans Phenotype Ontology" xsd:string
 property_value: has_ontology_root_term WBPhenotype:0000886
-property_value: owl:versionInfo "2024-06-05" xsd:string
+property_value: owl:versionInfo "2024-09-26" xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
@@ -700,6 +701,7 @@ namespace: chebi_ontology
 def: "An ammonium ion derivative obtained from protonation of the nitrogens of emetine. It is the major species at pH 7.3." []
 subset: 3_STAR
 synonym: "(2S)-6',7',10,11-tetramethoxyemetan-2',5-diium" EXACT IUPAC_NAME [IUPAC]
+synonym: "emetine" RELATED [UniProt]
 synonym: "emetine dication" RELATED [ChEBI]
 xref: MetaCyc:CPD-14817
 xref: PMID:5985282 {source="Europe PMC"}
@@ -4400,8 +4402,9 @@ xref: CAS:14265-44-2 {source="KEGG COMPOUND"}
 xref: CAS:14265-44-2 {source="ChemIDplus"}
 xref: Gmelin:1997 {source="Gmelin"}
 xref: KEGG:C00009
-xref: PDBeChem:PO4 {source="ChEBI"}
+xref: PDBeChem:PO4
 xref: Reaxys:3903772 {source="Reaxys"}
+xref: Wikipedia:Phosphate
 is_a: CHEBI:35780 ! phosphate ion
 is_a: CHEBI:79387 ! trivalent inorganic anion
 relationship: is_conjugate_base_of CHEBI:43474 ! hydrogenphosphate
@@ -5171,6 +5174,24 @@ def: "A halogen molecular entity containing one or more atoms of chlorine." []
 subset: 3_STAR
 is_a: CHEBI:24471 ! halogen molecular entity
 relationship: has_part CHEBI:23116 ! chlorine atom
+
+[Term]
+id: CHEBI:231587
+name: cephaeline(2+)
+namespace: chebi_ontology
+def: "Major species at pH 7.3." []
+subset: 2_STAR
+synonym: "cephaeline" RELATED [UniProt]
+xref: MetaCyc:CPD-14816 {source="SUBMITTER"}
+is_a: CHEBI:35274 ! ammonium ion derivative
+relationship: is_conjugate_acid_of CHEBI:3533 ! cephaeline
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H40N2O4" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H38N2O4/c1-5-17-16-30-9-7-19-13-27(33-3)28(34-4)15-22(19)24(30)11-20(17)10-23-21-14-26(32-2)25(31)12-18(21)6-8-29-23/h12-15,17,20,23-24,29,31H,5-11,16H2,1-4H3/p+2/t17-,20-,23+,24-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "DTGZHCFJNDAHEN-OZEXIGSWSA-P" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "468.637" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "468.29771" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C=1C(=C(C=C2C1CC[NH+]3C[C@@H]([C@@](C[C@@]23[H])([H])C[C@@]4([H])[NH2+]CCC=5C4=CC(=C(C5)O)OC)CC)OC)OC" xsd:string
 
 [Term]
 id: CHEBI:23357
@@ -6506,7 +6527,6 @@ namespace: chebi_ontology
 def: "A nucleobase-containing molecular entity that is a nucleoside in which one or more of the sugar hydroxy groups has been converted into a mono- or poly-phosphate. The term includes both nucleotides and non-nucleotide nucleoside phosphates." []
 subset: 3_STAR
 synonym: "NMP" RELATED [KEGG_COMPOUND]
-synonym: "Nucleoside monophosphate" RELATED [KEGG_COMPOUND]
 synonym: "nucleoside phosphates" RELATED [ChEBI]
 xref: KEGG:C01329
 is_a: CHEBI:25703 ! organic phosphate
@@ -7340,6 +7360,7 @@ is_a: BFO:0000004 ! independent continuant
 is_a: CHEBI:36093 ! inorganic chloride
 is_a: CHEBI:38702 ! inorganic sodium salt
 relationship: has_role CHEBI:149552 ! emetic
+relationship: has_role CHEBI:228364 ! NMR chemical shift reference compound
 relationship: has_role CHEBI:79314 ! flame retardant
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "ClNa" xsd:string
@@ -12692,6 +12713,7 @@ xref: PMID:6716976 {source="Europe PMC"}
 xref: Reaxys:100615 {source="Reaxys"}
 is_a: CHEBI:61692 ! pyridoisoquinoline
 relationship: has_parent_hydride CHEBI:36380 ! emetan
+relationship: is_conjugate_base_of CHEBI:231587 ! cephaeline(2+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H38N2O4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H38N2O4/c1-5-17-16-30-9-7-19-13-27(33-3)28(34-4)15-22(19)24(30)11-20(17)10-23-21-14-26(32-2)25(31)12-18(21)6-8-29-23/h12-15,17,20,23-24,29,31H,5-11,16H2,1-4H3/t17-,20-,23+,24-/m0/s1" xsd:string
@@ -16436,7 +16458,6 @@ synonym: "WURCS=2.0/1,1,0/[a222h-1x_1-4]/1/" RELATED [GlyTouCan]
 xref: Beilstein:1904878 {source="Beilstein"}
 xref: CAS:50-69-1 {source="KEGG COMPOUND"}
 xref: CAS:613-83-2 {source="ChemIDplus"}
-xref: GlyGen:G31080DL
 xref: GlyTouCan:G31080DL
 xref: Gmelin:364108 {source="Gmelin"}
 xref: KEGG:C00121
@@ -19300,7 +19321,7 @@ name: medium-chain fatty acid anion
 namespace: chebi_ontology
 def: "A fatty acid anion resulting from the deprotonation of the carboxylic acid moiety of a medium-chain fatty acid." []
 subset: 3_STAR
-synonym: "a medium chain fatty acid" RELATED [UniProt]
+synonym: "a medium-chain fatty acid" RELATED [UniProt]
 synonym: "MCFA anion" RELATED [ChEBI]
 synonym: "MCFA anions" RELATED [ChEBI]
 synonym: "medium-chain FA anion" RELATED [ChEBI]
@@ -22854,7 +22875,7 @@ is_a: UBERON:0000061 ! anatomical structure
 disjoint_from: GO:0031012 ! extracellular matrix
 disjoint_from: GO:0043226 ! organelle
 relationship: has_part GO:0005634 {gci_filler="PATO:0001908", gci_relation="RO:0000053"} ! cell nucleus
-relationship: RO:0002160 NCBITaxon:131567
+relationship: RO:0002162 NCBITaxon:131567
 
 [Term]
 id: CL:0000007
@@ -22871,6 +22892,7 @@ subset: cellxgene_subset
 xref: MA:0000388
 xref: ncithesaurus:Egg
 xref: VHOG:0001530
+is_a: CL:0000255 ! eukaryotic cell
 is_a: CL:0000586 {is_inferred="true"} ! germ cell
 intersection_of: CL:0000586 ! germ cell
 intersection_of: RO:0002215 GO:0048477 ! capable of oogenesis
@@ -22890,9 +22912,8 @@ xref: MESH:D009865
 xref: WBbt:0006797
 xref: ZFA:0001109 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000021 {is_inferred="true"} ! female germ cell
-is_a: CL:0000255 ! eukaryotic cell
 relationship: RO:0000056 GO:0007143 ! participates in female meiotic nuclear division
-relationship: RO:0002160 NCBITaxon:33208
+relationship: RO:0002162 NCBITaxon:33208
 
 [Term]
 id: CL:0000024
@@ -22944,7 +22965,8 @@ subset: cellxgene_subset
 xref: VHOG:0001532
 xref: XAO:0000031
 xref: ZFA:0009032 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
-is_a: CL:0000000 ! cell
+is_a: CL:0000255 ! eukaryotic cell
+is_a: PR:000050567
 intersection_of: CL:0000000 ! cell
 intersection_of: has_part GO:0005929 ! cilium
 relationship: has_part GO:0005929 ! cilium
@@ -22964,7 +22986,7 @@ xref: FBbt:00000124 {sssom:mapping_justification="https://w3id.org/semapv/vocab/
 xref: FMA:66768
 xref: WBbt:0003672
 xref: ZFA:0009034 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
-is_a: CL:0000000 ! cell
+is_a: CL:0000255 ! eukaryotic cell
 relationship: part_of UBERON:0000483
 property_value: foaf:depiction "https://www.swissbiopics.org/api/image/Epithelial_cells.svg" xsd:anyURI
 property_value: RO:0002175 NCBITaxon:9606
@@ -22994,23 +23016,14 @@ property_value: RO:0002175 NCBITaxon:9606
 [Term]
 id: CL:0000076
 name: squamous epithelial cell
+def: "Any epithelial cell that is part of some squamous epithelium." [FBC:Autogenerated]
 subset: cellxgene_subset
 xref: CALOHA:TS-1249
 xref: ZFA:0009039 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000066 ! epithelial cell
-
-[Term]
-id: CL:0000082
-name: epithelial cell of lung
-def: "An epithelial cell of the lung." [https://orcid.org/0000-0001-5208-3432]
-subset: cellxgene_subset
-synonym: "lung epithelial cell" EXACT []
-xref: BTO:0004299
-is_a: CL:0000066 ! epithelial cell
 intersection_of: CL:0000066 ! epithelial cell
-intersection_of: part_of UBERON:0002048
-relationship: part_of UBERON:0000115
-relationship: part_of UBERON:0002048
+intersection_of: part_of UBERON:0006914
+relationship: part_of UBERON:0006914
 
 [Term]
 id: CL:0000086
@@ -23061,12 +23074,10 @@ relationship: RO:0002215 GO:0048870 ! capable of cell motility
 [Term]
 id: CL:0000228
 name: multinucleate cell
-def: "A cell with more than one nucleus." [FB:ma]
-synonym: "syncitium" EXACT []
-synonym: "syncytial cell" EXACT []
-synonym: "syncytium" EXACT []
-xref: AEO:0000203
-xref: WBbt:0008074
+def: "A cell with more than one nucleus." [FB:ma, Wikipedia:Multinucleate]
+synonym: "multinucleated cells" EXACT [Wikipedia:Multinucleate]
+synonym: "polynuclear cells" EXACT [Wikipedia:Multinucleate]
+is_a: CL:0000255 ! eukaryotic cell
 is_a: CL:0002242 ! nucleate cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0000053 PATO:0001908 ! has characteristic
@@ -23075,13 +23086,13 @@ relationship: RO:0000053 PATO:0001908 ! has characteristic
 [Term]
 id: CL:0000255
 name: eukaryotic cell
-def: "Any cell that only exists in Eukaryota." [FBC:Autogenerated]
+def: "Any cell that in taxon some Eukaryota." [FBC:Autogenerated]
 subset: cellxgene_subset
 xref: MESH:D005057
 is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
-intersection_of: RO:0002160 NCBITaxon:2759
-relationship: RO:0002160 NCBITaxon:2759
+intersection_of: RO:0002162 NCBITaxon:2759
+relationship: RO:0002162 NCBITaxon:2759
 
 [Term]
 id: CL:0000300
@@ -23112,8 +23123,8 @@ is_a: CL:0000007 ! early embryonic cell (metazoa)
 is_a: CL:0000255 ! eukaryotic cell
 is_a: CL:0010017 ! zygote
 intersection_of: CL:0010017 ! zygote
-intersection_of: RO:0002160 NCBITaxon:33208
-relationship: RO:0002160 NCBITaxon:33208
+intersection_of: RO:0002162 NCBITaxon:33208
+relationship: RO:0002162 NCBITaxon:33208
 
 [Term]
 id: CL:0000393
@@ -23246,7 +23257,7 @@ def: "A cell that is part of the nervous system." [GOC:tfm, ISBN:0618947256]
 subset: cellxgene_subset
 xref: CALOHA:TS-2040
 xref: FMA:70333
-is_a: CL:0000000 ! cell
+is_a: CL:0000255 ! eukaryotic cell
 intersection_of: CL:0000000 ! cell
 intersection_of: part_of UBERON:0001016
 relationship: part_of UBERON:0001016
@@ -23300,37 +23311,15 @@ intersection_of: RO:0002215 GO:0030154 ! capable of cell differentiation
 relationship: RO:0002215 GO:0030154 ! capable of cell differentiation
 
 [Term]
-id: CL:1000271
-name: lung ciliated cell
-def: "Any ciliated cell that is part of some lung." [FBC:Autogenerated]
-subset: cellxgene_subset
-subset: human_reference_atlas
-is_a: CL:4030034 ! respiratory ciliated cell
-intersection_of: CL:0000064 ! ciliated cell
-intersection_of: part_of UBERON:0002048
-relationship: part_of UBERON:0002048
-property_value: RO:0002175 NCBITaxon:9606
-
-[Term]
 id: CL:1000272
 name: lung secretory cell
 def: "Any secretory cell that is part of some lung." [FBC:Autogenerated]
 subset: cellxgene_subset
 is_a: CL:0000151 ! secretory cell
+is_a: CL:0000255 ! eukaryotic cell
 intersection_of: CL:0000151 ! secretory cell
 intersection_of: part_of UBERON:0002048
 relationship: part_of UBERON:0002048
-
-[Term]
-id: CL:4030034
-name: respiratory ciliated cell
-def: "A ciliated cell of the respiratory system. Ciliated cells are present in airway epithelium." [PMID:18757316, PMID:21364219]
-synonym: "ciliated cell of the respiratory tract" EXACT []
-is_a: CL:0000064 ! ciliated cell
-intersection_of: CL:0000064 ! ciliated cell
-intersection_of: part_of UBERON:0004802
-relationship: part_of UBERON:0004802
-property_value: terms:date "2023-01-25T11:06:01Z" xsd:dateTime
 
 [Term]
 id: GO:0000002
@@ -23572,7 +23561,7 @@ id: GO:0000278
 name: mitotic cell cycle
 namespace: biological_process
 alt_id: GO:0007067
-def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194]
 comment: Note that this term should not be confused with 'GO:0140014 ; mitotic nuclear division'. 'GO:0000278 ; mitotic cell cycle represents the entire mitotic cell cycle, while 'GO:0140014 ; mitotic nuclear division' specifically represents the actual nuclear division step of the mitotic cell cycle.
 subset: goslim_chembl
 subset: goslim_drosophila
@@ -23693,13 +23682,10 @@ id: GO:0000422
 name: autophagy of mitochondrion
 namespace: biological_process
 def: "The autophagic process in which mitochondria are delivered to a type of vacuole and degraded in response to changing cellular conditions." [GOC:autophagy, PMID:15798367, PMID:19289147, PMID:23065344]
-subset: gocheck_do_not_annotate
 synonym: "mitochondrion degradation" BROAD []
 synonym: "mitochondrion disassembly" BROAD []
 synonym: "mitophagy" NARROW []
 is_a: GO:0006914 ! autophagy
-is_a: GO:0007005 ! mitochondrion organization
-is_a: GO:1903008 ! organelle disassembly
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25541" xsd:anyURI
 
 [Term]
@@ -23903,7 +23889,6 @@ id: GO:0000963
 name: mitochondrial RNA processing
 namespace: biological_process
 def: "The conversion of a primary RNA molecule transcribed from a mitochondrial genome into one or more mature RNA molecules; occurs in the mitochondrion." [GOC:krc, GOC:mah]
-is_a: GO:0000959 ! mitochondrial RNA metabolic process
 is_a: GO:0006396 ! RNA processing
 is_a: GO:0140053 ! mitochondrial gene expression
 intersection_of: GO:0006396 ! RNA processing
@@ -24045,18 +24030,21 @@ id: GO:0001932
 name: regulation of protein phosphorylation
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of addition of phosphate groups into an amino acid in a protein." [GOC:hjd]
+subset: gocheck_obsoletion_candidate
 synonym: "regulation of protein amino acid phosphorylation" EXACT [GOC:bf]
 is_a: GO:0031399 ! regulation of protein modification process
 is_a: GO:0042325 ! regulation of phosphorylation
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006468 ! protein phosphorylation
 relationship: regulates GO:0006468 ! protein phosphorylation
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28278" xsd:anyURI
 
 [Term]
 id: GO:0001933
 name: negative regulation of protein phosphorylation
 namespace: biological_process
 def: "Any process that stops, prevents or reduces the rate of addition of phosphate groups to amino acids within a protein." [GOC:hjd]
+subset: gocheck_obsoletion_candidate
 synonym: "down regulation of protein amino acid phosphorylation" EXACT []
 synonym: "down-regulation of protein amino acid phosphorylation" EXACT []
 synonym: "downregulation of protein amino acid phosphorylation" EXACT []
@@ -24068,13 +24056,14 @@ is_a: GO:0042326 ! negative regulation of phosphorylation
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006468 ! protein phosphorylation
 relationship: negatively_regulates GO:0006468 ! protein phosphorylation
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28278" xsd:anyURI
 
 [Term]
 id: GO:0001934
 name: positive regulation of protein phosphorylation
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of addition of phosphate groups to amino acids within a protein." [GOC:hjd]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_obsoletion_candidate
 synonym: "activation of protein amino acid phosphorylation" NARROW []
 synonym: "positive regulation of protein amino acid phosphorylation" EXACT [GOC:bf]
 synonym: "stimulation of protein amino acid phosphorylation" NARROW []
@@ -24088,6 +24077,7 @@ intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006468 ! protein phosphorylation
 relationship: positively_regulates GO:0006468 ! protein phosphorylation
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28278" xsd:anyURI
 
 [Term]
 id: GO:0001939
@@ -24425,8 +24415,6 @@ id: GO:0005488
 name: binding
 namespace: molecular_function
 def: "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule." [GOC:ceb, GOC:mah, ISBN:0198506732]
-comment: Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children.
-subset: gocheck_do_not_annotate
 subset: goslim_pir
 subset: goslim_plant
 synonym: "ligand" NARROW []
@@ -25153,7 +25141,6 @@ synonym: "nucleobase, nucleoside and nucleotide metabolic process" RELATED []
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid metabolic process" RELATED [GOC:dph, GOC:tb]
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid metabolism" EXACT []
 is_a: GO:0044238 ! primary metabolic process
-is_a: GO:1901360 ! organic cyclic compound metabolic process
 
 [Term]
 id: GO:0006259
@@ -25300,7 +25287,7 @@ synonym: "DNA replication-independent nuclesome assembly" NARROW []
 synonym: "establishment of chromatin architecture" EXACT [GOC:mah]
 synonym: "establishment or maintenance of chromatin architecture" EXACT [GOC:mah]
 synonym: "transcription-coupled nucleosome assembly" NARROW []
-is_a: GO:0071824 ! protein-DNA complex organization
+is_a: GO:0016043 ! cellular component organization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22130" xsd:anyURI
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23549" xsd:anyURI
 
@@ -25398,8 +25385,9 @@ def: "Any process involved in the conversion of one or more primary RNA transcri
 subset: goslim_drosophila
 subset: goslim_pir
 xref: Wikipedia:Post-transcriptional_modification
-is_a: GO:0016070 ! RNA metabolic process
+is_a: GO:0044238 ! primary metabolic process
 relationship: part_of GO:0010467 ! gene expression
+relationship: part_of GO:0032774 ! RNA biosynthetic process
 
 [Term]
 id: GO:0006397
@@ -25421,9 +25409,7 @@ subset: goslim_yeast
 synonym: "RNA breakdown" EXACT []
 synonym: "RNA catabolism" EXACT []
 synonym: "RNA degradation" EXACT []
-is_a: GO:0009057 ! macromolecule catabolic process
 is_a: GO:0016070 ! RNA metabolic process
-is_a: GO:0034655 ! nucleobase-containing compound catabolic process
 is_a: GO:0141188 ! nucleic acid catabolic process
 
 [Term]
@@ -25500,7 +25486,6 @@ synonym: "protein translation" EXACT []
 xref: Wikipedia:Translation_(genetics)
 is_a: GO:0009059 ! macromolecule biosynthetic process
 is_a: GO:0019538 ! protein metabolic process
-is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 relationship: has_part GO:0006414 ! translational elongation
 relationship: part_of GO:0010467 ! gene expression
 
@@ -25549,7 +25534,7 @@ id: GO:0006468
 name: protein phosphorylation
 namespace: biological_process
 def: "The process of introducing a phosphate group on to a protein." [GOC:hb]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_yeast
 synonym: "protein amino acid phosphorylation" EXACT [GOC:bf]
 is_a: GO:0016310 ! phosphorylation
@@ -25560,7 +25545,7 @@ id: GO:0006479
 name: protein methylation
 namespace: biological_process
 def: "The addition of a methyl group to a protein amino acid. A methyl group is derived from methane by the removal of a hydrogen atom." [GOC:ai]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "protein amino acid methylation" EXACT [GOC:bf]
 is_a: GO:0008213 ! protein alkylation
 is_a: GO:0043414 ! macromolecule methylation
@@ -25620,7 +25605,6 @@ subset: goslim_yeast
 synonym: "lipid metabolism" EXACT []
 xref: Wikipedia:Lipid_metabolism
 is_a: GO:0044238 ! primary metabolic process
-is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:0006793
@@ -25713,7 +25697,7 @@ name: exocytosis
 namespace: biological_process
 alt_id: GO:0016194
 alt_id: GO:0016195
-def: "A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell." [GOC:mah, ISBN:0716731363, PMID:22323285]
+def: "A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for example of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell." [GOC:mah, ISBN:0716731363, PMID:22323285]
 subset: goslim_yeast
 synonym: "nonselective vesicle exocytosis" RELATED []
 synonym: "vesicle exocytosis" EXACT []
@@ -25845,7 +25829,7 @@ subset: goslim_pombe
 xref: Wikipedia:Autophagy_(cellular)
 is_a: GO:0044248 ! cellular catabolic process
 is_a: GO:0061919 ! process utilizing autophagic mechanism
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25541#issuecomment-1740659745" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25541" xsd:anyURI
 
 [Term]
 id: GO:0006915
@@ -25918,7 +25902,6 @@ id: GO:0006950
 name: response to stress
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_drosophila
@@ -25928,6 +25911,7 @@ subset: goslim_plant_ribbon
 synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
 is_a: GO:0050896 ! response to stimulus
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26810" xsd:anyURI
 
 [Term]
 id: GO:0006952
@@ -26012,7 +25996,9 @@ synonym: "ER to nucleus signaling pathway" EXACT []
 synonym: "ER to nucleus signalling pathway" EXACT []
 synonym: "ER-nuclear signaling pathway" EXACT []
 synonym: "ER-nuclear signalling pathway" EXACT []
-is_a: GO:0007165 ! signal transduction
+is_a: GO:0035556 ! intracellular signal transduction
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28057" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28069" xsd:anyURI
 
 [Term]
 id: GO:0006986
@@ -26816,7 +26802,9 @@ def: "The generation and maintenance of gametes in a multicellular organism. A g
 synonym: "gametogenesis" RELATED []
 is_a: GO:0048609 ! multicellular organismal reproductive process
 relationship: part_of GO:0019953 ! sexual reproduction
-property_value: RO:0002161 NCBITaxon_Union:0000023
+property_value: RO:0002161 NCBITaxon:2
+property_value: RO:0002161 NCBITaxon:2157
+property_value: RO:0002161 NCBITaxon:4751
 
 [Term]
 id: GO:0007281
@@ -27400,7 +27388,7 @@ id: GO:0008213
 name: protein alkylation
 namespace: biological_process
 def: "The addition of an alkyl group to a protein amino acid. Alkyl groups are derived from alkanes by removal of one hydrogen atom." [GOC:ma]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_yeast
 synonym: "protein amino acid alkylation" EXACT [GOC:bf]
 is_a: GO:0036211 ! protein modification process
@@ -27560,7 +27548,7 @@ synonym: "lipid formation" EXACT []
 synonym: "lipid synthesis" EXACT []
 synonym: "lipogenesis" EXACT [GOC:sl]
 is_a: GO:0006629 ! lipid metabolic process
-is_a: GO:1901576 ! organic substance biosynthetic process
+is_a: GO:0009058 ! biosynthetic process
 
 [Term]
 id: GO:0008630
@@ -27608,8 +27596,8 @@ synonym: "macromolecule breakdown" EXACT []
 synonym: "macromolecule catabolism" EXACT []
 synonym: "macromolecule degradation" EXACT []
 synonym: "multicellular organismal macromolecule catabolic process" NARROW []
+is_a: GO:0009056 ! catabolic process
 is_a: GO:0043170 ! macromolecule metabolic process
-is_a: GO:1901575 ! organic substance catabolic process
 
 [Term]
 id: GO:0009058
@@ -27649,7 +27637,6 @@ synonym: "macromolecule formation" EXACT []
 synonym: "macromolecule synthesis" EXACT []
 is_a: GO:0043170 ! macromolecule metabolic process
 is_a: GO:0044249 ! cellular biosynthetic process
-is_a: GO:1901576 ! organic substance biosynthetic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/15249" xsd:anyURI
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25418" xsd:anyURI
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
@@ -27722,7 +27709,7 @@ subset: goslim_chembl
 subset: goslim_pir
 synonym: "amine metabolism" EXACT []
 synonym: "cellular amine metabolic process" EXACT []
-is_a: GO:1901564 ! organonitrogen compound metabolic process
+is_a: GO:0008152 ! metabolic process
 created_by: jl
 creation_date: 2009-07-15T11:55:44Z
 
@@ -27735,8 +27722,8 @@ synonym: "amine anabolism" EXACT []
 synonym: "amine biosynthesis" EXACT []
 synonym: "amine formation" EXACT []
 synonym: "amine synthesis" EXACT []
+is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0009308 ! amine metabolic process
-is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 
 [Term]
 id: GO:0009310
@@ -27746,8 +27733,8 @@ def: "The chemical reactions and pathways resulting in the breakdown of any orga
 synonym: "amine breakdown" EXACT []
 synonym: "amine catabolism" EXACT []
 synonym: "amine degradation" EXACT []
+is_a: GO:0009056 ! catabolic process
 is_a: GO:0009308 ! amine metabolic process
-is_a: GO:1901565 ! organonitrogen compound catabolic process
 
 [Term]
 id: GO:0009314
@@ -27805,7 +27792,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to water stimulus" EXACT [GOC:dos]
 is_a: GO:0001101 ! response to acid chemical
 is_a: GO:0009628 ! response to abiotic stimulus
-is_a: GO:0010035 ! response to inorganic substance
 is_a: GO:1901700 ! response to oxygen-containing compound
 
 [Term]
@@ -28243,30 +28229,10 @@ intersection_of: GO:0030261 ! chromosome condensation
 intersection_of: part_of GO:0051321 ! meiotic cell cycle
 
 [Term]
-id: GO:0010033
-name: response to organic substance
-namespace: biological_process
-alt_id: GO:1990367
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:sm, PMID:23356676]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-synonym: "process resulting in tolerance to organic substance" NARROW []
-is_a: GO:0042221 ! response to chemical
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27194" xsd:anyURI
-
-[Term]
-id: GO:0010035
-name: response to inorganic substance
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an inorganic substance stimulus." [GOC:sm]
-is_a: GO:0042221 ! response to chemical
-
-[Term]
 id: GO:0010037
 name: response to carbon dioxide
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a carbon dioxide (CO2) stimulus." [GOC:sm]
-is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901700 ! response to oxygen-containing compound
 
 [Term]
@@ -28277,7 +28243,7 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "heavy metal sensitivity/resistance" RELATED []
 synonym: "response to heavy metal" NARROW []
 synonym: "response to metal" EXACT []
-is_a: GO:0010035 ! response to inorganic substance
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0010042
@@ -28338,7 +28304,7 @@ id: GO:0010269
 name: response to selenium ion
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from selenium ion." [GOC:mg]
-is_a: GO:0010035 ! response to inorganic substance
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0010288
@@ -29079,7 +29045,6 @@ subset: goslim_pir
 subset: goslim_yeast
 synonym: "enzyme transport" NARROW []
 is_a: GO:0045184 ! establishment of protein localization
-is_a: GO:0071702 ! organic substance transport
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
@@ -29104,7 +29069,6 @@ def: "The directed movement of nucleobases, nucleosides, nucleotides and nucleic
 subset: goslim_pir
 subset: goslim_yeast
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid transport" RELATED [GOC:dph, GOC:tb]
-is_a: GO:0071702 ! organic substance transport
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
@@ -29327,7 +29291,7 @@ id: GO:0016310
 name: phosphorylation
 namespace: biological_process
 def: "The process of introducing a phosphate group into a molecule, usually with the formation of a phosphoric ester, a phosphoric anhydride or a phosphoric amide." [ISBN:0198506732]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_chembl
 subset: goslim_metagenomics
 xref: Wikipedia:Phosphorylation
@@ -29393,7 +29357,7 @@ property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/
 id: GO:0016740
 name: transferase activity
 namespace: molecular_function
-def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
+def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [EC:2.-.-.-]
 subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_drosophila
@@ -29516,7 +29480,6 @@ synonym: "hydroxybenzene metabolic process" EXACT []
 synonym: "hydroxybenzene metabolism" EXACT []
 synonym: "phenol-containing compound metabolism" EXACT []
 xref: UM-BBD_pathwayID:phe
-is_a: GO:1901360 ! organic cyclic compound metabolic process
 is_a: GO:1901615 ! organic hydroxy compound metabolic process
 
 [Term]
@@ -29650,7 +29613,6 @@ synonym: "phenol-containing compound catabolism" EXACT []
 synonym: "phenol-containing compound degradation" EXACT []
 xref: MetaCyc:PHENOLDEG-PWY
 is_a: GO:0018958 ! phenol-containing compound metabolic process
-is_a: GO:1901361 ! organic cyclic compound catabolic process
 is_a: GO:1901616 ! organic hydroxy compound catabolic process
 
 [Term]
@@ -29678,7 +29640,6 @@ synonym: "protein metabolism and modification" EXACT []
 xref: Wikipedia:Protein_metabolism
 is_a: GO:0043170 ! macromolecule metabolic process
 is_a: GO:0044238 ! primary metabolic process
-is_a: GO:1901564 ! organonitrogen compound metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23112" xsd:anyURI
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
 
@@ -30104,7 +30065,7 @@ is_a: GO:0009987 ! cellular process
 id: GO:0030030
 name: cell projection organization
 namespace: biological_process
-def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, GOC:mah, http://www.cogsci.princeton.edu/~wn/]
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, GOC:mah, PMID:16318917]
 subset: goslim_prokaryote
 synonym: "cell projection organisation" EXACT []
 synonym: "cell projection organization and biogenesis" RELATED [GOC:mah]
@@ -30141,7 +30102,7 @@ replaced_by: GO:0007015
 id: GO:0030054
 name: cell junction
 namespace: cellular_component
-def: "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella." [GOC:aruk, GOC:bc, GOC:mah, http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html, ISBN:0198506732, PMID:26820516, PMID:28096264]
+def: "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella." [GOC:aruk, GOC:bc, GOC:mah, ISBN:0198506732, PMID:26820516, PMID:28096264]
 subset: goslim_agr
 subset: goslim_drosophila
 subset: goslim_flybase_ribbon
@@ -30254,7 +30215,6 @@ synonym: "protein degradation" EXACT []
 xref: Wikipedia:Protein_catabolism
 is_a: GO:0009057 ! macromolecule catabolic process
 is_a: GO:0019538 ! protein metabolic process
-is_a: GO:1901565 ! organonitrogen compound catabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23112" xsd:anyURI
 
 [Term]
@@ -30579,9 +30539,10 @@ comment: Note that this term should not be confused with 'response to unfolded p
 synonym: "ER unfolded protein response" EXACT []
 synonym: "erUPR" EXACT []
 synonym: "SREBP-mediated signalling pathway" RELATED []
-is_a: GO:0007165 ! signal transduction
 is_a: GO:0034976 ! response to endoplasmic reticulum stress
+is_a: GO:0035556 ! intracellular signal transduction
 relationship: part_of GO:0034620 ! cellular response to unfolded protein
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28057" xsd:anyURI
 
 [Term]
 id: GO:0030990
@@ -32286,9 +32247,7 @@ synonym: "RNA anabolism" EXACT []
 synonym: "RNA biosynthesis" EXACT []
 synonym: "RNA formation" EXACT []
 synonym: "RNA synthesis" EXACT []
-is_a: GO:0009059 ! macromolecule biosynthetic process
 is_a: GO:0016070 ! RNA metabolic process
-is_a: GO:0034654 ! nucleobase-containing compound biosynthetic process
 is_a: GO:0141187 ! nucleic acid biosynthetic process
 
 [Term]
@@ -32704,7 +32663,6 @@ namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of RNA splicing." [GOC:mah]
 is_a: GO:0010629 ! negative regulation of gene expression
 is_a: GO:0043484 ! regulation of RNA splicing
-is_a: GO:0051253 ! negative regulation of RNA metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0008380 ! RNA splicing
 relationship: negatively_regulates GO:0008380 ! RNA splicing
@@ -32716,7 +32674,6 @@ namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of RNA splicing." [GOC:mah]
 is_a: GO:0010628 ! positive regulation of gene expression
 is_a: GO:0043484 ! regulation of RNA splicing
-is_a: GO:0051254 ! positive regulation of RNA metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0008380 ! RNA splicing
 relationship: positively_regulates GO:0008380 ! RNA splicing
@@ -32908,10 +32865,9 @@ id: GO:0033554
 name: cellular response to stress
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
 is_a: GO:0006950 ! response to stress
 is_a: GO:0051716 ! cellular response to stimulus
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26810" xsd:anyURI
 
 [Term]
 id: GO:0034059
@@ -33042,7 +32998,7 @@ synonym: "nucleobase, nucleoside, nucleotide and nucleic acid biosynthesis" EXAC
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid formation" EXACT []
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid synthesis" NARROW []
 is_a: GO:0006139 ! nucleobase-containing compound metabolic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
+is_a: GO:0009058 ! biosynthetic process
 
 [Term]
 id: GO:0034655
@@ -33055,7 +33011,7 @@ synonym: "nucleobase, nucleoside, nucleotide and nucleic acid catabolic process"
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid catabolism" EXACT []
 synonym: "nucleobase, nucleoside, nucleotide and nucleic acid degradation" EXACT []
 is_a: GO:0006139 ! nucleobase-containing compound metabolic process
-is_a: GO:1901361 ! organic cyclic compound catabolic process
+is_a: GO:0009056 ! catabolic process
 
 [Term]
 id: GO:0034976
@@ -33257,7 +33213,6 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a protein that is not folded in its correct three-dimensional structure." [GOC:bf]
 synonym: "response to misfolded or unfolded protein" RELATED [GOC:bf]
 is_a: GO:0006950 ! response to stress
-is_a: GO:0010033 ! response to organic substance
 created_by: bf
 creation_date: 2011-08-03T11:43:12Z
 
@@ -33269,7 +33224,6 @@ def: "Any process that results in a change in state or activity of a cell (in te
 synonym: "cellular response to misfolded or unfolded protein" RELATED [GOC:bf]
 is_a: GO:0033554 ! cellular response to stress
 is_a: GO:0035966 ! response to topologically incorrect protein
-is_a: GO:0071310 ! cellular response to organic substance
 created_by: bf
 creation_date: 2011-08-03T11:44:50Z
 
@@ -33741,7 +33695,7 @@ id: GO:0042073
 name: intraciliary transport
 namespace: biological_process
 alt_id: GO:0035734
-def: "The bidirectional movement of large protein complexes along microtubules within a cilium, mediated by motor proteins." [GOC:cilia, GOC:kmv, PMID:17981739, PMID:18180368, PMID:22869374, Reactome:R-HSA-5620924.2]
+def: "The bidirectional movement of large protein complexes along microtubules within a cilium, mediated by motor proteins." [GOC:cilia, GOC:kmv, PMID:17981739, PMID:18180368, PMID:22869374]
 comment: Note that we deem cilium and microtubule-based flagellum to be equivalent.
 synonym: "IFT" RELATED []
 synonym: "intraflagellar transport" EXACT []
@@ -33763,7 +33717,7 @@ property_value: RO:0002161 NCBITaxon:5782
 id: GO:0042074
 name: cell migration involved in gastrulation
 namespace: biological_process
-def: "The migration of individual cells within the blastocyst to help establish the multi-layered body plan of the organism (gastrulation). For example, the migration of cells from the surface to the interior of the embryo (ingression)." [GOC:jl, http://www.cellmigration.org/, ISBN:0878932437]
+def: "The migration of individual cells within the blastocyst to help establish the multi-layered body plan of the organism (gastrulation). For example, the migration of cells from the surface to the interior of the embryo (ingression)." [GOC:jl, PMID:16099638]
 is_a: GO:0001667 ! ameboidal-type cell migration
 intersection_of: GO:0016477 ! cell migration
 intersection_of: part_of GO:0007369 ! gastrulation
@@ -33893,7 +33847,7 @@ name: regulation of phosphorylation
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of addition of phosphate groups into a molecule." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 is_a: GO:0019220 ! regulation of phosphate metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0016310 ! phosphorylation
@@ -33906,7 +33860,7 @@ name: negative regulation of phosphorylation
 namespace: biological_process
 def: "Any process that stops, prevents or decreases the rate of addition of phosphate groups to a molecule." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "down regulation of phosphorylation" EXACT []
 synonym: "down-regulation of phosphorylation" EXACT []
 synonym: "downregulation of phosphorylation" EXACT []
@@ -34119,8 +34073,7 @@ synonym: "indole derivative metabolism" NARROW []
 synonym: "indole-containing compound metabolism" EXACT []
 synonym: "ketole metabolic process" EXACT []
 synonym: "ketole metabolism" EXACT []
-is_a: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:1901564 ! organonitrogen compound metabolic process
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0042435
@@ -34133,9 +34086,8 @@ synonym: "indole-containing compound anabolism" EXACT []
 synonym: "indole-containing compound biosynthesis" EXACT []
 synonym: "indole-containing compound formation" EXACT []
 synonym: "indole-containing compound synthesis" EXACT []
+is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0042430 ! indole-containing compound metabolic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
-is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 
 [Term]
 id: GO:0042436
@@ -34147,9 +34099,8 @@ synonym: "indole derivative catabolism" EXACT []
 synonym: "indole-containing compound breakdown" EXACT []
 synonym: "indole-containing compound catabolism" EXACT []
 synonym: "indole-containing compound degradation" EXACT []
+is_a: GO:0009056 ! catabolic process
 is_a: GO:0042430 ! indole-containing compound metabolic process
-is_a: GO:1901361 ! organic cyclic compound catabolic process
-is_a: GO:1901565 ! organonitrogen compound catabolic process
 
 [Term]
 id: GO:0042439
@@ -34272,7 +34223,7 @@ relationship: part_of GO:0061061 ! muscle structure development
 id: GO:0042713
 name: sperm ejaculation
 namespace: biological_process
-def: "The expulsion of seminal fluid, thick white fluid containing spermatozoa, from the male genital tract." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+def: "The expulsion of seminal fluid, thick white fluid containing spermatozoa, from the male genital tract." [GOC:jl, PMID:26385403]
 is_a: GO:0048609 ! multicellular organismal reproductive process
 relationship: part_of GO:0007320 ! insemination
 
@@ -34367,7 +34318,7 @@ property_value: RO:0002161 NCBITaxon:4896
 id: GO:0042995
 name: cell projection
 namespace: cellular_component
-def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, PMID:16318917]
 subset: goslim_agr
 subset: goslim_euk_cellular_processes_ribbon
 subset: goslim_flybase_ribbon
@@ -34384,7 +34335,7 @@ is_a: GO:0110165 ! cellular anatomical entity
 id: GO:0043005
 name: neuron projection
 namespace: cellular_component
-def: "A prolongation or process extending from a nerve cell, e.g. an axon or dendrite." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+def: "A prolongation or process extending from a nerve cell, e.g. an axon or dendrite." [GOC:jl, PMID:3077060]
 subset: goslim_pir
 synonym: "nerve fiber" RELATED [GOC:dph]
 synonym: "neurite" NARROW []
@@ -34555,7 +34506,7 @@ name: positive regulation of catalytic activity
 namespace: biological_process
 alt_id: GO:0048554
 def: "Any process that activates or increases the activity of an enzyme." [GOC:ebc, GOC:jl, GOC:tb, GOC:vw]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_chembl
 synonym: "activation of enzyme activity" NARROW []
 synonym: "activation of metalloenzyme activity" NARROW []
@@ -34581,7 +34532,7 @@ name: negative regulation of catalytic activity
 namespace: biological_process
 alt_id: GO:0048553
 def: "Any process that stops or reduces the activity of an enzyme." [GOC:ebc, GOC:jl, GOC:tb, GOC:vw]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "down regulation of enzyme activity" EXACT []
 synonym: "down regulation of metalloenzyme activity" NARROW []
 synonym: "down-regulation of enzyme activity" EXACT []
@@ -34628,7 +34579,7 @@ synonym: "biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
 synonym: "macromolecule metabolism" EXACT []
 synonym: "multicellular organismal macromolecule metabolic process" NARROW []
 synonym: "organismal macromolecule metabolism" EXACT []
-is_a: GO:0071704 ! organic substance metabolic process
+is_a: GO:0008152 ! metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
 [Term]
@@ -34670,35 +34621,41 @@ id: GO:0043227
 name: membrane-bounded organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 synonym: "membrane-enclosed organelle" EXACT []
 xref: NIF_Subcellular:sao414196390
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
 intersection_of: has_part GO:0016020 ! membrane
 relationship: has_part GO:0016020 ! membrane
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28153" xsd:anyURI
 
 [Term]
 id: GO:0043228
 name: non-membrane-bounded organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, not bounded by a lipid bilayer membrane. Includes ribosomes, the cytoskeleton and chromosomes." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 subset: goslim_mouse
 synonym: "biological condensate" RELATED []
 synonym: "non-membrane-enclosed organelle" EXACT []
 xref: NIF_Subcellular:sao1456184038
 is_a: GO:0043226 ! organelle
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/21881" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28153" xsd:anyURI
 
 [Term]
 id: GO:0043229
 name: intracellular organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
 intersection_of: part_of GO:0005622 ! intracellular anatomical structure
 relationship: part_of GO:0005622 ! intracellular anatomical structure
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/28153" xsd:anyURI
 
 [Term]
 id: GO:0043231
@@ -34838,7 +34795,7 @@ id: GO:0043412
 name: macromolecule modification
 namespace: biological_process
 def: "The covalent alteration of one or more monomeric units in a polypeptide, polynucleotide, polysaccharide, or other biological macromolecule, resulting in a change in its properties." [GOC:go_curators]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_pir
 is_a: GO:0043170 ! macromolecule metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
@@ -34848,7 +34805,7 @@ id: GO:0043414
 name: macromolecule methylation
 namespace: biological_process
 def: "The covalent attachment of a methyl residue to one or more monomeric units in a polypeptide, polynucleotide, polysaccharide, or other biological macromolecule." [GOC:go_curators]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 is_a: GO:0032259 ! methylation
 is_a: GO:0043412 ! macromolecule modification
 
@@ -34878,7 +34835,7 @@ name: regulation of RNA splicing
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of RNA splicing, the process of removing sections of the primary RNA transcript to remove sequences not present in the mature form of the RNA and joining the remaining sections to form the mature form of the RNA." [GOC:jl]
 is_a: GO:0010468 ! regulation of gene expression
-is_a: GO:0051252 ! regulation of RNA metabolic process
+is_a: GO:0080090 ! regulation of primary metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0008380 ! RNA splicing
 relationship: regulates GO:0008380 ! RNA splicing
@@ -35040,9 +34997,11 @@ name: cellular component biogenesis
 namespace: biological_process
 alt_id: GO:0071843
 def: "A process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component. Includes biosynthesis of constituent macromolecules, and those macromolecular modifications that are involved in synthesis or assembly of the cellular component." [GOC:jl, GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "cellular component biogenesis at cellular level" EXACT []
 is_a: GO:0071840 ! cellular component organization or biogenesis
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27194" xsd:anyURI
 
 [Term]
 id: GO:0044087
@@ -35115,7 +35074,7 @@ id: GO:0044093
 name: positive regulation of molecular function
 namespace: biological_process
 def: "Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GO:jl]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0003674 ! molecular_function
@@ -35139,13 +35098,14 @@ is_a: GO:0009987 ! cellular process
 id: GO:0044238
 name: primary metabolic process
 namespace: biological_process
-def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators, http://www.metacyc.org]
+def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators]
 subset: gocheck_do_not_annotate
 subset: goslim_euk_cellular_processes_ribbon
 subset: goslim_pir
 subset: goslim_plant_ribbon
 subset: goslim_prokaryote_ribbon
 synonym: "primary metabolism" EXACT []
+xref: Wikipedia:Primary_metabolite
 is_a: GO:0008152 ! metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
@@ -35515,7 +35475,9 @@ synonym: "nonspecific immune response" EXACT []
 xref: Wikipedia:Innate_immune_system
 is_a: GO:0006955 ! immune response
 is_a: GO:0140546 ! defense response to symbiont
-property_value: RO:0002161 NCBITaxon_Union:0000023
+property_value: RO:0002161 NCBITaxon:2
+property_value: RO:0002161 NCBITaxon:2157
+property_value: RO:0002161 NCBITaxon:4751
 
 [Term]
 id: GO:0045088
@@ -36605,7 +36567,6 @@ synonym: "phenol-containing compound biosynthesis" EXACT []
 synonym: "phenol-containing compound formation" EXACT []
 synonym: "phenol-containing compound synthesis" EXACT []
 is_a: GO:0018958 ! phenol-containing compound metabolic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
 is_a: GO:1901617 ! organic hydroxy compound biosynthetic process
 
 [Term]
@@ -38153,7 +38114,7 @@ name: regulation of catalytic activity
 namespace: biological_process
 alt_id: GO:0048552
 def: "Any process that modulates the activity of an enzyme." [GOC:ai, GOC:ebc, GOC:vw]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_chembl
 synonym: "regulation of enzyme activity" EXACT []
 synonym: "regulation of metalloenzyme activity" NARROW []
@@ -39605,7 +39566,7 @@ id: GO:0051336
 name: regulation of hydrolase activity
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of hydrolase activity, the catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [GOC:ai]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "hydrolase regulator" EXACT []
 is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0065007 ! biological regulation
@@ -39618,7 +39579,7 @@ name: regulation of transferase activity
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [GOC:ai]
 comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "transferase regulator" EXACT []
 is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0065007 ! biological regulation
@@ -39630,7 +39591,7 @@ id: GO:0051345
 name: positive regulation of hydrolase activity
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of hydrolase activity, the catalysis of the hydrolysis of various bonds." [GOC:ai]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "activation of hydrolase activity" NARROW []
 synonym: "hydrolase activator" EXACT []
 synonym: "stimulation of hydrolase activity" NARROW []
@@ -39648,7 +39609,7 @@ id: GO:0051346
 name: negative regulation of hydrolase activity
 namespace: biological_process
 def: "Any process that stops or reduces the rate of hydrolase activity, the catalysis of the hydrolysis of various bonds." [GOC:ai]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "down regulation of hydrolase activity" EXACT []
 synonym: "down-regulation of hydrolase activity" EXACT []
 synonym: "downregulation of hydrolase activity" EXACT []
@@ -39666,7 +39627,7 @@ name: positive regulation of transferase activity
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
 comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "activation of transferase activity" NARROW []
 synonym: "stimulation of transferase activity" NARROW []
 synonym: "transferase activator" EXACT []
@@ -39685,7 +39646,7 @@ name: negative regulation of transferase activity
 namespace: biological_process
 def: "Any process that stops or reduces the rate of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
 comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 synonym: "down regulation of transferase activity" EXACT []
 synonym: "down-regulation of transferase activity" EXACT []
 synonym: "downregulation of transferase activity" EXACT []
@@ -39961,7 +39922,7 @@ is_a: GO:0051640 ! organelle localization
 id: GO:0051649
 name: establishment of localization in cell
 namespace: biological_process
-def: "Any process, occuring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos, GOC:dph, GOC:tb]
+def: "Any process, occurring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos, GOC:dph, GOC:tb]
 synonym: "establishment of cellular localization" RELATED [GOC:dph, GOC:tb]
 synonym: "establishment of intracellular localization" NARROW []
 synonym: "establishment of localisation in cell" EXACT [GOC:mah]
@@ -40412,8 +40373,8 @@ subset: goslim_plant_ribbon
 subset: goslim_prokaryote
 subset: goslim_prokaryote_ribbon
 synonym: "binding, bridging" EXACT []
-synonym: "protein complex scaffold activity" RELATED []
-synonym: "protein-containing complex scaffold activity" RELATED []
+synonym: "protein complex scaffold activity" BROAD []
+synonym: "protein-containing complex scaffold activity" BROAD []
 is_a: GO:0003674 ! molecular_function
 relationship: has_part GO:0005488 ! binding
 
@@ -41302,7 +41263,7 @@ id: GO:0065009
 name: regulation of molecular function
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_pir
 subset: goslim_plant
 synonym: "regulation of a molecular function" EXACT []
@@ -41653,16 +41614,6 @@ created_by: mah
 creation_date: 2009-12-03T01:09:08Z
 
 [Term]
-id: GO:0071310
-name: cellular response to organic substance
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:mah]
-is_a: GO:0010033 ! response to organic substance
-is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: mah
-creation_date: 2009-12-10T04:46:04Z
-
-[Term]
 id: GO:0071470
 name: cellular response to osmotic stress
 namespace: biological_process
@@ -41753,34 +41704,11 @@ created_by: mah
 creation_date: 2010-03-02T11:43:38Z
 
 [Term]
-id: GO:0071702
-name: organic substance transport
-namespace: biological_process
-def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
-is_a: GO:0006810 ! transport
-created_by: mah
-creation_date: 2010-03-08T02:15:14Z
-
-[Term]
-id: GO:0071704
-name: organic substance metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [GOC:mah]
-subset: gocheck_do_not_annotate
-synonym: "organic molecular entity metabolic process" EXACT []
-synonym: "organic molecular entity metabolism" EXACT []
-synonym: "organic substance metabolism" EXACT []
-is_a: GO:0008152 ! metabolic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: mah
-creation_date: 2010-03-08T03:32:18Z
-
-[Term]
 id: GO:0071705
 name: nitrogen compound transport
 namespace: biological_process
 def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 is_a: GO:0006810 ! transport
 created_by: mah
 creation_date: 2010-03-08T03:56:28Z
@@ -41862,8 +41790,6 @@ synonym: "DNA biosynthesis" EXACT [GOC:mah]
 synonym: "DNA formation" EXACT [GOC:mah]
 synonym: "DNA synthesis" EXACT [GOC:mah]
 is_a: GO:0006259 ! DNA metabolic process
-is_a: GO:0009059 ! macromolecule biosynthetic process
-is_a: GO:0034654 ! nucleobase-containing compound biosynthetic process
 is_a: GO:0141187 ! nucleic acid biosynthetic process
 created_by: mah
 creation_date: 2010-09-15T02:14:33Z
@@ -42007,7 +41933,6 @@ name: response to hydroxyurea
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a hydroxyurea stimulus." [GOC:mah]
 synonym: "response to HU" EXACT [GOC:mah]
-is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901698 ! response to nitrogen compound
 created_by: mah
 creation_date: 2012-04-11T04:15:42Z
@@ -42473,6 +42398,7 @@ id: GO:0090615
 name: mitochondrial mRNA processing
 namespace: biological_process
 def: "Steps involved in processing precursor RNAs arising from transcription of operons in the mitochondrial genome into mature mRNAs." [GOC:tb, PMID:25181358]
+is_a: GO:0000959 ! mitochondrial RNA metabolic process
 is_a: GO:0000963 ! mitochondrial RNA processing
 is_a: GO:0006397 ! mRNA processing
 intersection_of: GO:0006397 ! mRNA processing
@@ -43037,7 +42963,7 @@ id: GO:0099531
 name: presynaptic process involved in chemical synaptic transmission
 namespace: biological_process
 def: "The pathway leading to secretion of a neurotransmitter from the presynapse as part of synaptic transmission." [GOC:dos]
-subset: gocheck_do_not_annotate
+subset: gocheck_obsoletion_candidate
 subset: goslim_synapse
 is_a: GO:0050877 ! nervous system process
 intersection_of: GO:0050877 ! nervous system process
@@ -43646,8 +43572,11 @@ namespace: biological_process
 def: "The biosynthetic process resulting in the formation of a nucleic acid." [GOC:dph, GOC:tb]
 comment: This term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term.
 subset: gocheck_do_not_annotate
+is_a: GO:0009059 ! macromolecule biosynthetic process
+is_a: GO:0034654 ! nucleobase-containing compound biosynthetic process
 is_a: GO:0090304 ! nucleic acid metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27408" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27633" xsd:anyURI
 created_by: pg
 creation_date: 2024-03-25T07:33:40Z
 
@@ -43658,8 +43587,11 @@ namespace: biological_process
 def: "The cellular DNA metabolic process resulting in the breakdown of a nucleic acid." [GOC:curators]
 comment: This term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term.
 subset: gocheck_do_not_annotate
+is_a: GO:0009057 ! macromolecule catabolic process
+is_a: GO:0034655 ! nucleobase-containing compound catabolic process
 is_a: GO:0090304 ! nucleic acid metabolic process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27408" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27633" xsd:anyURI
 created_by: pg
 creation_date: 2024-03-25T07:35:06Z
 
@@ -43797,7 +43729,7 @@ def: "Any process that modulates the frequency, rate or extent of endoplasmic re
 synonym: "regulation of ER unfolded protein response" EXACT [GOC:TermGenie]
 synonym: "regulation of erUPR" EXACT [GOC:TermGenie]
 synonym: "regulation of SREBP-mediated signalling pathway" RELATED [GOC:TermGenie]
-is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:1902531 ! regulation of intracellular signal transduction
 is_a: GO:1905897 ! regulation of response to endoplasmic reticulum stress
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0030968 ! endoplasmic reticulum unfolded protein response
@@ -43829,8 +43761,8 @@ synonym: "inhibition of SREBP-mediated signalling pathway" RELATED [GOC:TermGeni
 synonym: "negative regulation of ER unfolded protein response" EXACT [GOC:TermGenie]
 synonym: "negative regulation of erUPR" EXACT [GOC:TermGenie]
 synonym: "negative regulation of SREBP-mediated signalling pathway" RELATED [GOC:TermGenie]
-is_a: GO:0009968 ! negative regulation of signal transduction
 is_a: GO:1900101 ! regulation of endoplasmic reticulum unfolded protein response
+is_a: GO:1902532 ! negative regulation of intracellular signal transduction
 is_a: GO:1903573 ! negative regulation of response to endoplasmic reticulum stress
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0030968 ! endoplasmic reticulum unfolded protein response
@@ -43862,8 +43794,8 @@ synonym: "upregulation of endoplasmic reticulum unfolded protein response" EXACT
 synonym: "upregulation of ER unfolded protein response" EXACT [GOC:TermGenie]
 synonym: "upregulation of erUPR" EXACT [GOC:TermGenie]
 synonym: "upregulation of SREBP-mediated signalling pathway" RELATED [GOC:TermGenie]
-is_a: GO:0009967 ! positive regulation of signal transduction
 is_a: GO:1900101 ! regulation of endoplasmic reticulum unfolded protein response
+is_a: GO:1902533 ! positive regulation of intracellular signal transduction
 is_a: GO:1905898 ! positive regulation of response to endoplasmic reticulum stress
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0030968 ! endoplasmic reticulum unfolded protein response
@@ -44179,7 +44111,7 @@ def: "The chemical reactions and pathways involving an acetate ester, any carbox
 synonym: "acetate ester metabolism" EXACT [GOC:TermGenie]
 synonym: "acetyl ester metabolic process" EXACT [CHEBI:47622]
 synonym: "acetyl ester metabolism" EXACT [CHEBI:47622]
-is_a: GO:0071704 ! organic substance metabolic process
+is_a: GO:0008152 ! metabolic process
 created_by: bf
 creation_date: 2012-05-16T12:29:51Z
 
@@ -44429,7 +44361,7 @@ name: primary amino compound metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving primary amino compound." [GOC:TermGenie]
 synonym: "primary amino compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:1901564 ! organonitrogen compound metabolic process
+is_a: GO:0008152 ! metabolic process
 created_by: bf
 creation_date: 2012-07-18T04:44:39Z
 
@@ -44441,8 +44373,8 @@ def: "The chemical reactions and pathways resulting in the breakdown of primary 
 synonym: "primary amino compound breakdown" EXACT [GOC:TermGenie]
 synonym: "primary amino compound catabolism" EXACT [GOC:TermGenie]
 synonym: "primary amino compound degradation" EXACT [GOC:TermGenie]
+is_a: GO:0009056 ! catabolic process
 is_a: GO:1901160 ! primary amino compound metabolic process
-is_a: GO:1901565 ! organonitrogen compound catabolic process
 created_by: bf
 creation_date: 2012-07-18T04:45:06Z
 
@@ -44455,47 +44387,10 @@ synonym: "primary amino compound anabolism" EXACT [GOC:TermGenie]
 synonym: "primary amino compound biosynthesis" EXACT [GOC:TermGenie]
 synonym: "primary amino compound formation" EXACT [GOC:TermGenie]
 synonym: "primary amino compound synthesis" EXACT [GOC:TermGenie]
+is_a: GO:0009058 ! biosynthetic process
 is_a: GO:1901160 ! primary amino compound metabolic process
-is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 created_by: bf
 creation_date: 2012-07-18T04:45:14Z
-
-[Term]
-id: GO:1901360
-name: organic cyclic compound metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving organic cyclic compound." [GOC:TermGenie]
-synonym: "organic cyclic compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0071704 ! organic substance metabolic process
-created_by: bf
-creation_date: 2012-09-14T09:03:51Z
-
-[Term]
-id: GO:1901361
-name: organic cyclic compound catabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the breakdown of organic cyclic compound." [GOC:TermGenie]
-synonym: "organic cyclic compound breakdown" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound catabolism" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound degradation" EXACT [GOC:TermGenie]
-is_a: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:1901575 ! organic substance catabolic process
-created_by: bf
-creation_date: 2012-09-14T09:05:04Z
-
-[Term]
-id: GO:1901362
-name: organic cyclic compound biosynthetic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of organic cyclic compound." [GOC:TermGenie]
-synonym: "organic cyclic compound anabolism" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound biosynthesis" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound formation" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound synthesis" EXACT [GOC:TermGenie]
-is_a: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:1901576 ! organic substance biosynthetic process
-created_by: bf
-creation_date: 2012-09-14T09:05:22Z
 
 [Term]
 id: GO:1901524
@@ -44555,7 +44450,6 @@ name: response to hypochlorite
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a hypochlorite stimulus." [GOC:pr, GOC:TermGenie, PMID:22223481]
 is_a: GO:0000302 ! response to reactive oxygen species
-is_a: GO:0010035 ! response to inorganic substance
 created_by: pr
 creation_date: 2012-10-24T07:12:21Z
 
@@ -44575,89 +44469,9 @@ id: GO:1901562
 name: response to paraquat
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a paraquat stimulus." [GOC:TermGenie]
-is_a: GO:0010033 ! response to organic substance
+is_a: GO:0042221 ! response to chemical
 created_by: mah
 creation_date: 2012-11-02T15:32:41Z
-
-[Term]
-id: GO:1901564
-name: organonitrogen compound metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving organonitrogen compound." [GOC:pr, GOC:TermGenie]
-subset: gocheck_do_not_annotate
-synonym: "organonitrogen compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0071704 ! organic substance metabolic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: pr
-creation_date: 2012-11-04T15:17:52Z
-
-[Term]
-id: GO:1901565
-name: organonitrogen compound catabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the breakdown of organonitrogen compound." [GOC:pr, GOC:TermGenie]
-subset: gocheck_do_not_annotate
-synonym: "organonitrogen compound breakdown" EXACT [GOC:TermGenie]
-synonym: "organonitrogen compound catabolism" EXACT [GOC:TermGenie]
-synonym: "organonitrogen compound degradation" EXACT [GOC:TermGenie]
-is_a: GO:1901564 ! organonitrogen compound metabolic process
-is_a: GO:1901575 ! organic substance catabolic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: pr
-creation_date: 2012-11-04T15:17:56Z
-
-[Term]
-id: GO:1901566
-name: organonitrogen compound biosynthetic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of organonitrogen compound." [GOC:pr, GOC:TermGenie]
-subset: gocheck_do_not_annotate
-synonym: "organonitrogen compound anabolism" EXACT [GOC:TermGenie]
-synonym: "organonitrogen compound biosynthesis" EXACT [GOC:TermGenie]
-synonym: "organonitrogen compound formation" EXACT [GOC:TermGenie]
-synonym: "organonitrogen compound synthesis" EXACT [GOC:TermGenie]
-is_a: GO:1901564 ! organonitrogen compound metabolic process
-is_a: GO:1901576 ! organic substance biosynthetic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: pr
-creation_date: 2012-11-04T15:18:00Z
-
-[Term]
-id: GO:1901575
-name: organic substance catabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the breakdown of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
-subset: gocheck_do_not_annotate
-synonym: "organic molecular entity catabolic process" EXACT []
-synonym: "organic substance breakdown" EXACT []
-synonym: "organic substance catabolism" EXACT []
-synonym: "organic substance degradation" EXACT []
-is_a: GO:0009056 ! catabolic process
-is_a: GO:0071704 ! organic substance metabolic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: pr
-creation_date: 2012-11-05T11:04:36Z
-
-[Term]
-id: GO:1901576
-name: organic substance biosynthetic process
-namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
-subset: gocheck_do_not_annotate
-synonym: "organic molecular entity anabolism" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity biosynthesis" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity biosynthetic process" EXACT []
-synonym: "organic molecular entity formation" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity synthesis" EXACT [GOC:TermGenie]
-synonym: "organic substance anabolism" EXACT []
-synonym: "organic substance biosynthesis" EXACT []
-synonym: "organic substance formation" EXACT []
-synonym: "organic substance synthesis" EXACT []
-is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0071704 ! organic substance metabolic process
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
-created_by: pr
-creation_date: 2012-11-05T11:04:40Z
 
 [Term]
 id: GO:1901588
@@ -44737,7 +44551,7 @@ name: organic hydroxy compound metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving organic hydroxy compound." [GOC:pr, GOC:TermGenie]
 synonym: "organic hydroxy compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0071704 ! organic substance metabolic process
+is_a: GO:0008152 ! metabolic process
 created_by: pr
 creation_date: 2012-11-13T12:54:27Z
 
@@ -44749,7 +44563,7 @@ def: "The chemical reactions and pathways resulting in the breakdown of organic 
 synonym: "organic hydroxy compound breakdown" EXACT [GOC:TermGenie]
 synonym: "organic hydroxy compound catabolism" EXACT [GOC:TermGenie]
 synonym: "organic hydroxy compound degradation" EXACT [GOC:TermGenie]
-is_a: GO:1901575 ! organic substance catabolic process
+is_a: GO:0009056 ! catabolic process
 is_a: GO:1901615 ! organic hydroxy compound metabolic process
 created_by: pr
 creation_date: 2012-11-13T12:54:31Z
@@ -44763,7 +44577,7 @@ synonym: "organic hydroxy compound anabolism" EXACT [GOC:TermGenie]
 synonym: "organic hydroxy compound biosynthesis" EXACT [GOC:TermGenie]
 synonym: "organic hydroxy compound formation" EXACT [GOC:TermGenie]
 synonym: "organic hydroxy compound synthesis" EXACT [GOC:TermGenie]
-is_a: GO:1901576 ! organic substance biosynthetic process
+is_a: GO:0009058 ! biosynthetic process
 is_a: GO:1901615 ! organic hydroxy compound metabolic process
 created_by: pr
 creation_date: 2012-11-13T12:54:36Z
@@ -46820,7 +46634,7 @@ creation_date: 2014-05-22T14:22:34Z
 id: GO:1903108
 name: regulation of mitochondrial transcription
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of transcription occuring in the mitochondrion." [GO_REF:0000058, GOC:TermGenie, PMID:21357609]
+def: "Any process that modulates the frequency, rate or extent of transcription occurring in the mitochondrion." [GO_REF:0000058, GOC:TermGenie, PMID:21357609]
 synonym: "regulation of transcription from mitochondrial promoter" EXACT []
 is_a: GO:0006355 ! regulation of DNA-templated transcription
 is_a: GO:0062125 ! regulation of mitochondrial gene expression
@@ -46834,7 +46648,7 @@ creation_date: 2014-06-09T11:53:14Z
 id: GO:1903109
 name: positive regulation of mitochondrial transcription
 namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of transcription occuring in the mitochondrion." [GO_REF:0000058, GOC:TermGenie, PMID:21357609]
+def: "Any process that activates or increases the frequency, rate or extent of transcription occurring in the mitochondrion." [GO_REF:0000058, GOC:TermGenie, PMID:21357609]
 synonym: "activation of mitochondrial transcription" NARROW [GOC:TermGenie]
 synonym: "activation of transcription from mitochondrial promoter" NARROW [GOC:TermGenie]
 synonym: "positive regulation of transcription from mitochondrial promoter" EXACT []
@@ -46859,7 +46673,6 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of mitochondrion degradation by an autophagic process." [GO_REF:0000058, GOC:autophagy, GOC:bf, GOC:PARL, GOC:TermGenie, PMID:24600391]
 synonym: "regulation of mitochondrion degradation" BROAD [GOC:TermGenie]
 is_a: GO:0010506 ! regulation of autophagy
-is_a: GO:0010821 ! regulation of mitochondrion organization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0000422 ! autophagy of mitochondrion
 relationship: regulates GO:0000422 ! autophagy of mitochondrion
@@ -46879,7 +46692,6 @@ synonym: "downregulation of mitochondrion degradation" BROAD [GOC:TermGenie]
 synonym: "inhibition of mitochondrion degradation" RELATED [GOC:TermGenie]
 synonym: "inhibition of mitophagy" NARROW [GOC:TermGenie]
 is_a: GO:0010507 ! negative regulation of autophagy
-is_a: GO:0010639 ! negative regulation of organelle organization
 is_a: GO:1903146 ! regulation of autophagy of mitochondrion
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0000422 ! autophagy of mitochondrion
@@ -47706,7 +47518,6 @@ synonym: "up-regulation of mitophagy" EXACT [GOC:TermGenie]
 synonym: "upregulation of mitochondrion degradation" BROAD [GOC:TermGenie]
 synonym: "upregulation of mitophagy" EXACT [GOC:TermGenie]
 is_a: GO:0010508 ! positive regulation of autophagy
-is_a: GO:0010638 ! positive regulation of organelle organization
 is_a: GO:1903146 ! regulation of autophagy of mitochondrion
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0000422 ! autophagy of mitochondrion
@@ -51610,7 +51421,7 @@ subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
 synonym: "concentration" EXACT []
-is_a: PATO:0002182 ! molecular quality
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0000040
@@ -51698,6 +51509,7 @@ is_a: PATO:0000051 ! morphology
 id: PATO:0000068
 name: qualitative
 namespace: quality
+def: "A quality of an entity that is descriptive or observational, typically not represented numerically." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.ncbi.nlm.nih.gov/books/NBK470395/]
 comment: TODO: define this or obsolete it and move children somewhere else.
 is_a: PATO:0000001 ! quality
 
@@ -51725,7 +51537,7 @@ synonym: "number" RELATED []
 synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0103000 ! quantitative
 relationship: RO:0015012 PATO:0001555 ! has number of
 
 [Term]
@@ -52857,6 +52669,7 @@ def: "A concentration which is higher relative to the normal or average." [PATOC
 subset: relational_slim
 subset: value_slim
 synonym: "high concentration" EXACT []
+is_a: PATO:0000470 ! increased amount
 is_a: PATO:0001159 ! concentrated
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001159 ! concentrated
@@ -52872,6 +52685,7 @@ subset: relational_slim
 subset: value_slim
 synonym: "low concentration" EXACT []
 is_a: PATO:0001159 ! concentrated
+is_a: PATO:0001997 ! decreased amount
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001159 ! concentrated
 intersection_of: RO:0015008 PATO:0000461 ! normal
@@ -53049,40 +52863,6 @@ subset: disposition_slim
 subset: value_slim
 is_a: PATO:0001662 ! fragility
 property_value: RO:0002604 PATO:0001716
-
-[Term]
-id: PATO:0001396
-name: cellular quality
-namespace: quality
-def: "A monadic quality of continuant that exists at the cellular level of organisation." [PATOC:GVG]
-is_a: PATO:0070044 ! anatomical structure quality
-
-[Term]
-id: PATO:0001404
-name: nucleate quality
-namespace: quality
-def: "A cellular quality inhering in a bearer by virtue of bearer's number of nuclei." [PATOC:GVG]
-subset: attribute_slim
-is_a: PATO:0001396 ! cellular quality
-
-[Term]
-id: PATO:0001405
-name: anucleate
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having no nucleus." [Biology-online:Biology-online]
-subset: cell_quality
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0001404 ! nucleate quality
-
-[Term]
-id: PATO:0001408
-name: ciliatedness
-namespace: quality
-def: "A cellular quality inhering in a bearer by virtue of the bearer's having thin, tail-like projections extending outwards from the cell body." [Wikipedia:http\://en.wikipedia.org/wiki/Ciliated]
-subset: cell_quality
-subset: value_slim
-is_a: PATO:0001396 ! cellular quality
 
 [Term]
 id: PATO:0001422
@@ -53363,8 +53143,7 @@ synonym: "mereological quality" EXACT []
 synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
-is_a: PATO:0001241 ! physical object quality
-relationship: RO:0015012 PATO:0000070 ! amount
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -53838,7 +53617,7 @@ namespace: quality
 alt_id: PATO:0001479
 alt_id: PATO:0002158
 alt_id: PATO:0002159
-def: "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position." [thefreedictionary.com:thefreedictionary.com]
+def: "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position due to it being physically moved from the normal location." [thefreedictionary.com:thefreedictionary.com]
 subset: mpath_slim
 subset: value_slim
 synonym: "dislocation" EXACT []
@@ -54007,6 +53786,7 @@ subset: relational_slim
 synonym: "decreased number of" EXACT []
 synonym: "has decreased number of" EXACT []
 synonym: "has fewer physical parts of type" EXACT []
+is_a: PATO:0001997 ! decreased amount
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001999 ! lacks parts or has fewer parts of type
@@ -54026,6 +53806,7 @@ synonym: "has increased number of" EXACT []
 synonym: "having extra physical parts" EXACT []
 synonym: "having supernumerary physical parts" EXACT []
 synonym: "increased number of" EXACT []
+is_a: PATO:0000470 ! increased amount
 is_a: PATO:0002083 ! altered number of
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0002083 ! altered number of
@@ -54218,17 +53999,6 @@ subset: attribute_slim
 is_a: PATO:0000140 ! position
 property_value: terms:contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-03-01T02:56:33Z
-
-[Term]
-id: PATO:0002182
-name: molecular quality
-namespace: quality
-alt_id: PATO:0002061
-def: "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." [PATOC:GVG]
-synonym: "relational molecular quality" EXACT []
-is_a: PATO:0001241 ! physical object quality
-property_value: terms:contributor https://orcid.org/0000-0002-2061-091X
-creation_date: 2010-03-10T03:18:15Z
 
 [Term]
 id: PATO:0002198
@@ -54448,20 +54218,20 @@ property_value: dc:date "2020-08-19T09:24:35Z" xsd:dateTime
 property_value: terms:contributor https://orcid.org/0000-0003-4148-4606
 
 [Term]
-id: PATO:0070044
-name: anatomical structure quality
-namespace: quality
-def: "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components." []
-is_a: PATO:0001241 ! physical object quality
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070060
 name: quality of interaction of a substance with electromagnetic radiation
 namespace: quality
 def: "A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength." [https://orcid.org/0000-0002-5111-7263]
 subset: attribute_slim
 is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0103000
+name: quantitative
+namespace: quality
+def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
+is_a: PATO:0000001 ! quality
+created_by: https://orcid.org/0000-0001-8314-2140
 
 [Term]
 id: UBERON:0000061
@@ -54746,7 +54516,6 @@ name: RNA processing variant
 def: "Variations in the processes involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules compared to control." [GO:0006396, WB:WBPerson2021]
 synonym: "RNA processing abnormal" NARROW []
 is_a: WBPhenotype:0000113 ! RNA expression variant
-is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0000029
@@ -67213,7 +66982,6 @@ synonym: "unfolded protein response" RELATED []
 synonym: "unfolded protein response abnormal" NARROW []
 synonym: "UPR" RELATED []
 is_a: WBPhenotype:0000142 ! cell stress response variant
-is_a: WBPhenotype:0000523 ! chemical response variant
 is_a: WBPhenotype:0001644 ! protein metabolism variant
 
 [Term]
@@ -67969,6 +67737,7 @@ id: WBPhenotype:0001826
 name: RNA degradation variant
 def: "Variations in the regulated breakdown of RNA species via the action of cellular enzymes (RNases) compared to control." [WB:WBPaper00032091, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001827
@@ -68020,6 +67789,7 @@ id: WBPhenotype:0001834
 name: mRNA splicing variant
 def: "Variations in the processes regulating the excision of intervening introns from the primary mRNA transcript, compared to control." [GO:0008380, WB:WBPaper00032287, WB:WBPerson2021]
 is_a: WBPhenotype:0000028 ! RNA processing variant
+is_a: WBPhenotype:0001827 ! RNA metabolism variant
 
 [Term]
 id: WBPhenotype:0001835
@@ -73435,6 +73205,13 @@ def: "Animals respond to allyl alcohol at a lower concentration or a shorter exp
 is_a: WBPhenotype:0001918 ! chemical hypersensitive
 
 [Term]
+id: WBPhenotype:0002677
+name: adult-onset sterility
+def: "Animals exhibit sterility that manifests specifically during the adult life stage" [WB:WBPaper00053552, WB:WBPerson215, WB:WBPerson2987]
+comment: Comment from Caroline Goutte about allele ar179 in the context of WBPaper00053552 (PMID:29242286): GSCs [germline stem cells] are initially present, but then lost during adulthood; hermaphrodite is fertile but has low brood size and reduced reproductive span {comment="WB:WBPerson215", xref="WB:WBPaper00053552", xref="PMID:29242286"}
+is_a: WBPhenotype:0000688 ! sterile
+
+[Term]
 id: WBPhenotype:0004001
 name: hermaphrodite mating variant
 def: "Any variation in the specific actions or reactions of a hermaphrodite during mating compared to control." [WB:WBPerson2021, WB:WBPerson557]
@@ -75558,6 +75335,7 @@ creation_date: 2016-01-08T08:26:06Z
 [Term]
 id: WBbt:0008629
 name: gonad arm
+namespace: worm_anatomy
 def: "A lobe of the gonad. In a monodelphic gonad, there is one arm, whereas in a didelphic gonad, there are two arms." [WB:rynl]
 is_a: WBbt:0005729 ! Tissue
 
@@ -77418,10 +77196,8 @@ is_transitive: false
 [Typedef]
 id: has_part
 name: has part
-name: has_part
 namespace: chebi_ontology
 namespace: external
-namespace: quality
 def: "a core relation that holds between a whole and its part" []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
@@ -77535,7 +77311,6 @@ id: part_of
 name: part of
 name: part_of
 namespace: external
-namespace: quality
 namespace: worm_anatomy
 namespace: worm_development
 def: "a core relation that holds between a part and its whole" []
