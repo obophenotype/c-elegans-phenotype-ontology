@@ -7,13 +7,13 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/wbphenotype/imports/pato_import.owl>
-<http://purl.obolibrary.org/obo/wbphenotype/releases/2024-06-05/imports/pato_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pato/releases/2024-03-28/pato-base.owl>)
-Annotation(owl:versionInfo "2024-06-05")
+<http://purl.obolibrary.org/obo/wbphenotype/releases/2024-09-26/imports/pato_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pato/releases/2024-09-04/pato-base.owl>)
+Annotation(owl:versionInfo "2024-09-26")
 
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000020>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005634>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005929>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000008>))
@@ -145,10 +145,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001303>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001309>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001340>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001362>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001396>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001404>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001405>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001408>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001422>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001433>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001434>))
@@ -248,7 +244,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002076>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002083>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002112>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002181>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002182>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002198>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002247>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002255>))
@@ -268,11 +263,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0002325>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0050000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0055003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0055004>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0070044>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0070060>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0103000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002503>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002610>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015007>))
@@ -317,21 +311,9 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#shorthand>))
-Declaration(AnnotationProperty(rdfs:comment))
-Declaration(AnnotationProperty(rdfs:label))
-Declaration(AnnotationProperty(owl:deprecated))
 ############################
 #   Annotation Properties
 ############################
-
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
-
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/pato#abnormal_slim> (<http://purl.obolibrary.org/obo/pato#abnormal_slim>)
 
@@ -373,74 +355,6 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pato#scalar_slim> <http:
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pato#value_slim> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> (subset_property)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> "subset_property")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#consider> (consider)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#consider> "consider")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> (has_alternative_id)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> "has_alternative_id")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> (has_broad_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "has_broad_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> (has_exact_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "has_exact_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> (has_narrow_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> "has_narrow_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> (has_obo_format_version)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> "has_obo_format_version")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> (has_obo_namespace)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "has_obo_namespace")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> (has_related_synonym)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "has_related_synonym")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#id> (id)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#id> "id")
-
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#inSubset> (in_subset)
-
-AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#inSubset> "in_subset")
-
-
-############################
-#   Object Properties
-############################
-
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000050> (part_of)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BFO_0000050> "BFO:0000050")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BFO_0000050> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BFO_0000050> "part_of")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BFO_0000050> "part_of")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000050> "part_of")
-
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000051> (has_part)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BFO_0000051> "BFO:0000051")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BFO_0000051> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BFO_0000051> "has_part")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BFO_0000051> "has_part")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000051> "has_part")
 
 
 
@@ -455,6 +369,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternative
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000001> "PATO:0000001")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> <http://purl.obolibrary.org/obo/BFO_0000020>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000004> (mobility)
 
@@ -550,7 +465,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0000033> <http://purl.obolibrary.org/obo/pato#relational_slim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0000033> <http://purl.obolibrary.org/obo/pato#scalar_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000033> "concentration of")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000033> <http://purl.obolibrary.org/obo/PATO_0002182>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000033> <http://purl.obolibrary.org/obo/PATO_0000070>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000040> (distance)
 
@@ -642,6 +557,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000060> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000068> (qualitative)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://libguides.macalester.edu/c.php?g=527786&p=3608639") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.ncbi.nlm.nih.gov/books/NBK470395/") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000068> "A quality of an entity that is descriptive or observational, typically not represented numerically.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0000068> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000068> "PATO:0000068")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0000068> "TODO: define this or obsolete it and move children somewhere else.")
@@ -674,7 +590,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0000070> <http://purl.obolibrary.org/obo/pato#attribute_slim>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0000070> "This term was originally named \"presence\". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000070> "amount")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000070> <http://purl.obolibrary.org/obo/PATO_0000068>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000070> <http://purl.obolibrary.org/obo/PATO_0103000>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015012> <http://purl.obolibrary.org/obo/PATO_0001555>))
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000077> (response to)
@@ -919,7 +835,6 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0000297> "
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000297> "arrested")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000297> <http://purl.obolibrary.org/obo/PATO_0002052>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000297> <http://purl.obolibrary.org/obo/PATO_0002324>)
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000297> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>))
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000300> (immobile)
 
@@ -1037,7 +952,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000380> "increased frequency")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0000380> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000044> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000380> <http://purl.obolibrary.org/obo/PATO_0000044>)
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000380> <http://purl.obolibrary.org/obo/PATO_0000912>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000380> <http://purl.obolibrary.org/obo/PATO_0055003>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000381> (decreased frequency)
 
@@ -1052,7 +967,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000381> "decreased frequency")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0000381> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000044> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000381> <http://purl.obolibrary.org/obo/PATO_0000044>)
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000381> <http://purl.obolibrary.org/obo/PATO_0000911>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000381> <http://purl.obolibrary.org/obo/PATO_0055004>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000384> (male)
 
@@ -1881,6 +1796,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001162> <http://purl.obolibrary.org/obo/pato#value_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001162> "increased concentration")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0001162> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001159> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001162> <http://purl.obolibrary.org/obo/PATO_0000470>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001162> <http://purl.obolibrary.org/obo/PATO_0001159>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001162> <http://purl.obolibrary.org/obo/PATO_0002305>)
 
@@ -1896,6 +1812,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001163> "decreased concentration")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0001163> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001159> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001163> <http://purl.obolibrary.org/obo/PATO_0001159>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001163> <http://purl.obolibrary.org/obo/PATO_0001997>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001163> <http://purl.obolibrary.org/obo/PATO_0002303>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001178> (resistant to)
@@ -2080,44 +1997,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001362> <http://purl.obolibrary.org/obo/pato#value_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001362> "fragile")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001362> <http://purl.obolibrary.org/obo/PATO_0001662>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001396> (cellular quality)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001396> "A monadic quality of continuant that exists at the cellular level of organisation.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001396> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001396> "PATO:0001396")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001396> "cellular quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001396> <http://purl.obolibrary.org/obo/PATO_0070044>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001404> (nucleate quality)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001404> "A cellular quality inhering in a bearer by virtue of bearer's number of nuclei.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001404> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001404> "PATO:0001404")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001404> <http://purl.obolibrary.org/obo/pato#attribute_slim>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001404> "nucleate quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001404> <http://purl.obolibrary.org/obo/PATO_0001396>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001405> (anucleate)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Biology-online:Biology-online") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001405> "A nucleate quality inhering in a bearer by virtue of the bearer's having no nucleus.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001405> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001405> "PATO:0001405")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001405> <http://purl.obolibrary.org/obo/pato#cell_quality>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001405> <http://purl.obolibrary.org/obo/pato#mpath_slim>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001405> <http://purl.obolibrary.org/obo/pato#value_slim>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001405> "anucleate")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001405> <http://purl.obolibrary.org/obo/PATO_0001404>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001408> (ciliatedness)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Wikipedia:http://en.wikipedia.org/wiki/Ciliated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001408> "A cellular quality inhering in a bearer by virtue of the bearer's having thin, tail-like projections extending outwards from the cell body.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001408> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001408> "PATO:0001408")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001408> <http://purl.obolibrary.org/obo/pato#cell_quality>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001408> <http://purl.obolibrary.org/obo/pato#value_slim>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001408> "ciliatedness")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001408> <http://purl.obolibrary.org/obo/PATO_0001396>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001422> (dead)
 
@@ -2415,8 +2294,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001555> <http://purl.obolibrary.org/obo/pato#attribute_slim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001555> <http://purl.obolibrary.org/obo/pato#relational_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001555> "has number of")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001555> <http://purl.obolibrary.org/obo/PATO_0001241>)
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001555> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015012> <http://purl.obolibrary.org/obo/PATO_0000070>))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001555> <http://purl.obolibrary.org/obo/PATO_0000070>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001558> (lacking processual parts)
 
@@ -2471,6 +2349,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001583> <http://purl.obolibrary.org/obo/pato#value_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001583> "decreased variability")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0001583> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001227> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001583> <http://purl.obolibrary.org/obo/PATO_0001227>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001583> <http://purl.obolibrary.org/obo/PATO_0002301>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001584> (increased variability)
 
@@ -2482,6 +2362,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001584> <http://purl.obolibrary.org/obo/pato#value_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001584> "increased variability")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0001584> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001227> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001584> <http://purl.obolibrary.org/obo/PATO_0001227>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001584> <http://purl.obolibrary.org/obo/PATO_0002300>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001595> (depth)
 
@@ -2908,7 +2790,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001851> ObjectSomeValuesFrom(<h
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001852> (dislocated)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thefreedictionary.com:thefreedictionary.com") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001852> "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thefreedictionary.com:thefreedictionary.com") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001852> "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position due to it being physically moved from the normal location.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001852> "PATO:0001479")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001852> "PATO:0002158")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001852> "PATO:0002159")
@@ -3097,6 +2979,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0002001> "Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002001> "has fewer parts of type")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0002001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001999> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002001> <http://purl.obolibrary.org/obo/PATO_0001997>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002001> <http://purl.obolibrary.org/obo/PATO_0001999>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002001> <http://purl.obolibrary.org/obo/PATO_0002303>)
 
@@ -3116,6 +2999,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0002002> "In polydactyly, the bearer of the quality is the hand, and the entity type being counted is 'finger'. In EQ syntax, E=hand, Q=<this> E2=finger.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002002> "has extra parts of type")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0002002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0002083> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002002> <http://purl.obolibrary.org/obo/PATO_0000470>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002002> <http://purl.obolibrary.org/obo/PATO_0002083>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002002> <http://purl.obolibrary.org/obo/PATO_0002305>)
 
@@ -3319,18 +3203,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002181> "displaced")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002181> <http://purl.obolibrary.org/obo/PATO_0000140>)
 
-# Class: <http://purl.obolibrary.org/obo/PATO_0002182> (molecular quality)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0002182> "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/PATO_0002182> <https://orcid.org/0000-0002-2061-091X>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/PATO_0002182> "2010-03-10T03:18:15Z")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0002182> "PATO:0002061")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0002182> "relational molecular quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0002182> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0002182> "PATO:0002182")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002182> "molecular quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002182> <http://purl.obolibrary.org/obo/PATO_0001241>)
-
 # Class: <http://purl.obolibrary.org/obo/PATO_0002198> (quality of a substance)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0002198> "A quality inhering in a bearer by virtue of its constitution.")
@@ -3413,6 +3285,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002300> "increased quality")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0002300> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002300> <http://purl.obolibrary.org/obo/PATO_0000069>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002300> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>))
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0002301> (decreased quality)
 
@@ -3425,6 +3298,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0002301> "decreased quality")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0002301> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002301> <http://purl.obolibrary.org/obo/PATO_0000069>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0002301> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>))
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0002302> (decreased process quality)
 
@@ -3542,6 +3416,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0055003> "PATO:0055003")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0055003> "increased rate of occurrence")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0055003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0050000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015007> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0055003> <http://purl.obolibrary.org/obo/PATO_0000912>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0055003> <http://purl.obolibrary.org/obo/PATO_0050000>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0055004> (decreased rate of occurrence)
@@ -3553,16 +3428,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0055004> "PATO:0055004")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0055004> "decreased rate of occurrence")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PATO_0055004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0050000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0015008> <http://purl.obolibrary.org/obo/PATO_0000461>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0055004> <http://purl.obolibrary.org/obo/PATO_0000911>)
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0055004> <http://purl.obolibrary.org/obo/PATO_0050000>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0070044> (anatomical structure quality)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0070044> "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/PATO_0070044> "http://orcid.org/0000-0001-7258-9596")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0070044> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0070044> "PATO:0070044")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0070044> "anatomical structure quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0070044> <http://purl.obolibrary.org/obo/PATO_0001241>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0070060> (quality of interaction of a substance with electromagnetic radiation)
 
@@ -3573,7 +3440,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0070060> "quality of interaction of a substance with electromagnetic radiation")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0070060> <http://purl.obolibrary.org/obo/PATO_0002198>)
 
+# Class: <http://purl.obolibrary.org/obo/PATO_0103000> (quantitative)
 
-EquivalentClasses(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))) ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001405>)))
-EquivalentClasses(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>)) ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001408>)))
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://libguides.macalester.edu/c.php?g=527786&p=3608639") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.nnlm.gov/guides/data-glossary/quantitative-data") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0103000> "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/PATO_0103000> "https://orcid.org/0000-0001-8314-2140")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0103000> "quality")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0103000> "PATO:0103000")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0103000> "quantitative")
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0103000> <http://purl.obolibrary.org/obo/PATO_0000001>)
+
+
 )

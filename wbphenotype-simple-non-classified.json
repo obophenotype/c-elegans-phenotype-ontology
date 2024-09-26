@@ -22,9 +22,9 @@
         "val" : "chris-grove"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-06-05"
+        "val" : "2024-09-26"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-06-05/wbphenotype-simple-non-classified.json"
+      "version" : "http://purl.obolibrary.org/obo/wbphenotype/releases/2024-09-26/wbphenotype-simple-non-classified.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/UBERON_0000062",
@@ -45047,6 +45047,21 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0002677",
+      "lbl" : "adult-onset sterility",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Animals exhibit sterility that manifests specifically during the adult life stage",
+          "xrefs" : [ "WB:WBPaper00053552", "WB:WBPerson215", "WB:WBPerson2987" ]
+        },
+        "comments" : [ "Comment from Caroline Goutte about allele ar179 in the context of WBPaper00053552 (PMID:29242286): GSCs [germline stem cells] are initially present, but then lost during adulthood; hermaphrodite is fertile but has low brood size and reduced reproductive span" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "C_elegans_phenotype_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "lbl" : "hermaphrodite mating variant",
       "type" : "CLASS",
@@ -58051,6 +58066,10 @@
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002676",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0001918"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0002677",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/WBPhenotype_0000688"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/WBPhenotype_0004001",
       "pred" : "is_a",
