@@ -36,12 +36,8 @@ ERROR	missing_label	obo:chebi#BRAND_NAME	rdfs:label
 ERROR	missing_label	obo:chebi#INN	rdfs:label	
 ERROR	missing_label	obo:chebi#IUPAC_NAME	rdfs:label	
 ERROR	missing_label	obo:go#systematic_synonym	rdfs:label	
-ERROR	multiple_definitions	biological process	definition	A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.
-ERROR	multiple_definitions	biological process	definition	A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.
-ERROR	multiple_labels	realizable entity	rdfs:label	realizable@en
-ERROR	multiple_labels	realizable entity	rdfs:label	realizable entity@en
-ERROR	multiple_labels	characteristic	rdfs:label	characteristic@en
-ERROR	multiple_labels	characteristic	rdfs:label	specifically dependent continuant@en
+ERROR	multiple_definitions	organizational term	definition	Term created to ease viewing/sort terms for development purpose, and will not be included in a release@en
+ERROR	multiple_definitions	organizational term	definition	The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release.@en
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
@@ -53,8 +49,8 @@ ERROR	multiple_labels	occurs in	rdfs:label	occurs in
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in@en
 ERROR	multiple_labels	molecular_function	rdfs:label	gene product or complex activity@en
 ERROR	multiple_labels	molecular_function	rdfs:label	molecular_function
-ERROR	multiple_labels	biological process	rdfs:label	biological process@en
-ERROR	multiple_labels	biological process	rdfs:label	biological_process
+ERROR	multiple_labels	biological_process	rdfs:label	biological process@en
+ERROR	multiple_labels	biological_process	rdfs:label	biological_process
 ERROR	multiple_labels	definition	rdfs:label	definition
 ERROR	multiple_labels	definition	rdfs:label	definition@en
 ERROR	multiple_labels	has ontology root term	rdfs:label	has ontology root term
@@ -75,8 +71,8 @@ ERROR	multiple_labels	positively regulates	rdfs:label	positively regulates
 ERROR	multiple_labels	positively regulates	rdfs:label	positively regulates@en
 ERROR	multiple_labels	has_broad_synonym	rdfs:label	has broad synonym@en
 ERROR	multiple_labels	has_broad_synonym	rdfs:label	has_broad_synonym
-ERROR	multiple_labels	has cross-reference	rdfs:label	database_cross_reference
-ERROR	multiple_labels	has cross-reference	rdfs:label	has cross-reference
+ERROR	multiple_labels	database_cross_reference	rdfs:label	database_cross_reference
+ERROR	multiple_labels	database_cross_reference	rdfs:label	has cross-reference
 ERROR	multiple_labels	has exact synonym	rdfs:label	has exact synonym@en
 ERROR	multiple_labels	has exact synonym	rdfs:label	has_exact_synonym
 ERROR	multiple_labels	has narrow synonym	rdfs:label	has narrow synonym@en
@@ -98,7 +94,7 @@ WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x t) (if (Real
 WARN	annotation_whitespace	realizable entity	IAO:0000602	(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
 WARN	annotation_whitespace	quality	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
-WARN	annotation_whitespace	characteristic	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
+WARN	annotation_whitespace	specifically dependent continuant	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
 WARN	annotation_whitespace	role	IAO:0000602	(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] 
 WARN	annotation_whitespace	generically dependent continuant	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
 WARN	annotation_whitespace	function	IAO:0000602	(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] 
@@ -123,12 +119,12 @@ Personally, I am more comfortable weakening definition to documentation, with in
 
 We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  @en"
 WARN	annotation_whitespace	capable of	definition	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
-WARN	duplicate_exact_synonym	thiol	has exact synonym	
-WARN	duplicate_exact_synonym	thiol group	has exact synonym	
-WARN	duplicate_exact_synonym	copper atom	has exact synonym	
-WARN	duplicate_exact_synonym	copper(0)	has exact synonym	
-WARN	duplicate_exact_synonym	azanide	has exact synonym	
-WARN	duplicate_exact_synonym	amide	has exact synonym	
+WARN	duplicate_exact_synonym	thiol	has exact synonym	Thiol
+WARN	duplicate_exact_synonym	thiol group	has exact synonym	thiol
+WARN	duplicate_exact_synonym	copper atom	has exact synonym	copper
+WARN	duplicate_exact_synonym	copper(0)	has exact synonym	copper
+WARN	duplicate_exact_synonym	azanide	has exact synonym	amide
+WARN	duplicate_exact_synonym	amide	has exact synonym	Amide
 WARN	duplicate_label_synonym	electron	has exact synonym	electron
 WARN	duplicate_label_synonym	3-(1-methylpyrrolidin-2-yl)pyridine	has exact synonym	3-(1-methylpyrrolidin-2-yl)pyridine
 WARN	duplicate_label_synonym	carbamate	has exact synonym	carbamate
@@ -1022,7 +1018,7 @@ INFO	lowercase_definition	independent continuant	definition	b is an independent 
 INFO	lowercase_definition	process	definition	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
 INFO	lowercase_definition	disposition	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
 INFO	lowercase_definition	quality	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
-INFO	lowercase_definition	characteristic	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+INFO	lowercase_definition	specifically dependent continuant	definition	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
 INFO	lowercase_definition	role	IAO:0000600	b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])@en
 INFO	lowercase_definition	generically dependent continuant	definition	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 INFO	lowercase_definition	part_of	definition	a core relation that holds between a part and its whole@en
