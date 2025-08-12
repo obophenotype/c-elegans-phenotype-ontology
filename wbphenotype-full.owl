@@ -42,14 +42,14 @@
      xmlns:wbphenotype="http://purl.obolibrary.org/obo/wbphenotype#"
      xmlns:caloha-reqs-vetted="http://purl.obolibrary.org/obo/caloha-reqs-vetted#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/wbphenotype/wbphenotype-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2025-04-01/wbphenotype-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/wbphenotype/releases/2025-08-12/wbphenotype-full.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000886"/>
         <dc:description>Ontology about C. elegans and other nematode phenotypes</dc:description>
         <dc:title>C elegans Phenotype Ontology</dc:title>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <oboInOwl:default-namespace>C_elegans_phenotype_ontology</oboInOwl:default-namespace>
         <oboInOwl:saved-by>chris-grove</oboInOwl:saved-by>
-        <owl:versionInfo>2025-04-01</owl:versionInfo>
+        <owl:versionInfo>2025-08-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1140,6 +1140,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/depiction -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
@@ -1739,6 +1745,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002086">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)</rdfs:comment>
@@ -1752,6 +1759,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002087">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>starts_at_end_of</obo:IAO_0000118>
         <oboInOwl:hasDbXref>RO:0002087</oboInOwl:hasDbXref>
@@ -4034,7 +4042,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000602>(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">realizable</rdfs:label>
         <rdfs:label xml:lang="en">realizable entity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -4145,10 +4152,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </obo:IAO_0000602>
         <rdfs:comment xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">characteristic</rdfs:label>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
-        <rdfs:seeAlso>https://github.com/OBOFoundry/COB/issues/65</rdfs:seeAlso>
-        <rdfs:seeAlso>https://github.com/oborel/obo-relations/pull/284</rdfs:seeAlso>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
@@ -22990,6 +22994,97 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_233500 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_233500">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
+        <obo:IAO_0000115>A group of metal atoms that are located in the periodic table between transition metals and metalloids.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Post-transition_metal</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>other metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>other metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>p-block metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>p-block metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>poor metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>poor metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post transition metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post transition metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition element atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition element atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>CHEBI:233500</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label>post-transition metal atom</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>other metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>other metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>p-block metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>p-block metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>poor metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>poor metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post transition metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post transition metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition element atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition element atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_23357 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23357">
@@ -25702,8 +25797,8 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/CHEBI_25016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33306"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
         <chebi:charge>0</chebi:charge>
         <chebi:formula>Pb</chebi:formula>
         <chebi:inchi>InChI=1S/Pb</chebi:inchi>
@@ -82140,6 +82235,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ubprop#_upper_level"/>
         <rdfs:comment>The definition of cell is intended to represent all cells, and thus a cell is defined as a material entity and not an anatomical structure, which implies that it is part of an organism (or the entirety of one).</rdfs:comment>
         <rdfs:label>cell</rdfs:label>
+        <skos:prefLabel>cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
@@ -82169,6 +82265,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>A cell found in the embryo before the formation of all the gem layers is complete.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ZFA:0009002</oboInOwl:hasDbXref>
         <rdfs:label>early embryonic cell (metazoa)</rdfs:label>
+        <skos:prefLabel>early embryonic cell (metazoa)</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000007"/>
@@ -82239,12 +82336,6 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007143"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A female germ cell that has entered meiosis.</obo:IAO_0000115>
@@ -82415,6 +82506,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ubprop#_upper_level"/>
         <rdfs:comment>Originally this term had some plant germ line cell children.</rdfs:comment>
         <rdfs:label>germ line cell</rdfs:label>
+        <skos:prefLabel>germ line cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000039"/>
@@ -82459,6 +82551,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>ZFA:0009032</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <rdfs:label>ciliated cell</rdfs:label>
+        <skos:prefLabel>ciliated cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000064"/>
@@ -82499,6 +82592,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>epithelial cell</rdfs:label>
+        <skos:prefLabel>epithelial cell</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Epithelial_cells.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -82545,6 +82639,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>ZFA:0009035</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <rdfs:label>ciliated epithelial cell</rdfs:label>
+        <skos:prefLabel>ciliated epithelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000067"/>
@@ -82571,6 +82666,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:label>columnar/cuboidal epithelial cell</rdfs:label>
+        <skos:prefLabel>columnar/cuboidal epithelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000075"/>
@@ -82583,48 +82679,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000075"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>ZFA:0009038</owl:annotatedTarget>
-        <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CL_0000076 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000076">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CL_0000066"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006914"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006914"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any epithelial cell that is part of some squamous epithelium.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>CALOHA:TS-1249</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ZFA:0009039</oboInOwl:hasDbXref>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <rdfs:label>squamous epithelial cell</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any epithelial cell that is part of some squamous epithelium.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FBC:Autogenerated</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>ZFA:0009039</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
     </owl:Axiom>
     
@@ -82668,6 +82722,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>FMA:86916</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <rdfs:label>secretory cell</rdfs:label>
+        <skos:prefLabel>secretory cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000151"/>
@@ -82702,6 +82757,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any secretory cell that is capable of some protein secretion.</obo:IAO_0000115>
         <rdfs:label>protein secreting cell</rdfs:label>
+        <skos:prefLabel>protein secreting cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000154"/>
@@ -82719,6 +82775,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>A cell whose function is determined by the generation or the reception of an electric signal.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ZFA:0009128</oboInOwl:hasDbXref>
         <rdfs:label>electrically active cell</rdfs:label>
+        <skos:prefLabel>electrically active cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000211"/>
@@ -82759,6 +82816,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>A cell that moves by its own activities.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ZFA:0009136</oboInOwl:hasDbXref>
         <rdfs:label>motile cell</rdfs:label>
+        <skos:prefLabel>motile cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000219"/>
@@ -82801,6 +82859,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasExactSynonym>multinucleated cells</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>polynuclear cells</oboInOwl:hasExactSynonym>
         <rdfs:label>multinucleate cell</rdfs:label>
+        <skos:prefLabel>multinucleate cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000228"/>
@@ -82848,6 +82907,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>Any cell that in taxon some Eukaryota.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>MESH:D005057</oboInOwl:hasDbXref>
         <rdfs:label>eukaryotic cell</rdfs:label>
+        <skos:prefLabel>eukaryotic cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000255"/>
@@ -82894,10 +82954,10 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:hasDbXref>FBbt:00005412</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:18649</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0009156</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://cellxgene.cziscience.com/cellguide/CL_0000300</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>haploid nucleated cell</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>haploid germ cell</oboInOwl:hasRelatedSynonym>
         <rdfs:label>gamete</rdfs:label>
+        <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0000300</rdfs:seeAlso>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000300"/>
@@ -82937,6 +82997,12 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <owl:annotatedTarget>ZFA:0009156</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000300"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0000300</owl:annotatedTarget>
+        <rdfs:label>gamete on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -82969,6 +83035,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:hasDbXref>EHDAA2:0004546</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:72395</oboInOwl:hasDbXref>
         <rdfs:label>animal zygote</rdfs:label>
+        <skos:prefLabel>animal zygote</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000365"/>
@@ -82986,6 +83053,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <obo:IAO_0000115>A cell whose function is determined by its response to an electric signal.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ZFA:0009190</oboInOwl:hasDbXref>
         <rdfs:label>electrically responsive cell</rdfs:label>
+        <skos:prefLabel>electrically responsive cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000393"/>
@@ -83009,6 +83077,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <obo:IAO_0000115>A cell that initiates an electrical signal and passes that signal to another cell.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>ZFA:0009193</oboInOwl:hasDbXref>
         <rdfs:label>electrically signaling cell</rdfs:label>
+        <skos:prefLabel>electrically signaling cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000404"/>
@@ -83028,7 +83097,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
     <!-- http://purl.obolibrary.org/obo/CL_0000411 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000411">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000076"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000228"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -83122,10 +83191,10 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:hasDbXref>ZFA:0009248</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>nerve cell</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <rdfs:comment>These cells are also reportedly CD4-negative and CD200-positive. They are also capable of producing CD40L and IFN-gamma.</rdfs:comment>
         <rdfs:label>neuron</rdfs:label>
+        <skos:prefLabel>neuron</skos:prefLabel>
         <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.swissbiopics.org/api/image/Neuron_cells.svg</foaf:depiction>
     </owl:Class>
     <owl:Axiom>
@@ -83167,6 +83236,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:hasDbXref>WBbt:0006796</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <rdfs:label>germ cell</rdfs:label>
+        <skos:prefLabel>germ cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0000586"/>
@@ -83343,6 +83413,7 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-07T03:32:33Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FMA:67513</oboInOwl:hasDbXref>
         <rdfs:label>nucleate cell</rdfs:label>
+        <skos:prefLabel>nucleate cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002242"/>
@@ -83380,7 +83451,9 @@ Gametes have a primary role in sexual reproduction and genetic variation, which 
         <oboInOwl:hasDbXref>CALOHA:TS-2040</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:70333</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim"/>
         <rdfs:label>neural cell</rdfs:label>
+        <skos:prefLabel>neural cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002319"/>
@@ -83408,8 +83481,9 @@ The balance between cell proliferation and differentiation in embryonic cells is
         <oboInOwl:hasDbXref>FMA:82840</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WBbt:0007028</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ZFA:0007089</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://cellxgene.cziscience.com/cellguide/CL_0002321</oboInOwl:hasDbXref>
         <rdfs:label>embryonic cell (metazoa)</rdfs:label>
+        <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002321</rdfs:seeAlso>
+        <skos:prefLabel>embryonic cell (metazoa)</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002321"/>
@@ -83435,6 +83509,12 @@ The balance between cell proliferation and differentiation in embryonic cells is
         <owl:annotatedTarget>ZFA:0007089</owl:annotatedTarget>
         <sssom:mapping_justification rdf:resource="https://w3id.org/semapv/vocab/UnspecifiedMatching"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002321"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0002321</owl:annotatedTarget>
+        <rdfs:label>embryonic cell (metazoa) on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -83455,9 +83535,9 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>BTO:0001268</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FMA:72300</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>WBbt:0008378</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://cellxgene.cziscience.com/cellguide/CL_0002371</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ubprop#_upper_level"/>
         <rdfs:label>obsolete somatic cell</rdfs:label>
+        <rdfs:seeAlso>https://cellxgene.cziscience.com/cellguide/CL_0002371</rdfs:seeAlso>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
@@ -83480,6 +83560,12 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>https://www.genome.gov/genetics-glossary/Somatic-Cells</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://www.ncbi.nlm.nih.gov/books/NBK557896/</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0002371"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget>https://cellxgene.cziscience.com/cellguide/CL_0002371</owl:annotatedTarget>
+        <rdfs:label>obsolete somatic cell on CELLxGENE CellGuide</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -83491,6 +83577,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>MESH:D015053</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">zygote</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/obophenotype/cell-ontology/issues/786"/>
+        <skos:prefLabel>zygote</skos:prefLabel>
     </owl:Class>
     
 
@@ -83520,6 +83607,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/cl#cellxgene_subset"/>
         <rdfs:comment>Work is needed on GO &apos;cell differentiation&apos; before it is clear whether the equivalent class definition &apos;native cell&apos; that capable_of some &apos;cell differentiation&apos; works. Also, may want to consider merging this with non-terminally differentiated cell.</rdfs:comment>
         <rdfs:label>precursor cell</rdfs:label>
+        <skos:prefLabel>precursor cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_0011115"/>
@@ -83582,31 +83670,13 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-21T09:24:44Z</terms:date>
         <rdfs:label xml:lang="en">secretory epithelial cell</rdfs:label>
+        <skos:prefLabel>secretory epithelial cell</skos:prefLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CL_1100001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An epithelial cell that is specialised for the synthesis and secretion of specific biomolecules.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007005"/>
-        <obo:IAO_0000115>The maintenance of the structure and integrity of the mitochondrial genome; includes replication and segregation of the mitochondrial chromosome.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0000002</oboInOwl:id>
-        <rdfs:label>mitochondrial genome maintenance</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The maintenance of the structure and integrity of the mitochondrial genome; includes replication and segregation of the mitochondrial chromosome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -85203,7 +85273,14 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006396"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140053"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000959"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The conversion of a primary RNA molecule transcribed from a mitochondrial genome into one or more mature RNA molecules; occurs in the mitochondrion.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30320</obo:IAO_0000233>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0000963</oboInOwl:id>
         <rdfs:label>mitochondrial RNA processing</rdfs:label>
@@ -86492,7 +86569,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">This is the same as GO molecular function</obo:IAO_0000116>
         <oboInOwl:hasAlternativeId>GO:0005554</oboInOwl:hasAlternativeId>
@@ -86506,8 +86582,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
-        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
-        <rdfs:comment>This is the same as GO molecular function</rdfs:comment>
         <rdfs:label xml:lang="en">gene product or complex activity</rdfs:label>
         <rdfs:label>molecular_function</rdfs:label>
     </owl:Class>
@@ -87611,6 +87685,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A membrane-bound cytoplasmic organelle of the endomembrane system that further processes the core oligosaccharides (e.g. N-glycans) added to proteins in the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi apparatus operates at the intersection of the secretory, lysosomal, and endocytic pathways.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14798</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>Golgi</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao451912436</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Golgi_apparatus</oboInOwl:hasDbXref>
@@ -87637,6 +87712,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A membrane-bound cytoplasmic organelle of the endomembrane system that further processes the core oligosaccharides (e.g. N-glycans) added to proteins in the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi apparatus operates at the intersection of the secretory, lysosomal, and endocytic pathways.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:9695800</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -93647,11 +93723,13 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0040029"/>
         <obo:IAO_0000115>Compensating for the variation in the unpaired sex chromosome:autosome chromosome ratios between sexes by activation or inactivation of genes on one or both of the sex chromosomes.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/25961</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26961</obo:IAO_0000233>
         <oboInOwl:hasBroadSynonym>dosage compensation</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>Wikipedia:Sex-chromosome_dosage_compensation</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>sex chromosome dosage compensation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007549</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>sex-chromosome dosage compensation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -94206,12 +94284,13 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0008104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008104">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0070727"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033036"/>
         <obo:IAO_0000115>Any process in which a protein is transported to, or maintained in, a specific location.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/23112</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0008105</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0016249</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0034613</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>protein localization</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>Reactome:R-HSA-9609507</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cellular protein localisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cellular protein localization</oboInOwl:hasExactSynonym>
@@ -94224,7 +94303,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasRelatedSynonym>establishment and maintenance of protein localization</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0008104</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
-        <rdfs:label>protein localization</rdfs:label>
+        <rdfs:label>intracellular protein localization</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008104"/>
@@ -94270,7 +94349,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115>A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <obo:IAO_0000115>A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/24968</obo:IAO_0000233>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
@@ -94291,9 +94369,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>A biological process is an evolved process</rdfs:comment>
         <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
-        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label xml:lang="en">biological process</rdfs:label>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
@@ -94873,6 +94949,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>degradation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009056</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
@@ -94906,6 +94983,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasRelatedSynonym>cellular macromolecule catabolism</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>cellular macromolecule degradation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0009057</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>macromolecule catabolic process</rdfs:label>
     </owl:Class>
@@ -94943,6 +95021,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>single-organism biosynthetic process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0009058</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
@@ -95104,6 +95183,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015031"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035592"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071692"/>
         <obo:IAO_0000115>The controlled release of proteins from a cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0045166</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045731</oboInOwl:hasAlternativeId>
@@ -95730,6 +95810,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>regulation of synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009889</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of biosynthetic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -95949,6 +96030,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>regulation of degradation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009894</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of catabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -97535,6 +97617,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>positive regulation of organelle organization and biogenesis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0010638</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>positive regulation of organelle organization</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -97586,6 +97669,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>negative regulation of organelle organization and biogenesis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0010639</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>negative regulation of organelle organization</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -98855,6 +98939,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0015031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008104"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045184"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of proteins into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
@@ -99752,6 +99837,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>EC:2.-.-.-</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483186</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5333607</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5668414</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8868783</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -99785,6 +99871,12 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-1483186</owl:annotatedTarget>
         <rdfs:label>PC is converted to PS by PTDSS1</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5333607</owl:annotatedTarget>
+        <rdfs:label>GSSeH combines with bGalNAc derivative to form GSSebGalNac</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
@@ -99929,6 +100021,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>Reactome:R-HSA-6788295</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8938314</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8952137</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9942295</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0016787</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
@@ -99996,6 +100089,12 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-8952137</owl:annotatedTarget>
         <rdfs:label>Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9942295</owl:annotatedTarget>
+        <rdfs:label>QNG1 hydrolyzes queuosine 5&apos;-monophosphate yielding queuine and ribose 5&apos;-monophosphate</rdfs:label>
     </owl:Axiom>
     
 
@@ -100879,6 +100978,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasNarrowSynonym>regulation of organismal metabolic process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0019222</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <rdfs:label>regulation of metabolic process</rdfs:label>
     </owl:Class>
@@ -101241,6 +101341,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0019953</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment>Note that gametes may come from two organisms or from a single organism in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. Note also that sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times.</rdfs:comment>
         <rdfs:label>sexual reproduction</rdfs:label>
     </owl:Class>
@@ -101756,6 +101857,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>cellular component assembly at cellular level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0022607</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -104839,45 +104941,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0031503 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031503">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
-        <obo:IAO_0000115>A localization process that acts on a protein complex; the complex is transported to, or maintained in, a specific location.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22021</obo:IAO_0000233>
-        <oboInOwl:hasAlternativeId>GO:0034629</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>establishment and maintenance of protein complex localization</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>protein complex localisation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>cellular protein complex localisation</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>cellular protein complex localization</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>cellular protein-containing complex localization</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>establishment and maintenance of cellular protein complex localization</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>protein complex localization</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0031503</oboInOwl:id>
-        <rdfs:label>protein-containing complex localization</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031503"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A localization process that acts on a protein complex; the complex is transported to, or maintained in, a specific location.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031503"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>protein complex localisation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031503"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>cellular protein complex localisation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0031570 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031570">
@@ -105402,12 +105465,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006259"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -107266,6 +107323,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the directed movement of substances within cells.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0032386</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of intracellular transport</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -108361,7 +108419,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060341"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032879"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -108826,6 +108884,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>macromolecule localisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0033036</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
         <rdfs:label>macromolecule localization</rdfs:label>
     </owl:Class>
@@ -108870,6 +108929,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>regulation of organelle organization and biogenesis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0033043</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:label>regulation of organelle organization</rdfs:label>
     </owl:Class>
@@ -109708,6 +109768,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>protein localization in organelle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0033365</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>protein localization to organelle</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -110553,7 +110614,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035592">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045184"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071692"/>
         <obo:IAO_0000115>The directed movement of a protein to a specific location within the extracellular region.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-09T10:25:08Z</oboInOwl:creation_date>
@@ -110927,6 +110987,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>protein modification</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0036211</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -111395,6 +111456,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         </rdfs:subClassOf>
         <obo:IAO_0000115>Binding specifically to a substance (cargo) to deliver it to a transport vesicle. Cargo receptors span membranes (for instance the plasma membrane or the endoplasmic reticulum membrane), binding simultaneously to cargo molecules and coat adaptors, to efficiently recruit the cargo molecules to nascent vesicles.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/26872</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30576</obo:IAO_0000233>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-01T02:50:45Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>receptor activity</oboInOwl:hasBroadSynonym>
@@ -112329,7 +112391,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042073">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010970"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031503"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -113266,9 +113327,8 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042428">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0018958"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042430"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0097164"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901160"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving serotonin (5-hydroxytryptamine), a monoamine neurotransmitter occurring in the peripheral and central nervous systems, also having hormonal properties.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30537</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>serotonin metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0042428</oboInOwl:id>
@@ -113388,34 +113448,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The chemical reactions and pathways resulting in the breakdown of compounds that contain an indole (2,3-benzopyrrole) skeleton.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0042439 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042439">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006066"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006576"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving ethanolamine (2-aminoethanol) and compounds derived from it.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>ethanolamine and derivative metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ethanolamine and derivative metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ethanolamine-containing compound metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0042439</oboInOwl:id>
-        <rdfs:label>ethanolamine-containing compound metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042439"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving ethanolamine (2-aminoethanol) and compounds derived from it.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042439"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>ethanolamine-containing compound metabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -114870,6 +114902,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>intracellular membrane-enclosed organelle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043231</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>intracellular membrane-bounded organelle</rdfs:label>
     </owl:Class>
@@ -114904,6 +114937,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>intracellular non-membrane-enclosed organelle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043232</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>intracellular membraneless organelle</rdfs:label>
     </owl:Class>
@@ -115952,6 +115986,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of cellular component biogenesis, a process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044087</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of cellular component biogenesis</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -116325,6 +116360,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:creation_date>2012-09-19T15:56:30Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044703</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <rdfs:label>multi-organism reproductive process</rdfs:label>
     </owl:Class>
@@ -117465,7 +117501,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0045184 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045184">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008104"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <obo:IAO_0000115>The directed movement of a protein to a specific location.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>establishment of protein localisation</oboInOwl:hasExactSynonym>
@@ -120258,8 +120293,8 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0046333 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0046333">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0018958"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042439"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving octopamine, 1-(p-hydroxyphenyl)-2-aminoethanol. The D enantiomer is about one-tenth as active as norepinephrine and is found in the salivary glands of Octopus and Eledone species.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>octopamine metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -120922,6 +120957,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasRelatedSynonym>single organism intracellular transport</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>single-organism intracellular transport</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0046907</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>intracellular transport</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -126304,6 +126340,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasRelatedSynonym>regulation of cell organization</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>regulation of cellular component organization and biogenesis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0051128</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of cellular component organization</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -126724,6 +126761,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051050"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051223"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903829"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904951"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -126802,6 +126840,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051223"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903828"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904950"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -127729,34 +127768,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0051303 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051303">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051656"/>
-        <obo:IAO_0000115>The directed movement of a chromosome to a specific location.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>chromosome positioning</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>establishment of chromosome localisation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0051303</oboInOwl:id>
-        <rdfs:label>establishment of chromosome localization</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051303"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The directed movement of a chromosome to a specific location.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051303"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>establishment of chromosome localisation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0051304 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051304">
@@ -127961,7 +127972,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0051310 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051310">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051303"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -129219,6 +129230,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasExactSynonym>organelle localisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0051640</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>organelle localization</rdfs:label>
     </owl:Class>
@@ -130563,6 +130575,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:hasAlternativeId>GO:0032947</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>protein complex scaffold activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>protein-containing complex scaffold activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2564826</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>binding, bridging</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0060090</oboInOwl:id>
@@ -130581,6 +130594,12 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedTarget>The binding activity of a molecule that brings together two or more molecules through a selective, non-covalent, often stoichiometric interaction, permitting those molecules to function in a coordinated way.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mtg_MIT_16mar07</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:vw</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0060090"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2564826</owl:annotatedTarget>
+        <rdfs:label>4Fe-4S cluster assembles on NUBP2:NUBP1 scaffold</rdfs:label>
     </owl:Axiom>
     
 
@@ -130733,7 +130752,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0060102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0062023"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140047"/>
         <obo:IAO_0000115>A collagen and cuticulin-based noncellular, multilayered structure that is synthesized by an underlying ectodermal (hypodermal) cell layer. The cuticle serves essential functions in body morphology, locomotion, and environmental protection. An example of this component is found in Caenorhabditis elegans.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29265</obo:IAO_0000233>
@@ -133180,31 +133198,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0062023 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0062023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031012"/>
-        <obo:IAO_0000115>An extracellular matrix consisting mainly of proteins (especially collagen) and glycosaminoglycans (mostly as proteoglycans) that provides not only essential physical scaffolding for the cellular constituents but can also initiate crucial biochemical and biomechanical cues required for tissue morphogenesis, differentiation and homeostasis. The components are secreted by cells in the vicinity and form a sheet underlying or overlying cells such as endothelial and epithelial cells.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29475</obo:IAO_0000233>
-        <oboInOwl:created_by>dph</oboInOwl:created_by>
-        <oboInOwl:creation_date>2018-04-13T12:47:21Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>collagen-containing ECM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0062023</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_obsoletion_candidate"/>
-        <rdfs:label>collagen-containing extracellular matrix</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0062023"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An extracellular matrix consisting mainly of proteins (especially collagen) and glycosaminoglycans (mostly as proteoglycans) that provides not only essential physical scaffolding for the cellular constituents but can also initiate crucial biochemical and biomechanical cues required for tissue morphogenesis, differentiation and homeostasis. The components are secreted by cells in the vicinity and form a sheet underlying or overlying cells such as endothelial and epithelial cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:rph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:21123617</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0062033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0062033">
@@ -133403,10 +133396,12 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0065008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065007"/>
         <obo:IAO_0000115>Any process that modulates a qualitative or quantitative trait of a biological quality. A biological quality is a measurable attribute of an organism or part of an organism, such as size, mass, shape, color, etc.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/30599</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>regulation of biological attribute</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>regulation of biological characteristic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0065008</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:label>regulation of biological quality</rdfs:label>
     </owl:Class>
@@ -134293,34 +134288,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0070727 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0070727">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033036"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
-        <obo:IAO_0000115>Any process in which a macromolecule is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell.</obo:IAO_0000115>
-        <oboInOwl:created_by>mah</oboInOwl:created_by>
-        <oboInOwl:creation_date>2009-06-16T04:08:29Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>cellular macromolecule localisation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0070727</oboInOwl:id>
-        <rdfs:label>cellular macromolecule localization</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070727"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process in which a macromolecule is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0070727"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>cellular macromolecule localisation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0070887 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0070887">
@@ -134354,6 +134321,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:creation_date>2009-09-15T03:00:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0070925</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:label>organelle assembly</rdfs:label>
     </owl:Class>
@@ -134967,7 +134935,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     <!-- http://purl.obolibrary.org/obo/GO_0071692 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071692">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008104"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033036"/>
         <obo:IAO_0000115>Any process in which a protein is transported from one specific location in the extracellular region to another, or maintained in a specific extracellular location.</obo:IAO_0000115>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-25T04:00:13Z</oboInOwl:creation_date>
@@ -137191,30 +137159,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0097164 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving the ammonium ion.</obo:IAO_0000115>
-        <oboInOwl:created_by>pr</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-09-28T04:21:30Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>ammonium ion metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>ammonium metabolic process</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>GO:0097164</oboInOwl:id>
-        <rdfs:label>ammonium ion metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097164"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving the ammonium ion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:dhl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:14671018</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0097190 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097190">
@@ -138122,6 +138066,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <obo:IAO_0000115>A cellular component that consists of an indeterminate number of proteins or macromolecular complexes, organized into a regular, higher-order structure such as a polymer, sheet, network or a fiber.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0099080</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>supramolecular complex</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -140481,6 +140426,45 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The cellular DNA metabolic process resulting in the breakdown of a nucleic acid.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0170070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0170070">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006390"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045892"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903108"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006390"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of transcription occurring in the mitochondrion.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/29938</obo:IAO_0000233>
+        <oboInOwl:created_by>ew</oboInOwl:created_by>
+        <oboInOwl:creation_date>2025-06-09T17:43:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0170070</oboInOwl:id>
+        <rdfs:label>negative regulation of mitochondrial transcription</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0170070"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any process that stops, prevents, or reduces the frequency, rate or extent of transcription occurring in the mitochondrion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:23300484</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -144299,38 +144283,10 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_1901160 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901160">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving primary amino compound.</obo:IAO_0000115>
-        <oboInOwl:created_by>bf</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-07-18T04:44:39Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>primary amino compound metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:1901160</oboInOwl:id>
-        <rdfs:label>primary amino compound metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901160"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving primary amino compound.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901160"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>primary amino compound metabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_1901161 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901161">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009056"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901160"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the breakdown of primary amino compound.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-07-18T04:45:06Z</oboInOwl:creation_date>
@@ -144372,7 +144328,6 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901160"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of primary amino compound.</obo:IAO_0000115>
         <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-07-18T04:45:14Z</oboInOwl:creation_date>
@@ -159160,7 +159115,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032880"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048519"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -159265,7 +159220,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032880"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048518"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -165095,8 +165050,8 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048519"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0070201"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903828"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -165268,8 +165223,8 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048518"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0070201"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903829"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -174877,6 +174832,7 @@ While most somatic cells contain two copies of each chromosome (diploid), a cert
         <oboInOwl:creation_date>2010-11-10T02:44:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000241</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of reproductive process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -184372,6 +184328,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <oboInOwl:hasExactSynonym>connected biological structure</oboInOwl:hasExactSynonym>
         <oboInOwl:id>UBERON:0000061</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#common_anatomy"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#mouse_subset"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
@@ -184512,12 +184469,6 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/UBERON_0002606 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002606"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0006914 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0006914"/>
     
 
 
@@ -287042,6 +286993,495 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001569 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001569">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:25:21Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1310</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Western Australian Mulga Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001571 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001571">
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:51:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Australasia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001572 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001572">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:52:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym xml:lang="en">Southern central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1309</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1309</oboInOwl:hasDbXref>
+        <rdfs:label>Tirari-Sturt Stony Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001573 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001573">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:54:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Eastern central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1308</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Simpson Desert Region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001574 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001574">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1307</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1307</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Pilbara Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001575 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001575">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:10:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western coast of Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1301</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1301</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Carnarvon Xeric Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001576 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001576">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:12:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1302</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Central Ranges Xeric Shrub Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001577 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001577">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:15:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western central Australia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1303</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Gibson Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001578 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001578">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:17:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Northwestern Australia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1304</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">The Great Sandy-Tanami Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001579 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001579">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:24:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1305</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1305</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Great Victoria Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001580 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001580">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:26:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1306</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Nullarbor Plains Xeric Shrubland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001583 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001583">
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:01:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Afrotropical Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001584 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001584">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:02:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Africa: Southern Namibia into South Africa</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1322</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1322</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Succulent Karoo Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001585 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001585">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:07:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1321</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1321</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Yemen and Saudi Arabia</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Yemen and Saudi Arabia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001586 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001586">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:11:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1320</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1320</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Yemen, Saudi Arabia, and Oman</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Yemen, Saudi Arabia, and Oman Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001587 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001587">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:13:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1319</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1319</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Somali montane xeric woodlands ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Somali Montane Xeric Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001588 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001588">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:15:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Islands east of the Horn of Africa and south of Yemen Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1318</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1318</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Socotran Archipelago Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001589 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001589">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:18:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1317</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1317</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Red Sea Coastal Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001590 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001590">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:20:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1316</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1316</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Namibian Savanna Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001591 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001591">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:24:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Africa: Namibia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1315</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1315</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Namib Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001592 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001592">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:26:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1314</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1314</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Nama Karoo Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001593 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001593">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:28:43Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1313</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1313</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Masai Xeric Grasslands and Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001594 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001594">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:30:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1312</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1312</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Madagascar Succulent Woodlands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001595 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001595">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:31:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1311</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1311</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Madagascar spiny desert ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Madagascar Spiny Thickets Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001596 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001596">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:39:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Africa: Coastal Namibia and Angola Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Kaokoveld Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001597 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001597">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:42:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1309</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1309</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Kalahari Xeric Savanna Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001598 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001598">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:44:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Southern Africa: Islands about half-way between southern Madagascar and southern Mozambique Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Ile Europa and Bassas da India Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001599 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001599">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:46:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Eastern Africa: Somalia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1307</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1307</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Hobyo Grassland and Shrubland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001600 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001600">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:54:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Oman and United Arab Emirates Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Oman and United Arab Emirates Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001601 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001601">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:08:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1305</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1305</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Ethiopian Xeric Grasslands and Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001602 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001602">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:11:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1304</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Eritrean Coastal Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001603 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001603">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:13:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>North central Africa: Eastern Chad and small area of western Sudan</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">East Saharan Montane Xeric Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001604 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001604">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:16:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Western Asia: Oman, Yemen, and Saudi Arabia Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Oman, Yemen, and Saudi Arabia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001605 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001605">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:18:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1301</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1301</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Aldabra Island Xeric Scrub Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001626 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001626">
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T23:38:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands"/>
+        <rdfs:label xml:lang="en">Indo-Malay Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001627 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001627">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001626"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T23:40:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/ecoregions/im1304"/>
+        <oboInOwl:hasDbXref>WWF:IM1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>Southern Asia: Western India into Pakistan</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">Thar Desert</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001628 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001628">
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001626"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-27T00:12:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/ecoregions/im1303"/>
+        <oboInOwl:hasDbXref>WWF:IM1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>Southern Asia: Eastern India and western Pakistan</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">Northwestern Thorn Scrub Forests</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001862 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001862">
+        <obo:RO_0002608 rdf:resource="https://www.wikidata.org/wiki/Q525"/>
+        <obo:IAO_0000115>Stellar radiation emitted from Sol.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Solar radiation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
@@ -287081,6 +287521,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">organizational term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">organizational term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -287255,6 +287696,12 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
     
 
 
+    <!-- https://www.wikidata.org/wiki/Q525 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q525"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -287404,13 +287851,13 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
     <rdf:Description rdf:about="urn:swrl:var#D">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#mf">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#eff">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#in">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl:var#mf">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#mf2">
@@ -288263,9 +288710,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#eff"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288274,9 +288721,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288308,9 +288755,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288319,9 +288766,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#in"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288353,9 +288800,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288364,9 +288811,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288398,9 +288845,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002629"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288409,9 +288856,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002629"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288443,9 +288890,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002630"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288454,9 +288901,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002630"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002025"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#mf"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#mf2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#eff"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288488,7 +288935,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002404"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
@@ -288499,7 +288946,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002404"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
@@ -288516,7 +288963,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288526,7 +288973,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288544,7 +288991,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
@@ -288555,7 +289002,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
@@ -288572,7 +289019,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288582,7 +289029,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288599,7 +289046,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0012011"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                     </rdf:Description>
@@ -288610,7 +289057,7 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0012011"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
                                 <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                             </rdf:Description>
@@ -288643,9 +289090,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288654,9 +289101,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288687,9 +289134,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0019002"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288698,9 +289145,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0019002"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288731,9 +289178,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288742,9 +289189,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288775,9 +289222,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002264"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288786,9 +289233,9 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002264"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -288820,8 +289267,8 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#q"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -288831,8 +289278,8 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
-                                <swrl:argument2 rdf:resource="urn:swrl:var#q"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#q"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

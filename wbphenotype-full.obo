@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: wbphenotype/releases/2025-04-01/wbphenotype-full.owl
+data-version: wbphenotype/releases/2025-08-12/wbphenotype-full.owl
 saved-by: chris-grove
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
@@ -72,7 +72,7 @@ ontology: wbphenotype/wbphenotype-full
 property_value: dc:description "Ontology about C. elegans and other nematode phenotypes" xsd:string
 property_value: dc:title "C elegans Phenotype Ontology" xsd:string
 property_value: has_ontology_root_term WBPhenotype:0000886
-property_value: owl:versionInfo "2025-04-01" xsd:string
+property_value: owl:versionInfo "2025-08-12" xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 
 [Term]
@@ -135,7 +135,7 @@ name: independent continuant
 def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
 comment: A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.
 is_a: BFO:0000002 ! continuant
-disjoint_from: BFO:0000020 ! characteristic
+disjoint_from: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
 relationship: part_of BFO:0000004 {all_only="true"} ! independent continuant
 property_value: BFO:0000179 "ic" xsd:string
@@ -184,10 +184,9 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: BFO:0000017
-name: realizable
 name: realizable entity
 def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
-is_a: BFO:0000020 ! characteristic
+is_a: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000019 ! quality
 relationship: part_of BFO:0000017 {all_only="true"} ! realizable entity
 property_value: BFO:0000179 "realizable" xsd:string
@@ -206,7 +205,7 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 [Term]
 id: BFO:0000019
 name: quality
-is_a: BFO:0000020 ! characteristic
+is_a: BFO:0000020 ! specifically dependent continuant
 relationship: part_of BFO:0000019 {all_only="true"} ! quality
 property_value: BFO:0000179 "quality" xsd:string
 property_value: BFO:0000180 "Quality" xsd:string
@@ -224,13 +223,12 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: BFO:0000020
-name: characteristic
 name: specifically dependent continuant
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 comment: A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
-relationship: part_of BFO:0000020 {all_only="true"} ! characteristic
+relationship: part_of BFO:0000020 {all_only="true"} ! specifically dependent continuant
 property_value: BFO:0000179 "sdc" xsd:string
 property_value: BFO:0000180 "SpecificallyDependentContinuant" xsd:string
 property_value: IAO:0000112 "of one-sided specifically dependent continuants: the mass of this tomato" xsd:string
@@ -247,8 +245,6 @@ property_value: IAO:0000112 "the smell of this portion of mozzarella" xsd:string
 property_value: IAO:0000116 "Specifically dependent continuant doesn't have a closure axiom because the subclasses don't necessarily exhaust all possibilites. We're not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc." xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/0000005", comment="per discussion with Barry Smith"}
 property_value: IAO:0000602 "(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] " xsd:string {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-property_value: seeAlso "https://github.com/OBOFoundry/COB/issues/65" xsd:string
-property_value: seeAlso "https://github.com/oborel/obo-relations/pull/284" xsd:string
 
 [Term]
 id: BFO:0000023
@@ -5185,6 +5181,26 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "99.04515"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(CC)=CC([O-])=O" xsd:string
 
 [Term]
+id: CHEBI:233500
+name: post-transition metal atom
+namespace: chebi_ontology
+def: "A group of metal atoms that are located in the periodic table between transition metals and metalloids." []
+subset: 3_STAR
+synonym: "other metal atom" RELATED [ChEBI]
+synonym: "other metal atoms" RELATED [ChEBI]
+synonym: "p-block metal atom" RELATED [ChEBI]
+synonym: "p-block metal atoms" RELATED [ChEBI]
+synonym: "poor metal atom" RELATED [ChEBI]
+synonym: "poor metal atoms" RELATED [ChEBI]
+synonym: "post transition metal atom" RELATED [ChEBI]
+synonym: "post transition metal atoms" RELATED [ChEBI]
+synonym: "post-transition element atom" RELATED [ChEBI]
+synonym: "post-transition element atoms" RELATED [ChEBI]
+synonym: "post-transition metal atoms" RELATED [ChEBI]
+xref: Wikipedia:Post-transition_metal
+is_a: CHEBI:33521 ! metal atom
+
+[Term]
 id: CHEBI:23357
 name: cofactor
 namespace: chebi_ontology
@@ -6051,8 +6067,8 @@ synonym: "plomo" RELATED [ChEBI]
 synonym: "plumbum" RELATED [IUPAC]
 xref: KEGG:C06696
 xref: WebElements:Pb
+is_a: CHEBI:233500 ! post-transition metal atom
 is_a: CHEBI:33306 ! carbon group element atom
-is_a: CHEBI:33521 ! metal atom
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Pb" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/Pb" xsd:string
@@ -22836,6 +22852,7 @@ relationship: has_part GO:0005634 {gci_filler="PATO:0001908", gci_relation="RO:0
 relationship: RO:0002162 NCBITaxon:131567
 property_value: IAO:0000116 "CL and GO definitions of cell differ based on inclusive or exclusive of cell wall, etc." xsd:string
 property_value: IAO:0000116 "We struggled with this definition. We are worried about circularity. We also considered requiring the capability of metabolism." xsd:string
+property_value: skos:prefLabel "cell" xsd:string
 
 [Term]
 id: CL:0000007
@@ -22843,6 +22860,7 @@ name: early embryonic cell (metazoa)
 def: "A cell found in the embryo before the formation of all the gem layers is complete." [GOC:tfm]
 xref: ZFA:0009002 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0002321 ! embryonic cell (metazoa)
+property_value: skos:prefLabel "early embryonic cell (metazoa)" xsd:string
 
 [Term]
 id: CL:0000021
@@ -22873,7 +22891,6 @@ xref: WBbt:0006797
 xref: ZFA:0001109 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000021 {is_inferred="true"} ! female germ cell
 relationship: RO:0000056 GO:0007143 ! participates in female meiotic nuclear division
-relationship: RO:0002162 NCBITaxon:33208
 
 [Term]
 id: CL:0000024
@@ -22916,6 +22933,7 @@ subset: ubprop:upper_level
 xref: ZFA:0009016 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000000 ! cell
 relationship: RO:0002215 GO:0022414 ! capable of reproductive process
+property_value: skos:prefLabel "germ line cell" xsd:string
 
 [Term]
 id: CL:0000064
@@ -22929,6 +22947,7 @@ is_a: CL:0000255 ! eukaryotic cell
 intersection_of: CL:0000000 ! cell
 intersection_of: has_part GO:0005929 ! cilium
 relationship: has_part GO:0005929 ! cilium
+property_value: skos:prefLabel "ciliated cell" xsd:string
 
 [Term]
 id: CL:0000066
@@ -22949,6 +22968,7 @@ is_a: CL:0000255 ! eukaryotic cell
 relationship: part_of UBERON:0000483
 property_value: foaf:depiction "https://www.swissbiopics.org/api/image/Epithelial_cells.svg" xsd:anyURI
 property_value: RO:0002175 NCBITaxon:9606
+property_value: skos:prefLabel "epithelial cell" xsd:string
 
 [Term]
 id: CL:0000067
@@ -22961,6 +22981,7 @@ is_a: CL:0000064 ! ciliated cell
 is_a: CL:0000066 ! epithelial cell
 intersection_of: CL:0000066 ! epithelial cell
 intersection_of: has_part GO:0005929 ! cilium
+property_value: skos:prefLabel "ciliated epithelial cell" xsd:string
 
 [Term]
 id: CL:0000075
@@ -22971,18 +22992,7 @@ subset: human_reference_atlas
 xref: ZFA:0009038 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000066 ! epithelial cell
 property_value: RO:0002175 NCBITaxon:9606
-
-[Term]
-id: CL:0000076
-name: squamous epithelial cell
-def: "Any epithelial cell that is part of some squamous epithelium." [FBC:Autogenerated]
-subset: cellxgene_subset
-xref: CALOHA:TS-1249
-xref: ZFA:0009039 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
-is_a: CL:0000066 ! epithelial cell
-intersection_of: CL:0000066 ! epithelial cell
-intersection_of: part_of UBERON:0006914
-relationship: part_of UBERON:0006914
+property_value: skos:prefLabel "columnar/cuboidal epithelial cell" xsd:string
 
 [Term]
 id: CL:0000086
@@ -23003,6 +23013,7 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0002215 GO:0032940 ! capable of secretion by cell
 relationship: RO:0002215 GO:0032940 ! capable of secretion by cell
+property_value: skos:prefLabel "secretory cell" xsd:string
 
 [Term]
 id: CL:0000154
@@ -23012,6 +23023,7 @@ is_a: CL:0000151 ! secretory cell
 intersection_of: CL:0000151 ! secretory cell
 intersection_of: RO:0002215 GO:0009306 ! capable of protein secretion
 relationship: RO:0002215 GO:0009306 ! capable of protein secretion
+property_value: skos:prefLabel "protein secreting cell" xsd:string
 
 [Term]
 id: CL:0000211
@@ -23019,6 +23031,7 @@ name: electrically active cell
 def: "A cell whose function is determined by the generation or the reception of an electric signal." [FB:ma]
 xref: ZFA:0009128 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000000 ! cell
+property_value: skos:prefLabel "electrically active cell" xsd:string
 
 [Term]
 id: CL:0000219
@@ -23029,6 +23042,7 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0002215 GO:0048870 ! capable of cell motility
 relationship: RO:0002215 GO:0048870 ! capable of cell motility
+property_value: skos:prefLabel "motile cell" xsd:string
 
 [Term]
 id: CL:0000228
@@ -23041,6 +23055,7 @@ is_a: CL:0002242 ! nucleate cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0000053 PATO:0001908 ! has characteristic
 relationship: RO:0000053 PATO:0001908 ! has characteristic
+property_value: skos:prefLabel "multinucleate cell" xsd:string
 
 [Term]
 id: CL:0000255
@@ -23051,6 +23066,7 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0002162 NCBITaxon:2759
 relationship: RO:0002162 NCBITaxon:2759
+property_value: skos:prefLabel "eukaryotic cell" xsd:string
 
 [Term]
 id: CL:0000300
@@ -23061,7 +23077,6 @@ synonym: "haploid nucleated cell" EXACT []
 xref: CALOHA:TS-0395
 xref: FBbt:00005412 {sssom:mapping_justification="https://w3id.org/semapv/vocab/ManualMappingCuration"}
 xref: FMA:18649
-xref: https://cellxgene.cziscience.com/cellguide/CL_0000300
 xref: ZFA:0009156 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000413 ! haploid cell
 is_a: CL:0000586 {is_inferred="true"} ! germ cell
@@ -23069,6 +23084,7 @@ intersection_of: CL:0000586 ! germ cell
 intersection_of: RO:0000053 PATO:0001375 ! has characteristic
 intersection_of: RO:0002215 GO:0009566 ! capable of fertilization
 relationship: RO:0002215 GO:0009566 ! capable of fertilization
+property_value: seeAlso "https://cellxgene.cziscience.com/cellguide/CL_0000300" xsd:string {name="gamete on CELLxGENE CellGuide"}
 property_value: terms:description "Gametes are reproductive cells essential for sexual reproduction in eukaryotic organisms, including humans, animals, and many plants. These cells are haploid, containing half the genome or only one set of chromosomes, which is a contrast to the diploid state (two sets of chromosomes) found in most cells in a multicellular organism. This reduction in genetic material is crucial since it allows for the re-establishment of the diploid number of chromosomes when two gametes merge to form a diploid zygote during fertilization.\nThere are two major types of gametes in animals: sperm cells in males and egg (or ova) in females. These gametes contribute equally to the genetic makeup of the offspring but are morphologically and functionally distinct. Sperm cells (or spermatozoa) are characterized by their motility, small size, and large quantities; they are produced continuously in vast numbers through a process called spermatogenesis in the male gonads or testes. Female gametes are much larger, fewer in numbers, and are not motile; they undergo a development process known as oogenesis, which takes place within the ovaries. The egg also contributes most of the cytoplasm and organelles (including mitochondria) to the zygote that are required for initial cell division stages after fertilization.\nGametes have a primary role in sexual reproduction and genetic variation, which aids in evolution. The formation of gametes involves a special type of cell division called meiosis that introduces genetic diversity via the process of recombination and independent assortment. Following the fusion of male and female gametes, the combination of paternal and maternal genetic material in the zygote allows for genetic recombination, which is a fundamental source of genetic variation and, thus, evolution. Therefore, gametes not only are critical to the inception of new individuals but also contribute to species survival and evolution.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" xsd:string {xref="DOI:10.1038/s41586-020-2347-0", xref="DOI:10.3389/fcell.2022.1040708", xref="https://www.ncbi.nlm.nih.gov/books/NBK10008/", xref="https://www.ncbi.nlm.nih.gov/books/NBK553142/"}
 
 [Term]
@@ -23085,6 +23101,7 @@ is_a: CL:0010017 ! zygote
 intersection_of: CL:0010017 ! zygote
 intersection_of: RO:0002162 NCBITaxon:33208
 relationship: RO:0002162 NCBITaxon:33208
+property_value: skos:prefLabel "animal zygote" xsd:string
 
 [Term]
 id: CL:0000393
@@ -23092,6 +23109,7 @@ name: electrically responsive cell
 def: "A cell whose function is determined by its response to an electric signal." [FB:ma]
 xref: ZFA:0009190 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000211 ! electrically active cell
+property_value: skos:prefLabel "electrically responsive cell" xsd:string
 
 [Term]
 id: CL:0000404
@@ -23099,6 +23117,7 @@ name: electrically signaling cell
 def: "A cell that initiates an electrical signal and passes that signal to another cell." [FB:ma]
 xref: ZFA:0009193 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000211 ! electrically active cell
+property_value: skos:prefLabel "electrically signaling cell" xsd:string
 
 [Term]
 id: CL:0000411
@@ -23108,7 +23127,7 @@ comment: This term was originally added to CL for parity with the Worm anatomy o
 synonym: "roundworm hypodermal cell" BROAD []
 xref: WBbt:0007846
 xref: ZFA:0009196 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
-is_a: CL:0000076 ! squamous epithelial cell
+is_a: CL:0000066 ! epithelial cell
 is_a: CL:0000228 ! multinucleate cell
 relationship: RO:0002162 NCBITaxon:6237
 
@@ -23127,7 +23146,6 @@ name: neuron
 def: "The basic cellular unit of nervous tissue. Each neuron consists of a body, an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [http://en.wikipedia.org/wiki/Neuron, MESH:D009474]
 comment: These cells are also reportedly CD4-negative and CD200-positive. They are also capable of producing CD40L and IFN-gamma.
 subset: cellxgene_subset
-subset: general_cell_types_upper_slim
 subset: human_reference_atlas
 synonym: "nerve cell" EXACT []
 xref: BTO:0000938
@@ -23143,6 +23161,7 @@ is_a: CL:0002319 ! neural cell
 relationship: RO:0002215 GO:0019226 ! capable of
 property_value: foaf:depiction "https://www.swissbiopics.org/api/image/Neuron_cells.svg" xsd:anyURI
 property_value: RO:0002175 NCBITaxon:9606
+property_value: skos:prefLabel "neuron" xsd:string
 
 [Term]
 id: CL:0000586
@@ -23155,6 +23174,7 @@ xref: VHOG:0001534
 xref: WBbt:0006796
 is_a: CL:0000039 {is_inferred="true"} ! germ line cell
 relationship: RO:0002216 GO:0009566 ! capable of part of fertilization
+property_value: skos:prefLabel "germ cell" xsd:string
 
 [Term]
 id: CL:0000618
@@ -23207,6 +23227,7 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0000053 PATO:0002505 ! has characteristic
 relationship: RO:0000053 PATO:0002505 ! has characteristic
+property_value: skos:prefLabel "nucleate cell" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0003-1980-3228
 creation_date: 2010-09-07T03:32:33Z
 
@@ -23215,12 +23236,14 @@ id: CL:0002319
 name: neural cell
 def: "A cell that is part of the nervous system." [GOC:tfm, ISBN:0618947256]
 subset: cellxgene_subset
+subset: general_cell_types_upper_slim
 xref: CALOHA:TS-2040
 xref: FMA:70333
 is_a: CL:0000255 ! eukaryotic cell
 intersection_of: CL:0000000 ! cell
 intersection_of: part_of UBERON:0001016
 relationship: part_of UBERON:0001016
+property_value: skos:prefLabel "neural cell" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0003-1980-3228
 creation_date: 2010-09-15T01:34:57Z
 
@@ -23230,10 +23253,11 @@ name: embryonic cell (metazoa)
 def: "A cell of the embryo." [FMA:0618947256]
 xref: CALOHA:TS-0263
 xref: FMA:82840
-xref: https://cellxgene.cziscience.com/cellguide/CL_0002321
 xref: WBbt:0007028
 xref: ZFA:0007089 {sssom:mapping_justification="https://w3id.org/semapv/vocab/UnspecifiedMatching"}
 is_a: CL:0000000 ! cell
+property_value: seeAlso "https://cellxgene.cziscience.com/cellguide/CL_0002321" xsd:string {name="embryonic cell (metazoa) on CELLxGENE CellGuide"}
+property_value: skos:prefLabel "embryonic cell (metazoa)" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0003-1980-3228
 property_value: terms:description "Embryonic cells in metazoans, which include all multicellular animals, are biological units in their earliest developmental stages from conception until the organism is fully formed. \nThey are derived from a fertilized egg, which undergoes a series of cell divisions to produce a multicellular organism. During the early phases of embryonic development, these cells exhibit pluripotency, meaning they possess the potential to differentiate into a diverse array of specialized cell types that constitute different body tissues and structures. \nThe balance between cell proliferation and differentiation in embryonic cells is crucial for successful development. When cells continue to divide without differentiating, overgrowth may occur leading to conditions such as teratomas (tumors of embryonic cells). Conversely, if cell differentiation proceeds at the expense of cell proliferation, developmental anomalies could occur regarding size or mass of the organism or its parts.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" xsd:string {xref="DOI:10.1002/iub.1404", xref="DOI:10.1093/molehr/gan048", xref="https://www.ncbi.nlm.nih.gov/books/NBK9906/"}
 creation_date: 2010-09-15T03:39:21Z
@@ -23245,9 +23269,9 @@ def: "OBSOLETE. A cell of an organism that does not pass on its genetic material
 subset: ubprop:upper_level
 xref: BTO:0001268
 xref: FMA:72300
-xref: https://cellxgene.cziscience.com/cellguide/CL_0002371
 xref: WBbt:0008378
 property_value: IAO:0000233 https://github.com/obophenotype/cell-ontology/issues/1150
+property_value: seeAlso "https://cellxgene.cziscience.com/cellguide/CL_0002371" xsd:string {name="obsolete somatic cell on CELLxGENE CellGuide"}
 property_value: terms:contributor https://orcid.org/0000-0003-1980-3228
 property_value: terms:description "Somatic cells represent the majority of the cell types in the human body. They are fundamental building blocks of organs, tissues, and other bodily structures, with every organ being composed of distinct subpopulations of these cells. \nThe primary function of somatic cells is to maintain the function and survival of an organism. They carry significant information in the form of DNA, and through the process of mitosis, contribute to the repair and regeneration of body tissues.\nFurther, some types of somatic cells work in a collaborative manner to form complex functional structures such as the skin and lining of the gut, demonstrating a higher level of organization. However, it's important to note that somatic cells are distinct from germ cells, which are responsible for sexual reproduction by forming sperm or eggs. Any alterations in the DNA of somatic cells, due to mutations, will not affect the offspring as they aren't involved in transmission of genetic information to the next generation. \nWhile most somatic cells contain two copies of each chromosome (diploid), a certain subset may possess a single set of chromosomes (haploid), specifically found in male ants, bees, and other hymenopterans. Hence, diversity is a defining characteristic of somatic cells, reflecting in their structures, roles, and genetic makeup.\n\n(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)" xsd:string {xref="DOI:10.1038/nrm3980", xref="https://www.genome.gov/genetics-glossary/Somatic-Cells", xref="https://www.ncbi.nlm.nih.gov/books/NBK557896/"}
 is_obsolete: true
@@ -23261,6 +23285,7 @@ def: "A zygote in a plant or an animal." []
 xref: MESH:D015053
 is_a: CL:0000000 ! cell
 property_value: seeAlso https://github.com/obophenotype/cell-ontology/issues/786
+property_value: skos:prefLabel "zygote" xsd:string
 
 [Term]
 id: CL:0011115
@@ -23272,6 +23297,7 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: RO:0002215 GO:0030154 ! capable of cell differentiation
 relationship: RO:0002215 GO:0030154 ! capable of cell differentiation
+property_value: skos:prefLabel "precursor cell" xsd:string
 
 [Term]
 id: CL:1000272
@@ -23292,15 +23318,9 @@ is_a: CL:0000066 ! epithelial cell
 is_a: CL:0000151 ! secretory cell
 intersection_of: CL:0000066 ! epithelial cell
 intersection_of: CL:0000151 ! secretory cell
+property_value: skos:prefLabel "secretory epithelial cell" xsd:string
 property_value: terms:contributor https://orcid.org/0000-0002-7073-9172
 property_value: terms:date "2024-07-21T09:24:44Z" xsd:dateTime
-
-[Term]
-id: GO:0000002
-name: mitochondrial genome maintenance
-namespace: biological_process
-def: "The maintenance of the structure and integrity of the mitochondrial genome; includes replication and segregation of the mitochondrial chromosome." [GOC:ai, GOC:vw]
-is_a: GO:0007005 ! mitochondrion organization
 
 [Term]
 id: GO:0000018
@@ -23898,6 +23918,8 @@ is_a: GO:0006396 ! RNA processing
 is_a: GO:0140053 ! mitochondrial gene expression
 intersection_of: GO:0006396 ! RNA processing
 intersection_of: occurs_in GO:0005739 ! mitochondrion
+relationship: part_of GO:0000959 ! mitochondrial RNA metabolic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/30320" xsd:anyURI
 
 [Term]
 id: GO:0001101
@@ -24222,7 +24244,7 @@ subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_pir
 xref: Wikipedia:Immune_system
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 
 [Term]
@@ -24384,8 +24406,6 @@ namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs." [GOC:pdt]
 comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
-comment: This is the same as GO molecular function
 subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_metagenomics
@@ -24394,7 +24414,6 @@ subset: goslim_plant
 subset: goslim_yeast
 synonym: "molecular function" EXACT []
 is_a: BFO:0000015 ! process
-disjoint_from: GO:0008150 ! biological process
 property_value: IAO:0000116 "This is the same as GO molecular function" xsd:string
 
 [Term]
@@ -24882,7 +24901,7 @@ relationship: part_of GO:0005783 ! endoplasmic reticulum
 id: GO:0005794
 name: Golgi apparatus
 namespace: cellular_component
-def: "A membrane-bound cytoplasmic organelle of the endomembrane system that further processes the core oligosaccharides (e.g. N-glycans) added to proteins in the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi apparatus operates at the intersection of the secretory, lysosomal, and endocytic pathways." [ISBN:0198506732]
+def: "A membrane-bound cytoplasmic organelle of the endomembrane system that further processes the core oligosaccharides (e.g. N-glycans) added to proteins in the endoplasmic reticulum and packages them into membrane-bound vesicles. The Golgi apparatus operates at the intersection of the secretory, lysosomal, and endocytic pathways." [ISBN:0198506732, PMID:9695800]
 comment: Note that the Golgi apparatus can be located in various places in the cytoplasm. In plants and lower animal cells, the Golgi apparatus exists as many copies of discrete stacks dispersed throughout the cytoplasm, while the Golgi apparatus of interphase mammalian cells is a juxtanuclear, often pericentriolar reticulum, where the discrete Golgi stacks are stitched together to form a compact and interconnected ribbon, sometimes called the Golgi ribbon.
 subset: goslim_agr
 subset: goslim_candida
@@ -24903,6 +24922,7 @@ xref: Wikipedia:Golgi_apparatus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
 relationship: part_of GO:0005737 ! cytoplasm
 relationship: part_of GO:0012505 ! endomembrane system
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/14798" xsd:anyURI
 
 [Term]
 id: GO:0005818
@@ -25822,7 +25842,7 @@ subset: goslim_prokaryote
 synonym: "copper-induced intracellular protein transport" RELATED [GOC:al]
 is_a: GO:0015031 ! protein transport
 is_a: GO:0046907 ! intracellular transport
-relationship: part_of GO:0008104 ! protein localization
+relationship: part_of GO:0008104 ! intracellular protein localization
 
 [Term]
 id: GO:0006887
@@ -27209,11 +27229,13 @@ id: GO:0007549
 name: sex-chromosome dosage compensation
 namespace: biological_process
 def: "Compensating for the variation in the unpaired sex chromosome:autosome chromosome ratios between sexes by activation or inactivation of genes on one or both of the sex chromosomes." [GOC:ems, PMID:11498577, PMID:30049999, PMID:35306885]
+subset: gocheck_do_not_annotate
 synonym: "dosage compensation" BROAD []
 synonym: "sex chromosome dosage compensation" EXACT []
 xref: Wikipedia:Sex-chromosome_dosage_compensation
 is_a: GO:0040029 ! epigenetic regulation of gene expression
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25961" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26961" xsd:anyURI
 
 [Term]
 id: GO:0007568
@@ -27461,7 +27483,7 @@ relationship: occurs_in GO:1904115 ! axon cytoplasm
 
 [Term]
 id: GO:0008104
-name: protein localization
+name: intracellular protein localization
 namespace: biological_process
 alt_id: GO:0008105
 alt_id: GO:0016249
@@ -27476,8 +27498,9 @@ synonym: "channel localizer activity" NARROW [GOC:mah]
 synonym: "establishment and maintenance of asymmetric protein localization" RELATED []
 synonym: "establishment and maintenance of protein localization" RELATED []
 synonym: "protein localisation" EXACT [GOC:mah]
+synonym: "protein localization" BROAD []
 xref: Reactome:R-HSA-9609507 "Protein localization"
-is_a: GO:0070727 ! cellular macromolecule localization
+is_a: GO:0033036 ! macromolecule localization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23112" xsd:anyURI
 
 [Term]
@@ -27489,10 +27512,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-def: "A process that emerges from two or more causally-connected macromolecular activities and has evolved to achieve a biological objective." []
-comment: A biological process is an evolved process
 comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_metagenomics
@@ -27747,6 +27767,7 @@ namespace: biological_process
 alt_id: GO:0044243
 alt_id: GO:0044712
 def: "A cellular process consisting of the biochemical pathways by which a living organism breaks down substances. This includes the breakdown of carbon compounds with the liberation of energy for use by the cell or organism." [ISBN:0198547684]
+subset: gocheck_do_not_annotate
 subset: goslim_agr
 subset: goslim_chembl
 subset: goslim_plant
@@ -27774,6 +27795,7 @@ namespace: biological_process
 alt_id: GO:0043285
 alt_id: GO:0044266
 def: "The chemical reactions and pathways resulting in the breakdown of a macromolecule, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "biopolymer catabolic process" EXACT [GOC:mtg_chebi_dec09]
 synonym: "cellular macromolecule catabolic process" RELATED []
@@ -27793,6 +27815,7 @@ namespace: biological_process
 alt_id: GO:0044274
 alt_id: GO:0044711
 def: "A cellular process consisting of the biochemical pathways by which a living organism synthesizes chemical substances. This typically represents the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones." [GOC:curators, ISBN:0198547684]
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_metagenomics
 subset: goslim_plant
@@ -27886,6 +27909,7 @@ synonym: "protein secretion resulting in cell fate commitment" NARROW []
 is_a: GO:0015031 ! protein transport
 is_a: GO:0032940 ! secretion by cell
 is_a: GO:0035592 ! establishment of protein localization to extracellular region
+is_a: GO:0071692 ! protein localization to extracellular region
 
 [Term]
 id: GO:0009308
@@ -28159,6 +28183,7 @@ id: GO:0009889
 name: regulation of biosynthetic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 synonym: "regulation of anabolism" EXACT []
 synonym: "regulation of biosynthesis" EXACT []
 synonym: "regulation of formation" EXACT []
@@ -28254,6 +28279,7 @@ id: GO:0009894
 name: regulation of catabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate, or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 synonym: "regulation of breakdown" EXACT []
 synonym: "regulation of catabolism" EXACT []
 synonym: "regulation of degradation" EXACT []
@@ -28371,7 +28397,7 @@ synonym: "cell growth and/or maintenance" NARROW []
 synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
 synonym: "single-organism cellular process" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 created_by: jl
 creation_date: 2012-12-11T16:56:55Z
@@ -28807,6 +28833,7 @@ id: GO:0010638
 name: positive regulation of organelle organization
 namespace: biological_process
 def: "Any process that increases the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of an organelle." [GOC:dph, GOC:tb]
+subset: gocheck_do_not_annotate
 synonym: "positive regulation of organelle organisation" EXACT [GOC:mah]
 synonym: "positive regulation of organelle organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0033043 ! regulation of organelle organization
@@ -28820,6 +28847,7 @@ id: GO:0010639
 name: negative regulation of organelle organization
 namespace: biological_process
 def: "Any process that decreases the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of an organelle." [GOC:dph, GOC:tb]
+subset: gocheck_do_not_annotate
 synonym: "negative regulation of organelle organisation" EXACT [GOC:mah]
 synonym: "negative regulation of organelle organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0033043 ! regulation of organelle organization
@@ -29235,6 +29263,7 @@ subset: goslim_chembl
 subset: goslim_pir
 subset: goslim_yeast
 synonym: "enzyme transport" NARROW []
+is_a: GO:0008104 ! intracellular protein localization
 is_a: GO:0045184 ! establishment of protein localization
 is_a: GO:0071705 ! nitrogen compound transport
 
@@ -29575,6 +29604,7 @@ subset: goslim_yeast
 xref: EC:2.-.-.-
 xref: Reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
 xref: Reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
+xref: Reactome:R-HSA-5333607 "GSSeH combines with bGalNAc derivative to form GSSebGalNac"
 xref: Reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
 xref: Reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
 is_a: GO:0003824 ! catalytic activity
@@ -29647,6 +29677,7 @@ xref: Reactome:R-HSA-6786190 "CMBL hydrolyses OM to OLMS"
 xref: Reactome:R-HSA-6788295 "HDHD1:Mg2+ dephosphorylates PURIDP"
 xref: Reactome:R-HSA-8938314 "ENPPs hydrolyse CoA-SH to PPANT, PAP"
 xref: Reactome:R-HSA-8952137 "Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate"
+xref: Reactome:R-HSA-9942295 "QNG1 hydrolyzes queuosine 5'-monophosphate yielding queuine and ribose 5'-monophosphate"
 is_a: GO:0003824 ! catalytic activity
 
 [Term]
@@ -29945,6 +29976,7 @@ name: regulation of metabolic process
 namespace: biological_process
 alt_id: GO:0044246
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 subset: goslim_metagenomics
 synonym: "regulation of metabolism" EXACT []
 synonym: "regulation of multicellular organismal metabolic process" NARROW []
@@ -30110,6 +30142,7 @@ name: sexual reproduction
 namespace: biological_process
 def: "A type of reproduction that combines the genetic material of two gametes (such as a sperm or egg cell or fungal spores). The gametes have an haploid genome (with a single set of chromosomes, the product of a meiotic division) and combines with one another to produce a zygote (diploid)." [Wikipedia:Sexual_reproduction]
 comment: Note that gametes may come from two organisms or from a single organism in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. Note also that sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times.
+subset: gocheck_do_not_annotate
 xref: Wikipedia:Sexual_reproduction
 is_a: GO:0022414 ! reproductive process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22929" xsd:anyURI
@@ -30245,7 +30278,7 @@ subset: goslim_plant
 subset: goslim_plant_ribbon
 synonym: "single organism reproductive process" RELATED []
 xref: Wikipedia:Reproduction
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27054" xsd:anyURI
 created_by: jl
@@ -30292,6 +30325,7 @@ name: cellular component assembly
 namespace: biological_process
 alt_id: GO:0071844
 def: "The aggregation, arrangement and bonding together of a cellular component." [GOC:isa_complete]
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_euk_cellular_processes_ribbon
 subset: goslim_pir
@@ -31450,22 +31484,6 @@ is_a: GO:0071763 ! nuclear membrane organization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20636" xsd:anyURI
 
 [Term]
-id: GO:0031503
-name: protein-containing complex localization
-namespace: biological_process
-alt_id: GO:0034629
-def: "A localization process that acts on a protein complex; the complex is transported to, or maintained in, a specific location." [GOC:mah]
-synonym: "cellular protein complex localisation" RELATED [GOC:mah]
-synonym: "cellular protein complex localization" RELATED []
-synonym: "cellular protein-containing complex localization" RELATED []
-synonym: "establishment and maintenance of cellular protein complex localization" RELATED []
-synonym: "establishment and maintenance of protein complex localization" EXACT []
-synonym: "protein complex localisation" EXACT [GOC:mah]
-synonym: "protein complex localization" RELATED []
-is_a: GO:0051179 ! localization
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22021" xsd:anyURI
-
-[Term]
 id: GO:0031570
 name: DNA integrity checkpoint signaling
 namespace: biological_process
@@ -31665,7 +31683,6 @@ is_a: GO:0006259 ! DNA metabolic process
 intersection_of: GO:0006259 ! DNA metabolic process
 intersection_of: occurs_in GO:0005739 ! mitochondrion
 relationship: occurs_in GO:0005739 ! mitochondrion
-relationship: part_of GO:0000002 ! mitochondrial genome maintenance
 
 [Term]
 id: GO:0032055
@@ -32327,6 +32344,7 @@ id: GO:0032386
 name: regulation of intracellular transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of substances within cells." [GOC:mah]
+subset: gocheck_do_not_annotate
 is_a: GO:0051049 ! regulation of transport
 is_a: GO:0060341 ! regulation of cellular localization
 intersection_of: GO:0065007 ! biological regulation
@@ -32470,7 +32488,7 @@ subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27189" xsd:anyURI
 created_by: jl
@@ -32487,7 +32505,7 @@ subset: goslim_flybase_ribbon
 subset: goslim_pir
 synonym: "development" NARROW []
 synonym: "single-organism developmental process" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 created_by: jl
 creation_date: 2012-12-19T12:21:31Z
@@ -32766,10 +32784,10 @@ subset: goslim_chembl
 synonym: "regulation of cellular protein localisation" EXACT [GOC:TermGenie]
 synonym: "regulation of cellular protein localization" EXACT []
 synonym: "regulation of protein localisation" EXACT [GOC:mah]
-is_a: GO:0060341 ! regulation of cellular localization
+is_a: GO:0032879 ! regulation of localization
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0008104 ! protein localization
-relationship: regulates GO:0008104 ! protein localization
+intersection_of: regulates GO:0008104 ! intracellular protein localization
+relationship: regulates GO:0008104 ! intracellular protein localization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22021" xsd:anyURI
 created_by: jl
 creation_date: 2015-01-20T14:32:14Z
@@ -32930,6 +32948,7 @@ id: GO:0033036
 name: macromolecule localization
 namespace: biological_process
 def: "Any process in which a macromolecule is transported to, or maintained in, a specific location." [GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_flybase_ribbon
 synonym: "macromolecule localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
@@ -32939,6 +32958,7 @@ id: GO:0033043
 name: regulation of organelle organization
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of an organelle." [GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_yeast
 synonym: "regulation of organelle organisation" EXACT [GOC:mah]
 synonym: "regulation of organelle organization and biogenesis" RELATED [GOC:mah]
@@ -33218,9 +33238,10 @@ id: GO:0033365
 name: protein localization to organelle
 namespace: biological_process
 def: "A process in which a protein is transported to, or maintained in, a location within an organelle." [GOC:mah]
+subset: gocheck_do_not_annotate
 synonym: "protein localisation to organelle" EXACT [GOC:mah]
 synonym: "protein localization in organelle" EXACT [GOC:mah]
-is_a: GO:0008104 ! protein localization
+is_a: GO:0008104 ! intracellular protein localization
 
 [Term]
 id: GO:0033554
@@ -33544,7 +33565,6 @@ def: "The directed movement of a protein to a specific location within the extra
 synonym: "establishment of protein localisation in extracellular region" EXACT [GOC:mah]
 synonym: "establishment of protein localization in extracellular region" EXACT []
 is_a: GO:0045184 ! establishment of protein localization
-is_a: GO:0071692 ! protein localization to extracellular region
 created_by: bf
 creation_date: 2010-11-09T10:25:08Z
 
@@ -33659,6 +33679,7 @@ name: protein modification process
 namespace: biological_process
 alt_id: GO:0006464
 def: "The covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications). Includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification)." [GOC:bf, GOC:jl]
+subset: gocheck_do_not_annotate
 subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_pir
@@ -33837,6 +33858,7 @@ is_a: GO:0003674 ! molecular_function
 relationship: has_part GO:0060090 ! molecular adaptor activity
 relationship: part_of GO:0016192 ! vesicle-mediated transport
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26872" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/30576" xsd:anyURI
 created_by: bf
 creation_date: 2011-08-01T02:50:45Z
 
@@ -33894,7 +33916,7 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "growth pattern" RELATED []
 synonym: "non-developmental growth" RELATED [GOC:mah]
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 
 [Term]
@@ -33914,7 +33936,7 @@ namespace: biological_process
 def: "Self-propelled movement of a cell or organism from one location to another." [GOC:dgh]
 subset: goslim_chembl
 subset: goslim_pir
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0044848 ! biological phase
 
 [Term]
@@ -34162,7 +34184,6 @@ synonym: "intraflagellar transport involved in cilium organization" EXACT []
 synonym: "intraflagellar transport involved in microtubule-based flagellum organisation" EXACT []
 xref: Wikipedia:Intraflagellar_transport
 is_a: GO:0010970 ! transport along microtubule
-is_a: GO:0031503 ! protein-containing complex localization
 relationship: occurs_in GO:0005929 ! cilium
 relationship: part_of GO:0044782 ! cilium organization
 
@@ -34499,8 +34520,7 @@ def: "The chemical reactions and pathways involving serotonin (5-hydroxytryptami
 synonym: "serotonin metabolism" EXACT []
 is_a: GO:0018958 ! phenol-containing compound metabolic process
 is_a: GO:0042430 ! indole-containing compound metabolic process
-is_a: GO:0097164 ! ammonium ion metabolic process
-is_a: GO:1901160 ! primary amino compound metabolic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/30537" xsd:anyURI
 
 [Term]
 id: GO:0042429
@@ -34559,17 +34579,6 @@ is_a: GO:0009056 ! catabolic process
 is_a: GO:0042430 ! indole-containing compound metabolic process
 
 [Term]
-id: GO:0042439
-name: ethanolamine-containing compound metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving ethanolamine (2-aminoethanol) and compounds derived from it." [GOC:mah]
-synonym: "ethanolamine and derivative metabolic process" EXACT []
-synonym: "ethanolamine and derivative metabolism" EXACT []
-synonym: "ethanolamine-containing compound metabolism" EXACT [GOC:mah]
-is_a: GO:0006066 ! alcohol metabolic process
-is_a: GO:0006576 ! biogenic amine metabolic process
-
-[Term]
 id: GO:0042445
 name: hormone metabolic process
 namespace: biological_process
@@ -34617,7 +34626,7 @@ synonym: "inhibition of homeostatic process" NARROW []
 synonym: "negative regulation of homeostatic process" RELATED []
 synonym: "positive regulation of homeostatic process" RELATED []
 synonym: "regulation of homeostatic process" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0042594
@@ -35018,8 +35027,8 @@ synonym: "regulation of translation by machinery localisation" EXACT [GOC:mah]
 synonym: "translational machinery localization" EXACT [GOC:dph, GOC:tb]
 synonym: "translational protein localization" EXACT []
 is_a: GO:0006417 ! regulation of translation
-is_a: GO:0008104 ! protein localization
-intersection_of: GO:0008104 ! protein localization
+is_a: GO:0008104 ! intracellular protein localization
+intersection_of: GO:0008104 ! intracellular protein localization
 intersection_of: part_of GO:0006412 ! translation
 relationship: part_of GO:0006412 ! translation
 
@@ -35123,6 +35132,7 @@ id: GO:0043231
 name: intracellular membrane-bounded organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "intracellular membrane-enclosed organelle" EXACT []
 is_a: GO:0043227 ! membrane-bounded organelle
@@ -35135,6 +35145,7 @@ id: GO:0043232
 name: intracellular membraneless organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, not bounded by a lipid bilayer membrane and occurring within the cell. Includes ribosomes, the cytoskeleton and chromosomes." [GOC:go_curators]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "intracellular non-membrane-bounded organelle" EXACT []
 synonym: "intracellular non-membrane-enclosed organelle" EXACT []
@@ -35304,7 +35315,7 @@ namespace: biological_process
 def: "The accumulation of pigment in an organism, tissue or cell, either by increased deposition or by increased number of cells." [GOC:jl]
 subset: goslim_chembl
 subset: goslim_pir
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0043484
@@ -35508,6 +35519,7 @@ id: GO:0044087
 name: regulation of cellular component biogenesis
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of cellular component biogenesis, a process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component." [GOC:jl]
+subset: gocheck_do_not_annotate
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0044085 ! cellular component biogenesis
@@ -35637,7 +35649,7 @@ synonym: "interspecies interaction" EXACT []
 synonym: "interspecies interaction between organisms" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 xref: Reactome:R-HSA-9824443 "Parasitic Infection Pathways"
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
@@ -35645,6 +35657,7 @@ id: GO:0044703
 name: multi-organism reproductive process
 namespace: biological_process
 def: "A biological process that directly contributes to the process of producing new individuals, involving another organism." [GOC:jl]
+subset: gocheck_do_not_annotate
 subset: goslim_drosophila
 is_a: GO:0022414 ! reproductive process
 created_by: jl
@@ -35912,7 +35925,7 @@ namespace: biological_process
 def: "A distinct period or stage in a biological process or cycle." [GOC:jl]
 comment: Note that phases are is_a disjoint from other biological processes. happens_during relationships can operate between phases and other biological processes e.g. DNA replication happens_during S phase.
 subset: gocheck_do_not_annotate
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0048511 ! rhythmic process
 disjoint_from: GO:0050896 ! response to stimulus
 disjoint_from: GO:0051179 ! localization
@@ -36066,7 +36079,6 @@ def: "The directed movement of a protein to a specific location." [GOC:bf]
 synonym: "establishment of protein localisation" EXACT [GOC:mah]
 synonym: "protein positioning" EXACT []
 synonym: "protein recruitment" EXACT []
-is_a: GO:0008104 ! protein localization
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
@@ -36079,7 +36091,7 @@ synonym: "maintenance of protein localization" RELATED [GOC:dph, GOC:tb]
 synonym: "protein retention" NARROW []
 synonym: "protein sequestering" NARROW []
 is_a: GO:0051235 ! maintenance of location
-relationship: part_of GO:0008104 ! protein localization
+relationship: part_of GO:0008104 ! intracellular protein localization
 
 [Term]
 id: GO:0045202
@@ -37115,8 +37127,8 @@ name: octopamine metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving octopamine, 1-(p-hydroxyphenyl)-2-aminoethanol. The D enantiomer is about one-tenth as active as norepinephrine and is found in the salivary glands of Octopus and Eledone species." [ISBN:0198506732]
 synonym: "octopamine metabolism" EXACT []
+is_a: GO:0006066 ! alcohol metabolic process
 is_a: GO:0018958 ! phenol-containing compound metabolic process
-is_a: GO:0042439 ! ethanolamine-containing compound metabolic process
 
 [Term]
 id: GO:0046546
@@ -37366,6 +37378,7 @@ name: intracellular transport
 namespace: biological_process
 alt_id: GO:1902582
 def: "The directed movement of substances within a cell." [GOC:ai]
+subset: gocheck_do_not_annotate
 synonym: "single organism intracellular transport" RELATED [GOC:TermGenie]
 synonym: "single-organism intracellular transport" RELATED []
 is_a: GO:0006810 ! transport
@@ -37729,7 +37742,7 @@ namespace: biological_process
 def: "Any process pertinent to the generation and maintenance of rhythms in the physiology of an organism." [GOC:jid]
 subset: goslim_pir
 synonym: "rhythm" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0048512
@@ -37777,8 +37790,8 @@ synonym: "up-regulation of biological process" EXACT []
 synonym: "upregulation of biological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0008150 ! biological process
-relationship: positively_regulates GO:0008150 ! biological process
+intersection_of: positively_regulates GO:0008150 ! biological_process
+relationship: positively_regulates GO:0008150 ! biological_process
 
 [Term]
 id: GO:0048519
@@ -37794,8 +37807,8 @@ synonym: "inhibition of biological process" NARROW []
 synonym: "negative regulation of physiological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0008150 ! biological process
-relationship: negatively_regulates GO:0008150 ! biological process
+intersection_of: negatively_regulates GO:0008150 ! biological_process
+relationship: negatively_regulates GO:0008150 ! biological_process
 
 [Term]
 id: GO:0048520
@@ -38649,8 +38662,8 @@ subset: goslim_pir
 synonym: "regulation of physiological process" EXACT []
 is_a: GO:0065007 ! biological regulation
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0008150 ! biological process
-relationship: regulates GO:0008150 ! biological process
+intersection_of: regulates GO:0008150 ! biological_process
+relationship: regulates GO:0008150 ! biological_process
 
 [Term]
 id: GO:0050790
@@ -38904,7 +38917,7 @@ subset: goslim_pir
 subset: goslim_prokaryote
 subset: goslim_prokaryote_ribbon
 synonym: "physiological response to stimulus" EXACT []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0050918
@@ -39328,6 +39341,7 @@ id: GO:0051128
 name: regulation of cellular component organization
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of cell structures, including the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:ai]
+subset: gocheck_do_not_annotate
 synonym: "regulation of cell organisation" RELATED [GOC:mah]
 synonym: "regulation of cell organization" RELATED [GOC:mah]
 synonym: "regulation of cellular component organisation" EXACT []
@@ -39473,7 +39487,7 @@ synonym: "establishment and maintenance of substrate location" NARROW []
 synonym: "localisation" EXACT [GOC:mah]
 synonym: "single organism localization" RELATED [GOC:TermGenie]
 synonym: "single-organism localization" RELATED []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/27052" xsd:anyURI
 created_by: jl
 creation_date: 2013-12-18T13:51:04Z
@@ -39490,6 +39504,7 @@ synonym: "up-regulation of protein transport" EXACT []
 synonym: "upregulation of protein transport" EXACT []
 is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1903829 ! positive regulation of protein localization
 is_a: GO:1904951 ! positive regulation of establishment of protein localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0015031 ! protein transport
@@ -39517,6 +39532,7 @@ synonym: "downregulation of protein transport" EXACT []
 synonym: "inhibition of protein transport" NARROW []
 is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1903828 ! negative regulation of protein localization
 is_a: GO:1904950 ! negative regulation of establishment of protein localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0015031 ! protein transport
@@ -39884,17 +39900,6 @@ intersection_of: regulates GO:0051301 ! cell division
 relationship: regulates GO:0051301 ! cell division
 
 [Term]
-id: GO:0051303
-name: establishment of chromosome localization
-namespace: biological_process
-def: "The directed movement of a chromosome to a specific location." [GOC:ai]
-synonym: "chromosome positioning" EXACT []
-synonym: "establishment of chromosome localisation" EXACT [GOC:mah]
-is_a: GO:0050000 ! chromosome localization
-is_a: GO:0051649 ! establishment of localization in cell
-is_a: GO:0051656 ! establishment of organelle localization
-
-[Term]
 id: GO:0051304
 name: chromosome separation
 namespace: biological_process
@@ -39962,7 +39967,7 @@ name: metaphase chromosome alignment
 namespace: biological_process
 def: "A chromosome localization process whereby chromosomes are positioned in a specific order and orientation at the metaphase plate (spindle equator), during chromosome segregation. This alignment ensures that each daughter cell will receive the correct number of chromosomes during cell division." [GOC:vw]
 synonym: "chromosome congression" NARROW [GOC:ascb_2009, GOC:dph, GOC:tb]
-is_a: GO:0051303 ! establishment of chromosome localization
+is_a: GO:0050000 ! chromosome localization
 relationship: part_of GO:0098813 ! nuclear chromosome segregation
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25547" xsd:anyURI
 
@@ -40433,6 +40438,7 @@ id: GO:0051640
 name: organelle localization
 namespace: biological_process
 def: "Any process in which an organelle is transported to, and/or maintained in, a specific location." [GOC:ai]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "establishment and maintenance of organelle localization" EXACT []
 synonym: "organelle localisation" EXACT [GOC:mah]
@@ -40571,7 +40577,7 @@ subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "intraspecies interaction between organisms" EXACT []
 synonym: "intraspecies interaction with other organisms" EXACT []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
@@ -40965,6 +40971,7 @@ subset: goslim_prokaryote_ribbon
 synonym: "binding, bridging" EXACT []
 synonym: "protein complex scaffold activity" BROAD []
 synonym: "protein-containing complex scaffold activity" BROAD []
+xref: Reactome:R-HSA-2564826 "4Fe-4S cluster assembles on NUBP2:NUBP1 scaffold"
 is_a: GO:0003674 ! molecular_function
 relationship: has_part GO:0005488 ! binding
 
@@ -41021,7 +41028,6 @@ def: "A collagen and cuticulin-based noncellular, multilayered structure that is
 synonym: "collagen and cuticulin-based cuticle extracellular matrix" EXACT []
 synonym: "collagen and cuticulin-based exoskeleton extracellular matrix" RELATED []
 synonym: "cuticular ECM" EXACT []
-is_a: GO:0062023 ! collagen-containing extracellular matrix
 is_a: GO:0140047 ! specialized extracellular matrix
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/29265" xsd:anyURI
 
@@ -41823,18 +41829,6 @@ created_by: dph
 creation_date: 2018-03-19T14:27:23Z
 
 [Term]
-id: GO:0062023
-name: collagen-containing extracellular matrix
-namespace: cellular_component
-def: "An extracellular matrix consisting mainly of proteins (especially collagen) and glycosaminoglycans (mostly as proteoglycans) that provides not only essential physical scaffolding for the cellular constituents but can also initiate crucial biochemical and biomechanical cues required for tissue morphogenesis, differentiation and homeostasis. The components are secreted by cells in the vicinity and form a sheet underlying or overlying cells such as endothelial and epithelial cells." [GOC:BHF, GOC:rph, PMID:21123617]
-subset: gocheck_obsoletion_candidate
-synonym: "collagen-containing ECM" EXACT []
-is_a: GO:0031012 ! extracellular matrix
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/29475" xsd:anyURI
-created_by: dph
-creation_date: 2018-04-13T12:47:21Z
-
-[Term]
 id: GO:0062033
 name: positive regulation of mitotic sister chromatid segregation
 namespace: biological_process
@@ -41915,17 +41909,19 @@ def: "Any process that modulates a measurable attribute of any biological proces
 subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "regulation" BROAD []
-is_a: GO:0008150 ! biological process
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0065008
 name: regulation of biological quality
 namespace: biological_process
 def: "Any process that modulates a qualitative or quantitative trait of a biological quality. A biological quality is a measurable attribute of an organism or part of an organism, such as size, mass, shape, color, etc." [GOC:dph, GOC:isa_complete, GOC:mah, GOC:pr, GOC:vw]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "regulation of biological attribute" EXACT []
 synonym: "regulation of biological characteristic" EXACT []
 is_a: GO:0065007 ! biological regulation
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/30599" xsd:anyURI
 
 [Term]
 id: GO:0065009
@@ -42166,17 +42162,6 @@ created_by: mah
 creation_date: 2009-04-24T02:31:18Z
 
 [Term]
-id: GO:0070727
-name: cellular macromolecule localization
-namespace: biological_process
-def: "Any process in which a macromolecule is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell." [GOC:mah]
-synonym: "cellular macromolecule localisation" EXACT [GOC:mah]
-is_a: GO:0033036 ! macromolecule localization
-is_a: GO:0051641 ! cellular localization
-created_by: mah
-creation_date: 2009-06-16T04:08:29Z
-
-[Term]
 id: GO:0070887
 name: cellular response to chemical stimulus
 namespace: biological_process
@@ -42193,6 +42178,7 @@ id: GO:0070925
 name: organelle assembly
 namespace: biological_process
 def: "The aggregation, arrangement and bonding together of a set of components to form an organelle. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_yeast
 is_a: GO:0006996 ! organelle organization
 is_a: GO:0022607 ! cellular component assembly
@@ -42422,7 +42408,7 @@ namespace: biological_process
 def: "Any process in which a protein is transported from one specific location in the extracellular region to another, or maintained in a specific extracellular location." [GOC:mah]
 synonym: "protein localisation in extracellular region" EXACT [GOC:mah]
 synonym: "protein localization in extracellular region" EXACT []
-is_a: GO:0008104 ! protein localization
+is_a: GO:0033036 ! macromolecule localization
 created_by: mah
 creation_date: 2010-02-25T04:00:13Z
 
@@ -43197,17 +43183,6 @@ created_by: pr
 creation_date: 2011-07-04T01:48:24Z
 
 [Term]
-id: GO:0097164
-name: ammonium ion metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving the ammonium ion." [GOC:dhl, GOC:tb, PMID:14671018]
-synonym: "ammonium ion metabolism" EXACT []
-synonym: "ammonium metabolic process" RELATED []
-is_a: GO:0008152 ! metabolic process
-created_by: pr
-creation_date: 2011-09-28T04:21:30Z
-
-[Term]
 id: GO:0097190
 name: apoptotic signaling pathway
 namespace: biological_process
@@ -43551,6 +43526,7 @@ id: GO:0099080
 name: supramolecular complex
 namespace: cellular_component
 def: "A cellular component that consists of an indeterminate number of proteins or macromolecular complexes, organized into a regular, higher-order structure such as a polymer, sheet, network or a fiber." [GOC:dos]
+subset: gocheck_do_not_annotate
 is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
@@ -44454,6 +44430,20 @@ created_by: pg
 creation_date: 2024-03-25T07:35:06Z
 
 [Term]
+id: GO:0170070
+name: negative regulation of mitochondrial transcription
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of transcription occurring in the mitochondrion." [PMID:23300484]
+is_a: GO:0045892 ! negative regulation of DNA-templated transcription
+is_a: GO:1903108 ! regulation of mitochondrial transcription
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0006390 ! mitochondrial transcription
+relationship: negatively_regulates GO:0006390 ! mitochondrial transcription
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/29938" xsd:anyURI
+created_by: ew
+creation_date: 2025-06-09T17:43:39Z
+
+[Term]
 id: GO:1900006
 name: positive regulation of dendrite development
 namespace: biological_process
@@ -45307,16 +45297,6 @@ created_by: kmv
 creation_date: 2012-07-02T07:32:51Z
 
 [Term]
-id: GO:1901160
-name: primary amino compound metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving primary amino compound." [GOC:TermGenie]
-synonym: "primary amino compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0008152 ! metabolic process
-created_by: bf
-creation_date: 2012-07-18T04:44:39Z
-
-[Term]
 id: GO:1901161
 name: primary amino compound catabolic process
 namespace: biological_process
@@ -45325,7 +45305,6 @@ synonym: "primary amino compound breakdown" EXACT [GOC:TermGenie]
 synonym: "primary amino compound catabolism" EXACT [GOC:TermGenie]
 synonym: "primary amino compound degradation" EXACT [GOC:TermGenie]
 is_a: GO:0009056 ! catabolic process
-is_a: GO:1901160 ! primary amino compound metabolic process
 created_by: bf
 creation_date: 2012-07-18T04:45:06Z
 
@@ -45339,7 +45318,6 @@ synonym: "primary amino compound biosynthesis" EXACT [GOC:TermGenie]
 synonym: "primary amino compound formation" EXACT [GOC:TermGenie]
 synonym: "primary amino compound synthesis" EXACT [GOC:TermGenie]
 is_a: GO:0009058 ! biosynthetic process
-is_a: GO:1901160 ! primary amino compound metabolic process
 created_by: bf
 creation_date: 2012-07-18T04:45:14Z
 
@@ -48667,10 +48645,10 @@ synonym: "inhibition of cellular protein localization" NARROW [GOC:TermGenie]
 synonym: "negative regulation of cellular protein localisation" EXACT [GOC:TermGenie]
 synonym: "negative regulation of cellular protein localization" EXACT []
 is_a: GO:0032880 ! regulation of protein localization
-is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0048519 ! negative regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0008104 ! protein localization
-relationship: negatively_regulates GO:0008104 ! protein localization
+intersection_of: negatively_regulates GO:0008104 ! intracellular protein localization
+relationship: negatively_regulates GO:0008104 ! intracellular protein localization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22021" xsd:anyURI
 created_by: jl
 creation_date: 2015-01-20T14:32:24Z
@@ -48689,10 +48667,10 @@ synonym: "up-regulation of cellular protein localization" EXACT [GOC:TermGenie]
 synonym: "upregulation of cellular protein localisation" EXACT [GOC:TermGenie]
 synonym: "upregulation of cellular protein localization" EXACT [GOC:TermGenie]
 is_a: GO:0032880 ! regulation of protein localization
-is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0048518 ! positive regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0008104 ! protein localization
-relationship: positively_regulates GO:0008104 ! protein localization
+intersection_of: positively_regulates GO:0008104 ! intracellular protein localization
+relationship: positively_regulates GO:0008104 ! intracellular protein localization
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22021" xsd:anyURI
 created_by: jl
 creation_date: 2015-01-20T14:32:33Z
@@ -49817,8 +49795,8 @@ synonym: "inhibition of protein recruitment" NARROW [GOC:TermGenie]
 synonym: "negative regulation of establishment of protein localisation" EXACT [GOC:TermGenie]
 synonym: "negative regulation of protein positioning" EXACT [GOC:TermGenie]
 synonym: "negative regulation of protein recruitment" EXACT [GOC:TermGenie]
+is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0070201 ! regulation of establishment of protein localization
-is_a: GO:1903828 ! negative regulation of protein localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0045184 ! establishment of protein localization
 relationship: negatively_regulates GO:0045184 ! establishment of protein localization
@@ -49849,8 +49827,8 @@ synonym: "upregulation of establishment of protein localisation" EXACT [GOC:Term
 synonym: "upregulation of establishment of protein localization" EXACT [GOC:TermGenie]
 synonym: "upregulation of protein positioning" EXACT [GOC:TermGenie]
 synonym: "upregulation of protein recruitment" EXACT [GOC:TermGenie]
+is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0070201 ! regulation of establishment of protein localization
-is_a: GO:1903829 ! positive regulation of protein localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0045184 ! establishment of protein localization
 relationship: positively_regulates GO:0045184 ! establishment of protein localization
@@ -51907,6 +51885,7 @@ id: GO:2000241
 name: regulation of reproductive process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of reproductive process." [GOC:mah]
+subset: gocheck_do_not_annotate
 is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0022414 ! reproductive process
@@ -52834,7 +52813,7 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-is_a: BFO:0000020 ! characteristic
+is_a: BFO:0000020 ! specifically dependent continuant
 
 [Term]
 id: PATO:0000004
@@ -55739,6 +55718,7 @@ id: UBERON:0000061
 name: anatomical structure
 def: "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome." [CARO:0000003]
 subset: common_anatomy
+subset: human_reference_atlas
 subset: human_subset
 subset: mouse_subset
 subset: upper_level
@@ -77488,7 +77468,7 @@ property_value: IAO:0000116 "A bearer can have many dependents, and its dependen
 property_value: IAO:0000118 "bearer_of" xsd:string
 property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
-range: BFO:0000020 ! characteristic
+range: BFO:0000020 ! specifically dependent continuant
 is_inverse_functional: true
 
 [Typedef]
@@ -77684,6 +77664,7 @@ name: ends after
 comment: X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)
 subset: ro-eco
 property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
 
@@ -77886,7 +77867,7 @@ property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "This property and its subproperties are being used primarily for the definition of GO developmental processes. The property hierarchy mirrors the core GO hierarchy. In future we may be able to make do with a more minimal set of properties, but due to the way GO is currently structured we require highly specific relations to avoid incorrect entailments. To avoid this, the corresponding genus terms in GO should be declared mutually disjoint." xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: seeAlso Ontology:extensions
-domain: GO:0008150 ! biological process
+domain: GO:0008150 ! biological_process
 range: UBERON:0001062 ! anatomical entity
 is_a: RO:0002324 ! developmentally related to
 
@@ -78413,8 +78394,8 @@ subset: ro-eco
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
-domain: BFO:0000020 ! characteristic
-range: BFO:0000020 ! characteristic
+domain: BFO:0000020 ! specifically dependent continuant
+range: BFO:0000020 ! specifically dependent continuant
 
 [Typedef]
 id: RO:0002578
@@ -78950,6 +78931,7 @@ namespace: worm_development
 comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
 xref: RO:0002087
 property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 property_value: IAO:0000118 "starts_at_end_of" xsd:string
 is_a: preceded_by ! preceded_by
 inverse_of: RO:0002090 ! immediately precedes
