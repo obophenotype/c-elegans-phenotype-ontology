@@ -14,7 +14,6 @@ mkdir target
 /tools/odk.py seed -c -g -C $CONFIG
 ls -l target/$OID/src
 ls -l $SRCDIR/
-cp target/$OID/src/scripts/update_repo.sh $SRCDIR/scripts/
 rsync -r -u --ignore-existing --exclude 'patterns/data/default/example.tsv' --exclude 'patterns/dosdp-patterns/example.yaml' target/$OID/src/ $SRCDIR/
 cp target/$OID/src/ontology/Makefile $SRCDIR/ontology/
 cp target/$OID/src/ontology/run.sh $SRCDIR/ontology/
